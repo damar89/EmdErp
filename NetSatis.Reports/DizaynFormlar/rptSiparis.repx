@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="17.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="rptSiparis" SnapGridSize="25" ReportUnit="TenthsOfAMillimeter" Margins="53, 74, 196, 254" PaperKind="A4" PageWidth="2100" PageHeight="2970" Version="17.1" DataMember="FaturaKalemler" DataSource="#Ref-0" Dpi="254">
+  <Parameters>
+    <Item1 Ref="3" Description="FirmaAdı" Name="FirmaAdi" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="4" ControlType="DetailBand" Name="Detail" HeightF="35.06246" TextAlignment="TopLeft" Dpi="254" Padding="0,0,0,0,254">
+      <Controls>
+        <Item1 Ref="5" ControlType="XRTable" Name="xrTable1" TextAlignment="TopCenter" SizeF="1936,35" LocationFloat="18.5, 0" Dpi="254" Font="Times New Roman, 7.5pt" Borders="Bottom" BorderDashStyle="Solid">
+          <Rows>
+            <Item1 Ref="6" ControlType="XRTableRow" Name="xrTableRow1" Weight="1" Dpi="254">
+              <Cells>
+                <Item1 Ref="7" ControlType="XRTableCell" Name="colStokKodu" Weight="0.86930639127412135" Text="colStokKodu" Dpi="254" />
+                <Item2 Ref="8" ControlType="XRTableCell" Name="colStokAdi" Weight="2.8559911200766939" Text="colStokAdi" Dpi="254" Font="Times New Roman, 8pt">
+                  <StylePriority Ref="9" UseFont="false" />
+                </Item2>
+                <Item3 Ref="10" ControlType="XRTableCell" Name="colBirim" Weight="0.47547167406315044" Dpi="254" />
+                <Item4 Ref="11" ControlType="XRTableCell" Name="colMiktar" Weight="0.42432352520144456" Text="colMiktar" Dpi="254" />
+                <Item5 Ref="12" ControlType="XRTableCell" Name="colBirimFiyati" Weight="0.77266678457243876" Text="colBirimFiyati" Dpi="254" />
+                <Item6 Ref="13" ControlType="XRTableCell" Name="colIskonto" Weight="0.36324108763574686" Dpi="254" />
+                <Item7 Ref="14" ControlType="XRTableCell" Name="colKdv" Weight="0.30543532254832556" Dpi="254" />
+                <Item8 Ref="15" ControlType="XRTableCell" Name="colToplamTutar" Weight="0.60337109396930377" Text="colToplamTutar" TextAlignment="TopCenter" Dpi="254">
+                  <StylePriority Ref="16" UseTextAlignment="false" />
+                </Item8>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="17" UseFont="false" UseBorders="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item1>
+      </Controls>
+    </Item1>
+    <Item2 Ref="18" ControlType="TopMarginBand" Name="TopMargin" HeightF="196" TextAlignment="TopLeft" Dpi="254" Padding="0,0,0,0,254">
+      <Controls>
+        <Item1 Ref="19" ControlType="XRLabel" Name="xrLabel12" Text="Sipariş Formu" TextAlignment="TopCenter" SizeF="1201.266,76.39165" LocationFloat="403.354, 107.4209" Dpi="254" Font="Times New Roman, 13pt, style=Bold" Padding="5,5,0,0,254">
+          <StylePriority Ref="20" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="21" ControlType="XRLabel" Name="xrLabel11" Text="Cari Adı :" TextAlignment="TopCenter" SizeF="1201.266,76.9408" LocationFloat="403.354, 14.81668" Dpi="254" Font="Times New Roman, 15pt, style=Bold" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="23" Parameter="#Ref-3" PropertyName="Text" DataMember="FirmaAdi" />
+          </DataBindings>
+          <StylePriority Ref="24" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+      </Controls>
+    </Item2>
+    <Item3 Ref="25" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="254" TextAlignment="TopLeft" Dpi="254" Padding="0,0,0,0,254" />
+    <Item4 Ref="26" ControlType="PageFooterBand" Name="PageFooter" HeightF="254.3193" Dpi="254">
+      <Controls>
+        <Item1 Ref="27" ControlType="XRLabel" Name="lblAraToplam" Text="AraToplam" TextAlignment="TopRight" SizeF="362.9434,58.42" LocationFloat="1610.057, 4.764244" Dpi="254" Padding="5,5,0,0,254">
+          <StylePriority Ref="28" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="29" ControlType="XRLabel" Name="lblKdvToplam" Text="KdvToplam" TextAlignment="TopRight" SizeF="362.9434,58.42001" LocationFloat="1610.057, 121.6042" Dpi="254" Padding="5,5,0,0,254">
+          <StylePriority Ref="30" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="31" ControlType="XRLabel" Name="lblGenelToplam" Text="GenelToplam" TextAlignment="TopRight" SizeF="362.9434,58.42" LocationFloat="1610.057, 180.0242" Dpi="254" Padding="5,5,0,0,254">
+          <StylePriority Ref="32" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="33" ControlType="XRLabel" Name="xrLabel3" Text="AraToplam :" TextAlignment="TopRight" SizeF="362.9434,58.42" LocationFloat="1215.828, 4.764244" Dpi="254" Padding="5,5,0,0,254">
+          <StylePriority Ref="34" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="35" ControlType="XRLabel" Name="xrLabel2" Text="KdvToplam :" TextAlignment="TopRight" SizeF="362.9434,58.42001" LocationFloat="1215.828, 121.604" Dpi="254" Padding="5,5,0,0,254">
+          <StylePriority Ref="36" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="37" ControlType="XRLabel" Name="xrLabel1" Text="GenelToplam :" TextAlignment="TopRight" SizeF="362.9434,58.42" LocationFloat="1215.828, 180.0242" Dpi="254" Padding="5,5,0,0,254">
+          <StylePriority Ref="38" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="39" ControlType="XRLabel" Name="lblIndirimTutari" TextAlignment="TopRight" SizeF="362.9434,58.42" LocationFloat="1610.057, 63.18413" Dpi="254" Padding="5,5,0,0,254">
+          <StylePriority Ref="40" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="41" ControlType="XRLabel" Name="xrLabel4" Text="İndirim Tutarı" TextAlignment="TopRight" SizeF="362.9434,58.42" LocationFloat="1215.828, 63.18413" Dpi="254" Padding="5,5,0,0,254">
+          <StylePriority Ref="42" UseTextAlignment="false" />
+        </Item8>
+      </Controls>
+    </Item4>
+    <Item5 Ref="43" ControlType="PageHeaderBand" Name="PageHeader" HeightF="542" Dpi="254">
+      <Controls>
+        <Item1 Ref="44" ControlType="XRTable" Name="xrTable2" TextAlignment="TopCenter" SizeF="1936,47.62494" LocationFloat="18.50001, 487.7605" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Borders="All" BorderDashStyle="Solid">
+          <Rows>
+            <Item1 Ref="45" ControlType="XRTableRow" Name="xrTableRow2" Weight="1" Dpi="254">
+              <Cells>
+                <Item1 Ref="46" ControlType="XRTableCell" Name="xrTableCell2" Weight="0.91748847831636515" Text="StokKodu" Dpi="254" />
+                <Item2 Ref="47" ControlType="XRTableCell" Name="xrTableCell3" Weight="2.9347169003900015" Text="Stok Adı" Dpi="254" Font="Times New Roman, 9pt, style=Bold">
+                  <StylePriority Ref="48" UseFont="false" />
+                </Item2>
+                <Item3 Ref="49" ControlType="XRTableCell" Name="xrTableCell4" Weight="0.4916687566163333" Text="Birimi" Dpi="254" />
+                <Item4 Ref="50" ControlType="XRTableCell" Name="xrTableCell5" Weight="0.43877916100865466" Text="Miktarı" Dpi="254" />
+                <Item5 Ref="51" ControlType="XRTableCell" Name="xrTableCell6" Weight="0.79898906609003084" Text="Fiyatı" Dpi="254" />
+                <Item6 Ref="52" ControlType="XRTableCell" Name="xrTableCell1" Weight="0.37561545534231194" Text="İsk" Dpi="254" />
+                <Item7 Ref="53" ControlType="XRTableCell" Name="xrTableCell7" Weight="0.31584053479824881" Text="Kdv" Dpi="254" />
+                <Item8 Ref="54" ControlType="XRTableCell" Name="xrTableCell8" Weight="0.62392568371372614" Text="Tutar" Dpi="254" />
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="55" UseFont="false" UseBorders="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="56" ControlType="XRLabel" Name="xrLabel10" Text="Vergi No :" TextAlignment="TopRight" SizeF="224.6656,55.77423" LocationFloat="25.00001, 410.1042" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254">
+          <StylePriority Ref="57" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="58" ControlType="XRLabel" Name="xrLabel9" Text="Vergi Dairesi :" TextAlignment="TopRight" SizeF="229,55.77423" LocationFloat="25.00001, 351.6843" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254">
+          <StylePriority Ref="59" UseFont="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="60" ControlType="XRLabel" Name="xrLabel8" Text="Tarih :" TextAlignment="TopRight" SizeF="229,55.77423" LocationFloat="25.00001, 293.2641" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254">
+          <StylePriority Ref="61" UseFont="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="62" ControlType="XRLabel" Name="xrLabel7" Text="Semt/İl/İlçe :" TextAlignment="TopRight" SizeF="229,58.42004" LocationFloat="25.00001, 232.1984" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254">
+          <StylePriority Ref="63" UseFont="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="64" ControlType="XRLabel" Name="xrLabel6" Text="Adres :" TextAlignment="TopRight" SizeF="229,84.87836" LocationFloat="25.00001, 136.7366" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254">
+          <StylePriority Ref="65" UseFont="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="66" ControlType="XRLabel" Name="xrLabel5" Text="Cari Adı :" TextAlignment="TopRight" SizeF="229,58.41998" LocationFloat="25.00001, 25.40002" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254">
+          <StylePriority Ref="67" UseFont="false" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="68" ControlType="XRLabel" Name="lblVergiDairesi" SizeF="788.4584,58.42001" LocationFloat="298.4785, 349.0385" Dpi="254" Padding="5,5,0,0,254" />
+        <Item9 Ref="69" ControlType="XRLabel" Name="lblVergiNo" SizeF="788.4584,58.41998" LocationFloat="298.4785, 407.4584" Dpi="254" Padding="5,5,0,0,254" />
+        <Item10 Ref="70" ControlType="XRLabel" Name="lblTarih" Text="Tarih" SizeF="788.4584,58.41995" LocationFloat="298.4785, 290.6184" Dpi="254" Padding="5,5,0,0,254" />
+        <Item11 Ref="71" ControlType="XRLabel" Name="lblIkametgah" Text="[Semt] \ [Ilce] \ [Il]" SizeF="788.4584,58.42001" LocationFloat="298.4785, 232.1984" Dpi="254" Padding="5,5,0,0,254" />
+        <Item12 Ref="72" ControlType="XRLabel" Name="lblAdres" Text="Adres" SizeF="788.4584,95.46172" LocationFloat="298.4785, 136.7366" Dpi="254" Padding="5,5,0,0,254" />
+        <Item13 Ref="73" ControlType="XRLabel" Name="lblCariAdi" Text="CariAdi" SizeF="788.4584,111.3366" LocationFloat="298.4785, 25.40002" Dpi="254" Padding="5,5,0,0,254" />
+      </Controls>
+    </Item5>
+  </Bands>
+  <ComponentStorage>
+    <Item1 Ref="0" />
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>

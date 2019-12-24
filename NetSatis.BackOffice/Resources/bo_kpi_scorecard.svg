@@ -1,0 +1,10 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg x="0px" y="0px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 32 32" xml:space="preserve" id="Layer_1">
+  <g id="KPI_x5F_Scorecard">
+    <g opacity="0.75" class="st1">
+      <path d="M8,12h12v2H8V12z M8,18h9.2h1.7H20v-2H8V18z M8,10h12V8H8V10z" fill="#727272" opacity="0.75" class="Black" />
+    </g>
+    <path d="M11.2,24H4V2h20v17.2l2-2V1c0-0.5-0.5-1-1-1H3C2.5,0,2,0.5,2,1v24c0,0.5,0.5,1,1,1h6.2L11.2,24z" fill="#727272" class="Black" />
+    <polygon points="8,30 18,20 22,24 32,14 32,30  " fill="#039C23" class="Green" />
+  </g>
+</svg>

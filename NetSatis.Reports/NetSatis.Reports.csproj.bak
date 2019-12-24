@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CE84B4F-E739-4567-9960-FDB5BE7121F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetSatis.Reports</RootNamespace>
+    <AssemblyName>NetSatis.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.ExpressionEditor.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.DataAccess.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.2.Extensions, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cari\rptCariBakiye.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cari\rptCariBakiye.Designer.cs">
+      <DependentUpon>rptCariBakiye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cari\rptCariExtresi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cari\rptCariExtresi.Designer.cs">
+      <DependentUpon>rptCariExtresi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cari\rptCariExtresiStok.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cari\rptCariExtresiStok.Designer.cs">
+      <DependentUpon>rptCariExtresiStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cari\rptCariExtresiStokDetayli.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cari\rptCariExtresiStokDetayli.Designer.cs">
+      <DependentUpon>rptCariExtresiStokDetayli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="DataSEtler.cs">
+      <DependentUpon>DataSEtler.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSEtler.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSEtler.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DizaynFormlar\rptFaturaBarkodlu.cs">
+      <DependentUpon>rptFaturaBarkodlu.repx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DizaynFormlar\rptFaturaBarkodlu.Designer.cs">
+      <DependentUpon>rptFaturaBarkodlu.repx</DependentUpon>
+    </Compile>
+    <Compile Include="Dizayn\frmFaturaDizayn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dizayn\frmFaturaDizayn.Designer.cs">
+      <DependentUpon>frmFaturaDizayn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\FaturaHazirla.cs" />
+    <Compile Include="Fatura ve Fiş\rptBilgi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptBilgi.Designer.cs">
+      <DependentUpon>rptBilgi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptFatura.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptFatura.Designer.cs">
+      <DependentUpon>rptFatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptFaturaBarkodlu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptFaturaBarkodlu.Designer.cs">
+      <DependentUpon>rptFaturaBarkodlu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptFaturaDizayn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptFaturaDizayn.Designer.cs">
+      <DependentUpon>rptFaturaDizayn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptIrsaliye.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptIrsaliye.Designer.cs">
+      <DependentUpon>rptIrsaliye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptKooperatif.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptKooperatif.Designer.cs">
+      <DependentUpon>rptKooperatif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptProformaFatura.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptProformaFatura.Designer.cs">
+      <DependentUpon>rptProformaFatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptSiparis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptSiparis.Designer.cs">
+      <DependentUpon>rptSiparis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptTahsilat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptTahsilat.Designer.cs">
+      <DependentUpon>rptTahsilat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptTeklif.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fatura ve Fiş\rptTeklif.Designer.cs">
+      <DependentUpon>rptTeklif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kasa\rptKasa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Kasa\rptKasa.Designer.cs">
+      <DependentUpon>rptKasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="StokEnvanterData.cs">
+      <DependentUpon>StokEnvanterData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StokEnvanterData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StokEnvanterData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stok\Envanter.cs" />
+    <Compile Include="Stok\rptStokDurumBakiye.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Stok\rptStokDurumBakiye.Designer.cs">
+      <DependentUpon>rptStokDurumBakiye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stok\rptStokDurumu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Stok\rptStokDurumu.Designer.cs">
+      <DependentUpon>rptStokDurumu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stok\rptStokEnvanter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Stok\rptStokEnvanter.Designer.cs">
+      <DependentUpon>rptStokEnvanter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stok\rptStokHareketleri.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Stok\rptStokHareketleri.Designer.cs">
+      <DependentUpon>rptStokHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Cari\rptCariBakiye.resx">
+      <DependentUpon>rptCariBakiye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cari\rptCariExtresi.resx">
+      <DependentUpon>rptCariExtresi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cari\rptCariExtresiStok.resx">
+      <DependentUpon>rptCariExtresiStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cari\rptCariExtresiStokDetayli.resx">
+      <DependentUpon>rptCariExtresiStokDetayli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dizayn\frmFaturaDizayn.resx">
+      <DependentUpon>frmFaturaDizayn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fatura ve Fiş\rptBilgi.resx">
+      <DependentUpon>rptBilgi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fatura ve Fiş\rptFatura.resx">
+      <DependentUpon>rptFatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fatura ve Fiş\rptFaturaBarkodlu.resx">
+      <DependentUpon>rptFaturaBarkodlu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fatura ve Fiş\rptFaturaDizayn.resx">
+      <DependentUpon>rptFaturaDizayn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fatura ve Fiş\rptIrsaliye.resx">
+      <DependentUpon>rptIrsaliye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fatura ve Fiş\rptKooperatif.resx">
+      <DependentUpon>rptKooperatif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fatura ve Fiş\rptProformaFatura.resx">
+      <DependentUpon>rptProformaFatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fatura ve Fiş\rptSiparis.resx">
+      <DependentUpon>rptSiparis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fatura ve Fiş\rptTahsilat.resx">
+      <DependentUpon>rptTahsilat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fatura ve Fiş\rptTeklif.resx">
+      <DependentUpon>rptTeklif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kasa\rptKasa.resx">
+      <DependentUpon>rptKasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Stok\rptStokDurumBakiye.resx">
+      <DependentUpon>rptStokDurumBakiye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stok\rptStokDurumu.resx">
+      <DependentUpon>rptStokDurumu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stok\rptStokEnvanter.resx">
+      <DependentUpon>rptStokEnvanter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stok\rptStokHareketleri.resx">
+      <DependentUpon>rptStokHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetSatis.Entities\NetSatis.Entities.csproj">
+      <Project>{09D91E15-402A-45D0-9C04-E723F42131F7}</Project>
+      <Name>NetSatis.Entities</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DataSEtler.xsc">
+      <DependentUpon>DataSEtler.xsd</DependentUpon>
+    </None>
+    <None Include="DataSEtler.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSEtler.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSEtler.xss">
+      <DependentUpon>DataSEtler.xsd</DependentUpon>
+    </None>
+    <None Include="DizaynFormlar\rptBilgi.repx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="DizaynFormlar\rptFaturaBarkodlu.repx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="DizaynFormlar\rptIrsaliye.repx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DizaynFormlar\rptKooperatif.repx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DizaynFormlar\rptProformaFatura.repx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DizaynFormlar\rptSiparis.repx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DizaynFormlar\rptStokEnvanter.repx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DizaynFormlar\rptTeklif.repx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="StokEnvanterData.xsc">
+      <DependentUpon>StokEnvanterData.xsd</DependentUpon>
+    </None>
+    <None Include="StokEnvanterData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StokEnvanterData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="StokEnvanterData.xss">
+      <DependentUpon>StokEnvanterData.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

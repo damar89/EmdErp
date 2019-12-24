@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="StokEnvanterData" targetNamespace="http://tempuri.org/StokEnvanterData.xsd" xmlns:mstns="http://tempuri.org/StokEnvanterData.xsd" xmlns="http://tempuri.org/StokEnvanterData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="StokEnvanterData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="StokEnvanterData" msprop:Generator_UserDSName="StokEnvanterData">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EnvanterSatirlari" msprop:Generator_TableClassName="EnvanterSatirlariDataTable" msprop:Generator_TableVarName="tableEnvanterSatirlari" msprop:Generator_TablePropName="EnvanterSatirlari" msprop:Generator_RowDeletingName="EnvanterSatirlariRowDeleting" msprop:Generator_RowChangingName="EnvanterSatirlariRowChanging" msprop:Generator_RowEvHandlerName="EnvanterSatirlariRowChangeEventHandler" msprop:Generator_RowDeletedName="EnvanterSatirlariRowDeleted" msprop:Generator_UserTableName="EnvanterSatirlari" msprop:Generator_RowChangedName="EnvanterSatirlariRowChanged" msprop:Generator_RowEvArgName="EnvanterSatirlariRowChangeEvent" msprop:Generator_RowClassName="EnvanterSatirlariRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UrunKodu" msprop:Generator_ColumnVarNameInTable="columnUrunKodu" msprop:Generator_ColumnPropNameInRow="UrunKodu" msprop:Generator_ColumnPropNameInTable="UrunKoduColumn" msprop:Generator_UserColumnName="UrunKodu" type="xs:string" minOccurs="0" />
+              <xs:element name="UrunAdi" msprop:Generator_ColumnVarNameInTable="columnUrunAdi" msprop:Generator_ColumnPropNameInRow="UrunAdi" msprop:Generator_ColumnPropNameInTable="UrunAdiColumn" msprop:Generator_UserColumnName="UrunAdi" type="xs:string" minOccurs="0" />
+              <xs:element name="UrunKDV" msprop:Generator_ColumnVarNameInTable="columnUrunKDV" msprop:Generator_ColumnPropNameInRow="UrunKDV" msprop:Generator_ColumnPropNameInTable="UrunKDVColumn" msprop:Generator_UserColumnName="UrunKDV" type="xs:string" minOccurs="0" />
+              <xs:element name="UrunBirim" msprop:Generator_ColumnVarNameInTable="columnUrunBirim" msprop:Generator_ColumnPropNameInRow="UrunBirim" msprop:Generator_ColumnPropNameInTable="UrunBirimColumn" msprop:Generator_UserColumnName="UrunBirim" type="xs:string" minOccurs="0" />
+              <xs:element name="UrunToplamGirisMiktari" msprop:Generator_ColumnVarNameInTable="columnUrunToplamGirisMiktari" msprop:Generator_ColumnPropNameInRow="UrunToplamGirisMiktari" msprop:Generator_ColumnPropNameInTable="UrunToplamGirisMiktariColumn" msprop:Generator_UserColumnName="UrunToplamGirisMiktari" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UrunToplamGirisTutari" msprop:Generator_ColumnVarNameInTable="columnUrunToplamGirisTutari" msprop:Generator_ColumnPropNameInRow="UrunToplamGirisTutari" msprop:Generator_ColumnPropNameInTable="UrunToplamGirisTutariColumn" msprop:Generator_UserColumnName="UrunToplamGirisTutari" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UrunToplamCikisMiktari" msprop:Generator_ColumnVarNameInTable="columnUrunToplamCikisMiktari" msprop:Generator_ColumnPropNameInRow="UrunToplamCikisMiktari" msprop:Generator_ColumnPropNameInTable="UrunToplamCikisMiktariColumn" msprop:Generator_UserColumnName="UrunToplamCikisMiktari" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UrunToplamCikisTutari" msprop:Generator_ColumnVarNameInTable="columnUrunToplamCikisTutari" msprop:Generator_ColumnPropNameInRow="UrunToplamCikisTutari" msprop:Generator_ColumnPropNameInTable="UrunToplamCikisTutariColumn" msprop:Generator_UserColumnName="UrunToplamCikisTutari" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UrunDepoMevcudu" msprop:Generator_ColumnVarNameInTable="columnUrunDepoMevcudu" msprop:Generator_ColumnPropNameInRow="UrunDepoMevcudu" msprop:Generator_ColumnPropNameInTable="UrunDepoMevcuduColumn" msprop:Generator_UserColumnName="UrunDepoMevcudu" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UrunDepoAdi" msprop:Generator_ColumnVarNameInTable="columnUrunDepoAdi" msprop:Generator_ColumnPropNameInRow="UrunDepoAdi" msprop:Generator_ColumnPropNameInTable="UrunDepoAdiColumn" msprop:Generator_UserColumnName="UrunDepoAdi" type="xs:string" minOccurs="0" />
+              <xs:element name="EnvanterTutari" msprop:Generator_ColumnVarNameInTable="columnEnvanterTutari" msprop:Generator_ColumnPropNameInRow="EnvanterTutari" msprop:Generator_ColumnPropNameInTable="EnvanterTutariColumn" msprop:Generator_UserColumnName="EnvanterTutari" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OrtalamaAlisFiyati" msprop:Generator_ColumnVarNameInTable="columnOrtalamaAlisFiyati" msprop:Generator_ColumnPropNameInRow="OrtalamaAlisFiyati" msprop:Generator_ColumnPropNameInTable="OrtalamaAlisFiyatiColumn" msprop:Generator_UserColumnName="OrtalamaAlisFiyati" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OrtalamaSatisFiyati" msprop:Generator_ColumnVarNameInTable="columnOrtalamaSatisFiyati" msprop:Generator_ColumnPropNameInRow="OrtalamaSatisFiyati" msprop:Generator_ColumnPropNameInTable="OrtalamaSatisFiyatiColumn" msprop:Generator_UserColumnName="OrtalamaSatisFiyati" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EnvanterBilgileri" msprop:Generator_TableClassName="EnvanterBilgileriDataTable" msprop:Generator_TableVarName="tableEnvanterBilgileri" msprop:Generator_TablePropName="EnvanterBilgileri" msprop:Generator_RowDeletingName="EnvanterBilgileriRowDeleting" msprop:Generator_RowChangingName="EnvanterBilgileriRowChanging" msprop:Generator_RowEvHandlerName="EnvanterBilgileriRowChangeEventHandler" msprop:Generator_RowDeletedName="EnvanterBilgileriRowDeleted" msprop:Generator_UserTableName="EnvanterBilgileri" msprop:Generator_RowChangedName="EnvanterBilgileriRowChanged" msprop:Generator_RowEvArgName="EnvanterBilgileriRowChangeEvent" msprop:Generator_RowClassName="EnvanterBilgileriRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BaslangicTarihi" msprop:Generator_ColumnVarNameInTable="columnBaslangicTarihi" msprop:Generator_ColumnPropNameInRow="BaslangicTarihi" msprop:Generator_ColumnPropNameInTable="BaslangicTarihiColumn" msprop:Generator_UserColumnName="BaslangicTarihi" type="xs:string" minOccurs="0" />
+              <xs:element name="BitisTarihi" msprop:Generator_ColumnVarNameInTable="columnBitisTarihi" msprop:Generator_ColumnPropNameInRow="BitisTarihi" msprop:Generator_ColumnPropNameInTable="BitisTarihiColumn" msprop:Generator_UserColumnName="BitisTarihi" type="xs:string" minOccurs="0" />
+              <xs:element name="Depo" msprop:Generator_ColumnVarNameInTable="columnDepo" msprop:Generator_ColumnPropNameInRow="Depo" msprop:Generator_ColumnPropNameInTable="DepoColumn" msprop:Generator_UserColumnName="Depo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

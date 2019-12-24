@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="17.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="rptIrsaliye" SnapGridSize="25" ReportUnit="TenthsOfAMillimeter" Margins="50, 95, 185, 254" PaperKind="A4" PageWidth="2100" PageHeight="2970" Version="17.1" DataMember="FaturaBilgiler" DataSource="#Ref-0" Dpi="254">
+  <Bands>
+    <Item1 Ref="2" ControlType="DetailBand" Name="Detail" HeightF="50.27084" TextAlignment="TopLeft" Dpi="254" Padding="0,0,0,0,254" />
+    <Item2 Ref="3" ControlType="TopMarginBand" Name="TopMargin" HeightF="185" TextAlignment="TopLeft" Dpi="254" Padding="0,0,0,0,254" />
+    <Item3 Ref="4" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="254" TextAlignment="TopLeft" Dpi="254" Padding="0,0,0,0,254" />
+    <Item4 Ref="5" ControlType="PageFooterBand" Name="PageFooter" HeightF="185" Dpi="254" />
+    <Item5 Ref="6" ControlType="PageHeaderBand" Name="PageHeader" HeightF="542" Dpi="254">
+      <Controls>
+        <Item1 Ref="7" ControlType="XRLabel" Name="lblVergiDairesi" SizeF="788.4584,58.42001" LocationFloat="71.4375, 351.6844" Dpi="254" Padding="5,5,0,0,254" />
+        <Item2 Ref="8" ControlType="XRLabel" Name="lblVergiNo" SizeF="788.4584,58.41998" LocationFloat="71.4375, 410.1042" Dpi="254" Padding="5,5,0,0,254" />
+        <Item3 Ref="9" ControlType="XRLabel" Name="lblTarih" Text="Tarih" SizeF="788.4584,58.41995" LocationFloat="71.4375, 293.2643" Dpi="254" Padding="5,5,0,0,254" />
+        <Item4 Ref="10" ControlType="XRLabel" Name="lblIkametgah" Text="[Semt] \ [Ilce] \ [Il]" SizeF="788.4584,58.42001" LocationFloat="71.4375, 234.8442" Dpi="254" Padding="5,5,0,0,254" />
+        <Item5 Ref="11" ControlType="XRLabel" Name="lblAdres" Text="Adres" SizeF="788.4584,95.46172" LocationFloat="71.4375, 139.3825" Dpi="254" Padding="5,5,0,0,254" />
+        <Item6 Ref="12" ControlType="XRLabel" Name="lblCariAdi" Text="CariAdi" SizeF="788.4584,111.3366" LocationFloat="71.4375, 28.04585" Dpi="254" Padding="5,5,0,0,254" />
+      </Controls>
+    </Item5>
+    <Item6 Ref="13" ControlType="DetailReportBand" Name="DetailReport" Level="0" DataMember="FaturaKalemler" DataSource="#Ref-0" Dpi="254">
+      <Bands>
+        <Item1 Ref="14" ControlType="DetailBand" Name="Detail1" HeightF="47.625" Dpi="254">
+          <Controls>
+            <Item1 Ref="15" ControlType="XRTable" Name="xrTable1" SizeF="1951.224,47.625" LocationFloat="1.88800049, 0" Dpi="254" Font="Times New Roman, 8pt" Borders="Bottom" BorderDashStyle="Dot">
+              <Rows>
+                <Item1 Ref="16" ControlType="XRTableRow" Name="xrTableRow1" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="17" ControlType="XRTableCell" Name="colBarkodu" Weight="1.3291060240932415" Text="barkod" Dpi="254" Font="Times New Roman, 7.5pt">
+                      <StylePriority Ref="18" UseFont="false" />
+                    </Item1>
+                    <Item2 Ref="19" ControlType="XRTableCell" Name="colStokKodu" Weight="0.97927307128308727" Text="colStokKodu" Dpi="254" />
+                    <Item3 Ref="20" ControlType="XRTableCell" Name="colStokAdi" Weight="2.6644129281011373" Text="colStokAdi" Dpi="254" Font="Times New Roman, 9pt, charSet=162">
+                      <StylePriority Ref="21" UseFont="false" />
+                    </Item3>
+                    <Item4 Ref="22" ControlType="XRTableCell" Name="colBirim" Weight="0.7706348980405302" Text="colBirim" TextAlignment="TopCenter" Dpi="254">
+                      <StylePriority Ref="23" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="24" ControlType="XRTableCell" Name="colMiktar" Weight="0.97883007181463055" Text="colMiktar" TextAlignment="TopCenter" Dpi="254">
+                      <StylePriority Ref="25" UseTextAlignment="false" />
+                    </Item5>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="26" UseFont="false" UseBorders="false" UseBorderDashStyle="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+      </Bands>
+    </Item6>
+  </Bands>
+  <ComponentStorage>
+    <Item1 Ref="0" />
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>

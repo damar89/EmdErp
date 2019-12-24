@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="18.2.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="rptKooperatif" SnapGridSize="25" ReportUnit="TenthsOfAMillimeter" Margins="41, 74, 185, 254" PaperKind="A5" PageWidth="1480" PageHeight="2100" Version="18.2" DataSource="#Ref-0" Dpi="254" Borders="Bottom">
+  <Bands>
+    <Item1 Ref="2" ControlType="DetailBand" Name="Detail" Expanded="false" HeightF="47.625" TextAlignment="TopLeft" Dpi="254" Padding="0,0,0,0,254" />
+    <Item2 Ref="3" ControlType="TopMarginBand" Name="TopMargin" HeightF="185" TextAlignment="TopLeft" Dpi="254" Padding="0,0,0,0,254" />
+    <Item3 Ref="4" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="254" TextAlignment="TopLeft" Dpi="254" Padding="0,0,0,0,254" />
+    <Item4 Ref="5" ControlType="PageFooterBand" Name="PageFooter" HeightF="457.5208" Dpi="254">
+      <Controls>
+        <Item1 Ref="6" ControlType="XRLabel" Name="xrLabel18" Text="Kesinti YEKÜNÜ :" TextAlignment="MiddleRight" SizeF="296.7975,58.42001" LocationFloat="800.7327, 315.6808" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <StylePriority Ref="7" UseBorders="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="8" ControlType="XRLabel" Name="lblKesinti" Text="[Zirai+Borsa+Mera+Bagkur]" TextAlignment="MiddleRight" SizeF="243.4701,58.42004" LocationFloat="1097.53, 315.6811" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="9" Expression="ToDecimal([Zirai])+ToDecimal([Borsa])+ToDecimal([Mera])+ToDecimal([Bagkur])" PropertyName="Text" EventName="BeforePrint" />
+          </ExpressionBindings>
+          <StylePriority Ref="10" UseBorders="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="11" ControlType="XRLabel" Name="xrLabel16" Text="BağKur %2 :" TextAlignment="MiddleRight" SizeF="272.985,58.42001" LocationFloat="824.5452, 246.6972" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <StylePriority Ref="12" UseBorders="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="13" ControlType="XRLabel" Name="lblBagkur" TextAlignment="MiddleRight" SizeF="243.4701,58.42001" LocationFloat="1097.53, 246.6975" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="14" Expression="[Bagkur]" PropertyName="Text" EventName="BeforePrint" />
+          </ExpressionBindings>
+          <StylePriority Ref="15" UseBorders="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="16" ControlType="XRLabel" Name="lblMera" TextAlignment="MiddleRight" SizeF="243.4701,58.42" LocationFloat="1097.53, 175.26" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="17" Expression="[Mera]" PropertyName="Text" EventName="BeforePrint" />
+          </ExpressionBindings>
+          <StylePriority Ref="18" UseBorders="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="19" ControlType="XRLabel" Name="xrLabel15" Text="Mera %0.1 :" TextAlignment="MiddleRight" SizeF="272.985,58.42" LocationFloat="824.5452, 175.2597" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <StylePriority Ref="20" UseBorders="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="21" ControlType="XRLabel" Name="xrLabel5" Text="Zirai %1 :" TextAlignment="MiddleRight" SizeF="272.985,58.42" LocationFloat="824.5452, 58.41996" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <StylePriority Ref="22" UseBorders="false" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="23" ControlType="XRLabel" Name="lblZirai" TextAlignment="MiddleRight" SizeF="243.4701,58.42" LocationFloat="1097.53, 58.41996" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="24" Expression="[Zirai]" PropertyName="Text" EventName="BeforePrint" />
+          </ExpressionBindings>
+          <StylePriority Ref="25" UseBorders="false" UseTextAlignment="false" />
+        </Item8>
+        <Item9 Ref="26" ControlType="XRLabel" Name="xrLabel1" Text="Bakiye :" TextAlignment="MiddleRight" SizeF="272.985,58.42001" LocationFloat="824.5452, 374.1009" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <StylePriority Ref="27" UseBorders="false" UseTextAlignment="false" />
+        </Item9>
+        <Item10 Ref="28" ControlType="XRLabel" Name="xrLabel2" Text="Borsa Res. %1 :" TextAlignment="MiddleRight" SizeF="272.985,58.42" LocationFloat="824.5452, 116.8398" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <StylePriority Ref="29" UseBorders="false" UseTextAlignment="false" />
+        </Item10>
+        <Item11 Ref="30" ControlType="XRLabel" Name="xrLabel3" Text="Toplam :" TextAlignment="MiddleRight" SizeF="272.985,58.42" LocationFloat="824.5452, 0" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <StylePriority Ref="31" UseBorders="false" UseTextAlignment="false" />
+        </Item11>
+        <Item12 Ref="32" ControlType="XRLabel" Name="lblGenelToplam" TextAlignment="MiddleRight" SizeF="249.756,58.42004" LocationFloat="1097.53, 374.1009" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="33" Expression="[ToplamTutar]" PropertyName="Text" EventName="BeforePrint" />
+          </ExpressionBindings>
+          <StylePriority Ref="34" UseBorders="false" UseTextAlignment="false" />
+        </Item12>
+        <Item13 Ref="35" ControlType="XRLabel" Name="lblBorsa" TextAlignment="MiddleRight" SizeF="243.4701,58.42" LocationFloat="1097.53, 116.84" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="36" Expression="[Borsa]" PropertyName="Text" EventName="BeforePrint" />
+          </ExpressionBindings>
+          <StylePriority Ref="37" UseBorders="false" UseTextAlignment="false" />
+        </Item13>
+        <Item14 Ref="38" ControlType="XRLabel" Name="lblAraToplam" TextAlignment="MiddleRight" SizeF="243.4701,58.42" LocationFloat="1097.53, 0" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="39" Expression="[AraToplam_]" PropertyName="Text" EventName="BeforePrint" />
+          </ExpressionBindings>
+          <StylePriority Ref="40" UseBorders="false" UseTextAlignment="false" />
+        </Item14>
+        <Item15 Ref="41" ControlType="XRLabel" Name="xrLabel4" Text="Yalnız :" SizeF="132.2917,58.41999" LocationFloat="25.00001, 315.6811" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <StylePriority Ref="42" UseBorders="false" />
+        </Item15>
+        <Item16 Ref="43" ControlType="XRLabel" Name="lblYaziyla" Text="lblYaziyla" SizeF="615.3636,87.73544" LocationFloat="171.6667, 315.6808" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="44" Expression="[ToplamTutarYazi]" PropertyName="Text" EventName="BeforePrint" />
+          </ExpressionBindings>
+          <StylePriority Ref="45" UseBorders="false" />
+        </Item16>
+      </Controls>
+    </Item4>
+    <Item5 Ref="46" ControlType="PageHeaderBand" Name="PageHeader" HeightF="531.4167" Dpi="254">
+      <Controls>
+        <Item1 Ref="47" ControlType="XRTable" Name="xrTable2" TextAlignment="TopCenter" SizeF="1365,47.62497" LocationFloat="0, 483.7918" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Borders="All" BorderDashStyle="Solid">
+          <Rows>
+            <Item1 Ref="48" ControlType="XRTableRow" Name="xrTableRow2" Weight="1" Dpi="254">
+              <Cells>
+                <Item1 Ref="49" ControlType="XRTableCell" Name="xrTableCell2" Weight="0.91748847831636515" Text="Ürün Kodu" Dpi="254" />
+                <Item2 Ref="50" ControlType="XRTableCell" Name="xrTableCell3" Weight="2.9347169003900015" Text="Ürün Adı" Dpi="254" Font="Times New Roman, 9pt, style=Bold">
+                  <StylePriority Ref="51" UseFont="false" />
+                </Item2>
+                <Item3 Ref="52" ControlType="XRTableCell" Name="xrTableCell4" Weight="0.60403365200794012" Text="Birimi" Dpi="254" />
+                <Item4 Ref="53" ControlType="XRTableCell" Name="xrTableCell5" Weight="0.67755412832765893" Text="Miktarı" Dpi="254" />
+                <Item5 Ref="54" ControlType="XRTableCell" Name="xrTableCell6" Weight="0.77089798399641385" Text="Fiyatı" Dpi="254" />
+                <Item6 Ref="55" ControlType="XRTableCell" Name="xrTableCell8" Weight="1.1147652461913629" Text="Tutar" Dpi="254" />
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="56" UseFont="false" UseBorders="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="57" ControlType="XRLabel" Name="lblCariAdi" SizeF="788.4584,111.3366" LocationFloat="298.4785, 11.07329" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="58" Expression="[CariAdi]" PropertyName="Text" EventName="BeforePrint" />
+          </ExpressionBindings>
+          <StylePriority Ref="59" UseBorders="false" />
+        </Item2>
+        <Item3 Ref="60" ControlType="XRLabel" Name="lblAdres" SizeF="788.4584,95.46172" LocationFloat="298.4785, 122.4098" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="61" Expression="[Adres]" PropertyName="Text" EventName="BeforePrint" />
+          </ExpressionBindings>
+          <StylePriority Ref="62" UseBorders="false" />
+        </Item3>
+        <Item4 Ref="63" ControlType="XRLabel" Name="lblIkametgah" Text="[Semt] \ [Ilce] \ [Il]" SizeF="788.4584,58.42001" LocationFloat="298.4785, 217.8717" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <StylePriority Ref="64" UseBorders="false" />
+        </Item4>
+        <Item5 Ref="65" ControlType="XRLabel" Name="lblTarih" SizeF="788.4584,58.41995" LocationFloat="298.4785, 276.2917" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="66" Expression="[Tarih]" PropertyName="Text" EventName="BeforePrint" />
+          </ExpressionBindings>
+          <StylePriority Ref="67" UseBorders="false" />
+        </Item5>
+        <Item6 Ref="68" ControlType="XRLabel" Name="lblVergiNo" SizeF="788.4584,58.41998" LocationFloat="298.4785, 393.1317" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="69" Expression="[VergiNo]" PropertyName="Text" EventName="BeforePrint" />
+          </ExpressionBindings>
+          <StylePriority Ref="70" UseBorders="false" />
+        </Item6>
+        <Item7 Ref="71" ControlType="XRLabel" Name="lblVergiDairesi" SizeF="788.4584,58.42001" LocationFloat="298.4785, 334.7118" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="72" Expression="[VergiDairesi]" PropertyName="Text" EventName="BeforePrint" />
+          </ExpressionBindings>
+          <StylePriority Ref="73" UseBorders="false" />
+        </Item7>
+        <Item8 Ref="74" ControlType="XRLabel" Name="xrLabel6" Text="Cari Adı :" TextAlignment="TopRight" SizeF="229,58.41998" LocationFloat="25.00001, 11.07329" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254" Borders="None">
+          <StylePriority Ref="75" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item8>
+        <Item9 Ref="76" ControlType="XRLabel" Name="xrLabel7" Text="Adres :" TextAlignment="TopRight" SizeF="229,84.87836" LocationFloat="25.00001, 122.4098" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254" Borders="None">
+          <StylePriority Ref="77" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item9>
+        <Item10 Ref="78" ControlType="XRLabel" Name="xrLabel8" Text="Semt/İl/İlçe :" TextAlignment="TopRight" SizeF="229,58.42004" LocationFloat="25.00001, 217.8717" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254" Borders="None">
+          <StylePriority Ref="79" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item10>
+        <Item11 Ref="80" ControlType="XRLabel" Name="xrLabel9" Text="Tarih :" TextAlignment="TopRight" SizeF="229,55.77423" LocationFloat="25.00001, 278.9374" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254" Borders="None">
+          <StylePriority Ref="81" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item11>
+        <Item12 Ref="82" ControlType="XRLabel" Name="xrLabel10" Text="Vergi Dairesi :" TextAlignment="TopRight" SizeF="229,55.77423" LocationFloat="25.00001, 337.3576" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254" Borders="None">
+          <StylePriority Ref="83" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item12>
+        <Item13 Ref="84" ControlType="XRLabel" Name="xrLabel13" Text="Vergi No :" TextAlignment="TopRight" SizeF="224.6656,55.77423" LocationFloat="25.00001, 395.7775" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254" Borders="None">
+          <StylePriority Ref="85" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item13>
+      </Controls>
+    </Item5>
+    <Item6 Ref="87" ControlType="DetailReportBand" Name="DetailReport" Level="0" DataSource="#Ref-86" Dpi="254">
+      <Bands>
+        <Item1 Ref="88" ControlType="DetailBand" Name="Detail1" HeightF="35" Dpi="254">
+          <Controls>
+            <Item1 Ref="89" ControlType="XRTable" Name="xrTable1" TextAlignment="TopCenter" SizeF="1365,35" LocationFloat="0, 0" Dpi="254" Font="Times New Roman, 7.5pt" Borders="Bottom" BorderDashStyle="Solid">
+              <Rows>
+                <Item1 Ref="90" ControlType="XRTableRow" Name="xrTableRow1" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="91" ControlType="XRTableCell" Name="colStokKodu" Weight="0.86930639127412135" Dpi="254">
+                      <ExpressionBindings>
+                        <Item1 Ref="92" Expression="[StokKodu]" PropertyName="Text" EventName="BeforePrint" />
+                      </ExpressionBindings>
+                    </Item1>
+                    <Item2 Ref="93" ControlType="XRTableCell" Name="colStokAdi" Weight="2.8559911200766939" Dpi="254" Font="Times New Roman, 8pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="94" Expression="[StokAdi]" PropertyName="Text" EventName="BeforePrint" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="95" UseFont="false" />
+                    </Item2>
+                    <Item3 Ref="96" ControlType="XRTableCell" Name="colBirim" Weight="0.55186346358484406" Dpi="254">
+                      <ExpressionBindings>
+                        <Item1 Ref="97" Expression="[Birim]" PropertyName="Text" EventName="BeforePrint" />
+                      </ExpressionBindings>
+                    </Item3>
+                    <Item4 Ref="98" ControlType="XRTableCell" Name="colMiktar" Weight="0.65523226591402828" Dpi="254">
+                      <ExpressionBindings>
+                        <Item1 Ref="99" Expression="[Miktar]" PropertyName="Text" EventName="BeforePrint" />
+                      </ExpressionBindings>
+                    </Item4>
+                    <Item5 Ref="100" ControlType="XRTableCell" Name="colBirimFiyati" Weight="0.74550184753340765" Dpi="254">
+                      <ExpressionBindings>
+                        <Item1 Ref="101" Expression="[Fiyat]" PropertyName="Text" EventName="BeforePrint" />
+                      </ExpressionBindings>
+                    </Item5>
+                    <Item6 Ref="102" ControlType="XRTableCell" Name="colToplamTutar" Weight="1.0780400439977798" TextAlignment="TopCenter" Dpi="254">
+                      <ExpressionBindings>
+                        <Item1 Ref="103" Expression="[Tutar]" PropertyName="Text" EventName="BeforePrint" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="104" UseTextAlignment="false" />
+                    </Item6>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="105" UseFont="false" UseBorders="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+      </Bands>
+    </Item6>
+  </Bands>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.ObjectBinding.ObjectDataSource,DevExpress.DataAccess.v18.2" Name="Fis_Bilgileri" Base64="PE9iamVjdERhdGFTb3VyY2UgTmFtZT0iRmlzX0JpbGdpbGVyaSI+PERhdGFTb3VyY2UgVHlwZT0iTmV0U2F0aXMuRW50aXRpZXMuVGFibGVzLkZpc0tvb3BlcmF0aWYsIE5ldFNhdGlzLkVudGl0aWVzLCBWZXJzaW9uPTEuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbCIgLz48L09iamVjdERhdGFTb3VyY2U+" />
+    <Item2 Ref="86" ObjectType="DevExpress.DataAccess.ObjectBinding.ObjectDataSource,DevExpress.DataAccess.v18.2" Name="Fis_Kalemleri" Base64="PE9iamVjdERhdGFTb3VyY2UgTmFtZT0iRmlzX0thbGVtbGVyaSI+PERhdGFTb3VyY2UgVHlwZT0iTmV0U2F0aXMuRW50aXRpZXMuVGFibGVzLkZpc0tvb3BlcmF0aWZLYWxlbWxlciwgTmV0U2F0aXMuRW50aXRpZXMsIFZlcnNpb249MS4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsIiAvPjwvT2JqZWN0RGF0YVNvdXJjZT4=" />
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>

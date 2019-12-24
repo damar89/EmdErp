@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="17.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="rptFaturaBarkodlu" SnapGridSize="25" ReportUnit="TenthsOfAMillimeter" Margins="40, 74, 185, 254" PaperKind="A4" PageWidth="2100" PageHeight="2970" Version="17.1" DataMember="FaturaBilgiler" DataSource="#Ref-0" Dpi="254">
+  <FormattingRuleSheet>
+    <Item1 Ref="2" Name="formattingRule1">
+      <Formatting Ref="3" BorderStyle="Inset" StringFormat="Near;Near;0;None;Character;Default" />
+    </Item1>
+  </FormattingRuleSheet>
+  <Bands>
+    <Item1 Ref="4" ControlType="DetailBand" Name="Detail" Expanded="false" HeightF="44.64584" TextAlignment="TopLeft" Dpi="254" Padding="0,0,0,0,254" />
+    <Item2 Ref="5" ControlType="TopMarginBand" Name="TopMargin" HeightF="185" TextAlignment="TopLeft" Dpi="254" Padding="0,0,0,0,254" />
+    <Item3 Ref="6" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="254" TextAlignment="TopLeft" Dpi="254" Padding="0,0,0,0,254" />
+    <Item4 Ref="7" ControlType="PageFooterBand" Name="PageFooter" HeightF="251.1458" Dpi="254">
+      <Controls>
+        <Item1 Ref="8" ControlType="XRLabel" Name="lblAraToplam" TextAlignment="TopRight" SizeF="362.9434,58.42" LocationFloat="1623.057, 8.732979" Dpi="254" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="9" PropertyName="Text" DataMember="FaturaBilgiler.FisAraToplam" />
+          </DataBindings>
+          <StylePriority Ref="10" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="11" ControlType="XRLabel" Name="lblKdvToplam" TextAlignment="TopRight" SizeF="362.9434,58.42001" LocationFloat="1623.056, 125.573" Dpi="254" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="12" PropertyName="Text" DataMember="FaturaBilgiler.FisKDVToplam" />
+          </DataBindings>
+          <StylePriority Ref="13" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="14" ControlType="XRLabel" Name="lblGenelToplam" TextAlignment="TopRight" SizeF="362.9434,58.42" LocationFloat="1623.056, 183.9929" Dpi="254" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="15" PropertyName="Text" DataMember="FaturaBilgiler.FisGenelToplam" />
+          </DataBindings>
+          <StylePriority Ref="16" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="17" ControlType="XRLabel" Name="xrLabel3" Text="AraToplam :" TextAlignment="TopRight" SizeF="362.9434,58.42" LocationFloat="1228.828, 8.732979" Dpi="254" Padding="5,5,0,0,254">
+          <StylePriority Ref="18" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="19" ControlType="XRLabel" Name="xrLabel2" Text="KdvToplam :" TextAlignment="TopRight" SizeF="362.9434,58.42001" LocationFloat="1228.827, 125.5728" Dpi="254" Padding="5,5,0,0,254">
+          <StylePriority Ref="20" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="21" ControlType="XRLabel" Name="xrLabel1" Text="GenelToplam :" TextAlignment="TopRight" SizeF="362.9434,58.42" LocationFloat="1228.827, 183.9929" Dpi="254" Padding="5,5,0,0,254">
+          <StylePriority Ref="22" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="23" ControlType="XRLabel" Name="lblIndirimTutari" TextAlignment="TopRight" SizeF="362.9434,58.42" LocationFloat="1623.057, 67.15298" Dpi="254" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="24" PropertyName="Text" DataMember="FaturaBilgiler.FisIskontoTutari" />
+          </DataBindings>
+          <StylePriority Ref="25" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="26" ControlType="XRLabel" Name="xrLabel6" Text="İndirim Tutarı" TextAlignment="TopRight" SizeF="362.9434,58.42" LocationFloat="1228.828, 67.15298" Dpi="254" Padding="5,5,0,0,254">
+          <StylePriority Ref="27" UseTextAlignment="false" />
+        </Item8>
+        <Item9 Ref="28" ControlType="XRLabel" Name="xrLabel4" Text="Yalnız :" SizeF="132.2917,58.41999" LocationFloat="25.00001, 101.58" Dpi="254" Padding="5,5,0,0,254" />
+        <Item10 Ref="29" ControlType="XRLabel" Name="xrLabel5" SizeF="978.7863,58.41999" LocationFloat="174.3125, 101.58" Dpi="254" Font="Times New Roman, 8pt" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="30" PropertyName="Text" DataMember="FaturaBilgiler.FisGenelToplamYazi" />
+          </DataBindings>
+          <StylePriority Ref="31" UseFont="false" />
+        </Item10>
+        <Item11 Ref="32" ControlType="XRLabel" Name="xrLabel13" Text="xrLabel13" SizeF="1128.099,84.87838" LocationFloat="25.00001, 0" Dpi="254" Padding="5,5,0,0,254" />
+      </Controls>
+    </Item4>
+    <Item5 Ref="33" ControlType="PageHeaderBand" Name="PageHeader" HeightF="721.9167" Dpi="254">
+      <Controls>
+        <Item1 Ref="34" ControlType="XRLabel" Name="xrLabel12" SizeF="788.4583,58.42004" LocationFloat="73.77085, 412.7503" Dpi="254" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="35" PropertyName="Text" DataMember="FaturaBilgiler.CariVergiNo" />
+          </DataBindings>
+        </Item1>
+        <Item2 Ref="36" ControlType="XRLabel" Name="xrLabel11" SizeF="788.4583,58.42004" LocationFloat="73.77085, 354.3303" Dpi="254" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="37" PropertyName="Text" DataMember="FaturaBilgiler.CariVergiDairesi" />
+          </DataBindings>
+        </Item2>
+        <Item3 Ref="38" ControlType="XRLabel" Name="xrLabel10" SizeF="788.4583,58.42001" LocationFloat="73.77085, 295.9103" Dpi="254" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="39" PropertyName="Text" DataMember="FaturaBilgiler.FaturaTarihi" />
+          </DataBindings>
+        </Item3>
+        <Item4 Ref="40" ControlType="XRLabel" Name="xrLabel9" SizeF="788.4583,58.42" LocationFloat="73.77085, 237.4902" Dpi="254" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="41" PropertyName="Text" DataMember="FaturaBilgiler.CariIkamet" />
+          </DataBindings>
+        </Item4>
+        <Item5 Ref="42" ControlType="XRLabel" Name="xrLabel8" SizeF="788.4583,101.1535" LocationFloat="73.77085, 136.3366" Dpi="254" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="43" PropertyName="Text" DataMember="FaturaBilgiler.CariAdres" />
+          </DataBindings>
+        </Item5>
+        <Item6 Ref="44" ControlType="XRLabel" Name="xrLabel7" SizeF="788.4583,111.3366" LocationFloat="73.77085, 25.00001" Dpi="254" Padding="5,5,0,0,254">
+          <DataBindings>
+            <Item1 Ref="45" PropertyName="Text" DataMember="FaturaBilgiler.CariAdiFaturaUnvan" />
+          </DataBindings>
+        </Item6>
+      </Controls>
+    </Item5>
+    <Item6 Ref="46" ControlType="DetailReportBand" Name="DetailReport" Level="0" DataMember="FaturaKalemler" DataSource="#Ref-0" Dpi="254">
+      <Bands>
+        <Item1 Ref="47" ControlType="DetailBand" Name="Detail1" HeightF="44.97917" Dpi="254">
+          <Controls>
+            <Item1 Ref="48" ControlType="XRTable" Name="xrTable1" SizeF="1970.064,35" LocationFloat="15.93538, 0" Dpi="254" Font="Times New Roman, 7.5pt" Borders="Bottom" BorderDashStyle="Dot">
+              <Rows>
+                <Item1 Ref="49" ControlType="XRTableRow" Name="xrTableRow1" Weight="1" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="50" ControlType="XRTableCell" Name="colBarkodu" Weight="0.78893893899632184" Dpi="254">
+                      <DataBindings>
+                        <Item1 Ref="51" PropertyName="Text" DataMember="FaturaKalemler.KalemBarkod" />
+                      </DataBindings>
+                    </Item1>
+                    <Item2 Ref="52" ControlType="XRTableCell" Name="colStokKodu" Weight="0.70408806883520036" Dpi="254">
+                      <DataBindings>
+                        <Item1 Ref="53" PropertyName="Text" DataMember="FaturaKalemler.KalemStokKodu" />
+                      </DataBindings>
+                    </Item2>
+                    <Item3 Ref="54" ControlType="XRTableCell" Name="colStokAdi" Weight="2.5459146652906557" Dpi="254" Font="Times New Roman, 8pt">
+                      <DataBindings>
+                        <Item1 Ref="55" PropertyName="Text" DataMember="FaturaKalemler.KalemStokAdi" />
+                      </DataBindings>
+                      <StylePriority Ref="56" UseFont="false" />
+                    </Item3>
+                    <Item4 Ref="57" ControlType="XRTableCell" Name="colBirim" Weight="0.45159954788903151" TextAlignment="TopCenter" Dpi="254">
+                      <DataBindings>
+                        <Item1 Ref="58" PropertyName="Text" DataMember="FaturaKalemler.KalemBirim" />
+                      </DataBindings>
+                      <StylePriority Ref="59" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="60" ControlType="XRTableCell" Name="colMiktar" Weight="0.45014278940791796" TextAlignment="TopCenter" Dpi="254">
+                      <DataBindings>
+                        <Item1 Ref="61" PropertyName="Text" DataMember="FaturaKalemler.KalemMiktar" />
+                      </DataBindings>
+                      <StylePriority Ref="62" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="63" ControlType="XRTableCell" Name="colBirimFiyati" Weight="0.48830143014118821" TextAlignment="TopCenter" Dpi="254">
+                      <DataBindings>
+                        <Item1 Ref="64" PropertyName="Text" DataMember="FaturaKalemler.KalemBirimFiyati" />
+                      </DataBindings>
+                      <StylePriority Ref="65" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="66" ControlType="XRTableCell" Name="colIskonto" Weight="0.41537926049028795" TextAlignment="TopCenter" Dpi="254">
+                      <DataBindings>
+                        <Item1 Ref="67" PropertyName="Text" DataMember="FaturaKalemler.KalemIskonto" />
+                      </DataBindings>
+                      <StylePriority Ref="68" UseTextAlignment="false" />
+                    </Item7>
+                    <Item8 Ref="69" ControlType="XRTableCell" Name="colKdv" Weight="0.36301065311418707" TextAlignment="TopCenter" Dpi="254">
+                      <DataBindings>
+                        <Item1 Ref="70" PropertyName="Text" DataMember="FaturaKalemler.KalemKDV" />
+                      </DataBindings>
+                      <StylePriority Ref="71" UseTextAlignment="false" />
+                    </Item8>
+                    <Item9 Ref="72" ControlType="XRTableCell" Name="colToplamTutar" Weight="0.57978671045860319" TextAlignment="TopCenter" Dpi="254">
+                      <DataBindings>
+                        <Item1 Ref="73" PropertyName="Text" DataMember="FaturaKalemler.KalemToplam" />
+                      </DataBindings>
+                      <StylePriority Ref="74" UseTextAlignment="false" />
+                    </Item9>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="75" UseFont="false" UseBorders="false" UseBorderDashStyle="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+      </Bands>
+    </Item6>
+    <Item7 Ref="76" ControlType="DetailReportBand" Name="DetailReport1" Level="1" DataMember="FaturaKDVler" DataSource="#Ref-0" Dpi="254">
+      <Bands>
+        <Item1 Ref="77" ControlType="DetailBand" Name="Detail2" HeightF="63.5" Dpi="254">
+          <Controls>
+            <Item1 Ref="78" ControlType="XRTable" Name="xrTable2" SizeF="591.6459,63.5" LocationFloat="1394.354, 0" Dpi="254">
+              <Rows>
+                <Item1 Ref="79" ControlType="XRTableRow" Name="xrTableRow2" Weight="0.5679012345679012" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="80" ControlType="XRTableCell" Name="xrTableCell1" Weight="0.05188359615798159" Dpi="254">
+                      <DataBindings>
+                        <Item1 Ref="81" PropertyName="Text" DataMember="FaturaKDVler.KDV" />
+                      </DataBindings>
+                    </Item1>
+                    <Item2 Ref="82" ControlType="XRTableCell" Name="xrTableCell2" Weight="0.050509798504294073" Dpi="254">
+                      <DataBindings>
+                        <Item1 Ref="83" PropertyName="Text" DataMember="FaturaKDVler.Tutar" />
+                      </DataBindings>
+                    </Item2>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item1>
+      </Bands>
+    </Item7>
+  </Bands>
+  <ComponentStorage>
+    <Item1 Ref="0" />
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>
