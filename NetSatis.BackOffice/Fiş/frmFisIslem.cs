@@ -573,6 +573,37 @@ namespace NetSatis.BackOffice.Fiş
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
                     break;
+                       case "Sayım Fişi":
+                    lblSatir.Visible = true;
+                    lblSatirSayisi.Visible = true;
+                    ayarlar.StokHareketi = "Stok Giriş";
+                    ayarlar.FisTurleri = "Sayım Eksiği Fişi";
+                    btnBarkodluFatura.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+                    navOdemeEkrani.Dispose();
+                    navPersonelIslem.Dispose();
+                    btnFaturalandir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+                    faturaYazdırToolStripMenuItem.Visible = false;
+                    proformaFaturaYazdırToolStripMenuItem.Visible = false;
+                    siparişYazdırToolStripMenuItem.Visible = false;
+                    bilgiFişiYazdırToolStripMenuItem.Visible = false;
+                    teklifYazdırToolStripMenuItem.Visible = false;
+                    irsaliyeYazdırToolStripMenuItem.Visible = false;
+                    btnAlisFaturalandir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+                    panelOdeme.Visible = false;
+                    ayarlar.OdemeEkrani = false;
+                    toggleKDVDahil.Visible = false;
+                    cariBilgi.Visible = false;
+                    ayarlar.SatisEkrani = true;
+                    navPlasiyerBilgi.Dispose();
+                    lblBaslik.Text = "Sayım Fişi";
+                    lblBaslik.Appearance.ImageIndex = 5;
+                    labelControl32.Visible = false;
+                    labelControl33.Visible = false;
+                    labelControl34.Visible = false;
+                    calcIndirimOrani.Visible = false;
+                    calcIndirimToplami.Visible = false;
+                    calcIndirimTutari.Visible = false;
+                    break;
                 case "Sayım Fazlası Fişi":
                     lblSatir.Visible = true;
                     lblSatirSayisi.Visible = true;

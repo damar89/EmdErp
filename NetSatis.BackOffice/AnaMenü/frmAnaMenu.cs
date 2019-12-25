@@ -986,9 +986,6 @@ namespace NetSatis.BackOffice
                 case "Alış İrsaliyeleri":
                     barButtonItem40_ItemClick(null, null);
                     break;
-                case "Stok Transfer":
-                    FisIslem_Click(x.FocusedNode.Tag.ToString());
-                    break;
                 case "Sayım Eksiği Fişi":
                     FisIslem_Click(x.FocusedNode.Tag.ToString());
                     break;
@@ -1031,10 +1028,10 @@ namespace NetSatis.BackOffice
                 case "Alış Faturaları":
                     barButtonItem16_ItemClick(null, null);
                     break;
-                case "Ba Form":
+                case "Bs Form":
                     navBarItem30_LinkClicked(null, null);
                     break;
-                case "Bs Form":
+                case "Ba Form":
                     navBarItem27_LinkClicked(null, null);
                     break;
                 case "Genel Stok Hareketleri":
@@ -1064,7 +1061,30 @@ namespace NetSatis.BackOffice
                 case "Masraf Dökümü":
                     navBarItem25_LinkClicked(null, null);
                     break;
-
+                case "Stok Transfer":
+                    btnFisler_LinkClicked2(null, null);
+                    break;
+                    case "Genel Alış Raporu":
+                    navBarItem35_LinkClicked(null, null);
+                    break;
+                     case "Tarih Aralıklı Alış Raporu":
+                    navBarItem36_LinkClicked(null, null);
+                    break;
+                     case "İade Listeleri":
+                    btnIadeListeleri_LinkClicked(null, null);
+                    break;
+                     case "Cari Bakiye Durum Raporu":
+                    navBarItem41_LinkClicked(null, null);
+                    break;
+                       case "Cari Hesap Ekstresi":
+                    btnCariHesapEkstre_LinkClicked(null, null);
+                    break;
+                    case "Günlük Kasa Raporu":
+                    navBarItem42_LinkClicked(null, null);
+                    break;
+                    case "Kasa Raporu Detaylı":
+                    btnDetay_LinkClicked(null, null);
+                    break;
                 default:
                     break;
             }

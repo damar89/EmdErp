@@ -103,9 +103,9 @@
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(200, 8);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(212, 16);
+            this.labelControl1.Size = new System.Drawing.Size(211, 16);
             this.labelControl1.TabIndex = 25;
-            this.labelControl1.Text = "Ba Raporlaması için Yıl ve Ay Seçiniz.";
+            this.labelControl1.Text = "Bs Raporlaması için Yıl ve Ay Seçiniz.";
             // 
             // cmbYil
             // 
