@@ -291,54 +291,72 @@ namespace NetSatis.BackOffice.Stok
         }
         string filtreyeCevir(string filtre)
         {
-             filtre = filtre.Replace(' ', '%');
-                if (filtre[filtre.Length - 1] != '%')
-                {
-                    filtre += '%';
-                }
-                if (filtre[0] != '%')
-                {
-                    filtre = '%' + filtre;
-                }
-                return filtre;
+
+            filtre = filtre.Replace(' ', '%');
+            if (filtre[filtre.Length - 1] != '%')
+            {
+                filtre += '%';
+            }
+            if (filtre[0] != '%')
+            {
+                filtre = '%' + filtre;
+            }
+            return filtre;
         }
         private void txtStokKodu_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)
             {
-               
-                gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokKodu"), new OperandValue(filtreyeCevir( txtStokKodu.Text )), BinaryOperatorType.Like);
+                if (txtStokKodu.Text != "")
+                {
+                    gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokKodu"), new OperandValue(filtreyeCevir(txtStokKodu.Text)), BinaryOperatorType.Like);
+                }
             }
         }
         private void txtBarkodu_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)
             {
-                gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokAdi"), new OperandValue(filtreyeCevir(txtBarkodu.Text)), BinaryOperatorType.Like);
+                if (txtBarkodu.Text != "")
+                {
+                    gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("Barkodu"), new OperandValue(filtreyeCevir(txtBarkodu.Text)), BinaryOperatorType.Like);
+                }
             }
         }
         private void txtStokAdi_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)
             {
-                gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokAdi"), new OperandValue(filtreyeCevir(txtStokAdi.Text)), BinaryOperatorType.Like);
+                if (txtStokAdi.Text != "")
+                {
+                    gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokAdi"), new OperandValue(filtreyeCevir(txtStokAdi.Text)), BinaryOperatorType.Like);
+                }
             }
         }
         private void txtStokKodu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokKodu"), new OperandValue(filtreyeCevir(txtStokKodu.Text)), BinaryOperatorType.Like);
+            if (txtStokKodu.Text != "")
+            {
+                gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokKodu"), new OperandValue(filtreyeCevir(txtStokKodu.Text)), BinaryOperatorType.Like);
+            }
         }
         private void txtStokAdi_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokAdi"), new OperandValue(filtreyeCevir( txtStokAdi.Text)), BinaryOperatorType.Like);
+            if (txtStokAdi.Text != "")
+            {
+                gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokAdi"), new OperandValue(filtreyeCevir(txtStokAdi.Text)), BinaryOperatorType.Like);
+            }
         }
         private void txtBarkodu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokAdi"), new OperandValue(filtreyeCevir(txtBarkodu.Text)), BinaryOperatorType.Like);
+            if (txtBarkodu.Text != "")
+            {
+                gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("Barkodu"), new OperandValue(filtreyeCevir(txtBarkodu.Text)), BinaryOperatorType.Like);
+            }
         }
         private void btnStokDuzenle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            
+
             try
             {
                 if (gridView1.RowCount != 0)

@@ -160,26 +160,69 @@ namespace NetSatis.FrontOffice
         }
         private void ButonlariYukle()
         {
+            int pagei = 0;
             foreach (var hizliSatisGrup in context.HizliSatisGruplari.ToList())
             {
                 XtraTabPage page = new XtraTabPage { Name = hizliSatisGrup.Id.ToString(), Text = hizliSatisGrup.GrupAdi };
-                FlowLayoutPanel panel = new FlowLayoutPanel();
+
+                TableLayoutPanel panel = new TableLayoutPanel();
                 panel.Dock = DockStyle.Fill;
                 page.Controls.Add(panel);
-                foreach (var hizliSatis in context.HizliSatislar.Where(c => c.GrupId == hizliSatisGrup.Id).ToList())
+                Color c = new Color();
+                switch (pagei % 5)
+                {
+                    case 0:
+                        c = Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(65)))));
+                        break;
+                    case 1:
+                        c = Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(19)))), ((int)(((byte)(60)))));
+                        break;
+                    case 2:
+                        c = Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(168)))), ((int)(((byte)(58)))));
+                        break;
+                    case 3:
+                        c = Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(111)))), ((int)(((byte)(98)))));
+                        break;
+                    case 4:
+                        c = Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(198)))), ((int)(((byte)(87)))));
+                        break;
+                    default:
+                        break;
+                }
+                pagei++;
+                page.Appearance.Header.BackColor = c;
+
+                var list = context.HizliSatislar.Where(m => m.GrupId == hizliSatisGrup.Id).ToList();
+
+                panel.ColumnCount = list.Count >= 4 ? 4 : list.Count;
+                panel.RowCount = Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(list.Count / 4))) + 1;
+                for (int i = 0; i < panel.ColumnCount; i++)
+                {
+                    panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100 / panel.ColumnCount ));
+                }
+                for (int i = 0; i < panel.RowCount; i++)
+                {
+                    panel.RowStyles.Add(new RowStyle(SizeType.Percent, 100/panel.RowCount));
+                }
+
+
+                foreach (var hizliSatis in list)
                 {
                     SimpleButton button = new SimpleButton
                     {
                         Name = hizliSatis.StokKodu,
                         Text = hizliSatis.UrunAdi + Environment.NewLine + hizliSatis.Fiyati,
-                        Appearance = { TextOptions = { WordWrap = WordWrap.Wrap }/*BackColor=Color.OrangeRed,ForeColor=Color.White*/},
-                        Height = 70,
-                        Width = 70,
+                        Appearance = { TextOptions = { WordWrap = WordWrap.Wrap },BackColor = c
+                            },
+                        //Height = 70,
+                        //Width = 70,
+                        Dock = DockStyle.Fill
                     };
                     Image img = byteArrayToImage(hizliSatis.Resim);
                     if (img != null)
                     {
-                        Bitmap bitmapimg = ResizeImage(img, 50, 50);
+                        Bitmap bitmapimg = ResizeImage(img,  Convert.ToInt32(Math.Ceiling( Convert.ToDecimal(xtraTabControl1.Width / panel.ColumnCount ))) - 20
+                            , Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(xtraTabControl1.Height / panel.RowCount))) - 20);
                         button.ImageOptions.Image = bitmapimg;
                         button.ImageOptions.ImageToTextAlignment = ImageAlignToText.TopCenter;
                     }
