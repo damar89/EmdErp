@@ -20,8 +20,11 @@ namespace NetSatis.Entities.Mapping
             this.Property(p => p.CepTelefonu2).HasMaxLength(200);
             this.Property(p => p.CepTelefonu3).HasMaxLength(200);
             this.Property(p => p.Telefon).HasMaxLength(200);
+            this.Property(p => p.Telefon2).HasMaxLength(200);
+            this.Property(p => p.Telefon3).HasMaxLength(200);
             this.Property(p => p.Fax).HasMaxLength(200);
             this.Property(p => p.EMail).HasMaxLength(500);
+             this.Property(p => p.EMail2).HasMaxLength(500);
             this.Property(p => p.Web).HasMaxLength(500);
             this.Property(p => p.Il).HasMaxLength(200);
             this.Property(p => p.Ilce).HasMaxLength(200);
@@ -54,8 +57,11 @@ namespace NetSatis.Entities.Mapping
             this.Property(p => p.CepTelefonu2).HasColumnName("CepTelefonu2");
             this.Property(p => p.CepTelefonu3).HasColumnName("CepTelefonu3");
             this.Property(p => p.Telefon).HasColumnName("Telefon");
+            this.Property(p => p.Telefon2).HasColumnName("Telefon2");
+            this.Property(p => p.Telefon3).HasColumnName("Telefon3");
             this.Property(p => p.Fax).HasColumnName("Fax");
             this.Property(p => p.EMail).HasColumnName("EMail");
+            this.Property(p => p.EMail2).HasColumnName("EMail2");
             this.Property(p => p.Web).HasColumnName("Web");
             this.Property(p => p.KayitTarihi).HasColumnName("KayitTarihi");
             this.Property(p => p.GuncellemeTarihi).HasColumnName("GuncellemeTarihi");

@@ -21,8 +21,11 @@ namespace NetSatis.Entities.Tables
         public string CepTelefonu2 { get; set; }
         public string CepTelefonu3 { get; set; }
         public string Telefon { get; set; }
+        public string Telefon2 { get; set; }
+        public string Telefon3 { get; set; }
         public string Fax { get; set; }
         public string EMail { get; set; }
+        public string EMail2 { get; set; }
         public string Web { get; set; }
         public string Adres { get; set; }
         public string Il { get; set; }

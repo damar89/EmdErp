@@ -80,6 +80,8 @@
             this.colAlacak = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBorc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBakiye = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCepTel2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCepTelefonu3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -138,8 +140,8 @@
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnDuzenle = new DevExpress.XtraEditors.SimpleButton();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.colCepTel2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCepTelefonu3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTelefon2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTelefon3 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -232,7 +234,9 @@
             this.colBakiye,
             this.colHesapDurum,
             this.colCepTel2,
-            this.colCepTelefonu3});
+            this.colCepTelefonu3,
+            this.colTelefon2,
+            this.colTelefon3});
             this.gridView1.CustomizationFormBounds = new System.Drawing.Rectangle(620, 374, 266, 240);
             gridFormatRule1.Column = this.colHesapDurum;
             gridFormatRule1.ColumnApplyTo = this.colHesapDurum;
@@ -509,6 +513,20 @@
             this.colBakiye.OptionsColumn.AllowEdit = false;
             this.colBakiye.Visible = true;
             this.colBakiye.VisibleIndex = 7;
+            // 
+            // colCepTel2
+            // 
+            this.colCepTel2.Caption = "Cep Telefon2";
+            this.colCepTel2.FieldName = "CepTelefonu2";
+            this.colCepTel2.Name = "colCepTel2";
+            this.colCepTel2.OptionsColumn.AllowEdit = false;
+            // 
+            // colCepTelefonu3
+            // 
+            this.colCepTelefonu3.Caption = "Cep Telefonu3";
+            this.colCepTelefonu3.FieldName = "CepTelefonu3";
+            this.colCepTelefonu3.Name = "colCepTelefonu3";
+            this.colCepTelefonu3.OptionsColumn.AllowEdit = false;
             // 
             // groupControl2
             // 
@@ -1124,19 +1142,19 @@
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
-            // colCepTel2
+            // colTelefon2
             // 
-            this.colCepTel2.Caption = "Cep Telefon2";
-            this.colCepTel2.FieldName = "CepTelefonu2";
-            this.colCepTel2.Name = "colCepTel2";
-            this.colCepTel2.OptionsColumn.AllowEdit = false;
+            this.colTelefon2.Caption = "Telefon2";
+            this.colTelefon2.FieldName = "Telefon2";
+            this.colTelefon2.Name = "colTelefon2";
+            this.colTelefon2.OptionsColumn.AllowEdit = false;
             // 
-            // colCepTelefonu3
+            // colTelefon3
             // 
-            this.colCepTelefonu3.Caption = "Cep Telefonu3";
-            this.colCepTelefonu3.FieldName = "CepTelefonu3";
-            this.colCepTelefonu3.Name = "colCepTelefonu3";
-            this.colCepTelefonu3.OptionsColumn.AllowEdit = false;
+            this.colTelefon3.Caption = "Telefon3";
+            this.colTelefon3.FieldName = "Telefon3";
+            this.colTelefon3.Name = "colTelefon3";
+            this.colTelefon3.OptionsColumn.AllowEdit = false;
             // 
             // frmCari
             // 
@@ -1274,5 +1292,7 @@
         private DevExpress.XtraEditors.ButtonEdit txtcCariAdi;
         private DevExpress.XtraGrid.Columns.GridColumn colCepTel2;
         private DevExpress.XtraGrid.Columns.GridColumn colCepTelefonu3;
+        private DevExpress.XtraGrid.Columns.GridColumn colTelefon2;
+        private DevExpress.XtraGrid.Columns.GridColumn colTelefon3;
     }
 }
