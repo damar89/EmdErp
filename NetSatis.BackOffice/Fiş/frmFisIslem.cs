@@ -2652,6 +2652,23 @@ namespace NetSatis.BackOffice.Fiş
             if (e.KeyCode == Keys.Enter)
             {
                 this.ActiveControl = txtSira;
+                string kod = txtSeri.Text;
+                if (kod != "")
+                {
+                    var lastFis = context.Fisler.Where(x => x.Seri == kod).OrderByDescending(x => x.KayitTarihi).FirstOrDefault();
+                    if (lastFis != null && lastFis.Sira != null && lastFis.Sira != "" )
+                    {
+                        int serino = 1;
+                        try
+                        {
+                            serino = Convert.ToInt32(lastFis.Seri) + 1;
+                        }
+                        catch 
+                        {
+                        }
+                        txtSira.Text = serino.ToString();
+                    }
+                }
             }
         }
     }
