@@ -83,7 +83,7 @@ namespace NetSatis.BackOffice.Fiş
             else
             {
                 _fisentity.FisTuru = fisTuru;
-                
+
                 _fisentity.Tarih = DateTime.Now;
                 _fisentity.VadeTarihi = DateTime.Now;
                 //_fisentity.FisKodu =
@@ -575,7 +575,7 @@ namespace NetSatis.BackOffice.Fiş
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
                     break;
-                       case "Sayım Fişi":
+                case "Sayım Fişi":
                     lblSatir.Visible = true;
                     lblSatirSayisi.Visible = true;
                     ayarlar.StokHareketi = "Stok Giriş";
@@ -817,7 +817,7 @@ namespace NetSatis.BackOffice.Fiş
             var a = SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_VarsayilanHareketTipi);
             if (a != null)
             {
-            cmbTipi.Text = a ;
+                cmbTipi.Text = a;
 
             }
 
@@ -2591,7 +2591,7 @@ namespace NetSatis.BackOffice.Fiş
                 HarTipi = "CD";
                 cmbTipi.Text = "-";
             }
-             if (txtFisTuru.Text == "Masraf Fişi")
+            if (txtFisTuru.Text == "Masraf Fişi")
             {
                 HarTipi = "MF";
                 cmbTipi.Text = "-";
@@ -2669,6 +2669,23 @@ namespace NetSatis.BackOffice.Fiş
                         txtSira.Text = serino.ToString();
                     }
                 }
+            }
+        }
+
+        private void gridStokHareket_ShownEditor(object sender, EventArgs e)
+        {
+            if (gridStokHareket.FocusedColumn.FieldName == "Miktar"
+               || gridStokHareket.FocusedColumn.FieldName == "BirimFiyati"
+               )
+            {
+                BeginInvoke(new Action(() =>
+          {
+              if (gridStokHareket.ActiveEditor != null)
+              {
+                  gridStokHareket.ActiveEditor.SelectAll();
+              }
+          }));
+
             }
         }
     }
