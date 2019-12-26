@@ -38,7 +38,6 @@ namespace NetSatis.Update
                         process.Kill();
                     }
                 }
-
             }
             if (IsRunning("NetSatis.FrontOffice"))
             {
@@ -50,7 +49,6 @@ namespace NetSatis.Update
                         process.Kill();
                     }
                 }
-
             }
         }
 

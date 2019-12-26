@@ -31,6 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBaRapor));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cvsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yazdırToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colKodu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCariAdi = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -40,17 +46,11 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnExcel = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cvsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yazdırToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -64,6 +64,57 @@
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.yazdırToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(128, 48);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.excelToolStripMenuItem,
+            this.cvsToolStripMenuItem,
+            this.pdfToolStripMenuItem});
+            this.toolStripMenuItem1.Image = global::NetSatis.BackOffice.Properties.Resources.export_16x161;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(127, 22);
+            this.toolStripMenuItem1.Text = "Dışa Aktar";
+            // 
+            // excelToolStripMenuItem
+            // 
+            this.excelToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.exporttoxls_16x16;
+            this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
+            this.excelToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.excelToolStripMenuItem.Text = "Excel";
+            this.excelToolStripMenuItem.Click += new System.EventHandler(this.excelToolStripMenuItem_Click);
+            // 
+            // cvsToolStripMenuItem
+            // 
+            this.cvsToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.exporttoxlsx_16x161;
+            this.cvsToolStripMenuItem.Name = "cvsToolStripMenuItem";
+            this.cvsToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.cvsToolStripMenuItem.Text = "Csv";
+            this.cvsToolStripMenuItem.Click += new System.EventHandler(this.cvsToolStripMenuItem_Click);
+            // 
+            // pdfToolStripMenuItem
+            // 
+            this.pdfToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.exporttopdf_16x16;
+            this.pdfToolStripMenuItem.Name = "pdfToolStripMenuItem";
+            this.pdfToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.pdfToolStripMenuItem.Text = "Pdf";
+            this.pdfToolStripMenuItem.Click += new System.EventHandler(this.pdfToolStripMenuItem_Click);
+            // 
+            // yazdırToolStripMenuItem
+            // 
+            this.yazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printdialog_16x16;
+            this.yazdırToolStripMenuItem.Name = "yazdırToolStripMenuItem";
+            this.yazdırToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.yazdırToolStripMenuItem.Text = "Yazdır";
+            this.yazdırToolStripMenuItem.Click += new System.EventHandler(this.yazdırToolStripMenuItem_Click);
             // 
             // gridView1
             // 
@@ -88,7 +139,7 @@
             // colCariAdi
             // 
             this.colCariAdi.Caption = "Cari Adı";
-            this.colCariAdi.FieldName = "Cari Adi";
+            this.colCariAdi.FieldName = "CariAdi";
             this.colCariAdi.Name = "colCariAdi";
             this.colCariAdi.OptionsColumn.AllowEdit = false;
             this.colCariAdi.Visible = true;
@@ -157,57 +208,6 @@
             this.btnKapat.Text = "Kapat";
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.yazdırToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.excelToolStripMenuItem,
-            this.cvsToolStripMenuItem,
-            this.pdfToolStripMenuItem});
-            this.toolStripMenuItem1.Image = global::NetSatis.BackOffice.Properties.Resources.export_16x161;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem1.Text = "Dışa Aktar";
-            // 
-            // excelToolStripMenuItem
-            // 
-            this.excelToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.exporttoxls_16x16;
-            this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
-            this.excelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.excelToolStripMenuItem.Text = "Excel";
-            this.excelToolStripMenuItem.Click += new System.EventHandler(this.excelToolStripMenuItem_Click);
-            // 
-            // cvsToolStripMenuItem
-            // 
-            this.cvsToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.exporttoxlsx_16x161;
-            this.cvsToolStripMenuItem.Name = "cvsToolStripMenuItem";
-            this.cvsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cvsToolStripMenuItem.Text = "Csv";
-            this.cvsToolStripMenuItem.Click += new System.EventHandler(this.cvsToolStripMenuItem_Click);
-            // 
-            // pdfToolStripMenuItem
-            // 
-            this.pdfToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.exporttopdf_16x16;
-            this.pdfToolStripMenuItem.Name = "pdfToolStripMenuItem";
-            this.pdfToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pdfToolStripMenuItem.Text = "Pdf";
-            this.pdfToolStripMenuItem.Click += new System.EventHandler(this.pdfToolStripMenuItem_Click);
-            // 
-            // yazdırToolStripMenuItem
-            // 
-            this.yazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printdialog_16x16;
-            this.yazdırToolStripMenuItem.Name = "yazdırToolStripMenuItem";
-            this.yazdırToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.yazdırToolStripMenuItem.Text = "Yazdır";
-            this.yazdırToolStripMenuItem.Click += new System.EventHandler(this.yazdırToolStripMenuItem_Click);
-            // 
             // frmBaRapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,10 +219,10 @@
             this.ShowIcon = false;
             this.Text = "Ba Rapor";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

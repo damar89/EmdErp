@@ -314,7 +314,10 @@ namespace NetSatis.BackOffice.Fiş
                     if (txtFisTuru.Text != "Hakediş Fişi")
                     {
                         int kasaid = Convert.ToInt32(context.Kullanicilar.Where(x => x.Id == frmAnaMenu.UserId).FirstOrDefault().KasaId);
-
+                        if (kasaid == 0)
+                        {
+                            kasaid = 1;
+                        }
                         KasaHareket entityKasaHareket = new KasaHareket
                         {
                             OdemeTuruId = Convert.ToInt32(buton.Tag),
@@ -874,6 +877,10 @@ namespace NetSatis.BackOffice.Fiş
             stokHareket.IndirimOrani2 = 0;
             stokHareket.IndirimOrani3 = 0;
             int depoid = Convert.ToInt32(context.Kullanicilar.Where(x => x.Id == frmAnaMenu.UserId).FirstOrDefault().DepoId);
+            if (depoid == 0)
+            {
+                depoid = 1;
+            }
             stokHareket.DepoId = depoid;
             stokHareket.BirimFiyati = txtFisTuru.Text == "Alış Faturası" || txtFisTuru.Text == "Alış İade Faturası" || txtFisTuru.Text == "Alış İrsaliyesi" || txtFisTuru.Text == "Verilen Sipariş Fişi" || txtFisTuru.Text == "Alınan Teklif Fişi" || txtFisTuru.Text == "Stok Devir Fişi" || txtFisTuru.Text == "Sayım Fazlası Fişi" || txtFisTuru.Text == "Sayım Eksiği Fişi" || txtFisTuru.Text == "Sayım Giriş Fişi" ? entity.AlisFiyati1 : entity.SatisFiyati1;
             stokHareket.Mera = txtFisTuru.Text == "Toptan Satış Faturası" && entity.Mera != null ? entity.Mera : 0;
@@ -1237,6 +1244,12 @@ namespace NetSatis.BackOffice.Fiş
         }
         private void btnSatisBitir_Click(object sender, EventArgs e)
         {
+            if (_fisentity.Tipi == "")
+            {
+                MessageBox.Show("Lütfen hareket tipi seçiniz.");
+                return;
+            }
+
             FaturaOlustur();
             if (duzenle)
             {
@@ -1255,12 +1268,7 @@ namespace NetSatis.BackOffice.Fiş
                     }
                 }
             }
-            if (_fisentity.Tipi == "")
-            {
-                MessageBox.Show("Lütfen hareket tipi seçiniz.");
-                return;
-            }
-
+           
             if (_fisentity.FisTuru == "Cari Devir Fişi")
             {
                 if (toggleCariDevir.IsOn)

@@ -50,6 +50,7 @@
             this.btnGoster.Size = new System.Drawing.Size(106, 36);
             this.btnGoster.TabIndex = 14;
             this.btnGoster.Text = "Göster";
+            this.btnGoster.Click += new System.EventHandler(this.btnGoster_Click);
             // 
             // labelControl1
             // 

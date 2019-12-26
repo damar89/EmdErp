@@ -622,7 +622,6 @@
             this.cmbTipi.Name = "cmbTipi";
             this.cmbTipi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbTipi.Properties.NullText = "Hareket Tipi Seçiniz";
             this.cmbTipi.Size = new System.Drawing.Size(388, 20);
             this.cmbTipi.TabIndex = 18;
             // 

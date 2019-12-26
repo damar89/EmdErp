@@ -506,6 +506,10 @@ namespace NetSatis.FrontOffice
                 return;
             }
             int kasaid = Convert.ToInt32(RoleTool.KullaniciEntity.KasaId);
+            if (kasaid == 0)
+            {
+                kasaid = 1;
+            }
             if (!btnOdemeBol.Checked && odemeTuruId != -1)
             {
                 string ft = "";
@@ -803,6 +807,10 @@ namespace NetSatis.FrontOffice
             stokHareket.IndirimOrani2 = 0;
             stokHareket.IndirimOrani3 = 0;
             int depoid = Convert.ToInt32(RoleTool.KullaniciEntity.DepoId);
+            if (depoid == 0)
+            {
+                depoid = 1;
+            }
             stokHareket.DepoId = depoid;
             stokHareket.BirimFiyati = txtIslem.Text == "Alış Faturası" ? entity.AlisFiyati1 : entity.SatisFiyati1;
             stokHareket.Miktar = calcMiktar.Value;

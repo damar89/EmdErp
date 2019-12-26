@@ -32,5 +32,21 @@ namespace NetSatis.BackOffice.Raporlar
             }
             cmbYil.Text = DateTime.Now.Year.ToString();
         }
+
+        private void btnGoster_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            if (cmbTipi.EditValue != null)
+            {
+                frmBaRapor frm = new frmBaRapor(
+              Convert.ToInt32(cmbAy.EditValue),
+              Convert.ToInt32(cmbYil.EditValue),
+              cmbTipi.EditValue.ToString()
+              );
+                frm.Show();
+            }
+         
+            
+        }
     }
 }
