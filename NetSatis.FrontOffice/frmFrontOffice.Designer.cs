@@ -229,6 +229,12 @@
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.radialMenu1 = new DevExpress.XtraBars.Ribbon.RadialMenu(this.components);
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.naviGenelBilgiler.SuspendLayout();
@@ -305,6 +311,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radialMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ımageList2
@@ -390,7 +397,7 @@
             this.naviGenelBilgiler.Controls.Add(this.calcGenelToplam);
             this.naviGenelBilgiler.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("naviGenelBilgiler.ImageOptions.Image")));
             this.naviGenelBilgiler.Name = "naviGenelBilgiler";
-            this.naviGenelBilgiler.Size = new System.Drawing.Size(361, 699);
+            this.naviGenelBilgiler.Size = new System.Drawing.Size(365, 698);
             // 
             // calcMaliyet
             // 
@@ -1780,6 +1787,7 @@
             // navStokHareket
             // 
             this.navStokHareket.Controls.Add(this.gridContStokHareket);
+            this.navStokHareket.Controls.Add(this.flowLayoutPanel1);
             this.navStokHareket.Name = "navStokHareket";
             this.navStokHareket.Size = new System.Drawing.Size(813, 170);
             // 
@@ -1797,7 +1805,7 @@
             this.repositoryMustahsil,
             this.repoMiktar,
             this.repoIskonto});
-            this.gridContStokHareket.Size = new System.Drawing.Size(813, 170);
+            this.gridContStokHareket.Size = new System.Drawing.Size(769, 170);
             this.gridContStokHareket.TabIndex = 3;
             this.gridContStokHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridStokHareket,
@@ -2522,7 +2530,7 @@
             this.calcMiktar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.calcMiktar.Properties.AutoHeight = false;
             this.calcMiktar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.SpinDown)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.calcMiktar.Properties.DisplayFormat.FormatString = "N2";
             this.calcMiktar.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.calcMiktar.Properties.EditFormat.FormatString = "N2";
@@ -2626,7 +2634,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.MultiLine = DevExpress.Utils.DefaultBoolean.True;
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.Size = new System.Drawing.Size(809, 463);
+            this.xtraTabControl1.Size = new System.Drawing.Size(809, 464);
             this.xtraTabControl1.TabIndex = 0;
             // 
             // radialFiyat
@@ -2792,6 +2800,94 @@
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Controls.Add(this.button2);
+            this.flowLayoutPanel1.Controls.Add(this.button3);
+            this.flowLayoutPanel1.Controls.Add(this.button4);
+            this.flowLayoutPanel1.Controls.Add(this.button5);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(769, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(44, 170);
+            this.flowLayoutPanel1.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 29);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(3, 38);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(31, 29);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "button1";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.button3.FlatAppearance.BorderSize = 2;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(3, 73);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(31, 29);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "button1";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.button4.FlatAppearance.BorderSize = 2;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(3, 108);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(31, 29);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "button1";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.button5.FlatAppearance.BorderSize = 2;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(3, 143);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(31, 29);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "button1";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // frmFrontOffice
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -2891,6 +2987,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radialMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3078,6 +3175,12 @@
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraBars.BarButtonItem btnDizaynKaydet;
         private DevExpress.XtraEditors.CalcEdit calcMaliyet;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 
