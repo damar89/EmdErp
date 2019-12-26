@@ -886,7 +886,7 @@ namespace NetSatis.BackOffice
 
         private void treeList1_Click(object sender, EventArgs e)
         {
-            int a = 5;
+            
         }
 
         private void treeList1_MouseClick(object sender, MouseEventArgs e)
