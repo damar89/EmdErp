@@ -83,6 +83,7 @@ namespace NetSatis.BackOffice.Fiş
             else
             {
                 _fisentity.FisTuru = fisTuru;
+                
                 _fisentity.Tarih = DateTime.Now;
                 _fisentity.VadeTarihi = DateTime.Now;
                 //_fisentity.FisKodu =
@@ -146,7 +147,7 @@ namespace NetSatis.BackOffice.Fiş
               DataSourceUpdateMode.OnPropertyChanged);
             txtSira.DataBindings.Add("Text", _fisentity, "Sira", false,
                                 DataSourceUpdateMode.OnPropertyChanged);
-            cmbTipi.DataBindings.Add("Text", _fisentity, "Tipi", false,
+            cmbTipi.DataBindings.Add("EditValue", _fisentity, "Tipi", false,
               DataSourceUpdateMode.OnPropertyChanged);
             txtAciklama.DataBindings.Add("Text", _fisentity, "Aciklama", false,
                 DataSourceUpdateMode.OnPropertyChanged);
@@ -165,6 +166,7 @@ namespace NetSatis.BackOffice.Fiş
                 cmbYil.Properties.Items.Add(i);
             }
             cmbYil.Text = DateTime.Now.Year.ToString();
+
             gridContStokHareket.DataSource = context.StokHareketleri.Local.ToBindingList();
             gridContKasaHareket.DataSource = context.KasaHareketleri.Local.ToBindingList();
             gridContPersonelHareket.DataSource = context.PersonelHareketleri.Local.ToBindingList();
@@ -812,8 +814,17 @@ namespace NetSatis.BackOffice.Fiş
             {
                 cmbTipi.Properties.Items.Add(i.Aciklama);
             }
+            var a = SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_VarsayilanHareketTipi);
+            if (a != null)
+            {
+            cmbTipi.Text = a ;
 
-            cmbTipi.Text = SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_VarsayilanHareketTipi);
+            }
+
+            if (duzenle)
+            {
+                cmbTipi.Text = _fisentity.Tipi;
+            }
             ////if (_fisentity.FisTuru=="Satış İrsaliyesi" || _fisentity.FisTuru == "Alış İrsaliyesi"||_fisentity.FisTuru=="Alınan Sipariş Fişi" || _fisentity.FisTuru == "Verilen Sipariş Fişi"||_fisentity.FisTuru=="Alınan Teklif Fişi" || _fisentity.FisTuru == "Verilen Teklif Fişi")
             ////{
             ////    calcIndirimOrani.ReadOnly=true;
@@ -2633,6 +2644,14 @@ namespace NetSatis.BackOffice.Fiş
                     Tutar = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "BirimFiyati").ToString())
                 };
                 eislem.DetailsOlustur(d);
+            }
+        }
+
+        private void txtSeri_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.ActiveControl = txtSira;
             }
         }
     }

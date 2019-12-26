@@ -1011,5 +1011,26 @@ namespace NetSatis.BackOffice.Stok
             txtKod.Focus();
             calcDevirGirisi.Text = "";
         }
+
+        private void calcAlisFiyat1_Enter(object sender, EventArgs e)
+        {
+            this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
+        }
+        delegate void EditorSelectAllProc(Control c);
+        void EditorSelectAll(Control c)
+        {
+            ((TextBox)c.Controls[0]).SelectAll();
+        }
+
+        private void calcSatisFiyat1_Enter(object sender, EventArgs e)
+        {
+        
+        }
+        
+
+        private void calcSatisFiyat2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

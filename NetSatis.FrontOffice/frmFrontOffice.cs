@@ -51,7 +51,7 @@ namespace NetSatis.FrontOffice
             InitializeComponent();
             //frmKullaniciGiris girisform = new frmKullaniciGiris();
             //girisform.ShowDialog();
-            
+
             context.Stoklar.Load();
             context.Depolar.Load();
             context.Kasalar.Load();
@@ -1477,6 +1477,34 @@ namespace NetSatis.FrontOffice
         private void btnDizaynKaydet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             gridContStokHareket.MainView.SaveLayoutToXml(DosyaYolu);
+        }
+
+
+        private void calcMiktar_Enter(object sender, EventArgs e)
+        {
+            this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
+        }
+        delegate void EditorSelectAllProc(Control c);
+        void EditorSelectAll(Control c)
+        {
+            ((TextBox)c.Controls[0]).SelectAll();
+        }
+
+        private void gridStokHareket_ShownEditor(object sender, EventArgs e)
+        {
+            if (gridStokHareket.FocusedColumn.FieldName == "Miktar"
+                || gridStokHareket.FocusedColumn.FieldName == "BirimFiyati"
+                )
+            {
+                BeginInvoke(new Action(() =>
+          {
+              if (gridStokHareket.ActiveEditor != null)
+              {
+                  gridStokHareket.ActiveEditor.SelectAll();
+              }
+          }));
+
+            }
         }
     }
 }
