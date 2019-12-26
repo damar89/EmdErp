@@ -51,7 +51,7 @@ namespace NetSatis.FrontOffice
             InitializeComponent();
             //frmKullaniciGiris girisform = new frmKullaniciGiris();
             //girisform.ShowDialog();
-
+            
             context.Stoklar.Load();
             context.Depolar.Load();
             context.Kasalar.Load();
@@ -505,7 +505,7 @@ namespace NetSatis.FrontOffice
             {
                 return;
             }
-            int kasaid = Convert.ToInt32(context.Kullanicilar.Where(x => x.Id == frmAnaMenu.UserId).FirstOrDefault().KasaId);
+            int kasaid = Convert.ToInt32(RoleTool.KullaniciEntity.KasaId);
             if (!btnOdemeBol.Checked && odemeTuruId != -1)
             {
                 string ft = "";
@@ -802,7 +802,7 @@ namespace NetSatis.FrontOffice
             stokHareket.IndirimOrani = indirimDal.StokIndirimi(context, entity.StokKodu);
             stokHareket.IndirimOrani2 = 0;
             stokHareket.IndirimOrani3 = 0;
-            int depoid = Convert.ToInt32(context.Kullanicilar.Where(x => x.Id == frmAnaMenu.UserId).FirstOrDefault().DepoId);
+            int depoid = Convert.ToInt32(RoleTool.KullaniciEntity.DepoId);
             stokHareket.DepoId = depoid;
             stokHareket.BirimFiyati = txtIslem.Text == "Alış Faturası" ? entity.AlisFiyati1 : entity.SatisFiyati1;
             stokHareket.Miktar = calcMiktar.Value;
