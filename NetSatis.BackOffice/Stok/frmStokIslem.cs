@@ -1024,12 +1024,12 @@ namespace NetSatis.BackOffice.Stok
 
         private void calcSatisFiyat1_Enter(object sender, EventArgs e)
         {
+            this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
         }
-
-
+     
         private void calcSatisFiyat2_Enter(object sender, EventArgs e)
         {
-
+            this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
         }
     }
 }

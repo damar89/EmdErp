@@ -66,7 +66,7 @@ namespace NetSatis.Update
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             indir.DownloadFileAsync(new Uri("https://emdyazilim.com/downloads/Update.zip"), Application.StartupPath + "\\temp\\Update.zip");
-            //IndirmeBitti(null,null); 
+            IndirmeBitti(null,null); 
         }
 
         private void IndirmeBitti(object sender, AsyncCompletedEventArgs e)
