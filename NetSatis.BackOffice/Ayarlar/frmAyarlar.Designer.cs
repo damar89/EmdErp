@@ -186,7 +186,7 @@
             this.lblBaslik.Name = "lblBaslik";
             this.lblBaslik.Size = new System.Drawing.Size(947, 24);
             this.lblBaslik.TabIndex = 8;
-            this.lblBaslik.Text = "Cari Kartları";
+            this.lblBaslik.Text = "Ayarlar";
             // 
             // ımageList1
             // 
@@ -281,7 +281,7 @@
             this.navigationPage1.Controls.Add(this.cmbSiparisDizayn);
             this.navigationPage1.Controls.Add(this.cmbFaturaDizayn);
             this.navigationPage1.Name = "navigationPage1";
-            this.navigationPage1.Size = new System.Drawing.Size(843, 528);
+            this.navigationPage1.Size = new System.Drawing.Size(847, 527);
             // 
             // toggleDoviz
             // 
