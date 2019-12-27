@@ -83,7 +83,7 @@ namespace NetSatis.BackOffice.Fiş
             else
             {
                 _fisentity.FisTuru = fisTuru;
-                
+
                 _fisentity.Tarih = DateTime.Now;
                 _fisentity.VadeTarihi = DateTime.Now;
                 //_fisentity.FisKodu =
@@ -578,7 +578,7 @@ namespace NetSatis.BackOffice.Fiş
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
                     break;
-                       case "Sayım Fişi":
+                case "Sayım Fişi":
                     lblSatir.Visible = true;
                     lblSatirSayisi.Visible = true;
                     ayarlar.StokHareketi = "Stok Giriş";
@@ -820,7 +820,7 @@ namespace NetSatis.BackOffice.Fiş
             var a = SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_VarsayilanHareketTipi);
             if (a != null)
             {
-            cmbTipi.Text = a ;
+                cmbTipi.Text = a;
 
             }
 
@@ -1268,7 +1268,7 @@ namespace NetSatis.BackOffice.Fiş
                     }
                 }
             }
-           
+
             if (_fisentity.FisTuru == "Cari Devir Fişi")
             {
                 if (toggleCariDevir.IsOn)
@@ -2605,7 +2605,7 @@ namespace NetSatis.BackOffice.Fiş
                 HarTipi = "CD";
                 cmbTipi.Text = "-";
             }
-             if (txtFisTuru.Text == "Masraf Fişi")
+            if (txtFisTuru.Text == "Masraf Fişi")
             {
                 HarTipi = "MF";
                 cmbTipi.Text = "-";
@@ -2670,7 +2670,7 @@ namespace NetSatis.BackOffice.Fiş
                 if (kod != "")
                 {
                     var lastFis = context.Fisler.Where(x => x.Seri == kod).OrderByDescending(x => x.KayitTarihi).FirstOrDefault();
-                    if (lastFis != null && lastFis.Sira != null && lastFis.Sira != "" )
+                    if (lastFis != null && lastFis.Sira != null && lastFis.Sira != "")
                     {
                         int serino = 1;
                         try
@@ -2679,12 +2679,39 @@ namespace NetSatis.BackOffice.Fiş
                             txtSira.Text = serino.ToString();
                             txtSira.SelectionLength = 0;
                         }
-                        catch 
+                        catch
                         {
                         }
                     }
                 }
             }
+        }
+
+        private void gridStokHareket_ShownEditor(object sender, EventArgs e)
+        {
+            if (gridStokHareket.FocusedColumn.FieldName == "Miktar"
+                || gridStokHareket.FocusedColumn.FieldName == "BirimFiyati"
+                )
+            {
+                BeginInvoke(new Action(() =>
+          {
+              if (gridStokHareket.ActiveEditor != null)
+              {
+                  gridStokHareket.ActiveEditor.SelectAll();
+              }
+          }));
+
+            }
+        }
+
+        private void calcMiktar_Enter(object sender, EventArgs e)
+        {
+            this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
+        }
+        delegate void EditorSelectAllProc(Control c);
+        void EditorSelectAll(Control c)
+        {
+            ((TextBox)c.Controls[0]).SelectAll();
         }
     }
 }

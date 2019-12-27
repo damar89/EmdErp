@@ -180,6 +180,10 @@
       <Project>{f092ac4d-6b7f-4949-90fe-11135f07118f}</Project>
       <Name>NetSatis.BackOffice</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NetSatis.EDonusum\NetSatis.EDonusum.csproj">
+      <Project>{ac177a68-ed93-4079-bd91-a10dd9ba8109}</Project>
+      <Name>NetSatis.EDonusum</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NetSatis.Entities\NetSatis.Entities.csproj">
       <Project>{09d91e15-402a-45d0-9c04-e723f42131f7}</Project>
       <Name>NetSatis.Entities</Name>

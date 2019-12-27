@@ -33,6 +33,8 @@ namespace NetSatis.FrontOffice
         FisDAL fisDal = new FisDAL();
         StokHareketDAL stokHareketDal = new StokHareketDAL();
         KasaHareketDAL kasaHareketDal = new KasaHareketDAL();
+        NetSatis.EDonusum.Controller.EDonusumIslemleri eislem = new EDonusum.Controller.EDonusumIslemleri();
+        List<NetSatis.EDonusum.Models.Donusum.Details> dlist = new List<EDonusum.Models.Donusum.Details>();
         public static string GidenBilgi = "";
         private int odemeTuruId;
         CariDAL cariDal = new CariDAL();
@@ -190,6 +192,9 @@ namespace NetSatis.FrontOffice
                     case 5:
                         c = Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(198)))), ((int)(((byte)(87)))));
                         break;
+                    case 6:
+                        c = Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(198)))), ((int)(((byte)(87)))));
+                        break;
                     default:
                         break;
                 }
@@ -198,8 +203,8 @@ namespace NetSatis.FrontOffice
 
                 var list = context.HizliSatislar.Where(m => m.GrupId == hizliSatisGrup.Id).ToList();
 
-                panel.ColumnCount = list.Count >= 5 ? 5 : list.Count;
-                panel.RowCount = Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(list.Count / 5))) + 1;
+                panel.ColumnCount = list.Count >= 6 ? 6 : list.Count;
+                panel.RowCount = Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(list.Count / 6))) + 1;
                 for (int i = 0; i < panel.ColumnCount; i++)
                 {
                     panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100 / panel.ColumnCount));
@@ -1514,5 +1519,27 @@ namespace NetSatis.FrontOffice
 
             }
         }
+        //private void FaturaOlustur()
+        //{
+        //    string HarTipi = "";
+
+        //    if (_fisentity.FisTuru == "Perakende Satış Faturası")
+        //    {
+        //        HarTipi = "PSF";
+        //        _fisentity.Tipi = "A";
+        //    }
+        //    if (_fisentity.FisTuru == "Satış İade Faturası")
+        //    {
+        //        HarTipi = "SI";
+        //        _fisentity.Tipi = "-";
+        //    }
+        //    if (_fisentity.FisTuru == "Perakende Satış İrsaliyesi")
+        //    {
+        //        HarTipi = "PI";
+        //        _fisentity.Tipi = "-";
+        //    }
+
+        //}
+
     }
 }

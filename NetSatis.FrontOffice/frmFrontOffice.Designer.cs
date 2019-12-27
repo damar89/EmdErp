@@ -187,11 +187,10 @@
             this.repositoryMustahsil = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.navOdeme = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.gridContKasaHareket = new DevExpress.XtraGrid.GridControl();
             this.gridKasaHareket = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -397,7 +396,7 @@
             this.naviGenelBilgiler.Controls.Add(this.calcGenelToplam);
             this.naviGenelBilgiler.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("naviGenelBilgiler.ImageOptions.Image")));
             this.naviGenelBilgiler.Name = "naviGenelBilgiler";
-            this.naviGenelBilgiler.Size = new System.Drawing.Size(305, 698);
+            this.naviGenelBilgiler.Size = new System.Drawing.Size(305, 692);
             // 
             // calcMaliyet
             // 
@@ -990,9 +989,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn5.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn5.Appearance.Options.UseFont = true;
-            this.btn5.Location = new System.Drawing.Point(274, 365);
+            this.btn5.Location = new System.Drawing.Point(255, 364);
             this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(0, 55);
+            this.btn5.Size = new System.Drawing.Size(48, 55);
             this.btn5.TabIndex = 5;
             this.btn5.Tag = "5";
             this.btn5.Text = "5 ₺";
@@ -1003,7 +1002,7 @@
             this.btn10.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn10.Appearance.Options.UseFont = true;
             this.btn10.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn10.Location = new System.Drawing.Point(251, 365);
+            this.btn10.Location = new System.Drawing.Point(205, 364);
             this.btn10.Name = "btn10";
             this.btn10.Size = new System.Drawing.Size(48, 55);
             this.btn10.TabIndex = 5;
@@ -1015,7 +1014,7 @@
             // 
             this.btn20.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn20.Appearance.Options.UseFont = true;
-            this.btn20.Location = new System.Drawing.Point(201, 365);
+            this.btn20.Location = new System.Drawing.Point(155, 364);
             this.btn20.Name = "btn20";
             this.btn20.Size = new System.Drawing.Size(48, 55);
             this.btn20.TabIndex = 5;
@@ -1027,7 +1026,7 @@
             // 
             this.btn50.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn50.Appearance.Options.UseFont = true;
-            this.btn50.Location = new System.Drawing.Point(150, 365);
+            this.btn50.Location = new System.Drawing.Point(105, 364);
             this.btn50.Name = "btn50";
             this.btn50.Size = new System.Drawing.Size(48, 55);
             this.btn50.TabIndex = 5;
@@ -1041,7 +1040,7 @@
             this.btn100.Appearance.Options.UseFont = true;
             this.btn100.Appearance.Options.UseTextOptions = true;
             this.btn100.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.btn100.Location = new System.Drawing.Point(99, 365);
+            this.btn100.Location = new System.Drawing.Point(54, 364);
             this.btn100.Name = "btn100";
             this.btn100.Size = new System.Drawing.Size(48, 55);
             this.btn100.TabIndex = 5;
@@ -1053,7 +1052,7 @@
             // 
             this.btn200.Appearance.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn200.Appearance.Options.UseFont = true;
-            this.btn200.Location = new System.Drawing.Point(47, 364);
+            this.btn200.Location = new System.Drawing.Point(4, 364);
             this.btn200.Name = "btn200";
             this.btn200.Size = new System.Drawing.Size(48, 55);
             this.btn200.TabIndex = 5;
@@ -1904,7 +1903,7 @@
             this.colMiktar.AppearanceHeader.Options.UseBackColor = true;
             this.colMiktar.Caption = "Miktar";
             this.colMiktar.ColumnEdit = this.repoMiktar;
-            this.colMiktar.DisplayFormat.FormatString = "N3";
+            this.colMiktar.DisplayFormat.FormatString = "N2";
             this.colMiktar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colMiktar.FieldName = "Miktar";
             this.colMiktar.Name = "colMiktar";
@@ -2261,46 +2260,16 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel1.Controls.Add(this.button3);
             this.flowLayoutPanel1.Controls.Add(this.button1);
             this.flowLayoutPanel1.Controls.Add(this.button2);
-            this.flowLayoutPanel1.Controls.Add(this.button3);
             this.flowLayoutPanel1.Controls.Add(this.button4);
-            this.flowLayoutPanel1.Controls.Add(this.button5);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(823, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(44, 170);
             this.flowLayoutPanel1.TabIndex = 4;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 29);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(3, 38);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(31, 29);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "button1";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -2310,12 +2279,45 @@
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(3, 73);
+            this.button3.Location = new System.Drawing.Point(3, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(31, 29);
             this.button3.TabIndex = 0;
             this.button3.Text = "button1";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(3, 38);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 29);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(3, 73);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(31, 29);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "button1";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
             // 
             // button4
             // 
@@ -2331,21 +2333,7 @@
             this.button4.TabIndex = 0;
             this.button4.Text = "button1";
             this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.button5.FlatAppearance.BorderSize = 2;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(3, 143);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(31, 29);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "button1";
-            this.button5.UseVisualStyleBackColor = false;
+            this.button4.Visible = false;
             // 
             // navOdeme
             // 
@@ -2730,7 +2718,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.MultiLine = DevExpress.Utils.DefaultBoolean.True;
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.Size = new System.Drawing.Size(863, 457);
+            this.xtraTabControl1.Size = new System.Drawing.Size(863, 458);
             this.xtraTabControl1.TabIndex = 0;
             // 
             // radialFiyat
@@ -3188,7 +3176,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
     }
 }
 

@@ -75,6 +75,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(141, 40);
             this.simpleButton2.TabIndex = 3;
             this.simpleButton2.Text = "Lisans Dağıt";
+            this.simpleButton2.Visible = false;
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // labelControl1
@@ -83,6 +84,7 @@
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(205, 20);
             this.labelControl1.TabIndex = 4;
+            this.labelControl1.Visible = false;
             // 
             // frmOflineLisans
             // 
