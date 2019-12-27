@@ -20,6 +20,7 @@ namespace NetSatis.BackOffice.Fiş
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             eislem.HareketTipiOlustur(txtKodu.Text, txtAdi.Text);
+            this.Close();
         }
     }
 }
