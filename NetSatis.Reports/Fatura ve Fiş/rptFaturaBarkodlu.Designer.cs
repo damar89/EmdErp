@@ -366,18 +366,18 @@
             this.Detail2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable2});
             this.Detail2.Dpi = 254F;
-            this.Detail2.HeightF = 63.5F;
+            this.Detail2.HeightF = 39.6875F;
             this.Detail2.HierarchyPrintOptions.Indent = 20F;
             this.Detail2.Name = "Detail2";
             // 
             // xrTable2
             // 
             this.xrTable2.Dpi = 254F;
-            this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(1394.354F, 0F);
+            this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(73.77085F, 0F);
             this.xrTable2.Name = "xrTable2";
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow2});
-            this.xrTable2.SizeF = new System.Drawing.SizeF(591.6459F, 63.5F);
+            this.xrTable2.SizeF = new System.Drawing.SizeF(591.6459F, 38.50007F);
             // 
             // xrTableRow2
             // 
@@ -455,7 +455,7 @@
             // xrLabel17
             // 
             this.xrLabel17.Dpi = 254F;
-            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(1239.411F, 265.5905F);
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(1239.411F, 67.153F);
             this.xrLabel17.Name = "xrLabel17";
             this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel17.SizeF = new System.Drawing.SizeF(362.9434F, 58.42F);
@@ -468,7 +468,7 @@
             this.xrLabel18.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaBilgiler.FisIskontoTutari")});
             this.xrLabel18.Dpi = 254F;
-            this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(1633.64F, 265.5905F);
+            this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(1602.355F, 67.153F);
             this.xrLabel18.Name = "xrLabel18";
             this.xrLabel18.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel18.SizeF = new System.Drawing.SizeF(362.9434F, 58.42F);
@@ -478,7 +478,7 @@
             // xrLabel19
             // 
             this.xrLabel19.Dpi = 254F;
-            this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(1239.41F, 382.4305F);
+            this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(1239.41F, 183.993F);
             this.xrLabel19.Name = "xrLabel19";
             this.xrLabel19.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel19.SizeF = new System.Drawing.SizeF(362.9434F, 58.42F);
@@ -489,7 +489,7 @@
             // xrLabel20
             // 
             this.xrLabel20.Dpi = 254F;
-            this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(1239.41F, 324.0103F);
+            this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(1239.41F, 125.5728F);
             this.xrLabel20.Name = "xrLabel20";
             this.xrLabel20.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel20.SizeF = new System.Drawing.SizeF(362.9434F, 58.42001F);
@@ -500,7 +500,7 @@
             // xrLabel21
             // 
             this.xrLabel21.Dpi = 254F;
-            this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(1239.411F, 207.1705F);
+            this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(1239.411F, 8.733002F);
             this.xrLabel21.Name = "xrLabel21";
             this.xrLabel21.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel21.SizeF = new System.Drawing.SizeF(362.9434F, 58.42F);
@@ -513,7 +513,7 @@
             this.xrLabel22.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaBilgiler.FisGenelToplam")});
             this.xrLabel22.Dpi = 254F;
-            this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(1633.639F, 382.4305F);
+            this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(1602.354F, 183.993F);
             this.xrLabel22.Name = "xrLabel22";
             this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel22.SizeF = new System.Drawing.SizeF(362.9434F, 58.42F);
@@ -525,7 +525,7 @@
             this.xrLabel23.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaBilgiler.FisKDVToplam")});
             this.xrLabel23.Dpi = 254F;
-            this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(1633.639F, 324.0104F);
+            this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(1602.354F, 125.5729F);
             this.xrLabel23.Name = "xrLabel23";
             this.xrLabel23.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel23.SizeF = new System.Drawing.SizeF(362.9434F, 58.42001F);
@@ -537,7 +537,7 @@
             this.xrLabel24.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaBilgiler.FisAraToplam")});
             this.xrLabel24.Dpi = 254F;
-            this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(1633.64F, 207.1705F);
+            this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(1623.057F, 8.733002F);
             this.xrLabel24.Name = "xrLabel24";
             this.xrLabel24.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
             this.xrLabel24.SizeF = new System.Drawing.SizeF(362.9434F, 58.42F);
