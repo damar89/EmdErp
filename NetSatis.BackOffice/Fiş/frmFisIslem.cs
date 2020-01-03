@@ -581,8 +581,8 @@ namespace NetSatis.BackOffice.Fiş
                 case "Sayım Fişi":
                     lblSatir.Visible = true;
                     lblSatirSayisi.Visible = true;
-                    ayarlar.StokHareketi = "Stok Giriş";
-                    ayarlar.FisTurleri = "Sayım Eksiği Fişi";
+                    //ayarlar.StokHareketi = "Stok Giriş";
+                    ayarlar.FisTurleri = "Sayım Fişi";
                     btnBarkodluFatura.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
                     navOdemeEkrani.Dispose();
                     navPersonelIslem.Dispose();
@@ -1440,6 +1440,7 @@ namespace NetSatis.BackOffice.Fiş
                     StokHareket sh = new StokHareket();
                     sh.Depo = stokVeri.Depo;
                     sh.DepoId = stokVeri.DepoId;
+
                     if (fark > 0)
                     {
                         //cikis yapilacak
@@ -1447,6 +1448,9 @@ namespace NetSatis.BackOffice.Fiş
                         sh.Stok = stokVeri.Stok;
                         sh.StokId = stokVeri.StokId;
                         sh.Hareket = "Stok Çıkış";
+                        sh.FisTuru = "Sayım Fazlası Fişi";
+                        sh.Tarih = cmbTarih.DateTime;
+                        sayimfazlasilist.Add(sh);
 
                     }
                     else if (fark < 0)
@@ -1456,16 +1460,13 @@ namespace NetSatis.BackOffice.Fiş
                         sh.Stok = stokVeri.Stok;
                         sh.StokId = stokVeri.StokId;
                         sh.Hareket = "Stok Giriş";
+                        sh.FisTuru = "Sayım Eksiği Fişi";
+                        sh.Tarih = cmbTarih.DateTime;
+                        sayimeksigilist.Add(sh);
 
 
 
                     }
-
-                    if (fark != 0)
-                    {
-                        sayimfazlasilist.Add(sh);
-                    }
-
 
                 }
 
@@ -1613,7 +1614,7 @@ namespace NetSatis.BackOffice.Fiş
                 sayimfazlasifisi.Tarih = DateTime.Now;
                 sayimfazlasifisi.KayitTarihi = DateTime.Now;
                 sayimfazlasifisi.GuncellemeTarihi = DateTime.Now;
-                   sayimeksigifisi.Tarih = DateTime.Now;
+                sayimeksigifisi.Tarih = DateTime.Now;
                 sayimeksigifisi.KayitTarihi = DateTime.Now;
                 sayimeksigifisi.GuncellemeTarihi = DateTime.Now;
                 if (sayimfazlasilist.Count > 0)

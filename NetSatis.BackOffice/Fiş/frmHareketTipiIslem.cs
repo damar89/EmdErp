@@ -11,7 +11,15 @@ namespace NetSatis.BackOffice.Fiş
         {
             InitializeComponent();
         }
+        int hareketid = 0;
 
+        public frmHareketTipiIslem(int id, string kod, string aciklama)
+        {
+            hareketid = id;
+            InitializeComponent();
+            txtAdi.Text = aciklama;
+            txtKodu.Text = kod;
+        }
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -19,7 +27,16 @@ namespace NetSatis.BackOffice.Fiş
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            eislem.HareketTipiOlustur(txtKodu.Text, txtAdi.Text);
+            if (hareketid != 0)
+            {
+                eislem.HareketTipiDuzenle(hareketid, txtKodu.Text, txtAdi.Text);
+
+            }
+            else
+            {
+                eislem.HareketTipiOlustur(txtKodu.Text, txtAdi.Text);
+
+            }
             this.Close();
         }
     }
