@@ -1079,7 +1079,7 @@ namespace NetSatis.BackOffice
                     btnIadeListeleri_LinkClicked(null, null);
                     break;
                 case "Cari Bakiye Durum Raporu":
-                    navBarItem41_LinkClicked(null, null);
+                    navBarItem42_LinkClicked(null, null);
                     break;
                 case "Cari Hesap Ekstresi":
                     btnCariHesapEkstre_LinkClicked(null, null);

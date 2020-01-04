@@ -1910,9 +1910,9 @@
             this.navBarControl1.LookAndFeel.SkinMaskColor = System.Drawing.Color.White;
             this.navBarControl1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Style3D;
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 10;
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 221;
             this.navBarControl1.ScaleImages = DevExpress.Utils.DefaultBoolean.True;
-            this.navBarControl1.Size = new System.Drawing.Size(10, 10);
+            this.navBarControl1.Size = new System.Drawing.Size(221, 214);
             this.navBarControl1.TabIndex = 18;
             this.navBarControl1.Text = "navBarControl1";
             this.navBarControl1.View = new DevExpress.XtraNavBar.ViewInfo.XPExplorerBarViewInfoRegistrator();
@@ -2412,6 +2412,7 @@
             this.navBarItem42.Caption = "Cari Bakiye Raporu";
             this.navBarItem42.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem42.ImageOptions.SmallImage")));
             this.navBarItem42.Name = "navBarItem42";
+            this.navBarItem42.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem42_LinkClicked);
             // 
             // btnStokHareketi
             // 
