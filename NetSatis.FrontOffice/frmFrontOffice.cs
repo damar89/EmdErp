@@ -367,6 +367,7 @@ namespace NetSatis.FrontOffice
         }
         private void FisiKaydet(ReportsPrintTool.Belge belge)
         {
+            FaturaOlustur();
             HepsiniHesapla();
             OdenenTutarGuncelle();
             string message = null;
@@ -1519,27 +1520,69 @@ namespace NetSatis.FrontOffice
 
             }
         }
-        //private void FaturaOlustur()
-        //{
-        //    string HarTipi = "";
+        private void FaturaOlustur()
+        {
+            string HarTipi = "";
+            if (_fisentity.FisTuru == "Perakende Satış Faturası")
+            {
+                HarTipi = "PS";
+            }
+            if (_fisentity.FisTuru == "Satış İade Faturası")
+            {
+                HarTipi = "SI";
+            }
 
-        //    if (_fisentity.FisTuru == "Perakende Satış Faturası")
-        //    {
-        //        HarTipi = "PSF";
-        //        _fisentity.Tipi = "A";
-        //    }
-        //    if (_fisentity.FisTuru == "Satış İade Faturası")
-        //    {
-        //        HarTipi = "SI";
-        //        _fisentity.Tipi = "-";
-        //    }
-        //    if (_fisentity.FisTuru == "Perakende Satış İrsaliyesi")
-        //    {
-        //        HarTipi = "PI";
-        //        _fisentity.Tipi = "-";
-        //    }
-
-        //}
+            NetSatis.EDonusum.Models.Donusum.Master m = new EDonusum.Models.Donusum.Master
+            {
+                Aciklama = txtAciklama.Text,
+                DipIskonto = Convert.ToDecimal(_fisentity.DipIskTutari),
+                DokumanKodu = "",
+                EditDate = DateTime.Now,
+                EditUser = frmAnaMenu.UserId,
+                FisKodu = txtKod.Text,
+                FisTuru = _fisentity.FisTuru = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 ? "Perakende Satış İrsaliyesi" : "Perakende Satış Faturası",
+                HareketTipi = eislem.HareketIdGetir("A"),
+                HarTip = HarTipi,
+                IslemTarihi = Convert.ToDateTime(DateTime.Now),
+                Kdv = Convert.ToDecimal(calcKdvToplam.Value),
+                MusteriKodu = Convert.ToInt32(_fisentity.CariId),
+                Matrah = Convert.ToDecimal(calcGenelToplam.Value - calcKdvToplam.Value),
+                NetTutar = calcGenelToplam.Value,
+                SaveDate = DateTime.Now,
+                SaveUser = frmAnaMenu.UserId,
+                //SeriKodu = txtSeri.Text,
+                //SiraKodu = txtSira.Text,
+                Tutar = Convert.ToDecimal(txtAraToplam.EditValue),
+                VadeTarihi = Convert.ToDateTime(DateTime.Now),
+            };
+            DetailsDuzenle(eislem.MasterOlustur(m), HarTipi);
+        }
+        private void DetailsDuzenle(int id, string HarTipi)
+        {
+            for (int i = 0; i < gridStokHareket.RowCount; i++)
+            {
+                decimal fyt = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString());
+                decimal fyt2 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar"));
+                NetSatis.EDonusum.Models.Donusum.Details d = new EDonusum.Models.Donusum.Details
+                {
+                    HareketTipi = eislem.HareketIdGetir("A"),
+                    HarTip = HarTipi,
+                    Isk1 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani").ToString()),
+                    Isk2 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani2").ToString()),
+                    Isk3 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani3").ToString()),
+                    Kdv = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString()),
+                    KdvDahilFiyat = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar".ToString())),
+                    MasterId = id,
+                    Matrah = fyt2 - fyt,
+                    Miktar = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Miktar")),
+                    MusteriKodu = Convert.ToInt32(_fisentity.CariId),
+                    StokId = Convert.ToInt32(gridStokHareket.GetRowCellValue(i, "StokId").ToString()),
+                    Tutar = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "BirimFiyati").ToString())
+                };
+                eislem.DetailsOlustur(d);
+            }
+        }
 
     }
 }
+
