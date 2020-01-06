@@ -89,7 +89,7 @@ namespace NetSatis.BackOffice.Stok
             }
             else
             {
-                gridContStoklar.DataSource = stokDal.StokSec(context);
+                gridContStoklar.DataSource = stokDal.StokListele(context,true);
             }
 
             gridContStoklar.ForceInitialize();

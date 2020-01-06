@@ -172,10 +172,15 @@ namespace NetSatis.BackOffice.Stok
             {
                 var list=db.BarkodEtiketOlustur.ToList();
                 r.DataSource=list;
-                r.LoadLayout(@"C:\De\rptBarkodRaf.repx");
+                r.LoadLayout($@"{Application.StartupPath}\rptBarkodRaf.repx");
                 r.ShowDesigner();
                // r.ShowDesigner();
             }
+        }
+
+        private void yazdırToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

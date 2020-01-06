@@ -149,11 +149,13 @@ namespace NetSatis.Entities.Data_Access
                         Stoklar.Barkod,
                         Stoklar.GuncellemeTarihi,
                         Stoklar.KayitTarihi,
-                        StokGiris = StokHareketleri.Where(c => c.Hareket == "Stok Giriş").Sum(c => c.Miktar) ?? 0,
-                        StokCikis = StokHareketleri.Where(c => c.Hareket == "Stok Çıkış").Sum(c => c.Miktar) ?? 0,
-                        MevcutStok = (StokHareketleri.Where(c => c.Hareket == "Stok Giriş").Sum(c => c.Miktar) ?? 0) -
-                                     (StokHareketleri.Where(c => c.Hareket == "Stok Çıkış").Sum(c => c.Miktar) ?? 0),
-                    }).ToList();
+                        StokGiris = StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
+                        StokCikis = StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2") || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
+                        MevcutStok = (StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0) -
+                                 (StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2")
+                                 || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")
+                                 ).Sum(c => c.Miktar) ?? 0),
+                    }).Where(K => K.StokGiris > 0 || K.StokCikis > 0).ToList();
             return tablo;
         }
         public object StokSec(NetSatisContext context)
@@ -183,7 +185,13 @@ namespace NetSatis.Entities.Data_Access
                         Stoklar.SatisFiyati4,
                         Stoklar.WebSatisFiyati,
                         Stoklar.WebBayiSatisFiyati,
-                    }).ToList();
+                        StokGiris = StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
+                        StokCikis = StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2") || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
+                        MevcutStok = (StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0) -
+                                 (StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2")
+                                 || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")
+                                 ).Sum(c => c.Miktar) ?? 0),
+                    }).Where(K => K.StokGiris > 0 || K.StokCikis > 0).ToList();
             return tablo;
         }
         public object StokKoduylaStokGetir(NetSatisContext context, string aramaMetni)

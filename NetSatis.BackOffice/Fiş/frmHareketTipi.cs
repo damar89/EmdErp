@@ -40,13 +40,18 @@ namespace NetSatis.BackOffice.Fiş
 
         private void btnDuzenle_Click(object sender, EventArgs e)
         {
-           
+           int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id"));
+           string kod = gridView1.GetFocusedRowCellValue("Kodu").ToString();
+           string aciklama = gridView1.GetFocusedRowCellValue("Aciklama").ToString();
+           frmHareketTipiIslem frm = new frmHareketTipiIslem(id,kod,aciklama);
+            frm.Show();
            
         }
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-
+           int id = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id"));
+            eislem.HareketTipiSil(id);
         }
     }
 }

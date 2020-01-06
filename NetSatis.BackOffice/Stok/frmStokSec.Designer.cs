@@ -233,7 +233,7 @@
             this.StokGiris,
             this.StokCikis,
             this.colAltGrup});
-            this.gridStoklar.CustomizationFormBounds = new System.Drawing.Rectangle(900, 597, 260, 232);
+            this.gridStoklar.CustomizationFormBounds = new System.Drawing.Rectangle(900, 365, 260, 232);
             this.gridStoklar.GridControl = this.gridContStoklar;
             this.gridStoklar.Name = "gridStoklar";
             this.gridStoklar.OptionsView.ShowAutoFilterRow = true;

@@ -137,7 +137,11 @@ namespace NetSatis.BackOffice
 
             form.Show();
         }
-
+        private void StokTransfer_Click(string e)
+        {
+           frmFisTransfer frm=new frmFisTransfer(null,e);
+            frm.Show();
+        }
 
         private void barDepo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -886,7 +890,7 @@ namespace NetSatis.BackOffice
 
         private void treeList1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void treeList1_MouseClick(object sender, MouseEventArgs e)
@@ -1062,27 +1066,28 @@ namespace NetSatis.BackOffice
                     navBarItem25_LinkClicked(null, null);
                     break;
                 case "Stok Transfer":
-                    btnFisler_LinkClicked2(null, null);
+                    StokTransfer_Click(x.FocusedNode.Tag.ToString());
+                    //btnFisler_LinkClicked2(x.FocusedNode.Tag.ToString());
                     break;
-                    case "Genel Alış Raporu":
+                case "Genel Alış Raporu":
                     navBarItem35_LinkClicked(null, null);
                     break;
-                     case "Tarih Aralıklı Alış Raporu":
+                case "Tarih Aralıklı Alış Raporu":
                     navBarItem36_LinkClicked(null, null);
                     break;
-                     case "İade Listeleri":
+                case "İade Listeleri":
                     btnIadeListeleri_LinkClicked(null, null);
                     break;
-                     case "Cari Bakiye Durum Raporu":
-                    navBarItem41_LinkClicked(null, null);
-                    break;
-                       case "Cari Hesap Ekstresi":
-                    btnCariHesapEkstre_LinkClicked(null, null);
-                    break;
-                    case "Günlük Kasa Raporu":
+                case "Cari Bakiye Durum Raporu":
                     navBarItem42_LinkClicked(null, null);
                     break;
-                    case "Kasa Raporu Detaylı":
+                case "Cari Hesap Ekstresi":
+                    btnCariHesapEkstre_LinkClicked(null, null);
+                    break;
+                case "Günlük Kasa Raporu":
+                    navBarItem42_LinkClicked(null, null);
+                    break;
+                case "Kasa Raporu Detaylı":
                     btnDetay_LinkClicked(null, null);
                     break;
                 default:

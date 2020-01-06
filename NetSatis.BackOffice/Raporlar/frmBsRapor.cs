@@ -9,14 +9,36 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraPrinting;
+using NetSatis.Entities.Context;
 
 namespace NetSatis.BackOffice.Raporlar
 {
     public partial class frmBsRapor : DevExpress.XtraEditors.XtraForm
     {
-        public frmBsRapor()
+        NetSatisContext context = new NetSatisContext();
+        public frmBsRapor(int ay, int yil, string tip)
         {
             InitializeComponent();
+            var data = context.Fisler.Where(x =>
+           x.Tipi == tip &&
+           (x.FisTuru == "Toptan Satış Faturası" || x.FisTuru == "Alış İade Faturası")
+           && x.Tarih.Value.Month == ay
+           && x.Tarih.Value.Year == yil
+           && x.CariId != null
+           ).ToList();
+
+            var res = data.GroupBy(x => x.CariId).Select(x =>
+              new
+              {
+                  BaTutar = x.Sum(a => a.ToplamTutar - a.IskontoTutari1).Value,
+                  CariAdi = x.FirstOrDefault().CariAdi,
+                  CariKodu = x.FirstOrDefault().Cari.CariKodu,
+                  FaturaUnvani = x.FirstOrDefault().Cari.FaturaUnvani,
+                  BelgeMiktari = Convert.ToInt32(x.Count())
+              }
+             ).Where(b => b.BaTutar >= 5000).ToList();
+
+            gridControl1.DataSource = res;
         }
 
         private void excelToolStripMenuItem_Click(object sender, EventArgs e)

@@ -33,6 +33,8 @@ namespace NetSatis.FrontOffice
         FisDAL fisDal = new FisDAL();
         StokHareketDAL stokHareketDal = new StokHareketDAL();
         KasaHareketDAL kasaHareketDal = new KasaHareketDAL();
+        NetSatis.EDonusum.Controller.EDonusumIslemleri eislem = new EDonusum.Controller.EDonusumIslemleri();
+        List<NetSatis.EDonusum.Models.Donusum.Details> dlist = new List<EDonusum.Models.Donusum.Details>();
         public static string GidenBilgi = "";
         private int odemeTuruId;
         CariDAL cariDal = new CariDAL();
@@ -190,6 +192,9 @@ namespace NetSatis.FrontOffice
                     case 5:
                         c = Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(198)))), ((int)(((byte)(87)))));
                         break;
+                    case 6:
+                        c = Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(198)))), ((int)(((byte)(87)))));
+                        break;
                     default:
                         break;
                 }
@@ -198,8 +203,8 @@ namespace NetSatis.FrontOffice
 
                 var list = context.HizliSatislar.Where(m => m.GrupId == hizliSatisGrup.Id).ToList();
 
-                panel.ColumnCount = list.Count >= 5 ? 5 : list.Count;
-                panel.RowCount = Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(list.Count / 5))) + 1;
+                panel.ColumnCount = list.Count >= 6 ? 6 : list.Count;
+                panel.RowCount = Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(list.Count / 6))) + 1;
                 for (int i = 0; i < panel.ColumnCount; i++)
                 {
                     panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100 / panel.ColumnCount));
@@ -362,6 +367,7 @@ namespace NetSatis.FrontOffice
         }
         private void FisiKaydet(ReportsPrintTool.Belge belge)
         {
+            FaturaOlustur();
             HepsiniHesapla();
             OdenenTutarGuncelle();
             string message = null;
@@ -1514,5 +1520,69 @@ namespace NetSatis.FrontOffice
 
             }
         }
+        private void FaturaOlustur()
+        {
+            string HarTipi = "";
+            if (_fisentity.FisTuru == "Perakende Satış Faturası")
+            {
+                HarTipi = "PS";
+            }
+            if (_fisentity.FisTuru == "Satış İade Faturası")
+            {
+                HarTipi = "SI";
+            }
+
+            NetSatis.EDonusum.Models.Donusum.Master m = new EDonusum.Models.Donusum.Master
+            {
+                Aciklama = txtAciklama.Text,
+                DipIskonto = Convert.ToDecimal(_fisentity.DipIskTutari),
+                DokumanKodu = "",
+                EditDate = DateTime.Now,
+                EditUser = frmAnaMenu.UserId,
+                FisKodu = txtKod.Text,
+                FisTuru = _fisentity.FisTuru = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 ? "Perakende Satış İrsaliyesi" : "Perakende Satış Faturası",
+                HareketTipi = eislem.HareketIdGetir("A"),
+                HarTip = HarTipi,
+                IslemTarihi = Convert.ToDateTime(DateTime.Now),
+                Kdv = Convert.ToDecimal(calcKdvToplam.Value),
+                MusteriKodu = Convert.ToInt32(_fisentity.CariId),
+                Matrah = Convert.ToDecimal(calcGenelToplam.Value - calcKdvToplam.Value),
+                NetTutar = calcGenelToplam.Value,
+                SaveDate = DateTime.Now,
+                SaveUser = frmAnaMenu.UserId,
+                //SeriKodu = txtSeri.Text,
+                //SiraKodu = txtSira.Text,
+                Tutar = Convert.ToDecimal(txtAraToplam.EditValue),
+                VadeTarihi = Convert.ToDateTime(DateTime.Now),
+            };
+            DetailsDuzenle(eislem.MasterOlustur(m), HarTipi);
+        }
+        private void DetailsDuzenle(int id, string HarTipi)
+        {
+            for (int i = 0; i < gridStokHareket.RowCount; i++)
+            {
+                decimal fyt = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString());
+                decimal fyt2 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar"));
+                NetSatis.EDonusum.Models.Donusum.Details d = new EDonusum.Models.Donusum.Details
+                {
+                    HareketTipi = eislem.HareketIdGetir("A"),
+                    HarTip = HarTipi,
+                    Isk1 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani").ToString()),
+                    Isk2 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani2").ToString()),
+                    Isk3 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani3").ToString()),
+                    Kdv = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString()),
+                    KdvDahilFiyat = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar".ToString())),
+                    MasterId = id,
+                    Matrah = fyt2 - fyt,
+                    Miktar = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Miktar")),
+                    MusteriKodu = Convert.ToInt32(_fisentity.CariId),
+                    StokId = Convert.ToInt32(gridStokHareket.GetRowCellValue(i, "StokId").ToString()),
+                    Tutar = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "BirimFiyati").ToString())
+                };
+                eislem.DetailsOlustur(d);
+            }
+        }
+
     }
 }
+
