@@ -460,7 +460,6 @@
             this.btnSil.Size = new System.Drawing.Size(85, 31);
             this.btnSil.TabIndex = 4;
             this.btnSil.Text = "Sil";
-            this.btnSil.Visible = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnDuzenle

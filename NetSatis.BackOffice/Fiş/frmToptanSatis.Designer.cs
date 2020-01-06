@@ -470,7 +470,7 @@
             // 
             this.btnGuncelle.ImageOptions.ImageIndex = 3;
             this.btnGuncelle.ImageOptions.ImageList = this.imgMenu;
-            this.btnGuncelle.Location = new System.Drawing.Point(845, 23);
+            this.btnGuncelle.Location = new System.Drawing.Point(481, 23);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(85, 31);
             this.btnGuncelle.TabIndex = 5;
@@ -482,12 +482,11 @@
             // 
             this.btnSil.ImageOptions.ImageIndex = 5;
             this.btnSil.ImageOptions.ImageList = this.imgMenu;
-            this.btnSil.Location = new System.Drawing.Point(754, 23);
+            this.btnSil.Location = new System.Drawing.Point(842, 23);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(85, 31);
             this.btnSil.TabIndex = 4;
             this.btnSil.Text = "Sil";
-            this.btnSil.Visible = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnDuzenle
@@ -544,7 +543,7 @@
             this.gridContFisler.Name = "gridContFisler";
             this.gridContFisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpsChkKdvDahil});
-            this.gridContFisler.Size = new System.Drawing.Size(1023, 353);
+            this.gridContFisler.Size = new System.Drawing.Size(1023, 354);
             this.gridContFisler.TabIndex = 0;
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});
