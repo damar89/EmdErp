@@ -431,11 +431,11 @@
             // popupMenu1
             // 
             this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnStokEkle),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnKopyala),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnDuzenle),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnGuncelle),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketler)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketler),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnStokEkle)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
@@ -446,7 +446,6 @@
             this.btnStokEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStokEkle.ImageOptions.Image")));
             this.btnStokEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnStokEkle.ImageOptions.LargeImage")));
             this.btnStokEkle.Name = "btnStokEkle";
-            this.btnStokEkle.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.btnStokEkle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnStokEkle_ItemClick);
             // 
             // btnKopyala

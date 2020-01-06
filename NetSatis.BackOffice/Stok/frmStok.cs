@@ -9,6 +9,8 @@ using System.IO;
 using DevExpress.XtraPrinting;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.Data.Filtering;
+using System.Linq;
+
 namespace NetSatis.BackOffice.Stok
 {
     public partial class frmStok : DevExpress.XtraEditors.XtraForm
@@ -319,7 +321,17 @@ namespace NetSatis.BackOffice.Stok
             {
                 if (txtBarkodu.Text != "")
                 {
-                    gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("Barkodu"), new OperandValue(filtreyeCevir(txtBarkodu.Text)), BinaryOperatorType.Like);
+                    var barkod = context.Barkodlar.Where(x => x.Barkodu == txtBarkodu.Text).FirstOrDefault();
+                    if (barkod != null)
+                    {
+                        gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokKodu"), new OperandValue(barkod.Stok.StokKodu), BinaryOperatorType.Like);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Barkod bulunamadı.");
+                    }
+
+                    //gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("Barkodu"), new OperandValue(filtreyeCevir(txtBarkodu.Text)), BinaryOperatorType.Like);
                 }
             }
         }
