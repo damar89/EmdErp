@@ -1031,5 +1031,25 @@ namespace NetSatis.BackOffice.Stok
         {
             this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
         }
+
+        private void calcSatisFiyat3_Enter(object sender, EventArgs e)
+        {
+             this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
+        }
+
+        private void calcSatisFiyat4_Enter(object sender, EventArgs e)
+        {
+             this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
+        }
+
+        private void calcWebSatisFiyat_Enter(object sender, EventArgs e)
+        {
+             this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
+        }
+
+        private void calcwebBayiSatisFiyat_Enter(object sender, EventArgs e)
+        {
+             this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
+        }
     }
 }

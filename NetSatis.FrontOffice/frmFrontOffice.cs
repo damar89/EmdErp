@@ -1456,9 +1456,14 @@ namespace NetSatis.FrontOffice
             barFiyat3.Tag = _fisentity.FisTuru == "Alış Faturası"
                 ? fiyatEntity.AlisFiyati3 ?? 0
                 : fiyatEntity.SatisFiyati3 ?? 0;
+            barFiyat4.Tag = _fisentity.FisTuru == "Alış Faturası"
+              ? fiyatEntity.AlisFiyati3 ?? 0
+              : fiyatEntity.SatisFiyati4 ?? 0;
+
             barFiyat1.Caption = string.Format("{0:C2}", barFiyat1.Tag);
             barFiyat2.Caption = string.Format("{0:C2}", barFiyat2.Tag);
             barFiyat3.Caption = string.Format("{0:C2}", barFiyat3.Tag);
+            barFiyat4.Caption = string.Format("{0:C2}", barFiyat4.Tag);
             radialFiyat.ShowPopup(MousePosition);
         }
         private void btnRaporIade_Click(object sender, EventArgs e)
@@ -1583,6 +1588,23 @@ namespace NetSatis.FrontOffice
             }
         }
 
+        private void calcDusur_Enter(object sender, EventArgs e)
+        {
+            this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
+        }
+
+        private void calcIndirimOrani_Enter(object sender, EventArgs e)
+        {
+            this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
+        }
+
+        private void calcMiktar_KeyDown(object sender, KeyEventArgs e)
+        {
+             if (e.KeyCode == Keys.Enter)
+            {
+                this.ActiveControl = txtBarkod;
+            }
+        }
     }
 }
 
