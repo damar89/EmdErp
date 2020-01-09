@@ -52,6 +52,7 @@ namespace NetSatis.EDonusum.Models
             public decimal Tutar { get; set; }
             public decimal Miktar { get; set; }
             public decimal Kdv { get; set; }
+            public decimal KdvOrani { get; set; }
             public decimal KdvDahilFiyat { get; set; }
             public decimal Matrah { get; set; }
             public decimal Isk1 { get; set; }

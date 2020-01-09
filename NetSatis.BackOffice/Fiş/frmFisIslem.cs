@@ -2784,7 +2784,8 @@ namespace NetSatis.BackOffice.Fiş
             NetSatis.EDonusum.Models.Donusum.Master m = new EDonusum.Models.Donusum.Master
             {
                 Aciklama = txtAciklama.Text,
-                DipIskonto = Convert.ToDecimal(_fisentity.DipIskTutari),
+              
+               
                 DokumanKodu = "",
                 EditDate = DateTime.Now,
                 EditUser = frmAnaMenu.UserId,
@@ -2803,6 +2804,7 @@ namespace NetSatis.BackOffice.Fiş
                 SiraKodu = txtSira.Text,
                 Tutar = Convert.ToDecimal(calcAraToplam.Value),
                 VadeTarihi = Convert.ToDateTime(cmbVadeTarihi.Text),
+                DipIskonto=Convert.ToDecimal(_fisentity.DipIskNetTutari)
             };
             DetailsDuzenle(eislem.MasterOlustur(m), HarTipi);
         }
@@ -2820,6 +2822,7 @@ namespace NetSatis.BackOffice.Fiş
                     Isk2 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani2").ToString()),
                     Isk3 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani3").ToString()),
                     Kdv = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString()),
+                    KdvOrani=Convert.ToDecimal(gridStokHareket.GetRowCellValue(i,"Kdv").ToString()),
                     KdvDahilFiyat = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar".ToString())),
                     MasterId = id,
                     Matrah = fyt2 - fyt,
