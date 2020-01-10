@@ -233,6 +233,8 @@
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.radialMenu1 = new DevExpress.XtraBars.Ribbon.RadialMenu(this.components);
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.naviGenelBilgiler.SuspendLayout();
@@ -2873,6 +2875,10 @@
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 500;
+            // 
             // frmFrontOffice
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -3166,6 +3172,8 @@
         private DevExpress.XtraEditors.TextEdit lblCariKod;
         private DevExpress.XtraEditors.TextEdit lblCariAd;
         private DevExpress.XtraBars.BarButtonItem barFiyat4;
+        private System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

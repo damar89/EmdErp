@@ -1013,6 +1013,16 @@ namespace NetSatis.FrontOffice
         {
             gridContStokHareket.ForceInitialize();
             if (File.Exists(DosyaYolu)) gridContStokHareket.MainView.RestoreLayoutFromXml(DosyaYolu);
+
+            //TERAZİ
+
+            if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_Terazi)))
+            {
+                serialPort1.PortName = "COM1";
+                serialPort1.Open();
+            }
+
+
             txtBarkod.Focus();
             calcMiktar.Value = 1;
             var ayar = context.Ayarlar.FirstOrDefault();
@@ -1600,7 +1610,7 @@ namespace NetSatis.FrontOffice
 
         private void calcMiktar_KeyDown(object sender, KeyEventArgs e)
         {
-             if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 this.ActiveControl = txtBarkod;
             }

@@ -82,6 +82,7 @@ namespace NetSatis.BackOffice.Ayarlar
             toggleGuncelle.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.GenelAyarlar_GuncellemeKontrolu));
 
             toggleBilgiFisiYazdirilsinmi.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.BilgiFisi_BilgiFisiYazdirilsinmi));
+            toggTerazi.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_Terazi));
             toggleAlisFiyat.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_AlisFiyat));
             toggleBilgiFisiSorulsunmu.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.BilgiFisi_BilgiFisiSorulsunmu));
             toggIrsaliye.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu));
@@ -171,6 +172,7 @@ namespace NetSatis.BackOffice.Ayarlar
                 SettingsTool.AyarDegistir(SettingsTool.Ayarlar.GenelAyarlar_GuncellemeKontrolu, toggleGuncelle.IsOn.ToString());
 
                 SettingsTool.AyarDegistir(SettingsTool.Ayarlar.BilgiFisi_BilgiFisiYazdirilsinmi, toggleBilgiFisiYazdirilsinmi.IsOn.ToString());
+                SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisAyarlari_Terazi, toggTerazi.IsOn.ToString());
 
                 SettingsTool.AyarDegistir(SettingsTool.Ayarlar.Irsaliye_Olussunmu, toggIrsaliye.IsOn.ToString());
                 SettingsTool.AyarDegistir(SettingsTool.Ayarlar.Irsaliye_CariEtkilesin, togCariEtkilesinmi.IsOn.ToString());

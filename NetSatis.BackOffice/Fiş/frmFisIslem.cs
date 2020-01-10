@@ -2817,7 +2817,7 @@ namespace NetSatis.BackOffice.Fiş
                 NetSatis.EDonusum.Models.Donusum.Details d = new EDonusum.Models.Donusum.Details
                 {
                     HareketTipi = eislem.HareketIdGetir(cmbTipi.Text),
-                    Magaza=
+                    Magaza="",
                     HarTip = HarTipi,
                     Isk1 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani").ToString()),
                     Isk2 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani2").ToString()),

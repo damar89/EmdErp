@@ -21,6 +21,7 @@ namespace NetSatis.Entities.Tools
             SmsAyarları_Parola,
             SatisAyarlari_VarsayilanHareketTipi,
             SatisAyarlari_FaturaYazici,
+            SatisAyarlari_Terazi,
             SatisAyarlari_BilgiFisiYazici,
             Irsaliye_Olussunmu,
             Irsaliye_CariEtkilesin,
@@ -112,7 +113,7 @@ namespace NetSatis.Entities.Tools
 
         public static string AyarOku(Ayarlar ayar)
         {
-           
+
 
             string[] gelenAyar = ayar.ToString().Split(Convert.ToChar("_"));
             return data[gelenAyar[0]][gelenAyar[1]];
