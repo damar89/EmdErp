@@ -2784,8 +2784,7 @@ namespace NetSatis.BackOffice.Fiş
             NetSatis.EDonusum.Models.Donusum.Master m = new EDonusum.Models.Donusum.Master
             {
                 Aciklama = txtAciklama.Text,
-                AlisVerisNo=_fisentity.Id,
-                MusteriAdi=_fisentity.CariAdi,               
+                AlisVerisNo=_fisentity.Id,             
                 DokumanKodu = "",
                 EditDate = DateTime.Now,
                 EditUser = frmAnaMenu.UserId,
@@ -2817,7 +2816,7 @@ namespace NetSatis.BackOffice.Fiş
                 NetSatis.EDonusum.Models.Donusum.Details d = new EDonusum.Models.Donusum.Details
                 {
                     HareketTipi = eislem.HareketIdGetir(cmbTipi.Text),
-                    Magaza="",
+                    //Magaza="",
                     HarTip = HarTipi,
                     Isk1 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani").ToString()),
                     Isk2 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani2").ToString()),

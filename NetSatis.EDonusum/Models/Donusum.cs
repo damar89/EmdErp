@@ -24,7 +24,6 @@ namespace NetSatis.EDonusum.Models
             public string HarTip { get; set; }
             public string DokumanKodu { get; set; }
             public int MusteriKodu { get; set; }
-            public string MusteriAdi{get;set}
             public int AlisVerisNo { get; set; }
             public int HareketTipi { get; set; }
             public string FisKodu { get; set; }
@@ -50,7 +49,7 @@ namespace NetSatis.EDonusum.Models
             public int MasterId { get; set; }
             public int MusteriKodu { get; set; }
             public int StokId { get; set; }
-            public string Magaza{get;set;}
+            public string Magaza { get; set; }
             public string HarTip { get; set; }
             public decimal Tutar { get; set; }
             public decimal Miktar { get; set; }

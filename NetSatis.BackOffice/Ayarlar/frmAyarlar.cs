@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
+using System.IO.Ports;
 using System.Linq;
 using System.Printing;
 using System.Windows.Forms;
@@ -33,12 +34,26 @@ namespace NetSatis.BackOffice.Ayarlar
                 Convert.ToInt32(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_FaturaYazirmaAyari));
 
             //gridLookKasa.Properties.DataSource = kasaDal.GetAll(context);
-
-            var combx = eislem.HareketTipiListele();
-
-            foreach (var i in combx)
+            try
             {
-                cmbTipi.Properties.Items.Add(i.Aciklama);
+
+                var combx = eislem.HareketTipiListele();
+                foreach (var i in combx)
+                {
+                    cmbTipi.Properties.Items.Add(i.Aciklama);
+                }
+            }
+            catch
+            {
+            }
+
+
+
+            string[] Portlar = SerialPort.GetPortNames();
+
+            foreach (string port in Portlar)
+            {
+                comboBox1.Items.Add(port);
             }
 
             cmbTipi.EditValue = SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_VarsayilanHareketTipi);
@@ -66,6 +81,9 @@ namespace NetSatis.BackOffice.Ayarlar
 
             cmbBilgiFisi.SelectedIndex =
                 Convert.ToInt32(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_BilgiFisiYazidirmaAyari));
+
+            comboBox1.Text = 
+                Convert.ToString(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_TeraziPort));
 
             cmbTahsilat.SelectedIndex =
                 Convert.ToInt32(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_TahsilatFisiYazidirmaAyari));
@@ -162,6 +180,9 @@ namespace NetSatis.BackOffice.Ayarlar
 
                 SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisAyarlari_FaturaYazici, cmbFaturaYazici.Text);
                 SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisAyarlari_BilgiFisiYazici, cmbFisYazici.Text);
+                SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisAyarlari_TeraziPort, comboBox1.Text);
+
+
                 SettingsTool.AyarDegistir(SettingsTool.Ayarlar.FirmaAyarlari_FirmaAdi, txtFirmaAdi.Text);
                 SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisAyarlari_FaturaYazirmaAyari, comboBoxEdit1.SelectedIndex.ToString());
 

@@ -70,11 +70,11 @@
             this.StokCikis = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAltGrup = new DevExpress.XtraGrid.Columns.GridColumn();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.btnStokEkle = new DevExpress.XtraBars.BarButtonItem();
             this.btnKopyala = new DevExpress.XtraBars.BarButtonItem();
             this.btnDuzenle = new DevExpress.XtraBars.BarButtonItem();
             this.btnGuncelle = new DevExpress.XtraBars.BarButtonItem();
             this.btnHareketler = new DevExpress.XtraBars.BarButtonItem();
+            this.btnStokEkle = new DevExpress.XtraBars.BarButtonItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -417,6 +417,7 @@
             this.StokCikis.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.StokCikis.FieldName = "StokCikis";
             this.StokCikis.Name = "StokCikis";
+            this.StokCikis.OptionsColumn.AllowEdit = false;
             this.StokCikis.Visible = true;
             this.StokCikis.VisibleIndex = 13;
             // 
@@ -425,6 +426,7 @@
             this.colAltGrup.Caption = "Alt Grup";
             this.colAltGrup.FieldName = "AltGrupAdi";
             this.colAltGrup.Name = "colAltGrup";
+            this.colAltGrup.OptionsColumn.AllowEdit = false;
             this.colAltGrup.Visible = true;
             this.colAltGrup.VisibleIndex = 7;
             // 
@@ -438,15 +440,6 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnStokEkle)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
-            // 
-            // btnStokEkle
-            // 
-            this.btnStokEkle.Caption = "Stok Ekle";
-            this.btnStokEkle.Id = 0;
-            this.btnStokEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStokEkle.ImageOptions.Image")));
-            this.btnStokEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnStokEkle.ImageOptions.LargeImage")));
-            this.btnStokEkle.Name = "btnStokEkle";
-            this.btnStokEkle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnStokEkle_ItemClick);
             // 
             // btnKopyala
             // 
@@ -483,6 +476,15 @@
             this.btnHareketler.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnHareketler.ImageOptions.LargeImage")));
             this.btnHareketler.Name = "btnHareketler";
             this.btnHareketler.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHareketler_ItemClick);
+            // 
+            // btnStokEkle
+            // 
+            this.btnStokEkle.Caption = "Stok Ekle";
+            this.btnStokEkle.Id = 0;
+            this.btnStokEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStokEkle.ImageOptions.Image")));
+            this.btnStokEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnStokEkle.ImageOptions.LargeImage")));
+            this.btnStokEkle.Name = "btnStokEkle";
+            this.btnStokEkle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnStokEkle_ItemClick);
             // 
             // barManager1
             // 

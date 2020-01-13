@@ -819,7 +819,22 @@ namespace NetSatis.FrontOffice
             }
             stokHareket.DepoId = depoid;
             stokHareket.BirimFiyati = txtIslem.Text == "Alış Faturası" ? entity.AlisFiyati1 : entity.SatisFiyati1;
-            stokHareket.Miktar = calcMiktar.Value;
+
+            if (textBox1.Text != "")
+            {
+                if (Convert.ToDecimal(textBox1.Text) > 0)
+                {
+                    stokHareket.Miktar = Convert.ToDecimal(textBox1.Text.Replace(".",","));
+                }
+                else
+                {
+                    stokHareket.Miktar = calcMiktar.Value;
+                }
+            }
+            else
+            {
+                stokHareket.Miktar = calcMiktar.Value;
+            }
             stokHareket.MaliyetFiyati = entity.AlisFiyati1 ?? 0;
             stokHareket.Tarih = Convert.ToDateTime(DateTime.Now);
             stokHareket.Kdv = entity.SatisKdv;
@@ -1011,6 +1026,7 @@ namespace NetSatis.FrontOffice
         }
         private void frmFrontOffice_Load(object sender, EventArgs e)
         {
+            Control.CheckForIllegalCrossThreadCalls = false;
             gridContStokHareket.ForceInitialize();
             if (File.Exists(DosyaYolu)) gridContStokHareket.MainView.RestoreLayoutFromXml(DosyaYolu);
 
@@ -1018,8 +1034,13 @@ namespace NetSatis.FrontOffice
 
             if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_Terazi)))
             {
-                serialPort1.PortName = "COM1";
+                textBox1.Visible = true;
+                labelControl3.Visible=true;
+                serialPort1.PortName = (Convert.ToString(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_TeraziPort)));
+
                 serialPort1.Open();
+
+
             }
 
 
@@ -1031,6 +1052,7 @@ namespace NetSatis.FrontOffice
                 txtKod.Text = CodeTool.fiskodolustur(ayar.HizliSatisOnEki, ayar.HizliSatisSiradakiNo.ToString());
                 fisNo = ayar.HizliSatisSiradakiNo;
             }
+
             //txtKod.Text =
             //    CodeTool.fiskodolustur(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_PesFisOnEki), SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_PesFisKodu));
         }
@@ -1613,6 +1635,29 @@ namespace NetSatis.FrontOffice
             if (e.KeyCode == Keys.Enter)
             {
                 this.ActiveControl = txtBarkod;
+            }
+        }
+
+        private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
+        {
+            var veri = serialPort1.ReadLine();
+            if (veri.Length < 15)
+            {
+                return;
+            }
+            int indexofkg = veri.IndexOf("kg");
+            string temp = veri.Substring(0, indexofkg + 2);
+            int lastemptyindex = temp.LastIndexOf(" ");
+            string final = temp.Substring(lastemptyindex, temp.Length - lastemptyindex - 2).Replace(" ", "");
+            textBox1.Text = final;
+        }
+
+        private void frmFrontOffice_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (serialPort1.IsOpen == true)
+            {
+                serialPort1.Close();
+
             }
         }
     }

@@ -29,6 +29,7 @@ namespace NetSatis.EDonusum.Controller
         }
         public List<Models.Donusum.HareketTipi> HareketTipiListele()
         {
+
             using (VTContext db = new VTContext())
             {
                 var list = db.HareketTipi.ToList();

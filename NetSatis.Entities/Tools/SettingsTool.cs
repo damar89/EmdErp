@@ -22,6 +22,7 @@ namespace NetSatis.Entities.Tools
             SatisAyarlari_VarsayilanHareketTipi,
             SatisAyarlari_FaturaYazici,
             SatisAyarlari_Terazi,
+            SatisAyarlari_TeraziPort,
             SatisAyarlari_BilgiFisiYazici,
             Irsaliye_Olussunmu,
             Irsaliye_CariEtkilesin,
