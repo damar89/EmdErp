@@ -79,6 +79,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingsTool.cs" />
     <Compile Include="VTContext.cs" />
+    <Compile Include="WebServices\ArchiveWebService.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
