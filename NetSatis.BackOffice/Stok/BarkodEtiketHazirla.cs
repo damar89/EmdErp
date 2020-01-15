@@ -124,9 +124,9 @@ namespace NetSatis.BackOffice.Stok
             if (e.KeyCode == Keys.Enter)
             {
                 Barkod entity;
-                 entity = context.Barkodlar.Where(c => c.Barkodu == txtBarkod.Text).SingleOrDefault();
+                entity = context.Barkodlar.Where(c => c.Barkodu == txtBarkod.Text).SingleOrDefault();
                 var entityStok = context.Stoklar.FirstOrDefault(x => x.Barkodu == txtBarkod.Text);
-               
+
                 if (context.BarkodEtiketOlustur.Count(c => c.StokKodu == entityStok.Barkodu) == 0)
                 {
                     barkodEtiket.AddOrUpdate(context, new BarkodEtiket
@@ -160,6 +160,7 @@ namespace NetSatis.BackOffice.Stok
 
                     });
                     barkodEtiket.Save(context);
+                    txtBarkod.Text = "";
                 }
             }
             gridView1.RefreshData();
@@ -167,14 +168,14 @@ namespace NetSatis.BackOffice.Stok
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            rptBarkodRaf r=new rptBarkodRaf();
+            rptBarkodRaf r = new rptBarkodRaf();
             using (NetSatisContext db = new NetSatisContext())
             {
-                var list=db.BarkodEtiketOlustur.ToList();
-                r.DataSource=list;
+                var list = db.BarkodEtiketOlustur.ToList();
+                r.DataSource = list;
                 r.LoadLayout($@"{Application.StartupPath}\rptBarkodRaf.repx");
                 r.ShowDesigner();
-               // r.ShowDesigner();
+                // r.ShowDesigner();
             }
         }
 

@@ -680,7 +680,7 @@ namespace NetSatis.BackOffice.Stok
             kaydetYeni = true;
             btnKaydet_Click(null, null);
             kaydetYeni = false;
-            btnYeni_Click(null, null);
+            btnYeni_Click(null,null);
             togDurum.EditValue = true;
             togWeb.EditValue = false;
             txtKod.Focus();
