@@ -824,7 +824,7 @@ namespace NetSatis.FrontOffice
             {
                 if (Convert.ToDecimal(textBox1.Text) > 0)
                 {
-                    stokHareket.Miktar = Convert.ToDecimal(textBox1.Text.Replace(".",","));
+                    stokHareket.Miktar = Convert.ToDecimal(textBox1.Text.Replace(".", ","));
                 }
                 else
                 {
@@ -1035,7 +1035,7 @@ namespace NetSatis.FrontOffice
             if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_Terazi)))
             {
                 textBox1.Visible = true;
-                labelControl3.Visible=true;
+                labelControl3.Visible = true;
                 serialPort1.PortName = (Convert.ToString(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_TeraziPort)));
 
                 serialPort1.Open();
@@ -1583,6 +1583,7 @@ namespace NetSatis.FrontOffice
                 IslemTarihi = Convert.ToDateTime(DateTime.Now),
                 Kdv = Convert.ToDecimal(calcKdvToplam.Value),
                 MusteriKodu = Convert.ToInt32(_fisentity.CariId),
+                AlisVerisNo = _fisentity.Id,
                 Matrah = Convert.ToDecimal(calcGenelToplam.Value - calcKdvToplam.Value),
                 NetTutar = calcGenelToplam.Value,
                 SaveDate = DateTime.Now,
