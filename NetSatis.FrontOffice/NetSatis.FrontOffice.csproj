@@ -204,6 +204,7 @@
     <Content Include="emd icon.ico" />
     <Content Include="pos icon.ico" />
     <Content Include="pos.ico" />
+    <None Include="Resources\bo_mydetails.svg" />
     <None Include="Resources\save_16x16.png" />
     <None Include="Resources\technology_32x32.png" />
     <None Include="Resources\cancel_32x32.png" />

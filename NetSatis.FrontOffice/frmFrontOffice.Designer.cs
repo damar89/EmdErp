@@ -53,6 +53,7 @@
             this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
             this.navigationPane1 = new DevExpress.XtraBars.Navigation.NavigationPane();
             this.naviGenelBilgiler = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.calcMaliyet = new DevExpress.XtraEditors.CalcEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -236,6 +237,21 @@
             this.radialMenu1 = new DevExpress.XtraBars.Ribbon.RadialMenu(this.components);
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl29 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl33 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl34 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl35 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl36 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtMail = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
+            this.txtHareketTipi = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl39 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.naviGenelBilgiler.SuspendLayout();
@@ -315,6 +331,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radialMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHareketTipi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ımageList2
@@ -361,6 +381,7 @@
             this.naviGenelBilgiler.Appearance.BackColor = System.Drawing.Color.DarkSlateGray;
             this.naviGenelBilgiler.Appearance.Options.UseBackColor = true;
             this.naviGenelBilgiler.Caption = "Genel Bilgiler";
+            this.naviGenelBilgiler.Controls.Add(this.simpleButton2);
             this.naviGenelBilgiler.Controls.Add(this.textBox1);
             this.naviGenelBilgiler.Controls.Add(this.calcMaliyet);
             this.naviGenelBilgiler.Controls.Add(this.calcIndirimOrani);
@@ -403,6 +424,17 @@
             this.naviGenelBilgiler.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("naviGenelBilgiler.ImageOptions.Image")));
             this.naviGenelBilgiler.Name = "naviGenelBilgiler";
             this.naviGenelBilgiler.Size = new System.Drawing.Size(305, 692);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.simpleButton2.ImageOptions.SvgImage = global::NetSatis.FrontOffice.Properties.Resources.bo_mydetails;
+            this.simpleButton2.Location = new System.Drawing.Point(80, 534);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(69, 70);
+            this.simpleButton2.TabIndex = 139;
+            this.simpleButton2.Text = "Cari Sec";
+            this.simpleButton2.Click += new System.EventHandler(this.btnCariAc_Click);
             // 
             // textBox1
             // 
@@ -657,7 +689,6 @@
             this.calcIndirimOrani.Size = new System.Drawing.Size(171, 33);
             this.calcIndirimOrani.TabIndex = 136;
             this.calcIndirimOrani.EditValueChanged += new System.EventHandler(this.calcIndirimOrani_EditValueChanged);
-            this.calcIndirimOrani.Enter += new System.EventHandler(this.calcIndirimOrani_Enter);
             // 
             // btnCariGiris
             // 
@@ -1235,7 +1266,6 @@
             this.calcDusur.TabIndex = 2;
             this.calcDusur.ValueChanged += new System.EventHandler(this.calcGenelToplam_ValueChanged);
             this.calcDusur.EditValueChanged += new System.EventHandler(this.calcIndirimTutari_EditValueChanged);
-            this.calcDusur.Enter += new System.EventHandler(this.calcDusur_Enter);
             // 
             // calcGenelToplam
             // 
@@ -1276,13 +1306,13 @@
             this.navCari.Controls.Add(this.grpCariGrup);
             this.navCari.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navCari.ImageOptions.Image")));
             this.navCari.Name = "navCari";
-            this.navCari.Size = new System.Drawing.Size(301, 693);
+            this.navCari.Size = new System.Drawing.Size(305, 692);
             // 
             // txtAraToplam
             // 
             this.txtAraToplam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAraToplam.Location = new System.Drawing.Point(12, 364);
+            this.txtAraToplam.Location = new System.Drawing.Point(78, 460);
             this.txtAraToplam.Name = "txtAraToplam";
             this.txtAraToplam.Properties.Appearance.BackColor = System.Drawing.Color.DarkSlateGray;
             this.txtAraToplam.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1303,14 +1333,14 @@
             this.txtAraToplam.Properties.Mask.EditMask = "C";
             this.txtAraToplam.Properties.NullText = "0,00";
             this.txtAraToplam.Properties.ReadOnly = true;
-            this.txtAraToplam.Size = new System.Drawing.Size(0, 10);
+            this.txtAraToplam.Size = new System.Drawing.Size(4, 10);
             this.txtAraToplam.TabIndex = 125;
             // 
             // calcKdvToplam
             // 
             this.calcKdvToplam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcKdvToplam.Location = new System.Drawing.Point(61, 364);
+            this.calcKdvToplam.Location = new System.Drawing.Point(78, 476);
             this.calcKdvToplam.Name = "calcKdvToplam";
             this.calcKdvToplam.Properties.Appearance.BackColor = System.Drawing.Color.DarkSlateGray;
             this.calcKdvToplam.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1331,14 +1361,14 @@
             this.calcKdvToplam.Properties.Mask.EditMask = "C";
             this.calcKdvToplam.Properties.NullText = "0,00";
             this.calcKdvToplam.Properties.ReadOnly = true;
-            this.calcKdvToplam.Size = new System.Drawing.Size(0, 10);
+            this.calcKdvToplam.Size = new System.Drawing.Size(4, 10);
             this.calcKdvToplam.TabIndex = 126;
             // 
             // calcIndirimTutari
             // 
             this.calcIndirimTutari.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcIndirimTutari.Location = new System.Drawing.Point(78, 364);
+            this.calcIndirimTutari.Location = new System.Drawing.Point(131, 488);
             this.calcIndirimTutari.Name = "calcIndirimTutari";
             this.calcIndirimTutari.Properties.Appearance.BackColor = System.Drawing.Color.DarkSlateGray;
             this.calcIndirimTutari.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1359,7 +1389,7 @@
             this.calcIndirimTutari.Properties.Mask.EditMask = "C";
             this.calcIndirimTutari.Properties.NullText = "0,00";
             this.calcIndirimTutari.Properties.ReadOnly = true;
-            this.calcIndirimTutari.Size = new System.Drawing.Size(0, 10);
+            this.calcIndirimTutari.Size = new System.Drawing.Size(4, 10);
             this.calcIndirimTutari.TabIndex = 127;
             // 
             // grpCariGrup
@@ -1367,10 +1397,14 @@
             this.grpCariGrup.Appearance.BackColor = System.Drawing.Color.DarkSlateGray;
             this.grpCariGrup.Appearance.Options.UseBackColor = true;
             this.grpCariGrup.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.grpCariGrup.Controls.Add(this.txtMail);
+            this.grpCariGrup.Controls.Add(this.textEdit2);
             this.grpCariGrup.Controls.Add(this.txtCepTel);
             this.grpCariGrup.Controls.Add(this.txtVergiNo);
+            this.grpCariGrup.Controls.Add(this.textEdit1);
             this.grpCariGrup.Controls.Add(this.txtVergiDairesi);
             this.grpCariGrup.Controls.Add(this.txtSemt);
+            this.grpCariGrup.Controls.Add(this.txtHareketTipi);
             this.grpCariGrup.Controls.Add(this.lblCariKod);
             this.grpCariGrup.Controls.Add(this.lblCariAd);
             this.grpCariGrup.Controls.Add(this.txtFaturaUnvani);
@@ -1382,14 +1416,25 @@
             this.grpCariGrup.Controls.Add(this.lblBakiye);
             this.grpCariGrup.Controls.Add(this.lblBorc);
             this.grpCariGrup.Controls.Add(this.lblRiskLimiti);
+            this.grpCariGrup.Controls.Add(this.labelControl38);
+            this.grpCariGrup.Controls.Add(this.labelControl37);
             this.grpCariGrup.Controls.Add(this.lblAlacak);
+            this.grpCariGrup.Controls.Add(this.labelControl36);
+            this.grpCariGrup.Controls.Add(this.labelControl35);
+            this.grpCariGrup.Controls.Add(this.labelControl39);
+            this.grpCariGrup.Controls.Add(this.labelControl29);
+            this.grpCariGrup.Controls.Add(this.labelControl30);
+            this.grpCariGrup.Controls.Add(this.labelControl34);
+            this.grpCariGrup.Controls.Add(this.labelControl33);
+            this.grpCariGrup.Controls.Add(this.labelControl32);
+            this.grpCariGrup.Controls.Add(this.labelControl4);
             this.grpCariGrup.Controls.Add(this.labelControl17);
             this.grpCariGrup.Controls.Add(this.labelControl9);
             this.grpCariGrup.Controls.Add(this.labelControl15);
             this.grpCariGrup.Controls.Add(this.labelControl12);
             this.grpCariGrup.Location = new System.Drawing.Point(3, 7);
             this.grpCariGrup.Name = "grpCariGrup";
-            this.grpCariGrup.Size = new System.Drawing.Size(295, 399);
+            this.grpCariGrup.Size = new System.Drawing.Size(295, 443);
             this.grpCariGrup.TabIndex = 124;
             this.grpCariGrup.Text = "Cari Bilgiler";
             // 
@@ -1397,51 +1442,51 @@
             // 
             this.txtCepTel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCepTel.Location = new System.Drawing.Point(3, 372);
+            this.txtCepTel.Location = new System.Drawing.Point(75, 390);
             this.txtCepTel.Name = "txtCepTel";
             this.txtCepTel.Properties.NullValuePrompt = "Cep Telefon Bilgisi Giriniz.";
             this.txtCepTel.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtCepTel.Size = new System.Drawing.Size(288, 20);
+            this.txtCepTel.Size = new System.Drawing.Size(216, 20);
             this.txtCepTel.TabIndex = 103;
             // 
             // txtVergiNo
             // 
             this.txtVergiNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVergiNo.Location = new System.Drawing.Point(3, 348);
+            this.txtVergiNo.Location = new System.Drawing.Point(75, 366);
             this.txtVergiNo.Name = "txtVergiNo";
             this.txtVergiNo.Properties.NullValuePrompt = "Vergi No Giriniz.";
             this.txtVergiNo.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtVergiNo.Size = new System.Drawing.Size(288, 20);
+            this.txtVergiNo.Size = new System.Drawing.Size(216, 20);
             this.txtVergiNo.TabIndex = 102;
             // 
             // txtVergiDairesi
             // 
             this.txtVergiDairesi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVergiDairesi.Location = new System.Drawing.Point(3, 324);
+            this.txtVergiDairesi.Location = new System.Drawing.Point(75, 342);
             this.txtVergiDairesi.Name = "txtVergiDairesi";
             this.txtVergiDairesi.Properties.NullValuePrompt = "Vergi Dairesi Giriniz.";
             this.txtVergiDairesi.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtVergiDairesi.Size = new System.Drawing.Size(288, 20);
+            this.txtVergiDairesi.Size = new System.Drawing.Size(216, 20);
             this.txtVergiDairesi.TabIndex = 101;
             // 
             // txtSemt
             // 
             this.txtSemt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSemt.Location = new System.Drawing.Point(3, 301);
+            this.txtSemt.Location = new System.Drawing.Point(75, 319);
             this.txtSemt.Name = "txtSemt";
             this.txtSemt.Properties.NullValuePrompt = "Semt Bilgisi Giriniz.";
             this.txtSemt.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtSemt.Size = new System.Drawing.Size(288, 20);
+            this.txtSemt.Size = new System.Drawing.Size(216, 20);
             this.txtSemt.TabIndex = 107;
             // 
             // lblCariKod
             // 
             this.lblCariKod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCariKod.Location = new System.Drawing.Point(3, 161);
+            this.lblCariKod.Location = new System.Drawing.Point(75, 179);
             this.lblCariKod.Name = "lblCariKod";
             this.lblCariKod.Properties.DisplayFormat.FormatString = "d";
             this.lblCariKod.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
@@ -1449,14 +1494,14 @@
             this.lblCariKod.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.lblCariKod.Properties.NullValuePrompt = "Fatura Unvanı Giriniz.";
             this.lblCariKod.Properties.NullValuePromptShowForEmptyValue = true;
-            this.lblCariKod.Size = new System.Drawing.Size(288, 20);
+            this.lblCariKod.Size = new System.Drawing.Size(216, 20);
             this.lblCariKod.TabIndex = 100;
             // 
             // lblCariAd
             // 
             this.lblCariAd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCariAd.Location = new System.Drawing.Point(3, 186);
+            this.lblCariAd.Location = new System.Drawing.Point(75, 204);
             this.lblCariAd.Name = "lblCariAd";
             this.lblCariAd.Properties.DisplayFormat.FormatString = "d";
             this.lblCariAd.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
@@ -1464,14 +1509,14 @@
             this.lblCariAd.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.lblCariAd.Properties.NullValuePrompt = "Fatura Unvanı Giriniz.";
             this.lblCariAd.Properties.NullValuePromptShowForEmptyValue = true;
-            this.lblCariAd.Size = new System.Drawing.Size(288, 20);
+            this.lblCariAd.Size = new System.Drawing.Size(216, 20);
             this.lblCariAd.TabIndex = 100;
             // 
             // txtFaturaUnvani
             // 
             this.txtFaturaUnvani.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFaturaUnvani.Location = new System.Drawing.Point(3, 210);
+            this.txtFaturaUnvani.Location = new System.Drawing.Point(75, 228);
             this.txtFaturaUnvani.Name = "txtFaturaUnvani";
             this.txtFaturaUnvani.Properties.DisplayFormat.FormatString = "d";
             this.txtFaturaUnvani.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
@@ -1479,7 +1524,7 @@
             this.txtFaturaUnvani.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtFaturaUnvani.Properties.NullValuePrompt = "Fatura Unvanı Giriniz.";
             this.txtFaturaUnvani.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtFaturaUnvani.Size = new System.Drawing.Size(288, 20);
+            this.txtFaturaUnvani.Size = new System.Drawing.Size(216, 20);
             this.txtFaturaUnvani.TabIndex = 100;
             // 
             // txtAdres
@@ -1487,11 +1532,11 @@
             this.txtAdres.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAdres.EditValue = "";
-            this.txtAdres.Location = new System.Drawing.Point(3, 276);
+            this.txtAdres.Location = new System.Drawing.Point(75, 294);
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Properties.NullValuePrompt = "Adres Bilgisi Giriniz.";
             this.txtAdres.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtAdres.Size = new System.Drawing.Size(288, 22);
+            this.txtAdres.Size = new System.Drawing.Size(216, 22);
             this.txtAdres.TabIndex = 106;
             // 
             // btnCariAc
@@ -1508,22 +1553,22 @@
             // 
             this.txtIlce.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtIlce.Location = new System.Drawing.Point(3, 254);
+            this.txtIlce.Location = new System.Drawing.Point(75, 272);
             this.txtIlce.Name = "txtIlce";
             this.txtIlce.Properties.NullValuePrompt = "İlçe Bilgisi Giriniz.";
             this.txtIlce.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtIlce.Size = new System.Drawing.Size(288, 20);
+            this.txtIlce.Size = new System.Drawing.Size(216, 20);
             this.txtIlce.TabIndex = 105;
             // 
             // txtIl
             // 
             this.txtIl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtIl.Location = new System.Drawing.Point(3, 232);
+            this.txtIl.Location = new System.Drawing.Point(75, 250);
             this.txtIl.Name = "txtIl";
             this.txtIl.Properties.NullValuePrompt = "İl Bilgisi Giriniz.";
             this.txtIl.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtIl.Size = new System.Drawing.Size(288, 20);
+            this.txtIl.Size = new System.Drawing.Size(216, 20);
             this.txtIl.TabIndex = 104;
             // 
             // btnTemizle
@@ -2908,6 +2953,196 @@
             // 
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl4.Appearance.Options.UseForeColor = true;
+            this.labelControl4.Appearance.Options.UseTextOptions = true;
+            this.labelControl4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl4.Location = new System.Drawing.Point(4, 207);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(63, 16);
+            this.labelControl4.TabIndex = 122;
+            this.labelControl4.Text = "Adı :";
+            // 
+            // labelControl29
+            // 
+            this.labelControl29.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl29.Appearance.Options.UseForeColor = true;
+            this.labelControl29.Appearance.Options.UseTextOptions = true;
+            this.labelControl29.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl29.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl29.Location = new System.Drawing.Point(3, 183);
+            this.labelControl29.Name = "labelControl29";
+            this.labelControl29.Size = new System.Drawing.Size(63, 16);
+            this.labelControl29.TabIndex = 122;
+            this.labelControl29.Text = "Cari Kod:";
+            // 
+            // labelControl32
+            // 
+            this.labelControl32.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl32.Appearance.Options.UseForeColor = true;
+            this.labelControl32.Appearance.Options.UseTextOptions = true;
+            this.labelControl32.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl32.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl32.Location = new System.Drawing.Point(3, 253);
+            this.labelControl32.Name = "labelControl32";
+            this.labelControl32.Size = new System.Drawing.Size(63, 16);
+            this.labelControl32.TabIndex = 122;
+            this.labelControl32.Text = "İl :";
+            // 
+            // labelControl33
+            // 
+            this.labelControl33.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl33.Appearance.Options.UseForeColor = true;
+            this.labelControl33.Appearance.Options.UseTextOptions = true;
+            this.labelControl33.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl33.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl33.Location = new System.Drawing.Point(3, 276);
+            this.labelControl33.Name = "labelControl33";
+            this.labelControl33.Size = new System.Drawing.Size(63, 16);
+            this.labelControl33.TabIndex = 122;
+            this.labelControl33.Text = "İlçe :";
+            // 
+            // labelControl34
+            // 
+            this.labelControl34.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl34.Appearance.Options.UseForeColor = true;
+            this.labelControl34.Appearance.Options.UseTextOptions = true;
+            this.labelControl34.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl34.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl34.Location = new System.Drawing.Point(4, 298);
+            this.labelControl34.Name = "labelControl34";
+            this.labelControl34.Size = new System.Drawing.Size(63, 16);
+            this.labelControl34.TabIndex = 122;
+            this.labelControl34.Text = "Adres :";
+            // 
+            // labelControl30
+            // 
+            this.labelControl30.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl30.Appearance.Options.UseForeColor = true;
+            this.labelControl30.Appearance.Options.UseTextOptions = true;
+            this.labelControl30.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl30.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl30.Location = new System.Drawing.Point(4, 323);
+            this.labelControl30.Name = "labelControl30";
+            this.labelControl30.Size = new System.Drawing.Size(63, 16);
+            this.labelControl30.TabIndex = 122;
+            this.labelControl30.Text = "Semt :";
+            // 
+            // labelControl35
+            // 
+            this.labelControl35.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl35.Appearance.Options.UseForeColor = true;
+            this.labelControl35.Appearance.Options.UseTextOptions = true;
+            this.labelControl35.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl35.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl35.Location = new System.Drawing.Point(4, 345);
+            this.labelControl35.Name = "labelControl35";
+            this.labelControl35.Size = new System.Drawing.Size(63, 16);
+            this.labelControl35.TabIndex = 122;
+            this.labelControl35.Text = "V.Dairesi:";
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textEdit1.Location = new System.Drawing.Point(75, 364);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.NullValuePrompt = "Vergi Dairesi Giriniz.";
+            this.textEdit1.Properties.NullValuePromptShowForEmptyValue = true;
+            this.textEdit1.Size = new System.Drawing.Size(216, 20);
+            this.textEdit1.TabIndex = 101;
+            // 
+            // labelControl36
+            // 
+            this.labelControl36.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl36.Appearance.Options.UseForeColor = true;
+            this.labelControl36.Appearance.Options.UseTextOptions = true;
+            this.labelControl36.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl36.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl36.Location = new System.Drawing.Point(4, 369);
+            this.labelControl36.Name = "labelControl36";
+            this.labelControl36.Size = new System.Drawing.Size(63, 16);
+            this.labelControl36.TabIndex = 122;
+            this.labelControl36.Text = "V.No:";
+            // 
+            // labelControl37
+            // 
+            this.labelControl37.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl37.Appearance.Options.UseForeColor = true;
+            this.labelControl37.Appearance.Options.UseTextOptions = true;
+            this.labelControl37.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl37.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl37.Location = new System.Drawing.Point(5, 392);
+            this.labelControl37.Name = "labelControl37";
+            this.labelControl37.Size = new System.Drawing.Size(63, 16);
+            this.labelControl37.TabIndex = 122;
+            this.labelControl37.Text = "Cep Tel :";
+            // 
+            // textEdit2
+            // 
+            this.textEdit2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textEdit2.Location = new System.Drawing.Point(76, 416);
+            this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Properties.NullValuePrompt = "Cep Telefon Bilgisi Giriniz.";
+            this.textEdit2.Properties.NullValuePromptShowForEmptyValue = true;
+            this.textEdit2.Size = new System.Drawing.Size(216, 20);
+            this.textEdit2.TabIndex = 103;
+            // 
+            // txtMail
+            // 
+            this.txtMail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMail.Location = new System.Drawing.Point(75, 416);
+            this.txtMail.Name = "txtMail";
+            this.txtMail.Properties.NullValuePrompt = "Cep Telefon Bilgisi Giriniz.";
+            this.txtMail.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtMail.Size = new System.Drawing.Size(216, 20);
+            this.txtMail.TabIndex = 103;
+            // 
+            // labelControl38
+            // 
+            this.labelControl38.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl38.Appearance.Options.UseForeColor = true;
+            this.labelControl38.Appearance.Options.UseTextOptions = true;
+            this.labelControl38.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl38.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl38.Location = new System.Drawing.Point(5, 417);
+            this.labelControl38.Name = "labelControl38";
+            this.labelControl38.Size = new System.Drawing.Size(63, 16);
+            this.labelControl38.TabIndex = 122;
+            this.labelControl38.Text = "Email :";
+            // 
+            // txtHareketTipi
+            // 
+            this.txtHareketTipi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtHareketTipi.Location = new System.Drawing.Point(76, 156);
+            this.txtHareketTipi.Name = "txtHareketTipi";
+            this.txtHareketTipi.Properties.DisplayFormat.FormatString = "d";
+            this.txtHareketTipi.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtHareketTipi.Properties.EditFormat.FormatString = "d";
+            this.txtHareketTipi.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtHareketTipi.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtHareketTipi.Size = new System.Drawing.Size(57, 20);
+            this.txtHareketTipi.TabIndex = 100;
+            // 
+            // labelControl39
+            // 
+            this.labelControl39.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl39.Appearance.Options.UseForeColor = true;
+            this.labelControl39.Appearance.Options.UseTextOptions = true;
+            this.labelControl39.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl39.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl39.Location = new System.Drawing.Point(7, 159);
+            this.labelControl39.Name = "labelControl39";
+            this.labelControl39.Size = new System.Drawing.Size(63, 16);
+            this.labelControl39.TabIndex = 122;
+            this.labelControl39.Text = "Tipi :";
+            // 
             // frmFrontOffice
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -3012,6 +3247,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radialMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHareketTipi.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3206,6 +3445,22 @@
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.TextBox textBox1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.TextEdit txtMail;
+        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.LabelControl labelControl38;
+        private DevExpress.XtraEditors.LabelControl labelControl37;
+        private DevExpress.XtraEditors.LabelControl labelControl36;
+        private DevExpress.XtraEditors.LabelControl labelControl35;
+        private DevExpress.XtraEditors.LabelControl labelControl29;
+        private DevExpress.XtraEditors.LabelControl labelControl30;
+        private DevExpress.XtraEditors.LabelControl labelControl34;
+        private DevExpress.XtraEditors.LabelControl labelControl33;
+        private DevExpress.XtraEditors.LabelControl labelControl32;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.TextEdit txtHareketTipi;
+        private DevExpress.XtraEditors.LabelControl labelControl39;
     }
 }
 

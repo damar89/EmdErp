@@ -328,7 +328,7 @@ namespace NetSatis.FrontOffice
                 }
                 else
                 {
-                    frmOdemeEkrani form = new frmOdemeEkrani(Convert.ToInt32(buton.Tag), calcOdenemesiGereken.Value);
+                    frmOdemeEkrani form = new frmOdemeEkrani(Convert.ToInt32(buton.Tag), calcOdenemesiGereken.Value,RoleTool.KullaniciEntity.Id);
                     form.ShowDialog();
                     if (form.entity != null)
                     {
@@ -484,6 +484,7 @@ namespace NetSatis.FrontOffice
                 }
                 kasaVeri.CariId = _cariId;
             }
+            _fisentity.Tipi=
             _fisentity.FisKodu = txtKod.Text;
             _fisentity.BelgeNo = txtBelgeNo.Text;
             _fisentity.Aciklama = txtAciklama.Text;
@@ -493,6 +494,7 @@ namespace NetSatis.FrontOffice
             _fisentity.Ilce = txtIlce.Text;
             _fisentity.Semt = txtSemt.Text;
             _fisentity.Adres = txtAdres.Text;
+            _fisentity.EMail=txtMail.Text;
             _fisentity.VergiDairesi = txtVergiDairesi.Text;
             _fisentity.VergiNo = txtVergiNo.Text;
             _fisentity.KDVDahil = true;
@@ -599,6 +601,7 @@ namespace NetSatis.FrontOffice
             txtVergiDairesi.Text = null;
             txtVergiNo.Text = null;
             txtCepTel.Text = null;
+            txtMail.Text=null;
             txtIl.Text = null;
             txtIlce.Text = null;
             txtAdres.Text = null;
@@ -1106,6 +1109,7 @@ namespace NetSatis.FrontOffice
                     txtFaturaUnvani.Text = entity.FaturaUnvani;
                     txtVergiDairesi.Text = entity.VergiDairesi;
                     txtVergiNo.Text = entity.VergiNo;
+                    txtMail.Text=_fisentity.EMail;
                     txtCepTel.Text = entity.CepTelefonu;
                     txtIl.Text = entity.Il;
                     txtIlce.Text = entity.Ilce;
@@ -1147,7 +1151,7 @@ namespace NetSatis.FrontOffice
         }
         private void fisIslem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmFisIslem form = new frmFisIslem(null, e.Item.Caption);
+            frmFisIslem form = new frmFisIslem(null, e.Item.Caption,false,null,RoleTool.KullaniciEntity.Id);
             form.Show();
         }
         private void btnCariAc_Click(object sender, EventArgs e)
@@ -1165,6 +1169,7 @@ namespace NetSatis.FrontOffice
                 txtFaturaUnvani.Text = entity.FaturaUnvani;
                 txtVergiDairesi.Text = entity.VergiDairesi;
                 txtVergiNo.Text = entity.VergiNo;
+                txtMail.Text=_fisentity.EMail;
                 txtCepTel.Text = entity.CepTelefonu;
                 txtIl.Text = entity.Il;
                 txtIlce.Text = entity.Ilce;
@@ -1272,6 +1277,7 @@ namespace NetSatis.FrontOffice
             txtVergiDairesi.Text = null;
             txtVergiNo.Text = null;
             txtCepTel.Text = null;
+            txtMail.Text=null;
             txtIl.Text = null;
             txtIlce.Text = null;
             txtAdres.Text = null;
@@ -1578,7 +1584,7 @@ namespace NetSatis.FrontOffice
                 EditUser = frmAnaMenu.UserId,
                 FisKodu = txtKod.Text,
                 FisTuru = _fisentity.FisTuru = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 ? "Perakende Satış İrsaliyesi" : "Perakende Satış Faturası",
-                HareketTipi = eislem.HareketIdGetir("A"),
+                HareketTipi = eislem.HareketIdGetir(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_VarsayilanHareketTipi)),
                 HarTip = HarTipi,
                 IslemTarihi = Convert.ToDateTime(DateTime.Now),
                 Kdv = Convert.ToDecimal(calcKdvToplam.Value),
@@ -1593,6 +1599,13 @@ namespace NetSatis.FrontOffice
                 Tutar = Convert.ToDecimal(txtAraToplam.EditValue),
                 VadeTarihi = Convert.ToDateTime(DateTime.Now),
             };
+            
+            if (txtHareketTipi.Text != "")
+            {
+                m.HareketTipi = eislem.HareketIdGetir(txtHareketTipi.Text);
+            }
+
+
             DetailsDuzenle(eislem.MasterOlustur(m), HarTipi);
         }
         private void DetailsDuzenle(int id, string HarTipi)

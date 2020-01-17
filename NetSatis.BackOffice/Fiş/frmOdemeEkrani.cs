@@ -17,10 +17,15 @@ namespace NetSatis.BackOffice.Fiş
         private OdemeTuru _odemeTuruBilgi;
         //MasrafDAL masrafDal = new MasrafDAL();
 
-        public frmOdemeEkrani(int odemeTuruId, Nullable<decimal> odenmesiGerekenTutar = null)
+        public frmOdemeEkrani(int odemeTuruId, Nullable<decimal> odenmesiGerekenTutar = null , int userId = 0)
         {
             InitializeComponent();
-            int kasaid = Convert.ToInt32(context.Kullanicilar.Where(x => x.Id == frmAnaMenu.UserId).FirstOrDefault().KasaId);
+            int user = userId;
+            if (userId == 0)
+            {
+                user = frmAnaMenu.UserId;
+            }
+            int kasaid = Convert.ToInt32(context.Kullanicilar.Where(x => x.Id == user).FirstOrDefault().KasaId);
            
             int kasaId =kasaid;
             _kasaBilgi = context.Kasalar.SingleOrDefault(c => c.Id == kasaId);

@@ -50,10 +50,12 @@ namespace NetSatis.BackOffice.Fiş
         string DosyaYolu = $@"{Application.StartupPath}\Gorunum\FisIslemSavedLayout.xml";
         private bool basariylaKaydedildi = false;
         bool duzenle = false;
+        int frontOfficeUserId = 0;
         public frmFisIslem(string fisKodu = null, string fisTuru = null, bool cariGetir = false,
-            Entities.Tables.Cari entity = null)
+            Entities.Tables.Cari entity = null,int userId = 0)
         {
             InitializeComponent();
+            frontOfficeUserId = userId;
             if (fisKodu != null)
             {
                 duzenle = true;
@@ -285,7 +287,8 @@ namespace NetSatis.BackOffice.Fiş
             //    {
             if (ayarlar.SatisEkrani == false && txtFisTuru.Text != "Hakediş Fişi" && txtFisTuru.Text != "Masraf Fişi")
             {
-                frmOdemeEkrani form = new frmOdemeEkrani(Convert.ToInt32(buton.Tag));
+                
+                frmOdemeEkrani form = new frmOdemeEkrani(Convert.ToInt32(buton.Tag),null,frontOfficeUserId);
                 form.ShowDialog();
                 if (form.entity != null)
                 {
