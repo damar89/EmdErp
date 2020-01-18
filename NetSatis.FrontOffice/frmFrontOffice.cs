@@ -221,6 +221,7 @@ namespace NetSatis.FrontOffice
                     {
                         Name = hizliSatis.StokKodu,
                         Text = hizliSatis.UrunAdi + Environment.NewLine + hizliSatis.Fiyati,
+               
                         Appearance = { TextOptions = { WordWrap = WordWrap.Wrap },BackColor = c
                             },
                         //Height = 70,
@@ -328,7 +329,7 @@ namespace NetSatis.FrontOffice
                 }
                 else
                 {
-                    frmOdemeEkrani form = new frmOdemeEkrani(Convert.ToInt32(buton.Tag), calcOdenemesiGereken.Value,RoleTool.KullaniciEntity.Id);
+                    frmOdemeEkrani form = new frmOdemeEkrani(Convert.ToInt32(buton.Tag), calcOdenemesiGereken.Value, RoleTool.KullaniciEntity.Id);
                     form.ShowDialog();
                     if (form.entity != null)
                     {
@@ -484,7 +485,15 @@ namespace NetSatis.FrontOffice
                 }
                 kasaVeri.CariId = _cariId;
             }
-            _fisentity.Tipi=
+            if (txtHareketTipi.Text == "")
+            {
+                _fisentity.Tipi = (SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_VarsayilanHareketTipi));
+            }
+            else
+            {
+                _fisentity.Tipi=txtHareketTipi.Text;
+            }
+
             _fisentity.FisKodu = txtKod.Text;
             _fisentity.BelgeNo = txtBelgeNo.Text;
             _fisentity.Aciklama = txtAciklama.Text;
@@ -494,7 +503,7 @@ namespace NetSatis.FrontOffice
             _fisentity.Ilce = txtIlce.Text;
             _fisentity.Semt = txtSemt.Text;
             _fisentity.Adres = txtAdres.Text;
-            _fisentity.EMail=txtMail.Text;
+            _fisentity.EMail = txtMail.Text;
             _fisentity.VergiDairesi = txtVergiDairesi.Text;
             _fisentity.VergiNo = txtVergiNo.Text;
             _fisentity.KDVDahil = true;
@@ -601,7 +610,8 @@ namespace NetSatis.FrontOffice
             txtVergiDairesi.Text = null;
             txtVergiNo.Text = null;
             txtCepTel.Text = null;
-            txtMail.Text=null;
+            txtMail.Text = null;
+            txtHareketTipi.Text=null;
             txtIl.Text = null;
             txtIlce.Text = null;
             txtAdres.Text = null;
@@ -1109,7 +1119,7 @@ namespace NetSatis.FrontOffice
                     txtFaturaUnvani.Text = entity.FaturaUnvani;
                     txtVergiDairesi.Text = entity.VergiDairesi;
                     txtVergiNo.Text = entity.VergiNo;
-                    txtMail.Text=_fisentity.EMail;
+                    txtMail.Text = _fisentity.EMail;
                     txtCepTel.Text = entity.CepTelefonu;
                     txtIl.Text = entity.Il;
                     txtIlce.Text = entity.Ilce;
@@ -1151,7 +1161,7 @@ namespace NetSatis.FrontOffice
         }
         private void fisIslem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmFisIslem form = new frmFisIslem(null, e.Item.Caption,false,null,RoleTool.KullaniciEntity.Id);
+            frmFisIslem form = new frmFisIslem(null, e.Item.Caption, false, null, RoleTool.KullaniciEntity.Id);
             form.Show();
         }
         private void btnCariAc_Click(object sender, EventArgs e)
@@ -1169,7 +1179,7 @@ namespace NetSatis.FrontOffice
                 txtFaturaUnvani.Text = entity.FaturaUnvani;
                 txtVergiDairesi.Text = entity.VergiDairesi;
                 txtVergiNo.Text = entity.VergiNo;
-                txtMail.Text=_fisentity.EMail;
+                txtMail.Text = _fisentity.EMail;
                 txtCepTel.Text = entity.CepTelefonu;
                 txtIl.Text = entity.Il;
                 txtIlce.Text = entity.Ilce;
@@ -1277,7 +1287,7 @@ namespace NetSatis.FrontOffice
             txtVergiDairesi.Text = null;
             txtVergiNo.Text = null;
             txtCepTel.Text = null;
-            txtMail.Text=null;
+            txtMail.Text = null;
             txtIl.Text = null;
             txtIlce.Text = null;
             txtAdres.Text = null;
@@ -1599,7 +1609,7 @@ namespace NetSatis.FrontOffice
                 Tutar = Convert.ToDecimal(txtAraToplam.EditValue),
                 VadeTarihi = Convert.ToDateTime(DateTime.Now),
             };
-            
+
             if (txtHareketTipi.Text != "")
             {
                 m.HareketTipi = eislem.HareketIdGetir(txtHareketTipi.Text);
