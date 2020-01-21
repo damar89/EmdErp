@@ -201,7 +201,20 @@ namespace NetSatis.FrontOffice
                 pagei++;
                 page.Appearance.Header.BackColor = c;
 
-                var list = context.HizliSatislar.Where(m => m.GrupId == hizliSatisGrup.Id).ToList();
+                var list = context.HizliSatislar.Where(m => m.GrupId == hizliSatisGrup.Id).Join(
+                   context.Stoklar, hizli => hizli.StokKodu, stok => stok.StokKodu,
+                        (HizliSatislar, stoklar) =>
+               new
+               {
+                   HizliSatislar.StokKodu,
+                   HizliSatislar.Resim,
+                   HizliSatislar.UrunAdi,
+                   HizliSatislar.Id,
+                   HizliSatislar.GrupId,
+                   Fiyati = stoklar.SatisFiyati1,
+                   }).ToList();
+
+
 
                 panel.ColumnCount = list.Count >= 6 ? 6 : list.Count;
                 panel.RowCount = Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(list.Count / 6))) + 1;
@@ -221,8 +234,9 @@ namespace NetSatis.FrontOffice
                     {
                         Name = hizliSatis.StokKodu,
                         Text = hizliSatis.UrunAdi + Environment.NewLine + hizliSatis.Fiyati,
-               
-                        Appearance = { TextOptions = { WordWrap = WordWrap.Wrap },BackColor = c
+                        
+                        Appearance = { TextOptions = { WordWrap = WordWrap.Wrap },BackColor = c,
+                        FontSizeDelta = 3,FontStyleDelta = FontStyle.Bold
                             },
                         //Height = 70,
                         //Width = 70,
@@ -232,7 +246,7 @@ namespace NetSatis.FrontOffice
                     if (img != null)
                     {
                         Bitmap bitmapimg = ResizeImage(img, Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(xtraTabControl1.Width / panel.ColumnCount))) - 20
-                            , Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(xtraTabControl1.Height / panel.RowCount))) - 20);
+                            , Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(xtraTabControl1.Height / panel.RowCount))) - 40);
                         button.ImageOptions.Image = bitmapimg;
                         button.ImageOptions.ImageToTextAlignment = ImageAlignToText.TopCenter;
                     }
@@ -368,7 +382,6 @@ namespace NetSatis.FrontOffice
         }
         private void FisiKaydet(ReportsPrintTool.Belge belge)
         {
-            FaturaOlustur();
             HepsiniHesapla();
             OdenenTutarGuncelle();
             string message = null;
@@ -552,6 +565,8 @@ namespace NetSatis.FrontOffice
                 OdenenTutarGuncelle();
             }
             context.SaveChanges();
+            FaturaOlustur();
+
             btnOdemeBol.Checked = false;
             radialYazdir.HidePopup();
             switch (belge)

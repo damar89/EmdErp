@@ -1288,7 +1288,6 @@ namespace NetSatis.BackOffice.Fiş
                 return;
             }
 
-            FaturaOlustur();
             if (duzenle)
             {
                 if (_fisentity.Id > 0)
@@ -1614,6 +1613,10 @@ namespace NetSatis.BackOffice.Fiş
                 return;
             }
             context.SaveChanges();
+
+            FaturaOlustur();
+
+
 
             int oneortwo = 1;
 
