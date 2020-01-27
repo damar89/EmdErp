@@ -58,6 +58,7 @@ namespace NetSatis.Entities.Tables
         public string OzelKod2 { get; set; }
         public int SaveUser { get; set; }
         public int EditUser { get; set; }
+        public bool Durumu { get; set; }
 
 
     }

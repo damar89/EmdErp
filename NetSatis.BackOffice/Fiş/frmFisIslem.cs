@@ -52,7 +52,7 @@ namespace NetSatis.BackOffice.Fiş
         bool duzenle = false;
         int frontOfficeUserId = 0;
         public frmFisIslem(string fisKodu = null, string fisTuru = null, bool cariGetir = false,
-            Entities.Tables.Cari entity = null,int userId = 0)
+            Entities.Tables.Cari entity = null, int userId = 0)
         {
             InitializeComponent();
             frontOfficeUserId = userId;
@@ -287,8 +287,8 @@ namespace NetSatis.BackOffice.Fiş
             //    {
             if (ayarlar.SatisEkrani == false && txtFisTuru.Text != "Hakediş Fişi" && txtFisTuru.Text != "Masraf Fişi")
             {
-                
-                frmOdemeEkrani form = new frmOdemeEkrani(Convert.ToInt32(buton.Tag),null,frontOfficeUserId);
+
+                frmOdemeEkrani form = new frmOdemeEkrani(Convert.ToInt32(buton.Tag), null, frontOfficeUserId);
                 form.ShowDialog();
                 if (form.entity != null)
                 {
@@ -885,7 +885,18 @@ namespace NetSatis.BackOffice.Fiş
                 depoid = 1;
             }
             stokHareket.DepoId = depoid;
-            stokHareket.BirimFiyati = txtFisTuru.Text == "Alış Faturası" || txtFisTuru.Text == "Alış İade Faturası" || txtFisTuru.Text == "Alış İrsaliyesi" || txtFisTuru.Text == "Verilen Sipariş Fişi" || txtFisTuru.Text == "Alınan Teklif Fişi" || txtFisTuru.Text == "Stok Devir Fişi" || txtFisTuru.Text == "Sayım Fazlası Fişi" || txtFisTuru.Text == "Sayım Eksiği Fişi" || txtFisTuru.Text == "Sayım Giriş Fişi" ? entity.AlisFiyati1 : entity.SatisFiyati1;
+
+            if (toggleToptanSatis.IsOn)
+            {
+                stokHareket.BirimFiyati = entity.SatisFiyati4;
+            }
+            else
+            {
+                stokHareket.BirimFiyati = txtFisTuru.Text == "Alış Faturası" || txtFisTuru.Text == "Alış İade Faturası" || txtFisTuru.Text == "Alış İrsaliyesi" || txtFisTuru.Text == "Verilen Sipariş Fişi" || txtFisTuru.Text == "Alınan Teklif Fişi" || txtFisTuru.Text == "Stok Devir Fişi" || txtFisTuru.Text == "Sayım Fazlası Fişi" || txtFisTuru.Text == "Sayım Eksiği Fişi" || txtFisTuru.Text == "Sayım Giriş Fişi" ? entity.AlisFiyati1 : entity.SatisFiyati1;
+            }
+
+
+
             stokHareket.Mera = txtFisTuru.Text == "Toptan Satış Faturası" && entity.Mera != null ? entity.Mera : 0;
             stokHareket.Borsa = txtFisTuru.Text == "Toptan Satış Faturası" && entity.Borsa != null ? entity.Borsa : 0;
             stokHareket.Bagkur = txtFisTuru.Text == "Toptan Satış Faturası" && entity.Bagkur != null ? entity.Bagkur : 0;
@@ -2790,7 +2801,7 @@ namespace NetSatis.BackOffice.Fiş
             NetSatis.EDonusum.Models.Donusum.Master m = new EDonusum.Models.Donusum.Master
             {
                 Aciklama = txtAciklama.Text,
-                AlisVerisNo=_fisentity.Id,             
+                AlisVerisNo = _fisentity.Id,
                 DokumanKodu = "",
                 EditDate = DateTime.Now,
                 EditUser = frmAnaMenu.UserId,
@@ -2809,7 +2820,7 @@ namespace NetSatis.BackOffice.Fiş
                 SiraKodu = txtSira.Text,
                 Tutar = Convert.ToDecimal(calcAraToplam.Value),
                 VadeTarihi = Convert.ToDateTime(cmbVadeTarihi.Text),
-                DipIskonto=Convert.ToDecimal(_fisentity.DipIskNetTutari)
+                DipIskonto = Convert.ToDecimal(_fisentity.DipIskNetTutari)
             };
             DetailsDuzenle(eislem.MasterOlustur(m), HarTipi);
         }
@@ -2827,8 +2838,9 @@ namespace NetSatis.BackOffice.Fiş
                     Isk1 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani").ToString()),
                     Isk2 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani2").ToString()),
                     Isk3 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani3").ToString()),
+                    IskontoTutar=Convert.ToDecimal(calcIndirimToplami.Value.ToString()),
                     Kdv = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString()),
-                    KdvOrani=Convert.ToDecimal(gridStokHareket.GetRowCellValue(i,"Kdv").ToString()),
+                    KdvOrani = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Kdv").ToString()),
                     KdvDahilFiyat = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar".ToString())),
                     MasterId = id,
                     Matrah = fyt2 - fyt,
@@ -2910,6 +2922,15 @@ namespace NetSatis.BackOffice.Fiş
         private void calcIndirimTutari_Enter(object sender, EventArgs e)
         {
             this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
+        }
+
+        private void exceleAktarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+             SaveFileDialog save = new SaveFileDialog();
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                gridStokHareket.ExportToXlsx(save.FileName + ".xlsx");
+            }
         }
     }
 }

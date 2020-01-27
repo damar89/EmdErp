@@ -101,6 +101,7 @@
             this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl36 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl28 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
@@ -617,6 +618,7 @@
             this.navigationPage2.Controls.Add(this.labelControl37);
             this.navigationPage2.Controls.Add(this.labelControl36);
             this.navigationPage2.Controls.Add(this.labelControl28);
+            this.navigationPage2.Controls.Add(this.labelControl15);
             this.navigationPage2.Controls.Add(this.labelControl2);
             this.navigationPage2.Controls.Add(this.labelControl3);
             this.navigationPage2.Controls.Add(this.labelControl23);
@@ -627,9 +629,9 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(440, 109);
+            this.comboBox1.Location = new System.Drawing.Point(173, 136);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(80, 21);
             this.comboBox1.TabIndex = 19;
             // 
             // cmbTipi
@@ -739,7 +741,7 @@
             // 
             // toggTerazi
             // 
-            this.toggTerazi.Location = new System.Drawing.Point(173, 109);
+            this.toggTerazi.Location = new System.Drawing.Point(176, 114);
             this.toggTerazi.Name = "toggTerazi";
             this.toggTerazi.Properties.OffText = "Hayır";
             this.toggTerazi.Properties.OnText = "Evet";
@@ -823,12 +825,13 @@
             // 
             // cmbFaturaYazici
             // 
-            this.cmbFaturaYazici.Location = new System.Drawing.Point(174, 162);
+            this.cmbFaturaYazici.Location = new System.Drawing.Point(711, 62);
             this.cmbFaturaYazici.Name = "cmbFaturaYazici";
             this.cmbFaturaYazici.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbFaturaYazici.Size = new System.Drawing.Size(388, 20);
+            this.cmbFaturaYazici.Size = new System.Drawing.Size(49, 20);
             this.cmbFaturaYazici.TabIndex = 5;
+            this.cmbFaturaYazici.Visible = false;
             // 
             // labelControl16
             // 
@@ -974,7 +977,7 @@
             // 
             // comboBoxEdit1
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(174, 135);
+            this.comboBoxEdit1.Location = new System.Drawing.Point(173, 163);
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1021,11 +1024,12 @@
             this.labelControl5.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl5.Location = new System.Drawing.Point(5, 160);
+            this.labelControl5.Location = new System.Drawing.Point(725, 90);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(163, 21);
+            this.labelControl5.Size = new System.Drawing.Size(35, 21);
             this.labelControl5.TabIndex = 1;
             this.labelControl5.Text = "Fatura Yazıcısı Seç :";
+            this.labelControl5.Visible = false;
             // 
             // labelControl39
             // 
@@ -1097,6 +1101,20 @@
             this.labelControl28.TabIndex = 1;
             this.labelControl28.Text = "Bilgi Fişi Yazdırılsın mı Sor :";
             // 
+            // labelControl15
+            // 
+            this.labelControl15.Appearance.BorderColor = System.Drawing.Color.Silver;
+            this.labelControl15.Appearance.Options.UseBorderColor = true;
+            this.labelControl15.Appearance.Options.UseTextOptions = true;
+            this.labelControl15.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl15.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl15.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl15.Location = new System.Drawing.Point(92, 137);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(75, 21);
+            this.labelControl15.TabIndex = 1;
+            this.labelControl15.Text = "Terazi Port :";
+            // 
             // labelControl2
             // 
             this.labelControl2.Appearance.BorderColor = System.Drawing.Color.Silver;
@@ -1105,7 +1123,7 @@
             this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl2.Location = new System.Drawing.Point(3, 109);
+            this.labelControl2.Location = new System.Drawing.Point(6, 114);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(163, 21);
             this.labelControl2.TabIndex = 1;
@@ -1119,7 +1137,7 @@
             this.labelControl3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl3.Location = new System.Drawing.Point(5, 133);
+            this.labelControl3.Location = new System.Drawing.Point(4, 161);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(163, 21);
             this.labelControl3.TabIndex = 1;
@@ -1519,5 +1537,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.IO.Ports.SerialPort serialPort1;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
     }
 }

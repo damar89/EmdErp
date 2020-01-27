@@ -50,6 +50,7 @@
             this.barStokDevirFisi = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem6 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnFaturalandır = new DevExpress.XtraBars.BarButtonItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -91,8 +92,8 @@
             this.colAciklama = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKDVDahil = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.btnFaturalandır = new DevExpress.XtraBars.BarButtonItem();
             this.colFaturaNo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnYazdır = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -140,7 +141,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem3),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem2),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem6),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnFaturalandır)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnFaturalandır),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnYazdır)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
@@ -295,6 +297,13 @@
             this.barButtonItem6.Id = 24;
             this.barButtonItem6.Name = "barButtonItem6";
             // 
+            // btnFaturalandır
+            // 
+            this.btnFaturalandır.Caption = "Teklifi Faturalandır";
+            this.btnFaturalandır.Id = 25;
+            this.btnFaturalandır.Name = "btnFaturalandır";
+            this.btnFaturalandır.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFaturalandır_ItemClick);
+            // 
             // barManager1
             // 
             this.barManager1.DockControls.Add(this.barDockControlTop);
@@ -326,8 +335,9 @@
             this.barButtonItem5,
             this.barSubItem6,
             this.barButtonItem6,
-            this.btnFaturalandır});
-            this.barManager1.MaxItemId = 26;
+            this.btnFaturalandır,
+            this.btnYazdır});
+            this.barManager1.MaxItemId = 27;
             // 
             // barDockControlTop
             // 
@@ -751,13 +761,6 @@
             this.rpsChkKdvDahil.AutoHeight = false;
             this.rpsChkKdvDahil.Name = "rpsChkKdvDahil";
             // 
-            // btnFaturalandır
-            // 
-            this.btnFaturalandır.Caption = "Teklifi Faturalandır";
-            this.btnFaturalandır.Id = 25;
-            this.btnFaturalandır.Name = "btnFaturalandır";
-            this.btnFaturalandır.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFaturalandır_ItemClick);
-            // 
             // colFaturaNo
             // 
             this.colFaturaNo.Caption = "FaturaNo";
@@ -766,6 +769,13 @@
             this.colFaturaNo.OptionsColumn.AllowEdit = false;
             this.colFaturaNo.Visible = true;
             this.colFaturaNo.VisibleIndex = 13;
+            // 
+            // btnYazdır
+            // 
+            this.btnYazdır.Caption = "Teklifi Yazdır";
+            this.btnYazdır.Id = 26;
+            this.btnYazdır.Name = "btnYazdır";
+            this.btnYazdır.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnYazdır_ItemClick);
             // 
             // frmVerilenTeklif
             // 
@@ -862,5 +872,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem btnFaturalandır;
         private DevExpress.XtraGrid.Columns.GridColumn colFaturaNo;
+        private DevExpress.XtraBars.BarButtonItem btnYazdır;
     }
 }

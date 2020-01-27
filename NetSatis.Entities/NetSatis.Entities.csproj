@@ -125,6 +125,8 @@
     <Compile Include="Data Access\BarkodEtiketDAL.cs" />
     <Compile Include="Data Access\CariDAL.cs" />
     <Compile Include="Data Access\DepoDAL.cs" />
+    <Compile Include="Data Access\EkullaniciBilgileriDAL.cs" />
+    <Compile Include="Data Access\FirmaSabitDAL.cs" />
     <Compile Include="Data Access\FisDAL.cs" />
     <Compile Include="Data Access\HizliSatisDAL.cs" />
     <Compile Include="Data Access\HizliSatisGrupDAL.cs" />
@@ -150,6 +152,8 @@
     <Compile Include="Mapping\ApiMap.cs" />
     <Compile Include="Mapping\BarkodEtiketMap.cs" />
     <Compile Include="Mapping\AyarMap.cs" />
+    <Compile Include="Mapping\eKullaniciBilgileriMap.cs" />
+    <Compile Include="Mapping\FirmaSabitMap.cs" />
     <Compile Include="Mapping\KategoriMap.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -161,6 +165,7 @@
     <Compile Include="Tables\Api.cs" />
     <Compile Include="Tables\BarkodEtiket.cs" />
     <Compile Include="Tables\Donusum.cs" />
+    <Compile Include="Tables\eKullaniciBilgileri.cs" />
     <Compile Include="Tables\FaturaDataModel.cs" />
     <Compile Include="Interface\IEntity.cs" />
     <Compile Include="Interface\IEntityRepository.cs" />
@@ -196,6 +201,7 @@
     <Compile Include="Tables\Cari.cs" />
     <Compile Include="Tables\EFAppointment.cs" />
     <Compile Include="Tables\EFResource.cs" />
+    <Compile Include="Tables\FirmaSabitleri.cs" />
     <Compile Include="Tables\FisKooperatif.cs" />
     <Compile Include="Tables\FisKooperatifKalemler.cs" />
     <Compile Include="Tables\HizliSatis.cs" />
@@ -242,6 +248,8 @@
     <Compile Include="Validations\BarkodValidator.cs" />
     <Compile Include="Validations\CariValidator.cs" />
     <Compile Include="Validations\DepoValidator.cs" />
+    <Compile Include="Validations\eKullaniciBilgileriValidator.cs" />
+    <Compile Include="Validations\FirmaSabitValidator.cs" />
     <Compile Include="Validations\FisValidator.cs" />
     <Compile Include="Validations\HizliSatisGrupValidator.cs" />
     <Compile Include="Validations\HizliSatisValidator.cs" />

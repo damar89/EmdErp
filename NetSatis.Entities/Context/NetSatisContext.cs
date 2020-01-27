@@ -47,6 +47,8 @@ namespace NetSatis.Entities.Context
         public DbSet<AnaGrup> AnaGruplar { get; set; }
         public DbSet<AltGrup> AltGruplar { get; set; }
         public DbSet<Ayar> Ayarlar { get; set; }
+        public DbSet<FirmaSabitleri> FirmaSabitleri { get; set; }
+        public DbSet<eKullaniciBilgileri> EKullaniciBilgileri { get; set; }
         public DbSet<Api> Api { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -77,6 +79,8 @@ namespace NetSatis.Entities.Context
             modelBuilder.Configurations.Add(new KategoriMap());
             modelBuilder.Configurations.Add(new AnaGrupMap());
             modelBuilder.Configurations.Add(new AltGrupMap());
+            modelBuilder.Configurations.Add(new FirmaSabitMap());
+            modelBuilder.Configurations.Add(new eKullaniciBilgileriMap());
 
         }
 

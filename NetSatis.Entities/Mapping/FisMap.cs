@@ -99,10 +99,11 @@ namespace NetSatis.Entities.Mapping
             this.Property(p => p.ProjeAdi).HasColumnName("ProjeAdi");
             this.Property(p => p.OzelKod).HasColumnName("OzelKod");
             this.Property(p => p.OzelKod2).HasColumnName("OzelKod2");
-              this.Property(p => p.SaveUser).HasColumnName("SaveUser");
+            this.Property(p => p.SaveUser).HasColumnName("SaveUser");
             this.Property(p => p.EditUser).HasColumnName("EditUser");
             this.HasOptional(c => c.Cari).WithMany(c => c.Fis).HasForeignKey(c => c.CariId);
             this.HasOptional(c => c.Personel).WithMany(c => c.Fis).HasForeignKey(c => c.PlasiyerId);
+            this.Property(p => p.Durumu).HasColumnName("Durumu");
 
 
         }

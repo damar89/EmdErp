@@ -58,10 +58,19 @@ namespace NetSatis.EDonusum.Models
             public decimal KdvOrani { get; set; }
             public decimal KdvDahilFiyat { get; set; }
             public decimal Matrah { get; set; }
+            public decimal IskontoTutar { get; set; }
             public decimal Isk1 { get; set; }
             public decimal Isk2 { get; set; }
             public decimal Isk3 { get; set; }
             public int HareketTipi { get; set; }
+        }
+        public class MasterView
+        {
+            public string Username { get; set; }
+            public string Password { get; set; }
+            public string VergiNumarasi { get; set; }
+            public string MusteriAdi { get; set; }
+            public Master master {get;set;}
         }
     }
 }

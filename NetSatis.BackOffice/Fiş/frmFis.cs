@@ -75,6 +75,7 @@ namespace NetSatis.BackOffice.Fiş
                             fisDal.Delete(context, c => c.FisKodu == secilen);
                             kasaHareketDal.Delete(context, c => c.FisKodu == secilen);
                             stokHareketDal.Delete(context, c => c.FisKodu == secilen);
+
                             fisDal.Save(context);
                             Listele();
                             MessageBox.Show("Fiş başarıyla silindi.");

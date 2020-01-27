@@ -31,6 +31,7 @@ using NetSatis.BackOffice.Döviz_Kurları;
 using System.Collections.Generic;
 using System.Linq;
 using DevExpress.XtraTreeList;
+using NetSatis.BackOffice.Tanım;
 
 namespace NetSatis.BackOffice
 {
@@ -139,7 +140,7 @@ namespace NetSatis.BackOffice
         }
         private void StokTransfer_Click(string e)
         {
-           frmFisTransfer frm=new frmFisTransfer(null,e);
+            frmFisTransfer frm = new frmFisTransfer(null, e);
             frm.Show();
         }
 
@@ -1100,6 +1101,26 @@ namespace NetSatis.BackOffice
         {
             frmBs frm = new frmBs();
             frm.Show();
+        }
+
+        private void barButtonItem56_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FirmaSabitleri frm = new FirmaSabitleri();
+            frm.Show();
+        }
+
+        private void barButtonItem57_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmEkullanici frm = new frmEkullanici();
+            frm.Show();
+
+        }
+
+        private void barButtonItem58_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmFaturaGonder frm = new frmFaturaGonder();
+            frm.Show();
+
         }
     }
 }

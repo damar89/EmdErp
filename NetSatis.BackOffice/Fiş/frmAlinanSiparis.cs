@@ -5,6 +5,7 @@ using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
 using NetSatis.Entities.Tools;
+using NetSatis.Reports.Fatura_ve_Fiş;
 
 namespace NetSatis.BackOffice.Fiş
 {
@@ -255,6 +256,18 @@ namespace NetSatis.BackOffice.Fiş
             {
                 var p2 = MousePosition; popupMenu1.ShowPopup(p2);
             }
+        }
+
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnYazdir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+                string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
+            FaturaHazirla f = new FaturaHazirla();
+            f.SiparisHazirlama(secilen);
         }
     }
 

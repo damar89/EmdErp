@@ -1609,7 +1609,7 @@ namespace NetSatis.FrontOffice
                 EditUser = frmAnaMenu.UserId,
                 FisKodu = txtKod.Text,
                 FisTuru = _fisentity.FisTuru = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 ? "Perakende Satış İrsaliyesi" : "Perakende Satış Faturası",
-                HareketTipi = eislem.HareketIdGetir(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_VarsayilanHareketTipi)),
+                HareketTipi = 2,
                 HarTip = HarTipi,
                 IslemTarihi = Convert.ToDateTime(DateTime.Now),
                 Kdv = Convert.ToDecimal(calcKdvToplam.Value),

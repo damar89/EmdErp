@@ -346,6 +346,12 @@
     <Compile Include="Fiş\frmDetayHareket.Designer.cs">
       <DependentUpon>frmDetayHareket.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fiş\frmFaturaGonder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiş\frmFaturaGonder.Designer.cs">
+      <DependentUpon>frmFaturaGonder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fiş\frmFis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -821,6 +827,18 @@
     <Compile Include="Stok\rptBarkodRaf.Designer.cs">
       <DependentUpon>rptBarkodRaf.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tanım\FirmaSabitIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanım\FirmaSabitIslem.Designer.cs">
+      <DependentUpon>FirmaSabitIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tanım\FirmaSabitleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanım\FirmaSabitleri.Designer.cs">
+      <DependentUpon>FirmaSabitleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tanım\frmAltGrup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -844,6 +862,18 @@
     </Compile>
     <Compile Include="Tanım\frmAnaGruplar.Designer.cs">
       <DependentUpon>frmAnaGruplar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tanım\frmEkullanici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanım\frmEkullanici.Designer.cs">
+      <DependentUpon>frmEkullanici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tanım\frmEkullaniciIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanım\frmEkullaniciIslem.Designer.cs">
+      <DependentUpon>frmEkullaniciIslem.cs</DependentUpon>
     </Compile>
     <Compile Include="Tanım\frmKategori.cs">
       <SubType>Form</SubType>
@@ -985,6 +1015,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fiş\frmDetayHareket.resx">
       <DependentUpon>frmDetayHareket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fiş\frmFaturaGonder.resx">
+      <DependentUpon>frmFaturaGonder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fiş\frmFis.resx">
       <DependentUpon>frmFis.cs</DependentUpon>
@@ -1226,6 +1259,12 @@
     <EmbeddedResource Include="Stok\rptBarkodRaf.resx">
       <DependentUpon>rptBarkodRaf.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tanım\FirmaSabitIslem.resx">
+      <DependentUpon>FirmaSabitIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tanım\FirmaSabitleri.resx">
+      <DependentUpon>FirmaSabitleri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tanım\frmAltGrup.resx">
       <DependentUpon>frmAltGrup.cs</DependentUpon>
     </EmbeddedResource>
@@ -1237,6 +1276,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tanım\frmAnaGruplar.resx">
       <DependentUpon>frmAnaGruplar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tanım\frmEkullanici.resx">
+      <DependentUpon>frmEkullanici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tanım\frmEkullaniciIslem.resx">
+      <DependentUpon>frmEkullaniciIslem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tanım\frmKategori.resx">
       <DependentUpon>frmKategori.cs</DependentUpon>

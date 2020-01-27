@@ -58,7 +58,10 @@
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="INIFileParser">
-      <HintPath>..\NetSatis.Entities\bin\Debug\INIFileParser.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Emd Yazılım\Emd Soft\INIFileParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ionic.Zip.1.9.1.8\lib\Ionic.Zip.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Private>True</Private>
@@ -72,6 +75,9 @@
     <Reference Include="System.Drawing">
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Windows.Forms">
       <Private>True</Private>
     </Reference>
@@ -95,11 +101,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\FitEFatura\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\FitServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Controller\EDonusumIslemleri.cs" />
+    <Compile Include="Controller\EFaturaGonderController.cs" />
+    <Compile Include="Controller\FaturaGonderController.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Donusum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingsTool.cs" />
+    <Compile Include="UBL-Invoice.cs" />
     <Compile Include="VTContext.cs" />
     <Compile Include="WebServices\ArchiveWebService.cs" />
   </ItemGroup>
@@ -108,10 +127,238 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Connected Services\FitEFatura\EArchiveInvoiceService.wsdl" />
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.approveReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.approveReportResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.cancelInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.detailedInvoiceQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.detailedInvoiceQueryResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.generateInvIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.getInvoiceDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.getInvoiceDocumentResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.getReportDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.getReportDataResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.getReportDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.getReportDetailResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.getReportListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.getReportListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.getReportStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.getReportStatusResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.getSignedInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.getSignedInvoiceResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.getStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.getStatusResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.getUserListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.getUserListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.invIdGenerationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.invoiceCancellationServiceResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.reconciliationCheckResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.reconciliationServiceResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.retriggerOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.retriggerServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.sendEnvelopeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.sendInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.sendInvoiceResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.sendReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitEFatura\NetSatis.EDonusum.FitEFatura.sendReportResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\EArchiveInvoiceService.wsdl" />
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.approveReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.approveReportResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.cancelInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.detailedInvoiceQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.detailedInvoiceQueryResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.generateInvIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.getInvoiceDocumentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.getInvoiceDocumentResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.getReportDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.getReportDataResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.getReportDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.getReportDetailResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.getReportListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.getReportListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.getReportStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.getReportStatusResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.getSignedInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.getSignedInvoiceResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.getStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.getStatusResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.getUserListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.getUserListResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.invIdGenerationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.invoiceCancellationServiceResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.reconciliationCheckResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.reconciliationServiceResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.retriggerOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.retriggerServiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.sendEnvelopeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.sendInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.sendInvoiceResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.sendReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FitServices\NetSatis.EDonusum.FitServices.sendReportResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\FitEFatura\" />
+    <WCFMetadataStorage Include="Connected Services\FitServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\FitEFatura\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\FitEFatura\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\FitEFatura\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\FitServices\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\FitServices\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\FitServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -82,7 +82,7 @@ namespace NetSatis.BackOffice.Ayarlar
             cmbBilgiFisi.SelectedIndex =
                 Convert.ToInt32(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_BilgiFisiYazidirmaAyari));
 
-            comboBox1.Text = 
+            comboBox1.Text =
                 Convert.ToString(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_TeraziPort));
 
             cmbTahsilat.SelectedIndex =
@@ -98,6 +98,7 @@ namespace NetSatis.BackOffice.Ayarlar
             txtFirmaAdi.Text = SettingsTool.AyarOku(SettingsTool.Ayarlar.FirmaAyarlari_FirmaAdi);
 
             toggleGuncelle.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.GenelAyarlar_GuncellemeKontrolu));
+            //toggleToptanSatis.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_ToptanFiyat));
 
             toggleBilgiFisiYazdirilsinmi.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.BilgiFisi_BilgiFisiYazdirilsinmi));
             toggTerazi.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_Terazi));
@@ -198,6 +199,7 @@ namespace NetSatis.BackOffice.Ayarlar
                 SettingsTool.AyarDegistir(SettingsTool.Ayarlar.Irsaliye_Olussunmu, toggIrsaliye.IsOn.ToString());
                 SettingsTool.AyarDegistir(SettingsTool.Ayarlar.Irsaliye_CariEtkilesin, togCariEtkilesinmi.IsOn.ToString());
                 SettingsTool.AyarDegistir(SettingsTool.Ayarlar.Irsaliye_StoguEtkilesin, togStoguEtkilesinmi.IsOn.ToString());
+                //SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisAyarlari_ToptanFiyat, toggleToptanSatis.IsOn.ToString());
 
 
 

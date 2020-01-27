@@ -13,6 +13,7 @@ using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
 using NetSatis.Entities.Tools;
+using NetSatis.Reports.Fatura_ve_Fiş;
 
 namespace NetSatis.BackOffice.Fiş
 {
@@ -252,6 +253,13 @@ namespace NetSatis.BackOffice.Fiş
         private void btnFaturalandır_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             SiparisdenFaturaOlustur();
+        }
+
+        private void btnYazdır_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+                string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
+            FaturaHazirla f = new FaturaHazirla();
+            f.TeklifHazirlama(secilen);
         }
     }
 }

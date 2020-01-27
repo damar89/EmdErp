@@ -270,6 +270,8 @@
             this.navPlasiyerBilgi = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.flowPersonel = new System.Windows.Forms.FlowLayoutPanel();
             this.navFisBilgi = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.toggleToptanSatis = new DevExpress.XtraEditors.ToggleSwitch();
+            this.labelControl41 = new DevExpress.XtraEditors.LabelControl();
             this.cmbTipi = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblmuhtahsil = new DevExpress.XtraEditors.LabelControl();
             this.cariBilgi = new DevExpress.XtraEditors.GroupControl();
@@ -390,6 +392,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).BeginInit();
             this.navPlasiyerBilgi.SuspendLayout();
             this.navFisBilgi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleToptanSatis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTipi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cariBilgi)).BeginInit();
             this.cariBilgi.SuspendLayout();
@@ -1589,7 +1592,7 @@
             this.yazdırToolStripMenuItem,
             this.exceleAktarToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 114);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 136);
             this.contextMenuStrip1.Text = "Excel Fatura İşle";
             // 
             // excelFaturaİşleToolStripMenuItem
@@ -1634,7 +1637,7 @@
             // 
             this.faturaYazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
             this.faturaYazdırToolStripMenuItem.Name = "faturaYazdırToolStripMenuItem";
-            this.faturaYazdırToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.faturaYazdırToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.faturaYazdırToolStripMenuItem.Text = "Fatura Yazdır";
             this.faturaYazdırToolStripMenuItem.Click += new System.EventHandler(this.faturaYazdırToolStripMenuItem_Click);
             // 
@@ -1642,7 +1645,7 @@
             // 
             this.proformaFaturaYazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
             this.proformaFaturaYazdırToolStripMenuItem.Name = "proformaFaturaYazdırToolStripMenuItem";
-            this.proformaFaturaYazdırToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.proformaFaturaYazdırToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.proformaFaturaYazdırToolStripMenuItem.Text = "Proforma Fatura Yazdır";
             this.proformaFaturaYazdırToolStripMenuItem.Click += new System.EventHandler(this.proformaFaturaYazdırToolStripMenuItem_Click);
             // 
@@ -1650,7 +1653,7 @@
             // 
             this.siparişYazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
             this.siparişYazdırToolStripMenuItem.Name = "siparişYazdırToolStripMenuItem";
-            this.siparişYazdırToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.siparişYazdırToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.siparişYazdırToolStripMenuItem.Text = "Sipariş Yazdır";
             this.siparişYazdırToolStripMenuItem.Click += new System.EventHandler(this.siparişYazdırToolStripMenuItem_Click);
             // 
@@ -1658,7 +1661,7 @@
             // 
             this.teklifYazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
             this.teklifYazdırToolStripMenuItem.Name = "teklifYazdırToolStripMenuItem";
-            this.teklifYazdırToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.teklifYazdırToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.teklifYazdırToolStripMenuItem.Text = "Teklif Yazdır";
             this.teklifYazdırToolStripMenuItem.Click += new System.EventHandler(this.teklifYazdırToolStripMenuItem_Click);
             // 
@@ -1666,7 +1669,7 @@
             // 
             this.irsaliyeYazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
             this.irsaliyeYazdırToolStripMenuItem.Name = "irsaliyeYazdırToolStripMenuItem";
-            this.irsaliyeYazdırToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.irsaliyeYazdırToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.irsaliyeYazdırToolStripMenuItem.Text = "İrsaliye Yazdır";
             this.irsaliyeYazdırToolStripMenuItem.Click += new System.EventHandler(this.irsaliyeYazdırToolStripMenuItem_Click);
             // 
@@ -1674,7 +1677,7 @@
             // 
             this.bilgiFişiYazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
             this.bilgiFişiYazdırToolStripMenuItem.Name = "bilgiFişiYazdırToolStripMenuItem";
-            this.bilgiFişiYazdırToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.bilgiFişiYazdırToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.bilgiFişiYazdırToolStripMenuItem.Text = "Bilgi Fişi Yazdır";
             this.bilgiFişiYazdırToolStripMenuItem.Click += new System.EventHandler(this.bilgiFişiYazdırToolStripMenuItem_Click);
             // 
@@ -1684,6 +1687,7 @@
             this.exceleAktarToolStripMenuItem.Name = "exceleAktarToolStripMenuItem";
             this.exceleAktarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exceleAktarToolStripMenuItem.Text = "Excele Aktar";
+            this.exceleAktarToolStripMenuItem.Click += new System.EventHandler(this.exceleAktarToolStripMenuItem_Click);
             // 
             // gridStokHareket
             // 
@@ -2681,6 +2685,8 @@
             // navFisBilgi
             // 
             this.navFisBilgi.Caption = "Fiş Bilgileri";
+            this.navFisBilgi.Controls.Add(this.toggleToptanSatis);
+            this.navFisBilgi.Controls.Add(this.labelControl41);
             this.navFisBilgi.Controls.Add(this.cmbTipi);
             this.navFisBilgi.Controls.Add(this.lblmuhtahsil);
             this.navFisBilgi.Controls.Add(this.cariBilgi);
@@ -2710,14 +2716,37 @@
             this.navFisBilgi.Properties.ShowExpandButton = DevExpress.Utils.DefaultBoolean.False;
             this.navFisBilgi.Size = new System.Drawing.Size(1190, 166);
             // 
+            // toggleToptanSatis
+            // 
+            this.toggleToptanSatis.Location = new System.Drawing.Point(390, 63);
+            this.toggleToptanSatis.Name = "toggleToptanSatis";
+            this.toggleToptanSatis.Properties.OffText = "Hayır";
+            this.toggleToptanSatis.Properties.OnText = "Evet";
+            this.toggleToptanSatis.Size = new System.Drawing.Size(174, 24);
+            this.toggleToptanSatis.TabIndex = 40;
+            // 
+            // labelControl41
+            // 
+            this.labelControl41.Appearance.BorderColor = System.Drawing.Color.Silver;
+            this.labelControl41.Appearance.Options.UseBorderColor = true;
+            this.labelControl41.Appearance.Options.UseTextOptions = true;
+            this.labelControl41.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl41.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl41.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl41.Location = new System.Drawing.Point(274, 65);
+            this.labelControl41.Name = "labelControl41";
+            this.labelControl41.Size = new System.Drawing.Size(105, 21);
+            this.labelControl41.TabIndex = 39;
+            this.labelControl41.Text = "Toptan Fiyat Getir :";
+            // 
             // cmbTipi
             // 
-            this.cmbTipi.Location = new System.Drawing.Point(355, 39);
+            this.cmbTipi.Location = new System.Drawing.Point(390, 39);
             this.cmbTipi.MenuManager = this.barManager1;
             this.cmbTipi.Name = "cmbTipi";
             this.cmbTipi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbTipi.Size = new System.Drawing.Size(204, 20);
+            this.cmbTipi.Size = new System.Drawing.Size(174, 20);
             this.cmbTipi.TabIndex = 2;
             // 
             // lblmuhtahsil
@@ -3015,7 +3044,7 @@
             this.cmbVadeTarihi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cmbVadeTarihi.EditValue = null;
-            this.cmbVadeTarihi.Location = new System.Drawing.Point(355, 88);
+            this.cmbVadeTarihi.Location = new System.Drawing.Point(390, 88);
             this.cmbVadeTarihi.Name = "cmbVadeTarihi";
             this.cmbVadeTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
@@ -3033,7 +3062,7 @@
             this.cmbVadeTarihi.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.cmbVadeTarihi.Properties.MinValue = new System.DateTime(2018, 4, 27, 16, 34, 6, 0);
             this.cmbVadeTarihi.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.cmbVadeTarihi.Size = new System.Drawing.Size(204, 20);
+            this.cmbVadeTarihi.Size = new System.Drawing.Size(169, 20);
             this.cmbVadeTarihi.TabIndex = 5;
             this.cmbVadeTarihi.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.cmbVadeTarihi_ButtonClick);
             this.cmbVadeTarihi.EditValueChanged += new System.EventHandler(this.dateEdit1_EditValueChanged);
@@ -3204,7 +3233,7 @@
             this.labelControl8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl8.Location = new System.Drawing.Point(278, 41);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(71, 20);
+            this.labelControl8.Size = new System.Drawing.Size(101, 20);
             this.labelControl8.TabIndex = 25;
             this.labelControl8.Text = "Hareket Tipi :";
             // 
@@ -3230,7 +3259,7 @@
             this.labelControl38.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl38.Location = new System.Drawing.Point(278, 84);
             this.labelControl38.Name = "labelControl38";
-            this.labelControl38.Size = new System.Drawing.Size(71, 29);
+            this.labelControl38.Size = new System.Drawing.Size(101, 29);
             this.labelControl38.TabIndex = 26;
             this.labelControl38.Text = "Vade Tarihi :";
             this.labelControl38.Click += new System.EventHandler(this.labelControl38_Click);
@@ -3403,6 +3432,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).EndInit();
             this.navPlasiyerBilgi.ResumeLayout(false);
             this.navFisBilgi.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.toggleToptanSatis.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTipi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cariBilgi)).EndInit();
             this.cariBilgi.ResumeLayout(false);
@@ -3663,5 +3693,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private System.Windows.Forms.ToolStripMenuItem exceleAktarToolStripMenuItem;
         private DevExpress.XtraBars.BarButtonItem barFiyat4;
+        private DevExpress.XtraEditors.ToggleSwitch toggleToptanSatis;
+        private DevExpress.XtraEditors.LabelControl labelControl41;
     }
 }
