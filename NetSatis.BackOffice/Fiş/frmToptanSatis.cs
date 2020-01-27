@@ -62,6 +62,7 @@ namespace NetSatis.BackOffice.Fiş
                 {
                     if (MessageBox.Show("Seçili Olan Veriyi Silmek İstediğinize Emin Misiniz ?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
+                        int id = Convert.ToInt32(gridFisler.GetFocusedRowCellValue(colId).ToString());
                         string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
                         string fisTuru = gridFisler.GetFocusedRowCellValue(colFisTuru).ToString();
                         string faturaFisKodu = context.Fisler.FirstOrDefault(x => x.FisKodu == secilen).FaturaFisKodu;
@@ -92,6 +93,8 @@ namespace NetSatis.BackOffice.Fiş
                             kasaHareketDal.Delete(context, c => c.FisKodu == secilen);
                             stokHareketDal.Delete(context, c => c.FisKodu == secilen);
                             fisDal.Save(context);
+                            NetSatis.EDonusum.Controller.EDonusumIslemleri eislem = new EDonusum.Controller.EDonusumIslemleri();
+                            eislem.MasterSil(id);
                             Listele();
                             MessageBox.Show("Fiş başarıyla silindi.");
                         }
