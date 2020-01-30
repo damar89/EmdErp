@@ -547,6 +547,7 @@ namespace NetSatis.BackOffice.Stok
         }
         private void bindingSource()
         {
+            //context.Barkodlar.Local.Clear();
             context.Barkodlar.Where(c => c.StokId == _entity.Id).Load();
             togDurum.DataBindings.Clear();
             togWeb.DataBindings.Clear();

@@ -102,11 +102,11 @@
             this.btnStokKopyalaHizli = new DevExpress.XtraBars.BarButtonItem();
             this.btnYazdir = new DevExpress.XtraBars.BarButtonItem();
             this.btnDizayn = new DevExpress.XtraBars.BarButtonItem();
+            this.btnStokDuzenle = new DevExpress.XtraBars.BarButtonItem();
             this.txtBarkodu = new DevExpress.XtraEditors.ButtonEdit();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.btnStokDuzenle = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -759,6 +759,15 @@
             this.btnDizayn.Name = "btnDizayn";
             this.btnDizayn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDizayn_ItemClick);
             // 
+            // btnStokDuzenle
+            // 
+            this.btnStokDuzenle.Caption = "Seçili Stoğu Düzenle";
+            this.btnStokDuzenle.Id = 10;
+            this.btnStokDuzenle.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.edittask_16x16;
+            this.btnStokDuzenle.ImageOptions.LargeImage = global::NetSatis.BackOffice.Properties.Resources.edittask_32x32;
+            this.btnStokDuzenle.Name = "btnStokDuzenle";
+            this.btnStokDuzenle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnStokDuzenle_ItemClick);
+            // 
             // txtBarkodu
             // 
             this.txtBarkodu.Location = new System.Drawing.Point(5, 173);
@@ -793,15 +802,6 @@
             this.ımageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.ımageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // btnStokDuzenle
-            // 
-            this.btnStokDuzenle.Caption = "Seçili Stoğu Düzenle";
-            this.btnStokDuzenle.Id = 10;
-            this.btnStokDuzenle.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.edittask_16x16;
-            this.btnStokDuzenle.ImageOptions.LargeImage = global::NetSatis.BackOffice.Properties.Resources.edittask_32x32;
-            this.btnStokDuzenle.Name = "btnStokDuzenle";
-            this.btnStokDuzenle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnStokDuzenle_ItemClick);
             // 
             // frmStok
             // 
