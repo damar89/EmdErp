@@ -2826,7 +2826,7 @@ namespace NetSatis.BackOffice.Fiş
                     m.SiraKodu = txtSira.Text;
                     m.Tutar = Convert.ToDecimal(calcAraToplam.Value);
                     m.VadeTarihi = Convert.ToDateTime(cmbVadeTarihi.Text);
-                    m.DipIskonto = Convert.ToDecimal(_fisentity.DipIskNetTutari);
+                    m.DipIskonto = Convert.ToDecimal(calcIndirimToplami.Value);
                     DetailsDuzenle(eislem.MasterGuncelle(m), HarTipi);
                 }
             }
@@ -2837,7 +2837,7 @@ namespace NetSatis.BackOffice.Fiş
                     Aciklama = txtAciklama.Text,
                     AlisVerisNo = _fisentity.Id,
                     DokumanKodu = "",
-                    //EditDate = DateTime.Now,
+                    EditDate = DateTime.Now,
                     EditUser = frmAnaMenu.UserId,
                     FisKodu = txtKod.Text,
                     FisTuru = txtFisTuru.Text,
@@ -2854,7 +2854,7 @@ namespace NetSatis.BackOffice.Fiş
                     SiraKodu = txtSira.Text,
                     Tutar = Convert.ToDecimal(calcAraToplam.Value),
                     VadeTarihi = Convert.ToDateTime(cmbVadeTarihi.Text),
-                    DipIskonto = Convert.ToDecimal(_fisentity.DipIskNetTutari)
+                    DipIskonto = Convert.ToDecimal(calcIndirimToplami.Value)
                 };
                 DetailsDuzenle(eislem.MasterOlustur(m), HarTipi);
 
