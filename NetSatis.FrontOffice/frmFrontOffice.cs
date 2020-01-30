@@ -212,7 +212,7 @@ namespace NetSatis.FrontOffice
                    HizliSatislar.Id,
                    HizliSatislar.GrupId,
                    Fiyati = stoklar.SatisFiyati1,
-                   }).ToList();
+               }).ToList();
 
 
 
@@ -234,7 +234,7 @@ namespace NetSatis.FrontOffice
                     {
                         Name = hizliSatis.StokKodu,
                         Text = hizliSatis.UrunAdi + Environment.NewLine + hizliSatis.Fiyati,
-                        
+
                         Appearance = { TextOptions = { WordWrap = WordWrap.Wrap },BackColor = c,
                         FontSizeDelta = 3,FontStyleDelta = FontStyle.Bold
                             },
@@ -504,7 +504,7 @@ namespace NetSatis.FrontOffice
             }
             else
             {
-                _fisentity.Tipi=txtHareketTipi.Text;
+                _fisentity.Tipi = txtHareketTipi.Text;
             }
 
             _fisentity.FisKodu = txtKod.Text;
@@ -626,7 +626,7 @@ namespace NetSatis.FrontOffice
             txtVergiNo.Text = null;
             txtCepTel.Text = null;
             txtMail.Text = null;
-            txtHareketTipi.Text=null;
+            txtHareketTipi.Text = null;
             txtIl.Text = null;
             txtIlce.Text = null;
             txtAdres.Text = null;
@@ -966,7 +966,7 @@ namespace NetSatis.FrontOffice
         }
         private void txtBarkod_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter && txtBarkod.Text != "")
             {
                 Barkod entity;
                 var entityStok = context.Stoklar.FirstOrDefault(x => x.Barkodu == txtBarkod.Text);
@@ -1702,12 +1702,12 @@ namespace NetSatis.FrontOffice
 
         private void btnArttır_Click(object sender, EventArgs e)
         {
-            gridStokHareket.SetFocusedRowCellValue("Miktar",Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("Miktar")) + 1);
+            gridStokHareket.SetFocusedRowCellValue("Miktar", Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("Miktar")) + 1);
         }
 
         private void btnAzalt_Click(object sender, EventArgs e)
         {
-            gridStokHareket.SetFocusedRowCellValue("Miktar",Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("Miktar")) - 1);
+            gridStokHareket.SetFocusedRowCellValue("Miktar", Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("Miktar")) - 1);
 
         }
     }

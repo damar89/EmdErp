@@ -696,6 +696,7 @@ namespace NetSatis.BackOffice.Stok
             {
                 gridBarkod.DeleteRow(i);
             }
+            context.Barkodlar.Local.Clear();
             calcDevirGirisi.Text = "";
             togDurum.EditValue = true;
             togWeb.EditValue = false;
