@@ -23,8 +23,7 @@ namespace NetSatis.EDonusum.Models
             public string SiraKodu { get; set; }
             public string HarTip { get; set; }
             public string DokumanKodu { get; set; }
-             public int AlisVerisNo { get; set; }
-            
+            public int AlisVerisNo { get; set; }
             public int MusteriKodu { get; set; }
             public int HareketTipi { get; set; }
             public string FisKodu { get; set; }
@@ -70,7 +69,7 @@ namespace NetSatis.EDonusum.Models
             public string Password { get; set; }
             public string VergiNumarasi { get; set; }
             public string MusteriAdi { get; set; }
-            public Master master {get;set;}
+            public Master master { get; set; }
         }
     }
 }
