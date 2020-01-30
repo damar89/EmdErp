@@ -521,6 +521,7 @@ namespace NetSatis.BackOffice.Stok
                 }
                 if (kodentity != null)
                 {
+                    btnYeni_Click(null, null);
                     _entity = kodentity;
                     bindingSource();
                     var kategoriAdi = context.Kategoriler.SingleOrDefault(x => x.Kod == _entity.Kategori);
@@ -697,7 +698,7 @@ namespace NetSatis.BackOffice.Stok
             {
                 gridBarkod.DeleteRow(i);
             }
-            context.Barkodlar.Local.Clear();
+            //context.Barkodlar.Local.Clear();
             calcDevirGirisi.Text = "";
             togDurum.EditValue = true;
             togWeb.EditValue = false;
