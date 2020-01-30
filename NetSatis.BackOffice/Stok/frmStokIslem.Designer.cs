@@ -442,7 +442,7 @@ namespace NetSatis.BackOffice.Stok
             this.tabNavigationPage1.Controls.Add(this.grupGrup);
             this.tabNavigationPage1.Controls.Add(this.grupGenel);
             this.tabNavigationPage1.Name = "tabNavigationPage1";
-            this.tabNavigationPage1.Size = new System.Drawing.Size(775, 598);
+            this.tabNavigationPage1.Size = new System.Drawing.Size(775, 596);
             // 
             // groupControl2
             // 
@@ -453,7 +453,7 @@ namespace NetSatis.BackOffice.Stok
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 521);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(775, 77);
+            this.groupControl2.Size = new System.Drawing.Size(775, 75);
             this.groupControl2.TabIndex = 4;
             this.groupControl2.Text = "Diğer Alanlar";
             // 
@@ -1361,7 +1361,7 @@ namespace NetSatis.BackOffice.Stok
             // btnKod
             // 
             this.btnKod.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
-            this.btnKod.Location = new System.Drawing.Point(395, 53);
+            this.btnKod.Location = new System.Drawing.Point(397, 53);
             this.btnKod.Name = "btnKod";
             this.btnKod.Size = new System.Drawing.Size(75, 23);
             this.btnKod.TabIndex = 2;
