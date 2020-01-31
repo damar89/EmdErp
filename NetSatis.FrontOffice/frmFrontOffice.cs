@@ -1603,7 +1603,7 @@ namespace NetSatis.FrontOffice
             NetSatis.EDonusum.Models.Donusum.Master m = new EDonusum.Models.Donusum.Master
             {
                 Aciklama = txtAciklama.Text,
-                DipIskonto = Convert.ToDecimal(_fisentity.DipIskTutari),
+                DipIskonto = Convert.ToDecimal(calcIndirimToplami.Value),
                 DokumanKodu = "",
                 EditDate = DateTime.Now,
                 EditUser = frmAnaMenu.UserId,
