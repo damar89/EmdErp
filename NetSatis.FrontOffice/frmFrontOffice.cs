@@ -1703,11 +1703,13 @@ namespace NetSatis.FrontOffice
         private void btnArttır_Click(object sender, EventArgs e)
         {
             gridStokHareket.SetFocusedRowCellValue("Miktar", Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("Miktar")) + 1);
+            HepsiniHesapla();
         }
 
         private void btnAzalt_Click(object sender, EventArgs e)
         {
             gridStokHareket.SetFocusedRowCellValue("Miktar", Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("Miktar")) - 1);
+            HepsiniHesapla();
 
         }
     }
