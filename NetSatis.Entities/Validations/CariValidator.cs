@@ -19,7 +19,6 @@ namespace NetSatis.Entities.Validations
             //RuleFor(p => p.VergiDairesi).NotEmpty().WithMessage("Vergi Dairesi Alanı Boş Bırakılamaz");
             //RuleFor(p => p.VergiNo).NotEmpty().WithMessage("Vergi No Alanı Boş Bırakılamaz");
             //RuleFor(p => p.VergiNo).IsUnique();
-            RuleFor(p => p.FaturaUnvani).NotEmpty().WithMessage("Fatura Unvanı Alanı Boş Bırakılamaz");
             
         }
     }
