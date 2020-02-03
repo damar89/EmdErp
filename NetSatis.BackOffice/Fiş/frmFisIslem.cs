@@ -869,15 +869,17 @@ namespace NetSatis.BackOffice.Fiş
             {
                 stokHareket.IndirimOrani = indirimDal.StokIndirimi(context, entity.StokKodu);
             }
-            //if (_fisentity.CariId != null)
-            //{
-            //    stokHareket.IndirimOrani2 = txtFisTuru.Text == "Toptan Satış Faturası" && _fisentity.Cari.IskontoOrani != null ? _fisentity.Cari.IskontoOrani : 0;
-            //}
-            //else
-            //{
-            //    stokHareket.IndirimOrani2 = 0;
-            //}
-            stokHareket.IndirimOrani2 = 0;
+            if (_fisentity.CariId != null)
+            {
+                var oran = context.Cariler.Where(x => x.Id == _fisentity.CariId).FirstOrDefault().IskontoOrani;
+
+                stokHareket.IndirimOrani2 =
+                    txtFisTuru.Text == "Toptan Satış Faturası" && oran != null ? oran : 0;
+            }
+            else
+            {
+                stokHareket.IndirimOrani2 = 0;
+            }
             stokHareket.IndirimOrani3 = 0;
             int depoid = Convert.ToInt32(context.Kullanicilar.Where(x => x.Id == frmAnaMenu.UserId).FirstOrDefault().DepoId);
             if (depoid == 0)
@@ -1384,6 +1386,24 @@ namespace NetSatis.BackOffice.Fiş
                     System.Environment.NewLine;
                 hata++;
             }
+
+            if (_fisentity.CariId != null && _fisentity.FisTuru == "Toptan Satış Faturası")
+            {
+                var bakiye = entityBakiye.Bakiye != null ? entityBakiye.Bakiye : 0;
+                var risk = context.Cariler.Where(x => x.Id == _fisentity.CariId).FirstOrDefault().RiskLimiti;
+                if (risk != null && risk != 0 && Convert.ToDecimal(calcGenelToplam.EditValue) + bakiye > risk)
+                {
+
+                    if (MessageBox.Show(
+                      $"Risk Limitini astiniz - " + risk + " TL. Devam etmek istiyor musunuz?",
+                      "Uyarı", MessageBoxButtons.YesNo) == DialogResult.No)
+                    {
+                        MessageBox.Show("İsteğiniz üzerine işlem iptal edildi.");
+                        return;
+                    }
+                }
+            }
+
             if (hata != 0)
             {
                 MessageBox.Show(message);
@@ -1578,7 +1598,7 @@ namespace NetSatis.BackOffice.Fiş
                     }
                     if (txtFisTuru.Text != "Hakediş Fişi")
                     {
-                        kasaVeri.CariId = _cariId;
+                        kasaVeri.CariId = _fisentity.CariId;
                     }
                 }
             }

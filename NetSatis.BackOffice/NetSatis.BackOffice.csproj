@@ -1394,6 +1394,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="emd icon.ico" />
+    <None Include="Resources\redo_32x32.png" />
+    <None Include="Resources\redo_16x16.png" />
     <None Include="Resources\edit_32x32.png" />
     <None Include="Resources\edit_16x16.png" />
     <None Include="Resources\göster2.png" />

@@ -112,11 +112,19 @@ namespace NetSatis.EDonusum.Controller
         {
             using (VTContext db = new VTContext())
             {
-                var temp = db.Master.FirstOrDefault(x => x.Id == id);
-                db.Master.Remove(temp);
 
-                var detailTemp = db.Detail.Where(x => x.MasterId == id).ToList();
-                db.Detail.RemoveRange(detailTemp);
+                var temp = db.Master.Where(x => x.AlisVerisNo == id).FirstOrDefault();
+                if (temp != null)
+                {
+                    db.Master.Remove(temp);
+                    var detailTemp = db.Detail.Where(x => x.MasterId == temp.Id).ToList();
+                    db.Detail.RemoveRange(detailTemp);
+                }
+
+
+
+
+
 
                 db.SaveChanges();
             }

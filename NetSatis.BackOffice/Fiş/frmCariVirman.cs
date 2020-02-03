@@ -51,7 +51,7 @@ namespace NetSatis.BackOffice.Fiş
         private bool basariylaKaydedildi = false;
         bool duzenle = false;
         int frontOfficeUserId = 0;
-        public frmCariVirman(string fisKodu = null, string fisTuru)
+        public frmCariVirman(string fisKodu = null)
         {
             InitializeComponent();
            

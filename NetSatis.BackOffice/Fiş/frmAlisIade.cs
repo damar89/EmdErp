@@ -9,9 +9,9 @@ namespace NetSatis.BackOffice.Fiş
     {
         NetSatisContext context = new NetSatisContext();
         FisDAL fisDal = new FisDAL();
-        KasaHareketDAL kasaHareketDal=new KasaHareketDAL();
-        StokHareketDAL stokHareketDal=new StokHareketDAL();
-        
+        KasaHareketDAL kasaHareketDal = new KasaHareketDAL();
+        StokHareketDAL stokHareketDal = new StokHareketDAL();
+
 
         public frmAlisIade()
         {
@@ -25,16 +25,16 @@ namespace NetSatis.BackOffice.Fiş
 
         private void Listele()
         {
-            context=new NetSatisContext();
-            gridContFisler.DataSource = fisDal.Listelemeler(context,"Alış İade Faturası");
+            context = new NetSatisContext();
+            gridContFisler.DataSource = fisDal.Listelemeler(context, "Alış İade Faturası");
 
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-          Listele();
+            Listele();
         }
-        
+
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -46,11 +46,14 @@ namespace NetSatis.BackOffice.Fiş
             {
                 if (MessageBox.Show("Seçili Olan Veriyi Silmek İstediğinize Emin Misiniz ?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
+                    int id = Convert.ToInt32(gridFisler.GetFocusedRowCellValue(colId).ToString());
                     string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
                     fisDal.Delete(context, c => c.FisKodu == secilen);
                     kasaHareketDal.Delete(context, c => c.FisKodu == secilen);
                     stokHareketDal.Delete(context, c => c.FisKodu == secilen);
                     fisDal.Save(context);
+                    NetSatis.EDonusum.Controller.EDonusumIslemleri eislem = new EDonusum.Controller.EDonusumIslemleri();
+                    eislem.MasterSil(id);
                     Listele();
                 }
             }
@@ -60,11 +63,11 @@ namespace NetSatis.BackOffice.Fiş
             }
         }
 
-    
-      
+
+
         private void FisIslem_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmFisIslem form=new frmFisIslem(null,e.Item.Caption);
+            frmFisIslem form = new frmFisIslem(null, e.Item.Caption);
             form.Show();
         }
 
@@ -93,7 +96,7 @@ namespace NetSatis.BackOffice.Fiş
 
         private void frmAlisIade_KeyDown(object sender, KeyEventArgs e)
         {
-             if (e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.Escape)
             {
 
                 btnKapat.PerformClick();

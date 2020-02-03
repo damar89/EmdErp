@@ -82,6 +82,8 @@
             this.colBakiye = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCepTel2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCepTelefonu3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTelefon2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTelefon3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -140,8 +142,6 @@
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnDuzenle = new DevExpress.XtraEditors.SimpleButton();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.colTelefon2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTelefon3 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -528,6 +528,20 @@
             this.colCepTelefonu3.Name = "colCepTelefonu3";
             this.colCepTelefonu3.OptionsColumn.AllowEdit = false;
             // 
+            // colTelefon2
+            // 
+            this.colTelefon2.Caption = "Telefon2";
+            this.colTelefon2.FieldName = "Telefon2";
+            this.colTelefon2.Name = "colTelefon2";
+            this.colTelefon2.OptionsColumn.AllowEdit = false;
+            // 
+            // colTelefon3
+            // 
+            this.colTelefon3.Caption = "Telefon3";
+            this.colTelefon3.FieldName = "Telefon3";
+            this.colTelefon3.Name = "colTelefon3";
+            this.colTelefon3.OptionsColumn.AllowEdit = false;
+            // 
             // groupControl2
             // 
             this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -541,7 +555,7 @@
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(231, 541);
             this.groupControl2.TabIndex = 2;
-            this.groupControl2.Text = "Stok Arama";
+            this.groupControl2.Text = "Cari Arama";
             // 
             // labelControl3
             // 
@@ -696,8 +710,8 @@
             // 
             this.btnCariHareketHizli.Caption = "Cari Hareketleri";
             this.btnCariHareketHizli.Id = 2;
-            this.btnCariHareketHizli.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCariHareketHizli.ImageOptions.Image")));
-            this.btnCariHareketHizli.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCariHareketHizli.ImageOptions.LargeImage")));
+            this.btnCariHareketHizli.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.redo_16x16;
+            this.btnCariHareketHizli.ImageOptions.LargeImage = global::NetSatis.BackOffice.Properties.Resources.redo_32x32;
             this.btnCariHareketHizli.Name = "btnCariHareketHizli";
             this.btnCariHareketHizli.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCariHareketHizli_ItemClick);
             // 
@@ -1141,20 +1155,6 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem21)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
-            // 
-            // colTelefon2
-            // 
-            this.colTelefon2.Caption = "Telefon2";
-            this.colTelefon2.FieldName = "Telefon2";
-            this.colTelefon2.Name = "colTelefon2";
-            this.colTelefon2.OptionsColumn.AllowEdit = false;
-            // 
-            // colTelefon3
-            // 
-            this.colTelefon3.Caption = "Telefon3";
-            this.colTelefon3.FieldName = "Telefon3";
-            this.colTelefon3.Name = "colTelefon3";
-            this.colTelefon3.OptionsColumn.AllowEdit = false;
             // 
             // frmCari
             // 
