@@ -1122,5 +1122,10 @@ namespace NetSatis.BackOffice
             frm.Show();
 
         }
+
+        private void treeList1_FocusedNodeChanged(object sender, FocusedNodeChangedEventArgs e)
+        {
+
+        }
     }
 }

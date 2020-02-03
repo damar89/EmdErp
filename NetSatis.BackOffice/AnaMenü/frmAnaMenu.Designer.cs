@@ -168,6 +168,7 @@
             this.btnCokluCari = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem56 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem57 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem58 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -185,6 +186,7 @@
             this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.managerS = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
@@ -284,8 +286,6 @@
             this.barButtonItem53 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem54 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem55 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem58 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
@@ -1366,6 +1366,14 @@
             this.barButtonItem57.Name = "barButtonItem57";
             this.barButtonItem57.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem57_ItemClick);
             // 
+            // barButtonItem58
+            // 
+            this.barButtonItem58.Caption = "Faturaları Gönder";
+            this.barButtonItem58.Id = 121;
+            this.barButtonItem58.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem58.ImageOptions.SvgImage")));
+            this.barButtonItem58.Name = "barButtonItem58";
+            this.barButtonItem58.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem58_ItemClick);
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -1501,6 +1509,12 @@
             this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem57);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "ribbonPageGroup8";
+            // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem58);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
+            this.ribbonPageGroup9.Text = "ribbonPageGroup9";
             // 
             // ribbonStatusBar1
             // 
@@ -1810,6 +1824,7 @@
             this.treeList1.Size = new System.Drawing.Size(305, 612);
             this.treeList1.TabIndex = 15;
             this.treeList1.ViewStyle = DevExpress.XtraTreeList.TreeListViewStyle.TreeView;
+            this.treeList1.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeList1_FocusedNodeChanged);
             this.treeList1.Click += new System.EventHandler(this.treeList1_Click);
             this.treeList1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.treeList1_MouseClick);
             this.treeList1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.treeList1_MouseDoubleClick);
@@ -2538,20 +2553,6 @@
             this.barButtonItem55.Caption = "Firma Bilgileri";
             this.barButtonItem55.Id = 118;
             this.barButtonItem55.Name = "barButtonItem55";
-            // 
-            // ribbonPageGroup9
-            // 
-            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem58);
-            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
-            this.ribbonPageGroup9.Text = "ribbonPageGroup9";
-            // 
-            // barButtonItem58
-            // 
-            this.barButtonItem58.Caption = "Faturaları Gönder";
-            this.barButtonItem58.Id = 121;
-            this.barButtonItem58.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem58.ImageOptions.SvgImage")));
-            this.barButtonItem58.Name = "barButtonItem58";
-            this.barButtonItem58.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem58_ItemClick);
             // 
             // frmAnaMenu
             // 
