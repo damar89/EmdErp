@@ -397,6 +397,7 @@ namespace NetSatis.Entities.Data_Access
                        fisler.BelgeNo,
                        fisler.IskontoOrani1,
                        fisler.IskontoTutari1,
+                       fisler.DipIskTutari,
                        alacak =
                        (context.Fisler.Where(c => c.CariId == fisler.Cari.Id && c.FisTuru == "Alış Faturası" || c.FisTuru == "Satış İade Faturası")
                        .Sum(c => c.ToplamTutar) ?? 0) +
@@ -432,6 +433,7 @@ namespace NetSatis.Entities.Data_Access
                        k.SiparisFisKodu,
                        k.borc,
                        k.alacak,
+                       k.DipIskTutari,
                        bakiye = k.alacak - k.borc
                    }).ToList();
             return tablo;
@@ -464,6 +466,9 @@ namespace NetSatis.Entities.Data_Access
                        fisler.BelgeNo,
                        fisler.IskontoOrani1,
                        fisler.IskontoTutari1,
+
+                       fisler.DipIskTutari,
+                      
                        alacak =
                        (context.Fisler.Where(c => c.CariId == fisler.Cari.Id && c.FisTuru == "Alış Faturası")
                        .Sum(c => c.ToplamTutar) ?? 0) +
@@ -497,8 +502,10 @@ namespace NetSatis.Entities.Data_Access
                        k.BelgeNo,
                        k.IskontoOrani1,
                        k.IskontoTutari1,
+                       k.DipIskTutari,
                        k.borc,
                        k.alacak,
+                       
                        bakiye = k.alacak - k.borc
                    }).ToList();
             return tablo;

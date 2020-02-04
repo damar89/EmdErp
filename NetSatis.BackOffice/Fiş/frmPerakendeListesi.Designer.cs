@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerakendeListesi));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dropDownButton1 = new DevExpress.XtraEditors.DropDownButton();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.btnBilgiFisi = new DevExpress.XtraBars.BarButtonItem();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -63,7 +65,7 @@
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem6 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
-            this.imgMenu = new System.Windows.Forms.ImageList();
+            this.imgMenu = new System.Windows.Forms.ImageList(this.components);
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
@@ -93,7 +95,6 @@
             this.colAciklama = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKDVDahil = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.btnBilgiFisi = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -168,6 +169,13 @@
             this.barButtonItem9.ImageOptions.LargeImage = global::NetSatis.BackOffice.Properties.Resources.printpreview_32x322;
             this.barButtonItem9.Name = "barButtonItem9";
             this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
+            // 
+            // btnBilgiFisi
+            // 
+            this.btnBilgiFisi.Caption = "Bilgi Fişi Yazdır";
+            this.btnBilgiFisi.Id = 28;
+            this.btnBilgiFisi.Name = "btnBilgiFisi";
+            this.btnBilgiFisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBilgiFisi_ItemClick);
             // 
             // barManager1
             // 
@@ -706,7 +714,7 @@
             this.colIskontoTutari1.Caption = "İskonto Tutar";
             this.colIskontoTutari1.DisplayFormat.FormatString = "C2";
             this.colIskontoTutari1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colIskontoTutari1.FieldName = "IskontoTutari1";
+            this.colIskontoTutari1.FieldName = "DipIskTutari";
             this.colIskontoTutari1.Name = "colIskontoTutari1";
             this.colIskontoTutari1.OptionsColumn.AllowEdit = false;
             this.colIskontoTutari1.OptionsColumn.ShowInCustomizationForm = false;
@@ -766,13 +774,6 @@
             // 
             this.rpsChkKdvDahil.AutoHeight = false;
             this.rpsChkKdvDahil.Name = "rpsChkKdvDahil";
-            // 
-            // btnBilgiFisi
-            // 
-            this.btnBilgiFisi.Caption = "Bilgi Fişi Yazdır";
-            this.btnBilgiFisi.Id = 28;
-            this.btnBilgiFisi.Name = "btnBilgiFisi";
-            this.btnBilgiFisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBilgiFisi_ItemClick);
             // 
             // frmPerakendeListesi
             // 
