@@ -204,6 +204,12 @@
     <Content Include="emd icon.ico" />
     <Content Include="pos icon.ico" />
     <Content Include="pos.ico" />
+    <None Include="Resources\technology_32x321.png" />
+    <None Include="Resources\viewsetting_32x321.png" />
+    <None Include="Resources\show_32x324.png" />
+    <None Include="Resources\customer_32x32.png" />
+    <None Include="Resources\show_32x323.png" />
+    <None Include="Resources\hide_32x32.png" />
     <None Include="Resources\viewsetting_32x32.png" />
     <None Include="Resources\show_32x322.png" />
     <None Include="Resources\show_32x321.png" />
