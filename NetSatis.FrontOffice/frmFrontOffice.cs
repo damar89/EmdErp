@@ -477,6 +477,7 @@ namespace NetSatis.FrontOffice
                         stokVeri.KdvHaric_ = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvHaric"));
                         stokVeri.IndirimTutar = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimTutar").ToString());
                         stokVeri.AraToplam = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "AraToplam").ToString());
+                        //stokVeri.DipIskontoPayi=Convert.ToDecimal(gridStokHareket.GetRowCellValue(i,"DipIskontoPayi").ToString());
                     }
                 }
             }
@@ -808,6 +809,7 @@ namespace NetSatis.FrontOffice
                 context.KasaHareketleri.Local.Add(item);
             }
             cagrilanSatisId = id;
+
             Toplamlar();
             HepsiniHesapla();
             OdenenTutarGuncelle();
@@ -906,6 +908,7 @@ namespace NetSatis.FrontOffice
                     txtOdenenTutar.Text = "";
                     txtParaUstu.Text = "";
                     calcDusur.Text = null;
+                    _cariId = null;
                 }
             }
             else
@@ -916,7 +919,7 @@ namespace NetSatis.FrontOffice
         }
         private void btnTemizle_Click(object sender, EventArgs e)
         {
-            _cariId = null;
+
             lblCariKod.Text = null;
             lblCariAd.Text = null;
             _fisentity.CariId = null;
@@ -933,6 +936,7 @@ namespace NetSatis.FrontOffice
             lblBorc.Text = "Görüntülenemiyor";
             lblBakiye.Text = "Görüntülenemiyor";
             txtBarkod.Focus();
+            _cariId = null;
         }
         private void checkIade_CheckedChanged(object sender, EventArgs e)
         {
@@ -1298,6 +1302,7 @@ namespace NetSatis.FrontOffice
             lblCariKod.Text = null;
             lblCariAd.Text = null;
             _cariId = null;
+            _fisentity.CariId=null;
             txtFaturaUnvani.Text = null;
             txtVergiDairesi.Text = null;
             txtVergiNo.Text = null;
@@ -1711,6 +1716,18 @@ namespace NetSatis.FrontOffice
             gridStokHareket.SetFocusedRowCellValue("Miktar", Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("Miktar")) - 1);
             HepsiniHesapla();
 
+        }
+
+        private void btnPerakendeStok_Click(object sender, EventArgs e)
+        {
+            frmTarihliPerakende frm = new frmTarihliPerakende();
+            frm.Show();
+        }
+
+        private void btnPerakendeSatis_Click(object sender, EventArgs e)
+        {
+            frmPerakendeTarihFilter frm = new frmPerakendeTarihFilter();
+            frm.Show();
         }
     }
 }

@@ -330,6 +330,7 @@ namespace NetSatis.Entities.Data_Access
                       fisler.BelgeNo,
                       fisler.IskontoOrani1,
                       fisler.IskontoTutari1,
+                      fisler.DipIskNetTutari,
                       alacak =
                       (context.Fisler.Where(c => c.CariId == fisler.Cari.Id && c.FisTuru == "Alış Faturası")
                       .Sum(c => c.ToplamTutar) ?? 0) +
@@ -363,6 +364,7 @@ namespace NetSatis.Entities.Data_Access
                       k.BelgeNo,
                       k.IskontoOrani1,
                       k.IskontoTutari1,
+                      k.DipIskNetTutari,
                       k.borc,
                       k.alacak,
                       bakiye = k.alacak - k.borc
@@ -397,7 +399,7 @@ namespace NetSatis.Entities.Data_Access
                        fisler.BelgeNo,
                        fisler.IskontoOrani1,
                        fisler.IskontoTutari1,
-                       fisler.DipIskTutari,
+                       fisler.DipIskNetTutari,
                        alacak =
                        (context.Fisler.Where(c => c.CariId == fisler.Cari.Id && c.FisTuru == "Alış Faturası" || c.FisTuru == "Satış İade Faturası")
                        .Sum(c => c.ToplamTutar) ?? 0) +
@@ -433,7 +435,76 @@ namespace NetSatis.Entities.Data_Access
                        k.SiparisFisKodu,
                        k.borc,
                        k.alacak,
-                       k.DipIskTutari,
+                       k.DipIskNetTutari,
+                       bakiye = k.alacak - k.borc
+                   }).ToList();
+            return tablo;
+        }
+        public object ListelemelerTarihPerakende(NetSatisContext context, string fisTuru, DateTime baslangic, DateTime bitis)
+        {
+            var tablo = context.Fisler.Where(c => (c.FisTuru == fisTuru ) && (c.Tarih >= baslangic && c.Tarih <= bitis)).GroupJoin(
+                context.Fisler.Where(c => c.FisTuru == fisTuru ), c => c.CariId, c => c.CariId,
+                (fisler, cariler) =>
+                   new
+                   {
+                       fisler.Id,
+                       fisler.FisKodu,
+                       fisler.FisTuru,
+                       fisler.ToplamTutar,
+                       fisler.Cari.CariAdi,
+                       fisler.Cari.CariKodu,
+                       fisler.Tarih,
+                       fisler.VadeTarihi,
+                       fisler.Personel.PersonelKodu,
+                       fisler.Personel.PersonelAdi,
+                       fisler.Seri,
+                       fisler.Sira,
+                       fisler.Tipi,
+                       fisler.FaturaFisKodu,
+                       fisler.IrsaliyeFisKodu,
+                       fisler.TeklifFisKodu,
+                       fisler.SiparisFisKodu,
+                       fisler.Aciklama,
+                       fisler.BelgeNo,
+                       fisler.IskontoOrani1,
+                       fisler.IskontoTutari1,
+                       fisler.DipIskNetTutari,
+                       alacak =
+                       (context.Fisler.Where(c => c.CariId == fisler.Cari.Id && c.FisTuru == "Alış Faturası" || c.FisTuru == "Satış İade Faturası")
+                       .Sum(c => c.ToplamTutar) ?? 0) +
+                       (context.KasaHareketleri.Where(c => c.CariId == fisler.Cari.Id && c.Hareket == "Kasa Giriş")
+                       .Sum(c => c.Tutar) ?? 0),
+                       borc =
+                       (context.Fisler.Where(c => c.CariId == fisler.Cari.Id && c.FisTuru == "Perakende Satış Faturası" || c.FisTuru == "Toptan Satış Faturası" || c.FisTuru == "Alış İade Faturası")
+                       .Sum(c => c.ToplamTutar) ?? 0) +
+                       (context.KasaHareketleri.Where(c => c.CariId == fisler.Cari.Id && c.Hareket == "Kasa Çıkış")
+                       .Sum(c => c.Tutar) ?? 0)
+                   }).Select(k => new
+                   {
+                       k.Id,
+                       k.FisKodu,
+                       k.FisTuru,
+                       k.ToplamTutar,
+                       k.CariAdi,
+                       k.CariKodu,
+                       k.FaturaFisKodu,
+                       k.Tarih,
+                       k.VadeTarihi,
+                       k.PersonelKodu,
+                       k.PersonelAdi,
+                       k.Seri,
+                       k.Sira,
+                       k.Tipi,
+                       k.Aciklama,
+                       k.BelgeNo,
+                       k.IskontoOrani1,
+                       k.IskontoTutari1,
+                       k.IrsaliyeFisKodu,
+                       k.TeklifFisKodu,
+                       k.SiparisFisKodu,
+                       k.borc,
+                       k.alacak,
+                       k.DipIskNetTutari,
                        bakiye = k.alacak - k.borc
                    }).ToList();
             return tablo;
@@ -467,7 +538,7 @@ namespace NetSatis.Entities.Data_Access
                        fisler.IskontoOrani1,
                        fisler.IskontoTutari1,
 
-                       fisler.DipIskTutari,
+                       fisler.DipIskNetTutari,
                       
                        alacak =
                        (context.Fisler.Where(c => c.CariId == fisler.Cari.Id && c.FisTuru == "Alış Faturası")
@@ -502,7 +573,7 @@ namespace NetSatis.Entities.Data_Access
                        k.BelgeNo,
                        k.IskontoOrani1,
                        k.IskontoTutari1,
-                       k.DipIskTutari,
+                       k.DipIskNetTutari,
                        k.borc,
                        k.alacak,
                        

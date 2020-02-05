@@ -141,7 +141,7 @@ namespace NetSatis.EDonusum.Controller
         {
             using (VTContext db = new VTContext())
             {
-                var temp = db.Detail.FirstOrDefault(x => x.MasterId == _details.MasterId);
+                var temp = db.Detail.FirstOrDefault(x => x.MasterId == _details.MasterId && x.StokId == _details.StokId);
                 temp.HareketTipi = _details.HareketTipi;
                 temp.HarTip = _details.HarTip;
                 temp.Isk1 = _details.Isk1;

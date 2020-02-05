@@ -160,6 +160,8 @@
             this.btnRaporIade = new DevExpress.XtraEditors.SimpleButton();
             this.btnMasrafRapor = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPerakendeStok = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPerakendeSatis = new DevExpress.XtraEditors.SimpleButton();
             this.btnSatisRpr = new DevExpress.XtraEditors.SimpleButton();
             this.btnKasaRpr = new DevExpress.XtraEditors.SimpleButton();
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
@@ -428,7 +430,6 @@
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton2.ImageOptions.SvgImage = global::NetSatis.FrontOffice.Properties.Resources.bo_mydetails;
             this.simpleButton2.Location = new System.Drawing.Point(80, 534);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(69, 70);
@@ -767,7 +768,6 @@
             this.btnFiyatGor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFiyatGor.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnFiyatGor.Appearance.Options.UseFont = true;
-            this.btnFiyatGor.ImageOptions.Image = global::NetSatis.FrontOffice.Properties.Resources.zoom_32x32;
             this.btnFiyatGor.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnFiyatGor.Location = new System.Drawing.Point(155, 534);
             this.btnFiyatGor.Name = "btnFiyatGor";
@@ -860,6 +860,7 @@
             this.txtOdenenTutar.Properties.Appearance.Options.UseTextOptions = true;
             this.txtOdenenTutar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtOdenenTutar.Properties.AutoHeight = false;
+            this.txtOdenenTutar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtOdenenTutar.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.txtOdenenTutar.Properties.DisplayFormat.FormatString = "C2";
             this.txtOdenenTutar.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -1148,6 +1149,7 @@
             this.calcIndirimToplami.Properties.Appearance.Options.UseTextOptions = true;
             this.calcIndirimToplami.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.calcIndirimToplami.Properties.AutoHeight = false;
+            this.calcIndirimToplami.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.calcIndirimToplami.Properties.DisplayFormat.FormatString = "C2";
             this.calcIndirimToplami.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.calcIndirimToplami.Properties.EditFormat.FormatString = "C2";
@@ -1283,6 +1285,7 @@
             this.calcGenelToplam.Properties.Appearance.Options.UseTextOptions = true;
             this.calcGenelToplam.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.calcGenelToplam.Properties.AutoHeight = false;
+            this.calcGenelToplam.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.calcGenelToplam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear)});
             this.calcGenelToplam.Properties.DisplayFormat.FormatString = "C2";
@@ -1884,7 +1887,7 @@
             this.navPersonel.Controls.Add(this.flowPersonel);
             this.navPersonel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navPersonel.ImageOptions.Image")));
             this.navPersonel.Name = "navPersonel";
-            this.navPersonel.Size = new System.Drawing.Size(301, 693);
+            this.navPersonel.Size = new System.Drawing.Size(305, 692);
             // 
             // flowPersonel
             // 
@@ -1893,7 +1896,7 @@
             this.flowPersonel.ForeColor = System.Drawing.Color.White;
             this.flowPersonel.Location = new System.Drawing.Point(0, 0);
             this.flowPersonel.Name = "flowPersonel";
-            this.flowPersonel.Size = new System.Drawing.Size(301, 693);
+            this.flowPersonel.Size = new System.Drawing.Size(305, 692);
             this.flowPersonel.TabIndex = 1;
             // 
             // navBekleyenSatislar
@@ -1902,7 +1905,7 @@
             this.navBekleyenSatislar.Controls.Add(this.flowBekleyenSatislar);
             this.navBekleyenSatislar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navBekleyenSatislar.ImageOptions.Image")));
             this.navBekleyenSatislar.Name = "navBekleyenSatislar";
-            this.navBekleyenSatislar.Size = new System.Drawing.Size(305, 698);
+            this.navBekleyenSatislar.Size = new System.Drawing.Size(305, 692);
             // 
             // flowBekleyenSatislar
             // 
@@ -1910,7 +1913,7 @@
             this.flowBekleyenSatislar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowBekleyenSatislar.Location = new System.Drawing.Point(0, 0);
             this.flowBekleyenSatislar.Name = "flowBekleyenSatislar";
-            this.flowBekleyenSatislar.Size = new System.Drawing.Size(305, 698);
+            this.flowBekleyenSatislar.Size = new System.Drawing.Size(305, 692);
             this.flowBekleyenSatislar.TabIndex = 2;
             // 
             // navigationPage1
@@ -1921,11 +1924,13 @@
             this.navigationPage1.Controls.Add(this.btnRaporIade);
             this.navigationPage1.Controls.Add(this.btnMasrafRapor);
             this.navigationPage1.Controls.Add(this.simpleButton1);
+            this.navigationPage1.Controls.Add(this.btnPerakendeStok);
+            this.navigationPage1.Controls.Add(this.btnPerakendeSatis);
             this.navigationPage1.Controls.Add(this.btnSatisRpr);
             this.navigationPage1.Controls.Add(this.btnKasaRpr);
             this.navigationPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navigationPage1.ImageOptions.Image")));
             this.navigationPage1.Name = "navigationPage1";
-            this.navigationPage1.Size = new System.Drawing.Size(305, 698);
+            this.navigationPage1.Size = new System.Drawing.Size(305, 692);
             // 
             // btnRaporIade
             // 
@@ -1945,7 +1950,7 @@
             this.btnMasrafRapor.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.btnMasrafRapor.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnMasrafRapor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnMasrafRapor.ImageOptions.SvgImage")));
-            this.btnMasrafRapor.Location = new System.Drawing.Point(3, 3);
+            this.btnMasrafRapor.Location = new System.Drawing.Point(4, 3);
             this.btnMasrafRapor.Name = "btnMasrafRapor";
             this.btnMasrafRapor.Size = new System.Drawing.Size(70, 70);
             this.btnMasrafRapor.TabIndex = 0;
@@ -1965,6 +1970,28 @@
             this.simpleButton1.TabIndex = 0;
             this.simpleButton1.Text = "Stok Satış Raporu";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // btnPerakendeStok
+            // 
+            this.btnPerakendeStok.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPerakendeStok.ImageOptions.Image")));
+            this.btnPerakendeStok.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnPerakendeStok.Location = new System.Drawing.Point(39, 78);
+            this.btnPerakendeStok.Name = "btnPerakendeStok";
+            this.btnPerakendeStok.Size = new System.Drawing.Size(90, 70);
+            this.btnPerakendeStok.TabIndex = 0;
+            this.btnPerakendeStok.Text = "Perakende Stok\r\nSatış Raporu";
+            this.btnPerakendeStok.Click += new System.EventHandler(this.btnPerakendeStok_Click);
+            // 
+            // btnPerakendeSatis
+            // 
+            this.btnPerakendeSatis.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPerakendeSatis.ImageOptions.Image")));
+            this.btnPerakendeSatis.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnPerakendeSatis.Location = new System.Drawing.Point(135, 78);
+            this.btnPerakendeSatis.Name = "btnPerakendeSatis";
+            this.btnPerakendeSatis.Size = new System.Drawing.Size(90, 70);
+            this.btnPerakendeSatis.TabIndex = 0;
+            this.btnPerakendeSatis.Text = "Perakende Satış\r\n Raporu";
+            this.btnPerakendeSatis.Click += new System.EventHandler(this.btnPerakendeSatis_Click);
             // 
             // btnSatisRpr
             // 
@@ -1994,7 +2021,6 @@
             this.navigationPage2.Caption = "Ayarlar";
             this.navigationPage2.Controls.Add(this.btnKaydet);
             this.navigationPage2.Controls.Add(this.checkIrsaliye);
-            this.navigationPage2.ImageOptions.Image = global::NetSatis.FrontOffice.Properties.Resources.technology_32x32;
             this.navigationPage2.Name = "navigationPage2";
             this.navigationPage2.Size = new System.Drawing.Size(305, 692);
             // 
@@ -3464,6 +3490,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txtHareketTipi;
         private DevExpress.XtraEditors.LabelControl labelControl39;
+        private DevExpress.XtraEditors.SimpleButton btnPerakendeStok;
+        private DevExpress.XtraEditors.SimpleButton btnPerakendeSatis;
     }
 }
 

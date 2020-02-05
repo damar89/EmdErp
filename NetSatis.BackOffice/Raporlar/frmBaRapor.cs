@@ -31,7 +31,7 @@ namespace NetSatis.BackOffice.Raporlar
            var res = data.GroupBy(x => x.CariId).Select(x =>
              new
              {
-               BaTutar = x.Sum(a => a.ToplamTutar - a.IskontoTutari1).Value,
+               BaTutar = x.Sum(a => a.ToplamTutar - (a.IskontoTutari1+a.DipIskNetTutari+a.KdvToplam_)).Value,
                CariAdi = x.FirstOrDefault().CariAdi,
                CariKodu = x.FirstOrDefault().Cari.CariKodu,
                FaturaUnvani = x.FirstOrDefault().Cari.FaturaUnvani,

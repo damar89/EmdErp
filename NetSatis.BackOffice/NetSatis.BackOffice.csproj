@@ -454,6 +454,12 @@
     <Compile Include="Fiş\frmPerakendeListesi.Designer.cs">
       <DependentUpon>frmPerakendeListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fiş\frmPerakendeTarihFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiş\frmPerakendeTarihFilter.Designer.cs">
+      <DependentUpon>frmPerakendeTarihFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fiş\frmPesinSatislar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -567,6 +573,12 @@
     </Compile>
     <Compile Include="Fiş\frmTarihliOdeme.Designer.cs">
       <DependentUpon>frmTarihliOdeme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fiş\frmTarihliPerakende.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiş\frmTarihliPerakende.Designer.cs">
+      <DependentUpon>frmTarihliPerakende.cs</DependentUpon>
     </Compile>
     <Compile Include="Fiş\frmTarihliPesSatis.cs">
       <SubType>Form</SubType>
@@ -790,6 +802,12 @@
     </Compile>
     <Compile Include="Stok Hareketleri\frmStokSatis.Designer.cs">
       <DependentUpon>frmStokSatis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stok Hareketleri\frmStokSatisPerakende.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stok Hareketleri\frmStokSatisPerakende.Designer.cs">
+      <DependentUpon>frmStokSatisPerakende.cs</DependentUpon>
     </Compile>
     <Compile Include="Stok\BarkodEtiketHazirla.cs">
       <SubType>Form</SubType>
@@ -1076,6 +1094,9 @@
     <EmbeddedResource Include="Fiş\frmPerakendeListesi.resx">
       <DependentUpon>frmPerakendeListesi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Fiş\frmPerakendeTarihFilter.resx">
+      <DependentUpon>frmPerakendeTarihFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fiş\frmPesinSatislar.resx">
       <DependentUpon>frmPesinSatislar.cs</DependentUpon>
     </EmbeddedResource>
@@ -1132,6 +1153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fiş\frmTarihliOdeme.resx">
       <DependentUpon>frmTarihliOdeme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fiş\frmTarihliPerakende.resx">
+      <DependentUpon>frmTarihliPerakende.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fiş\frmTarihliPesSatis.resx">
       <DependentUpon>frmTarihliPesSatis.cs</DependentUpon>
@@ -1246,6 +1270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Stok Hareketleri\frmStokSatis.resx">
       <DependentUpon>frmStokSatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stok Hareketleri\frmStokSatisPerakende.resx">
+      <DependentUpon>frmStokSatisPerakende.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stok\BarkodEtiketHazirla.resx">
       <DependentUpon>BarkodEtiketHazirla.cs</DependentUpon>
