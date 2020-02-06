@@ -254,6 +254,8 @@
             this.radialMenu1 = new DevExpress.XtraBars.Ribbon.RadialMenu(this.components);
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.labelControl40 = new DevExpress.XtraEditors.LabelControl();
+            this.lblCariName = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.naviGenelBilgiler.SuspendLayout();
@@ -360,7 +362,7 @@
             this.navigationPane1.Controls.Add(this.navigationPage2);
             this.navigationPane1.Controls.Add(this.navMenu);
             this.navigationPane1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.navigationPane1.Location = new System.Drawing.Point(876, 0);
+            this.navigationPane1.Location = new System.Drawing.Point(872, 0);
             this.navigationPane1.Name = "navigationPane1";
             this.navigationPane1.PageProperties.ShowCollapseButton = false;
             this.navigationPane1.PageProperties.ShowExpandButton = false;
@@ -373,9 +375,9 @@
             this.navBekleyenSatislar,
             this.navigationPage1,
             this.navigationPage2});
-            this.navigationPane1.RegularSize = new System.Drawing.Size(387, 780);
+            this.navigationPane1.RegularSize = new System.Drawing.Size(387, 840);
             this.navigationPane1.SelectedPage = this.naviGenelBilgiler;
-            this.navigationPane1.Size = new System.Drawing.Size(387, 780);
+            this.navigationPane1.Size = new System.Drawing.Size(387, 840);
             this.navigationPane1.TabIndex = 0;
             // 
             // naviGenelBilgiler
@@ -402,6 +404,8 @@
             this.naviGenelBilgiler.Controls.Add(this.labelControl10);
             this.naviGenelBilgiler.Controls.Add(this.labelControl28);
             this.naviGenelBilgiler.Controls.Add(this.labelControl27);
+            this.naviGenelBilgiler.Controls.Add(this.lblCariName);
+            this.naviGenelBilgiler.Controls.Add(this.labelControl40);
             this.naviGenelBilgiler.Controls.Add(this.labelControl26);
             this.naviGenelBilgiler.Controls.Add(this.txtBelgeNo);
             this.naviGenelBilgiler.Controls.Add(this.labelControl7);
@@ -425,7 +429,7 @@
             this.naviGenelBilgiler.Controls.Add(this.calcGenelToplam);
             this.naviGenelBilgiler.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("naviGenelBilgiler.ImageOptions.Image")));
             this.naviGenelBilgiler.Name = "naviGenelBilgiler";
-            this.naviGenelBilgiler.Size = new System.Drawing.Size(305, 734);
+            this.naviGenelBilgiler.Size = new System.Drawing.Size(305, 794);
             // 
             // simpleButton2
             // 
@@ -495,15 +499,15 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1263, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1259, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 780);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 840);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1263, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1259, 0);
             // 
             // barDockControlLeft
             // 
@@ -511,15 +515,15 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 780);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 840);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1263, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(1259, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 780);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 840);
             // 
             // barFiyat1
             // 
@@ -908,7 +912,7 @@
             this.labelControl28.Appearance.Options.UseTextOptions = true;
             this.labelControl28.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl28.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl28.Location = new System.Drawing.Point(204, 610);
+            this.labelControl28.Location = new System.Drawing.Point(204, 667);
             this.labelControl28.Name = "labelControl28";
             this.labelControl28.Size = new System.Drawing.Size(65, 20);
             this.labelControl28.TabIndex = 37;
@@ -924,7 +928,7 @@
             this.labelControl27.Appearance.Options.UseTextOptions = true;
             this.labelControl27.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl27.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl27.Location = new System.Drawing.Point(122, 610);
+            this.labelControl27.Location = new System.Drawing.Point(122, 667);
             this.labelControl27.Name = "labelControl27";
             this.labelControl27.Size = new System.Drawing.Size(65, 20);
             this.labelControl27.TabIndex = 37;
@@ -940,7 +944,7 @@
             this.labelControl26.Appearance.Options.UseTextOptions = true;
             this.labelControl26.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl26.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl26.Location = new System.Drawing.Point(35, 610);
+            this.labelControl26.Location = new System.Drawing.Point(35, 667);
             this.labelControl26.Name = "labelControl26";
             this.labelControl26.Size = new System.Drawing.Size(65, 20);
             this.labelControl26.TabIndex = 37;
@@ -1167,7 +1171,7 @@
             // 
             this.calcRub.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcRub.Location = new System.Drawing.Point(215, 636);
+            this.calcRub.Location = new System.Drawing.Point(215, 693);
             this.calcRub.Name = "calcRub";
             this.calcRub.Properties.Appearance.BackColor = System.Drawing.Color.DarkSlateGray;
             this.calcRub.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1194,7 +1198,7 @@
             // 
             this.calcEuro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcEuro.Location = new System.Drawing.Point(122, 636);
+            this.calcEuro.Location = new System.Drawing.Point(122, 693);
             this.calcEuro.Name = "calcEuro";
             this.calcEuro.Properties.Appearance.BackColor = System.Drawing.Color.DarkSlateGray;
             this.calcEuro.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1221,7 +1225,7 @@
             // 
             this.calcDolar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcDolar.Location = new System.Drawing.Point(40, 636);
+            this.calcDolar.Location = new System.Drawing.Point(40, 693);
             this.calcDolar.Name = "calcDolar";
             this.calcDolar.Properties.Appearance.BackColor = System.Drawing.Color.DarkSlateGray;
             this.calcDolar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1312,7 +1316,7 @@
             this.navCari.Controls.Add(this.grpCariGrup);
             this.navCari.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navCari.ImageOptions.Image")));
             this.navCari.Name = "navCari";
-            this.navCari.Size = new System.Drawing.Size(305, 734);
+            this.navCari.Size = new System.Drawing.Size(305, 794);
             // 
             // txtAraToplam
             // 
@@ -2076,7 +2080,7 @@
             this.splitContainerControl1.Panel2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.splitContainerControl1.Panel2.Controls.Add(this.xtraTabControl1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(876, 780);
+            this.splitContainerControl1.Size = new System.Drawing.Size(872, 840);
             this.splitContainerControl1.SplitterPosition = 271;
             this.splitContainerControl1.TabIndex = 1;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -2092,7 +2096,7 @@
             this.navStokHareket,
             this.navOdeme});
             this.navigationFrame1.SelectedPage = this.navStokHareket;
-            this.navigationFrame1.Size = new System.Drawing.Size(876, 170);
+            this.navigationFrame1.Size = new System.Drawing.Size(872, 170);
             this.navigationFrame1.TabIndex = 0;
             this.navigationFrame1.Text = "navigationFrame1";
             // 
@@ -2101,7 +2105,7 @@
             this.navStokHareket.Controls.Add(this.gridContStokHareket);
             this.navStokHareket.Controls.Add(this.flowLayoutPanel1);
             this.navStokHareket.Name = "navStokHareket";
-            this.navStokHareket.Size = new System.Drawing.Size(876, 170);
+            this.navStokHareket.Size = new System.Drawing.Size(872, 170);
             // 
             // gridContStokHareket
             // 
@@ -2117,7 +2121,7 @@
             this.repositoryMustahsil,
             this.repoMiktar,
             this.repoIskonto});
-            this.gridContStokHareket.Size = new System.Drawing.Size(817, 170);
+            this.gridContStokHareket.Size = new System.Drawing.Size(813, 170);
             this.gridContStokHareket.TabIndex = 3;
             this.gridContStokHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridStokHareket,
@@ -2571,7 +2575,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btnArttır);
             this.flowLayoutPanel1.Controls.Add(this.btnAzalt);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(817, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(813, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(59, 170);
             this.flowLayoutPanel1.TabIndex = 4;
@@ -2623,7 +2627,7 @@
             this.navOdeme.Controls.Add(this.gridContKasaHareket);
             this.navOdeme.Controls.Add(this.grpToplamlar);
             this.navOdeme.Name = "navOdeme";
-            this.navOdeme.Size = new System.Drawing.Size(876, 170);
+            this.navOdeme.Size = new System.Drawing.Size(872, 170);
             // 
             // gridContKasaHareket
             // 
@@ -2634,7 +2638,7 @@
             this.gridContKasaHareket.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repoKasa,
             this.repoOdemeSil});
-            this.gridContKasaHareket.Size = new System.Drawing.Size(876, 77);
+            this.gridContKasaHareket.Size = new System.Drawing.Size(872, 77);
             this.gridContKasaHareket.TabIndex = 4;
             this.gridContKasaHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridKasaHareket,
@@ -2754,7 +2758,7 @@
             this.grpToplamlar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.grpToplamlar.Location = new System.Drawing.Point(0, 77);
             this.grpToplamlar.Name = "grpToplamlar";
-            this.grpToplamlar.Size = new System.Drawing.Size(876, 93);
+            this.grpToplamlar.Size = new System.Drawing.Size(872, 93);
             this.grpToplamlar.TabIndex = 14;
             this.grpToplamlar.Text = " ";
             // 
@@ -2766,7 +2770,7 @@
             this.panelOdeme.Controls.Add(this.calcOdenenTutar);
             this.panelOdeme.Controls.Add(this.labelControl19);
             this.panelOdeme.Controls.Add(this.labelControl21);
-            this.panelOdeme.Location = new System.Drawing.Point(607, 26);
+            this.panelOdeme.Location = new System.Drawing.Point(603, 26);
             this.panelOdeme.Name = "panelOdeme";
             this.panelOdeme.Size = new System.Drawing.Size(267, 68);
             this.panelOdeme.TabIndex = 2;
@@ -2860,7 +2864,7 @@
             this.flowOdemeTurleri.ForeColor = System.Drawing.Color.Black;
             this.flowOdemeTurleri.Location = new System.Drawing.Point(0, 50);
             this.flowOdemeTurleri.Name = "flowOdemeTurleri";
-            this.flowOdemeTurleri.Size = new System.Drawing.Size(876, 51);
+            this.flowOdemeTurleri.Size = new System.Drawing.Size(872, 51);
             this.flowOdemeTurleri.TabIndex = 5;
             // 
             // panelControl1
@@ -2874,7 +2878,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(876, 50);
+            this.panelControl1.Size = new System.Drawing.Size(872, 50);
             this.panelControl1.TabIndex = 0;
             // 
             // calcMiktar
@@ -2915,7 +2919,7 @@
             this.btnStokBul.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStokBul.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnStokBul.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnStokBul.Location = new System.Drawing.Point(695, 7);
+            this.btnStokBul.Location = new System.Drawing.Point(691, 7);
             this.btnStokBul.Name = "btnStokBul";
             this.btnStokBul.Size = new System.Drawing.Size(83, 40);
             this.btnStokBul.TabIndex = 3;
@@ -2926,7 +2930,7 @@
             // txtIslem
             // 
             this.txtIslem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtIslem.Location = new System.Drawing.Point(781, 10);
+            this.txtIslem.Location = new System.Drawing.Point(777, 10);
             this.txtIslem.Name = "txtIslem";
             this.txtIslem.Properties.Appearance.BackColor = System.Drawing.Color.Green;
             this.txtIslem.Properties.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -2959,7 +2963,7 @@
             this.txtBarkod.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.txtBarkod.Properties.NullValuePrompt = "Arama metni giriniz...";
             this.txtBarkod.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtBarkod.Size = new System.Drawing.Size(482, 36);
+            this.txtBarkod.Size = new System.Drawing.Size(478, 36);
             this.txtBarkod.TabIndex = 0;
             this.txtBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyDown);
             // 
@@ -3004,7 +3008,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.MultiLine = DevExpress.Utils.DefaultBoolean.True;
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.Size = new System.Drawing.Size(872, 500);
+            this.xtraTabControl1.Size = new System.Drawing.Size(868, 560);
             this.xtraTabControl1.TabIndex = 0;
             // 
             // radialFiyat
@@ -3050,10 +3054,10 @@
             this.groupControl1.Controls.Add(this.labelControl14);
             this.groupControl1.Controls.Add(this.labelControl13);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 756);
+            this.groupControl1.Location = new System.Drawing.Point(0, 816);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(876, 24);
+            this.groupControl1.Size = new System.Drawing.Size(872, 24);
             this.groupControl1.TabIndex = 13;
             // 
             // labelControl25
@@ -3175,13 +3179,44 @@
             // 
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
+            // labelControl40
+            // 
+            this.labelControl40.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl40.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl40.Appearance.Options.UseFont = true;
+            this.labelControl40.Appearance.Options.UseForeColor = true;
+            this.labelControl40.Appearance.Options.UseTextOptions = true;
+            this.labelControl40.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl40.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl40.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl40.Location = new System.Drawing.Point(4, 611);
+            this.labelControl40.Name = "labelControl40";
+            this.labelControl40.Size = new System.Drawing.Size(290, 20);
+            this.labelControl40.TabIndex = 37;
+            this.labelControl40.Text = "Seçilen Cari";
+            // 
+            // lblCariName
+            // 
+            this.lblCariName.Appearance.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCariName.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblCariName.Appearance.Options.UseFont = true;
+            this.lblCariName.Appearance.Options.UseForeColor = true;
+            this.lblCariName.Appearance.Options.UseTextOptions = true;
+            this.lblCariName.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblCariName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblCariName.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.lblCariName.Location = new System.Drawing.Point(3, 643);
+            this.lblCariName.Name = "lblCariName";
+            this.lblCariName.Size = new System.Drawing.Size(294, 20);
+            this.lblCariName.TabIndex = 37;
+            // 
             // frmFrontOffice
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1263, 780);
+            this.ClientSize = new System.Drawing.Size(1259, 840);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.navigationPane1);
@@ -3495,6 +3530,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl39;
         private DevExpress.XtraEditors.SimpleButton btnPerakendeStok;
         private DevExpress.XtraEditors.SimpleButton btnPerakendeSatis;
+        private DevExpress.XtraEditors.LabelControl lblCariName;
+        private DevExpress.XtraEditors.LabelControl labelControl40;
     }
 }
 

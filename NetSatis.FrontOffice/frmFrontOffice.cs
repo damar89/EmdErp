@@ -619,6 +619,7 @@ namespace NetSatis.FrontOffice
             _fisentity = new Fis();
             _cariId = null;
             lblRiskLimiti.Text = null;
+            lblCariName.Text=null;
             lblCariKod.Text = null;
             lblCariAd.Text = null;
             txtKod.Text = null;
@@ -1135,6 +1136,7 @@ namespace NetSatis.FrontOffice
                     _fisentity.CariId = entity.Id;
                     lblCariKod.Text = entity.CariKodu;
                     lblCariAd.Text = entity.CariAdi;
+                    lblCariName.Text = entity.CariAdi;
                     txtFaturaUnvani.Text = entity.FaturaUnvani;
                     txtVergiDairesi.Text = entity.VergiDairesi;
                     txtVergiNo.Text = entity.VergiNo;
@@ -1195,6 +1197,7 @@ namespace NetSatis.FrontOffice
                 _fisentity.CariId = entity.Id;
                 lblCariKod.Text = entity.CariKodu;
                 lblCariAd.Text = entity.CariAdi;
+                lblCariName.Text = entity.CariAdi;
                 txtFaturaUnvani.Text = entity.FaturaUnvani;
                 txtVergiDairesi.Text = entity.VergiDairesi;
                 txtVergiNo.Text = entity.VergiNo;
@@ -1301,8 +1304,9 @@ namespace NetSatis.FrontOffice
         {
             lblCariKod.Text = null;
             lblCariAd.Text = null;
+            lblCariName.Text=null;
             _cariId = null;
-            _fisentity.CariId=null;
+            _fisentity.CariId = null;
             txtFaturaUnvani.Text = null;
             txtVergiDairesi.Text = null;
             txtVergiNo.Text = null;
