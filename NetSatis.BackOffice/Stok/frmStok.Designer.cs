@@ -494,7 +494,6 @@
             this.colBarkod.Caption = "Barkod";
             this.colBarkod.FieldName = "Barkodu";
             this.colBarkod.Name = "colBarkod";
-            this.colBarkod.OptionsColumn.AllowEdit = false;
             this.colBarkod.Visible = true;
             this.colBarkod.VisibleIndex = 0;
             this.colBarkod.Width = 67;

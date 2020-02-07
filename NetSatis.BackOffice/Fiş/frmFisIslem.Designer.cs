@@ -639,9 +639,9 @@
             this.panelKooperatif.Controls.Add(this.labelControl16);
             this.panelKooperatif.Controls.Add(this.labelControl18);
             this.panelKooperatif.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelKooperatif.Location = new System.Drawing.Point(291, 20);
+            this.panelKooperatif.Location = new System.Drawing.Point(291, 21);
             this.panelKooperatif.Name = "panelKooperatif";
-            this.panelKooperatif.Size = new System.Drawing.Size(251, 117);
+            this.panelKooperatif.Size = new System.Drawing.Size(251, 116);
             this.panelKooperatif.TabIndex = 7;
             this.panelKooperatif.Visible = false;
             // 
@@ -801,9 +801,9 @@
             this.panelOdeme.Controls.Add(this.labelControl5);
             this.panelOdeme.Controls.Add(this.labelControl4);
             this.panelOdeme.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelOdeme.Location = new System.Drawing.Point(542, 20);
+            this.panelOdeme.Location = new System.Drawing.Point(542, 21);
             this.panelOdeme.Name = "panelOdeme";
-            this.panelOdeme.Size = new System.Drawing.Size(250, 117);
+            this.panelOdeme.Size = new System.Drawing.Size(250, 116);
             this.panelOdeme.TabIndex = 2;
             // 
             // calcAcikHesapBakiye
@@ -925,9 +925,9 @@
             this.panelIndirim.Controls.Add(this.calcIndirimTutari);
             this.panelIndirim.Controls.Add(this.calcIndirimOrani);
             this.panelIndirim.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelIndirim.Location = new System.Drawing.Point(792, 20);
+            this.panelIndirim.Location = new System.Drawing.Point(792, 21);
             this.panelIndirim.Name = "panelIndirim";
-            this.panelIndirim.Size = new System.Drawing.Size(231, 117);
+            this.panelIndirim.Size = new System.Drawing.Size(231, 116);
             this.panelIndirim.TabIndex = 0;
             // 
             // labelControl32
@@ -1060,9 +1060,9 @@
             this.panelToplam.Controls.Add(this.panelControl3);
             this.panelToplam.Controls.Add(this.grpGenelToplam);
             this.panelToplam.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelToplam.Location = new System.Drawing.Point(1023, 20);
+            this.panelToplam.Location = new System.Drawing.Point(1023, 21);
             this.panelToplam.Name = "panelToplam";
-            this.panelToplam.Size = new System.Drawing.Size(247, 117);
+            this.panelToplam.Size = new System.Drawing.Size(247, 116);
             this.panelToplam.TabIndex = 6;
             // 
             // panelkdv
@@ -1559,7 +1559,7 @@
             this.navSatisEkrani.Name = "navSatisEkrani";
             this.navSatisEkrani.Properties.ShowCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.navSatisEkrani.Properties.ShowExpandButton = DevExpress.Utils.DefaultBoolean.False;
-            this.navSatisEkrani.Size = new System.Drawing.Size(1190, 246);
+            this.navSatisEkrani.Size = new System.Drawing.Size(1186, 247);
             // 
             // gridContStokHareket
             // 
@@ -1578,7 +1578,7 @@
             this.repoIskonto,
             this.repositoryItemButtonEdit5,
             this.repositoryItemButtonEdit6});
-            this.gridContStokHareket.Size = new System.Drawing.Size(1190, 196);
+            this.gridContStokHareket.Size = new System.Drawing.Size(1186, 197);
             this.gridContStokHareket.TabIndex = 2;
             this.gridContStokHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridStokHareket,
@@ -1640,7 +1640,7 @@
             // 
             this.faturaYazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
             this.faturaYazdırToolStripMenuItem.Name = "faturaYazdırToolStripMenuItem";
-            this.faturaYazdırToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.faturaYazdırToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.faturaYazdırToolStripMenuItem.Text = "Fatura Yazdır";
             this.faturaYazdırToolStripMenuItem.Click += new System.EventHandler(this.faturaYazdırToolStripMenuItem_Click);
             // 
@@ -1648,7 +1648,7 @@
             // 
             this.proformaFaturaYazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
             this.proformaFaturaYazdırToolStripMenuItem.Name = "proformaFaturaYazdırToolStripMenuItem";
-            this.proformaFaturaYazdırToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.proformaFaturaYazdırToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.proformaFaturaYazdırToolStripMenuItem.Text = "Proforma Fatura Yazdır";
             this.proformaFaturaYazdırToolStripMenuItem.Click += new System.EventHandler(this.proformaFaturaYazdırToolStripMenuItem_Click);
             // 
@@ -1656,7 +1656,7 @@
             // 
             this.siparişYazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
             this.siparişYazdırToolStripMenuItem.Name = "siparişYazdırToolStripMenuItem";
-            this.siparişYazdırToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.siparişYazdırToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.siparişYazdırToolStripMenuItem.Text = "Sipariş Yazdır";
             this.siparişYazdırToolStripMenuItem.Click += new System.EventHandler(this.siparişYazdırToolStripMenuItem_Click);
             // 
@@ -1664,7 +1664,7 @@
             // 
             this.teklifYazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
             this.teklifYazdırToolStripMenuItem.Name = "teklifYazdırToolStripMenuItem";
-            this.teklifYazdırToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.teklifYazdırToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.teklifYazdırToolStripMenuItem.Text = "Teklif Yazdır";
             this.teklifYazdırToolStripMenuItem.Click += new System.EventHandler(this.teklifYazdırToolStripMenuItem_Click);
             // 
@@ -1672,7 +1672,7 @@
             // 
             this.irsaliyeYazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
             this.irsaliyeYazdırToolStripMenuItem.Name = "irsaliyeYazdırToolStripMenuItem";
-            this.irsaliyeYazdırToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.irsaliyeYazdırToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.irsaliyeYazdırToolStripMenuItem.Text = "İrsaliye Yazdır";
             this.irsaliyeYazdırToolStripMenuItem.Click += new System.EventHandler(this.irsaliyeYazdırToolStripMenuItem_Click);
             // 
@@ -1680,7 +1680,7 @@
             // 
             this.bilgiFişiYazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
             this.bilgiFişiYazdırToolStripMenuItem.Name = "bilgiFişiYazdırToolStripMenuItem";
-            this.bilgiFişiYazdırToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.bilgiFişiYazdırToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.bilgiFişiYazdırToolStripMenuItem.Text = "Bilgi Fişi Yazdır";
             this.bilgiFişiYazdırToolStripMenuItem.Click += new System.EventHandler(this.bilgiFişiYazdırToolStripMenuItem_Click);
             // 
@@ -2282,7 +2282,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1190, 50);
+            this.panelControl1.Size = new System.Drawing.Size(1186, 50);
             this.panelControl1.TabIndex = 3;
             // 
             // btnUrunBul
@@ -2292,7 +2292,7 @@
             this.btnUrunBul.Appearance.Options.UseFont = true;
             this.btnUrunBul.ImageOptions.ImageIndex = 2;
             this.btnUrunBul.ImageOptions.ImageList = this.ımageList1;
-            this.btnUrunBul.Location = new System.Drawing.Point(1057, 12);
+            this.btnUrunBul.Location = new System.Drawing.Point(1053, 12);
             this.btnUrunBul.Name = "btnUrunBul";
             this.btnUrunBul.Size = new System.Drawing.Size(125, 36);
             this.btnUrunBul.TabIndex = 3;
@@ -2360,7 +2360,7 @@
             this.txtBarkod.Properties.Appearance.Options.UseForeColor = true;
             this.txtBarkod.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtBarkod.Size = new System.Drawing.Size(1040, 36);
+            this.txtBarkod.Size = new System.Drawing.Size(1036, 36);
             this.txtBarkod.TabIndex = 2;
             this.txtBarkod.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtBarkod_ButtonClick);
             this.txtBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyDown);
@@ -2718,7 +2718,7 @@
             this.navFisBilgi.Name = "navFisBilgi";
             this.navFisBilgi.Properties.ShowCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.navFisBilgi.Properties.ShowExpandButton = DevExpress.Utils.DefaultBoolean.False;
-            this.navFisBilgi.Size = new System.Drawing.Size(1190, 166);
+            this.navFisBilgi.Size = new System.Drawing.Size(1186, 167);
             // 
             // checkBirlestir
             // 

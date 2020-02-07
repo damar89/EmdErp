@@ -19,7 +19,7 @@ namespace NetSatis.BackOffice.Fiş
         public frmSatisRapor(DateTime baslangic, DateTime bitis)
         {
             InitializeComponent();
-            gridContFisler.DataSource = fisDal.ListelemelerTarihPerakende(context, "Perakende Satış Faturası", baslangic, bitis);
+            gridContFisler.DataSource = fisDal.ListelemelerTarih(context, "Perakende Satış Faturası","Toptan Satış Faturası", baslangic, bitis);
         }
 
         private void frmSatisRapor_Load(object sender, EventArgs e)

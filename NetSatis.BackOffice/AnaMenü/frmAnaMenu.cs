@@ -1086,7 +1086,7 @@ namespace NetSatis.BackOffice
                     btnCariHesapEkstre_LinkClicked(null, null);
                     break;
                 case "Günlük Kasa Raporu":
-                    navBarItem42_LinkClicked(null, null);
+                    navBarItem41_LinkClicked(null, null);
                     break;
                 case "Kasa Raporu Detaylı":
                     btnDetay_LinkClicked(null, null);

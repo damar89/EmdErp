@@ -28,12 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.dtpBaslangic = new DevExpress.XtraEditors.DateEdit();
-            this.dtpBitis = new DevExpress.XtraEditors.DateEdit();
             this.btnGoster = new DevExpress.XtraEditors.SimpleButton();
             this.lookUretici = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -58,12 +66,10 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.dtpBitis = new DevExpress.XtraEditors.DateEdit();
+            this.dtpBaslangic = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpBaslangic.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpBaslangic.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpBitis.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpBitis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUretici.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookMarka.Properties)).BeginInit();
@@ -74,6 +80,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lokKategori.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpBitis.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpBitis.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpBaslangic.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpBaslangic.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -107,67 +117,12 @@
             // 
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.ImageIndex = 1;
-            this.btnKapat.ImageOptions.SvgImage = global::NetSatis.BackOffice.Properties.Resources.del2;
             this.btnKapat.Location = new System.Drawing.Point(249, 23);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(85, 31);
             this.btnKapat.TabIndex = 0;
             this.btnKapat.Text = "Kapat";
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
-            // 
-            // dtpBaslangic
-            // 
-            this.dtpBaslangic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dtpBaslangic.EditValue = null;
-            this.dtpBaslangic.Location = new System.Drawing.Point(106, 15);
-            this.dtpBaslangic.Name = "dtpBaslangic";
-            this.dtpBaslangic.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpBaslangic.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.True;
-            this.dtpBaslangic.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpBaslangic.Properties.CalendarTimeProperties.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
-            this.dtpBaslangic.Properties.CalendarTimeProperties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
-            this.dtpBaslangic.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew;
-            this.dtpBaslangic.Properties.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
-            this.dtpBaslangic.Properties.DisplayFormat.FormatString = "F";
-            this.dtpBaslangic.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpBaslangic.Properties.EditFormat.FormatString = "";
-            this.dtpBaslangic.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpBaslangic.Properties.Mask.EditMask = "";
-            this.dtpBaslangic.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.dtpBaslangic.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.dtpBaslangic.Properties.MinValue = new System.DateTime(2018, 4, 27, 16, 34, 6, 0);
-            this.dtpBaslangic.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dtpBaslangic.Size = new System.Drawing.Size(190, 20);
-            this.dtpBaslangic.TabIndex = 0;
-            // 
-            // dtpBitis
-            // 
-            this.dtpBitis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dtpBitis.EditValue = null;
-            this.dtpBitis.Location = new System.Drawing.Point(106, 46);
-            this.dtpBitis.Name = "dtpBitis";
-            this.dtpBitis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpBitis.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.True;
-            this.dtpBitis.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpBitis.Properties.CalendarTimeProperties.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
-            this.dtpBitis.Properties.CalendarTimeProperties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
-            this.dtpBitis.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew;
-            this.dtpBitis.Properties.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
-            this.dtpBitis.Properties.DisplayFormat.FormatString = "F";
-            this.dtpBitis.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtpBitis.Properties.Mask.EditMask = "";
-            this.dtpBitis.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.dtpBitis.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.dtpBitis.Properties.MinValue = new System.DateTime(2018, 4, 27, 16, 34, 6, 0);
-            this.dtpBitis.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dtpBitis.Size = new System.Drawing.Size(190, 20);
-            this.dtpBitis.TabIndex = 1;
             // 
             // btnGoster
             // 
@@ -426,11 +381,74 @@
             this.labelControl2.TabIndex = 27;
             this.labelControl2.Text = "Kategori :";
             // 
+            // dtpBitis
+            // 
+            this.dtpBitis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dtpBitis.EditValue = null;
+            this.dtpBitis.Location = new System.Drawing.Point(106, 46);
+            this.dtpBitis.Name = "dtpBitis";
+            editorButtonImageOptions1.Image = global::NetSatis.BackOffice.Properties.Resources.today_16x161;
+            this.dtpBitis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "Bugünün Tarihi", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.dtpBitis.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.True;
+            this.dtpBitis.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpBitis.Properties.CalendarTimeProperties.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
+            this.dtpBitis.Properties.CalendarTimeProperties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
+            this.dtpBitis.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew;
+            this.dtpBitis.Properties.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
+            this.dtpBitis.Properties.DisplayFormat.FormatString = "F";
+            this.dtpBitis.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtpBitis.Properties.Mask.EditMask = "";
+            this.dtpBitis.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            this.dtpBitis.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.dtpBitis.Properties.MinValue = new System.DateTime(2018, 4, 27, 16, 34, 6, 0);
+            this.dtpBitis.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.dtpBitis.Size = new System.Drawing.Size(190, 22);
+            this.dtpBitis.TabIndex = 34;
+            this.dtpBitis.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.dtpBitis_ButtonClick);
+            // 
+            // dtpBaslangic
+            // 
+            this.dtpBaslangic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dtpBaslangic.EditValue = null;
+            this.dtpBaslangic.Location = new System.Drawing.Point(106, 15);
+            this.dtpBaslangic.Name = "dtpBaslangic";
+            editorButtonImageOptions2.Image = global::NetSatis.BackOffice.Properties.Resources.today_16x16;
+            this.dtpBaslangic.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "Bügünün Tarihi", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.dtpBaslangic.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.True;
+            this.dtpBaslangic.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpBaslangic.Properties.CalendarTimeProperties.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
+            this.dtpBaslangic.Properties.CalendarTimeProperties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
+            this.dtpBaslangic.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew;
+            this.dtpBaslangic.Properties.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
+            this.dtpBaslangic.Properties.DisplayFormat.FormatString = "F";
+            this.dtpBaslangic.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtpBaslangic.Properties.EditFormat.FormatString = "";
+            this.dtpBaslangic.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtpBaslangic.Properties.Mask.EditMask = "";
+            this.dtpBaslangic.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            this.dtpBaslangic.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.dtpBaslangic.Properties.MinValue = new System.DateTime(2018, 4, 27, 16, 34, 6, 0);
+            this.dtpBaslangic.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.dtpBaslangic.Properties.Click += new System.EventHandler(this.dtpBaslangic_Properties_Click);
+            this.dtpBaslangic.Size = new System.Drawing.Size(190, 22);
+            this.dtpBaslangic.TabIndex = 33;
+            this.dtpBaslangic.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.dtpBaslangic_ButtonClick);
+            // 
             // frmTarihliPesSatis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 319);
+            this.Controls.Add(this.dtpBitis);
+            this.Controls.Add(this.dtpBaslangic);
             this.Controls.Add(this.lookUretici);
             this.Controls.Add(this.lookMarka);
             this.Controls.Add(this.lookAltGrup);
@@ -441,8 +459,6 @@
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.dtpBitis);
-            this.Controls.Add(this.dtpBaslangic);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl1);
@@ -454,10 +470,6 @@
             this.Text = "Satış Raporu";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtpBaslangic.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpBaslangic.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpBitis.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpBitis.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUretici.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookMarka.Properties)).EndInit();
@@ -468,6 +480,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lokKategori.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpBitis.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpBitis.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpBaslangic.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpBaslangic.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -479,8 +495,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
-        public DevExpress.XtraEditors.DateEdit dtpBaslangic;
-        public DevExpress.XtraEditors.DateEdit dtpBitis;
         private DevExpress.XtraEditors.GridLookUpEdit lookUretici;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
@@ -504,5 +518,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl2;
+        public DevExpress.XtraEditors.DateEdit dtpBitis;
+        public DevExpress.XtraEditors.DateEdit dtpBaslangic;
     }
 }

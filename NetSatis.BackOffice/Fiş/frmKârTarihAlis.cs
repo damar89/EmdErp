@@ -17,7 +17,7 @@ namespace NetSatis.BackOffice.Fiş
     {
         FisDAL fisDal = new FisDAL();
         StokHareketDAL stokHareketDal = new StokHareketDAL();
-            KategoriDAL kategoriDal = new KategoriDAL();
+        KategoriDAL kategoriDal = new KategoriDAL();
         AnaGrupDAL anagrupDal = new AnaGrupDAL();
         AltGrupDAL altgrupDal = new AltGrupDAL();
         StokDAL stokDal = new StokDAL();
@@ -30,8 +30,8 @@ namespace NetSatis.BackOffice.Fiş
             lookAltGrup.Properties.DataSource = altgrupDal.GetAll(context);
             lookMarka.Properties.DataSource = stokDal.GetAll(context);
             lookUretici.Properties.DataSource = stokDal.GetAll(context);
-            dtpBaslangic.DateTime = new DateTime(DateTime.Now.Year, 1, 1,00,00,00);
-            dtpBitis.DateTime = new DateTime(DateTime.Now.Year, 12, 31,23,59,59);
+            dtpBaslangic.DateTime = new DateTime(DateTime.Now.Year, 1, 1, 00, 00, 00);
+            dtpBitis.DateTime = new DateTime(DateTime.Now.Year, 12, 31, 23, 59, 59);
         }
 
         private void btnGoster_Click(object sender, EventArgs e)
@@ -47,6 +47,22 @@ namespace NetSatis.BackOffice.Fiş
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dtpBaslangic_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            if (e.Button.Index == 1)
+            {
+                dtpBaslangic.DateTime = new DateTime(DateTime.Now.Year, 1, 1, 00, 00, 00);
+            }
+        }
+
+        private void dtpBitis_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            if (e.Button.Index == 1)
+            {
+                dtpBitis.DateTime = new DateTime(DateTime.Now.Year, 12, 31, 23, 59, 59);
+            }
         }
     }
 }

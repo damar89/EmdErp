@@ -89,7 +89,7 @@ namespace NetSatis.BackOffice.Stok
             }
             else
             {
-                gridContStoklar.DataSource = stokDal.StokListele(context,true);
+                gridContStoklar.DataSource = stokDal.StokListele(context, true);
             }
 
             gridContStoklar.ForceInitialize();
@@ -109,24 +109,33 @@ namespace NetSatis.BackOffice.Stok
 
                 this.Close();
             }
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                if (gridStoklar.GetSelectedRows().Length != 0)
+                if (e.KeyCode == Keys.Enter)
                 {
-                    foreach (var row in gridStoklar.GetSelectedRows())
+                    if (gridStoklar.GetSelectedRows().Length != 0)
                     {
-                        string stokKodu = gridStoklar.GetRowCellValue(row, colStokKodu).ToString();
-                        secilen.Add(context.Stoklar.SingleOrDefault(c => c.StokKodu == stokKodu));
-                    }
+                        foreach (var row in gridStoklar.GetSelectedRows())
+                        {
+                            string stokKodu = gridStoklar.GetRowCellValue(row, colStokKodu).ToString();
+                            secilen.Add(context.Stoklar.SingleOrDefault(c => c.StokKodu == stokKodu));
+                        }
 
-                    secildi = true;
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Seçilen bir ürün bulunamadı");
+                        secildi = true;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Seçilen bir ürün bulunamadı");
+                    }
                 }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
 
             if (e.Alt == true && e.KeyCode == Keys.Y)
             {
@@ -189,7 +198,7 @@ namespace NetSatis.BackOffice.Stok
                     sec = Convert.ToInt32(gridStoklar.GetFocusedRowCellValue(colId));
                     frmStokIslem form = new frmStokIslem(stokDal.GetByFilter(context, c => c.Id == sec));
                     form.ShowDialog();
-                   
+
                 }
                 else
                 {

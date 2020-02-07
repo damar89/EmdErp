@@ -11,9 +11,9 @@ namespace NetSatis.BackOffice.Fiş
     {
         NetSatisContext context = new NetSatisContext();
         FisDAL fisDal = new FisDAL();
-        KasaHareketDAL kasaHareketDal=new KasaHareketDAL();
-        StokHareketDAL stokHareketDal=new StokHareketDAL();
-        
+        KasaHareketDAL kasaHareketDal = new KasaHareketDAL();
+        StokHareketDAL stokHareketDal = new StokHareketDAL();
+
 
         public frmPerakendeListesi(DateTime baslangic, DateTime bitis)
         {
@@ -23,18 +23,20 @@ namespace NetSatis.BackOffice.Fiş
 
         private void frmPerakendeListesi_Load(object sender, EventArgs e)
         {
+            Listele();
         }
 
         private void Listele()
         {
-       
+            context = new NetSatisContext();
+            gridContFisler.DataSource = fisDal.PerakendeFis(context, "Perakende Satış Faturası", DateTime.MinValue, DateTime.MaxValue);
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-          Listele();
+            Listele();
         }
-        
+
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -65,11 +67,11 @@ namespace NetSatis.BackOffice.Fiş
             {
                 MessageBox.Show("Seçili fiş bulunamadı.");
             }
-         
+            Listele();
         }
 
-    
-      
+
+
         private void FisIslem_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             //frmFisIslem form=new frmFisIslem(null,e.Item.Caption);
@@ -81,7 +83,7 @@ namespace NetSatis.BackOffice.Fiş
             if (gridFisler.RowCount != 0)
             {
                 string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
-                frmFisIslem form = new frmFisIslem(secilen,null);
+                frmFisIslem form = new frmFisIslem(secilen, null);
                 form.Show();
             }
             else
@@ -144,7 +146,7 @@ namespace NetSatis.BackOffice.Fiş
 
         private void btnBilgiFisi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-                string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
+            string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
             FaturaHazirla f = new FaturaHazirla();
             f.BilgiFisi(secilen);
         }

@@ -28,6 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -38,7 +48,6 @@
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.dtpBaslangic = new DevExpress.XtraEditors.DateEdit();
             this.dtpBitis = new DevExpress.XtraEditors.DateEdit();
-            this.btnGoster = new DevExpress.XtraEditors.SimpleButton();
             this.lokKategori = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.lookAnaGrup = new DevExpress.XtraEditors.GridLookUpEdit();
@@ -58,6 +67,7 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKategoriKodu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKategoriAdi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnGoster = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpBaslangic.Properties.CalendarTimeProperties)).BeginInit();
@@ -143,7 +153,6 @@
             // 
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.ImageIndex = 1;
-            this.btnKapat.ImageOptions.SvgImage = global::NetSatis.BackOffice.Properties.Resources.del2;
             this.btnKapat.Location = new System.Drawing.Point(345, 23);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(85, 31);
@@ -158,8 +167,10 @@
             this.dtpBaslangic.EditValue = null;
             this.dtpBaslangic.Location = new System.Drawing.Point(106, 15);
             this.dtpBaslangic.Name = "dtpBaslangic";
+            editorButtonImageOptions1.Image = global::NetSatis.BackOffice.Properties.Resources.today_16x16;
             this.dtpBaslangic.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "Bügünün Tarihi", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.dtpBaslangic.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.True;
             this.dtpBaslangic.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -176,8 +187,10 @@
             this.dtpBaslangic.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dtpBaslangic.Properties.MinValue = new System.DateTime(2018, 4, 27, 16, 34, 6, 0);
             this.dtpBaslangic.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dtpBaslangic.Size = new System.Drawing.Size(190, 20);
+            this.dtpBaslangic.Properties.Click += new System.EventHandler(this.dtpBaslangic_Properties_Click);
+            this.dtpBaslangic.Size = new System.Drawing.Size(190, 22);
             this.dtpBaslangic.TabIndex = 0;
+            this.dtpBaslangic.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.dtpBaslangic_ButtonClick);
             // 
             // dtpBitis
             // 
@@ -186,8 +199,10 @@
             this.dtpBitis.EditValue = null;
             this.dtpBitis.Location = new System.Drawing.Point(106, 46);
             this.dtpBitis.Name = "dtpBitis";
+            editorButtonImageOptions2.Image = global::NetSatis.BackOffice.Properties.Resources.today_16x161;
             this.dtpBitis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "Bugünün Tarihi", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.dtpBitis.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.True;
             this.dtpBitis.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -202,18 +217,8 @@
             this.dtpBitis.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dtpBitis.Properties.MinValue = new System.DateTime(2018, 4, 27, 16, 34, 6, 0);
             this.dtpBitis.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dtpBitis.Size = new System.Drawing.Size(190, 20);
+            this.dtpBitis.Size = new System.Drawing.Size(190, 22);
             this.dtpBitis.TabIndex = 1;
-            // 
-            // btnGoster
-            // 
-            this.btnGoster.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.Göster1;
-            this.btnGoster.Location = new System.Drawing.Point(137, 226);
-            this.btnGoster.Name = "btnGoster";
-            this.btnGoster.Size = new System.Drawing.Size(89, 40);
-            this.btnGoster.TabIndex = 6;
-            this.btnGoster.Text = "Göster";
-            this.btnGoster.Click += new System.EventHandler(this.btnGoster_Click);
             // 
             // lokKategori
             // 
@@ -425,6 +430,16 @@
             this.colKategoriAdi.OptionsColumn.AllowEdit = false;
             this.colKategoriAdi.Visible = true;
             this.colKategoriAdi.VisibleIndex = 1;
+            // 
+            // btnGoster
+            // 
+            this.btnGoster.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.Göster1;
+            this.btnGoster.Location = new System.Drawing.Point(137, 226);
+            this.btnGoster.Name = "btnGoster";
+            this.btnGoster.Size = new System.Drawing.Size(89, 40);
+            this.btnGoster.TabIndex = 6;
+            this.btnGoster.Text = "Göster";
+            this.btnGoster.Click += new System.EventHandler(this.btnGoster_Click);
             // 
             // frmTarihliDetay
             // 

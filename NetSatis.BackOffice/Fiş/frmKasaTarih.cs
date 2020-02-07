@@ -59,5 +59,18 @@ namespace NetSatis.BackOffice.Raporlar
                 var p2 = MousePosition; popupMenu1.ShowPopup(p2);
             }
         }
+
+        private void dtpBaslangic_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+           dtpBaslangic.DateTime = new DateTime(DateTime.Now.Year, 1, 1, 00, 00, 00);
+        }
+
+        private void dtpBitis_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            if (e.Button.Index == 1)
+            {
+                dtpBitis.DateTime = Convert.ToDateTime(DateTime.Now);
+            }
+        }
     }
 }
