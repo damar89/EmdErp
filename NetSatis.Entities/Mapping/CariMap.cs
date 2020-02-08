@@ -24,12 +24,13 @@ namespace NetSatis.Entities.Mapping
             this.Property(p => p.Telefon3).HasMaxLength(200);
             this.Property(p => p.Fax).HasMaxLength(200);
             this.Property(p => p.EMail).HasMaxLength(500);
-             this.Property(p => p.EMail2).HasMaxLength(500);
+            this.Property(p => p.EMail2).HasMaxLength(500);
             this.Property(p => p.Web).HasMaxLength(500);
             this.Property(p => p.Il).HasMaxLength(200);
             this.Property(p => p.Ilce).HasMaxLength(200);
             this.Property(p => p.Semt).HasMaxLength(200);
             this.Property(p => p.Adres).HasMaxLength(1000);
+            this.Property(p => p.Adres2).HasMaxLength(1000);
             this.Property(p => p.CariGrubu).HasMaxLength(300);
             this.Property(p => p.CariAltGrubu).HasMaxLength(300);
             this.Property(p => p.OzelKod1).HasMaxLength(300);
@@ -66,6 +67,7 @@ namespace NetSatis.Entities.Mapping
             this.Property(p => p.KayitTarihi).HasColumnName("KayitTarihi");
             this.Property(p => p.GuncellemeTarihi).HasColumnName("GuncellemeTarihi");
             this.Property(p => p.Adres).HasColumnName("Adres");
+            this.Property(p => p.Adres2).HasColumnName("Adres2");
             this.Property(p => p.Il).HasColumnName("Il");
             this.Property(p => p.Ilce).HasColumnName("Ilce");
             this.Property(p => p.Semt).HasColumnName("Semt");
@@ -82,7 +84,7 @@ namespace NetSatis.Entities.Mapping
             this.Property(p => p.AlisOzelFiyati).HasColumnName("AlisOzelFiyati");
             this.Property(p => p.SatisOzelFiyati).HasColumnName("SatisOzelFiyati");
             this.Property(p => p.Aciklama).HasColumnName("Aciklama");
-              this.Property(p => p.SaveUser).HasColumnName("SaveUser");
+            this.Property(p => p.SaveUser).HasColumnName("SaveUser");
             this.Property(p => p.EditUser).HasColumnName("EditUser");
 
 

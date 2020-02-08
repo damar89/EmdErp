@@ -28,6 +28,7 @@ namespace NetSatis.Entities.Tables
         public string EMail2 { get; set; }
         public string Web { get; set; }
         public string Adres { get; set; }
+         public string Adres2 { get; set; }
         public string Il { get; set; }
         public string Ilce { get; set; }
         public string Semt { get; set; }

@@ -442,8 +442,8 @@ namespace NetSatis.Entities.Data_Access
         }
         public object ListelemelerTarihPerakende(NetSatisContext context, string fisTuru, DateTime baslangic, DateTime bitis)
         {
-            var tablo = context.Fisler.Where(c => (c.FisTuru == fisTuru ) && (c.Tarih >= baslangic && c.Tarih <= bitis)).GroupJoin(
-                context.Fisler.Where(c => c.FisTuru == fisTuru ), c => c.CariId, c => c.CariId,
+            var tablo = context.Fisler.Where(c => (c.FisTuru == fisTuru) && (c.Tarih >= baslangic && c.Tarih <= bitis)).GroupJoin(
+                context.Fisler.Where(c => c.FisTuru == fisTuru), c => c.CariId, c => c.CariId,
                 (fisler, cariler) =>
                    new
                    {
@@ -539,7 +539,7 @@ namespace NetSatis.Entities.Data_Access
                        fisler.IskontoTutari1,
 
                        fisler.DipIskNetTutari,
-                      
+
                        alacak =
                        (context.Fisler.Where(c => c.CariId == fisler.Cari.Id && c.FisTuru == "Alış Faturası")
                        .Sum(c => c.ToplamTutar) ?? 0) +
@@ -576,7 +576,7 @@ namespace NetSatis.Entities.Data_Access
                        k.DipIskNetTutari,
                        k.borc,
                        k.alacak,
-                       
+
                        bakiye = k.alacak - k.borc
                    }).ToList();
             return tablo;

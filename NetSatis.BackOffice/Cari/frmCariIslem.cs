@@ -116,18 +116,8 @@ namespace NetSatis.BackOffice.Cari
             calcIskonto.DataBindings[0].FormattingEnabled = true;
             calcIskonto.DataBindings[0].FormatString = "N2";
             calcIskonto.DataBindings[0].DataSourceNullValue = "0";
-            cmbAlisOzelFiyat.DataBindings.Add("Text", _entity, "AlisOzelFiyati", false,
-                DataSourceUpdateMode.OnPropertyChanged);
-            cmbAlisOzelFiyat.DataBindings[0].FormattingEnabled = true;
-            cmbAlisOzelFiyat.DataBindings[0].FormatString = "C2";
-            cmbAlisOzelFiyat.DataBindings[0].DataSourceNullValue = "0";
-            cmbAlisOzelFiyat.DataBindings[0].FormattingEnabled = true;
-            cmbSatisOzelFiyat.DataBindings.Add("Text", _entity, "SatisOzelFiyati", false,
-                DataSourceUpdateMode.OnPropertyChanged);
-            cmbSatisOzelFiyat.DataBindings[0].FormattingEnabled = true;
-            cmbSatisOzelFiyat.DataBindings[0].FormatString = "C2";
-            cmbSatisOzelFiyat.DataBindings[0].DataSourceNullValue = "0";
-            cmbSatisOzelFiyat.DataBindings[0].FormattingEnabled = true;
+       
+          
             calcRisklimit.DataBindings.Add("Text", _entity, "RiskLimiti", false,
                 DataSourceUpdateMode.OnPropertyChanged);
             calcRisklimit.DataBindings[0].FormattingEnabled = true;

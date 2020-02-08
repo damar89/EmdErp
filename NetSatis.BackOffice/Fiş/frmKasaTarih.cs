@@ -66,9 +66,10 @@ namespace NetSatis.BackOffice.Raporlar
             DateTime dtBaslangic = dtpBaslangic.DateTime;
             if (e.Button.Index == 1)
             {
-                dtpBaslangic.DateTime = Convert.ToDateTime(DateTime.Now);
+                  dtBaslangic.DateTime = Convert.ToDateTime(DateTime.Now);
 
-                dtBaslangic =dtBaslangic.AddYears(DateTime.Now).dtBaslangic.a(DateTime.Now).dtBaslangic.AddHours(00).AddMinutes(00).AddSeconds(00);
+
+                dtBaslangic = dtBaslangic.AddHours(23).AddMinutes(59).AddSeconds(59);
             }
         }
 

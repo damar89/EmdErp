@@ -30,8 +30,6 @@
         {
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
-            this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
-            this.FirmaAdi = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
@@ -89,6 +87,7 @@
             this.Detail.Dpi = 254F;
             this.Detail.Expanded = false;
             this.Detail.HeightF = 0F;
+            this.Detail.HierarchyPrintOptions.Indent = 20F;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -96,33 +95,12 @@
             // TopMargin
             // 
             this.TopMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel11,
             this.xrLabel12});
             this.TopMargin.Dpi = 254F;
             this.TopMargin.HeightF = 211F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel11
-            // 
-            this.xrLabel11.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding(this.FirmaAdi, "Text", "")});
-            this.xrLabel11.Dpi = 254F;
-            this.xrLabel11.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold);
-            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(413.8669F, 38.42918F);
-            this.xrLabel11.Name = "xrLabel11";
-            this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel11.SizeF = new System.Drawing.SizeF(1201.266F, 76.9408F);
-            this.xrLabel11.StylePriority.UseFont = false;
-            this.xrLabel11.StylePriority.UseTextAlignment = false;
-            this.xrLabel11.Text = "Cari Adı :";
-            this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
-            // FirmaAdi
-            // 
-            this.FirmaAdi.Description = "FirmaAdı";
-            this.FirmaAdi.Name = "FirmaAdi";
             // 
             // xrLabel12
             // 
@@ -173,6 +151,8 @@
             // 
             // lblIndirimTutari
             // 
+            this.lblIndirimTutari.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaBilgiler.FisIskontoTutari")});
             this.lblIndirimTutari.Dpi = 254F;
             this.lblIndirimTutari.LocationFloat = new DevExpress.Utils.PointFloat(1596.651F, 69.40662F);
             this.lblIndirimTutari.Name = "lblIndirimTutari";
@@ -216,6 +196,8 @@
             // 
             // lblGenelToplam
             // 
+            this.lblGenelToplam.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaBilgiler.FisGenelToplam")});
             this.lblGenelToplam.Dpi = 254F;
             this.lblGenelToplam.LocationFloat = new DevExpress.Utils.PointFloat(1596.651F, 186.2467F);
             this.lblGenelToplam.Name = "lblGenelToplam";
@@ -227,6 +209,8 @@
             // 
             // lblKdvToplam
             // 
+            this.lblKdvToplam.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaBilgiler.FisKDVToplam")});
             this.lblKdvToplam.Dpi = 254F;
             this.lblKdvToplam.LocationFloat = new DevExpress.Utils.PointFloat(1596.651F, 127.8265F);
             this.lblKdvToplam.Name = "lblKdvToplam";
@@ -238,6 +222,8 @@
             // 
             // lblAraToplam
             // 
+            this.lblAraToplam.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaBilgiler.FisAraToplam")});
             this.lblAraToplam.Dpi = 254F;
             this.lblAraToplam.LocationFloat = new DevExpress.Utils.PointFloat(1596.651F, 10.98673F);
             this.lblAraToplam.Name = "lblAraToplam";
@@ -361,6 +347,8 @@
             // 
             // lblCariAdi
             // 
+            this.lblCariAdi.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaBilgiler.CariAdiFaturaUnvan")});
             this.lblCariAdi.Dpi = 254F;
             this.lblCariAdi.LocationFloat = new DevExpress.Utils.PointFloat(298.4781F, 34.88571F);
             this.lblCariAdi.Name = "lblCariAdi";
@@ -370,6 +358,8 @@
             // 
             // lblAdres
             // 
+            this.lblAdres.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaBilgiler.CariAdres")});
             this.lblAdres.Dpi = 254F;
             this.lblAdres.LocationFloat = new DevExpress.Utils.PointFloat(298.4781F, 146.2223F);
             this.lblAdres.Name = "lblAdres";
@@ -379,6 +369,8 @@
             // 
             // lblIkametgah
             // 
+            this.lblIkametgah.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaBilgiler.CariIkamet")});
             this.lblIkametgah.Dpi = 254F;
             this.lblIkametgah.LocationFloat = new DevExpress.Utils.PointFloat(298.4781F, 241.6841F);
             this.lblIkametgah.Name = "lblIkametgah";
@@ -388,6 +380,8 @@
             // 
             // lblTarih
             // 
+            this.lblTarih.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaBilgiler.FaturaTarihi")});
             this.lblTarih.Dpi = 254F;
             this.lblTarih.LocationFloat = new DevExpress.Utils.PointFloat(298.4781F, 300.104F);
             this.lblTarih.Name = "lblTarih";
@@ -397,6 +391,8 @@
             // 
             // lblVergiNo
             // 
+            this.lblVergiNo.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaBilgiler.CariVergiNo")});
             this.lblVergiNo.Dpi = 254F;
             this.lblVergiNo.LocationFloat = new DevExpress.Utils.PointFloat(298.4781F, 416.9442F);
             this.lblVergiNo.Name = "lblVergiNo";
@@ -405,6 +401,8 @@
             // 
             // lblVergiDairesi
             // 
+            this.lblVergiDairesi.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaBilgiler.CariVergiDairesi")});
             this.lblVergiDairesi.Dpi = 254F;
             this.lblVergiDairesi.LocationFloat = new DevExpress.Utils.PointFloat(298.4781F, 358.5243F);
             this.lblVergiDairesi.Name = "lblVergiDairesi";
@@ -505,6 +503,7 @@
             this.xrTable1});
             this.Detail1.Dpi = 254F;
             this.Detail1.HeightF = 37.04167F;
+            this.Detail1.HierarchyPrintOptions.Indent = 20F;
             this.Detail1.Name = "Detail1";
             // 
             // xrTable1
@@ -541,6 +540,8 @@
             // 
             // colStokKodu
             // 
+            this.colStokKodu.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaKalemler.KalemStokKodu")});
             this.colStokKodu.Dpi = 254F;
             this.colStokKodu.Name = "colStokKodu";
             this.colStokKodu.StylePriority.UseTextAlignment = false;
@@ -550,6 +551,8 @@
             // 
             // colStokAdi
             // 
+            this.colStokAdi.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaKalemler.KalemStokAdi")});
             this.colStokAdi.Dpi = 254F;
             this.colStokAdi.Font = new System.Drawing.Font("Times New Roman", 8F);
             this.colStokAdi.Name = "colStokAdi";
@@ -561,6 +564,8 @@
             // 
             // colBirim
             // 
+            this.colBirim.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaKalemler.KalemBirim")});
             this.colBirim.Dpi = 254F;
             this.colBirim.Name = "colBirim";
             this.colBirim.Text = "colBirim";
@@ -568,6 +573,8 @@
             // 
             // colMiktar
             // 
+            this.colMiktar.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaKalemler.KalemMiktar")});
             this.colMiktar.Dpi = 254F;
             this.colMiktar.Name = "colMiktar";
             this.colMiktar.Text = "colMiktar";
@@ -575,6 +582,8 @@
             // 
             // colBirimFiyati
             // 
+            this.colBirimFiyati.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaKalemler.KalemBirimFiyati")});
             this.colBirimFiyati.Dpi = 254F;
             this.colBirimFiyati.Name = "colBirimFiyati";
             this.colBirimFiyati.Text = "colBirimFiyati";
@@ -582,12 +591,16 @@
             // 
             // colIskonto
             // 
+            this.colIskonto.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaKalemler.KalemIskonto")});
             this.colIskonto.Dpi = 254F;
             this.colIskonto.Name = "colIskonto";
             this.colIskonto.Weight = 0.36324108763574686D;
             // 
             // colKdv
             // 
+            this.colKdv.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "FaturaKalemler.KalemKDV")});
             this.colKdv.Dpi = 254F;
             this.colKdv.Name = "colKdv";
             this.colKdv.Text = "colKdv";
@@ -625,12 +638,10 @@
             this.PageHeight = 2970;
             this.PageWidth = 2100;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
-            this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
-            this.FirmaAdi});
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
             this.ShowPrintMarginsWarning = false;
             this.SnapGridSize = 25F;
-            this.Version = "17.1";
+            this.Version = "19.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSEtler1)).EndInit();
@@ -645,8 +656,6 @@
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
         private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
         private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel11;
-        private DevExpress.XtraReports.Parameters.Parameter FirmaAdi;
         private DevExpress.XtraReports.UI.XRLabel xrLabel12;
         private DevExpress.XtraReports.UI.XRLabel lblCariAdi;
         private DevExpress.XtraReports.UI.XRLabel lblAdres;
