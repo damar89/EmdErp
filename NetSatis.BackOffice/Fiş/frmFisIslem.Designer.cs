@@ -447,7 +447,7 @@
             this.lblBaslik.Location = new System.Drawing.Point(0, 0);
             this.lblBaslik.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(1272, 27);
+            this.lblBaslik.Size = new System.Drawing.Size(1266, 27);
             this.lblBaslik.TabIndex = 0;
             this.lblBaslik.Text = "Fiş ve Fatura İşlemleri";
             this.lblBaslik.Click += new System.EventHandler(this.lblBaslik_Click);
@@ -474,7 +474,7 @@
             this.btnSatisBitir.ImageOptions.ImageIndex = 4;
             this.btnSatisBitir.ImageOptions.ImageList = this.ımageList1;
             this.btnSatisBitir.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSatisBitir.ImageOptions.SvgImage")));
-            this.btnSatisBitir.Location = new System.Drawing.Point(1056, 5);
+            this.btnSatisBitir.Location = new System.Drawing.Point(1050, 5);
             this.btnSatisBitir.Name = "btnSatisBitir";
             this.btnSatisBitir.Size = new System.Drawing.Size(117, 39);
             this.btnSatisBitir.TabIndex = 5;
@@ -486,7 +486,7 @@
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.ImageIndex = 3;
             this.btnKapat.ImageOptions.ImageList = this.ımageList1;
-            this.btnKapat.Location = new System.Drawing.Point(1179, 5);
+            this.btnKapat.Location = new System.Drawing.Point(1173, 5);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(85, 39);
             this.btnKapat.TabIndex = 5;
@@ -499,10 +499,10 @@
             this.groupControl1.Controls.Add(this.btnKaydetYeni);
             this.groupControl1.Controls.Add(this.btnSatisBitir);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 670);
+            this.groupControl1.Location = new System.Drawing.Point(0, 664);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(1272, 49);
+            this.groupControl1.Size = new System.Drawing.Size(1266, 49);
             this.groupControl1.TabIndex = 12;
             // 
             // btnKaydetYeni
@@ -510,7 +510,7 @@
             this.btnKaydetYeni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKaydetYeni.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydetYeni.ImageOptions.Image")));
             this.btnKaydetYeni.ImageOptions.ImageIndex = 1;
-            this.btnKaydetYeni.Location = new System.Drawing.Point(917, 5);
+            this.btnKaydetYeni.Location = new System.Drawing.Point(911, 5);
             this.btnKaydetYeni.Name = "btnKaydetYeni";
             this.btnKaydetYeni.Size = new System.Drawing.Size(132, 39);
             this.btnKaydetYeni.TabIndex = 5;
@@ -603,9 +603,9 @@
             this.grpToplamlar.Controls.Add(this.panelIndirim);
             this.grpToplamlar.Controls.Add(this.panelToplam);
             this.grpToplamlar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grpToplamlar.Location = new System.Drawing.Point(0, 531);
+            this.grpToplamlar.Location = new System.Drawing.Point(0, 525);
             this.grpToplamlar.Name = "grpToplamlar";
-            this.grpToplamlar.Size = new System.Drawing.Size(1272, 139);
+            this.grpToplamlar.Size = new System.Drawing.Size(1266, 139);
             this.grpToplamlar.TabIndex = 13;
             this.grpToplamlar.Text = " ";
             // 
@@ -639,7 +639,7 @@
             this.panelKooperatif.Controls.Add(this.labelControl16);
             this.panelKooperatif.Controls.Add(this.labelControl18);
             this.panelKooperatif.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelKooperatif.Location = new System.Drawing.Point(291, 21);
+            this.panelKooperatif.Location = new System.Drawing.Point(285, 21);
             this.panelKooperatif.Name = "panelKooperatif";
             this.panelKooperatif.Size = new System.Drawing.Size(251, 116);
             this.panelKooperatif.TabIndex = 7;
@@ -801,7 +801,7 @@
             this.panelOdeme.Controls.Add(this.labelControl5);
             this.panelOdeme.Controls.Add(this.labelControl4);
             this.panelOdeme.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelOdeme.Location = new System.Drawing.Point(542, 21);
+            this.panelOdeme.Location = new System.Drawing.Point(536, 21);
             this.panelOdeme.Name = "panelOdeme";
             this.panelOdeme.Size = new System.Drawing.Size(250, 116);
             this.panelOdeme.TabIndex = 2;
@@ -925,7 +925,7 @@
             this.panelIndirim.Controls.Add(this.calcIndirimTutari);
             this.panelIndirim.Controls.Add(this.calcIndirimOrani);
             this.panelIndirim.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelIndirim.Location = new System.Drawing.Point(792, 21);
+            this.panelIndirim.Location = new System.Drawing.Point(786, 21);
             this.panelIndirim.Name = "panelIndirim";
             this.panelIndirim.Size = new System.Drawing.Size(231, 116);
             this.panelIndirim.TabIndex = 0;
@@ -1060,7 +1060,7 @@
             this.panelToplam.Controls.Add(this.panelControl3);
             this.panelToplam.Controls.Add(this.grpGenelToplam);
             this.panelToplam.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelToplam.Location = new System.Drawing.Point(1023, 21);
+            this.panelToplam.Location = new System.Drawing.Point(1017, 21);
             this.panelToplam.Name = "panelToplam";
             this.panelToplam.Size = new System.Drawing.Size(247, 116);
             this.panelToplam.TabIndex = 6;
@@ -1173,15 +1173,15 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1272, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1266, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 719);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 713);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1272, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1266, 0);
             // 
             // barDockControlLeft
             // 
@@ -1189,15 +1189,15 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 719);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 713);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1272, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(1266, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 719);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 713);
             // 
             // barFiyat1
             // 
@@ -1559,7 +1559,7 @@
             this.navSatisEkrani.Name = "navSatisEkrani";
             this.navSatisEkrani.Properties.ShowCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.navSatisEkrani.Properties.ShowExpandButton = DevExpress.Utils.DefaultBoolean.False;
-            this.navSatisEkrani.Size = new System.Drawing.Size(1186, 247);
+            this.navSatisEkrani.Size = new System.Drawing.Size(1190, 246);
             // 
             // gridContStokHareket
             // 
@@ -1578,7 +1578,7 @@
             this.repoIskonto,
             this.repositoryItemButtonEdit5,
             this.repositoryItemButtonEdit6});
-            this.gridContStokHareket.Size = new System.Drawing.Size(1186, 197);
+            this.gridContStokHareket.Size = new System.Drawing.Size(1190, 196);
             this.gridContStokHareket.TabIndex = 2;
             this.gridContStokHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridStokHareket,
@@ -2282,7 +2282,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1186, 50);
+            this.panelControl1.Size = new System.Drawing.Size(1190, 50);
             this.panelControl1.TabIndex = 3;
             // 
             // btnUrunBul
@@ -2292,7 +2292,7 @@
             this.btnUrunBul.Appearance.Options.UseFont = true;
             this.btnUrunBul.ImageOptions.ImageIndex = 2;
             this.btnUrunBul.ImageOptions.ImageList = this.ımageList1;
-            this.btnUrunBul.Location = new System.Drawing.Point(1053, 12);
+            this.btnUrunBul.Location = new System.Drawing.Point(1057, 12);
             this.btnUrunBul.Name = "btnUrunBul";
             this.btnUrunBul.Size = new System.Drawing.Size(125, 36);
             this.btnUrunBul.TabIndex = 3;
@@ -2360,7 +2360,7 @@
             this.txtBarkod.Properties.Appearance.Options.UseForeColor = true;
             this.txtBarkod.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtBarkod.Size = new System.Drawing.Size(1036, 36);
+            this.txtBarkod.Size = new System.Drawing.Size(1040, 36);
             this.txtBarkod.TabIndex = 2;
             this.txtBarkod.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtBarkod_ButtonClick);
             this.txtBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyDown);
@@ -2377,9 +2377,9 @@
             this.navSatisEkrani,
             this.navPersonelIslem,
             this.navOdemeEkrani});
-            this.navMasraf.RegularSize = new System.Drawing.Size(1272, 292);
+            this.navMasraf.RegularSize = new System.Drawing.Size(1266, 286);
             this.navMasraf.SelectedPage = this.navSatisEkrani;
-            this.navMasraf.Size = new System.Drawing.Size(1272, 292);
+            this.navMasraf.Size = new System.Drawing.Size(1266, 286);
             this.navMasraf.TabIndex = 0;
             this.navMasraf.Text = "Masraf Girişi";
             // 
@@ -2718,7 +2718,7 @@
             this.navFisBilgi.Name = "navFisBilgi";
             this.navFisBilgi.Properties.ShowCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.navFisBilgi.Properties.ShowExpandButton = DevExpress.Utils.DefaultBoolean.False;
-            this.navFisBilgi.Size = new System.Drawing.Size(1186, 167);
+            this.navFisBilgi.Size = new System.Drawing.Size(1190, 166);
             // 
             // checkBirlestir
             // 
@@ -3331,9 +3331,9 @@
             this.navigationPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navFisBilgi,
             this.navPlasiyerBilgi});
-            this.navigationPane1.RegularSize = new System.Drawing.Size(1272, 212);
+            this.navigationPane1.RegularSize = new System.Drawing.Size(1266, 212);
             this.navigationPane1.SelectedPage = this.navFisBilgi;
-            this.navigationPane1.Size = new System.Drawing.Size(1272, 212);
+            this.navigationPane1.Size = new System.Drawing.Size(1266, 212);
             this.navigationPane1.TabIndex = 1;
             this.navigationPane1.Text = "navigationPane1";
             // 
@@ -3352,7 +3352,7 @@
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1272, 719);
+            this.ClientSize = new System.Drawing.Size(1266, 713);
             this.Controls.Add(this.navMasraf);
             this.Controls.Add(this.grpToplamlar);
             this.Controls.Add(this.groupControl1);
