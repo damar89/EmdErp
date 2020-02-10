@@ -279,7 +279,7 @@ namespace NetSatis.BackOffice
         {
             frmFis form = new frmFis();
             form.MdiParent = this;
-            form.Show();
+            form.ShowDialog();
         }
 
         private void btnEkTanim_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -291,7 +291,7 @@ namespace NetSatis.BackOffice
         private void btnStokAc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frmStokIslem form = new frmStokIslem(new Entities.Tables.Stok());
-            form.Show();
+            form.ShowDialog();
 
 
         }

@@ -1705,7 +1705,6 @@ namespace NetSatis.FrontOffice
             if (serialPort1.IsOpen == true)
             {
                 serialPort1.Close();
-
             }
         }
 
@@ -1730,7 +1729,7 @@ namespace NetSatis.FrontOffice
 
         private void btnPerakendeSatis_Click(object sender, EventArgs e)
         {
-            frmPerakendeTarihFilter frm = new frmPerakendeTarihFilter();
+            frmPerakendeTarihFilter frm = new frmPerakendeTarihFilter(RoleTool.KullaniciEntity.Id);
             frm.Show();
         }
     }

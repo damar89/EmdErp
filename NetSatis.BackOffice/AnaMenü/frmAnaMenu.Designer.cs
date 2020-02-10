@@ -1966,7 +1966,7 @@
             this.btnHareketTipi,
             this.navBarItem27,
             this.navBarItem30});
-            this.navBarControl1.Location = new System.Drawing.Point(628, 192);
+            this.navBarControl1.Location = new System.Drawing.Point(517, 156);
             this.navBarControl1.LookAndFeel.SkinMaskColor = System.Drawing.Color.White;
             this.navBarControl1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Style3D;
             this.navBarControl1.Name = "navBarControl1";

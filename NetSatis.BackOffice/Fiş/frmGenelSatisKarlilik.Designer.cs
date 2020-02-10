@@ -498,6 +498,7 @@
             this.gridContStokHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridStokHareket,
             this.gridView2});
+            this.gridContStokHareket.Click += new System.EventHandler(this.gridContStokHareket_Click);
             // 
             // gridStokHareket
             // 
@@ -571,7 +572,7 @@
             this.colStokKodu.OptionsColumn.AllowEdit = false;
             this.colStokKodu.Visible = true;
             this.colStokKodu.VisibleIndex = 1;
-            this.colStokKodu.Width = 87;
+            this.colStokKodu.Width = 82;
             // 
             // colHareket
             // 
@@ -581,7 +582,7 @@
             this.colHareket.OptionsColumn.AllowEdit = false;
             this.colHareket.Visible = true;
             this.colHareket.VisibleIndex = 0;
-            this.colHareket.Width = 21;
+            this.colHareket.Width = 73;
             // 
             // colStokAdi
             // 
@@ -591,7 +592,7 @@
             this.colStokAdi.OptionsColumn.AllowEdit = false;
             this.colStokAdi.Visible = true;
             this.colStokAdi.VisibleIndex = 2;
-            this.colStokAdi.Width = 192;
+            this.colStokAdi.Width = 182;
             // 
             // colBarkodTuru
             // 
@@ -619,7 +620,7 @@
             this.colTarih.OptionsColumn.AllowEdit = false;
             this.colTarih.Visible = true;
             this.colTarih.VisibleIndex = 3;
-            this.colTarih.Width = 71;
+            this.colTarih.Width = 67;
             // 
             // colSaat
             // 
@@ -640,7 +641,7 @@
             this.colBirimi.OptionsColumn.AllowEdit = false;
             this.colBirimi.Visible = true;
             this.colBirimi.VisibleIndex = 4;
-            this.colBirimi.Width = 51;
+            this.colBirimi.Width = 48;
             // 
             // colMiktar
             // 
@@ -652,7 +653,7 @@
             this.colMiktar.OptionsColumn.AllowEdit = false;
             this.colMiktar.Visible = true;
             this.colMiktar.VisibleIndex = 5;
-            this.colMiktar.Width = 62;
+            this.colMiktar.Width = 59;
             // 
             // colKdv
             // 
@@ -806,7 +807,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "UrunSatisFiyatiToplam", "Toplam Satış={0:C2}")});
             this.colNetTutar.Visible = true;
             this.colNetTutar.VisibleIndex = 9;
-            this.colNetTutar.Width = 101;
+            this.colNetTutar.Width = 96;
             // 
             // colKarTutar
             // 
@@ -826,7 +827,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "KarZararTutari", "Kâr Tutarı={0:C2}")});
             this.colKarTutar.Visible = true;
             this.colKarTutar.VisibleIndex = 10;
-            this.colKarTutar.Width = 122;
+            this.colKarTutar.Width = 116;
             // 
             // colKarOran
             // 
@@ -845,7 +846,7 @@
             this.colKarOran.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.colKarOran.Visible = true;
             this.colKarOran.VisibleIndex = 11;
-            this.colKarOran.Width = 130;
+            this.colKarOran.Width = 128;
             // 
             // colAlisFiyat
             // 
@@ -857,7 +858,7 @@
             this.colAlisFiyat.OptionsColumn.AllowEdit = false;
             this.colAlisFiyat.Visible = true;
             this.colAlisFiyat.VisibleIndex = 6;
-            this.colAlisFiyat.Width = 70;
+            this.colAlisFiyat.Width = 66;
             // 
             // colBirimFiyati
             // 
@@ -869,7 +870,7 @@
             this.colBirimFiyati.OptionsColumn.AllowEdit = false;
             this.colBirimFiyati.Visible = true;
             this.colBirimFiyati.VisibleIndex = 7;
-            this.colBirimFiyati.Width = 74;
+            this.colBirimFiyati.Width = 70;
             // 
             // colAlisToplami
             // 
@@ -889,7 +890,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "AlisToplam", "Toplam Alış ={0:C2}")});
             this.colAlisToplami.Visible = true;
             this.colAlisToplami.VisibleIndex = 8;
-            this.colAlisToplami.Width = 122;
+            this.colAlisToplami.Width = 116;
             // 
             // repoFiyat
             // 

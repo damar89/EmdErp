@@ -255,7 +255,8 @@ namespace NetSatis.Entities.Data_Access
                         k.AlisToplam,
                         k.NetTutar,
                         KarTutari = (k.NetTutar - k.AlisToplam) ?? 0,
-                        KdvToplam = k.ToplamTutar - (k.ToplamTutar * k.Kdv / 100)
+                        KdvToplam = k.ToplamTutar - (k.ToplamTutar * k.Kdv / 100),
+                        karOran =  k.AlisToplam == 0 ? ""  :  ((k.NetTutar -k.AlisToplam) / k.AlisToplam * 100).ToString(),
                     }).ToList();
             return tablo;
         }

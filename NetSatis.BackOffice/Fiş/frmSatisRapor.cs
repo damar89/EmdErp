@@ -15,11 +15,12 @@ namespace NetSatis.BackOffice.Fiş
         KasaHareketDAL kasaHareketDal = new KasaHareketDAL();
         StokHareketDAL stokHareketDal = new StokHareketDAL();
 
-
-        public frmSatisRapor(DateTime baslangic, DateTime bitis)
+        int user = 0;
+        public frmSatisRapor(DateTime baslangic, DateTime bitis, int userId = 0)
         {
+            user = userId;
             InitializeComponent();
-            gridContFisler.DataSource = fisDal.ListelemelerTarih(context, "Perakende Satış Faturası","Toptan Satış Faturası", baslangic, bitis);
+            gridContFisler.DataSource = fisDal.ListelemelerTarih(context, "Perakende Satış Faturası", "Toptan Satış Faturası", baslangic, bitis);
         }
 
         private void frmSatisRapor_Load(object sender, EventArgs e)
@@ -87,7 +88,7 @@ namespace NetSatis.BackOffice.Fiş
 
         private void FisIslem_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmFisIslem form = new frmFisIslem(null, e.Item.Caption);
+            frmFisIslem form = new frmFisIslem(null, e.Item.Caption, false, null, user);
             form.Show();
         }
 
@@ -99,7 +100,7 @@ namespace NetSatis.BackOffice.Fiş
                 {
                     string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
                     string fisturu = gridFisler.GetFocusedRowCellValue(colFisTuru).ToString();
-                    frmFisIslem form = new frmFisIslem(secilen, fisturu);
+                    frmFisIslem form = new frmFisIslem(secilen, fisturu, false, null, user);
                     form.Show();
                 }
                 else
@@ -119,7 +120,7 @@ namespace NetSatis.BackOffice.Fiş
         {
             string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
             string fisturu = gridFisler.GetFocusedRowCellValue(colFisTuru).ToString();
-            frmFisIslem form = new frmFisIslem(secilen, fisturu);
+            frmFisIslem form = new frmFisIslem(secilen, fisturu, false, null, user);
             form.Show();
         }
 
@@ -143,7 +144,9 @@ namespace NetSatis.BackOffice.Fiş
             if (gridFisler.RowCount != 0)
             {
                 string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
-                frmFisIslem form = new frmFisIslem(secilen, null);
+                string fisturu = gridFisler.GetFocusedRowCellValue(colFisTuru).ToString();
+
+                frmFisIslem form = new frmFisIslem(secilen, fisturu, false, null, user);
                 form.Show();
             }
             else
@@ -204,7 +207,7 @@ namespace NetSatis.BackOffice.Fiş
 
         private void btnExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-             SaveFileDialog save = new SaveFileDialog();
+            SaveFileDialog save = new SaveFileDialog();
             if (save.ShowDialog() == DialogResult.OK)
             {
 
@@ -214,7 +217,7 @@ namespace NetSatis.BackOffice.Fiş
 
         private void btnWord_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-                 SaveFileDialog save = new SaveFileDialog();
+            SaveFileDialog save = new SaveFileDialog();
             if (save.ShowDialog() == DialogResult.OK)
             {
 
@@ -224,7 +227,7 @@ namespace NetSatis.BackOffice.Fiş
 
         private void btnBilgiFisi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-              string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
+            string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
             FaturaHazirla f = new FaturaHazirla();
             f.BilgiFisi(secilen);
         }

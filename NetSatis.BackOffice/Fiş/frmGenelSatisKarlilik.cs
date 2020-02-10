@@ -109,5 +109,10 @@ namespace NetSatis.BackOffice.Fiş
                 btnKapat.PerformClick();
             }
         }
+
+        private void gridContStokHareket_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

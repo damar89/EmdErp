@@ -446,12 +446,11 @@
             this.colKarOran.Caption = "Kâr Oranı";
             this.colKarOran.DisplayFormat.FormatString = "n2";
             this.colKarOran.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colKarOran.FieldName = "colKarOran";
+            this.colKarOran.FieldName = "karOran";
             this.colKarOran.Name = "colKarOran";
             this.colKarOran.OptionsColumn.AllowEdit = false;
             this.colKarOran.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Average, "colKarOran", "Kâr Ortalaması : {0:N2}")});
-            this.colKarOran.UnboundExpression = "([NetTutar] - [AlisToplam]) / [AlisToplam] * 100";
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Average, "karOran", "Kâr Ortalaması : {0:N2}")});
             this.colKarOran.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.colKarOran.Visible = true;
             this.colKarOran.VisibleIndex = 13;

@@ -25,8 +25,10 @@ namespace NetSatis.BackOffice.Raporlar
         AltGrupDAL altgrupDal = new AltGrupDAL();
         StokDAL stokDal = new StokDAL();
         NetSatisContext context = new NetSatisContext();
-        public frmPerakendeTarihFilter()
+        int user = 0;
+        public frmPerakendeTarihFilter(int userId = 0)
         {
+            user = userId;
             InitializeComponent();
 
             dtpBaslangic.DateTime = new DateTime(DateTime.Now.Year, 1, 1, 00, 00, 00);
@@ -39,7 +41,7 @@ namespace NetSatis.BackOffice.Raporlar
             DateTime dtBaslangic = dtpBaslangic.DateTime;
             DateTime dtBitis = dtpBitis.DateTime;
             dtBitis = dtBitis.AddHours(23).AddMinutes(59).AddSeconds(59);
-            frmSatisRapor form = new frmSatisRapor(dtBaslangic, dtBitis);
+            frmSatisRapor form = new frmSatisRapor(dtBaslangic, dtBitis,user);
             form.Show();
             this.Close();
         }
@@ -49,19 +51,21 @@ namespace NetSatis.BackOffice.Raporlar
             this.Close();
         }
 
-        private void dtpBaslangic_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+     private void dtpBaslangic_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             if (e.Button.Index == 1)
             {
-                dtpBaslangic.DateTime = new DateTime(DateTime.Now.Year, 1, 1, 00, 00, 00);
+                 dtpBaslangic.EditValue = new DateTime(DateTime.Now.Year,DateTime.Now.Month,DateTime.Now.Day , 0,0,0);
             }
         }
 
         private void dtpBitis_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+          
             if (e.Button.Index == 1)
             {
-                dtpBitis.DateTime = new DateTime(DateTime.Now.Year, 12, 31, 23, 59, 59);
+
+                dtpBitis.EditValue = new DateTime(DateTime.Now.Year,DateTime.Now.Month,DateTime.Now.Day , 23,59,59);
             }
         }
     }

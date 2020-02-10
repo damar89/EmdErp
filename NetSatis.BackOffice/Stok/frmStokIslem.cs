@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using NetSatis.BackOffice.Extensions;
 using NetSatis.BackOffice.Tanım;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
@@ -682,7 +683,7 @@ namespace NetSatis.BackOffice.Stok
             kaydetYeni = true;
             btnKaydet_Click(null, null);
             kaydetYeni = false;
-            btnYeni_Click(null,null);
+            btnYeni_Click(null, null);
             togDurum.EditValue = true;
             togWeb.EditValue = false;
             txtKod.Focus();
@@ -1029,7 +1030,7 @@ namespace NetSatis.BackOffice.Stok
         {
             this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
         }
-     
+
         private void calcSatisFiyat2_Enter(object sender, EventArgs e)
         {
             this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
@@ -1037,22 +1038,35 @@ namespace NetSatis.BackOffice.Stok
 
         private void calcSatisFiyat3_Enter(object sender, EventArgs e)
         {
-             this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
+            this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
         }
 
         private void calcSatisFiyat4_Enter(object sender, EventArgs e)
         {
-             this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
+            this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
         }
 
         private void calcWebSatisFiyat_Enter(object sender, EventArgs e)
         {
-             this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
+            this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
         }
 
         private void calcwebBayiSatisFiyat_Enter(object sender, EventArgs e)
         {
-             this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
+            this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
+        }
+
+        private void calcAlisFiyat1_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                calcAlisFiyat2.EditValue = calcAlisFiyat1.EditValue.GetDecimal() + (calcAlisFiyat1.EditValue.GetDecimal() * calcSatisKdv.EditValue.GetDecimal() / 100);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

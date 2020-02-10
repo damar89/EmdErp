@@ -286,6 +286,7 @@
     <Compile Include="Döviz Kurları\frmDovizKurlari.Designer.cs">
       <DependentUpon>frmDovizKurlari.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\ObjectExtension.cs" />
     <Compile Include="Fiyat Değiştir\frmFiyatDegistir.cs">
       <SubType>Form</SubType>
     </Compile>

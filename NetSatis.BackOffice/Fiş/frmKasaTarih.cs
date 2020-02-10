@@ -62,27 +62,19 @@ namespace NetSatis.BackOffice.Raporlar
 
         private void dtpBaslangic_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-
-            DateTime dtBaslangic = dtpBaslangic.DateTime;
             if (e.Button.Index == 1)
             {
-                  dtBaslangic.DateTime = Convert.ToDateTime(DateTime.Now);
-
-
-                dtBaslangic = dtBaslangic.AddHours(23).AddMinutes(59).AddSeconds(59);
+                 dtpBaslangic.EditValue = new DateTime(DateTime.Now.Year,DateTime.Now.Month,DateTime.Now.Day , 0,0,0);
             }
         }
 
         private void dtpBitis_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            DateTime dtBitis = dtpBitis.DateTime;
+          
             if (e.Button.Index == 1)
             {
 
-                dtpBitis.DateTime = Convert.ToDateTime(DateTime.Now);
-
-
-                dtBitis = dtBitis.AddHours(23).AddMinutes(59).AddSeconds(59);
+                dtpBitis.EditValue = new DateTime(DateTime.Now.Year,DateTime.Now.Month,DateTime.Now.Day , 23,59,59);
             }
         }
     }

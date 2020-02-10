@@ -316,7 +316,16 @@ namespace NetSatis.BackOffice.Fiş
                 {
                     if (txtFisTuru.Text != "Hakediş Fişi")
                     {
-                        int kasaid = Convert.ToInt32(context.Kullanicilar.Where(x => x.Id == frmAnaMenu.UserId).FirstOrDefault().KasaId);
+                        int userId = 0;
+                        if (frontOfficeUserId != 0 )
+                        {
+                            userId = frontOfficeUserId;
+                        }
+                        else
+                        {
+                            userId = frmAnaMenu.UserId;
+                        }
+                        int kasaid = Convert.ToInt32(context.Kullanicilar.Where(x => x.Id == userId).FirstOrDefault().KasaId);
                         if (kasaid == 0)
                         {
                             kasaid = 1;
@@ -803,7 +812,7 @@ namespace NetSatis.BackOffice.Fiş
         private void OdenenTutarGuncelle()
         {
             gridKasaHareket.UpdateSummary();
-            if (ayarlar.SatisEkrani || _fisentity.FisTuru == "Hakediş Fişi")
+            if (frontOfficeUserId != 0 || ayarlar.SatisEkrani || _fisentity.FisTuru == "Hakediş Fişi")
             {
                 calcOdenenTutar.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
                 calcOdenemesiGereken.Value = calcGenelToplam.Value - calcOdenenTutar.Value;

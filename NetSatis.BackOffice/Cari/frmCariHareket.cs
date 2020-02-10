@@ -76,7 +76,7 @@ namespace NetSatis.BackOffice.Cari
         {
             string secilen = gridCariHareket.GetFocusedRowCellValue(colFisKodu).ToString();
             string fisturu = gridCariHareket.GetFocusedRowCellValue(colFisTuru).ToString();
-            frmFisIslem form = new frmFisIslem(secilen, fisturu);
+            frmFisIslem form = new frmFisIslem(secilen,fisturu);
             form.ShowDialog();
         }
         private void frmCariHareket_FormClosing(object sender, FormClosingEventArgs e)
