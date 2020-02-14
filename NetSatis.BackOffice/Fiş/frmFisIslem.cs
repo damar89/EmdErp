@@ -317,7 +317,7 @@ namespace NetSatis.BackOffice.Fiş
                     if (txtFisTuru.Text != "Hakediş Fişi")
                     {
                         int userId = 0;
-                        if (frontOfficeUserId != 0 )
+                        if (frontOfficeUserId != 0)
                         {
                             userId = frontOfficeUserId;
                         }
@@ -2675,6 +2675,26 @@ namespace NetSatis.BackOffice.Fiş
                     throw;
                 }
             }
+            //if (e.KeyCode == Keys.F10)
+            //{
+            //    try
+            //    {
+            //        if (gridStokHareket.RowCount != 0)
+            //        {
+            //            sec = Convert.ToInt32(gridStokHareket.GetFocusedRowCellValue(colStokAdi));
+            //            frmStokSec form = new frmStokSec(ref this.context, sec.ToString());
+            //            form.ShowDialog();
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("Seçili Stok Bulunamadı");
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        throw;
+            //    }
+            //}
         }
         private void btnExcelAktar_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -3072,6 +3092,16 @@ namespace NetSatis.BackOffice.Fiş
             {
                 gridStokHareket.ExportToXlsx(save.FileName + ".xlsx");
             }
+        }
+
+        private void gridStokHareket_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        {
+            //GridView view = (GridView)sender;
+            ////Check whether the indicator cell belongs to a data row
+            //if (e.Info.IsRowIndicator && e.RowHandle >= 0)
+            //{
+            //    e.Info.DisplayText = e.RowHandle.ToString() + 1;
+            //}
         }
     }
 }

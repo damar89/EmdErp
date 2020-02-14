@@ -331,9 +331,9 @@ namespace NetSatis.Entities.Data_Access
                     }).ToList();
             return tablo;
         }
-        public object GenelIadeListele(NetSatisContext context, string fisTuru, DateTime baslangic, DateTime bitis)
+        public object GenelIadeListele(NetSatisContext context, string fisTuru,string fisTuru2, DateTime baslangic, DateTime bitis)
         {
-            var tablo = context.StokHareketleri.Where(c => c.FisTuru == fisTuru && c.Tarih >= baslangic && c.Tarih <= bitis).GroupJoin(
+            var tablo = context.StokHareketleri.Where(c => c.FisTuru == fisTuru || c.FisTuru == fisTuru2 && c.Tarih >= baslangic && c.Tarih <= bitis).GroupJoin(
                 context.StokHareketleri.Where(c => c.FisTuru == fisTuru), c => c.StokId, c => c.StokId,
                 (stokhareket, stoklar) =>
                     new

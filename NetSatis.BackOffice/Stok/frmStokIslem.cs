@@ -1058,15 +1058,15 @@ namespace NetSatis.BackOffice.Stok
 
         private void calcAlisFiyat1_ValueChanged(object sender, EventArgs e)
         {
-            try
-            {
-                calcAlisFiyat2.EditValue = calcAlisFiyat1.EditValue.GetDecimal() + (calcAlisFiyat1.EditValue.GetDecimal() * calcSatisKdv.EditValue.GetDecimal() / 100);
-            }
-            catch (Exception)
-            {
+            //try
+            //{
+            //    calcAlisFiyat2.EditValue = calcAlisFiyat1.EditValue.GetDecimal() + (calcAlisFiyat1.EditValue.GetDecimal() * calcSatisKdv.EditValue.GetDecimal() / 100);
+            //}
+            //catch (Exception)
+            //{
 
-                throw;
-            }
+            //    throw;
+            //}
         }
     }
 }

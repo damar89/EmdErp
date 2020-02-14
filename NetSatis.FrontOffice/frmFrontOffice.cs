@@ -31,6 +31,8 @@ namespace NetSatis.FrontOffice
     {
         NetSatisContext context = new NetSatisContext();
         FisDAL fisDal = new FisDAL();
+        private int sec;
+        StokDAL stokDAL = new StokDAL();
         StokHareketDAL stokHareketDal = new StokHareketDAL();
         KasaHareketDAL kasaHareketDal = new KasaHareketDAL();
         NetSatis.EDonusum.Controller.EDonusumIslemleri eislem = new EDonusum.Controller.EDonusumIslemleri();
@@ -619,7 +621,7 @@ namespace NetSatis.FrontOffice
             _fisentity = new Fis();
             _cariId = null;
             lblRiskLimiti.Text = null;
-            lblCariName.Text=null;
+            lblCariName.Text = null;
             lblCariKod.Text = null;
             lblCariAd.Text = null;
             txtKod.Text = null;
@@ -1304,7 +1306,7 @@ namespace NetSatis.FrontOffice
         {
             lblCariKod.Text = null;
             lblCariAd.Text = null;
-            lblCariName.Text=null;
+            lblCariName.Text = null;
             _cariId = null;
             _fisentity.CariId = null;
             txtFaturaUnvani.Text = null;
@@ -1731,6 +1733,30 @@ namespace NetSatis.FrontOffice
         {
             frmPerakendeTarihFilter frm = new frmPerakendeTarihFilter(RoleTool.KullaniciEntity.Id);
             frm.Show();
+        }
+
+        private void gridContStokHareket_ProcessGridKey(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F8)
+            {
+                try
+                {
+                    if (gridStokHareket.RowCount != 0)
+                    {
+                        sec = Convert.ToInt32(gridStokHareket.GetFocusedRowCellValue(colStokId));
+                        frmStokIslem form = new frmStokIslem(stokDAL.GetByFilter(context, c => c.Id == sec));
+                        form.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Seçili Stok Bulunamadı");
+                    }
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
         }
     }
 }
