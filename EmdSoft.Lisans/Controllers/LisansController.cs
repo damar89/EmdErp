@@ -71,7 +71,7 @@ namespace EmdSoft.Lisans.Controllers
         {
             using (VTContext db=new VTContext())
             {
-                var list=db.LicKeyGenerators.Where(x=>x.VDNo==VdNo).FirstOrDefault();
+                var list=db.LicKeyGenerators.Where(x=>x.FirmaAdi==VdNo).FirstOrDefault();
                 list.IsActive=false;
                 db.SaveChanges();
             }
@@ -82,7 +82,7 @@ namespace EmdSoft.Lisans.Controllers
         {
             using (VTContext db=new VTContext())
             {
-                var list=db.LicKeyGenerators.Where(x=>x.VDNo==VdNo).FirstOrDefault();
+                var list=db.LicKeyGenerators.Where(x=>x.FirmaAdi==VdNo).FirstOrDefault();
                 list.IsActive=true;
                 db.SaveChanges();
             }

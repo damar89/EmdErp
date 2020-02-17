@@ -129,6 +129,7 @@ namespace NetSatis.BackOffice.Stok
                     _entity.AltGrup = entity.AltGrup + " - " + altgrupAdi.AltGrupAdi;
                 }
             }
+            //btnYeni_Click(null, null);
             bindingSource();
             if (_entity.Resim != null)
             {
@@ -550,7 +551,7 @@ namespace NetSatis.BackOffice.Stok
         private void bindingSource()
         {
             //context.Barkodlar.Local.Clear();
-            context.Barkodlar.Where(c => c.StokId == _entity.Id).Load();
+          context.Barkodlar.Where(c => c.StokId == _entity.Id).Load();
             togDurum.DataBindings.Clear();
             togWeb.DataBindings.Clear();
             txtKod.DataBindings.Clear();
@@ -587,10 +588,12 @@ namespace NetSatis.BackOffice.Stok
             calcwebBayiSatisFiyat.DataBindings.Clear();
             calcMinStokMiktari.DataBindings.Clear();
             calcMaxStokMiktari.DataBindings.Clear();
+            txtAciklama.DataBindings.Clear();
             togDurum.DataBindings.Add("EditValue", _entity, "Durumu", false, DataSourceUpdateMode.OnPropertyChanged);
             togWeb.DataBindings.Add("EditValue", _entity, "WebAcikMi", false, DataSourceUpdateMode.OnPropertyChanged);
             txtKod.DataBindings.Add("Text", _entity, "StokKodu", false, DataSourceUpdateMode.OnPropertyChanged);
             txtStokAdi.DataBindings.Add("Text", _entity, "StokAdi", false, DataSourceUpdateMode.OnPropertyChanged);
+            txtAciklama.DataBindings.Add("Text", _entity, "Aciklama", false, DataSourceUpdateMode.OnPropertyChanged);
             cmbBarkodTuru.DataBindings.Add("Text", _entity, "BarkodTuru", false,
                 DataSourceUpdateMode.OnPropertyChanged);
             //pictureBox1.DataBindings.Add("Image", _entity, "ResimUrl", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -743,7 +746,7 @@ namespace NetSatis.BackOffice.Stok
         }
         private void btnStokGetir_Click(object sender, EventArgs e)
         {
-            frmStokSec form = new frmStokSec(ref this.context, txtStokAdi.EditValue.ToString());
+            frmStokSec form = new frmStokSec(ref this.context, txtStokAdi.EditValue.ToString(),false);
             form.ShowDialog();
             if (form.secildi)
             {

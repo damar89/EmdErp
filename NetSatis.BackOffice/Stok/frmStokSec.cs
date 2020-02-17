@@ -32,10 +32,19 @@ namespace NetSatis.BackOffice.Stok
             }
         }
 
-        public frmStokSec(ref NetSatisContext _context, string aramaMetni)
+        public frmStokSec(ref NetSatisContext _context, string aramaMetni,bool useRef = true)
         {
             InitializeComponent();
-            this.context = _context;
+            if (useRef)
+            {
+                this.context = _context;
+            }
+            else
+            {
+                this.context = new NetSatisContext();
+            }
+          
+
             this.aramaMetni = aramaMetni;
         }
 

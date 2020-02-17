@@ -24,6 +24,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using DevExpress.XtraGrid.Views.Grid;
 using NetSatis.BackOffice;
+using NetSatis.BackOffice.Extensions;
 
 namespace NetSatis.FrontOffice
 {
@@ -1176,6 +1177,46 @@ namespace NetSatis.FrontOffice
                 GidenBilgi = calcMaliyet.Value.ToString();
                 frmMaliyet frm = new frmMaliyet();
                 frm.ShowDialog();
+            }
+            if (e.KeyCode == Keys.F10)
+            {
+                try
+                {
+                    if (gridStokHareket.RowCount != 0)
+                    {
+                        string aramaMetni = gridStokHareket.GetFocusedRowCellValue(colStokAdi).GetString();
+                        frmStokSec form = new frmStokSec(ref this.context, aramaMetni);
+                        form.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Seçili Stok Bulunamadı");
+                    }
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+            if (e.KeyCode == Keys.F12)
+            {
+                try
+                {
+                    if (gridStokHareket.RowCount != 0)
+                    {
+                        sec = Convert.ToInt32(gridStokHareket.GetFocusedRowCellValue(colStokId));
+                        frmStokHareket frmstokhareket = new frmStokHareket(sec);
+                        frmstokhareket.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Seçili Stok Bulunamadı");
+                    }
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
             }
         }
         private void btnBelgesiz_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
