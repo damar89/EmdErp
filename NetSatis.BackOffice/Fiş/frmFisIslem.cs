@@ -1627,6 +1627,7 @@ namespace NetSatis.BackOffice.Fiş
             _fisentity.FisTuru = txtFisTuru.Text;
             _fisentity.BelgeNo = txtBelgeNo.Text;
             _fisentity.Aciklama = txtAciklama.Text;
+            _fisentity.EfaturaDurumu=false;
             _fisentity.Sira = txtSira.Text;
             _fisentity.Seri = txtSeri.Text;
             _fisentity.Tipi = cmbTipi.Text;

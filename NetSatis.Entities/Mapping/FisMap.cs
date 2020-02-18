@@ -103,7 +103,7 @@ namespace NetSatis.Entities.Mapping
             this.Property(p => p.EditUser).HasColumnName("EditUser");
             this.HasOptional(c => c.Cari).WithMany(c => c.Fis).HasForeignKey(c => c.CariId);
             this.HasOptional(c => c.Personel).WithMany(c => c.Fis).HasForeignKey(c => c.PlasiyerId);
-            this.Property(p => p.Durumu).HasColumnName("Durumu");
+            this.Property(p => p.EfaturaDurumu).HasColumnName("EfaturaDurumu");
 
 
         }

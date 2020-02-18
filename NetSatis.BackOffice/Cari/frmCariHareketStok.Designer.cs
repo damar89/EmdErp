@@ -48,6 +48,8 @@
             this.colMiktar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBirim = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSatirTutari = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIndirimTutar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDipIskonto = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -103,7 +105,9 @@
             this.colUrunAdi,
             this.colMiktar,
             this.colBirim,
-            this.colSatirTutari});
+            this.colSatirTutari,
+            this.colIndirimTutar,
+            this.colDipIskonto});
             this.gridCariHareket.CustomizationFormBounds = new System.Drawing.Rectangle(725, 209, 210, 172);
             gridFormatRule1.ApplyToRow = true;
             gridFormatRule1.Name = "Format0";
@@ -129,7 +133,7 @@
             this.gridCariHareket.GridControl = this.gridContCariHareket;
             this.gridCariHareket.GroupCount = 1;
             this.gridCariHareket.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colSatirTutari", this.colSatirTutari, "FişTutarı = {0:C2}")});
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "FisTutari", this.colSatirTutari, "FişTutarı = {0:C2}")});
             this.gridCariHareket.Name = "gridCariHareket";
             this.gridCariHareket.OptionsBehavior.AllowGroupExpandAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.gridCariHareket.OptionsBehavior.AutoExpandAllGroups = true;
@@ -139,7 +143,7 @@
             this.gridCariHareket.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridCariHareket.OptionsSelection.EnableAppearanceFocusedRow = false;
             this.gridCariHareket.OptionsView.ShowAutoFilterRow = true;
-            this.gridCariHareket.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
+            this.gridCariHareket.OptionsView.ShowFooter = true;
             this.gridCariHareket.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colFisKodu, DevExpress.Data.ColumnSortOrder.Ascending),
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colTarih, DevExpress.Data.ColumnSortOrder.Descending)});
@@ -176,7 +180,7 @@
             this.colTarih.OptionsColumn.AllowEdit = false;
             this.colTarih.Visible = true;
             this.colTarih.VisibleIndex = 0;
-            this.colTarih.Width = 129;
+            this.colTarih.Width = 117;
             // 
             // colFisTuru
             // 
@@ -188,7 +192,7 @@
             this.colFisTuru.OptionsColumn.AllowEdit = false;
             this.colFisTuru.Visible = true;
             this.colFisTuru.VisibleIndex = 1;
-            this.colFisTuru.Width = 142;
+            this.colFisTuru.Width = 130;
             // 
             // colToplamTutar
             // 
@@ -202,7 +206,7 @@
             this.colToplamTutar.OptionsColumn.AllowEdit = false;
             this.colToplamTutar.Visible = true;
             this.colToplamTutar.VisibleIndex = 5;
-            this.colToplamTutar.Width = 155;
+            this.colToplamTutar.Width = 95;
             // 
             // colAciklama
             // 
@@ -222,7 +226,7 @@
             this.colUrunAdi.OptionsColumn.AllowEdit = false;
             this.colUrunAdi.Visible = true;
             this.colUrunAdi.VisibleIndex = 2;
-            this.colUrunAdi.Width = 223;
+            this.colUrunAdi.Width = 275;
             // 
             // colMiktar
             // 
@@ -235,7 +239,7 @@
             this.colMiktar.OptionsColumn.AllowEdit = false;
             this.colMiktar.Visible = true;
             this.colMiktar.VisibleIndex = 4;
-            this.colMiktar.Width = 198;
+            this.colMiktar.Width = 107;
             // 
             // colBirim
             // 
@@ -247,7 +251,7 @@
             this.colBirim.OptionsColumn.AllowEdit = false;
             this.colBirim.Visible = true;
             this.colBirim.VisibleIndex = 3;
-            this.colBirim.Width = 267;
+            this.colBirim.Width = 136;
             // 
             // colSatirTutari
             // 
@@ -260,14 +264,40 @@
             this.colSatirTutari.Caption = "Tutar";
             this.colSatirTutari.DisplayFormat.FormatString = "c2";
             this.colSatirTutari.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colSatirTutari.FieldName = "colSatirTutari";
+            this.colSatirTutari.FieldName = "FisTutari";
             this.colSatirTutari.Name = "colSatirTutari";
             this.colSatirTutari.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colSatirTutari", "C2")});
-            this.colSatirTutari.UnboundExpression = "[Miktar] * [BirimFiyat]";
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "FisTutari", "C2")});
             this.colSatirTutari.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.colSatirTutari.Visible = true;
-            this.colSatirTutari.VisibleIndex = 6;
+            this.colSatirTutari.VisibleIndex = 8;
+            this.colSatirTutari.Width = 180;
+            // 
+            // colIndirimTutar
+            // 
+            this.colIndirimTutar.AppearanceHeader.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.colIndirimTutar.AppearanceHeader.Options.UseBackColor = true;
+            this.colIndirimTutar.Caption = "IndirimTutar";
+            this.colIndirimTutar.DisplayFormat.FormatString = "c2";
+            this.colIndirimTutar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colIndirimTutar.FieldName = "IndirimTutari";
+            this.colIndirimTutar.Name = "colIndirimTutar";
+            this.colIndirimTutar.Visible = true;
+            this.colIndirimTutar.VisibleIndex = 6;
+            this.colIndirimTutar.Width = 79;
+            // 
+            // colDipIskonto
+            // 
+            this.colDipIskonto.AppearanceHeader.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.colDipIskonto.AppearanceHeader.Options.UseBackColor = true;
+            this.colDipIskonto.Caption = "Dip İskonto";
+            this.colDipIskonto.DisplayFormat.FormatString = "c2";
+            this.colDipIskonto.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colDipIskonto.FieldName = "DipIndirim";
+            this.colDipIskonto.Name = "colDipIskonto";
+            this.colDipIskonto.Visible = true;
+            this.colDipIskonto.VisibleIndex = 7;
+            this.colDipIskonto.Width = 106;
             // 
             // groupControl1
             // 
@@ -544,5 +574,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraGrid.Columns.GridColumn colIndirimTutar;
+        private DevExpress.XtraGrid.Columns.GridColumn colDipIskonto;
     }
 }

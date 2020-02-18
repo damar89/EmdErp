@@ -35,11 +35,21 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem1 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem2 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
             this.lblBaslik = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.lblKayitSayisi = new DevExpress.XtraEditors.LabelControl();
@@ -86,6 +96,7 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtStokKodu = new DevExpress.XtraEditors.ButtonEdit();
             this.txtStokAdi = new DevExpress.XtraEditors.ButtonEdit();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridContStoklar)).BeginInit();
@@ -96,6 +107,7 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBaslik
@@ -113,7 +125,7 @@
             this.lblBaslik.Location = new System.Drawing.Point(0, 0);
             this.lblBaslik.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(1108, 35);
+            this.lblBaslik.Size = new System.Drawing.Size(1102, 35);
             this.lblBaslik.TabIndex = 3;
             this.lblBaslik.Text = "Stok Seçim Ekranı";
             // 
@@ -125,9 +137,9 @@
             this.groupControl1.Controls.Add(this.btnSec);
             this.groupControl1.Controls.Add(this.btnKapat);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 628);
+            this.groupControl1.Location = new System.Drawing.Point(0, 622);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1108, 57);
+            this.groupControl1.Size = new System.Drawing.Size(1102, 57);
             this.groupControl1.TabIndex = 4;
             // 
             // lblKayitSayisi
@@ -184,7 +196,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSec.ImageOptions.ImageIndex = 0;
             this.btnSec.ImageOptions.ImageList = this.ımageList1;
-            this.btnSec.Location = new System.Drawing.Point(927, 25);
+            this.btnSec.Location = new System.Drawing.Point(921, 25);
             this.btnSec.Name = "btnSec";
             this.btnSec.Size = new System.Drawing.Size(85, 31);
             this.btnSec.TabIndex = 5;
@@ -197,7 +209,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.ImageIndex = 3;
             this.btnKapat.ImageOptions.ImageList = this.ımageList1;
-            this.btnKapat.Location = new System.Drawing.Point(1018, 23);
+            this.btnKapat.Location = new System.Drawing.Point(1012, 23);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(85, 31);
             this.btnKapat.TabIndex = 5;
@@ -210,7 +222,7 @@
             this.gridContStoklar.Location = new System.Drawing.Point(231, 35);
             this.gridContStoklar.MainView = this.gridStoklar;
             this.gridContStoklar.Name = "gridContStoklar";
-            this.gridContStoklar.Size = new System.Drawing.Size(877, 593);
+            this.gridContStoklar.Size = new System.Drawing.Size(871, 587);
             this.gridContStoklar.TabIndex = 5;
             this.gridContStoklar.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridStoklar});
@@ -360,8 +372,6 @@
             this.colAlisFiyati1.FieldName = "AlisFiyati1";
             this.colAlisFiyati1.Name = "colAlisFiyati1";
             this.colAlisFiyati1.OptionsColumn.AllowEdit = false;
-            this.colAlisFiyati1.Visible = true;
-            this.colAlisFiyati1.VisibleIndex = 11;
             this.colAlisFiyati1.Width = 70;
             // 
             // colSatisFiyati1
@@ -401,7 +411,7 @@
             this.MevcutStok.Name = "MevcutStok";
             this.MevcutStok.OptionsColumn.AllowEdit = false;
             this.MevcutStok.Visible = true;
-            this.MevcutStok.VisibleIndex = 14;
+            this.MevcutStok.VisibleIndex = 13;
             // 
             // StokGiris
             // 
@@ -412,7 +422,7 @@
             this.StokGiris.Name = "StokGiris";
             this.StokGiris.OptionsColumn.AllowEdit = false;
             this.StokGiris.Visible = true;
-            this.StokGiris.VisibleIndex = 12;
+            this.StokGiris.VisibleIndex = 11;
             // 
             // StokCikis
             // 
@@ -423,7 +433,7 @@
             this.StokCikis.Name = "StokCikis";
             this.StokCikis.OptionsColumn.AllowEdit = false;
             this.StokCikis.Visible = true;
-            this.StokCikis.VisibleIndex = 13;
+            this.StokCikis.VisibleIndex = 12;
             // 
             // colAltGrup
             // 
@@ -512,15 +522,15 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1108, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1102, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 685);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 679);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1108, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1102, 0);
             // 
             // barDockControlLeft
             // 
@@ -528,15 +538,15 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 685);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 679);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1108, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(1102, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 685);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 679);
             // 
             // btnGorunumSakla
             // 
@@ -554,12 +564,14 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl2.Location = new System.Drawing.Point(0, 35);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(231, 593);
+            this.groupControl2.Size = new System.Drawing.Size(231, 587);
             this.groupControl2.TabIndex = 10;
             this.groupControl2.Text = "Stok Arama";
             // 
             // labelControl3
             // 
+            this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Location = new System.Drawing.Point(5, 32);
@@ -570,6 +582,8 @@
             // 
             // labelControl2
             // 
+            this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(9, 95);
@@ -580,14 +594,25 @@
             // 
             // txtStokKodu
             // 
+            this.txtStokKodu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtStokKodu.Location = new System.Drawing.Point(3, 112);
             this.txtStokKodu.Name = "txtStokKodu";
             this.txtStokKodu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtStokKodu.Properties.Appearance.Options.UseFont = true;
             this.txtStokKodu.Properties.AutoHeight = false;
             editorButtonImageOptions1.Image = global::NetSatis.BackOffice.Properties.Resources.arama;
+            toolTipTitleItem1.Text = "F5";
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "Stok Listele";
+            toolTipTitleItem2.LeftIndent = 6;
+            toolTipTitleItem2.Text = "Stok Koduna Yazılan İçerikleri Arar";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            superToolTip1.Items.Add(toolTipSeparatorItem1);
+            superToolTip1.Items.Add(toolTipTitleItem2);
             this.txtStokKodu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, superToolTip1, DevExpress.Utils.ToolTipAnchor.Default)});
             this.txtStokKodu.Size = new System.Drawing.Size(224, 29);
             this.txtStokKodu.TabIndex = 0;
             this.txtStokKodu.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtStokKodu_ButtonClick);
@@ -595,6 +620,8 @@
             // 
             // txtStokAdi
             // 
+            this.txtStokAdi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtStokAdi.Location = new System.Drawing.Point(1, 48);
             this.txtStokAdi.MenuManager = this.barManager1;
             this.txtStokAdi.Name = "txtStokAdi";
@@ -603,8 +630,17 @@
             this.txtStokAdi.Properties.AutoHeight = false;
             editorButtonImageOptions2.Image = global::NetSatis.BackOffice.Properties.Resources.arama;
             editorButtonImageOptions2.ImageIndex = 0;
+            toolTipTitleItem3.Text = "F5";
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "Stok Listeler";
+            toolTipTitleItem4.LeftIndent = 6;
+            toolTipTitleItem4.Text = "Stok Adına Yazılan İçerikleri Arar";
+            superToolTip2.Items.Add(toolTipTitleItem3);
+            superToolTip2.Items.Add(toolTipItem2);
+            superToolTip2.Items.Add(toolTipSeparatorItem2);
+            superToolTip2.Items.Add(toolTipTitleItem4);
             this.txtStokAdi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F5), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, superToolTip2, DevExpress.Utils.ToolTipAnchor.Default)});
             this.txtStokAdi.Size = new System.Drawing.Size(227, 29);
             this.txtStokAdi.TabIndex = 0;
             this.txtStokAdi.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtStokAdi_ButtonClick);
@@ -614,7 +650,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1108, 685);
+            this.ClientSize = new System.Drawing.Size(1102, 679);
             this.Controls.Add(this.gridContStoklar);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
@@ -644,6 +680,7 @@
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -697,5 +734,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.ButtonEdit txtStokKodu;
         private DevExpress.XtraEditors.ButtonEdit txtStokAdi;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
     }
 }

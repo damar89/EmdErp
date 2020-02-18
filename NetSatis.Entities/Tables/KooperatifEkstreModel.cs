@@ -16,6 +16,9 @@ namespace NetSatis.Entities.Tables
         public decimal? SatirTutari { get; set; }
         public decimal? FisTutari { get; set; }
         public decimal? BirimFiyat { get; set; }
+          public decimal? IndirimTutari { get; set; }
+          public decimal? DipIndirim { get; set; }
+
         public string UrunAdi { get; set; }
         public string FisKodu { get; set; }
         public decimal? Miktar { get; set; }

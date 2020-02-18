@@ -1422,6 +1422,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="emd icon.ico" />
+    <None Include="Resources\task_32x32.png" />
+    <None Include="Resources\task_16x16.png" />
     <None Include="Resources\today_16x163.png" />
     <None Include="Resources\today_16x162.png" />
     <None Include="Resources\today_16x161.png" />

@@ -160,20 +160,20 @@
   <data name="exporttopdf_16x161" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exporttopdf_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="edittask_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edittask_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="redo_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redo_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edittask_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edittask_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="contentarrangeinrows_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contentarrangeinrows_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="message_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\message_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="redo_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\redo_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="drilldownonarguments_chart_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\drilldownonarguments_chart_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -361,6 +361,9 @@
   <data name="siparis_verilen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\siparis verilen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="task_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\task_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="printpreview_32x322" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\printpreview_32x322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -438,6 +441,9 @@
   </data>
   <data name="saveas_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\saveas_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="today_16x163" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\today_16x163.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search_16x165" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search_16x165.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -589,7 +595,7 @@
   <data name="stackedline_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stackedline_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="today_16x163" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\today_16x163.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="task_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\task_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

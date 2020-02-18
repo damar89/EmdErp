@@ -32,7 +32,7 @@ namespace NetSatis.BackOffice.Stok
             }
         }
 
-        public frmStokSec(ref NetSatisContext _context, string aramaMetni,bool useRef = true)
+        public frmStokSec(ref NetSatisContext _context, string aramaMetni, bool useRef = true)
         {
             InitializeComponent();
             if (useRef)
@@ -43,7 +43,7 @@ namespace NetSatis.BackOffice.Stok
             {
                 this.context = new NetSatisContext();
             }
-          
+
 
             this.aramaMetni = aramaMetni;
         }
@@ -120,6 +120,8 @@ namespace NetSatis.BackOffice.Stok
             }
             try
             {
+
+
                 if (e.KeyCode == Keys.Enter)
                 {
                     if (gridStoklar.GetSelectedRows().Length != 0)
@@ -138,6 +140,7 @@ namespace NetSatis.BackOffice.Stok
                         MessageBox.Show("Seçilen bir ürün bulunamadı");
                     }
                 }
+
             }
             catch (Exception)
             {
@@ -156,10 +159,7 @@ namespace NetSatis.BackOffice.Stok
                 btnDuzenle.PerformClick();
             }
 
-            if (e.KeyCode == Keys.F5)
-            {
-                btnGuncelle.PerformClick();
-            }
+           
 
             if (e.Alt == true && e.KeyCode == Keys.C)
             {
@@ -316,7 +316,7 @@ namespace NetSatis.BackOffice.Stok
         }
         private void txtStokAdi_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.Enter)
+            if (e.Alt == true && e.KeyData == Keys.Enter)
             {
                 gridStoklar.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokAdi"), new OperandValue(filtreyeCevir(txtStokAdi.Text)), BinaryOperatorType.Like);
             }
@@ -324,7 +324,7 @@ namespace NetSatis.BackOffice.Stok
 
         private void txtStokKodu_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.Enter)
+            if (e.Alt == true && e.KeyData == Keys.Enter)
             {
                 gridStoklar.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokKodu"), new OperandValue(filtreyeCevir(txtStokKodu.Text)), BinaryOperatorType.Like);
             }

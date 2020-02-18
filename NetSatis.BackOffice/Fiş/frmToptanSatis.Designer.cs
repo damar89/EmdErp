@@ -38,6 +38,7 @@
             this.btnFaturaGuncelle = new DevExpress.XtraBars.BarButtonItem();
             this.btnFtrSil = new DevExpress.XtraBars.BarButtonItem();
             this.btnMustahsil = new DevExpress.XtraBars.BarButtonItem();
+            this.efaturaGitti = new DevExpress.XtraBars.BarButtonItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -97,6 +98,7 @@
             this.colKDVDahil = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.colEfaturaDurumu = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -117,9 +119,9 @@
             this.groupControl1.Controls.Add(this.btnSil);
             this.groupControl1.Controls.Add(this.btnDuzenle);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 393);
+            this.groupControl1.Location = new System.Drawing.Point(0, 417);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1023, 57);
+            this.groupControl1.Size = new System.Drawing.Size(1117, 57);
             this.groupControl1.TabIndex = 7;
             // 
             // dropDownButton1
@@ -142,7 +144,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnFaturaduzenle),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnFaturaGuncelle),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnFtrSil),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnMustahsil)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnMustahsil),
+            new DevExpress.XtraBars.LinkPersistInfo(this.efaturaGitti)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
@@ -185,6 +188,14 @@
             this.btnMustahsil.Name = "btnMustahsil";
             this.btnMustahsil.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMustahsil_ItemClick);
             // 
+            // efaturaGitti
+            // 
+            this.efaturaGitti.Caption = "Fatura Gitti Olarak İşaretle";
+            this.efaturaGitti.Id = 30;
+            this.efaturaGitti.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.task_16x16;
+            this.efaturaGitti.ImageOptions.LargeImage = global::NetSatis.BackOffice.Properties.Resources.task_32x32;
+            this.efaturaGitti.Name = "efaturaGitti";
+            // 
             // barManager1
             // 
             this.barManager1.DockControls.Add(this.barDockControlTop);
@@ -220,8 +231,9 @@
             this.btnFaturaduzenle,
             this.btnFaturaGuncelle,
             this.btnFtrSil,
-            this.btnMustahsil});
-            this.barManager1.MaxItemId = 30;
+            this.btnMustahsil,
+            this.efaturaGitti});
+            this.barManager1.MaxItemId = 31;
             // 
             // barDockControlTop
             // 
@@ -229,15 +241,15 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1023, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1117, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 450);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 474);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1023, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1117, 0);
             // 
             // barDockControlLeft
             // 
@@ -245,15 +257,15 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 450);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 474);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1023, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(1117, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 450);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 474);
             // 
             // barAlisFaturasi
             // 
@@ -459,7 +471,7 @@
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.ImageIndex = 0;
             this.btnKapat.ImageOptions.ImageList = this.imgMenu;
-            this.btnKapat.Location = new System.Drawing.Point(933, 23);
+            this.btnKapat.Location = new System.Drawing.Point(1027, 23);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(85, 31);
             this.btnKapat.TabIndex = 5;
@@ -484,7 +496,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSil.ImageOptions.ImageIndex = 5;
             this.btnSil.ImageOptions.ImageList = this.imgMenu;
-            this.btnSil.Location = new System.Drawing.Point(842, 23);
+            this.btnSil.Location = new System.Drawing.Point(936, 23);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(85, 31);
             this.btnSil.TabIndex = 4;
@@ -519,7 +531,7 @@
             this.lblBaslik.Location = new System.Drawing.Point(0, 0);
             this.lblBaslik.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(1023, 32);
+            this.lblBaslik.Size = new System.Drawing.Size(1117, 32);
             this.lblBaslik.TabIndex = 6;
             this.lblBaslik.Text = "Toptan Satış Faturası Listeleri";
             // 
@@ -532,7 +544,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.gridContFisler);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1023, 393);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1117, 417);
             this.splitContainerControl1.SplitterPosition = 34;
             this.splitContainerControl1.TabIndex = 8;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -545,7 +557,7 @@
             this.gridContFisler.Name = "gridContFisler";
             this.gridContFisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpsChkKdvDahil});
-            this.gridContFisler.Size = new System.Drawing.Size(1023, 354);
+            this.gridContFisler.Size = new System.Drawing.Size(1117, 377);
             this.gridContFisler.TabIndex = 0;
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});
@@ -572,7 +584,8 @@
             this.colIskontoTutari3,
             this.colToplamTutar,
             this.colAciklama,
-            this.colKDVDahil});
+            this.colKDVDahil,
+            this.colEfaturaDurumu});
             this.gridFisler.GridControl = this.gridContFisler;
             this.gridFisler.Name = "gridFisler";
             this.gridFisler.OptionsView.ShowAutoFilterRow = true;
@@ -596,7 +609,7 @@
             this.colFisKodu.OptionsColumn.ShowInCustomizationForm = false;
             this.colFisKodu.Visible = true;
             this.colFisKodu.VisibleIndex = 0;
-            this.colFisKodu.Width = 72;
+            this.colFisKodu.Width = 68;
             // 
             // colFisTuru
             // 
@@ -607,7 +620,7 @@
             this.colFisTuru.OptionsColumn.ShowInCustomizationForm = false;
             this.colFisTuru.Visible = true;
             this.colFisTuru.VisibleIndex = 1;
-            this.colFisTuru.Width = 83;
+            this.colFisTuru.Width = 78;
             // 
             // colCariKodu
             // 
@@ -618,7 +631,7 @@
             this.colCariKodu.OptionsColumn.ShowInCustomizationForm = false;
             this.colCariKodu.Visible = true;
             this.colCariKodu.VisibleIndex = 2;
-            this.colCariKodu.Width = 83;
+            this.colCariKodu.Width = 78;
             // 
             // colCariAdi
             // 
@@ -629,7 +642,7 @@
             this.colCariAdi.OptionsColumn.ShowInCustomizationForm = false;
             this.colCariAdi.Visible = true;
             this.colCariAdi.VisibleIndex = 3;
-            this.colCariAdi.Width = 117;
+            this.colCariAdi.Width = 111;
             // 
             // colBelgeNo
             // 
@@ -640,7 +653,6 @@
             this.colBelgeNo.OptionsColumn.ShowInCustomizationForm = false;
             this.colBelgeNo.Visible = true;
             this.colBelgeNo.VisibleIndex = 4;
-            this.colBelgeNo.Width = 79;
             // 
             // colTarih
             // 
@@ -653,7 +665,6 @@
             this.colTarih.OptionsColumn.ShowInCustomizationForm = false;
             this.colTarih.Visible = true;
             this.colTarih.VisibleIndex = 5;
-            this.colTarih.Width = 79;
             // 
             // colVadeTarihi
             // 
@@ -665,6 +676,7 @@
             this.colVadeTarihi.OptionsColumn.AllowEdit = false;
             this.colVadeTarihi.Visible = true;
             this.colVadeTarihi.VisibleIndex = 7;
+            this.colVadeTarihi.Width = 71;
             // 
             // colSaat
             // 
@@ -676,7 +688,7 @@
             this.colSaat.OptionsColumn.AllowEdit = false;
             this.colSaat.Visible = true;
             this.colSaat.VisibleIndex = 6;
-            this.colSaat.Width = 70;
+            this.colSaat.Width = 66;
             // 
             // colPlasiyerKodu
             // 
@@ -695,7 +707,7 @@
             this.colPlasiyerAdi.OptionsColumn.ShowInCustomizationForm = false;
             this.colPlasiyerAdi.Visible = true;
             this.colPlasiyerAdi.VisibleIndex = 8;
-            this.colPlasiyerAdi.Width = 80;
+            this.colPlasiyerAdi.Width = 76;
             // 
             // colIskontoOrani1
             // 
@@ -706,7 +718,7 @@
             this.colIskontoOrani1.OptionsColumn.ShowInCustomizationForm = false;
             this.colIskontoOrani1.Visible = true;
             this.colIskontoOrani1.VisibleIndex = 10;
-            this.colIskontoOrani1.Width = 53;
+            this.colIskontoOrani1.Width = 50;
             // 
             // colIskontoOrani2
             // 
@@ -733,7 +745,7 @@
             this.colIskontoTutari1.OptionsColumn.ShowInCustomizationForm = false;
             this.colIskontoTutari1.Visible = true;
             this.colIskontoTutari1.VisibleIndex = 11;
-            this.colIskontoTutari1.Width = 85;
+            this.colIskontoTutari1.Width = 80;
             // 
             // colIskontoTutari2
             // 
@@ -760,7 +772,7 @@
             this.colToplamTutar.OptionsColumn.ShowInCustomizationForm = false;
             this.colToplamTutar.Visible = true;
             this.colToplamTutar.VisibleIndex = 12;
-            this.colToplamTutar.Width = 108;
+            this.colToplamTutar.Width = 84;
             // 
             // colAciklama
             // 
@@ -771,7 +783,7 @@
             this.colAciklama.OptionsColumn.ShowInCustomizationForm = false;
             this.colAciklama.Visible = true;
             this.colAciklama.VisibleIndex = 9;
-            this.colAciklama.Width = 96;
+            this.colAciklama.Width = 91;
             // 
             // colKDVDahil
             // 
@@ -791,11 +803,21 @@
             this.popupMenu2.Manager = this.barManager1;
             this.popupMenu2.Name = "popupMenu2";
             // 
+            // colEfaturaDurumu
+            // 
+            this.colEfaturaDurumu.Caption = "Efatura Durumu";
+            this.colEfaturaDurumu.FieldName = "EfaturaDurumu";
+            this.colEfaturaDurumu.Name = "colEfaturaDurumu";
+            this.colEfaturaDurumu.OptionsColumn.AllowEdit = false;
+            this.colEfaturaDurumu.Visible = true;
+            this.colEfaturaDurumu.VisibleIndex = 13;
+            this.colEfaturaDurumu.Width = 96;
+            // 
             // frmToptanSatis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1023, 450);
+            this.ClientSize = new System.Drawing.Size(1117, 474);
             this.Controls.Add(this.lblBaslik);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.groupControl1);
@@ -891,5 +913,7 @@
         private DevExpress.XtraBars.BarButtonItem btnFtrSil;
         private DevExpress.XtraBars.BarButtonItem btnMustahsil;
         private DevExpress.XtraBars.PopupMenu popupMenu2;
+        private DevExpress.XtraBars.BarButtonItem efaturaGitti;
+        private DevExpress.XtraGrid.Columns.GridColumn colEfaturaDurumu;
     }
 }
