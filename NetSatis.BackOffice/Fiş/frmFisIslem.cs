@@ -1627,7 +1627,7 @@ namespace NetSatis.BackOffice.Fiş
             _fisentity.FisTuru = txtFisTuru.Text;
             _fisentity.BelgeNo = txtBelgeNo.Text;
             _fisentity.Aciklama = txtAciklama.Text;
-            _fisentity.EfaturaDurumu=false;
+            _fisentity.EfaturaDurumu = false;
             _fisentity.Sira = txtSira.Text;
             _fisentity.Seri = txtSeri.Text;
             _fisentity.Tipi = cmbTipi.Text;
@@ -3125,6 +3125,48 @@ namespace NetSatis.BackOffice.Fiş
             //{
             //    e.Info.DisplayText = e.RowHandle.ToString() + 1;
             //}
+        }
+
+        private void stokKartınıAçToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (gridStokHareket.RowCount != 0)
+                {
+                    string aramaMetni = gridStokHareket.GetFocusedRowCellValue(colStokAdi).GetString();
+                    frmStokSec form = new frmStokSec(ref this.context, aramaMetni);
+                    form.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Seçili Stok Bulunamadı");
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        private void seçiliStoğunHareketleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (gridStokHareket.RowCount != 0)
+                {
+                    sec = Convert.ToInt32(gridStokHareket.GetFocusedRowCellValue(colStokId));
+                    frmStokHareket frmstokhareket = new frmStokHareket(sec);
+                    frmstokhareket.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Seçili Stok Bulunamadı");
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
