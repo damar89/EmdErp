@@ -1091,10 +1091,18 @@ namespace NetSatis.BackOffice
                 case "Kasa Raporu Detaylı":
                     btnDetay_LinkClicked(null, null);
                     break;
+                case "Stok Analiz":
+                    frmStokAnaliz frm = new frmStokAnaliz();
+                    frm.Show();
+                    break;
+                    case "Cari Stok Hareketleri":
+                    frmCariStokHareket frm2 = new frmCariStokHareket();
+                    frm2.Show();
+                    break;
                 default:
                     break;
             }
-
+            
         }
 
         private void navBarItem30_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)

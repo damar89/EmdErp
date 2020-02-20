@@ -208,6 +208,7 @@
             this.btnGoster.Size = new System.Drawing.Size(89, 40);
             this.btnGoster.TabIndex = 24;
             this.btnGoster.Text = "Göster";
+            this.btnGoster.Click += new System.EventHandler(this.btnGoster_Click);
             // 
             // btnStokGetir
             // 
@@ -218,6 +219,7 @@
             this.btnStokGetir.Name = "btnStokGetir";
             this.btnStokGetir.Size = new System.Drawing.Size(39, 20);
             this.btnStokGetir.TabIndex = 14;
+            this.btnStokGetir.Click += new System.EventHandler(this.btnStokGetir_Click);
             // 
             // txtStokAdi
             // 
