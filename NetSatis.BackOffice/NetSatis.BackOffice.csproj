@@ -244,6 +244,12 @@
     <Compile Include="Cari\frmCariSec.Designer.cs">
       <DependentUpon>frmCariSec.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cari\frmCariStokHareket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cari\frmCariStokHareket.Designer.cs">
+      <DependentUpon>frmCariStokHareket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cari\frmCokluCari.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -828,6 +834,12 @@
     <Compile Include="Stok\frmStok.Designer.cs">
       <DependentUpon>frmStok.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stok\frmStokAnaliz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stok\frmStokAnaliz.Designer.cs">
+      <DependentUpon>frmStokAnaliz.cs</DependentUpon>
+    </Compile>
     <Compile Include="Stok\frmStokHareket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -989,6 +1001,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cari\frmCariSec.resx">
       <DependentUpon>frmCariSec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cari\frmCariStokHareket.resx">
+      <DependentUpon>frmCariStokHareket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cari\frmCokluCari.resx">
       <DependentUpon>frmCokluCari.cs</DependentUpon>
@@ -1284,6 +1299,9 @@
     <EmbeddedResource Include="Stok\frmStok.resx">
       <DependentUpon>frmStok.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Stok\frmStokAnaliz.resx">
+      <DependentUpon>frmStokAnaliz.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Stok\frmStokHareket.resx">
       <DependentUpon>frmStokHareket.cs</DependentUpon>
     </EmbeddedResource>
@@ -1422,6 +1440,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="emd icon.ico" />
+    <None Include="Resources\refreshallpivottable.svg" />
     <None Include="Resources\task_32x32.png" />
     <None Include="Resources\task_16x16.png" />
     <None Include="Resources\today_16x163.png" />

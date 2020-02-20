@@ -290,6 +290,8 @@
             this.gridTanim.Name = "gridTanim";
             this.gridTanim.OptionsView.ShowAutoFilterRow = true;
             this.gridTanim.OptionsView.ShowGroupPanel = false;
+            this.gridTanim.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colTanimi, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.gridTanim.DoubleClick += new System.EventHandler(this.gridTanim_DoubleClick);
             // 
             // colId
