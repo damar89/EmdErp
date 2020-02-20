@@ -429,7 +429,7 @@
             this.naviGenelBilgiler.Controls.Add(this.calcGenelToplam);
             this.naviGenelBilgiler.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("naviGenelBilgiler.ImageOptions.Image")));
             this.naviGenelBilgiler.Name = "naviGenelBilgiler";
-            this.naviGenelBilgiler.Size = new System.Drawing.Size(305, 788);
+            this.naviGenelBilgiler.Size = new System.Drawing.Size(301, 789);
             // 
             // simpleButton2
             // 
@@ -3040,7 +3040,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.MultiLine = DevExpress.Utils.DefaultBoolean.True;
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.Size = new System.Drawing.Size(862, 554);
+            this.xtraTabControl1.Size = new System.Drawing.Size(862, 553);
             this.xtraTabControl1.TabIndex = 0;
             // 
             // radialFiyat
