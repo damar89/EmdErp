@@ -153,6 +153,7 @@ namespace NetSatis.Entities.Data_Access
                 return result;
             }
         }
+      
         public object GetGenelStok(NetSatisContext context, int stokId)
         {
             var result = (from c in context.StokHareketleri.Where(c => c.StokId == stokId)
@@ -166,6 +167,7 @@ namespace NetSatis.Entities.Data_Access
                           }).ToList();
             return result;
         }
+
         public object SatisListele(NetSatisContext context, string hareket, DateTime baslangic, DateTime bitis)
         {
             var result = context.StokHareketleri.Where(x => x.Hareket == hareket && x.Tarih >= baslangic && x.Tarih <= bitis).GroupBy(x => x.StokId).Select(x => new
@@ -256,7 +258,7 @@ namespace NetSatis.Entities.Data_Access
                         k.NetTutar,
                         KarTutari = (k.NetTutar - k.AlisToplam) ?? 0,
                         KdvToplam = k.ToplamTutar - (k.ToplamTutar * k.Kdv / 100),
-                        karOran =  k.AlisToplam == 0 ? ""  :  ((k.NetTutar -k.AlisToplam) / k.AlisToplam * 100).ToString(),
+                        karOran = k.AlisToplam == 0 ? "" : ((k.NetTutar - k.AlisToplam) / k.AlisToplam * 100).ToString(),
                     }).ToList();
             return tablo;
         }
@@ -331,7 +333,7 @@ namespace NetSatis.Entities.Data_Access
                     }).ToList();
             return tablo;
         }
-        public object GenelIadeListele(NetSatisContext context, string fisTuru,string fisTuru2, DateTime baslangic, DateTime bitis)
+        public object GenelIadeListele(NetSatisContext context, string fisTuru, string fisTuru2, DateTime baslangic, DateTime bitis)
         {
             var tablo = context.StokHareketleri.Where(c => c.FisTuru == fisTuru || c.FisTuru == fisTuru2 && c.Tarih >= baslangic && c.Tarih <= bitis).GroupJoin(
                 context.StokHareketleri.Where(c => c.FisTuru == fisTuru), c => c.StokId, c => c.StokId,
