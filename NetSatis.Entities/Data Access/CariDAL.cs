@@ -359,6 +359,7 @@ namespace NetSatis.Entities.Data_Access
         public object CariFisAyrintiStok(NetSatisContext context, int cariId, DateTime baslangic, DateTime bitis)
         {
             var fisler = context.Fisler.Where(x => x.CariId == cariId && x.Tarih >= baslangic && x.Tarih <= bitis).OrderBy(f => f.Tarih).ToList();
+            
             List<KooperatifEkstreModel> liste = new List<KooperatifEkstreModel>();
             foreach (var fis in fisler)
             {
