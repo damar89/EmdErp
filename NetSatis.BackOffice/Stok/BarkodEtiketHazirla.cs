@@ -168,7 +168,7 @@ namespace NetSatis.BackOffice.Stok
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            rptBarkodRaf r = new rptBarkodRaf();
+             rptBarkodRaf r = new rptBarkodRaf();
             using (NetSatisContext db = new NetSatisContext())
             {
                 var list = db.BarkodEtiketOlustur.ToList();

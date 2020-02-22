@@ -278,13 +278,13 @@
             // xrTableCell6
             // 
             this.xrTableCell6.Name = "xrTableCell6";
-            this.xrTableCell6.Text = "Alacak";
+            this.xrTableCell6.Text = "Alacağı";
             this.xrTableCell6.Weight = 0.8028999328224129D;
             // 
             // xrTableCell7
             // 
             this.xrTableCell7.Name = "xrTableCell7";
-            this.xrTableCell7.Text = "Borç";
+            this.xrTableCell7.Text = "Borcu";
             this.xrTableCell7.Weight = 0.80169998767208217D;
             // 
             // xrTableCell8
@@ -312,6 +312,7 @@
             this.lblGenelToplam.StylePriority.UseTextAlignment = false;
             this.lblGenelToplam.Text = "lblGenelToplam";
             this.lblGenelToplam.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.lblGenelToplam.Visible = false;
             // 
             // GroupFooter1
             // 
@@ -347,6 +348,7 @@
             this.xrLabel2.StylePriority.UseBackColor = false;
             this.xrLabel2.StylePriority.UseFont = false;
             this.xrLabel2.Text = "Toplam Bakiye :";
+            this.xrLabel2.Visible = false;
             // 
             // rptCariBakiye
             // 
@@ -360,7 +362,7 @@
             this.PageHeight = 1169;
             this.PageWidth = 827;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
-            this.Version = "18.2";
+            this.Version = "19.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
