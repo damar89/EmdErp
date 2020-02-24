@@ -7,7 +7,7 @@ using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
 using System.IO;
 using DevExpress.XtraReports.UI;
-using FastReport;
+
 using System.Data;
 
 namespace NetSatis.BackOffice.Stok
@@ -170,23 +170,23 @@ namespace NetSatis.BackOffice.Stok
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            Report rpr = new Report();
-            rpr.Load($@"{Application.StartupPath}\degisimfisi.frx");
-            rpr.SetParameterValue("StokAdi","test1StokAdi");
-            NetSatisContext db = new NetSatisContext();
-            var list = db.BarkodEtiketOlustur.ToList();
+            //Report rpr = new Report();
+            //rpr.Load($@"{Application.StartupPath}\degisimfisi.frx");
+            //rpr.SetParameterValue("StokAdi","test1StokAdi");
+            //NetSatisContext db = new NetSatisContext();
+            //var list = db.BarkodEtiketOlustur.ToList();
 
-            //rpr.RegisterData();
-            rpr.Design();
-            // rptBarkodRaf r = new rptBarkodRaf();
-            //using (NetSatisContext db = new NetSatisContext())
-            //{
-            //    var list = db.BarkodEtiketOlustur.ToList();
-            //    r.DataSource = list;
-            //    r.LoadLayout($@"{Application.StartupPath}\rptBarkodRaf.repx");
-            //    r.ShowDesigner();
-            //    // r.ShowDesigner();
-            //}
+            ////rpr.RegisterData();
+            //rpr.Design();
+            rptBarkodRaf r = new rptBarkodRaf();
+            using (NetSatisContext db = new NetSatisContext())
+            {
+                var list = db.BarkodEtiketOlustur.ToList();
+                r.DataSource = list;
+                r.LoadLayout($@"{Application.StartupPath}\rptBarkodRaf.repx");
+                r.ShowDesigner();
+                // r.ShowDesigner();
+            }
         }
 
         private void yazdırToolStripMenuItem1_Click(object sender, EventArgs e)
