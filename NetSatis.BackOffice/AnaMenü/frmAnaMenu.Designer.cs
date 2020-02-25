@@ -499,6 +499,7 @@
             // 
             this.barHizliSatisMenu.Caption = "Hızlı Satış Kısayol";
             this.barHizliSatisMenu.Id = 10;
+            this.barHizliSatisMenu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barHizliSatisMenu.ImageOptions.Image")));
             this.barHizliSatisMenu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barHizliSatisMenu.ImageOptions.LargeImage")));
             this.barHizliSatisMenu.LargeWidth = 75;
             this.barHizliSatisMenu.Name = "barHizliSatisMenu";
@@ -540,7 +541,7 @@
             // 
             this.barRaporlar.Caption = "Rapolar";
             this.barRaporlar.Id = 15;
-            this.barRaporlar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barRaporlar.ImageOptions.LargeImage")));
+            this.barRaporlar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barRaporlar.ImageOptions.SvgImage")));
             this.barRaporlar.LargeWidth = 75;
             this.barRaporlar.Name = "barRaporlar";
             this.barRaporlar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barRaporlar_ItemClick);
@@ -549,7 +550,7 @@
             // 
             this.barRaporDuzenle.Caption = "Rapor Oluştur";
             this.barRaporDuzenle.Id = 16;
-            this.barRaporDuzenle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barRaporDuzenle.ImageOptions.LargeImage")));
+            this.barRaporDuzenle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barRaporDuzenle.ImageOptions.SvgImage")));
             this.barRaporDuzenle.LargeWidth = 75;
             this.barRaporDuzenle.Name = "barRaporDuzenle";
             this.barRaporDuzenle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barRaporDuzenle_ItemClick);
@@ -558,16 +559,16 @@
             // 
             this.barEtiketBasim.Caption = "Etiket Basım Sihirbazı";
             this.barEtiketBasim.Id = 17;
-            this.barEtiketBasim.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barEtiketBasim.ImageOptions.LargeImage")));
+            this.barEtiketBasim.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barEtiketBasim.ImageOptions.SvgImage")));
             this.barEtiketBasim.LargeWidth = 75;
             this.barEtiketBasim.Name = "barEtiketBasim";
             this.barEtiketBasim.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barEtiketBasim_ItemClick);
             // 
             // btnOzgunRapor
             // 
-            this.btnOzgunRapor.Caption = "Özgün Rapor Sihirbazı";
+            this.btnOzgunRapor.Caption = "Rapor Hazırlama";
             this.btnOzgunRapor.Id = 18;
-            this.btnOzgunRapor.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnOzgunRapor.ImageOptions.LargeImage")));
+            this.btnOzgunRapor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnOzgunRapor.ImageOptions.SvgImage")));
             this.btnOzgunRapor.LargeWidth = 75;
             this.btnOzgunRapor.Name = "btnOzgunRapor";
             this.btnOzgunRapor.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnOzgunRapor_ItemClick);

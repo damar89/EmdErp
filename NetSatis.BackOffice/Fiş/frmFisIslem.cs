@@ -908,8 +908,6 @@ namespace NetSatis.BackOffice.Fiş
                 stokHareket.BirimFiyati = txtFisTuru.Text == "Alış Faturası" || txtFisTuru.Text == "Alış İade Faturası" || txtFisTuru.Text == "Alış İrsaliyesi" || txtFisTuru.Text == "Verilen Sipariş Fişi" || txtFisTuru.Text == "Alınan Teklif Fişi" || txtFisTuru.Text == "Stok Devir Fişi" || txtFisTuru.Text == "Sayım Fazlası Fişi" || txtFisTuru.Text == "Sayım Eksiği Fişi" || txtFisTuru.Text == "Sayım Giriş Fişi" ? entity.AlisFiyati1 : entity.SatisFiyati1;
             }
 
-
-
             stokHareket.Mera = txtFisTuru.Text == "Toptan Satış Faturası" && entity.Mera != null ? entity.Mera : 0;
             stokHareket.Borsa = txtFisTuru.Text == "Toptan Satış Faturası" && entity.Borsa != null ? entity.Borsa : 0;
             stokHareket.Bagkur = txtFisTuru.Text == "Toptan Satış Faturası" && entity.Bagkur != null ? entity.Bagkur : 0;

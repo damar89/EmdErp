@@ -63,6 +63,16 @@ namespace NetSatis.FrontOffice.Properties {
         /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage bo_kpi_scorecard {
+            get {
+                object obj = ResourceManager.GetObject("bo_kpi_scorecard", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage bo_mydetails {
             get {
                 object obj = ResourceManager.GetObject("bo_mydetails", resourceCulture);
@@ -117,6 +127,16 @@ namespace NetSatis.FrontOffice.Properties {
             get {
                 object obj = ResourceManager.GetObject("loadfrom_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage newtablestyle {
+            get {
+                object obj = ResourceManager.GetObject("newtablestyle", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }
         
@@ -187,6 +207,16 @@ namespace NetSatis.FrontOffice.Properties {
             get {
                 object obj = ResourceManager.GetObject("show_32x324", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage switchtimescalesto {
+            get {
+                object obj = ResourceManager.GetObject("switchtimescalesto", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }
         

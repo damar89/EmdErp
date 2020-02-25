@@ -204,6 +204,9 @@
     <Content Include="emd icon.ico" />
     <Content Include="pos icon.ico" />
     <Content Include="pos.ico" />
+    <None Include="Resources\bo_kpi_scorecard.svg" />
+    <None Include="Resources\newtablestyle.svg" />
+    <None Include="Resources\switchtimescalesto.svg" />
     <None Include="Resources\technology_32x321.png" />
     <None Include="Resources\viewsetting_32x321.png" />
     <None Include="Resources\show_32x324.png" />
