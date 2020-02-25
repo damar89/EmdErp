@@ -104,6 +104,7 @@
             this.colKDVDahil = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.colOdemeTuru = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -616,7 +617,7 @@
             this.gridContFisler.Name = "gridContFisler";
             this.gridContFisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpsChkKdvDahil});
-            this.gridContFisler.Size = new System.Drawing.Size(1023, 354);
+            this.gridContFisler.Size = new System.Drawing.Size(1023, 353);
             this.gridContFisler.TabIndex = 0;
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});
@@ -643,7 +644,8 @@
             this.colIskontoTutari3,
             this.colToplamTutar,
             this.colAciklama,
-            this.colKDVDahil});
+            this.colKDVDahil,
+            this.colOdemeTuru});
             this.gridFisler.GridControl = this.gridContFisler;
             this.gridFisler.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ToplamTutar", this.colToplamTutar, "(Tutar={0:C2})")});
@@ -861,6 +863,14 @@
             this.popupMenu2.Manager = this.barManager1;
             this.popupMenu2.Name = "popupMenu2";
             // 
+            // colOdemeTuru
+            // 
+            this.colOdemeTuru.Caption = "gridColumn1";
+            this.colOdemeTuru.FieldName = "OdemeTuru";
+            this.colOdemeTuru.Name = "colOdemeTuru";
+            this.colOdemeTuru.Visible = true;
+            this.colOdemeTuru.VisibleIndex = 9;
+            // 
             // frmSatisRapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -968,5 +978,6 @@
         private DevExpress.XtraBars.BarButtonItem btnWord;
         private DevExpress.XtraBars.BarButtonItem btnPdf;
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
+        private DevExpress.XtraGrid.Columns.GridColumn colOdemeTuru;
     }
 }

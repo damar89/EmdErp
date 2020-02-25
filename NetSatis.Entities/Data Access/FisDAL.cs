@@ -407,6 +407,10 @@ namespace NetSatis.Entities.Data_Access
                        fisler.IskontoOrani1,
                        fisler.IskontoTutari1,
                        fisler.DipIskNetTutari,
+                       OdemeTuru = (context.KasaHareketleri.Where(c => c.FisKodu == fisler.FisKodu).FirstOrDefault() != null ?
+                         context.OdemeTurleri.Where(x => x.Id == context.KasaHareketleri.Where(c => c.FisKodu == fisler.FisKodu).FirstOrDefault().OdemeTuruId).FirstOrDefault().OdemeTuruAdi
+                                : "Acik Hesap"
+                       ),
                        alacak =
                        (context.Fisler.Where(c => c.CariId == fisler.Cari.Id && c.FisTuru == "Alış Faturası" || c.FisTuru == "Satış İade Faturası")
                        .Sum(c => c.ToplamTutar) ?? 0) +
@@ -427,6 +431,7 @@ namespace NetSatis.Entities.Data_Access
                        k.CariKodu,
                        k.FaturaFisKodu,
                        k.Tarih,
+                       k.OdemeTuru,
                        k.VadeTarihi,
                        k.PersonelKodu,
                        k.PersonelAdi,
