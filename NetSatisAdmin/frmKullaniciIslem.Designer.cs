@@ -488,7 +488,7 @@
             this.treeList1.Cursor = System.Windows.Forms.Cursors.Default;
             this.treeList1.CustomizationFormBounds = new System.Drawing.Rectangle(208, 496, 260, 232);
             this.treeList1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeList1.Location = new System.Drawing.Point(2, 20);
+            this.treeList1.Location = new System.Drawing.Point(2, 21);
             this.treeList1.Name = "treeList1";
             this.treeList1.BeginUnboundLoad();
             this.treeList1.AppendNode(new object[] {
@@ -542,7 +542,7 @@
             this.treeList1.OptionsView.ShowHorzLines = false;
             this.treeList1.OptionsView.ShowIndicator = false;
             this.treeList1.OptionsView.ShowVertLines = false;
-            this.treeList1.Size = new System.Drawing.Size(412, 152);
+            this.treeList1.Size = new System.Drawing.Size(412, 151);
             this.treeList1.TabIndex = 0;
             // 
             // treeListColumn1

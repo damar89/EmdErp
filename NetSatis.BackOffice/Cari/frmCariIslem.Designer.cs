@@ -97,6 +97,7 @@
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.grupGrup = new DevExpress.XtraEditors.GroupControl();
+            this.txtAdres2 = new DevExpress.XtraEditors.MemoEdit();
             this.txtAdres = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl28 = new DevExpress.XtraEditors.LabelControl();
@@ -123,6 +124,7 @@
             this.txtTelefon = new DevExpress.XtraEditors.TextEdit();
             this.txtCepTel3 = new DevExpress.XtraEditors.TextEdit();
             this.txtCepTel2 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.txtCepTel = new DevExpress.XtraEditors.TextEdit();
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.txtOzelkod3 = new DevExpress.XtraEditors.ButtonEdit();
@@ -164,8 +166,6 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.txtAdres2 = new DevExpress.XtraEditors.MemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOzelkod4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grupKdv)).BeginInit();
             this.grupKdv.SuspendLayout();
@@ -173,6 +173,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.calcRisklimit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grupGrup)).BeginInit();
             this.grupGrup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAdres2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdres.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFax.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSemt.Properties)).BeginInit();
@@ -209,7 +210,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAdres2.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtOzelkod4
@@ -233,9 +233,9 @@
             this.grupKdv.Controls.Add(this.labelControl9);
             this.grupKdv.Controls.Add(this.labelControl22);
             this.grupKdv.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grupKdv.Location = new System.Drawing.Point(0, 581);
+            this.grupKdv.Location = new System.Drawing.Point(0, 573);
             this.grupKdv.Name = "grupKdv";
-            this.grupKdv.Size = new System.Drawing.Size(677, 72);
+            this.grupKdv.Size = new System.Drawing.Size(671, 72);
             this.grupKdv.TabIndex = 3;
             this.grupKdv.Text = "Özel Ayarlar";
             // 
@@ -322,9 +322,17 @@
             this.grupGrup.Dock = System.Windows.Forms.DockStyle.Top;
             this.grupGrup.Location = new System.Drawing.Point(0, 220);
             this.grupGrup.Name = "grupGrup";
-            this.grupGrup.Size = new System.Drawing.Size(677, 239);
+            this.grupGrup.Size = new System.Drawing.Size(671, 239);
             this.grupGrup.TabIndex = 1;
             this.grupGrup.Text = "İletişim Bilgileri";
+            // 
+            // txtAdres2
+            // 
+            this.txtAdres2.Location = new System.Drawing.Point(110, 174);
+            this.txtAdres2.Name = "txtAdres2";
+            this.txtAdres2.Size = new System.Drawing.Size(203, 58);
+            this.txtAdres2.TabIndex = 2;
+            this.txtAdres2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAdres_KeyDown);
             // 
             // txtAdres
             // 
@@ -624,6 +632,20 @@
             this.txtCepTel2.TabIndex = 0;
             this.txtCepTel2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCepTel_KeyDown);
             // 
+            // labelControl14
+            // 
+            this.labelControl14.Appearance.BorderColor = System.Drawing.Color.Silver;
+            this.labelControl14.Appearance.Options.UseBorderColor = true;
+            this.labelControl14.Appearance.Options.UseTextOptions = true;
+            this.labelControl14.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl14.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl14.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl14.Location = new System.Drawing.Point(8, 177);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(94, 57);
+            this.labelControl14.TabIndex = 0;
+            this.labelControl14.Text = "Adres 2 :";
+            // 
             // txtCepTel
             // 
             this.txtCepTel.Location = new System.Drawing.Point(110, 22);
@@ -852,7 +874,7 @@
             this.grupGenel.Dock = System.Windows.Forms.DockStyle.Top;
             this.grupGenel.Location = new System.Drawing.Point(0, 0);
             this.grupGenel.Name = "grupGenel";
-            this.grupGenel.Size = new System.Drawing.Size(677, 220);
+            this.grupGenel.Size = new System.Drawing.Size(671, 220);
             this.grupGenel.TabIndex = 0;
             this.grupGenel.Text = "Genel Bilgiler";
             // 
@@ -1090,7 +1112,7 @@
             this.btnKaydet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKaydet.ImageOptions.ImageIndex = 0;
             this.btnKaydet.ImageOptions.ImageList = this.ımageList1;
-            this.btnKaydet.Location = new System.Drawing.Point(496, 23);
+            this.btnKaydet.Location = new System.Drawing.Point(490, 23);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(85, 31);
             this.btnKaydet.TabIndex = 0;
@@ -1110,7 +1132,7 @@
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.ImageIndex = 1;
             this.btnKapat.ImageOptions.ImageList = this.ımageList1;
-            this.btnKapat.Location = new System.Drawing.Point(587, 23);
+            this.btnKapat.Location = new System.Drawing.Point(581, 23);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(85, 31);
             this.btnKapat.TabIndex = 1;
@@ -1122,9 +1144,9 @@
             this.groupControl1.Controls.Add(this.btnKapat);
             this.groupControl1.Controls.Add(this.btnKaydet);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 653);
+            this.groupControl1.Location = new System.Drawing.Point(0, 645);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(677, 57);
+            this.groupControl1.Size = new System.Drawing.Size(671, 57);
             this.groupControl1.TabIndex = 4;
             // 
             // groupControl2
@@ -1142,39 +1164,17 @@
             this.groupControl2.Controls.Add(this.txtCariGrubu);
             this.groupControl2.Controls.Add(this.labelControl18);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl2.Location = new System.Drawing.Point(0, 455);
+            this.groupControl2.Location = new System.Drawing.Point(0, 447);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(677, 126);
+            this.groupControl2.Size = new System.Drawing.Size(671, 126);
             this.groupControl2.TabIndex = 2;
             this.groupControl2.Text = "Gruplar";
-            // 
-            // labelControl14
-            // 
-            this.labelControl14.Appearance.BorderColor = System.Drawing.Color.Silver;
-            this.labelControl14.Appearance.Options.UseBorderColor = true;
-            this.labelControl14.Appearance.Options.UseTextOptions = true;
-            this.labelControl14.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl14.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl14.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl14.Location = new System.Drawing.Point(8, 177);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(94, 57);
-            this.labelControl14.TabIndex = 0;
-            this.labelControl14.Text = "Adres 2 :";
-            // 
-            // txtAdres2
-            // 
-            this.txtAdres2.Location = new System.Drawing.Point(110, 174);
-            this.txtAdres2.Name = "txtAdres2";
-            this.txtAdres2.Size = new System.Drawing.Size(203, 58);
-            this.txtAdres2.TabIndex = 2;
-            this.txtAdres2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAdres_KeyDown);
             // 
             // frmCariIslem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 710);
+            this.ClientSize = new System.Drawing.Size(671, 702);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.grupGrup);
             this.Controls.Add(this.grupKdv);
@@ -1197,6 +1197,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.calcRisklimit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grupGrup)).EndInit();
             this.grupGrup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtAdres2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdres.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFax.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSemt.Properties)).EndInit();
@@ -1233,7 +1234,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAdres2.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

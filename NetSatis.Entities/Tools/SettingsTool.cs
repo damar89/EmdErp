@@ -115,8 +115,6 @@ namespace NetSatis.Entities.Tools
 
         public static string AyarOku(Ayarlar ayar)
         {
-
-
             string[] gelenAyar = ayar.ToString().Split(Convert.ToChar("_"));
             return data[gelenAyar[0]][gelenAyar[1]];
         }
@@ -124,7 +122,7 @@ namespace NetSatis.Entities.Tools
         public static void Save()
         {
             parser.WriteFile(dosyaAdi, data);
-
+        
         }
     }
 }
