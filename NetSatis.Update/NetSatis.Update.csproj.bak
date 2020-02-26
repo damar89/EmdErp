@@ -35,15 +35,15 @@
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v18.2" />
-    <Reference Include="DevExpress.Data.v18.2" />
-    <Reference Include="DevExpress.Utils.v18.2" />
-    <Reference Include="DevExpress.Sparkline.v18.2.Core" />
-    <Reference Include="DevExpress.XtraEditors.v18.2" />
-    <Reference Include="DevExpress.Office.v18.2.Core" />
-    <Reference Include="DevExpress.RichEdit.v18.2.Core" />
-    <Reference Include="DevExpress.RichEdit.v18.2.Export" />
-    <Reference Include="DevExpress.Printing.v18.2.Core" />
+    <Reference Include="DevExpress.BonusSkins.v19.1" />
+    <Reference Include="DevExpress.Data.v19.1" />
+    <Reference Include="DevExpress.Utils.v19.1" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v19.1" />
+    <Reference Include="DevExpress.Office.v19.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Export" />
+    <Reference Include="DevExpress.Printing.v19.1.Core" />
     <Reference Include="System">
       <Private>True</Private>
     </Reference>

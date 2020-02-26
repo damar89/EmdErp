@@ -35,15 +35,15 @@
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v19.1" />
-    <Reference Include="DevExpress.Data.v19.1" />
-    <Reference Include="DevExpress.Utils.v19.1" />
-    <Reference Include="DevExpress.Sparkline.v19.1.Core" />
-    <Reference Include="DevExpress.XtraEditors.v19.1" />
-    <Reference Include="DevExpress.Office.v19.1.Core" />
-    <Reference Include="DevExpress.RichEdit.v19.1.Core" />
-    <Reference Include="DevExpress.RichEdit.v19.1.Export" />
-    <Reference Include="DevExpress.Printing.v19.1.Core" />
+    <Reference Include="DevExpress.BonusSkins.v19.2" />
+    <Reference Include="DevExpress.Data.v19.2" />
+    <Reference Include="DevExpress.Utils.v19.2" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core" />
+    <Reference Include="DevExpress.XtraEditors.v19.2" />
+    <Reference Include="DevExpress.Office.v19.2.Core" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Core" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Export" />
+    <Reference Include="DevExpress.Printing.v19.2.Core" />
     <Reference Include="System">
       <Private>True</Private>
     </Reference>
@@ -90,7 +90,6 @@
     <EmbeddedResource Include="frmGuncelle.resx">
       <DependentUpon>frmGuncelle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
