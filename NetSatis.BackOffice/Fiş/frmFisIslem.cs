@@ -3166,5 +3166,14 @@ namespace NetSatis.BackOffice.Fiş
                 throw;
             }
         }
+
+        private void gridStokHareket_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
+        {
+
+
+            if (e.Column.Caption == "Sıra No")
+                e.DisplayText = (e.ListSourceRowIndex + 1).ToString();
+        }
     }
 }
+
