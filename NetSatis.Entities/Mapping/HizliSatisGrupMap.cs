@@ -15,7 +15,7 @@ namespace NetSatis.Entities.Mapping
         {
             this.HasKey(p => p.Id);
             this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(p => p.GrupAdi).HasMaxLength(20);
+            this.Property(p => p.GrupAdi).HasMaxLength(75);
             this.Property(p => p.Aciklama).HasMaxLength(200);
             
             this.ToTable("HizliSatisGruplari");

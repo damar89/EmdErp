@@ -429,7 +429,7 @@
             this.naviGenelBilgiler.Controls.Add(this.calcGenelToplam);
             this.naviGenelBilgiler.ImageOptions.SvgImage = global::NetSatis.FrontOffice.Properties.Resources.newtablestyle;
             this.naviGenelBilgiler.Name = "naviGenelBilgiler";
-            this.naviGenelBilgiler.Size = new System.Drawing.Size(301, 783);
+            this.naviGenelBilgiler.Size = new System.Drawing.Size(305, 782);
             // 
             // simpleButton2
             // 
@@ -1346,7 +1346,7 @@
             this.navCari.Controls.Add(this.grpCariGrup);
             this.navCari.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navCari.ImageOptions.Image")));
             this.navCari.Name = "navCari";
-            this.navCari.Size = new System.Drawing.Size(301, 783);
+            this.navCari.Size = new System.Drawing.Size(305, 782);
             // 
             // txtAraToplam
             // 
@@ -1373,7 +1373,7 @@
             this.txtAraToplam.Properties.Mask.EditMask = "C";
             this.txtAraToplam.Properties.NullText = "0,00";
             this.txtAraToplam.Properties.ReadOnly = true;
-            this.txtAraToplam.Size = new System.Drawing.Size(0, 10);
+            this.txtAraToplam.Size = new System.Drawing.Size(4, 10);
             this.txtAraToplam.TabIndex = 125;
             // 
             // calcKdvToplam
@@ -1401,7 +1401,7 @@
             this.calcKdvToplam.Properties.Mask.EditMask = "C";
             this.calcKdvToplam.Properties.NullText = "0,00";
             this.calcKdvToplam.Properties.ReadOnly = true;
-            this.calcKdvToplam.Size = new System.Drawing.Size(0, 10);
+            this.calcKdvToplam.Size = new System.Drawing.Size(4, 10);
             this.calcKdvToplam.TabIndex = 126;
             // 
             // calcIndirimTutari
@@ -1429,7 +1429,7 @@
             this.calcIndirimTutari.Properties.Mask.EditMask = "C";
             this.calcIndirimTutari.Properties.NullText = "0,00";
             this.calcIndirimTutari.Properties.ReadOnly = true;
-            this.calcIndirimTutari.Size = new System.Drawing.Size(0, 10);
+            this.calcIndirimTutari.Size = new System.Drawing.Size(4, 10);
             this.calcIndirimTutari.TabIndex = 127;
             // 
             // grpCariGrup
@@ -1923,7 +1923,7 @@
             this.navPersonel.Controls.Add(this.flowPersonel);
             this.navPersonel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navPersonel.ImageOptions.Image")));
             this.navPersonel.Name = "navPersonel";
-            this.navPersonel.Size = new System.Drawing.Size(387, 828);
+            this.navPersonel.Size = new System.Drawing.Size(305, 782);
             // 
             // flowPersonel
             // 
@@ -1932,7 +1932,7 @@
             this.flowPersonel.ForeColor = System.Drawing.Color.White;
             this.flowPersonel.Location = new System.Drawing.Point(0, 0);
             this.flowPersonel.Name = "flowPersonel";
-            this.flowPersonel.Size = new System.Drawing.Size(387, 828);
+            this.flowPersonel.Size = new System.Drawing.Size(305, 782);
             this.flowPersonel.TabIndex = 1;
             // 
             // navBekleyenSatislar
@@ -1941,7 +1941,7 @@
             this.navBekleyenSatislar.Controls.Add(this.flowBekleyenSatislar);
             this.navBekleyenSatislar.ImageOptions.SvgImage = global::NetSatis.FrontOffice.Properties.Resources.switchtimescalesto;
             this.navBekleyenSatislar.Name = "navBekleyenSatislar";
-            this.navBekleyenSatislar.Size = new System.Drawing.Size(305, 794);
+            this.navBekleyenSatislar.Size = new System.Drawing.Size(305, 782);
             // 
             // flowBekleyenSatislar
             // 
@@ -1949,7 +1949,7 @@
             this.flowBekleyenSatislar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowBekleyenSatislar.Location = new System.Drawing.Point(0, 0);
             this.flowBekleyenSatislar.Name = "flowBekleyenSatislar";
-            this.flowBekleyenSatislar.Size = new System.Drawing.Size(305, 794);
+            this.flowBekleyenSatislar.Size = new System.Drawing.Size(305, 782);
             this.flowBekleyenSatislar.TabIndex = 2;
             // 
             // navigationPage1
@@ -1966,7 +1966,7 @@
             this.navigationPage1.Controls.Add(this.btnKasaRpr);
             this.navigationPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navigationPage1.ImageOptions.Image")));
             this.navigationPage1.Name = "navigationPage1";
-            this.navigationPage1.Size = new System.Drawing.Size(387, 828);
+            this.navigationPage1.Size = new System.Drawing.Size(305, 782);
             // 
             // btnRaporIade
             // 
@@ -2000,7 +2000,7 @@
             this.simpleButton1.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(79, 3);
+            this.simpleButton1.Location = new System.Drawing.Point(78, 3);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(70, 70);
             this.simpleButton1.TabIndex = 0;
@@ -2059,13 +2059,13 @@
             this.navigationPage2.Controls.Add(this.checkIrsaliye);
             this.navigationPage2.ImageOptions.Image = global::NetSatis.FrontOffice.Properties.Resources.technology_32x321;
             this.navigationPage2.Name = "navigationPage2";
-            this.navigationPage2.Size = new System.Drawing.Size(387, 828);
+            this.navigationPage2.Size = new System.Drawing.Size(305, 782);
             // 
             // btnKaydet
             // 
             this.btnKaydet.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnKaydet.ImageOptions.ImageIndex = 0;
-            this.btnKaydet.Location = new System.Drawing.Point(107, 51);
+            this.btnKaydet.Location = new System.Drawing.Point(66, 51);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(85, 31);
             this.btnKaydet.TabIndex = 4;
@@ -3039,7 +3039,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.MultiLine = DevExpress.Utils.DefaultBoolean.True;
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.Size = new System.Drawing.Size(856, 473);
+            this.xtraTabControl1.Size = new System.Drawing.Size(856, 474);
             this.xtraTabControl1.TabIndex = 0;
             // 
             // radialFiyat

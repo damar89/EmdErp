@@ -15,8 +15,8 @@ namespace NetSatis.Entities.Mapping
         {
             this.HasKey(p => p.Id);
             this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(p => p.StokKodu).HasMaxLength(12);
-            this.Property(p => p.UrunAdi).HasMaxLength(75);
+            this.Property(p => p.StokKodu).HasMaxLength(65);
+            this.Property(p => p.UrunAdi).HasMaxLength(120);
             this.Property(p => p.Fiyati).HasPrecision(12, 2);
 
 

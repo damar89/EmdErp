@@ -488,51 +488,51 @@
             this.treeList1.Cursor = System.Windows.Forms.Cursors.Default;
             this.treeList1.CustomizationFormBounds = new System.Drawing.Rectangle(208, 496, 260, 232);
             this.treeList1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeList1.Location = new System.Drawing.Point(2, 21);
+            this.treeList1.Location = new System.Drawing.Point(2, 20);
             this.treeList1.Name = "treeList1";
             this.treeList1.BeginUnboundLoad();
             this.treeList1.AppendNode(new object[] {
             "Stoklar",
-            "frmStok"}, -1);
+            "frmStok"}, -1, System.Windows.Forms.CheckState.Checked);
             this.treeList1.AppendNode(new object[] {
             "Göster",
-            "btnStok"}, 0);
+            "btnStok"}, 0, System.Windows.Forms.CheckState.Checked);
             this.treeList1.AppendNode(new object[] {
             "Ekle",
-            "btnEkle"}, 0);
+            "btnEkle"}, 0, System.Windows.Forms.CheckState.Checked);
             this.treeList1.AppendNode(new object[] {
             "Düzenle",
-            "btnDuzenle"}, 0);
+            "btnDuzenle"}, 0, System.Windows.Forms.CheckState.Checked);
             this.treeList1.AppendNode(new object[] {
             "Sil",
-            "btnSil"}, 0);
+            "btnSil"}, 0, System.Windows.Forms.CheckState.Checked);
             this.treeList1.AppendNode(new object[] {
             "Kopyala",
-            "btnKopyala"}, 0);
+            "btnKopyala"}, 0, System.Windows.Forms.CheckState.Checked);
             this.treeList1.AppendNode(new object[] {
             "Hareket Görüntüle",
-            "btnStokHareket"}, 0);
+            "btnStokHareket"}, 0, System.Windows.Forms.CheckState.Checked);
             this.treeList1.AppendNode(new object[] {
             "Cariler",
-            "frmCari"}, -1);
+            "frmCari"}, -1, System.Windows.Forms.CheckState.Checked);
             this.treeList1.AppendNode(new object[] {
             "Göster",
-            "btnCariler"}, 7);
+            "btnCariler"}, 7, System.Windows.Forms.CheckState.Checked);
             this.treeList1.AppendNode(new object[] {
             "Ekle",
-            "btnEkle"}, 7);
+            "btnEkle"}, 7, System.Windows.Forms.CheckState.Checked);
             this.treeList1.AppendNode(new object[] {
             "Düzenle",
-            "btnDuzenle"}, 7);
+            "btnDuzenle"}, 7, System.Windows.Forms.CheckState.Checked);
             this.treeList1.AppendNode(new object[] {
             "Sil",
-            "btnSil"}, 7);
+            "btnSil"}, 7, System.Windows.Forms.CheckState.Checked);
             this.treeList1.AppendNode(new object[] {
             "Kopyala",
-            "btnKopyala"}, 7);
+            "btnKopyala"}, 7, System.Windows.Forms.CheckState.Checked);
             this.treeList1.AppendNode(new object[] {
             "Hareket Görüntüle",
-            "btnCariHareket"}, 7);
+            "btnCariHareket"}, 7, System.Windows.Forms.CheckState.Checked);
             this.treeList1.EndUnboundLoad();
             this.treeList1.OptionsBehavior.AllowRecursiveNodeChecking = true;
             this.treeList1.OptionsView.AutoWidth = false;
@@ -542,7 +542,7 @@
             this.treeList1.OptionsView.ShowHorzLines = false;
             this.treeList1.OptionsView.ShowIndicator = false;
             this.treeList1.OptionsView.ShowVertLines = false;
-            this.treeList1.Size = new System.Drawing.Size(412, 151);
+            this.treeList1.Size = new System.Drawing.Size(412, 152);
             this.treeList1.TabIndex = 0;
             // 
             // treeListColumn1

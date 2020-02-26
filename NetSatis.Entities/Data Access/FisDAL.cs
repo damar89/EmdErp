@@ -73,6 +73,67 @@ namespace NetSatis.Entities.Data_Access
                     }).ToList();
             return tablo;
         }
+         public object GunSonu(NetSatisContext context, DateTime baslangic, DateTime bitis)
+        {
+            var tablo = context.Fisler.Where(c => c.Tarih >= baslangic && c.Tarih <= bitis).GroupJoin(
+                context.Fisler.Where(c => c.Tarih >= baslangic && c.Tarih <= bitis), c => c.CariId, c => c.CariId,
+                (fisler, cariler) =>
+                   new
+                   {
+                       fisler.Id,
+                       fisler.FisKodu,
+                       fisler.FisTuru,
+                       fisler.ToplamTutar,
+                       fisler.Cari.CariAdi,
+                       fisler.Cari.CariKodu,
+                       fisler.Tarih,
+                       fisler.VadeTarihi,
+                       fisler.Personel.PersonelKodu,
+                       fisler.Personel.PersonelAdi,
+                       fisler.Seri,
+                       fisler.Sira,
+                       OdemeTuru = (context.KasaHareketleri.Where(c => c.FisKodu == fisler.FisKodu).FirstOrDefault() != null ?
+                         context.OdemeTurleri.Where(x => x.Id == context.KasaHareketleri.Where(c => c.FisKodu == fisler.FisKodu).FirstOrDefault().OdemeTuruId).FirstOrDefault().OdemeTuruAdi
+                                : "Acik Hesap"
+                       ),
+                       fisler.Tipi,
+                       fisler.EfaturaDurumu,
+                       fisler.IrsaliyeFisKodu,
+                       fisler.SiparisFisKodu,
+                       fisler.FaturaFisKodu,
+                       fisler.TeklifFisKodu,
+                       fisler.Aciklama,
+                       fisler.BelgeNo,
+                       fisler.IskontoOrani1,
+                       fisler.IskontoTutari1,
+                   }).Select(k => new
+                   {
+                       k.Id,
+                       k.FisKodu,
+                       k.FisTuru,
+                       k.ToplamTutar,
+                       k.CariAdi,
+                       k.CariKodu,
+                       k.Tarih,
+                       k.VadeTarihi,
+                       k.PersonelKodu,
+                       k.OdemeTuru,
+                       k.PersonelAdi,
+                       k.Seri,
+                       k.Sira,
+                       k.Tipi,
+                       k.EfaturaDurumu,
+                       k.Aciklama,
+                       k.BelgeNo,
+                       k.IskontoOrani1,
+                       k.IrsaliyeFisKodu,
+                       k.TeklifFisKodu,
+                       k.SiparisFisKodu,
+                       k.FaturaFisKodu,
+                       k.IskontoTutari1,
+                   }).ToList();
+            return tablo;
+        }
         public object Tahsilat(NetSatisContext context, string fisKodu, string CariId)
         {
             var tablo = context.Fisler.Where(c => c.FisKodu == fisKodu).GroupJoin(
@@ -200,6 +261,10 @@ namespace NetSatis.Entities.Data_Access
                        fisler.Personel.PersonelAdi,
                        fisler.Seri,
                        fisler.Sira,
+                       OdemeTuru = (context.KasaHareketleri.Where(c => c.FisKodu == fisler.FisKodu).FirstOrDefault() != null ?
+                         context.OdemeTurleri.Where(x => x.Id == context.KasaHareketleri.Where(c => c.FisKodu == fisler.FisKodu).FirstOrDefault().OdemeTuruId).FirstOrDefault().OdemeTuruAdi
+                                : "Acik Hesap"
+                       ),
                        fisler.Tipi,
                        fisler.EfaturaDurumu,
                        fisler.IrsaliyeFisKodu,
@@ -221,6 +286,7 @@ namespace NetSatis.Entities.Data_Access
                        k.Tarih,
                        k.VadeTarihi,
                        k.PersonelKodu,
+                       k.OdemeTuru,
                        k.PersonelAdi,
                        k.Seri,
                        k.Sira,
@@ -257,6 +323,10 @@ namespace NetSatis.Entities.Data_Access
                        fisler.Seri,
                        fisler.Sira,
                        fisler.Tipi,
+                       OdemeTuru = (context.KasaHareketleri.Where(c => c.FisKodu == fisler.FisKodu).FirstOrDefault() != null ?
+                         context.OdemeTurleri.Where(x => x.Id == context.KasaHareketleri.Where(c => c.FisKodu == fisler.FisKodu).FirstOrDefault().OdemeTuruId).FirstOrDefault().OdemeTuruAdi
+                                : "Acik Hesap"
+                       ),
                        fisler.EfaturaDurumu,
                        fisler.IrsaliyeFisKodu,
                        fisler.SiparisFisKodu,
@@ -289,6 +359,7 @@ namespace NetSatis.Entities.Data_Access
                        k.PersonelKodu,
                        k.PersonelAdi,
                        k.Seri,
+                       k.OdemeTuru,
                        k.Sira,
                        k.Tipi,
                        k.EfaturaDurumu,
@@ -326,6 +397,7 @@ namespace NetSatis.Entities.Data_Access
                       fisler.Seri,
                       fisler.Sira,
                       fisler.Tipi,
+
                       fisler.EfaturaDurumu,
                       fisler.IrsaliyeFisKodu,
                       fisler.TeklifFisKodu,
@@ -333,6 +405,10 @@ namespace NetSatis.Entities.Data_Access
                       fisler.FaturaFisKodu,
                       fisler.Aciklama,
                       fisler.BelgeNo,
+                      OdemeTuru = (context.KasaHareketleri.Where(c => c.FisKodu == fisler.FisKodu).FirstOrDefault() != null ?
+                         context.OdemeTurleri.Where(x => x.Id == context.KasaHareketleri.Where(c => c.FisKodu == fisler.FisKodu).FirstOrDefault().OdemeTuruId).FirstOrDefault().OdemeTuruAdi
+                                : "Acik Hesap"
+                       ),
                       fisler.IskontoOrani1,
                       fisler.IskontoTutari1,
                       fisler.DipIskNetTutari,
@@ -359,6 +435,7 @@ namespace NetSatis.Entities.Data_Access
                       k.SiparisFisKodu,
                       k.TeklifFisKodu,
                       k.Tarih,
+                      k.OdemeTuru,
                       k.VadeTarihi,
                       k.PersonelKodu,
                       k.PersonelAdi,
@@ -475,6 +552,10 @@ namespace NetSatis.Entities.Data_Access
                        fisler.Tipi,
                        fisler.FaturaFisKodu,
                        fisler.IrsaliyeFisKodu,
+                       OdemeTuru = (context.KasaHareketleri.Where(c => c.FisKodu == fisler.FisKodu).FirstOrDefault() != null ?
+                         context.OdemeTurleri.Where(x => x.Id == context.KasaHareketleri.Where(c => c.FisKodu == fisler.FisKodu).FirstOrDefault().OdemeTuruId).FirstOrDefault().OdemeTuruAdi
+                                : "Acik Hesap"
+                       ),
                        fisler.TeklifFisKodu,
                        fisler.SiparisFisKodu,
                        fisler.Aciklama,
@@ -508,6 +589,7 @@ namespace NetSatis.Entities.Data_Access
                        k.Seri,
                        k.Sira,
                        k.Tipi,
+                       k.OdemeTuru,
                        k.Aciklama,
                        k.BelgeNo,
                        k.IskontoOrani1,
@@ -550,7 +632,10 @@ namespace NetSatis.Entities.Data_Access
                        fisler.BelgeNo,
                        fisler.IskontoOrani1,
                        fisler.IskontoTutari1,
-
+                       OdemeTuru = (context.KasaHareketleri.Where(c => c.FisKodu == fisler.FisKodu).FirstOrDefault() != null ?
+                         context.OdemeTurleri.Where(x => x.Id == context.KasaHareketleri.Where(c => c.FisKodu == fisler.FisKodu).FirstOrDefault().OdemeTuruId).FirstOrDefault().OdemeTuruAdi
+                                : "Acik Hesap"
+                       ),
                        fisler.DipIskNetTutari,
 
                        alacak =
@@ -576,6 +661,7 @@ namespace NetSatis.Entities.Data_Access
                        k.PersonelKodu,
                        k.PersonelAdi,
                        k.Seri,
+                       k.OdemeTuru,
                        k.Sira,
                        k.Tipi,
                        k.FaturaFisKodu,

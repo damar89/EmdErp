@@ -103,8 +103,8 @@
             this.colAciklama = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKDVDahil = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.colOdemeTuru = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -617,13 +617,15 @@
             this.gridContFisler.Name = "gridContFisler";
             this.gridContFisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpsChkKdvDahil});
-            this.gridContFisler.Size = new System.Drawing.Size(1023, 353);
+            this.gridContFisler.Size = new System.Drawing.Size(1023, 354);
             this.gridContFisler.TabIndex = 0;
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});
             // 
             // gridFisler
             // 
+            this.gridFisler.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridFisler.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridFisler.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.colFisKodu,
@@ -701,7 +703,7 @@
             this.colCariAdi.OptionsColumn.AllowEdit = false;
             this.colCariAdi.OptionsColumn.ShowInCustomizationForm = false;
             this.colCariAdi.Visible = true;
-            this.colCariAdi.VisibleIndex = 2;
+            this.colCariAdi.VisibleIndex = 3;
             this.colCariAdi.Width = 117;
             // 
             // colBelgeNo
@@ -715,6 +717,8 @@
             // 
             // colTarih
             // 
+            this.colTarih.AppearanceCell.Options.UseTextOptions = true;
+            this.colTarih.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTarih.Caption = "Tarih";
             this.colTarih.DisplayFormat.FormatString = "d";
             this.colTarih.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
@@ -723,7 +727,7 @@
             this.colTarih.OptionsColumn.AllowEdit = false;
             this.colTarih.OptionsColumn.ShowInCustomizationForm = false;
             this.colTarih.Visible = true;
-            this.colTarih.VisibleIndex = 3;
+            this.colTarih.VisibleIndex = 4;
             this.colTarih.Width = 79;
             // 
             // colVadeTarihi
@@ -737,6 +741,8 @@
             // 
             // colSaat
             // 
+            this.colSaat.AppearanceCell.Options.UseTextOptions = true;
+            this.colSaat.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colSaat.Caption = "Saat";
             this.colSaat.DisplayFormat.FormatString = "t";
             this.colSaat.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
@@ -744,7 +750,7 @@
             this.colSaat.Name = "colSaat";
             this.colSaat.OptionsColumn.AllowEdit = false;
             this.colSaat.Visible = true;
-            this.colSaat.VisibleIndex = 4;
+            this.colSaat.VisibleIndex = 5;
             this.colSaat.Width = 70;
             // 
             // colPlasiyerKodu
@@ -789,6 +795,8 @@
             // 
             // colIskontoTutari1
             // 
+            this.colIskontoTutari1.AppearanceCell.Options.UseTextOptions = true;
+            this.colIskontoTutari1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colIskontoTutari1.Caption = "İskonto Tutarı";
             this.colIskontoTutari1.DisplayFormat.FormatString = "C2";
             this.colIskontoTutari1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -797,11 +805,13 @@
             this.colIskontoTutari1.OptionsColumn.AllowEdit = false;
             this.colIskontoTutari1.OptionsColumn.ShowInCustomizationForm = false;
             this.colIskontoTutari1.Visible = true;
-            this.colIskontoTutari1.VisibleIndex = 6;
+            this.colIskontoTutari1.VisibleIndex = 7;
             this.colIskontoTutari1.Width = 85;
             // 
             // colDipIsk
             // 
+            this.colDipIsk.AppearanceCell.Options.UseTextOptions = true;
+            this.colDipIsk.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colDipIsk.Caption = "Dip İskonto";
             this.colDipIsk.DisplayFormat.FormatString = "c2";
             this.colDipIsk.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -810,7 +820,7 @@
             this.colDipIsk.OptionsColumn.AllowEdit = false;
             this.colDipIsk.OptionsColumn.ShowInCustomizationForm = false;
             this.colDipIsk.Visible = true;
-            this.colDipIsk.VisibleIndex = 7;
+            this.colDipIsk.VisibleIndex = 8;
             // 
             // colIskontoTutari3
             // 
@@ -821,6 +831,8 @@
             // 
             // colToplamTutar
             // 
+            this.colToplamTutar.AppearanceCell.Options.UseTextOptions = true;
+            this.colToplamTutar.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colToplamTutar.Caption = "Toplam Tutar";
             this.colToplamTutar.DisplayFormat.FormatString = "C2";
             this.colToplamTutar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -831,7 +843,7 @@
             this.colToplamTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ToplamTutar", "Toplam Tutar : {0:C2}")});
             this.colToplamTutar.Visible = true;
-            this.colToplamTutar.VisibleIndex = 8;
+            this.colToplamTutar.VisibleIndex = 9;
             this.colToplamTutar.Width = 108;
             // 
             // colAciklama
@@ -842,7 +854,7 @@
             this.colAciklama.OptionsColumn.AllowEdit = false;
             this.colAciklama.OptionsColumn.ShowInCustomizationForm = false;
             this.colAciklama.Visible = true;
-            this.colAciklama.VisibleIndex = 5;
+            this.colAciklama.VisibleIndex = 6;
             this.colAciklama.Width = 96;
             // 
             // colKDVDahil
@@ -858,18 +870,20 @@
             this.rpsChkKdvDahil.AutoHeight = false;
             this.rpsChkKdvDahil.Name = "rpsChkKdvDahil";
             // 
+            // colOdemeTuru
+            // 
+            this.colOdemeTuru.AppearanceCell.Options.UseTextOptions = true;
+            this.colOdemeTuru.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colOdemeTuru.Caption = "Ödeme Türü";
+            this.colOdemeTuru.FieldName = "OdemeTuru";
+            this.colOdemeTuru.Name = "colOdemeTuru";
+            this.colOdemeTuru.Visible = true;
+            this.colOdemeTuru.VisibleIndex = 2;
+            // 
             // popupMenu2
             // 
             this.popupMenu2.Manager = this.barManager1;
             this.popupMenu2.Name = "popupMenu2";
-            // 
-            // colOdemeTuru
-            // 
-            this.colOdemeTuru.Caption = "gridColumn1";
-            this.colOdemeTuru.FieldName = "OdemeTuru";
-            this.colOdemeTuru.Name = "colOdemeTuru";
-            this.colOdemeTuru.Visible = true;
-            this.colOdemeTuru.VisibleIndex = 9;
             // 
             // frmSatisRapor
             // 

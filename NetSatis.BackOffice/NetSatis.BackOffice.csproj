@@ -762,6 +762,18 @@
     <Compile Include="Raporlar\frmGunlukHareketler.Designer.cs">
       <DependentUpon>frmGunlukHareketler.cs</DependentUpon>
     </Compile>
+    <Compile Include="Raporlar\frmGunSonuFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raporlar\frmGunSonuFilter.Designer.cs">
+      <DependentUpon>frmGunSonuFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporlar\frmGunSonuRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raporlar\frmGunSonuRapor.Designer.cs">
+      <DependentUpon>frmGunSonuRapor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Raporlar\frmOzgunRaporHazirla.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1262,6 +1274,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Raporlar\frmGunlukHareketler.resx">
       <DependentUpon>frmGunlukHareketler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar\frmGunSonuFilter.resx">
+      <DependentUpon>frmGunSonuFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar\frmGunSonuRapor.resx">
+      <DependentUpon>frmGunSonuRapor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Raporlar\frmOzgunRaporHazirla.resx">
       <DependentUpon>frmOzgunRaporHazirla.cs</DependentUpon>

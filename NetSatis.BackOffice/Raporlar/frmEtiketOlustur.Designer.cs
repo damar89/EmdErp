@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEtiketOlustur));
             this.wizardControl1 = new DevExpress.XtraWizard.WizardControl();
             this.welcomeWizardPage1 = new DevExpress.XtraWizard.WelcomeWizardPage();
@@ -92,7 +93,7 @@
             this.MevcutStok = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
-            this.ımageList1 = new System.Windows.Forms.ImageList();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnEkle = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.wizardControl1)).BeginInit();
             this.wizardControl1.SuspendLayout();
@@ -136,7 +137,7 @@
             this.wizardPage3,
             this.completionWizardPage1});
             this.wizardControl1.PreviousText = "< &Geri";
-            this.wizardControl1.Size = new System.Drawing.Size(808, 488);
+            this.wizardControl1.Size = new System.Drawing.Size(800, 480);
             this.wizardControl1.Text = "Etiket Oluşturma";
             this.wizardControl1.WizardStyle = DevExpress.XtraWizard.WizardStyle.WizardAero;
             this.wizardControl1.SelectedPageChanging += new DevExpress.XtraWizard.WizardPageChangingEventHandler(this.wizardControl1_SelectedPageChanging);
@@ -146,7 +147,7 @@
             // welcomeWizardPage1
             // 
             this.welcomeWizardPage1.Name = "welcomeWizardPage1";
-            this.welcomeWizardPage1.Size = new System.Drawing.Size(748, 320);
+            this.welcomeWizardPage1.Size = new System.Drawing.Size(740, 312);
             this.welcomeWizardPage1.Text = "Etiket Oluşturma Sihirbazına Hoş Geldiniz";
             // 
             // wizardPage1
@@ -165,7 +166,7 @@
             this.wizardPage1.Controls.Add(this.labelControl1);
             this.wizardPage1.Controls.Add(this.txtMarginUst);
             this.wizardPage1.Name = "wizardPage1";
-            this.wizardPage1.Size = new System.Drawing.Size(748, 320);
+            this.wizardPage1.Size = new System.Drawing.Size(740, 312);
             this.wizardPage1.Text = "Sayfa Özelliklerini Belirtiniz";
             // 
             // checkRulo
@@ -305,7 +306,7 @@
             // completionWizardPage1
             // 
             this.completionWizardPage1.Name = "completionWizardPage1";
-            this.completionWizardPage1.Size = new System.Drawing.Size(748, 320);
+            this.completionWizardPage1.Size = new System.Drawing.Size(740, 312);
             this.completionWizardPage1.Text = "Etiket Oluşturma İşllrmi Tamamlandı. Lütfen Bekleyiniz";
             // 
             // wizardPage2
@@ -319,7 +320,7 @@
             this.wizardPage2.Controls.Add(this.txtGenislik);
             this.wizardPage2.Controls.Add(this.txtUzunluk);
             this.wizardPage2.Name = "wizardPage2";
-            this.wizardPage2.Size = new System.Drawing.Size(748, 320);
+            this.wizardPage2.Size = new System.Drawing.Size(740, 312);
             this.wizardPage2.Text = "Etiket Özelliklerini Belirtiniz";
             // 
             // labelControl10
@@ -411,7 +412,7 @@
             this.wizardPage3.Controls.Add(this.gridControl1);
             this.wizardPage3.Controls.Add(this.groupControl1);
             this.wizardPage3.Name = "wizardPage3";
-            this.wizardPage3.Size = new System.Drawing.Size(748, 320);
+            this.wizardPage3.Size = new System.Drawing.Size(740, 312);
             this.wizardPage3.Text = "Stok Seçimi Yapınız";
             // 
             // gridControl1
@@ -420,7 +421,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(748, 258);
+            this.gridControl1.Size = new System.Drawing.Size(740, 250);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -754,9 +755,9 @@
             this.groupControl1.Controls.Add(this.btnSil);
             this.groupControl1.Controls.Add(this.btnEkle);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 258);
+            this.groupControl1.Location = new System.Drawing.Point(0, 250);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(748, 62);
+            this.groupControl1.Size = new System.Drawing.Size(740, 62);
             this.groupControl1.TabIndex = 14;
             // 
             // btnSil
@@ -792,7 +793,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 488);
+            this.ClientSize = new System.Drawing.Size(800, 480);
             this.ControlBox = false;
             this.Controls.Add(this.wizardControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

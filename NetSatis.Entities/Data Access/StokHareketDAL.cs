@@ -33,6 +33,10 @@ namespace NetSatis.Entities.Data_Access
                   AnaGrupAdi = context.AnaGruplar.FirstOrDefault(x => x.Kod == stokHareket.Stok.AnaGrup).AnaGrupAdi ?? "",
                   stokHareket.Tarih,
                   stokHareket.Aciklama,
+                  OdemeTuru = (context.KasaHareketleri.Where(c => c.FisKodu == stokHareket.FisKodu).FirstOrDefault() != null ?
+                         context.OdemeTurleri.Where(x => x.Id == context.KasaHareketleri.Where(c => c.FisKodu == stokHareket.FisKodu).FirstOrDefault().OdemeTuruId).FirstOrDefault().OdemeTuruAdi
+                                : "Acik Hesap"
+                       ),
                   stokHareket.Stok,
                   stokHareket.Depo,
                   stokHareket.IndirimOrani,
@@ -65,6 +69,7 @@ namespace NetSatis.Entities.Data_Access
                   y.AltGrupAdi,
                   y.Tarih,
                   y.Aciklama,
+                  y.OdemeTuru,
                   y.Borsa,
                   y.Bagkur,
                   y.Mera,
@@ -103,6 +108,10 @@ namespace NetSatis.Entities.Data_Access
                   stokHareket.Tarih,
                   stokHareket.Aciklama,
                   stokHareket.Stok,
+                  OdemeTuru = (context.KasaHareketleri.Where(c => c.FisKodu == stokHareket.FisKodu).FirstOrDefault() != null ?
+                         context.OdemeTurleri.Where(x => x.Id == context.KasaHareketleri.Where(c => c.FisKodu == stokHareket.FisKodu).FirstOrDefault().OdemeTuruId).FirstOrDefault().OdemeTuruAdi
+                                : "Acik Hesap"
+                       ),
                   stokHareket.Depo,
                   stokHareket.IndirimOrani,
                   stokHareket.IndirimOrani2,
@@ -131,6 +140,7 @@ namespace NetSatis.Entities.Data_Access
                   y.KategoriAdi,
                   y.AnaGrupAdi,
                   y.AltGrupAdi,
+                  y.OdemeTuru,
                   y.Tarih,
                   y.Aciklama,
                   y.Stok,
@@ -153,7 +163,7 @@ namespace NetSatis.Entities.Data_Access
                 return result;
             }
         }
-      
+
         public object GetGenelStok(NetSatisContext context, int stokId)
         {
             var result = (from c in context.StokHareketleri.Where(c => c.StokId == stokId)
@@ -212,6 +222,10 @@ namespace NetSatis.Entities.Data_Access
                         AnaGrupAdi = context.AnaGruplar.FirstOrDefault(x => x.Kod == stokhareket.Stok.AnaGrup).AnaGrupAdi ?? "",
                         stokhareket.Stok.Birim,
                         stokhareket.Stok.StokKodu,
+                        OdemeTuru = (context.KasaHareketleri.Where(c => c.FisKodu == stokhareket.FisKodu).FirstOrDefault() != null ?
+                         context.OdemeTurleri.Where(x => x.Id == context.KasaHareketleri.Where(c => c.FisKodu == stokhareket.FisKodu).FirstOrDefault().OdemeTuruId).FirstOrDefault().OdemeTuruAdi
+                                : "Acik Hesap"
+                       ),
                         stokhareket.Stok.AlisFiyati1,
                         stokhareket.IndirimTutar,
                         stokhareket.Stok.Marka,
@@ -241,6 +255,7 @@ namespace NetSatis.Entities.Data_Access
                         k.AlisFiyati1,
                         k.Birim,
                         k.AnaGrup,
+                        k.OdemeTuru,
                         k.Marka,
                         k.Uretici,
                         k.IndirimOrani,
@@ -287,6 +302,10 @@ namespace NetSatis.Entities.Data_Access
                         stokhareket.Stok.AlisFiyati1,
                         stokhareket.IndirimTutar,
                         stokhareket.Stok.Marka,
+                       OdemeTuru = (context.KasaHareketleri.Where(c => c.FisKodu == stokhareket.FisKodu).FirstOrDefault() != null ?
+                         context.OdemeTurleri.Where(x => x.Id == context.KasaHareketleri.Where(c => c.FisKodu == stokhareket.FisKodu).FirstOrDefault().OdemeTuruId).FirstOrDefault().OdemeTuruAdi
+                                : "Acik Hesap"
+                       ),
                         stokhareket.Stok.Uretici,
                         stokhareket.IndirimOrani,
                         stokhareket.IndirimOrani2,
@@ -307,6 +326,7 @@ namespace NetSatis.Entities.Data_Access
                         k.Hareket,
                         k.FisTuru,
                         k.Depo,
+                        k.OdemeTuru,
                         k.Tarih,
                         k.StokAdi,
                         k.StokKodu,
@@ -352,6 +372,10 @@ namespace NetSatis.Entities.Data_Access
                         stokhareket.Stok.Birim,
                         stokhareket.Stok.StokKodu,
                         stokhareket.Stok.AlisFiyati1,
+                         OdemeTuru = (context.KasaHareketleri.Where(c => c.FisKodu == stokhareket.FisKodu).FirstOrDefault() != null ?
+                         context.OdemeTurleri.Where(x => x.Id == context.KasaHareketleri.Where(c => c.FisKodu == stokhareket.FisKodu).FirstOrDefault().OdemeTuruId).FirstOrDefault().OdemeTuruAdi
+                                : "Acik Hesap"
+                       ),
                         stokhareket.Stok.Marka,
                         stokhareket.Stok.Uretici,
                         KategoriAdi = context.Kategoriler.FirstOrDefault(x => x.Kod == stokhareket.Stok.Kategori).KategoriAdi ?? "",
@@ -380,6 +404,7 @@ namespace NetSatis.Entities.Data_Access
                         k.StokAdi,
                         k.StokKodu,
                         k.AlisFiyati1,
+                        k.OdemeTuru,
                         k.KategoriAdi,
                         k.AnaGrupAdi,
                         k.AltGrupAdi,
