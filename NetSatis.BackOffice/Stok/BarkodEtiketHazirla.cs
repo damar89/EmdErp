@@ -9,6 +9,9 @@ using System.IO;
 using DevExpress.XtraReports.UI;
 
 using System.Data;
+using System.Collections;
+using System.Reflection;
+using System.Collections.Generic;
 
 namespace NetSatis.BackOffice.Stok
 {
@@ -179,8 +182,24 @@ namespace NetSatis.BackOffice.Stok
             ////rpr.RegisterData();
             //rpr.Design();
             rptBarkodRaf r = new rptBarkodRaf();
+            List<string> fields=  new List<string>();
             using (NetSatisContext db = new NetSatisContext())
             {
+                FisDAL f2 = new FisDAL();
+                var liste = f2.Listelemeler(db, "Toptan Satış Faturası");
+
+                foreach (var obj in (IList)liste)
+                {
+                    Type type = obj.GetType();
+
+                    foreach (PropertyInfo prop in type.GetProperties())
+                    {
+                       fields.Add(prop.Name);
+                    }
+                    break;
+                }
+
+
                 var list = db.BarkodEtiketOlustur.ToList();
                 r.DataSource = list;
                 r.LoadLayout($@"{Application.StartupPath}\rptBarkodRaf.repx");

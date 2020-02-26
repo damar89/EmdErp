@@ -1095,6 +1095,10 @@ namespace NetSatis.BackOffice
                     frmStokAnaliz frm = new frmStokAnaliz();
                     frm.Show();
                     break;
+                    case"Gün Sonu Raporu":
+                        frmGunSonuFilter frm4=new frmGunSonuFilter();
+                    frm4.Show();
+                    break;
                     case "Cari Stok Hareketleri":
                     frmCariStokHareket frm2 = new frmCariStokHareket();
                     frm2.Show();

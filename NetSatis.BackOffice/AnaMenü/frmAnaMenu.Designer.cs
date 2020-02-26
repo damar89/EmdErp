@@ -1765,6 +1765,8 @@
             "Günlük Kasa Raporu"}, 76, 0, 1, -1, "Günlük Kasa Raporu");
             this.treeList1.AppendNode(new object[] {
             "Kasa Raporu Detaylı"}, 76, 0, 1, -1, "Kasa Raporu Detaylı");
+            this.treeList1.AppendNode(new object[] {
+            "Gün Sonu Raporu"}, 76, "Gün Sonu Raporu");
             this.treeList1.EndUnboundLoad();
             this.treeList1.OptionsBehavior.PopulateServiceColumns = true;
             this.treeList1.OptionsCustomization.AllowFilter = false;
