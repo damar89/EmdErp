@@ -118,6 +118,7 @@ namespace NetSatis.BackOffice.Fiş
 
         private void gridFisler_DoubleClick(object sender, EventArgs e)
         {
+            if (gridFisler.RowCount == 0) return;
             string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
             string fisturu = gridFisler.GetFocusedRowCellValue(colFisTuru).ToString();
             frmFisIslem form = new frmFisIslem(secilen, fisturu);

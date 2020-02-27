@@ -1775,6 +1775,7 @@
             this.treeList1.OptionsFilter.ShowCustomFunctions = DevExpress.Utils.DefaultBoolean.False;
             this.treeList1.OptionsFind.AllowIncrementalSearch = true;
             this.treeList1.OptionsFind.Behavior = DevExpress.XtraEditors.FindPanelBehavior.Search;
+            this.treeList1.OptionsFind.Condition = DevExpress.Data.Filtering.FilterCondition.Contains;
             this.treeList1.OptionsFind.ParserKind = DevExpress.Data.Filtering.FindPanelParserKind.Mixed;
             this.treeList1.OptionsNavigation.AutoMoveRowFocus = true;
             this.treeList1.OptionsPrint.AutoRowHeight = false;
@@ -1806,6 +1807,7 @@
             this.treeListColumn1.FieldName = "treeListColumn1";
             this.treeListColumn1.Name = "treeListColumn1";
             this.treeListColumn1.OptionsColumn.AllowEdit = false;
+            this.treeListColumn1.OptionsFilter.AutoFilterCondition = DevExpress.XtraTreeList.Columns.AutoFilterCondition.Contains;
             this.treeListColumn1.Visible = true;
             this.treeListColumn1.VisibleIndex = 0;
             this.treeListColumn1.Width = 92;
@@ -2700,7 +2702,7 @@
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("frmAnaMenu.IconOptions.Icon")));
             this.IsMdiContainer = true;
             this.Name = "frmAnaMenu";
             this.Ribbon = this.ribbonControl1;

@@ -725,8 +725,7 @@ namespace NetSatis.BackOffice.Fiş
                     ayarlar.KasaHareketi = "Kasa Giriş";
                     ayarlar.FisTurleri = "Cari Devir Fişi";
                     ayarlar.OdemeEkrani = true;
-                    ayarlar.SatisEkrani = false;
-                    labelControl35.Visible = true;
+                    ayarlar.SatisEkrani = false; 
                     toggleCariDevir.Visible = true;
                 
                     toggleKDVDahil.Visible = false;
@@ -737,7 +736,7 @@ namespace NetSatis.BackOffice.Fiş
                     bilgiFişiYazdırToolStripMenuItem.Visible = false;
                     teklifYazdırToolStripMenuItem.Visible = false;
                     irsaliyeYazdırToolStripMenuItem.Visible = false;
-                    panelCariDevir.Visible = true;
+                    layPanelCariDevir.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
                     txtKod.Width = 275;
                     navSatisEkrani.Dispose();
                     navPersonelIslem.Dispose();

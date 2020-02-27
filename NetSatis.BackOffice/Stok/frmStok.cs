@@ -34,6 +34,7 @@ namespace NetSatis.BackOffice.Stok
         public void GetAll()
         {
             gridControl1.DataSource = stokDal.StokListele(context);
+            gridView1.BestFitColumns();
         }
         private void btnKapat_Click(object sender, EventArgs e)
         {
@@ -236,7 +237,7 @@ namespace NetSatis.BackOffice.Stok
         {
             int kayitsayisi; // kayıt sayısını tutacak değişkenimiz
             kayitsayisi = Convert.ToInt32(gridView1.RowCount);
-            lblKayitSayisi.Text = kayitsayisi.ToString();
+            layGroupKayitSayisi.Text = $"Listelenen Kayıt Sayısı: { kayitsayisi.ToString() }";
         }
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

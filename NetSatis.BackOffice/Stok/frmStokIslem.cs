@@ -245,15 +245,11 @@ namespace NetSatis.BackOffice.Stok
         private void frmStokIslem_Load(object sender, EventArgs e)
         {
             if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi)))
-            {
-                calcBagkur.Visible = true;
-                calcBorsa.Visible = true;
-                calcZirai.Visible = true;
-                calcMera.Visible = true;
-                labelControl31.Visible = true;
-                labelControl30.Visible = true;
-                labelControl29.Visible = true;
-                labelControl3.Visible = true;
+            { 
+                layBagkur.Visibility =
+                    layBorsa.Visibility =
+                    layZirai.Visibility =
+                    layMera.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             }
             //txtStokKodu.Text = _entity.Id == 0 ?
             //    CodeTool.KodOlustur("ST", SettingsTool.AyarOku(SettingsTool.Ayarlar.StokAyarlari_StokKodu)) : _entity.StokKodu;

@@ -236,6 +236,7 @@
     <Compile Include="Tools\ConnectionTool.cs" />
     <Compile Include="Tools\ConverterTool.cs" />
     <Compile Include="Tools\ExtendedFunctions.cs" />
+    <Compile Include="Tools\PredicateBuilder.cs" />
     <Compile Include="Tools\ReportsPrintTool.cs" />
     <Compile Include="Tools\RoleTool.cs" />
     <Compile Include="Tools\SettingsTool.cs" />
