@@ -726,6 +726,8 @@ namespace NetSatis.BackOffice.Fiş
                     ayarlar.FisTurleri = "Cari Devir Fişi";
                     ayarlar.OdemeEkrani = true;
                     ayarlar.SatisEkrani = false;
+                    labelControl35.Visible = true;
+                    toggleCariDevir.Visible = true;
                 
                     toggleKDVDahil.Visible = false;
               

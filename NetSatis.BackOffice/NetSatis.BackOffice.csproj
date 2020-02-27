@@ -1461,6 +1461,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="emd icon.ico" />
+    <None Include="Resources\add_16x161.png" />
+    <None Include="Resources\insertblanklinepivottable_32x32.png" />
     <None Include="Resources\refreshallpivottable.svg" />
     <None Include="Resources\task_32x32.png" />
     <None Include="Resources\task_16x16.png" />
