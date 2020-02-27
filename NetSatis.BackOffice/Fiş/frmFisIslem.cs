@@ -198,18 +198,18 @@ namespace NetSatis.BackOffice.Fiş
         {
             if (toggleMuhtasilmi.IsOn)
             {
-                panelIndirim.Visible = false;
-                panelKooperatif.Visible = true;
-                labelkdvToplam.Text = "Kesinti YEKÜNÜ";
+                //panelIndirim.Visible = false;
+                //panelKooperatif.Visible = true;
+                //labelkdvToplam.Text = "Kesinti YEKÜNÜ";
                 if (context.StokHareketleri.Local.ToBindingList().Count > 0)
                     foreach (var hareket in context.StokHareketleri.Local.ToBindingList())
                         hareket.Kdv = 0;
             }
             else
             {
-                panelIndirim.Visible = true;
-                panelKooperatif.Visible = false;
-                labelkdvToplam.Text = "Kdv Toplam :";
+                //panelIndirim.Visible = true;
+                //panelKooperatif.Visible = false;
+                //labelkdvToplam.Text = "Kdv Toplam :";
                 if (context.StokHareketleri.Local.ToBindingList().Count > 0)
                     foreach (var hareket in context.StokHareketleri.Local.ToBindingList())
                     {
@@ -577,17 +577,12 @@ namespace NetSatis.BackOffice.Fiş
                     teklifYazdırToolStripMenuItem.Visible = false;
                     irsaliyeYazdırToolStripMenuItem.Visible = false;
                     btnAlisFaturalandir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-                    panelOdeme.Visible = false;
                     ayarlar.OdemeEkrani = false;
                     toggleKDVDahil.Visible = false;
-                    cariBilgi.Visible = false;
                     ayarlar.SatisEkrani = true;
                     navPlasiyerBilgi.Dispose();
                     lblBaslik.Text = "Sayım Eksiği Fişi";
                     lblBaslik.Appearance.ImageIndex = 5;
-                    labelControl32.Visible = false;
-                    labelControl33.Visible = false;
-                    labelControl34.Visible = false;
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
@@ -608,17 +603,12 @@ namespace NetSatis.BackOffice.Fiş
                     teklifYazdırToolStripMenuItem.Visible = false;
                     irsaliyeYazdırToolStripMenuItem.Visible = false;
                     btnAlisFaturalandir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-                    panelOdeme.Visible = false;
                     ayarlar.OdemeEkrani = false;
                     toggleKDVDahil.Visible = false;
-                    cariBilgi.Visible = false;
                     ayarlar.SatisEkrani = true;
                     navPlasiyerBilgi.Dispose();
                     lblBaslik.Text = "Sayım Fişi";
                     lblBaslik.Appearance.ImageIndex = 5;
-                    labelControl32.Visible = false;
-                    labelControl33.Visible = false;
-                    labelControl34.Visible = false;
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
@@ -631,9 +621,7 @@ namespace NetSatis.BackOffice.Fiş
                     navOdemeEkrani.Dispose();
                     navPersonelIslem.Dispose();
                     btnBarkodluFatura.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-                    panelOdeme.Visible = false;
                     toggleKDVDahil.Visible = false;
-                    cariBilgi.Visible = false;
                     btnAlisFaturalandir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
                     faturaYazdırToolStripMenuItem.Visible = false;
                     proformaFaturaYazdırToolStripMenuItem.Visible = false;
@@ -646,9 +634,6 @@ namespace NetSatis.BackOffice.Fiş
                     navPlasiyerBilgi.Dispose();
                     lblBaslik.Appearance.ImageIndex = 6;
                     lblBaslik.Text = "Sayım Fazlası Fişi";
-                    labelControl32.Visible = false;
-                    labelControl33.Visible = false;
-                    labelControl34.Visible = false;
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
@@ -661,8 +646,6 @@ namespace NetSatis.BackOffice.Fiş
                     navOdemeEkrani.Dispose();
                     navPersonelIslem.Dispose();
                     toggleKDVDahil.Visible = false;
-                    cariBilgi.Visible = false;
-                    panelOdeme.Visible = false;
                     btnAlisFaturalandir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
                     faturaYazdırToolStripMenuItem.Visible = false;
                     proformaFaturaYazdırToolStripMenuItem.Visible = false;
@@ -675,9 +658,6 @@ namespace NetSatis.BackOffice.Fiş
                     navPlasiyerBilgi.Dispose();
                     lblBaslik.Appearance.ImageIndex = 7;
                     lblBaslik.Text = "Stok Devir Fişi";
-                    labelControl32.Visible = false;
-                    labelControl33.Visible = false;
-                    labelControl34.Visible = false;
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
@@ -693,17 +673,13 @@ namespace NetSatis.BackOffice.Fiş
                     navSatisEkrani.Dispose();
                     navPersonelIslem.Dispose();
                     navMasraf.SelectedPage = navOdemeEkrani;
-                    panelControl3.Visible = false;
+                
                     toggleKDVDahil.Visible = false;
-                    panelOdeme.Visible = false;
-                    panelIndirim.Visible = false;
-                    labelControl32.Visible = false;
-                    labelControl33.Visible = false;
-                    labelControl34.Visible = false;
+                  
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
-                    panelkdv.Visible = false;
+                
                     lblBaslik.Text = "Tahsilat Fişi";
                     break;
                 case "Masraf Fişi":
@@ -716,19 +692,14 @@ namespace NetSatis.BackOffice.Fiş
                     btnAlisFaturalandir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
                     navSatisEkrani.Dispose();
                     navPersonelIslem.Dispose();
-                    cariBilgi.Visible = false;
+                  
                     navMasraf.SelectedPage = navOdemeEkrani;
                     toggleKDVDahil.Visible = false;
-                    panelControl3.Visible = false;
-                    panelOdeme.Visible = false;
-                    panelIndirim.Visible = false;
-                    labelControl32.Visible = false;
-                    labelControl33.Visible = false;
-                    labelControl34.Visible = false;
+                   
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
-                    panelkdv.Visible = false;
+                   
                     lblBaslik.Text = "Masraf Fişi";
                     break;
                 case "Ödeme Fişi":
@@ -742,14 +713,10 @@ namespace NetSatis.BackOffice.Fiş
                     btnAlisFaturalandir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
                     navPersonelIslem.Dispose();
                     toggleKDVDahil.Visible = false;
-                    panelOdeme.Visible = false;
-                    panelIndirim.Visible = false;
-                    panelkdv.Visible = false;
+            
                     navMasraf.SelectedPage = navOdemeEkrani;
                     lblBaslik.Text = "Ödeme Fişi";
-                    labelControl32.Visible = false;
-                    labelControl33.Visible = false;
-                    labelControl34.Visible = false;
+              
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
@@ -759,10 +726,9 @@ namespace NetSatis.BackOffice.Fiş
                     ayarlar.FisTurleri = "Cari Devir Fişi";
                     ayarlar.OdemeEkrani = true;
                     ayarlar.SatisEkrani = false;
-                    panelOdeme.Visible = false;
-                    panelIndirim.Visible = false;
+                
                     toggleKDVDahil.Visible = false;
-                    panelkdv.Visible = false;
+              
                     faturaYazdırToolStripMenuItem.Visible = false;
                     proformaFaturaYazdırToolStripMenuItem.Visible = false;
                     siparişYazdırToolStripMenuItem.Visible = false;
@@ -775,9 +741,7 @@ namespace NetSatis.BackOffice.Fiş
                     navPersonelIslem.Dispose();
                     navMasraf.SelectedPage = navOdemeEkrani;
                     lblBaslik.Text = "Cari Devir Fişi";
-                    labelControl32.Visible = false;
-                    labelControl33.Visible = false;
-                    labelControl34.Visible = false;
+               
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
@@ -787,8 +751,7 @@ namespace NetSatis.BackOffice.Fiş
                     ayarlar.FisTurleri = "Hakediş Fişi";
                     ayarlar.OdemeEkrani = true;
                     ayarlar.SatisEkrani = false;
-                    panelIndirim.Visible = false;
-                    panelkdv.Visible = false;
+           
                     toggleKDVDahil.Visible = false;
                     navSatisEkrani.Dispose();
                     btnBarkodluFatura.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
@@ -798,13 +761,11 @@ namespace NetSatis.BackOffice.Fiş
                     bilgiFişiYazdırToolStripMenuItem.Visible = false;
                     teklifYazdırToolStripMenuItem.Visible = false;
                     irsaliyeYazdırToolStripMenuItem.Visible = false;
-                    cariBilgi.Visible = false;
+              
                     navPlasiyerBilgi.Dispose();
                     navMasraf.SelectedPage = navPersonelIslem;
                     lblBaslik.Text = "Hakediş Fişi";
-                    labelControl32.Visible = false;
-                    labelControl33.Visible = false;
-                    labelControl34.Visible = false;
+                   
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
@@ -850,7 +811,7 @@ namespace NetSatis.BackOffice.Fiş
             ///
             if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi)))
             {
-                lblmuhtahsil.Visible = true;
+                //lblmuhtahsil.Visible = true;
                 toggleMuhtasilmi.Visible = true;
             }
             if (_fisentity.FisTuru == "Toptan Satış Faturası" || _fisentity.FisTuru == "Stok Devir Fişi" || _fisentity.FisTuru == "Sayım Fazlası Fişi" || _fisentity.FisTuru == "Sayım Eksiği Fişi" || _fisentity.FisTuru == "Alış Faturası")
@@ -3174,6 +3135,8 @@ namespace NetSatis.BackOffice.Fiş
             if (e.Column.Caption == "Sıra No")
                 e.DisplayText = (e.ListSourceRowIndex + 1).ToString();
         }
+
+        
     }
 }
 
