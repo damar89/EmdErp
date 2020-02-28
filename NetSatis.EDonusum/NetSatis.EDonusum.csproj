@@ -59,7 +59,7 @@
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="INIFileParser">
-      <HintPath>..\..\..\..\dlls\INIFileParser.dll</HintPath>
+      <HintPath>..\..\Yigityakut\EmdSoft19.1\NetSatis.EDonusum\bin\Debug\INIFileParser.dll</HintPath>
     </Reference>
     <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
       <HintPath>..\packages\Ionic.Zip.1.9.1.8\lib\Ionic.Zip.dll</HintPath>

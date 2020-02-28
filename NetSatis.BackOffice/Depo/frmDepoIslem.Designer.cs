@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDepoIslem));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
@@ -54,7 +55,7 @@
             this.txtTelefon = new DevExpress.XtraEditors.TextEdit();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.ımageList1 = new System.Windows.Forms.ImageList();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -111,7 +112,7 @@
             this.labelControl15.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl15.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl15.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl15.Location = new System.Drawing.Point(7, 22);
+            this.labelControl15.Location = new System.Drawing.Point(7, 25);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(91, 17);
             this.labelControl15.TabIndex = 16;
@@ -126,7 +127,7 @@
             // 
             // txtDepoKodu
             // 
-            this.txtDepoKodu.Location = new System.Drawing.Point(102, 21);
+            this.txtDepoKodu.Location = new System.Drawing.Point(102, 24);
             this.txtDepoKodu.Name = "txtDepoKodu";
             this.txtDepoKodu.Size = new System.Drawing.Size(128, 20);
             this.txtDepoKodu.TabIndex = 13;
@@ -279,7 +280,7 @@
             // 
             // txtSemt
             // 
-            this.txtSemt.Location = new System.Drawing.Point(109, 102);
+            this.txtSemt.Location = new System.Drawing.Point(109, 103);
             this.txtSemt.Name = "txtSemt";
             this.txtSemt.Size = new System.Drawing.Size(252, 20);
             this.txtSemt.TabIndex = 14;

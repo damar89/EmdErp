@@ -1747,7 +1747,7 @@ namespace NetSatis.BackOffice.Stok
             this.tabNavigationPage2.Caption = "Barkodlar";
             this.tabNavigationPage2.Controls.Add(this.gridContBarkod);
             this.tabNavigationPage2.Name = "tabNavigationPage2";
-            this.tabNavigationPage2.Size = new System.Drawing.Size(795, 606);
+            this.tabNavigationPage2.Size = new System.Drawing.Size(776, 592);
             // 
             // gridContBarkod
             // 
@@ -1757,7 +1757,7 @@ namespace NetSatis.BackOffice.Stok
             this.gridContBarkod.Name = "gridContBarkod";
             this.gridContBarkod.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repoSil});
-            this.gridContBarkod.Size = new System.Drawing.Size(795, 606);
+            this.gridContBarkod.Size = new System.Drawing.Size(776, 592);
             this.gridContBarkod.TabIndex = 0;
             this.gridContBarkod.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridBarkod});

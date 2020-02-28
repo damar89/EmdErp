@@ -418,9 +418,9 @@
             this.panelToplam.Controls.Add(this.panelControl3);
             this.panelToplam.Controls.Add(this.grpGenelToplam);
             this.panelToplam.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelToplam.Location = new System.Drawing.Point(856, 20);
+            this.panelToplam.Location = new System.Drawing.Point(856, 23);
             this.panelToplam.Name = "panelToplam";
-            this.panelToplam.Size = new System.Drawing.Size(247, 117);
+            this.panelToplam.Size = new System.Drawing.Size(247, 114);
             this.panelToplam.TabIndex = 6;
             // 
             // panelkdv
@@ -717,7 +717,7 @@
             this.navSatisEkrani.Name = "navSatisEkrani";
             this.navSatisEkrani.Properties.ShowCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.navSatisEkrani.Properties.ShowExpandButton = DevExpress.Utils.DefaultBoolean.False;
-            this.navSatisEkrani.Size = new System.Drawing.Size(1023, 274);
+            this.navSatisEkrani.Size = new System.Drawing.Size(1002, 256);
             // 
             // gridContStokHareket
             // 
@@ -731,7 +731,7 @@
             this.repoDepo,
             this.repoSeri,
             this.repositoryMustahsil});
-            this.gridContStokHareket.Size = new System.Drawing.Size(1023, 224);
+            this.gridContStokHareket.Size = new System.Drawing.Size(1002, 206);
             this.gridContStokHareket.TabIndex = 2;
             this.gridContStokHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridStokHareket,
@@ -1061,7 +1061,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1023, 50);
+            this.panelControl1.Size = new System.Drawing.Size(1002, 50);
             this.panelControl1.TabIndex = 3;
             // 
             // btnUrunBul
@@ -1071,7 +1071,7 @@
             this.btnUrunBul.Appearance.Options.UseFont = true;
             this.btnUrunBul.ImageOptions.ImageIndex = 2;
             this.btnUrunBul.ImageOptions.ImageList = this.ımageList1;
-            this.btnUrunBul.Location = new System.Drawing.Point(890, 12);
+            this.btnUrunBul.Location = new System.Drawing.Point(869, 12);
             this.btnUrunBul.Name = "btnUrunBul";
             this.btnUrunBul.Size = new System.Drawing.Size(125, 36);
             this.btnUrunBul.TabIndex = 4;
@@ -1090,7 +1090,7 @@
             this.txtBarkod.Properties.Appearance.Options.UseBackColor = true;
             this.txtBarkod.Properties.Appearance.Options.UseFont = true;
             this.txtBarkod.Properties.Appearance.Options.UseForeColor = true;
-            this.txtBarkod.Size = new System.Drawing.Size(742, 36);
+            this.txtBarkod.Size = new System.Drawing.Size(721, 36);
             this.txtBarkod.TabIndex = 3;
             this.txtBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyDown);
             // 
@@ -1199,7 +1199,7 @@
             this.navFisBilgi.Name = "navFisBilgi";
             this.navFisBilgi.Properties.ShowCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.navFisBilgi.Properties.ShowExpandButton = DevExpress.Utils.DefaultBoolean.False;
-            this.navFisBilgi.Size = new System.Drawing.Size(1023, 155);
+            this.navFisBilgi.Size = new System.Drawing.Size(1002, 137);
             this.navFisBilgi.Paint += new System.Windows.Forms.PaintEventHandler(this.navFisBilgi_Paint);
             // 
             // labelControl7
@@ -1384,9 +1384,9 @@
             // 
             this.txtAciklama.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtAciklama.Location = new System.Drawing.Point(85, 105);
+            this.txtAciklama.Location = new System.Drawing.Point(85, 103);
             this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(375, 39);
+            this.txtAciklama.Size = new System.Drawing.Size(375, 34);
             this.txtAciklama.TabIndex = 31;
             // 
             // labelControl10
@@ -1399,9 +1399,9 @@
             this.labelControl10.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl10.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl10.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl10.Location = new System.Drawing.Point(8, 106);
+            this.labelControl10.Location = new System.Drawing.Point(8, 102);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(71, 38);
+            this.labelControl10.Size = new System.Drawing.Size(71, 32);
             this.labelControl10.TabIndex = 32;
             this.labelControl10.Text = "Açıklama :";
             // 
@@ -1495,9 +1495,9 @@
             this.Controls.Add(this.barDockControlTop);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.IconOptions.ShowIcon = false;
             this.KeyPreview = true;
             this.Name = "frmFisTransfer";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fişler ve Faturalar";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

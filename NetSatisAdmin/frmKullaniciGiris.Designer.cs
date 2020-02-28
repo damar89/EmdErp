@@ -190,7 +190,7 @@
             this.checkAnimsa.Properties.Appearance.Options.UseFont = true;
             this.checkAnimsa.Properties.AutoHeight = false;
             this.checkAnimsa.Properties.Caption = "Beni Anımsa";
-            this.checkAnimsa.Size = new System.Drawing.Size(130, 34);
+            this.checkAnimsa.Size = new System.Drawing.Size(130, 27);
             this.checkAnimsa.TabIndex = 2;
             // 
             // frmKullaniciGiris
@@ -210,7 +210,7 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.lblBaslik);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("frmKullaniciGiris.IconOptions.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
