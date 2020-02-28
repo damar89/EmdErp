@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraPrinting;
@@ -20,26 +21,33 @@ namespace NetSatis.BackOffice.Stok_Hareketleri
             InitializeComponent();
         }
 
-        
 
-        private void Listele()
+
+        private async Task Listele()
         {
-          gridContStokHareket.DataSource=  stokHareketDal.GetAll2(context);
-            
+            this.Text = "Stok Hareketleri Yükleniyor, Lütfen Bekleyiniz!";
+            await Task.Delay(500);
+            gridContStokHareket.DataSource = stokHareketDal.GetAll2(context);
+            this.Text = "Stok Hareketleri";
+
         }
 
-        private void frmStokHareketleri_Load(object sender, EventArgs e)
+        private async void frmStokHareketleri_Load(object sender, EventArgs e)
         {
-            Listele();
-            gridContStokHareket.ForceInitialize();
+
 
             if (File.Exists(DosyaYolu)) gridContStokHareket.MainView.RestoreLayoutFromXml(DosyaYolu);
 
+
+            await Listele();
+            //gridContStokHareket.ForceInitialize();
+            this.BringToFront();
+
         }
 
-        private void btnGuncelle_Click(object sender, EventArgs e)
+        private async void btnGuncelle_Click(object sender, EventArgs e)
         {
-            Listele();
+            await Listele();
         }
 
         private void btnAra_Click(object sender, EventArgs e)
@@ -53,27 +61,27 @@ namespace NetSatis.BackOffice.Stok_Hareketleri
             this.Close();
         }
 
-       
+
 
         private void repoSeriNo_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             string veri = Convert.ToString(gridStokHareket.GetFocusedRowCellValue(colSeriNo));
             frmSeriNoGir form = new frmSeriNoGir(veri);
-           
+
             form.ShowDialog();
-           
+
         }
 
         private void btnDetayGor_Click(object sender, EventArgs e)
         {
-            frmFisIslem form=new frmFisIslem(gridStokHareket.GetFocusedRowCellValue(colFisKodu).ToString());
+            frmFisIslem form = new frmFisIslem(gridStokHareket.GetFocusedRowCellValue(colFisKodu).ToString());
             form.ShowDialog();
 
         }
 
         private void frmStokHareketleri_KeyDown(object sender, KeyEventArgs e)
         {
-           
+
             if (e.KeyCode == Keys.Escape)
             {
 

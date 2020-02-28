@@ -1,18 +1,76 @@
-﻿using System;
+﻿using NetSatis.Entities.Context;
+using NetSatis.Entities.Repositories;
+using NetSatis.Entities.Tables;
+using NetSatis.Entities.Validations;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Linq.Expressions;
-using NetSatis.Entities.Context;
-using NetSatis.Entities.Repositories;
-using NetSatis.Entities.Tables;
-using NetSatis.Entities.Validations;
 namespace NetSatis.Entities.Data_Access
 {
     public class StokHareketDAL : EntityRepositoryBase<NetSatisContext, StokHareket, StokHareketValidator>
     {
         public object GetAll2(NetSatisContext context, Expression<Func<StokHareket, bool>> filter = null)
         {
+           
+            IQueryable<StokHareket> resStokHareketleri;
+            if (filter == null)
+                resStokHareketleri = context.StokHareketleri;
+            else
+                resStokHareketleri = context.StokHareketleri.Where(filter);
+
+            if (resStokHareketleri == null)
+                return null;
+
+            var res = (from s in resStokHareketleri
+                       from fis in context.Fisler.Where(x => x.FisKodu == s.FisKodu).DefaultIfEmpty()
+                       from kat in context.Kategoriler.Where(t => t.Kod == s.Stok.Kategori).DefaultIfEmpty()
+                       from altKat in context.AltGruplar.Where(t => t.Kod == s.Stok.AltGrup).DefaultIfEmpty()
+                       from anaKat in context.AnaGruplar.Where(t => t.Kod == s.Stok.AnaGrup).DefaultIfEmpty()
+                       from cari in context.Cariler.Where(x => x.Id == fis.CariId).DefaultIfEmpty()
+                       from kasa in context.KasaHareketleri.Where(q => q.FisKodu == s.FisKodu).GroupBy(x => x.FisKodu).DefaultIfEmpty()
+                       from odemeTuru in context.OdemeTurleri.Where(s => s.Id == kasa.FirstOrDefault().OdemeTuruId).DefaultIfEmpty()
+                       select new 
+                       {
+                           s.Id,
+                           s.FisKodu,
+                           Hareket = (s.FisTuru == "Satış İrsaliyesi" && s.StokIrsaliye == "1") ? "Stok Çıkış" : (s.FisTuru == "Alış İrsaliyesi" && s.StokIrsaliye == "1") ? "Stok Giriş"
+                  : s.Hareket,
+                           s.FisTuru,
+                           s.StokId,
+                           s.Miktar,
+                           s.Kdv,
+                           s.BirimFiyati,
+                           s.DepoId,
+                           s.SeriNo,
+                           kat.KategoriAdi,
+                           anaKat.AnaGrupAdi,
+                           altKat.AltGrupAdi,
+                           s.Tarih,
+                           s.Aciklama,
+                           //OdemeTuru = odemeTuru == null ? "Acik Hesap" : odemeTuru.OdemeTuruAdi,
+                           s.Borsa,
+                           s.Bagkur,
+                           s.Mera,
+                           s.Zirai,
+                           s.Stok,
+                           s.Depo,
+                           s.IndirimOrani,
+                           s.IndirimOrani2,
+                           s.IndirimOrani3,
+                           s.IndirimTutar,
+                           s.DipIskontoPayi,
+                           cari.CariAdi,
+                           s.ToplamTutar,
+                           cari.CariKodu
+                       });
+
+           return res.ToList();
+
+
+
+
             if (filter == null)
             {
                 var result = context.StokHareketleri.GroupJoin(context.Fisler, s => s.FisKodu, f => f.FisKodu, (stokHareket, fisler)
@@ -302,7 +360,7 @@ namespace NetSatis.Entities.Data_Access
                         stokhareket.Stok.AlisFiyati1,
                         stokhareket.IndirimTutar,
                         stokhareket.Stok.Marka,
-                       OdemeTuru = (context.KasaHareketleri.Where(c => c.FisKodu == stokhareket.FisKodu).FirstOrDefault() != null ?
+                        OdemeTuru = (context.KasaHareketleri.Where(c => c.FisKodu == stokhareket.FisKodu).FirstOrDefault() != null ?
                          context.OdemeTurleri.Where(x => x.Id == context.KasaHareketleri.Where(c => c.FisKodu == stokhareket.FisKodu).FirstOrDefault().OdemeTuruId).FirstOrDefault().OdemeTuruAdi
                                 : "Acik Hesap"
                        ),
@@ -372,7 +430,7 @@ namespace NetSatis.Entities.Data_Access
                         stokhareket.Stok.Birim,
                         stokhareket.Stok.StokKodu,
                         stokhareket.Stok.AlisFiyati1,
-                         OdemeTuru = (context.KasaHareketleri.Where(c => c.FisKodu == stokhareket.FisKodu).FirstOrDefault() != null ?
+                        OdemeTuru = (context.KasaHareketleri.Where(c => c.FisKodu == stokhareket.FisKodu).FirstOrDefault() != null ?
                          context.OdemeTurleri.Where(x => x.Id == context.KasaHareketleri.Where(c => c.FisKodu == stokhareket.FisKodu).FirstOrDefault().OdemeTuruId).FirstOrDefault().OdemeTuruAdi
                                 : "Acik Hesap"
                        ),
