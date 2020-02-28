@@ -673,13 +673,13 @@ namespace NetSatis.BackOffice.Fiş
                     navSatisEkrani.Dispose();
                     navPersonelIslem.Dispose();
                     navMasraf.SelectedPage = navOdemeEkrani;
-                
+
                     toggleKDVDahil.Visible = false;
-                  
+
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
-                
+
                     lblBaslik.Text = "Tahsilat Fişi";
                     break;
                 case "Masraf Fişi":
@@ -692,14 +692,14 @@ namespace NetSatis.BackOffice.Fiş
                     btnAlisFaturalandir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
                     navSatisEkrani.Dispose();
                     navPersonelIslem.Dispose();
-                  
+
                     navMasraf.SelectedPage = navOdemeEkrani;
                     toggleKDVDahil.Visible = false;
-                   
+
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
-                   
+
                     lblBaslik.Text = "Masraf Fişi";
                     break;
                 case "Ödeme Fişi":
@@ -713,10 +713,10 @@ namespace NetSatis.BackOffice.Fiş
                     btnAlisFaturalandir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
                     navPersonelIslem.Dispose();
                     toggleKDVDahil.Visible = false;
-            
+
                     navMasraf.SelectedPage = navOdemeEkrani;
                     lblBaslik.Text = "Ödeme Fişi";
-              
+
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
@@ -725,11 +725,11 @@ namespace NetSatis.BackOffice.Fiş
                     ayarlar.KasaHareketi = "Kasa Giriş";
                     ayarlar.FisTurleri = "Cari Devir Fişi";
                     ayarlar.OdemeEkrani = true;
-                    ayarlar.SatisEkrani = false; 
+                    ayarlar.SatisEkrani = false;
                     toggleCariDevir.Visible = true;
-                
+
                     toggleKDVDahil.Visible = false;
-              
+
                     faturaYazdırToolStripMenuItem.Visible = false;
                     proformaFaturaYazdırToolStripMenuItem.Visible = false;
                     siparişYazdırToolStripMenuItem.Visible = false;
@@ -742,7 +742,7 @@ namespace NetSatis.BackOffice.Fiş
                     navPersonelIslem.Dispose();
                     navMasraf.SelectedPage = navOdemeEkrani;
                     lblBaslik.Text = "Cari Devir Fişi";
-               
+
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
@@ -752,7 +752,7 @@ namespace NetSatis.BackOffice.Fiş
                     ayarlar.FisTurleri = "Hakediş Fişi";
                     ayarlar.OdemeEkrani = true;
                     ayarlar.SatisEkrani = false;
-           
+
                     toggleKDVDahil.Visible = false;
                     navSatisEkrani.Dispose();
                     btnBarkodluFatura.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
@@ -762,11 +762,11 @@ namespace NetSatis.BackOffice.Fiş
                     bilgiFişiYazdırToolStripMenuItem.Visible = false;
                     teklifYazdırToolStripMenuItem.Visible = false;
                     irsaliyeYazdırToolStripMenuItem.Visible = false;
-              
+
                     navPlasiyerBilgi.Dispose();
                     navMasraf.SelectedPage = navPersonelIslem;
                     lblBaslik.Text = "Hakediş Fişi";
-                   
+
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
@@ -3137,7 +3137,12 @@ namespace NetSatis.BackOffice.Fiş
                 e.DisplayText = (e.ListSourceRowIndex + 1).ToString();
         }
 
-        
+        private void repoKdv_EditValueChanged(object sender, EventArgs e)
+        {
+
+            gridStokHareket.PostEditor();
+            HepsiniHesapla();
+        }
     }
 }
 

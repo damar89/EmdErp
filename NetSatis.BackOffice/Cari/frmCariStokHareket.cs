@@ -75,10 +75,13 @@ namespace NetSatis.BackOffice.Cari
                            sh.Miktar,
                            sh.BirimFiyati,
                            sh.Kdv,
+                           sh.Stok.StokAdi,
+                           sh.Stok.StokKodu,
                            sh.IndirimOrani,
                            sh.IndirimTutar,
                            sh.DipIskontoPayi,
                            sh.ToplamTutar
+                           
                        }).ToList();
 
             gridContStokHareket.DataSource = res;
@@ -134,7 +137,7 @@ namespace NetSatis.BackOffice.Cari
 
         private void frmCariStokHareket_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
-            if (e.KeyCode==System.Windows.Forms.Keys.F3)
+            if (e.KeyCode == System.Windows.Forms.Keys.F3)
             {
                 btnGoster.PerformClick();
             }

@@ -506,7 +506,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcwebBayiSatisFiyat
             // 
-            this.calcwebBayiSatisFiyat.Location = new System.Drawing.Point(588, 501);
+            this.calcwebBayiSatisFiyat.Location = new System.Drawing.Point(588, 479);
             this.calcwebBayiSatisFiyat.Name = "calcwebBayiSatisFiyat";
             this.calcwebBayiSatisFiyat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -518,7 +518,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcDevirGirisi
             // 
-            this.calcDevirGirisi.Location = new System.Drawing.Point(89, 554);
+            this.calcDevirGirisi.Location = new System.Drawing.Point(89, 532);
             this.calcDevirGirisi.Name = "calcDevirGirisi";
             this.calcDevirGirisi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -536,7 +536,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             this.togWeb.EditValue = true;
             this.togWeb.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.togWeb.Location = new System.Drawing.Point(382, 554);
+            this.togWeb.Location = new System.Drawing.Point(382, 532);
             this.togWeb.Name = "togWeb";
             this.togWeb.Properties.OffText = "Hayır";
             this.togWeb.Properties.OnText = "Evet";
@@ -546,7 +546,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcZirai
             // 
-            this.calcZirai.Location = new System.Drawing.Point(613, 404);
+            this.calcZirai.Location = new System.Drawing.Point(613, 382);
             this.calcZirai.Name = "calcZirai";
             this.calcZirai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -559,7 +559,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcSatisFiyat3
             // 
-            this.calcSatisFiyat3.Location = new System.Drawing.Point(338, 501);
+            this.calcSatisFiyat3.Location = new System.Drawing.Point(338, 479);
             this.calcSatisFiyat3.Name = "calcSatisFiyat3";
             this.calcSatisFiyat3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -571,7 +571,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcWebSatisFiyat
             // 
-            this.calcWebSatisFiyat.Location = new System.Drawing.Point(588, 479);
+            this.calcWebSatisFiyat.Location = new System.Drawing.Point(588, 457);
             this.calcWebSatisFiyat.Name = "calcWebSatisFiyat";
             this.calcWebSatisFiyat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -583,7 +583,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcMera
             // 
-            this.calcMera.Location = new System.Drawing.Point(524, 404);
+            this.calcMera.Location = new System.Drawing.Point(524, 382);
             this.calcMera.Name = "calcMera";
             this.calcMera.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -596,7 +596,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcSatisFiyat2
             // 
-            this.calcSatisFiyat2.Location = new System.Drawing.Point(338, 479);
+            this.calcSatisFiyat2.Location = new System.Drawing.Point(338, 457);
             this.calcSatisFiyat2.Name = "calcSatisFiyat2";
             this.calcSatisFiyat2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -608,7 +608,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcAlisFiyat3
             // 
-            this.calcAlisFiyat3.Location = new System.Drawing.Point(88, 501);
+            this.calcAlisFiyat3.Location = new System.Drawing.Point(88, 479);
             this.calcAlisFiyat3.Name = "calcAlisFiyat3";
             this.calcAlisFiyat3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -619,7 +619,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcBorsa
             // 
-            this.calcBorsa.Location = new System.Drawing.Point(435, 404);
+            this.calcBorsa.Location = new System.Drawing.Point(435, 382);
             this.calcBorsa.Name = "calcBorsa";
             this.calcBorsa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -632,7 +632,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcAlisKdv
             // 
-            this.calcAlisKdv.Location = new System.Drawing.Point(718, 404);
+            this.calcAlisKdv.Location = new System.Drawing.Point(718, 382);
             this.calcAlisKdv.Name = "calcAlisKdv";
             this.calcAlisKdv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -643,7 +643,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcBagkur
             // 
-            this.calcBagkur.Location = new System.Drawing.Point(348, 404);
+            this.calcBagkur.Location = new System.Drawing.Point(348, 382);
             this.calcBagkur.Name = "calcBagkur";
             this.calcBagkur.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -657,7 +657,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // btnOzelKod
             // 
-            this.btnOzelKod.Location = new System.Drawing.Point(391, 347);
+            this.btnOzelKod.Location = new System.Drawing.Point(391, 325);
             this.btnOzelKod.Name = "btnOzelKod";
             editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             editorButtonImageOptions2.ImageUri.Uri = "Delete;Size16x16;Colored";
@@ -672,7 +672,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcAlisFiyat2
             // 
-            this.calcAlisFiyat2.Location = new System.Drawing.Point(88, 479);
+            this.calcAlisFiyat2.Location = new System.Drawing.Point(88, 457);
             this.calcAlisFiyat2.Name = "calcAlisFiyat2";
             this.calcAlisFiyat2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -683,7 +683,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcSatisFiyat4
             // 
-            this.calcSatisFiyat4.Location = new System.Drawing.Point(588, 457);
+            this.calcSatisFiyat4.Location = new System.Drawing.Point(588, 435);
             this.calcSatisFiyat4.Name = "calcSatisFiyat4";
             this.calcSatisFiyat4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -697,14 +697,14 @@ namespace NetSatis.BackOffice.Stok
             // 
             this.txtAciklama.Location = new System.Drawing.Point(88, 165);
             this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(681, 46);
+            this.txtAciklama.Size = new System.Drawing.Size(681, 24);
             this.txtAciklama.StyleController = this.layoutControl2;
             this.txtAciklama.TabIndex = 9;
             this.txtAciklama.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAciklama_KeyDown);
             // 
             // btnSezonYil
             // 
-            this.btnSezonYil.Location = new System.Drawing.Point(391, 321);
+            this.btnSezonYil.Location = new System.Drawing.Point(391, 299);
             this.btnSezonYil.Name = "btnSezonYil";
             editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
             editorButtonImageOptions4.ImageUri.Uri = "Delete;Size16x16;Colored";
@@ -719,7 +719,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcSatisFiyat1
             // 
-            this.calcSatisFiyat1.Location = new System.Drawing.Point(338, 457);
+            this.calcSatisFiyat1.Location = new System.Drawing.Point(338, 435);
             this.calcSatisFiyat1.Name = "calcSatisFiyat1";
             this.calcSatisFiyat1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -792,7 +792,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // btnPozisyon
             // 
-            this.btnPozisyon.Location = new System.Drawing.Point(391, 295);
+            this.btnPozisyon.Location = new System.Drawing.Point(391, 273);
             this.btnPozisyon.Name = "btnPozisyon";
             editorButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions5.Image")));
             editorButtonImageOptions6.ImageUri.Uri = "Delete;Size16x16;Colored";
@@ -807,7 +807,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // btnUretici
             // 
-            this.btnUretici.Location = new System.Drawing.Point(88, 347);
+            this.btnUretici.Location = new System.Drawing.Point(88, 325);
             this.btnUretici.Name = "btnUretici";
             editorButtonImageOptions7.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions7.Image")));
             editorButtonImageOptions8.ImageUri.Uri = "Delete;Size16x16;Colored";
@@ -822,7 +822,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // btnProje
             // 
-            this.btnProje.Location = new System.Drawing.Point(391, 269);
+            this.btnProje.Location = new System.Drawing.Point(391, 247);
             this.btnProje.Name = "btnProje";
             editorButtonImageOptions9.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions9.Image")));
             editorButtonImageOptions10.ImageUri.Uri = "Delete;Size16x16;Colored";
@@ -837,7 +837,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcAlisFiyat1
             // 
-            this.calcAlisFiyat1.Location = new System.Drawing.Point(88, 457);
+            this.calcAlisFiyat1.Location = new System.Drawing.Point(88, 435);
             this.calcAlisFiyat1.Name = "calcAlisFiyat1";
             this.calcAlisFiyat1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -850,7 +850,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcSatisKdv
             // 
-            this.calcSatisKdv.Location = new System.Drawing.Point(89, 404);
+            this.calcSatisKdv.Location = new System.Drawing.Point(89, 382);
             this.calcSatisKdv.Name = "calcSatisKdv";
             this.calcSatisKdv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -878,7 +878,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // btnMarka
             // 
-            this.btnMarka.Location = new System.Drawing.Point(88, 321);
+            this.btnMarka.Location = new System.Drawing.Point(88, 299);
             this.btnMarka.Name = "btnMarka";
             editorButtonImageOptions11.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions11.Image")));
             editorButtonImageOptions12.ImageUri.Uri = "Delete;Size16x16;Colored";
@@ -922,7 +922,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // btnAltGrup
             // 
-            this.btnAltGrup.Location = new System.Drawing.Point(88, 295);
+            this.btnAltGrup.Location = new System.Drawing.Point(88, 273);
             this.btnAltGrup.Name = "btnAltGrup";
             editorButtonImageOptions13.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions13.Image")));
             editorButtonImageOptions14.ImageUri.Uri = "Delete;Size16x16;Colored";
@@ -954,7 +954,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // btnAnaGrup
             // 
-            this.btnAnaGrup.Location = new System.Drawing.Point(88, 269);
+            this.btnAnaGrup.Location = new System.Drawing.Point(88, 247);
             this.btnAnaGrup.Name = "btnAnaGrup";
             editorButtonImageOptions15.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions15.Image")));
             editorButtonImageOptions16.ImageUri.Uri = "Delete;Size16x16;Colored";
@@ -970,7 +970,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // btnModel
             // 
-            this.btnModel.Location = new System.Drawing.Point(391, 243);
+            this.btnModel.Location = new System.Drawing.Point(391, 221);
             this.btnModel.Name = "btnModel";
             editorButtonImageOptions17.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions17.Image")));
             editorButtonImageOptions18.ImageUri.Uri = "Delete;Size16x16;Colored";
@@ -996,7 +996,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // btnKategori
             // 
-            this.btnKategori.Location = new System.Drawing.Point(88, 243);
+            this.btnKategori.Location = new System.Drawing.Point(88, 221);
             this.btnKategori.Name = "btnKategori";
             editorButtonImageOptions19.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions19.Image")));
             editorButtonImageOptions20.ImageUri.Uri = "Delete;Size16x16;Colored";
@@ -1134,7 +1134,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
             this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
-            this.layoutControlGroup3.Size = new System.Drawing.Size(772, 214);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(772, 192);
             this.layoutControlGroup3.Text = "Genel Bilgiler";
             // 
             // layoutControlItem8
@@ -1270,7 +1270,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem19.Location = new System.Drawing.Point(0, 136);
             this.layoutControlItem19.Name = "layoutControlItem19";
             this.layoutControlItem19.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
-            this.layoutControlItem19.Size = new System.Drawing.Size(764, 48);
+            this.layoutControlItem19.Size = new System.Drawing.Size(764, 26);
             this.layoutControlItem19.Text = "Açıklama";
             this.layoutControlItem19.TextSize = new System.Drawing.Size(78, 13);
             // 
@@ -1340,7 +1340,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem29,
             this.layoutControlItem27,
             this.emptySpaceItem6});
-            this.layoutControlGroup4.Location = new System.Drawing.Point(0, 214);
+            this.layoutControlGroup4.Location = new System.Drawing.Point(0, 192);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
             this.layoutControlGroup4.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
             this.layoutControlGroup4.Size = new System.Drawing.Size(772, 160);
@@ -1473,7 +1473,7 @@ namespace NetSatis.BackOffice.Stok
             this.layMera,
             this.layZirai,
             this.layAlisKdv});
-            this.layoutControlGroup5.Location = new System.Drawing.Point(0, 374);
+            this.layoutControlGroup5.Location = new System.Drawing.Point(0, 352);
             this.layoutControlGroup5.Name = "layoutControlGroup5";
             this.layoutControlGroup5.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
             this.layoutControlGroup5.Size = new System.Drawing.Size(772, 54);
@@ -1567,7 +1567,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem43,
             this.layoutControlItem44,
             this.emptySpaceItem7});
-            this.layoutControlGroup6.Location = new System.Drawing.Point(0, 428);
+            this.layoutControlGroup6.Location = new System.Drawing.Point(0, 406);
             this.layoutControlGroup6.Name = "layoutControlGroup6";
             this.layoutControlGroup6.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
             this.layoutControlGroup6.Size = new System.Drawing.Size(772, 96);
@@ -1707,7 +1707,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlGroup7.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem45,
             this.layoutControlItem46});
-            this.layoutControlGroup7.Location = new System.Drawing.Point(0, 524);
+            this.layoutControlGroup7.Location = new System.Drawing.Point(0, 502);
             this.layoutControlGroup7.Name = "layoutControlGroup7";
             this.layoutControlGroup7.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
             this.layoutControlGroup7.Size = new System.Drawing.Size(772, 54);
@@ -1737,9 +1737,9 @@ namespace NetSatis.BackOffice.Stok
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 578);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 556);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(772, 10);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(772, 32);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // tabNavigationPage2
