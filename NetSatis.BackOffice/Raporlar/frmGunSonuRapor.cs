@@ -30,13 +30,11 @@ namespace NetSatis.BackOffice.Raporlar
         {
             InitializeComponent();
 
-            var res = (from fis in context.Fisler.Where(s => s.Tarih >= baslangic && s.Tarih <= bitis).GroupBy(x => new { x.FisTuru, x.FisKodu })
-                       from kasa in context.KasaHareketleri.Where(x => x.FisKodu == fis.Key.FisKodu).GroupBy(x => new { x.FisTuru, x.OdemeTuru.OdemeTuruAdi }).DefaultIfEmpty()
-                       from kasa2 in context.KasaHareketleri.Where(s => s.Tarih >= baslangic && s.Tarih <= bitis).GroupBy(s => s.FisKodu).DefaultIfEmpty()
+            var res = (from fis in context.Fisler.Where(s => s.Tarih >= baslangic && s.Tarih <= bitis).GroupBy(x => x.FisKodu)
+                       from kasa in context.KasaHareketleri.Where(x => x.FisKodu == fis.Key).GroupBy(s => s.OdemeTuru.OdemeTuruAdi).DefaultIfEmpty()
+                           //from kasa2 in context.KasaHareketleri.Where(s => s.Tarih >= baslangic && s.Tarih <= bitis).GroupBy(s => s.FisKodu).DefaultIfEmpty()
                        select new
                        {
-                           OdemeTuru = string.IsNullOrEmpty(kasa.Key.OdemeTuruAdi) ? "Açık Hesap" : kasa.Key.OdemeTuruAdi,
-                           kasaTutar = string.IsNullOrEmpty(kasa.Key.OdemeTuruAdi) ? kasa2.Sum(s => s.Tutar) : kasa.Sum(s => s.Tutar),
                            iadeToplam = fis.Where(x => x.FisTuru == "Satış İade Faturası" || x.FisTuru == "Perakende İade Faturası").Sum(s => s.ToplamTutar),
                            perakendeFisTutari = fis.Where(x => x.FisTuru == "Perakende Satış Faturası").Sum(s => s.ToplamTutar),
                            toptanSatisTutari = fis.Where(x => x.FisTuru == "Toptan Satış Faturası").Sum(s => s.ToplamTutar),
@@ -84,20 +82,17 @@ namespace NetSatis.BackOffice.Raporlar
             masraf.Tutar = res.Sum(s => s.masrafToplam);
             list.Add(masraf);
 
-            
-
-        
-
-          
-
-           
-
-           
-
-
 
             var odemeTuru = new List<ornek>();
-            foreach (var item in res.GroupBy(s => s.OdemeTuru))
+            var resAcikHesap = (from f in context.Fisler
+                                from k in context.KasaHareketleri.GroupBy(x => x.OdemeTuru)
+                                select new
+                                {
+                                    OdemeTuru = k.Key != null ? (string.IsNullOrEmpty(k.Key.OdemeTuruAdi) ? "Açık Hesap" : k.Key.OdemeTuruAdi) : "Açık Hesap",
+                                    kasaTutar = k.Key != null ? (string.IsNullOrEmpty(k.Key.OdemeTuruAdi) ? k.Where(x => x.FisKodu != f.FisKodu).Sum(s => s.Tutar) : k.Where(x => x.FisKodu == f.FisKodu).Sum(s => s.Tutar)) : k.Where(x => x.FisKodu != f.FisKodu).Sum(s => s.Tutar),
+
+                                }).ToList();
+            foreach (var item in resAcikHesap.GroupBy(x => x.OdemeTuru).ToList())
             {
                 if (item == null)
                     continue;
@@ -195,4 +190,4 @@ namespace NetSatis.BackOffice.Raporlar
             link.ShowPreview();
         }
     }
-    }
+}
