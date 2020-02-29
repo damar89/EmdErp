@@ -53,17 +53,17 @@ namespace NetSatis.BackOffice.Raporlar
             list.Add(iade);
 
             ornek masraf = new ornek();
-            masraf.Baslik = "Masraf";
+            masraf.Baslik = "Masraflar";
             masraf.Tutar = res.Sum(s => s.masrafToplam);
             list.Add(masraf);
 
             ornek odeme = new ornek();
-            odeme.Baslik = "Ödeme";
+            odeme.Baslik = "Ödemeler";
             odeme.Tutar = res.Sum(s => s.odemeToplam);
             list.Add(odeme);
 
             ornek tahsilat = new ornek();
-            tahsilat.Baslik = "Tahsilat";
+            tahsilat.Baslik = "Tahsilatlar";
             tahsilat.Tutar = res.Sum(s => s.tahsilatToplam);
             list.Add(tahsilat);
 
@@ -73,7 +73,7 @@ namespace NetSatis.BackOffice.Raporlar
             list.Add(indirimToplam);
 
             ornek perakende = new ornek();
-            perakende.Baslik = "Perakende Satış";
+            perakende.Baslik = "Perakende Satışlar";
             perakende.Tutar = res.Sum(s => s.perakendeFisTutari);
             list.Add(perakende);
 

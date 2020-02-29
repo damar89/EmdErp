@@ -1508,6 +1508,8 @@ namespace NetSatis.BackOffice.Fiş
                     if (_fisentity.FisTuru == "Alış Faturası" || _fisentity.FisTuru == "Alış İrsaliyesi")
                     {
                         stokVeri.Stok.AlisFiyati1 = stokVeri.BirimFiyati;
+                        stokVeri.Stok.AlisFiyati2 = stokVeri.BirimFiyati + ((stokVeri.BirimFiyati * stokVeri.Kdv) / 100);
+
                     }
                 }
                 for (int i = 0; i < gridStokHareket.RowCount; i++)
