@@ -501,7 +501,7 @@
             this.colDepoAdi.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.colDepoAdi.Visible = true;
             this.colDepoAdi.VisibleIndex = 1;
-            this.colDepoAdi.Width = 100;
+            this.colDepoAdi.Width = 53;
             // 
             // repoDepo
             // 
@@ -788,6 +788,7 @@
             this.colFisTutarı.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.colFisTutarı.Visible = true;
             this.colFisTutarı.VisibleIndex = 19;
+            this.colFisTutarı.Width = 20;
             // 
             // colFisTuru
             // 
@@ -797,6 +798,7 @@
             this.colFisTuru.OptionsColumn.AllowEdit = false;
             this.colFisTuru.Visible = true;
             this.colFisTuru.VisibleIndex = 2;
+            this.colFisTuru.Width = 82;
             // 
             // printDialog1
             // 

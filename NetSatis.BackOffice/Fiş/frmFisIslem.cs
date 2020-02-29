@@ -2820,6 +2820,11 @@ namespace NetSatis.BackOffice.Fiş
                 HarTipi = "TF";
                 cmbTipi.Text = "-";
             }
+            if (txtFisTuru.Text == "Sayım Fişi")
+            {
+                HarTipi = "SY";
+                cmbTipi.Text = "-";
+            }
             if (txtFisTuru.Text == "Cari Devir Fişi")
             {
                 HarTipi = "CD";

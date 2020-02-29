@@ -172,11 +172,13 @@ namespace NetSatis.BackOffice.Fiş
                     if (tempFis.FisTuru == "Alınan Sipariş Fişi")
                     {
                         fis.FisTuru = "Toptan Satış Faturası";
+                        fis.Tipi = "A";
 
                     }
                     else if (tempFis.FisTuru == "Alınan Sipariş Fişi")
                     {
                         fis.FisTuru = "Alış Faturası";
+                        fis.Tipi = "A";
 
                     }
 
@@ -221,6 +223,7 @@ namespace NetSatis.BackOffice.Fiş
                         {
                             item.FisTuru = "Toptan Satış Faturası";
                             item.Hareket = "Stok Çıkış";
+                            
 
                         }
                         else if (item.FisTuru == "Verilen Sipariş Fişi")

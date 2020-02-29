@@ -13,7 +13,7 @@ namespace NetSatis.Entities.Data_Access
     {
         public object GetAll2(NetSatisContext context, Expression<Func<StokHareket, bool>> filter = null)
         {
-           
+
             IQueryable<StokHareket> resStokHareketleri;
             if (filter == null)
                 resStokHareketleri = context.StokHareketleri;
@@ -31,7 +31,7 @@ namespace NetSatis.Entities.Data_Access
                        from cari in context.Cariler.Where(x => x.Id == fis.CariId).DefaultIfEmpty()
                        from kasa in context.KasaHareketleri.Where(q => q.FisKodu == s.FisKodu).GroupBy(x => x.FisKodu).DefaultIfEmpty()
                        from odemeTuru in context.OdemeTurleri.Where(s => s.Id == kasa.FirstOrDefault().OdemeTuruId).DefaultIfEmpty()
-                       select new 
+                       select new
                        {
                            s.Id,
                            s.FisKodu,
@@ -66,7 +66,7 @@ namespace NetSatis.Entities.Data_Access
                            cari.CariKodu
                        });
 
-           return res.ToList();
+            return res.ToList();
 
 
 
