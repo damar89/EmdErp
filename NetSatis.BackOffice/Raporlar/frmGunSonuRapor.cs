@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.BackOffice.Extensions;
+using DevExpress.XtraPrinting;
 
 namespace NetSatis.BackOffice.Raporlar
 {
@@ -38,6 +39,7 @@ namespace NetSatis.BackOffice.Raporlar
                            kasaTutar = string.IsNullOrEmpty(kasa.Key.OdemeTuruAdi) ? kasa2.Sum(s => s.Tutar) : kasa.Sum(s => s.Tutar),
                            iadeToplam = fis.Where(x => x.FisTuru == "Satış İade Faturası" || x.FisTuru == "Perakende İade Faturası").Sum(s => s.ToplamTutar),
                            perakendeFisTutari = fis.Where(x => x.FisTuru == "Perakende Satış Faturası").Sum(s => s.ToplamTutar),
+                           toptanSatisTutari = fis.Where(x => x.FisTuru == "Toptan Satış Faturası").Sum(s => s.ToplamTutar),
                            indirimToplam = fis.Where(x => x.FisTuru == "Perakende Satış Faturası" || x.FisTuru == "Toptan Satış Faturası").Sum(s => s.IskontoTutari1),
                            tahsilatToplam = fis.Where(x => x.FisTuru == "Tahsilat Fişi").Sum(s => s.ToplamTutar),
                            odemeToplam = fis.Where(x => x.FisTuru == "Ödeme Fişi").Sum(s => s.ToplamTutar),
@@ -47,35 +49,50 @@ namespace NetSatis.BackOffice.Raporlar
 
             List<ornek> list = new List<ornek>();
 
+            ornek toptan = new ornek();
+            toptan.Baslik = "Toptan Satışlar";
+            toptan.Tutar = res.Sum(s => s.toptanSatisTutari);
+            list.Add(toptan);
+
+            ornek perakende = new ornek();
+            perakende.Baslik = "Perakende Satışlar";
+            perakende.Tutar = res.Sum(s => s.perakendeFisTutari);
+            list.Add(perakende);
+
             ornek iade = new ornek();
             iade.Baslik = "İadeler";
             iade.Tutar = res.Sum(s => s.iadeToplam);
             list.Add(iade);
-
-            ornek masraf = new ornek();
-            masraf.Baslik = "Masraflar";
-            masraf.Tutar = res.Sum(s => s.masrafToplam);
-            list.Add(masraf);
-
-            ornek odeme = new ornek();
-            odeme.Baslik = "Ödemeler";
-            odeme.Tutar = res.Sum(s => s.odemeToplam);
-            list.Add(odeme);
 
             ornek tahsilat = new ornek();
             tahsilat.Baslik = "Tahsilatlar";
             tahsilat.Tutar = res.Sum(s => s.tahsilatToplam);
             list.Add(tahsilat);
 
+            ornek odeme = new ornek();
+            odeme.Baslik = "Ödemeler";
+            odeme.Tutar = res.Sum(s => s.odemeToplam);
+            list.Add(odeme);
+
             ornek indirimToplam = new ornek();
             indirimToplam.Baslik = "İndirimler";
             indirimToplam.Tutar = res.Sum(s => s.indirimToplam);
             list.Add(indirimToplam);
 
-            ornek perakende = new ornek();
-            perakende.Baslik = "Perakende Satışlar";
-            perakende.Tutar = res.Sum(s => s.perakendeFisTutari);
-            list.Add(perakende);
+            ornek masraf = new ornek();
+            masraf.Baslik = "Masraflar";
+            masraf.Tutar = res.Sum(s => s.masrafToplam);
+            list.Add(masraf);
+
+            
+
+        
+
+          
+
+           
+
+           
 
 
 
@@ -162,5 +179,20 @@ namespace NetSatis.BackOffice.Raporlar
             //return tablo;
 
         }
+
+        private void btnYazdir_Click(object sender, EventArgs e)
+        {
+            PrintableComponentLink link = new PrintableComponentLink(new PrintingSystem());
+
+            link.Component = gridControl1;
+
+            link.Landscape = true;
+            link.Landscape = true;
+            link.Margins.Left = 3;
+            link.Margins.Right = 3;
+            link.Margins.Top = 6;
+            link.Margins.Bottom = 3;
+            link.ShowPreview();
+        }
     }
-}
+    }
