@@ -22,47 +22,78 @@ namespace NetSatis.BackOffice.Raporlar
         StokHareketDAL stokHareketDal = new StokHareketDAL();
         class ornek
         {
-            public string baslik;
-            public decimal tutar;
+            public string Baslik;
+            public decimal? Tutar;
         }
         public frmGunSonuRapor(DateTime baslangic, DateTime bitis, int userId = 0)
         {
             InitializeComponent();
 
-            decimal iadeToplam = context.Fisler.Where(c => c.Tarih >= baslangic && c.Tarih <= bitis &&
-            (c.FisTuru == "Iade" || c.FisTuru == "Iade")).Sum(x => x.ToplamTutar).GetDecimal();
-
-            decimal perakendeFisTutari = context.Fisler.Where(c => c.Tarih >= baslangic && c.Tarih <= bitis &&
-          (c.FisTuru == "perakende" || c.FisTuru == "toptan")).Sum(x => x.ToplamTutar).GetDecimal();
-
-            decimal indirimToplam = context.Fisler.Where(c => c.Tarih >= baslangic && c.Tarih <= bitis).Sum(x => x.IskontoTutari1).GetDecimal();
-
-            decimal tahsilatToplam = context.Fisler.Where(c => c.Tarih >= baslangic && c.Tarih <= bitis &&
-   (c.FisTuru == "tahsilate" || c.FisTuru == "tahsilat")).Sum(x => x.ToplamTutar).GetDecimal();
-
-            decimal odemeToplam = context.Fisler.Where(c => c.Tarih >= baslangic && c.Tarih <= bitis &&
-           (c.FisTuru == "odeme" || c.FisTuru == "toptan")).Sum(x => x.ToplamTutar).GetDecimal();
-
-            decimal masrafToplam = context.Fisler.Where(c => c.Tarih >= baslangic && c.Tarih <= bitis &&
-   (c.FisTuru == "masraf" || c.FisTuru == "toptan")).Sum(x => x.ToplamTutar).GetDecimal();
+            var res = (from fis in context.Fisler.Where(s => s.Tarih >= baslangic && s.Tarih <= bitis).GroupBy(x => new { x.FisTuru, x.FisKodu })
+                       from kasa in context.KasaHareketleri.Where(x => x.FisKodu == fis.Key.FisKodu).GroupBy(x => new { x.FisTuru, x.OdemeTuru.OdemeTuruAdi }).DefaultIfEmpty()
+                       from kasa2 in context.KasaHareketleri.Where(s => s.Tarih >= baslangic && s.Tarih <= bitis).GroupBy(s => s.FisKodu).DefaultIfEmpty()
+                       select new
+                       {
+                           OdemeTuru = string.IsNullOrEmpty(kasa.Key.OdemeTuruAdi) ? "Açık Hesap" : kasa.Key.OdemeTuruAdi,
+                           kasaTutar = string.IsNullOrEmpty(kasa.Key.OdemeTuruAdi) ? kasa2.Sum(s => s.Tutar) : kasa.Sum(s => s.Tutar),
+                           iadeToplam = fis.Where(x => x.FisTuru == "Satış İade Faturası" || x.FisTuru == "Perakende İade Faturası").Sum(s => s.ToplamTutar),
+                           perakendeFisTutari = fis.Where(x => x.FisTuru == "Perakende Satış Faturası").Sum(s => s.ToplamTutar),
+                           indirimToplam = fis.Where(x => x.FisTuru == "Perakende Satış Faturası" || x.FisTuru == "Toptan Satış Faturası").Sum(s => s.IskontoTutari1),
+                           tahsilatToplam = fis.Where(x => x.FisTuru == "Tahsilat Fişi").Sum(s => s.ToplamTutar),
+                           odemeToplam = fis.Where(x => x.FisTuru == "Ödeme Fişi").Sum(s => s.ToplamTutar),
+                           masrafToplam = fis.Where(x => x.FisTuru == "Masraf Fişi").Sum(s => s.ToplamTutar),
+                       }).ToList();
 
 
             List<ornek> list = new List<ornek>();
 
             ornek iade = new ornek();
-            iade.baslik = "IADE" ; 
-            iade.tutar = iadeToplam;
+            iade.Baslik = "İadeler";
+            iade.Tutar = res.Sum(s => s.iadeToplam);
             list.Add(iade);
 
-             ornek masraf = new ornek();
-            masraf.baslik = "IADE" ; 
-            masraf.tutar = masrafToplam;
+            ornek masraf = new ornek();
+            masraf.Baslik = "Masraf";
+            masraf.Tutar = res.Sum(s => s.masrafToplam);
             list.Add(masraf);
 
-         
+            ornek odeme = new ornek();
+            odeme.Baslik = "Ödeme";
+            odeme.Tutar = res.Sum(s => s.odemeToplam);
+            list.Add(odeme);
+
+            ornek tahsilat = new ornek();
+            tahsilat.Baslik = "Tahsilat";
+            tahsilat.Tutar = res.Sum(s => s.tahsilatToplam);
+            list.Add(tahsilat);
+
+            ornek indirimToplam = new ornek();
+            indirimToplam.Baslik = "İndirimler";
+            indirimToplam.Tutar = res.Sum(s => s.indirimToplam);
+            list.Add(indirimToplam);
+
+            ornek perakende = new ornek();
+            perakende.Baslik = "Perakende Satış";
+            perakende.Tutar = res.Sum(s => s.perakendeFisTutari);
+            list.Add(perakende);
 
 
 
+            var odemeTuru = new List<ornek>();
+            foreach (var item in res.GroupBy(s => s.OdemeTuru))
+            {
+                if (item == null)
+                    continue;
+                odemeTuru.Add(new ornek
+                {
+                    Baslik = item.Key,
+                    Tutar = item.Sum(s => s.kasaTutar)
+                });
+            }
+
+            list.AddRange(odemeTuru);
+            //gridControl1.DataSource = list.ToList();
+            gridControl1.DataSource = list.Select(x => new { x.Baslik, x.Tutar }).ToList();
 
             //           var tablo = context.Fisler.Where(c => c.Tarih >= baslangic && c.Tarih <= bitis &&
             //           (c.FisTuru == "Toptan Satış Faturası" || c.FisTuru == "Perakende Satış Faturası")).GroupJoin(
@@ -130,7 +161,6 @@ namespace NetSatis.BackOffice.Raporlar
             //       }).ToList();
             //return tablo;
 
-            gridControl1.DataSource = list;
         }
     }
 }

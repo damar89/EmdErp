@@ -57,7 +57,8 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "Baslik";
+            this.gridColumn1.Caption = "Başlık";
+            this.gridColumn1.FieldName = "Baslik";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
@@ -65,6 +66,9 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Tutar";
+            this.gridColumn2.DisplayFormat.FormatString = "C2";
+            this.gridColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn2.FieldName = "Tutar";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
@@ -75,8 +79,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(698, 470);
             this.Controls.Add(this.gridControl1);
+            this.IconOptions.ShowIcon = false;
             this.Name = "frmGunSonuRapor";
-            this.ShowIcon = false;
             this.Text = "Gün Sonu";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
