@@ -2748,7 +2748,7 @@ namespace NetSatis.BackOffice.Fiş
             FaturaHazirla f = new FaturaHazirla();
             f.BilgiFisi(txtKod.Text);
         }
-        private void FaturaOlustur()
+        private void FaturaOlustur()   //BURADAN AŞAĞISI
         {
             string HarTipi = "";
             if (txtFisTuru.Text == "Alış Faturası")
@@ -2925,7 +2925,7 @@ namespace NetSatis.BackOffice.Fiş
                 }
             }
 
-            for (int i = 0; i < gridStokHareket.RowCount; i++)
+            for (int i = 0; i < gridStokHareket.RowCount; i++) //EFATURA DÜZENLEME
             {
                 decimal fyt = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString());
                 decimal fyt2 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar"));

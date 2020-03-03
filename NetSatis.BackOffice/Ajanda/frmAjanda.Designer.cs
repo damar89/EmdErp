@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraScheduler.TimeRuler timeRuler1 = new DevExpress.XtraScheduler.TimeRuler();
             DevExpress.XtraScheduler.TimeRuler timeRuler2 = new DevExpress.XtraScheduler.TimeRuler();
             DevExpress.XtraScheduler.TimeRuler timeRuler3 = new DevExpress.XtraScheduler.TimeRuler();
             this.schedulerControl1 = new DevExpress.XtraScheduler.SchedulerControl();
-            this.schedulerStorage1 = new DevExpress.XtraScheduler.SchedulerStorage();
-            this.eFAppointmentBindingSource = new System.Windows.Forms.BindingSource();
+            this.schedulerStorage1 = new DevExpress.XtraScheduler.SchedulerStorage(this.components);
+            this.eFAppointmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.schedulerControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerStorage1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eFAppointmentBindingSource)).BeginInit();
@@ -51,7 +52,7 @@
             this.schedulerControl1.OptionsView.NavigationButtons.NextCaption = "Sonraki Görevler";
             this.schedulerControl1.OptionsView.NavigationButtons.PrevCaption = "Önceki Görevler";
             this.schedulerControl1.OptionsView.ResourceHeaders.Height = 15;
-            this.schedulerControl1.Size = new System.Drawing.Size(1010, 666);
+            this.schedulerControl1.Size = new System.Drawing.Size(996, 660);
             this.schedulerControl1.Start = new System.DateTime(2019, 4, 1, 0, 0, 0, 0);
             this.schedulerControl1.TabIndex = 0;
             this.schedulerControl1.Text = "schedulerControl1";
@@ -87,11 +88,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 666);
+            this.ClientSize = new System.Drawing.Size(996, 660);
             this.Controls.Add(this.schedulerControl1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
+            this.IconOptions.ShowIcon = false;
             this.Name = "frmAjanda";
-            this.ShowIcon = false;
             this.Text = "Ajanda";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAjanda_FormClosing);
