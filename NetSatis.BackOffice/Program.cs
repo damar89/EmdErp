@@ -22,6 +22,9 @@ namespace NetSatis.BackOffice
         [STAThread]
         static void Main()
         {
+
+
+
             bool prog;
             Mutex mtx = new Mutex(true, "NetSatis.BackOffice", out prog);
             if (!prog)

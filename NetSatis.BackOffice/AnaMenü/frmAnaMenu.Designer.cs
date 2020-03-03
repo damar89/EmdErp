@@ -30,36 +30,36 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAnaMenu));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem1 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem2 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem3 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem4 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem5 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem10 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem11 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem6 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem12 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem13 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem7 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem14 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem15 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem8 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem16 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem17 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem9 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem18 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem19 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem10 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem20 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem21 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem11 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem22 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem23 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem12 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem24 = new DevExpress.Utils.ToolTipTitleItem();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnStok = new DevExpress.XtraBars.BarButtonItem();
             this.btnCariler = new DevExpress.XtraBars.BarButtonItem();
@@ -210,79 +210,6 @@
             this.treeListBand1 = new DevExpress.XtraTreeList.Columns.TreeListBand();
             this.treeListBand2 = new DevExpress.XtraTreeList.Columns.TreeListBand();
             this.treeListBand3 = new DevExpress.XtraTreeList.Columns.TreeListBand();
-            this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
-            this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.btnStokListesi = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnStokTanitim = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnStokHareketleri = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navDepoTransfer = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.btnCariListesi = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnCariTanitimKArti = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnCariHesapEkstre = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.btnAlisFatura = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarSeparatorItem1 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
-            this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem8 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarSeparatorItem2 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
-            this.navBarItem9 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem11 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarSeparatorItem6 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
-            this.navBarGroup9 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem43 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem44 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem45 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem46 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup6 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem21 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem22 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarSeparatorItem5 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
-            this.navBarItem23 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem24 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem13 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem14 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarSeparatorItem3 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
-            this.navBarItem15 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem16 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem17 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem18 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarSeparatorItem4 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
-            this.navBarItem19 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem20 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup7 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.btnPersonelTanitim = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnDepoTanitim = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnOdemeTanitim = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnKasaTanitim = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnMasrafTanitim = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnHareketTipi = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup8 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem33 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem34 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem35 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem36 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem37 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem38 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem41 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem42 = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnStokHareketi = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem25 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem26 = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnIadeListeleri = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnOdemeler = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnTahsilatlar = new DevExpress.XtraNavBar.NavBarItem();
-            this.btnDetay = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem27 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem30 = new DevExpress.XtraNavBar.NavBarItem();
             this.barButtonItem35 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem53 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem54 = new DevExpress.XtraBars.BarButtonItem();
@@ -291,7 +218,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -437,16 +363,16 @@
             this.btnStok.LargeWidth = 75;
             this.btnStok.MergeOrder = 75;
             this.btnStok.Name = "btnStok";
-            toolTipTitleItem1.Text = "(F3)";
-            toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "Stok Listesi";
-            toolTipTitleItem2.LeftIndent = 6;
-            toolTipTitleItem2.Text = "Stok Listesi Açılır";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            superToolTip1.Items.Add(toolTipSeparatorItem1);
-            superToolTip1.Items.Add(toolTipTitleItem2);
-            this.btnStok.SuperTip = superToolTip1;
+            toolTipTitleItem13.Text = "(F3)";
+            toolTipItem7.LeftIndent = 6;
+            toolTipItem7.Text = "Stok Listesi";
+            toolTipTitleItem14.LeftIndent = 6;
+            toolTipTitleItem14.Text = "Stok Listesi Açılır";
+            superToolTip7.Items.Add(toolTipTitleItem13);
+            superToolTip7.Items.Add(toolTipItem7);
+            superToolTip7.Items.Add(toolTipSeparatorItem7);
+            superToolTip7.Items.Add(toolTipTitleItem14);
+            this.btnStok.SuperTip = superToolTip7;
             this.btnStok.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnStok_ItemClick);
             // 
             // btnCariler
@@ -458,16 +384,16 @@
             this.btnCariler.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F5);
             this.btnCariler.LargeWidth = 75;
             this.btnCariler.Name = "btnCariler";
-            toolTipTitleItem3.Text = "(F5)";
-            toolTipItem2.LeftIndent = 6;
-            toolTipItem2.Text = "Cari Listesi";
-            toolTipTitleItem4.LeftIndent = 6;
-            toolTipTitleItem4.Text = "Cari Listeler Ekranı Açılır";
-            superToolTip2.Items.Add(toolTipTitleItem3);
-            superToolTip2.Items.Add(toolTipItem2);
-            superToolTip2.Items.Add(toolTipSeparatorItem2);
-            superToolTip2.Items.Add(toolTipTitleItem4);
-            this.btnCariler.SuperTip = superToolTip2;
+            toolTipTitleItem15.Text = "(F5)";
+            toolTipItem8.LeftIndent = 6;
+            toolTipItem8.Text = "Cari Listesi";
+            toolTipTitleItem16.LeftIndent = 6;
+            toolTipTitleItem16.Text = "Cari Listeler Ekranı Açılır";
+            superToolTip8.Items.Add(toolTipTitleItem15);
+            superToolTip8.Items.Add(toolTipItem8);
+            superToolTip8.Items.Add(toolTipSeparatorItem8);
+            superToolTip8.Items.Add(toolTipTitleItem16);
+            this.btnCariler.SuperTip = superToolTip8;
             this.btnCariler.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCariler_ItemClick);
             // 
             // barSatisEkrani
@@ -600,16 +526,16 @@
             this.barButtonItem20.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F8);
             this.barButtonItem20.LargeWidth = 75;
             this.barButtonItem20.Name = "barButtonItem20";
-            toolTipTitleItem5.Text = "(F8)";
-            toolTipItem3.LeftIndent = 6;
-            toolTipItem3.Text = "Alış Faturası";
-            toolTipTitleItem6.LeftIndent = 6;
-            toolTipTitleItem6.Text = "Alış Faturası İşleme Formu Açılır";
-            superToolTip3.Items.Add(toolTipTitleItem5);
-            superToolTip3.Items.Add(toolTipItem3);
-            superToolTip3.Items.Add(toolTipSeparatorItem3);
-            superToolTip3.Items.Add(toolTipTitleItem6);
-            this.barButtonItem20.SuperTip = superToolTip3;
+            toolTipTitleItem17.Text = "(F8)";
+            toolTipItem9.LeftIndent = 6;
+            toolTipItem9.Text = "Alış Faturası";
+            toolTipTitleItem18.LeftIndent = 6;
+            toolTipTitleItem18.Text = "Alış Faturası İşleme Formu Açılır";
+            superToolTip9.Items.Add(toolTipTitleItem17);
+            superToolTip9.Items.Add(toolTipItem9);
+            superToolTip9.Items.Add(toolTipSeparatorItem9);
+            superToolTip9.Items.Add(toolTipTitleItem18);
+            this.barButtonItem20.SuperTip = superToolTip9;
             this.barButtonItem20.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.FisIslem_Click);
             // 
             // barButtonItem21
@@ -628,16 +554,16 @@
             this.barButtonItem22.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F9);
             this.barButtonItem22.LargeWidth = 75;
             this.barButtonItem22.Name = "barButtonItem22";
-            toolTipTitleItem7.Text = "(F9)";
-            toolTipItem4.LeftIndent = 6;
-            toolTipItem4.Text = "Satış Faturası";
-            toolTipTitleItem8.LeftIndent = 6;
-            toolTipTitleItem8.Text = "Satış Faturası İşleme Formu Açılır";
-            superToolTip4.Items.Add(toolTipTitleItem7);
-            superToolTip4.Items.Add(toolTipItem4);
-            superToolTip4.Items.Add(toolTipSeparatorItem4);
-            superToolTip4.Items.Add(toolTipTitleItem8);
-            this.barButtonItem22.SuperTip = superToolTip4;
+            toolTipTitleItem19.Text = "(F9)";
+            toolTipItem10.LeftIndent = 6;
+            toolTipItem10.Text = "Satış Faturası";
+            toolTipTitleItem20.LeftIndent = 6;
+            toolTipTitleItem20.Text = "Satış Faturası İşleme Formu Açılır";
+            superToolTip10.Items.Add(toolTipTitleItem19);
+            superToolTip10.Items.Add(toolTipItem10);
+            superToolTip10.Items.Add(toolTipSeparatorItem10);
+            superToolTip10.Items.Add(toolTipTitleItem20);
+            this.barButtonItem22.SuperTip = superToolTip10;
             this.barButtonItem22.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.FisIslem_Click);
             // 
             // barButtonItem23
@@ -814,16 +740,16 @@
             this.btnStokAc.Name = "btnStokAc";
             this.btnStokAc.SmallWithoutTextWidth = 75;
             this.btnStokAc.SmallWithTextWidth = 75;
-            toolTipTitleItem9.Text = "(F2)";
-            toolTipItem5.LeftIndent = 6;
-            toolTipItem5.Text = "Yeni Stok Ekle";
-            toolTipTitleItem10.LeftIndent = 6;
-            toolTipTitleItem10.Text = "Stok İşlem Formu Açılır";
-            superToolTip5.Items.Add(toolTipTitleItem9);
-            superToolTip5.Items.Add(toolTipItem5);
-            superToolTip5.Items.Add(toolTipSeparatorItem5);
-            superToolTip5.Items.Add(toolTipTitleItem10);
-            this.btnStokAc.SuperTip = superToolTip5;
+            toolTipTitleItem21.Text = "(F2)";
+            toolTipItem11.LeftIndent = 6;
+            toolTipItem11.Text = "Yeni Stok Ekle";
+            toolTipTitleItem22.LeftIndent = 6;
+            toolTipTitleItem22.Text = "Stok İşlem Formu Açılır";
+            superToolTip11.Items.Add(toolTipTitleItem21);
+            superToolTip11.Items.Add(toolTipItem11);
+            superToolTip11.Items.Add(toolTipSeparatorItem11);
+            superToolTip11.Items.Add(toolTipTitleItem22);
+            this.btnStokAc.SuperTip = superToolTip11;
             this.btnStokAc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnStokAc_ItemClick);
             // 
             // btnCariAc
@@ -836,16 +762,16 @@
             this.btnCariAc.LargeWidth = 75;
             this.btnCariAc.MergeOrder = 75;
             this.btnCariAc.Name = "btnCariAc";
-            toolTipTitleItem11.Text = "(F4)";
-            toolTipItem6.LeftIndent = 6;
-            toolTipItem6.Text = "Yeni Cari İşlemleri";
-            toolTipTitleItem12.LeftIndent = 6;
-            toolTipTitleItem12.Text = "Cari İşlem Formu Açılır";
-            superToolTip6.Items.Add(toolTipTitleItem11);
-            superToolTip6.Items.Add(toolTipItem6);
-            superToolTip6.Items.Add(toolTipSeparatorItem6);
-            superToolTip6.Items.Add(toolTipTitleItem12);
-            this.btnCariAc.SuperTip = superToolTip6;
+            toolTipTitleItem23.Text = "(F4)";
+            toolTipItem12.LeftIndent = 6;
+            toolTipItem12.Text = "Yeni Cari İşlemleri";
+            toolTipTitleItem24.LeftIndent = 6;
+            toolTipTitleItem24.Text = "Cari İşlem Formu Açılır";
+            superToolTip12.Items.Add(toolTipTitleItem23);
+            superToolTip12.Items.Add(toolTipItem12);
+            superToolTip12.Items.Add(toolTipSeparatorItem12);
+            superToolTip12.Items.Add(toolTipTitleItem24);
+            this.btnCariAc.SuperTip = superToolTip12;
             this.btnCariAc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCariAc_ItemClick);
             // 
             // btnListeler
@@ -1792,7 +1718,6 @@
             this.treeList1.Size = new System.Drawing.Size(305, 612);
             this.treeList1.TabIndex = 15;
             this.treeList1.ViewStyle = DevExpress.XtraTreeList.TreeListViewStyle.TreeView;
-            this.treeList1.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeList1_FocusedNodeChanged);
             this.treeList1.Click += new System.EventHandler(this.treeList1_Click);
             this.treeList1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.treeList1_MouseClick);
             this.treeList1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.treeList1_MouseDoubleClick);
@@ -1988,685 +1913,6 @@
             this.treeListBand3.Caption = "treeListBand3";
             this.treeListBand3.Name = "treeListBand3";
             // 
-            // navBarControl1
-            // 
-            this.navBarControl1.ActiveGroup = this.navBarGroup1;
-            this.navBarControl1.Appearance.Background.ForeColor = System.Drawing.Color.White;
-            this.navBarControl1.Appearance.Background.Options.UseForeColor = true;
-            this.navBarControl1.Appearance.Button.BackColor = System.Drawing.Color.White;
-            this.navBarControl1.Appearance.Button.BackColor2 = System.Drawing.Color.White;
-            this.navBarControl1.Appearance.Button.BorderColor = System.Drawing.Color.White;
-            this.navBarControl1.Appearance.Button.ForeColor = System.Drawing.Color.White;
-            this.navBarControl1.Appearance.Button.Options.UseBackColor = true;
-            this.navBarControl1.Appearance.Button.Options.UseBorderColor = true;
-            this.navBarControl1.Appearance.Button.Options.UseForeColor = true;
-            this.navBarControl1.Appearance.GroupBackground.BackColor = System.Drawing.Color.White;
-            this.navBarControl1.Appearance.GroupBackground.BackColor2 = System.Drawing.Color.White;
-            this.navBarControl1.Appearance.GroupBackground.BorderColor = System.Drawing.Color.White;
-            this.navBarControl1.Appearance.GroupBackground.Options.UseBackColor = true;
-            this.navBarControl1.Appearance.GroupBackground.Options.UseBorderColor = true;
-            this.navBarControl1.Appearance.GroupHeader.BackColor = System.Drawing.Color.White;
-            this.navBarControl1.Appearance.GroupHeader.BackColor2 = System.Drawing.Color.White;
-            this.navBarControl1.Appearance.GroupHeader.BorderColor = System.Drawing.Color.White;
-            this.navBarControl1.Appearance.GroupHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.navBarControl1.Appearance.GroupHeader.Options.UseBackColor = true;
-            this.navBarControl1.Appearance.GroupHeader.Options.UseBorderColor = true;
-            this.navBarControl1.Appearance.GroupHeader.Options.UseFont = true;
-            this.navBarControl1.Appearance.Item.BackColor = System.Drawing.Color.White;
-            this.navBarControl1.Appearance.Item.BackColor2 = System.Drawing.Color.White;
-            this.navBarControl1.Appearance.Item.BorderColor = System.Drawing.Color.White;
-            this.navBarControl1.Appearance.Item.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.navBarControl1.Appearance.Item.ForeColor = System.Drawing.Color.White;
-            this.navBarControl1.Appearance.Item.Options.UseBackColor = true;
-            this.navBarControl1.Appearance.Item.Options.UseBorderColor = true;
-            this.navBarControl1.Appearance.Item.Options.UseFont = true;
-            this.navBarControl1.Appearance.Item.Options.UseForeColor = true;
-            this.navBarControl1.Appearance.Item.Options.UseTextOptions = true;
-            this.navBarControl1.Appearance.Item.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
-            this.navBarControl1.Appearance.NavigationPaneHeader.ForeColor = System.Drawing.Color.White;
-            this.navBarControl1.Appearance.NavigationPaneHeader.Options.UseForeColor = true;
-            this.navBarControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.navBarControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.navBarControl1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.navBarGroup1,
-            this.navBarGroup2,
-            this.navBarGroup3,
-            this.navBarGroup9,
-            this.navBarGroup6,
-            this.navBarGroup4,
-            this.navBarGroup5,
-            this.navBarGroup7,
-            this.navBarGroup8});
-            this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
-            this.btnStokListesi,
-            this.btnStokTanitim,
-            this.btnCariListesi,
-            this.btnCariTanitimKArti,
-            this.btnAlisFatura,
-            this.navBarItem6,
-            this.navBarSeparatorItem1,
-            this.navBarItem7,
-            this.navBarItem8,
-            this.navBarSeparatorItem2,
-            this.navBarItem9,
-            this.navBarItem10,
-            this.navBarItem11,
-            this.navBarItem12,
-            this.navBarItem13,
-            this.navBarItem14,
-            this.navBarSeparatorItem3,
-            this.navBarItem15,
-            this.navBarItem16,
-            this.navBarItem17,
-            this.navBarItem18,
-            this.navBarSeparatorItem4,
-            this.navBarItem19,
-            this.navBarItem20,
-            this.navBarItem21,
-            this.navBarItem22,
-            this.navBarSeparatorItem5,
-            this.navBarItem23,
-            this.navBarItem24,
-            this.btnStokHareketleri,
-            this.btnPersonelTanitim,
-            this.btnDepoTanitim,
-            this.btnOdemeTanitim,
-            this.btnMasrafTanitim,
-            this.btnKasaTanitim,
-            this.navBarItem33,
-            this.navBarItem34,
-            this.navBarItem35,
-            this.navBarItem36,
-            this.navBarItem37,
-            this.navBarItem38,
-            this.navBarItem41,
-            this.navBarItem42,
-            this.navBarItem43,
-            this.navBarItem44,
-            this.navBarItem45,
-            this.navBarItem46,
-            this.navBarItem1,
-            this.navBarItem2,
-            this.navBarItem3,
-            this.btnStokHareketi,
-            this.btnCariHesapEkstre,
-            this.navBarItem25,
-            this.navBarItem26,
-            this.navDepoTransfer,
-            this.btnIadeListeleri,
-            this.btnOdemeler,
-            this.btnTahsilatlar,
-            this.navBarSeparatorItem6,
-            this.btnDetay,
-            this.btnHareketTipi,
-            this.navBarItem27,
-            this.navBarItem30});
-            this.navBarControl1.Location = new System.Drawing.Point(517, 156);
-            this.navBarControl1.LookAndFeel.SkinMaskColor = System.Drawing.Color.White;
-            this.navBarControl1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Style3D;
-            this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 290;
-            this.navBarControl1.ScaleImages = DevExpress.Utils.DefaultBoolean.True;
-            this.navBarControl1.Size = new System.Drawing.Size(290, 13);
-            this.navBarControl1.TabIndex = 18;
-            this.navBarControl1.Text = "navBarControl1";
-            this.navBarControl1.View = new DevExpress.XtraNavBar.ViewInfo.XPExplorerBarViewInfoRegistrator();
-            this.navBarControl1.Visible = false;
-            // 
-            // navBarGroup1
-            // 
-            this.navBarGroup1.AppearancePressed.Options.UseImage = true;
-            this.navBarGroup1.Caption = "Stok İşlemleri";
-            this.navBarGroup1.Expanded = true;
-            this.navBarGroup1.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsList;
-            this.navBarGroup1.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup1.ImageOptions.SmallImage")));
-            this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnStokListesi),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnStokTanitim),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnStokHareketleri),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navDepoTransfer)});
-            this.navBarGroup1.Name = "navBarGroup1";
-            // 
-            // btnStokListesi
-            // 
-            this.btnStokListesi.Caption = "Stok Listesi";
-            this.btnStokListesi.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnStokListesi.ImageOptions.SmallImage")));
-            this.btnStokListesi.Name = "btnStokListesi";
-            // 
-            // btnStokTanitim
-            // 
-            this.btnStokTanitim.Caption = "Stok Tanıtım Kartı";
-            this.btnStokTanitim.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnStokTanitim.ImageOptions.SmallImage")));
-            this.btnStokTanitim.Name = "btnStokTanitim";
-            // 
-            // btnStokHareketleri
-            // 
-            this.btnStokHareketleri.Caption = "Toplu Stok Hareketleri";
-            this.btnStokHareketleri.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnStokHareketleri.ImageOptions.SmallImage")));
-            this.btnStokHareketleri.Name = "btnStokHareketleri";
-            // 
-            // navBarItem1
-            // 
-            this.navBarItem1.Caption = "Sayım Eksiği Fişi";
-            this.navBarItem1.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem1.ImageOptions.SmallImage")));
-            this.navBarItem1.Name = "navBarItem1";
-            // 
-            // navBarItem2
-            // 
-            this.navBarItem2.Caption = "Sayım Fazlası Fişi";
-            this.navBarItem2.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem2.ImageOptions.SmallImage")));
-            this.navBarItem2.Name = "navBarItem2";
-            // 
-            // navBarItem3
-            // 
-            this.navBarItem3.Caption = "Stok Devir Fişi";
-            this.navBarItem3.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem3.ImageOptions.SmallImage")));
-            this.navBarItem3.Name = "navBarItem3";
-            // 
-            // navDepoTransfer
-            // 
-            this.navDepoTransfer.Caption = "Stok Transfer";
-            this.navDepoTransfer.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navDepoTransfer.ImageOptions.SmallImage")));
-            this.navDepoTransfer.Name = "navDepoTransfer";
-            // 
-            // navBarGroup2
-            // 
-            this.navBarGroup2.Appearance.BackColor = System.Drawing.Color.White;
-            this.navBarGroup2.Appearance.BackColor2 = System.Drawing.Color.White;
-            this.navBarGroup2.Appearance.BorderColor = System.Drawing.Color.White;
-            this.navBarGroup2.Appearance.ForeColor = System.Drawing.Color.White;
-            this.navBarGroup2.Appearance.Options.UseBackColor = true;
-            this.navBarGroup2.Appearance.Options.UseBorderColor = true;
-            this.navBarGroup2.Appearance.Options.UseForeColor = true;
-            this.navBarGroup2.Caption = "Cari İşlemleri";
-            this.navBarGroup2.Expanded = true;
-            this.navBarGroup2.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
-            this.navBarGroup2.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup2.ImageOptions.SmallImage")));
-            this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnCariListesi),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnCariTanitimKArti),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnCariHesapEkstre)});
-            this.navBarGroup2.Name = "navBarGroup2";
-            // 
-            // btnCariListesi
-            // 
-            this.btnCariListesi.Appearance.BackColor = System.Drawing.Color.DarkRed;
-            this.btnCariListesi.Appearance.BackColor2 = System.Drawing.Color.DarkRed;
-            this.btnCariListesi.Appearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnCariListesi.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnCariListesi.Appearance.Options.UseBackColor = true;
-            this.btnCariListesi.Appearance.Options.UseBorderColor = true;
-            this.btnCariListesi.Appearance.Options.UseFont = true;
-            this.btnCariListesi.Caption = "Cari Listesi";
-            this.btnCariListesi.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnCariListesi.ImageOptions.SmallImage")));
-            this.btnCariListesi.Name = "btnCariListesi";
-            // 
-            // btnCariTanitimKArti
-            // 
-            this.btnCariTanitimKArti.Caption = "Cari Tanıtım Kartı";
-            this.btnCariTanitimKArti.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnCariTanitimKArti.ImageOptions.SmallImage")));
-            this.btnCariTanitimKArti.Name = "btnCariTanitimKArti";
-            // 
-            // btnCariHesapEkstre
-            // 
-            this.btnCariHesapEkstre.Caption = "Cari Hesap Ekstresi";
-            this.btnCariHesapEkstre.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnCariHesapEkstre.ImageOptions.SmallImage")));
-            this.btnCariHesapEkstre.Name = "btnCariHesapEkstre";
-            // 
-            // navBarGroup3
-            // 
-            this.navBarGroup3.Caption = "Fatura İşlemleri";
-            this.navBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsList;
-            this.navBarGroup3.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup3.ImageOptions.SmallImage")));
-            this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnAlisFatura),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem6),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem1),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem7),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem8),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem2),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem9),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem10),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem11),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem12),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem6)});
-            this.navBarGroup3.Name = "navBarGroup3";
-            // 
-            // btnAlisFatura
-            // 
-            this.btnAlisFatura.Caption = "Alış Faturası";
-            this.btnAlisFatura.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnAlisFatura.ImageOptions.SmallImage")));
-            this.btnAlisFatura.Name = "btnAlisFatura";
-            // 
-            // navBarItem6
-            // 
-            this.navBarItem6.Caption = "Toptan Satış Faturası";
-            this.navBarItem6.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem6.ImageOptions.SmallImage")));
-            this.navBarItem6.Name = "navBarItem6";
-            // 
-            // navBarSeparatorItem1
-            // 
-            this.navBarSeparatorItem1.CanDrag = false;
-            this.navBarSeparatorItem1.Enabled = false;
-            this.navBarSeparatorItem1.Hint = null;
-            this.navBarSeparatorItem1.Name = "navBarSeparatorItem1";
-            // 
-            // navBarItem7
-            // 
-            this.navBarItem7.Caption = "Alış İade Faturası";
-            this.navBarItem7.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem7.ImageOptions.SmallImage")));
-            this.navBarItem7.Name = "navBarItem7";
-            // 
-            // navBarItem8
-            // 
-            this.navBarItem8.Caption = "Satış İade Faturası";
-            this.navBarItem8.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem8.ImageOptions.SmallImage")));
-            this.navBarItem8.Name = "navBarItem8";
-            // 
-            // navBarSeparatorItem2
-            // 
-            this.navBarSeparatorItem2.CanDrag = false;
-            this.navBarSeparatorItem2.Enabled = false;
-            this.navBarSeparatorItem2.Hint = null;
-            this.navBarSeparatorItem2.Name = "navBarSeparatorItem2";
-            // 
-            // navBarItem9
-            // 
-            this.navBarItem9.Caption = "Alış Faturası Listesi";
-            this.navBarItem9.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem9.ImageOptions.SmallImage")));
-            this.navBarItem9.Name = "navBarItem9";
-            // 
-            // navBarItem10
-            // 
-            this.navBarItem10.Caption = "Satış Faturası Listesi";
-            this.navBarItem10.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem10.ImageOptions.SmallImage")));
-            this.navBarItem10.Name = "navBarItem10";
-            // 
-            // navBarItem11
-            // 
-            this.navBarItem11.Caption = "Alış İade Faturası Listesi";
-            this.navBarItem11.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem11.ImageOptions.SmallImage")));
-            this.navBarItem11.Name = "navBarItem11";
-            // 
-            // navBarItem12
-            // 
-            this.navBarItem12.Caption = "Satış İade Faturası Listesi";
-            this.navBarItem12.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem12.ImageOptions.SmallImage")));
-            this.navBarItem12.Name = "navBarItem12";
-            // 
-            // navBarSeparatorItem6
-            // 
-            this.navBarSeparatorItem6.CanDrag = false;
-            this.navBarSeparatorItem6.Enabled = false;
-            this.navBarSeparatorItem6.Hint = null;
-            this.navBarSeparatorItem6.Name = "navBarSeparatorItem6";
-            // 
-            // navBarGroup9
-            // 
-            this.navBarGroup9.Caption = "Finans İşlemleri";
-            this.navBarGroup9.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsList;
-            this.navBarGroup9.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup9.ImageOptions.SmallImage")));
-            this.navBarGroup9.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem43),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem44),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem45),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem46)});
-            this.navBarGroup9.Name = "navBarGroup9";
-            // 
-            // navBarItem43
-            // 
-            this.navBarItem43.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.navBarItem43.Appearance.Options.UseForeColor = true;
-            this.navBarItem43.Caption = "Tahsilat Fişi";
-            this.navBarItem43.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem43.ImageOptions.SmallImage")));
-            this.navBarItem43.Name = "navBarItem43";
-            // 
-            // navBarItem44
-            // 
-            this.navBarItem44.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.navBarItem44.Appearance.Options.UseForeColor = true;
-            this.navBarItem44.Caption = "Ödeme Fişi";
-            this.navBarItem44.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem44.ImageOptions.SmallImage")));
-            this.navBarItem44.Name = "navBarItem44";
-            // 
-            // navBarItem45
-            // 
-            this.navBarItem45.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.navBarItem45.Appearance.Options.UseForeColor = true;
-            this.navBarItem45.Caption = "Cari Devir Fişi";
-            this.navBarItem45.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem45.ImageOptions.SmallImage")));
-            this.navBarItem45.Name = "navBarItem45";
-            // 
-            // navBarItem46
-            // 
-            this.navBarItem46.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.navBarItem46.Appearance.Options.UseForeColor = true;
-            this.navBarItem46.Caption = "Masraf Fişi";
-            this.navBarItem46.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem46.ImageOptions.SmallImage")));
-            this.navBarItem46.Name = "navBarItem46";
-            // 
-            // navBarGroup6
-            // 
-            this.navBarGroup6.Caption = "İrsaliye İşlemleri";
-            this.navBarGroup6.Expanded = true;
-            this.navBarGroup6.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsList;
-            this.navBarGroup6.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup6.ImageOptions.SmallImage")));
-            this.navBarGroup6.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem21),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem22),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem5),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem23),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem24)});
-            this.navBarGroup6.Name = "navBarGroup6";
-            // 
-            // navBarItem21
-            // 
-            this.navBarItem21.Caption = "Alış İrsaliyesi";
-            this.navBarItem21.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem21.ImageOptions.SmallImage")));
-            this.navBarItem21.Name = "navBarItem21";
-            // 
-            // navBarItem22
-            // 
-            this.navBarItem22.Caption = "Satış İrsaliyesi";
-            this.navBarItem22.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem22.ImageOptions.SmallImage")));
-            this.navBarItem22.Name = "navBarItem22";
-            // 
-            // navBarSeparatorItem5
-            // 
-            this.navBarSeparatorItem5.CanDrag = false;
-            this.navBarSeparatorItem5.Enabled = false;
-            this.navBarSeparatorItem5.Hint = null;
-            this.navBarSeparatorItem5.Name = "navBarSeparatorItem5";
-            // 
-            // navBarItem23
-            // 
-            this.navBarItem23.Caption = "Alış İrsaliye Listeleri";
-            this.navBarItem23.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem23.ImageOptions.SmallImage")));
-            this.navBarItem23.Name = "navBarItem23";
-            // 
-            // navBarItem24
-            // 
-            this.navBarItem24.Caption = "Satış İrsaliye Listeleri";
-            this.navBarItem24.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem24.ImageOptions.SmallImage")));
-            this.navBarItem24.Name = "navBarItem24";
-            // 
-            // navBarGroup4
-            // 
-            this.navBarGroup4.Caption = "Siparişler";
-            this.navBarGroup4.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsList;
-            this.navBarGroup4.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup4.ImageOptions.SmallImage")));
-            this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem13),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem14),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem3),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem15),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem16)});
-            this.navBarGroup4.Name = "navBarGroup4";
-            // 
-            // navBarItem13
-            // 
-            this.navBarItem13.Caption = "Alınan Sipariş Fişi";
-            this.navBarItem13.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem13.ImageOptions.SmallImage")));
-            this.navBarItem13.Name = "navBarItem13";
-            // 
-            // navBarItem14
-            // 
-            this.navBarItem14.Caption = "Verilen Sipariş Fişi";
-            this.navBarItem14.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem14.ImageOptions.SmallImage")));
-            this.navBarItem14.Name = "navBarItem14";
-            // 
-            // navBarSeparatorItem3
-            // 
-            this.navBarSeparatorItem3.CanDrag = false;
-            this.navBarSeparatorItem3.Enabled = false;
-            this.navBarSeparatorItem3.Hint = null;
-            this.navBarSeparatorItem3.Name = "navBarSeparatorItem3";
-            // 
-            // navBarItem15
-            // 
-            this.navBarItem15.Caption = "Alınan Sipariş Fiş Listesi";
-            this.navBarItem15.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem15.ImageOptions.SmallImage")));
-            this.navBarItem15.Name = "navBarItem15";
-            // 
-            // navBarItem16
-            // 
-            this.navBarItem16.Caption = "Verilen Sipariş Fiş Listesi";
-            this.navBarItem16.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem16.ImageOptions.SmallImage")));
-            this.navBarItem16.Name = "navBarItem16";
-            // 
-            // navBarGroup5
-            // 
-            this.navBarGroup5.Caption = "Teklifler";
-            this.navBarGroup5.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsList;
-            this.navBarGroup5.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup5.ImageOptions.SmallImage")));
-            this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem17),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem18),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem4),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem19),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem20)});
-            this.navBarGroup5.Name = "navBarGroup5";
-            // 
-            // navBarItem17
-            // 
-            this.navBarItem17.Caption = "Alınan Teklif Fişi";
-            this.navBarItem17.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem17.ImageOptions.SmallImage")));
-            this.navBarItem17.Name = "navBarItem17";
-            // 
-            // navBarItem18
-            // 
-            this.navBarItem18.Caption = "Verilen Teklif Fişi";
-            this.navBarItem18.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem18.ImageOptions.SmallImage")));
-            this.navBarItem18.Name = "navBarItem18";
-            // 
-            // navBarSeparatorItem4
-            // 
-            this.navBarSeparatorItem4.CanDrag = false;
-            this.navBarSeparatorItem4.Enabled = false;
-            this.navBarSeparatorItem4.Hint = null;
-            this.navBarSeparatorItem4.Name = "navBarSeparatorItem4";
-            // 
-            // navBarItem19
-            // 
-            this.navBarItem19.Caption = "Alınan Teklif Fiş Listeleri";
-            this.navBarItem19.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem19.ImageOptions.SmallImage")));
-            this.navBarItem19.Name = "navBarItem19";
-            // 
-            // navBarItem20
-            // 
-            this.navBarItem20.Caption = "Verilen Teklif Fiş Listeleri";
-            this.navBarItem20.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem20.ImageOptions.SmallImage")));
-            this.navBarItem20.Name = "navBarItem20";
-            // 
-            // navBarGroup7
-            // 
-            this.navBarGroup7.Caption = "Tanımlar";
-            this.navBarGroup7.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsList;
-            this.navBarGroup7.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup7.ImageOptions.SmallImage")));
-            this.navBarGroup7.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnPersonelTanitim),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnDepoTanitim),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnOdemeTanitim),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnKasaTanitim),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnMasrafTanitim),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnHareketTipi)});
-            this.navBarGroup7.Name = "navBarGroup7";
-            // 
-            // btnPersonelTanitim
-            // 
-            this.btnPersonelTanitim.Caption = "Personel Tanıtım Kartı";
-            this.btnPersonelTanitim.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnPersonelTanitim.ImageOptions.SmallImage")));
-            this.btnPersonelTanitim.Name = "btnPersonelTanitim";
-            // 
-            // btnDepoTanitim
-            // 
-            this.btnDepoTanitim.Caption = "Depo Tanıtım Kartı";
-            this.btnDepoTanitim.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnDepoTanitim.ImageOptions.SmallImage")));
-            this.btnDepoTanitim.Name = "btnDepoTanitim";
-            // 
-            // btnOdemeTanitim
-            // 
-            this.btnOdemeTanitim.Caption = "Ödeme Türü Tanıtım Kartı";
-            this.btnOdemeTanitim.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnOdemeTanitim.ImageOptions.SmallImage")));
-            this.btnOdemeTanitim.Name = "btnOdemeTanitim";
-            // 
-            // btnKasaTanitim
-            // 
-            this.btnKasaTanitim.Caption = "Kasa Tanıtım Kartı";
-            this.btnKasaTanitim.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnKasaTanitim.ImageOptions.SmallImage")));
-            this.btnKasaTanitim.Name = "btnKasaTanitim";
-            // 
-            // btnMasrafTanitim
-            // 
-            this.btnMasrafTanitim.Caption = "Masraf Tanıtım Kartı";
-            this.btnMasrafTanitim.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnMasrafTanitim.ImageOptions.SmallImage")));
-            this.btnMasrafTanitim.Name = "btnMasrafTanitim";
-            // 
-            // btnHareketTipi
-            // 
-            this.btnHareketTipi.Caption = "Hareket Tipi";
-            this.btnHareketTipi.ImageOptions.LargeImage = global::NetSatis.BackOffice.Properties.Resources.edit_32x32;
-            this.btnHareketTipi.ImageOptions.SmallImage = global::NetSatis.BackOffice.Properties.Resources.edit_16x16;
-            this.btnHareketTipi.Name = "btnHareketTipi";
-            // 
-            // navBarGroup8
-            // 
-            this.navBarGroup8.Caption = "Raporlar";
-            this.navBarGroup8.Expanded = true;
-            this.navBarGroup8.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsList;
-            this.navBarGroup8.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup8.ImageOptions.SmallImage")));
-            this.navBarGroup8.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem33),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem34),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem35),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem36),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem37),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem38),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem41),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem42),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnStokHareketi),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem25),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem26),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnIadeListeleri),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnOdemeler),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnTahsilatlar),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.btnDetay),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem27),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem30)});
-            this.navBarGroup8.Name = "navBarGroup8";
-            this.navBarGroup8.TopVisibleLinkIndex = 1;
-            // 
-            // navBarItem33
-            // 
-            this.navBarItem33.Caption = "Satış Raporu";
-            this.navBarItem33.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem33.ImageOptions.SmallImage")));
-            this.navBarItem33.Name = "navBarItem33";
-            // 
-            // navBarItem34
-            // 
-            this.navBarItem34.Caption = "Tarih Aralık Satış Raporu";
-            this.navBarItem34.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem34.ImageOptions.SmallImage")));
-            this.navBarItem34.Name = "navBarItem34";
-            // 
-            // navBarItem35
-            // 
-            this.navBarItem35.Caption = "Alış Raporu";
-            this.navBarItem35.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem35.ImageOptions.SmallImage")));
-            this.navBarItem35.Name = "navBarItem35";
-            this.navBarItem35.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem35_LinkClicked);
-            // 
-            // navBarItem36
-            // 
-            this.navBarItem36.Caption = "Tarih Aralıklı Alış Raporu";
-            this.navBarItem36.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem36.ImageOptions.SmallImage")));
-            this.navBarItem36.Name = "navBarItem36";
-            this.navBarItem36.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem36_LinkClicked);
-            // 
-            // navBarItem37
-            // 
-            this.navBarItem37.Caption = "Kâr Zarar Analizi";
-            this.navBarItem37.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem37.ImageOptions.SmallImage")));
-            this.navBarItem37.Name = "navBarItem37";
-            // 
-            // navBarItem38
-            // 
-            this.navBarItem38.Caption = "Tarih Aralıklı Kâr Zarar Analizi";
-            this.navBarItem38.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem38.ImageOptions.SmallImage")));
-            this.navBarItem38.Name = "navBarItem38";
-            // 
-            // navBarItem41
-            // 
-            this.navBarItem41.Caption = "Günlük Kasa Rapor";
-            this.navBarItem41.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem41.ImageOptions.SmallImage")));
-            this.navBarItem41.Name = "navBarItem41";
-            // 
-            // navBarItem42
-            // 
-            this.navBarItem42.Caption = "Cari Bakiye Raporu";
-            this.navBarItem42.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem42.ImageOptions.SmallImage")));
-            this.navBarItem42.Name = "navBarItem42";
-            this.navBarItem42.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem42_LinkClicked);
-            // 
-            // btnStokHareketi
-            // 
-            this.btnStokHareketi.Caption = "Stok Hareketi";
-            this.btnStokHareketi.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnStokHareketi.ImageOptions.SmallImage")));
-            this.btnStokHareketi.Name = "btnStokHareketi";
-            // 
-            // navBarItem25
-            // 
-            this.navBarItem25.Caption = "Masraflar";
-            this.navBarItem25.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navBarItem25.ImageOptions.LargeImage")));
-            this.navBarItem25.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem25.ImageOptions.SmallImage")));
-            this.navBarItem25.Name = "navBarItem25";
-            // 
-            // navBarItem26
-            // 
-            this.navBarItem26.Caption = "Kâr Zarar Raporu  (Alış)";
-            this.navBarItem26.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem26.ImageOptions.SmallImage")));
-            this.navBarItem26.Name = "navBarItem26";
-            // 
-            // btnIadeListeleri
-            // 
-            this.btnIadeListeleri.Caption = "İade Listeleri";
-            this.btnIadeListeleri.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnIadeListeleri.ImageOptions.SmallImage")));
-            this.btnIadeListeleri.Name = "btnIadeListeleri";
-            // 
-            // btnOdemeler
-            // 
-            this.btnOdemeler.Caption = "Ödeme Listesi";
-            this.btnOdemeler.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnOdemeler.ImageOptions.SmallImage")));
-            this.btnOdemeler.Name = "btnOdemeler";
-            // 
-            // btnTahsilatlar
-            // 
-            this.btnTahsilatlar.Caption = "Tahsilat Listesi";
-            this.btnTahsilatlar.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnTahsilatlar.ImageOptions.SmallImage")));
-            this.btnTahsilatlar.Name = "btnTahsilatlar";
-            // 
-            // btnDetay
-            // 
-            this.btnDetay.Caption = "Günlük Detay Rapor";
-            this.btnDetay.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
-            this.btnDetay.ImageOptions.LargeImageSize = new System.Drawing.Size(16, 16);
-            this.btnDetay.Name = "btnDetay";
-            // 
-            // navBarItem27
-            // 
-            this.navBarItem27.Caption = "navBarItem27";
-            this.navBarItem27.Name = "navBarItem27";
-            this.navBarItem27.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem27_LinkClicked);
-            // 
-            // navBarItem30
-            // 
-            this.navBarItem30.Caption = "navBarItem30";
-            this.navBarItem30.Name = "navBarItem30";
-            this.navBarItem30.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem30_LinkClicked);
-            // 
             // barButtonItem35
             // 
             this.barButtonItem35.Caption = "Firma Bilgileri";
@@ -2697,7 +1943,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 772);
-            this.Controls.Add(this.navBarControl1);
             this.Controls.Add(this.treeList1);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
@@ -2715,7 +1960,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2866,79 +2110,6 @@
         private DevExpress.XtraTreeList.TreeList treeList1;
         private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn1;
         private System.Windows.Forms.ImageList ımageList2;
-        private DevExpress.XtraNavBar.NavBarControl navBarControl1;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
-        private DevExpress.XtraNavBar.NavBarItem btnStokListesi;
-        private DevExpress.XtraNavBar.NavBarItem btnStokTanitim;
-        private DevExpress.XtraNavBar.NavBarItem btnStokHareketleri;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem1;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem2;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem3;
-        private DevExpress.XtraNavBar.NavBarItem navDepoTransfer;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
-        private DevExpress.XtraNavBar.NavBarItem btnCariListesi;
-        private DevExpress.XtraNavBar.NavBarItem btnCariTanitimKArti;
-        private DevExpress.XtraNavBar.NavBarItem btnCariHesapEkstre;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup3;
-        private DevExpress.XtraNavBar.NavBarItem btnAlisFatura;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem6;
-        private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem1;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem7;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem8;
-        private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem2;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem9;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem10;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem11;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem12;
-        private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem6;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup9;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem43;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem44;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem45;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem46;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup6;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem21;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem22;
-        private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem5;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem23;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem24;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup4;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem13;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem14;
-        private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem3;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem15;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem16;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup5;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem17;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem18;
-        private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem4;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem19;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem20;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup7;
-        private DevExpress.XtraNavBar.NavBarItem btnPersonelTanitim;
-        private DevExpress.XtraNavBar.NavBarItem btnDepoTanitim;
-        private DevExpress.XtraNavBar.NavBarItem btnOdemeTanitim;
-        private DevExpress.XtraNavBar.NavBarItem btnKasaTanitim;
-        private DevExpress.XtraNavBar.NavBarItem btnMasrafTanitim;
-        private DevExpress.XtraNavBar.NavBarItem btnHareketTipi;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup8;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem33;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem34;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem35;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem36;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem37;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem38;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem41;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem42;
-        private DevExpress.XtraNavBar.NavBarItem btnStokHareketi;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem25;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem26;
-        private DevExpress.XtraNavBar.NavBarItem btnIadeListeleri;
-        private DevExpress.XtraNavBar.NavBarItem btnOdemeler;
-        private DevExpress.XtraNavBar.NavBarItem btnTahsilatlar;
-        private DevExpress.XtraNavBar.NavBarItem btnDetay;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem27;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem30;
         private DevExpress.XtraBars.BarButtonItem barButtonItem56;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;

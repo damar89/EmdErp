@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Windows.Forms;
+using NetSatis.Entities.Context;
+using NetSatis.Entities.Data_Access;
+using DevExpress.XtraPrinting;
 using System.Linq;
 using DevExpress.XtraEditors.Mask;
 using NetSatis.Entities;
-using NetSatis.Entities.Context;
-using NetSatis.Entities.Data_Access;
+using System.IO;
 
 namespace NetSatis.BackOffice.Cari
 {
@@ -12,9 +15,12 @@ namespace NetSatis.BackOffice.Cari
         NetSatisContext context = new NetSatisContext();
         StokHareketDAL stokHareketDal = new StokHareketDAL();
         Entities.Tables.Cari seciliCari;
+        string DosyaYolu = $@"{Application.StartupPath}\Gorunum\StokCariHareket_SavedLayout.xml";
         public frmCariStokHareket()
         {
             InitializeComponent();
+            gridContStokHareket.ForceInitialize();
+            if (File.Exists(DosyaYolu)) gridContStokHareket.MainView.RestoreLayoutFromXml(DosyaYolu);
 
             dtpBaslangic.DateTime = new DateTime(DateTime.Now.Year, 1, 1, 00, 00, 00);
             dtpBitis.DateTime = new DateTime(DateTime.Now.Year, 12, 31, 23, 59, 59);
@@ -141,6 +147,22 @@ namespace NetSatis.BackOffice.Cari
             {
                 btnGoster.PerformClick();
             }
+        }
+
+        private void yazdırToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintableComponentLink link = new PrintableComponentLink(new PrintingSystem());
+
+            link.Component = gridContStokHareket;
+
+           
+            link.ShowPreview();
+        }
+
+        private void görünümüKaydetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            gridStokHareket.ClearColumnsFilter();
+            gridContStokHareket.MainView.SaveLayoutToXml(DosyaYolu);
         }
     }
 }
