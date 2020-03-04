@@ -84,7 +84,7 @@ namespace NetSatis.BackOffice.Raporlar
 
 
             var odemeTuru = new List<ornek>();
-            var resAcikHesap = (from f in context.Fisler
+            var resAcikHesap = (from f in context.Fisler.Where(s => s.Tarih >= baslangic && s.Tarih <= bitis)
                                 from k in context.KasaHareketleri.GroupBy(x => x.OdemeTuru)
                                 select new
                                 {

@@ -14,11 +14,11 @@ namespace EmdSoft.Lisans.Controllers
         public bool LisansGenerator(string Key)
         {
             //FirmaOlustur();
-            Guid lickey=new Guid(Key);
-            using (VTContext db=new VTContext())
+            Guid lickey = new Guid(Key);
+            using (VTContext db = new VTContext())
             {
-                var list=db.LicKeyGenerators.Where(x=>x.LicKey==lickey).Where(x=>x.IsActive==true).FirstOrDefault();
-                if(list!=null)
+                var list = db.LicKeyGenerators.Where(x => x.LicKey == lickey).Where(x => x.IsActive == true).FirstOrDefault();
+                if (list != null)
                 {
                     return list.IsActive;
                 }
@@ -35,20 +35,20 @@ namespace EmdSoft.Lisans.Controllers
             //var request = (HttpWebRequest)WebRequest.Create(url);
             //var response = (HttpWebResponse)request.GetResponse();
             //var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
-            List<Models.LicKeyGenerator> g=new List<Models.LicKeyGenerator>();
-            Models.LicKeyGenerator l=new Models.LicKeyGenerator
+            List<Models.LicKeyGenerator> g = new List<Models.LicKeyGenerator>();
+            Models.LicKeyGenerator l = new Models.LicKeyGenerator
             {
-                IsActive=lisans.IsActive,
-                FirmaAdi=lisans.FirmaAdi,
-                Email=lisans.Email,
-                Id=Guid.NewGuid(),
-                LicKey=Guid.NewGuid(),
-                Telefon=lisans.Telefon,
-                VDNo=lisans.VDNo,
-                VergiDairesi=lisans.VergiDairesi
+                IsActive = lisans.IsActive,
+                FirmaAdi = lisans.FirmaAdi,
+                Email = lisans.Email,
+                Id = Guid.NewGuid(),
+                LicKey = Guid.NewGuid(),
+                Telefon = lisans.Telefon,
+                VDNo = lisans.VDNo,
+                VergiDairesi = lisans.VergiDairesi
             };
             g.Add(l);
-            using (VTContext db=new VTContext())
+            using (VTContext db = new VTContext())
             {
                 db.LicKeyGenerators.Add(l);
                 db.SaveChanges();
@@ -59,9 +59,9 @@ namespace EmdSoft.Lisans.Controllers
         [HttpGet]
         public List<Models.LicKeyGenerator> MusteriListesi()
         {
-            using (VTContext db=new VTContext())
+            using (VTContext db = new VTContext())
             {
-                var list=db.LicKeyGenerators.ToList();
+                var list = db.LicKeyGenerators.ToList();
                 return list;
             }
         }
@@ -69,10 +69,10 @@ namespace EmdSoft.Lisans.Controllers
         [HttpPost]
         public void LisansDevreDisi(string VdNo)
         {
-            using (VTContext db=new VTContext())
+            using (VTContext db = new VTContext())
             {
-                var list=db.LicKeyGenerators.Where(x=>x.FirmaAdi==VdNo).FirstOrDefault();
-                list.IsActive=false;
+                var list = db.LicKeyGenerators.Where(x => x.FirmaAdi == VdNo).FirstOrDefault();
+                list.IsActive = false;
                 db.SaveChanges();
             }
         }
@@ -80,10 +80,10 @@ namespace EmdSoft.Lisans.Controllers
         [HttpPost]
         public void LisansDevreActive(string VdNo)
         {
-            using (VTContext db=new VTContext())
+            using (VTContext db = new VTContext())
             {
-                var list=db.LicKeyGenerators.Where(x=>x.FirmaAdi==VdNo).FirstOrDefault();
-                list.IsActive=true;
+                var list = db.LicKeyGenerators.Where(x => x.FirmaAdi == VdNo).FirstOrDefault();
+                list.IsActive = true;
                 db.SaveChanges();
             }
         }
