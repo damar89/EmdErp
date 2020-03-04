@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace NetSatis.Update
 {
@@ -18,6 +12,9 @@ namespace NetSatis.Update
     public partial class frmGuncelleme : DevExpress.XtraEditors.XtraForm
     {
         WebClient indir = new WebClient();
+        string startupPath;
+        string tempPath;
+        string updateFile;
         public static bool IsRunning(string ProgramAdi)
         {
             return Process.GetProcessesByName(ProgramAdi).Length > 0;
@@ -25,13 +22,22 @@ namespace NetSatis.Update
         }
         public frmGuncelleme()
         {
-            
+
             InitializeComponent();
+
+            startupPath = Application.StartupPath;
+            tempPath = Path.Combine(startupPath, "temp");
+            updateFile = tempPath + "\\Update.zip";
+
+            if (!Directory.Exists(tempPath))
+                Directory.CreateDirectory(tempPath);
+
+
 
             if (IsRunning("NetSatis.BackOffice"))
             {
-                if(MessageBox.Show("Güncelleme işleminden önce açık olan uygulamanızın kapatılması gerekiyor. Onaylıyor musunuz ?","Uyarı",MessageBoxButtons.YesNo)==DialogResult.Yes)
-               {
+                if (MessageBox.Show("Güncelleme işleminden önce açık olan uygulamanızın kapatılması gerekiyor. Onaylıyor musunuz ?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
                     foreach (var process in Process.GetProcessesByName("NetSatis.BackOffice"))
                     {
                         process.CloseMainWindow();
@@ -41,7 +47,7 @@ namespace NetSatis.Update
             }
             if (IsRunning("NetSatis.FrontOffice"))
             {
-                if(MessageBox.Show("Güncelleme işleminden önce açık olan uygulamanızın kapatılması gerekiyor. Onaylıyor musunuz ?","Uyarı",MessageBoxButtons.YesNo)==DialogResult.Yes)
+                if (MessageBox.Show("Güncelleme işleminden önce açık olan uygulamanızın kapatılması gerekiyor. Onaylıyor musunuz ?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     foreach (var process in Process.GetProcessesByName("NetSatis.FrontOffice"))
                     {
@@ -52,50 +58,53 @@ namespace NetSatis.Update
             }
         }
 
-        private void frmGuncelleme_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnGuncellemeyiIndir_Click(object sender, EventArgs e)
         {
             indir.DownloadProgressChanged += (DownloadProgressChangedEventHandler)IndirmeDurumu;
             indir.DownloadFileCompleted += (AsyncCompletedEventHandler)IndirmeBitti;
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            indir.DownloadFileAsync(new Uri("https://emdyazilim.com/downloads/Update.zip"), Application.StartupPath + "\\temp\\Update.zip");
-            IndirmeBitti(null,null); 
+            indir.DownloadFileAsync(new Uri("https://emdyazilim.com/downloads/Update.zip"), updateFile);
         }
 
         private void IndirmeBitti(object sender, AsyncCompletedEventArgs e)
         {
-            
-            if (!Directory.Exists(Application.StartupPath + "\\temp"))
+            try
             {
-                Directory.CreateDirectory(Application.StartupPath + "\\temp");
-            }
-            ZipFile.ExtractToDirectory(Application.StartupPath + "\\temp\\Update.zip", Application.StartupPath + "\\temp");
-            //XElement Dosyalar = XElement.Load(Application.StartupPath + "\\temp\\Liste.xml");
 
-            DirectoryInfo d = new DirectoryInfo(Application.StartupPath +"\\temp\\");
-            FileInfo[] Files = d.GetFiles(); 
 
-            foreach (var veriler in Files)
-            {
-                if (veriler.Name == "Update.zip")
+                if (!Directory.Exists(tempPath))
+                    Directory.CreateDirectory(tempPath);
+
+                if (!File.Exists(updateFile))
                 {
-                    continue;
+                    MessageBox.Show("Güncelleme dosyası bulunamadı", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
 
-                if (File.Exists(Application.StartupPath+"\\"+veriler.Name))
+                ZipFile.ExtractToDirectory(updateFile, tempPath);
+
+                var d = new DirectoryInfo(tempPath);
+                var Files = d.GetFiles();
+
+                foreach (var veriler in Files)
                 {
-                File.Delete(Application.StartupPath + "\\" + veriler.Name);    
+                    if (veriler.Name == "Update.zip")
+                        continue;
+                    string startupFileName = startupPath + "\\" + veriler.Name;
+                    if (File.Exists(startupFileName))
+                        File.Delete(startupFileName);
+
+                    File.Copy(tempPath + "\\" + veriler.Name, startupFileName);
+
                 }
-                File.Copy(Application.StartupPath + "\\temp\\"+veriler.Name ,Application.StartupPath + "\\" + veriler.Name);
-               
+                Directory.Delete(tempPath, true);
+                MessageBox.Show("Güncelleme Tamamlandı.");
             }
-            Directory.Delete(Application.StartupPath + "\\temp",true);
-            MessageBox.Show("Güncelleme Tamamlandı.");
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata oluştu: " + ex.Message);
+            }
         }
 
 

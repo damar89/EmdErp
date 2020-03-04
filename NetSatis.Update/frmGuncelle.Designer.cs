@@ -74,8 +74,7 @@
             this.Name = "frmGuncelleme";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Güncelleme";
-            this.Load += new System.EventHandler(this.frmGuncelleme_Load);
+            this.Text = "Güncelleme"; 
             ((System.ComponentModel.ISupportInitialize)(this.progressFile.Properties)).EndInit();
             this.ResumeLayout(false);
 
