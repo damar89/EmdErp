@@ -85,6 +85,16 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject42 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject43 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject44 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions12 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject45 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject46 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject47 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject48 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions13 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject49 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject50 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject51 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject52 = new DevExpress.Utils.SerializableAppearanceObject();
             this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
             this.lblBaslik = new DevExpress.XtraEditors.LabelControl();
             this.ımageList3 = new System.Windows.Forms.ImageList(this.components);
@@ -210,14 +220,9 @@
             this.gridStokHareket = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStokKodu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemButtonEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.repobtnBarkod = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colStokAdi = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repoGridStoklar = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
-            this.repoGvStoklar = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repobtnStokSec = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colBirimi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMiktar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repoMiktar = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
@@ -411,9 +416,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridContStokHareket)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridStokHareket)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repoGridStoklar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repoGvStoklar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repobtnBarkod)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repobtnStokSec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoMiktar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoKdv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoFiyat)).BeginInit();
@@ -1949,17 +1953,16 @@
             this.repositoryMustahsil,
             this.repoMiktar,
             this.repoIskonto,
-            this.repositoryItemButtonEdit5,
+            this.repobtnBarkod,
             this.repositoryItemButtonEdit6,
             this.repoKdv,
             this.kdvDegisim,
-            this.repoGridStoklar});
+            this.repobtnStokSec});
             this.gridContStokHareket.Size = new System.Drawing.Size(1134, 236);
             this.gridContStokHareket.TabIndex = 2;
             this.gridContStokHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridStokHareket});
             this.gridContStokHareket.ProcessGridKey += new System.Windows.Forms.KeyEventHandler(this.gridContStokHareket_ProcessGridKey);
-            this.gridContStokHareket.Click += new System.EventHandler(this.gridContStokHareket_Click);
             // 
             // contextMenuStrip1
             // 
@@ -2133,10 +2136,8 @@
             this.gridStokHareket.OptionsView.ShowGroupPanel = false;
             this.gridStokHareket.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colTarih, DevExpress.Data.ColumnSortOrder.Descending)});
-            this.gridStokHareket.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gridStokHareket_CustomDrawRowIndicator);
             this.gridStokHareket.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridStokHareket_PopupMenuShowing);
             this.gridStokHareket.ShownEditor += new System.EventHandler(this.gridStokHareket_ShownEditor);
-            this.gridStokHareket.CellValueChanging += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridStokHareket_CellValueChanging);
             this.gridStokHareket.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.gridStokHareket_InvalidRowException);
             this.gridStokHareket.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.gridStokHareket_CustomColumnDisplayText);
             this.gridStokHareket.RowCountChanged += new System.EventHandler(this.gridStokHareket_RowCountChanged);
@@ -2155,109 +2156,53 @@
             this.colStokKodu.AppearanceHeader.Options.UseTextOptions = true;
             this.colStokKodu.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colStokKodu.Caption = "Stok Kodu";
-            this.colStokKodu.ColumnEdit = this.repositoryItemButtonEdit5;
+            this.colStokKodu.ColumnEdit = this.repobtnBarkod;
             this.colStokKodu.FieldName = "Stok.StokKodu";
             this.colStokKodu.Name = "colStokKodu";
-            this.colStokKodu.OptionsColumn.AllowEdit = false;
             this.colStokKodu.Visible = true;
-            this.colStokKodu.VisibleIndex = 3;
-            this.colStokKodu.Width = 103;
+            this.colStokKodu.VisibleIndex = 2;
+            this.colStokKodu.Width = 98;
             // 
-            // repositoryItemButtonEdit5
+            // repobtnBarkod
             // 
-            this.repositoryItemButtonEdit5.AutoHeight = false;
-            editorButtonImageOptions3.Image = global::NetSatis.BackOffice.Properties.Resources.add_16x16;
+            this.repobtnBarkod.AutoHeight = false;
+            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
             editorButtonImageOptions3.ImageIndex = 4;
             editorButtonImageOptions3.ImageUri.Uri = "Apply";
-            this.repositoryItemButtonEdit5.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.repositoryItemButtonEdit5.Name = "repositoryItemButtonEdit5";
-            this.repositoryItemButtonEdit5.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositoryItemButtonEdit5_ButtonClick);
-            this.repositoryItemButtonEdit5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.repositoryItemButtonEdit5_KeyDown);
+            this.repobtnBarkod.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear)});
+            this.repobtnBarkod.EditValueChangedDelay = 300;
+            this.repobtnBarkod.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
+            this.repobtnBarkod.Name = "repobtnBarkod";
+            this.repobtnBarkod.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repobtnBarkod_ButtonClick);
+            this.repobtnBarkod.EditValueChanged += new System.EventHandler(this.repobtnBarkod_EditValueChanged);
+            this.repobtnBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.repobtnBarkod_KeyDown);
             // 
             // colStokAdi
             // 
             this.colStokAdi.AppearanceHeader.BackColor = System.Drawing.Color.DarkSlateGray;
             this.colStokAdi.AppearanceHeader.Options.UseBackColor = true;
             this.colStokAdi.Caption = "Ürün Adı";
-            this.colStokAdi.ColumnEdit = this.repoGridStoklar;
+            this.colStokAdi.ColumnEdit = this.repobtnStokSec;
             this.colStokAdi.FieldName = "Stok.StokAdi";
             this.colStokAdi.Name = "colStokAdi";
             this.colStokAdi.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colStokAdi.Visible = true;
-            this.colStokAdi.VisibleIndex = 4;
-            this.colStokAdi.Width = 275;
+            this.colStokAdi.VisibleIndex = 3;
+            this.colStokAdi.Width = 220;
             // 
-            // repoGridStoklar
+            // repobtnStokSec
             // 
-            this.repoGridStoklar.AccessibleName = "";
-            this.repoGridStoklar.AutoHeight = false;
-            this.repoGridStoklar.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
-            this.repoGridStoklar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repoGridStoklar.DisplayMember = "StokAdi";
-            this.repoGridStoklar.EditValueChangedDelay = 50;
-            this.repoGridStoklar.ImmediatePopup = true;
-            this.repoGridStoklar.Name = "repoGridStoklar";
-            this.repoGridStoklar.NullText = "";
-            this.repoGridStoklar.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.repoGridStoklar.PopupView = this.repoGvStoklar;
-            this.repoGridStoklar.SearchMode = DevExpress.XtraEditors.Repository.GridLookUpSearchMode.AutoSearch;
-            this.repoGridStoklar.ShowFooter = false;
-            this.repoGridStoklar.ValidateOnEnterKey = true;
-            this.repoGridStoklar.ValueMember = "StokAdi"; 
-            this.repoGridStoklar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.popupForm_KeyUp);
-            // 
-            // repoGvStoklar
-            // 
-            this.repoGvStoklar.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5});
-            this.repoGvStoklar.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.repoGvStoklar.Name = "repoGvStoklar";
-            this.repoGvStoklar.OptionsFilter.AllowAutoFilterConditionChange = DevExpress.Utils.DefaultBoolean.True;
-            this.repoGvStoklar.OptionsFilter.DefaultFilterEditorView = DevExpress.XtraEditors.FilterEditorViewMode.TextAndVisual;
-            this.repoGvStoklar.OptionsFind.Condition = DevExpress.Data.Filtering.FilterCondition.Contains;
-            this.repoGvStoklar.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.repoGvStoklar.OptionsView.ShowAutoFilterRow = true;
-            this.repoGvStoklar.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.ShowAlways;
-            this.repoGvStoklar.OptionsView.ShowGroupPanel = false;
-            this.repoGvStoklar.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.repoGvStoklar_RowClick);
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "ID";
-            this.gridColumn2.FieldName = "Id";
-            this.gridColumn2.Name = "gridColumn2";
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Stok Kodu";
-            this.gridColumn3.FieldName = "StokKodu";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 0;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "Stok Adı";
-            this.gridColumn4.FieldName = "StokAdi";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 1;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "Barkodu";
-            this.gridColumn5.FieldName = "Barkodu";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 2;
+            this.repobtnStokSec.AutoHeight = false;
+            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
+            editorButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions5.Image")));
+            this.repobtnStokSec.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 20, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", 20, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repobtnStokSec.Name = "repobtnStokSec";
+            this.repobtnStokSec.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repoStokSec_ButtonClick);
+            this.repobtnStokSec.KeyDown += new System.Windows.Forms.KeyEventHandler(this.repoStokSec_KeyDown);
             // 
             // colBirimi
             // 
@@ -2272,7 +2217,7 @@
             this.colBirimi.Name = "colBirimi";
             this.colBirimi.OptionsColumn.AllowEdit = false;
             this.colBirimi.Visible = true;
-            this.colBirimi.VisibleIndex = 5;
+            this.colBirimi.VisibleIndex = 4;
             this.colBirimi.Width = 42;
             // 
             // colMiktar
@@ -2290,7 +2235,7 @@
             this.colMiktar.FieldName = "Miktar";
             this.colMiktar.Name = "colMiktar";
             this.colMiktar.Visible = true;
-            this.colMiktar.VisibleIndex = 6;
+            this.colMiktar.VisibleIndex = 5;
             this.colMiktar.Width = 53;
             // 
             // repoMiktar
@@ -2314,8 +2259,8 @@
             this.colKdv.FieldName = "Kdv";
             this.colKdv.Name = "colKdv";
             this.colKdv.Visible = true;
-            this.colKdv.VisibleIndex = 7;
-            this.colKdv.Width = 50;
+            this.colKdv.VisibleIndex = 6;
+            this.colKdv.Width = 49;
             // 
             // repoKdv
             // 
@@ -2339,17 +2284,17 @@
             this.colBirimFiyati.Name = "colBirimFiyati";
             this.colBirimFiyati.OptionsFilter.AllowFilter = false;
             this.colBirimFiyati.Visible = true;
-            this.colBirimFiyati.VisibleIndex = 8;
+            this.colBirimFiyati.VisibleIndex = 7;
             this.colBirimFiyati.Width = 63;
             // 
             // repoFiyat
             // 
             this.repoFiyat.AutoHeight = false;
-            editorButtonImageOptions4.ImageIndex = 2;
-            editorButtonImageOptions4.ImageList = this.ımageList2;
-            editorButtonImageOptions4.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            editorButtonImageOptions6.ImageIndex = 2;
+            editorButtonImageOptions6.ImageList = this.ımageList2;
+            editorButtonImageOptions6.Location = DevExpress.XtraEditors.ImageLocation.Default;
             this.repoFiyat.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoFiyat.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.repoFiyat.Name = "repoFiyat";
             this.repoFiyat.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repoFiyat_ButtonClick);
@@ -2368,7 +2313,7 @@
             this.colIndirimOrani.FieldName = "IndirimOrani";
             this.colIndirimOrani.Name = "colIndirimOrani";
             this.colIndirimOrani.Visible = true;
-            this.colIndirimOrani.VisibleIndex = 9;
+            this.colIndirimOrani.VisibleIndex = 8;
             this.colIndirimOrani.Width = 69;
             // 
             // repoIskonto
@@ -2390,7 +2335,7 @@
             this.colIndirimOrani3.FieldName = "IndirimOrani3";
             this.colIndirimOrani3.Name = "colIndirimOrani3";
             this.colIndirimOrani3.Visible = true;
-            this.colIndirimOrani3.VisibleIndex = 11;
+            this.colIndirimOrani3.VisibleIndex = 10;
             this.colIndirimOrani3.Width = 76;
             // 
             // colIndirimOrani2
@@ -2406,7 +2351,7 @@
             this.colIndirimOrani2.FieldName = "IndirimOrani2";
             this.colIndirimOrani2.Name = "colIndirimOrani2";
             this.colIndirimOrani2.Visible = true;
-            this.colIndirimOrani2.VisibleIndex = 10;
+            this.colIndirimOrani2.VisibleIndex = 9;
             this.colIndirimOrani2.Width = 57;
             // 
             // colDepoKodu
@@ -2430,14 +2375,14 @@
             // repoDepo
             // 
             this.repoDepo.AutoHeight = false;
-            editorButtonImageOptions5.ImageIndex = 3;
-            editorButtonImageOptions5.ImageList = this.ımageList2;
-            editorButtonImageOptions5.Location = DevExpress.XtraEditors.ImageLocation.Default;
-            serializableAppearanceObject18.Options.UseImage = true;
-            serializableAppearanceObject19.Options.UseImage = true;
-            serializableAppearanceObject20.Options.UseImage = true;
+            editorButtonImageOptions7.ImageIndex = 3;
+            editorButtonImageOptions7.ImageList = this.ımageList2;
+            editorButtonImageOptions7.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            serializableAppearanceObject26.Options.UseImage = true;
+            serializableAppearanceObject27.Options.UseImage = true;
+            serializableAppearanceObject28.Options.UseImage = true;
             this.repoDepo.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject25, serializableAppearanceObject26, serializableAppearanceObject27, serializableAppearanceObject28, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoDepo.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.repoDepo.Name = "repoDepo";
             this.repoDepo.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repoDepo_ButtonClick);
@@ -2455,11 +2400,11 @@
             // repoSeri
             // 
             this.repoSeri.AutoHeight = false;
-            editorButtonImageOptions6.ImageIndex = 4;
-            editorButtonImageOptions6.ImageList = this.ımageList2;
-            editorButtonImageOptions6.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            editorButtonImageOptions8.ImageIndex = 4;
+            editorButtonImageOptions8.ImageList = this.ımageList2;
+            editorButtonImageOptions8.Location = DevExpress.XtraEditors.ImageLocation.Default;
             this.repoSeri.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Seri No", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Seri No", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject29, serializableAppearanceObject30, serializableAppearanceObject31, serializableAppearanceObject32, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoSeri.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.repoSeri.Name = "repoSeri";
             this.repoSeri.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
@@ -2491,14 +2436,14 @@
             this.repoSil.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("repoSil.Appearance.Image")));
             this.repoSil.Appearance.Options.UseImage = true;
             this.repoSil.AutoHeight = false;
-            editorButtonImageOptions7.ImageIndex = 0;
-            editorButtonImageOptions7.ImageList = this.ımageList2;
-            serializableAppearanceObject25.Options.UseImage = true;
-            serializableAppearanceObject26.Options.UseImage = true;
-            serializableAppearanceObject27.Options.UseImage = true;
-            serializableAppearanceObject28.Options.UseImage = true;
+            editorButtonImageOptions9.ImageIndex = 0;
+            editorButtonImageOptions9.ImageList = this.ımageList2;
+            serializableAppearanceObject33.Options.UseImage = true;
+            serializableAppearanceObject34.Options.UseImage = true;
+            serializableAppearanceObject35.Options.UseImage = true;
+            serializableAppearanceObject36.Options.UseImage = true;
             this.repoSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject25, serializableAppearanceObject26, serializableAppearanceObject27, serializableAppearanceObject28, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions9, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject33, serializableAppearanceObject34, serializableAppearanceObject35, serializableAppearanceObject36, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.repoSil.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.repoSil.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("repoSil.ContextImageOptions.Image")));
@@ -2536,7 +2481,7 @@
             this.colIndirimTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colIndirimTutar", "SUM={0:C2}")});
             this.colIndirimTutar.Visible = true;
-            this.colIndirimTutar.VisibleIndex = 13;
+            this.colIndirimTutar.VisibleIndex = 12;
             // 
             // colToplamTutar
             // 
@@ -2555,8 +2500,8 @@
             this.colToplamTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colToplamTutar", "SUM={0:C2}")});
             this.colToplamTutar.Visible = true;
-            this.colToplamTutar.VisibleIndex = 14;
-            this.colToplamTutar.Width = 131;
+            this.colToplamTutar.VisibleIndex = 13;
+            this.colToplamTutar.Width = 141;
             // 
             // colKdvToplam
             // 
@@ -2719,10 +2664,9 @@
             this.colTarih.FieldName = "colTarih";
             this.colTarih.Name = "colTarih";
             this.colTarih.OptionsColumn.AllowEdit = false;
+            this.colTarih.OptionsColumn.AllowShowHide = false;
             this.colTarih.UnboundExpression = "LocalDateTimeNow()";
             this.colTarih.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
-            this.colTarih.Visible = true;
-            this.colTarih.VisibleIndex = 2;
             this.colTarih.Width = 20;
             // 
             // colDipIskontoPayi
@@ -2736,7 +2680,7 @@
             this.colDipIskontoPayi.Name = "colDipIskontoPayi";
             this.colDipIskontoPayi.OptionsColumn.AllowEdit = false;
             this.colDipIskontoPayi.Visible = true;
-            this.colDipIskontoPayi.VisibleIndex = 12;
+            this.colDipIskontoPayi.VisibleIndex = 11;
             this.colDipIskontoPayi.Width = 91;
             // 
             // gridColumn1
@@ -2747,7 +2691,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 1;
-            this.gridColumn1.Width = 37;
+            this.gridColumn1.Width = 35;
             // 
             // repositoryItemButtonEdit6
             // 
@@ -2907,10 +2851,10 @@
             // repoOdemeSil
             // 
             this.repoOdemeSil.AutoHeight = false;
-            editorButtonImageOptions8.ImageIndex = 0;
-            editorButtonImageOptions8.ImageList = this.ımageList2;
+            editorButtonImageOptions10.ImageIndex = 0;
+            editorButtonImageOptions10.ImageList = this.ımageList2;
             this.repoOdemeSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject29, serializableAppearanceObject30, serializableAppearanceObject31, serializableAppearanceObject32, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions10, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject37, serializableAppearanceObject38, serializableAppearanceObject39, serializableAppearanceObject40, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoOdemeSil.Name = "repoOdemeSil";
             this.repoOdemeSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.repoOdemeSil.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repoOdemeSil_ButtonClick);
@@ -3117,25 +3061,25 @@
             // repositoryItemButtonEdit1
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
-            editorButtonImageOptions9.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            editorButtonImageOptions11.Location = DevExpress.XtraEditors.ImageLocation.Default;
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions9, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject33, serializableAppearanceObject34, serializableAppearanceObject35, serializableAppearanceObject36, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions11, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject41, serializableAppearanceObject42, serializableAppearanceObject43, serializableAppearanceObject44, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             // 
             // repositoryItemButtonEdit2
             // 
             this.repositoryItemButtonEdit2.AutoHeight = false;
-            editorButtonImageOptions10.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            editorButtonImageOptions12.Location = DevExpress.XtraEditors.ImageLocation.Default;
             this.repositoryItemButtonEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions10, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject37, serializableAppearanceObject38, serializableAppearanceObject39, serializableAppearanceObject40, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions12, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject45, serializableAppearanceObject46, serializableAppearanceObject47, serializableAppearanceObject48, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit2.Name = "repositoryItemButtonEdit2";
             // 
             // repositoryItemButtonEdit3
             // 
             this.repositoryItemButtonEdit3.AutoHeight = false;
-            editorButtonImageOptions11.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            editorButtonImageOptions13.Location = DevExpress.XtraEditors.ImageLocation.Default;
             this.repositoryItemButtonEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Seri No", -1, true, true, false, editorButtonImageOptions11, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject41, serializableAppearanceObject42, serializableAppearanceObject43, serializableAppearanceObject44, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Seri No", -1, true, true, false, editorButtonImageOptions13, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject49, serializableAppearanceObject50, serializableAppearanceObject51, serializableAppearanceObject52, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit3.Name = "repositoryItemButtonEdit3";
             // 
             // gridView4
@@ -3681,9 +3625,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridContStokHareket)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridStokHareket)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repoGridStoklar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repoGvStoklar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repobtnBarkod)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repobtnStokSec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoMiktar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoKdv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoFiyat)).EndInit();
@@ -3898,7 +3841,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem excelFaturaİşleToolStripMenuItem;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit5;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repobtnBarkod;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit6;
         private DevExpress.XtraBars.BarButtonItem btnStokGuncelle;
         private DevExpress.XtraBars.BarButtonItem btnExcelAktar;
@@ -4002,11 +3945,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem10;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem11;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
-        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repoGridStoklar;
-        private DevExpress.XtraGrid.Views.Grid.GridView repoGvStoklar;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repobtnStokSec;
     }
 }

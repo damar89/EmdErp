@@ -4,7 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.Data.Filtering;
+using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Columns;
+using NetSatis.Entities;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 
@@ -17,7 +19,6 @@ namespace NetSatis.BackOffice.Stok
         public List<Entities.Tables.Stok> secilen = new List<Entities.Tables.Stok>();
         public bool secildi = false;
         private int sec;
-        string aramaMetni = "";
         string DosyaYolu = $@"{Application.StartupPath}\Gorunum\StokSec_SavedLayout.xml";
 
 
@@ -45,7 +46,7 @@ namespace NetSatis.BackOffice.Stok
             }
 
 
-            this.aramaMetni = aramaMetni;
+            txtAramaMetni.Text = aramaMetni;
         }
 
 
@@ -91,83 +92,37 @@ namespace NetSatis.BackOffice.Stok
         private void frmStokSec_Load(object sender, EventArgs e)
         {
 
-            if (aramaMetni != "")
-            {
-                gridContStoklar.DataSource = stokDal.StokAdiylaStokGetir(context, aramaMetni);
-
-            }
-            else
-            {
-                gridContStoklar.DataSource = stokDal.StokListele(context, true);
-            }
-
-            gridContStoklar.ForceInitialize();
-
+            Sorgula();
 
             if (File.Exists(DosyaYolu)) gridContStoklar.MainView.RestoreLayoutFromXml(DosyaYolu);
 
 
-
+            gridContStoklar.Select();
         }
 
         private void frmStokSec_KeyDown(object sender, KeyEventArgs e)
         {
 
             if (e.KeyCode == Keys.Escape)
-            {
-
                 this.Close();
-            }
-            try
-            {
 
+            if (!e.Alt && e.KeyCode == Keys.Enter)
+                gridStoklar_DoubleClick(null, null);
 
-                if (e.KeyCode == Keys.Enter)
-                {
-                    if (gridStoklar.GetSelectedRows().Length != 0)
-                    {
-                        foreach (var row in gridStoklar.GetSelectedRows())
-                        {
-                            string stokKodu = gridStoklar.GetRowCellValue(row, colStokKodu).ToString();
-                            secilen.Add(context.Stoklar.SingleOrDefault(c => c.StokKodu == stokKodu));
-                        }
-
-                        secildi = true;
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Seçilen bir ürün bulunamadı");
-                    }
-                }
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
-
-            if (e.Alt == true && e.KeyCode == Keys.Y)
-            {
+            if (e.Alt && e.KeyCode == Keys.Y)
                 btnStokEkle.PerformClick();
-            }
 
-            if (e.Alt == true && e.KeyCode == Keys.D)
-            {
+            if (e.Alt && e.KeyCode == Keys.D)
                 btnDuzenle.PerformClick();
-            }
 
-           
-
-            if (e.Alt == true && e.KeyCode == Keys.C)
-            {
+            if (e.Alt && e.KeyCode == Keys.C)
                 btnKopyala.PerformClick();
-            }
-            if (e.Alt == true && e.KeyCode == Keys.H)
-            {
+            if (e.Alt && e.KeyCode == Keys.H)
                 btnHareketler.PerformClick();
+
+            if (e.KeyCode == Keys.F3)
+            {
+                Sorgula();
             }
         }
 
@@ -205,7 +160,8 @@ namespace NetSatis.BackOffice.Stok
                 if (gridStoklar.RowCount != 0)
                 {
                     sec = Convert.ToInt32(gridStoklar.GetFocusedRowCellValue(colId));
-                    frmStokIslem form = new frmStokIslem(stokDal.GetByFilter(context, c => c.Id == sec));
+                    var r = context.Stoklar.Include("Barkod").FirstOrDefault(x => x.Id == sec);
+                    frmStokIslem form = new frmStokIslem(ref context, r);
                     form.ShowDialog();
 
                 }
@@ -228,8 +184,8 @@ namespace NetSatis.BackOffice.Stok
             {
                 sec = Convert.ToInt32(gridStoklar.GetFocusedRowCellValue(colId));
                 Entities.Tables.Stok stokEntity = new Entities.Tables.Stok();
-                stokEntity = stokDal.GetByFilter(context, c => c.Id == sec);
-                frmStokIslem form = new frmStokIslem(stokEntity, true);
+                var r = context.Stoklar.Include("Barkod").FirstOrDefault(x => x.Id == sec);
+                frmStokIslem form = new frmStokIslem(r, true);
                 form.ShowDialog();
                 if (form.saved)
                 {
@@ -259,7 +215,6 @@ namespace NetSatis.BackOffice.Stok
             if (gridStoklar.RowCount != 0)
             {
                 sec = Convert.ToInt32(gridStoklar.GetFocusedRowCellValue(colId));
-                string secilenAd = gridStoklar.GetFocusedRowCellValue(colId).ToString();
                 frmStokHareket form = new frmStokHareket(sec); form.ShowDialog();
             }
             else
@@ -270,7 +225,6 @@ namespace NetSatis.BackOffice.Stok
 
         private void frmStokSec_FormClosing(object sender, FormClosingEventArgs e)
         {
-            gridStoklar.ClearColumnsFilter();
             gridContStoklar.MainView.SaveLayoutToXml(DosyaYolu);
         }
 
@@ -281,63 +235,52 @@ namespace NetSatis.BackOffice.Stok
             lblKayitSayisi.Text = kayitsayisi.ToString();
         }
 
-        private void gridStoklar_ColumnFilterChanged(object sender, EventArgs e)
+        void Sorgula()
         {
-            if (gridStoklar.FocusedColumn.FilterInfo.Value != null)
+            var pred = PredicateBuilder.True<Entities.Tables.Stok>();
+
+            if (!string.IsNullOrEmpty(txtStokKodu.Text))
             {
-                string filter = gridStoklar.FocusedColumn.FilterInfo.Value.ToString();
-
-                filter = filter.Replace(' ', '%');
-
-                if (filter[filter.Length - 1] != '%')
+                pred = pred.And(x => x.StokKodu.Contains(txtStokKodu.Text));
+            }
+            if (!string.IsNullOrEmpty(txtStokAdi.Text))
+            {
+                pred = pred.And(x => x.StokAdi.Contains(txtStokAdi.Text));
+            }
+            if (!string.IsNullOrEmpty(txtAramaMetni.Text))
+            {
+                foreach (string item in txtAramaMetni.Text.Split(' '))
                 {
-                    filter += '%';
+                    if (!string.IsNullOrEmpty(item))
+                        pred = pred.And(x => x.StokAdi.Contains(item) || x.Barkodu.Contains(item) || x.StokKodu.Contains(item));
                 }
-                if (filter[0] != '%')
-                {
-                    filter = '%' + filter;
-                }
-                gridStoklar.FocusedColumn.FilterInfo = new ColumnFilterInfo("[" + gridStoklar.FocusedColumn.FieldName + "] LIKE '" + filter + "'");
-            }
-        }
-        string filtreyeCevir(string filtre)
-        {
-            filtre = filtre.Replace(' ', '%');
 
-            if (filtre[filtre.Length - 1] != '%')
-            {
-                filtre += '%';
             }
-            if (filtre[0] != '%')
-            {
-                filtre = '%' + filtre;
-            }
-            return filtre;
-        }
-        private void txtStokAdi_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Alt == true && e.KeyData == Keys.Enter)
-            {
-                gridStoklar.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokAdi"), new OperandValue(filtreyeCevir(txtStokAdi.Text)), BinaryOperatorType.Like);
-            }
+            gridContStoklar.DataSource = stokDal.StokAdiylaStokGetir(context, pred);
+
+            gridContStoklar.ForceInitialize();
+            gridContStoklar.Select();
+
         }
 
-        private void txtStokKodu_KeyDown(object sender, KeyEventArgs e)
+        private void btnSorgula_Click(object sender, EventArgs e)
         {
-            if (e.Alt == true && e.KeyData == Keys.Enter)
-            {
-                gridStoklar.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokKodu"), new OperandValue(filtreyeCevir(txtStokKodu.Text)), BinaryOperatorType.Like);
-            }
+            Sorgula();
         }
 
-        private void txtStokAdi_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private void btnTemizle_Click(object sender, EventArgs e)
         {
-            gridStoklar.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokAdi"), new OperandValue(filtreyeCevir(txtStokAdi.Text)), BinaryOperatorType.Like);
+            txtAramaMetni.Text =
+                txtStokAdi.Text =
+                txtStokKodu.Text = null;
         }
 
-        private void txtStokKodu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private void txtFilterClear(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            gridStoklar.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokKodu"), new OperandValue(filtreyeCevir(txtStokKodu.Text)), BinaryOperatorType.Like);
+            var obj = sender as ButtonEdit;
+            if (obj == null)
+                return;
+            obj.Text = null;
         }
     }
 }

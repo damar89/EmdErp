@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Repositories;
 using NetSatis.Entities.Tables;
@@ -298,109 +299,148 @@ namespace NetSatis.Entities.Data_Access
             }
             return null;
         }
-        public object StokAdiylaStokGetir(NetSatisContext context, string aramaMetni)
+        public object StokAdiylaStokGetir(NetSatisContext context, Expression<Func<Stok, bool>> pred = null)
         {
-            List<string> result = aramaMetni.Split(' ').ToList();
-            string metin1 = result.Count > 0 ? result[0] : "";
-            string metin2 = result.Count > 1 ? result[1] : "";
-            string metin3 = result.Count > 2 ? result[2] : "";
-            if (result.Count == 1)
-            {
-                var tablo = context.Stoklar.GroupJoin(context.StokHareketleri, c => c.Id, c => c.StokId,
-                    (Stoklar, StokHareketleri) =>
-           new
-           {
-               Stoklar.Id,
-               Stoklar.Durumu,
-               Stoklar.WebAcikMi,
-               Stoklar.StokKodu,
-               Stoklar.StokAdi,
-               Stoklar.Barkodu,
-               Stoklar.Birim,
-               Stoklar.Kategori,
-               Stoklar.Marka,
-               Stoklar.Uretici,
-               KategoriAdi = context.Kategoriler.FirstOrDefault(x => x.Kod == Stoklar.Kategori).KategoriAdi ?? "",
-               AltGrupAdi = context.AltGruplar.FirstOrDefault(x => x.Kod == Stoklar.AltGrup).AltGrupAdi ?? "",
-               AnaGrupAdi = context.AnaGruplar.FirstOrDefault(x => x.Kod == Stoklar.AnaGrup).AnaGrupAdi ?? "",
-               //Stoklar.AlisKdv,
-               Stoklar.SatisKdv,
-               Stoklar.SatisFiyati1,
-               Stoklar.SatisFiyati2,
-               StokGiris = StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
-               StokCikis = StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2") || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
-               MevcutStok = (StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0) -
-                                 (StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2")
-                                 || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")
-                                 ).Sum(c => c.Miktar) ?? 0),
-           }).Where(x => x.StokAdi.Contains(metin1)).ToList();
-                return tablo;
-            }
-            else if (result.Count == 2)
-            {
-                var tablo = context.Stoklar.GroupJoin(context.StokHareketleri, c => c.Id, c => c.StokId,
-                    (Stoklar, StokHareketleri) =>
-           new
-           {
-               Stoklar.Id,
-               Stoklar.Durumu,
-               Stoklar.WebAcikMi,
-               Stoklar.StokKodu,
-               Stoklar.StokAdi,
-               Stoklar.Barkodu,
-               Stoklar.Birim,
-               Stoklar.Kategori,
-               Stoklar.Marka,
-               Stoklar.Uretici,
-               KategoriAdi = context.Kategoriler.FirstOrDefault(x => x.Kod == Stoklar.Kategori).KategoriAdi ?? "",
-               AltGrupAdi = context.AltGruplar.FirstOrDefault(x => x.Kod == Stoklar.AltGrup).AltGrupAdi ?? "",
-               AnaGrupAdi = context.AnaGruplar.FirstOrDefault(x => x.Kod == Stoklar.AnaGrup).AnaGrupAdi ?? "",
-               //Stoklar.AlisKdv,
-               Stoklar.SatisKdv,
-               Stoklar.SatisFiyati1,
-               Stoklar.SatisFiyati2,
-               StokGiris = StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
-               StokCikis = StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2") || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
-               MevcutStok = (StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0) -
-                                 (StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2")
-                                 || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")
-                                 ).Sum(c => c.Miktar) ?? 0),
-           }).Where(x => x.StokAdi.Contains(metin1) && x.StokAdi.Contains(metin2)).ToList();
-                return tablo;
-            }
-            else if (result.Count > 2)
-            {
-                var tablo = context.Stoklar.GroupJoin(context.StokHareketleri, c => c.Id, c => c.StokId,
-             (Stoklar, StokHareketleri) =>
-    new
-    {
-        Stoklar.Id,
-        Stoklar.Durumu,
-        Stoklar.WebAcikMi,
-        Stoklar.StokKodu,
-        Stoklar.StokAdi,
-        Stoklar.Barkodu,
-        Stoklar.Birim,
-        Stoklar.Kategori,
-        Stoklar.Marka,
-        Stoklar.Uretici,
-        KategoriAdi = context.Kategoriler.FirstOrDefault(x => x.Kod == Stoklar.Kategori).KategoriAdi ?? "",
-        AltGrupAdi = context.AltGruplar.FirstOrDefault(x => x.Kod == Stoklar.AltGrup).AltGrupAdi ?? "",
-        AnaGrupAdi = context.AnaGruplar.FirstOrDefault(x => x.Kod == Stoklar.AnaGrup).AnaGrupAdi ?? "",
-        //Stoklar.AlisKdv,
-        Stoklar.SatisKdv,
-        Stoklar.SatisFiyati1,
-        Stoklar.SatisFiyati2,
-        StokGiris = StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
-        StokCikis = StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2") || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
-        MevcutStok = (StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0) -
-                                 (StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2")
-                                 || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")
-                                 ).Sum(c => c.Miktar) ?? 0),
-    }).Where(x => x.StokAdi.Contains(metin1) && x.StokAdi.Contains(metin2) && x.StokAdi.Contains(metin3)).ToList();
-                return tablo;
-            }
-            return null;
+            IQueryable<Stok> tablo;
+            if (pred != null)
+                tablo = context.Stoklar.Where(pred);
+            else
+                tablo = context.Stoklar;
+
+            #region duzenleme
+            // if (result.Count == 1)
+            // {
+            //     var tablo = context.Stoklar.GroupJoin(context.StokHareketleri, c => c.Id, c => c.StokId,
+            //         (Stoklar, StokHareketleri) =>
+            //new
+            //{
+            //    Stoklar.Id,
+            //    Stoklar.Durumu,
+            //    Stoklar.WebAcikMi,
+            //    Stoklar.StokKodu,
+            //    Stoklar.StokAdi,
+            //    Stoklar.Barkodu,
+            //    Stoklar.Birim,
+            //    Stoklar.Kategori,
+            //    Stoklar.Marka,
+            //    Stoklar.Uretici,
+            //    KategoriAdi = context.Kategoriler.FirstOrDefault(x => x.Kod == Stoklar.Kategori).KategoriAdi ?? "",
+            //    AltGrupAdi = context.AltGruplar.FirstOrDefault(x => x.Kod == Stoklar.AltGrup).AltGrupAdi ?? "",
+            //    AnaGrupAdi = context.AnaGruplar.FirstOrDefault(x => x.Kod == Stoklar.AnaGrup).AnaGrupAdi ?? "",
+            //    //Stoklar.AlisKdv,
+            //    Stoklar.SatisKdv,
+            //    Stoklar.SatisFiyati1,
+            //    Stoklar.SatisFiyati2,
+            //    StokGiris = StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
+            //    StokCikis = StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2") || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
+            //    MevcutStok = (StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0) -
+            //                      (StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2")
+            //                      || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")
+            //                      ).Sum(c => c.Miktar) ?? 0),
+            //}).Where(x => x.StokAdi.Contains(metin1)).ToList();
+            //     return tablo;
+            // }
+            // else if (result.Count == 2)
+            // {
+            //     var tablo = context.Stoklar.GroupJoin(context.StokHareketleri, c => c.Id, c => c.StokId,
+            //         (Stoklar, StokHareketleri) =>
+            //new
+            //{
+            //    Stoklar.Id,
+            //    Stoklar.Durumu,
+            //    Stoklar.WebAcikMi,
+            //    Stoklar.StokKodu,
+            //    Stoklar.StokAdi,
+            //    Stoklar.Barkodu,
+            //    Stoklar.Birim,
+            //    Stoklar.Kategori,
+            //    Stoklar.Marka,
+            //    Stoklar.Uretici,
+            //    KategoriAdi = context.Kategoriler.FirstOrDefault(x => x.Kod == Stoklar.Kategori).KategoriAdi ?? "",
+            //    AltGrupAdi = context.AltGruplar.FirstOrDefault(x => x.Kod == Stoklar.AltGrup).AltGrupAdi ?? "",
+            //    AnaGrupAdi = context.AnaGruplar.FirstOrDefault(x => x.Kod == Stoklar.AnaGrup).AnaGrupAdi ?? "",
+            //    //Stoklar.AlisKdv,
+            //    Stoklar.SatisKdv,
+            //    Stoklar.SatisFiyati1,
+            //    Stoklar.SatisFiyati2,
+            //    StokGiris = StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
+            //    StokCikis = StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2") || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
+            //    MevcutStok = (StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0) -
+            //                      (StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2")
+            //                      || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")
+            //                      ).Sum(c => c.Miktar) ?? 0),
+            //}).Where(x => x.StokAdi.Contains(metin1) && x.StokAdi.Contains(metin2)).ToList();
+            //     return tablo;
+            // }
+            // else if (result.Count > 2)
+            // { 
+            //         var tablo = context.Stoklar.GroupJoin(context.StokHareketleri, c => c.Id, c => c.StokId,
+            //         (Stoklar, StokHareketleri) =>
+            //new
+            //{
+            //    Stoklar.Id,
+            //    Stoklar.Durumu,
+            //    Stoklar.WebAcikMi,
+            //    Stoklar.StokKodu,
+            //    Stoklar.StokAdi,
+            //    Stoklar.Barkodu,
+            //    Stoklar.Birim,
+            //    Stoklar.Kategori,
+            //    Stoklar.Marka,
+            //    Stoklar.Uretici,
+            //    KategoriAdi = context.Kategoriler.FirstOrDefault(x => x.Kod == Stoklar.Kategori).KategoriAdi ?? "",
+            //    AltGrupAdi = context.AltGruplar.FirstOrDefault(x => x.Kod == Stoklar.AltGrup).AltGrupAdi ?? "",
+            //    AnaGrupAdi = context.AnaGruplar.FirstOrDefault(x => x.Kod == Stoklar.AnaGrup).AnaGrupAdi ?? "",
+            //     //Stoklar.AlisKdv,
+            //     Stoklar.SatisKdv,
+            //    Stoklar.SatisFiyati1,
+            //    Stoklar.SatisFiyati2,
+            //    StokGiris = StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
+            //    StokCikis = StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2") || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
+            //    MevcutStok = (StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0) -
+            //                             (StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2")
+            //                             || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")
+            //                             ).Sum(c => c.Miktar) ?? 0),
+            //}).Where(x => x.StokAdi.Contains(metin1) && x.StokAdi.Contains(metin2) && x.StokAdi.Contains(metin3)).ToList();
+
+
+            //         return tablo;
+            //     }
+            //         return null;
+            #endregion
+            var res = tablo.GroupJoin(context.StokHareketleri, c => c.Id, c => c.StokId,
+                  (Stoklar, StokHareketleri) =>
+                         new
+                         {
+                             Stoklar.Id,
+                             Stoklar.Durumu,
+                             Stoklar.WebAcikMi,
+                             Stoklar.StokKodu,
+                             Stoklar.StokAdi,
+                             Stoklar.Barkodu,
+                             Stoklar.Birim,
+                             Stoklar.Kategori,
+                             Stoklar.Marka,
+                             Stoklar.Uretici,
+                             KategoriAdi = context.Kategoriler.FirstOrDefault(x => x.Kod == Stoklar.Kategori).KategoriAdi ?? "",
+                             AltGrupAdi = context.AltGruplar.FirstOrDefault(x => x.Kod == Stoklar.AltGrup).AltGrupAdi ?? "",
+                             AnaGrupAdi = context.AnaGruplar.FirstOrDefault(x => x.Kod == Stoklar.AnaGrup).AnaGrupAdi ?? "",
+                        //Stoklar.AlisKdv,
+                        Stoklar.SatisKdv,
+                             Stoklar.SatisFiyati1,
+                             Stoklar.SatisFiyati2,
+                             StokGiris = StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
+                             StokCikis = StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2") || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
+                             MevcutStok = (StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0) -
+                                                      (StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2")
+                                                      || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")
+                                                      ).Sum(c => c.Miktar) ?? 0),
+                         }).ToList();
+
+
+            return res;
+            //}
+            //return null;
         }
         public Stok GetByFilter(NetSatisContext context, Func<object, object> p)
         {
