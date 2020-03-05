@@ -51,6 +51,6 @@ namespace NetSatis.Entities.Tables
         public decimal? DipIskontoPayi { get; set; }
         public int SaveUser { get; set; }
         public int EditUser { get; set; }
-
+         
     }
 }
