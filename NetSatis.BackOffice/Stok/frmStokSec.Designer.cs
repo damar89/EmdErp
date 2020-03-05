@@ -596,6 +596,7 @@
             this.btnTemizle.Size = new System.Drawing.Size(38, 36);
             this.btnTemizle.StyleController = this.layoutControl1;
             this.btnTemizle.TabIndex = 7;
+            this.btnTemizle.ToolTip = "F5";
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // btnSorgula
@@ -608,7 +609,7 @@
             this.btnSorgula.Size = new System.Drawing.Size(174, 36);
             this.btnSorgula.StyleController = this.layoutControl1;
             this.btnSorgula.TabIndex = 6;
-            this.btnSorgula.Text = "Sorgula (F3)";
+            this.btnSorgula.Text = "Bul (F4)";
             this.btnSorgula.ToolTip = "F3";
             this.btnSorgula.Click += new System.EventHandler(this.btnSorgula_Click);
             // 

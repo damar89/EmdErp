@@ -120,10 +120,10 @@ namespace NetSatis.BackOffice.Stok
             if (e.Alt && e.KeyCode == Keys.H)
                 btnHareketler.PerformClick();
 
-            if (e.KeyCode == Keys.F3)
-            {
+            if (e.KeyCode == Keys.F4)
                 Sorgula();
-            }
+            if (e.KeyCode == Keys.F5)
+                btnTemizle.PerformClick();
         }
 
         private void gridStoklar_DoubleClick(object sender, EventArgs e)
@@ -274,6 +274,8 @@ namespace NetSatis.BackOffice.Stok
             txtAramaMetni.Text =
                 txtStokAdi.Text =
                 txtStokKodu.Text = null;
+
+            txtAramaMetni.Focus();
         }
 
         private void txtFilterClear(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
