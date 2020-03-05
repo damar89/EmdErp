@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGuncelleme));
             this.btnGuncellemeyiIndir = new DevExpress.XtraEditors.SimpleButton();
             this.progressFile = new DevExpress.XtraEditors.ProgressBarControl();
             this.lblIndirilen = new DevExpress.XtraEditors.LabelControl();
@@ -36,45 +37,51 @@
             // 
             // btnGuncellemeyiIndir
             // 
-            this.btnGuncellemeyiIndir.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGuncellemeyiIndir.Appearance.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGuncellemeyiIndir.Appearance.Options.UseFont = true;
-            this.btnGuncellemeyiIndir.Location = new System.Drawing.Point(102, 21);
+            this.btnGuncellemeyiIndir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGuncellemeyiIndir.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGuncellemeyiIndir.ImageOptions.Image")));
+            this.btnGuncellemeyiIndir.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnGuncellemeyiIndir.ImageOptions.ImageToTextIndent = 10;
+            this.btnGuncellemeyiIndir.Location = new System.Drawing.Point(0, 0);
             this.btnGuncellemeyiIndir.Name = "btnGuncellemeyiIndir";
-            this.btnGuncellemeyiIndir.Size = new System.Drawing.Size(208, 101);
+            this.btnGuncellemeyiIndir.Size = new System.Drawing.Size(419, 64);
             this.btnGuncellemeyiIndir.TabIndex = 0;
             this.btnGuncellemeyiIndir.Text = "Güncellemeyi İndir";
             this.btnGuncellemeyiIndir.Click += new System.EventHandler(this.btnGuncellemeyiIndir_Click);
             // 
             // progressFile
             // 
-            this.progressFile.Location = new System.Drawing.Point(12, 128);
+            this.progressFile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.progressFile.Location = new System.Drawing.Point(0, 64);
             this.progressFile.Name = "progressFile";
-            this.progressFile.Size = new System.Drawing.Size(397, 40);
+            this.progressFile.Size = new System.Drawing.Size(419, 55);
             this.progressFile.TabIndex = 1;
             // 
             // lblIndirilen
             // 
             this.lblIndirilen.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblIndirilen.Location = new System.Drawing.Point(12, 174);
+            this.lblIndirilen.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblIndirilen.Location = new System.Drawing.Point(0, 86);
             this.lblIndirilen.Name = "lblIndirilen";
-            this.lblIndirilen.Size = new System.Drawing.Size(397, 19);
+            this.lblIndirilen.Size = new System.Drawing.Size(419, 33);
             this.lblIndirilen.TabIndex = 2;
             // 
             // frmGuncelleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 186);
+            this.ClientSize = new System.Drawing.Size(419, 119);
             this.Controls.Add(this.lblIndirilen);
             this.Controls.Add(this.progressFile);
             this.Controls.Add(this.btnGuncellemeyiIndir);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.IconOptions.ShowIcon = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmGuncelleme";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Güncelleme"; 
+            this.Text = "Güncellemeyi İndir";
             ((System.ComponentModel.ISupportInitialize)(this.progressFile.Properties)).EndInit();
             this.ResumeLayout(false);
 

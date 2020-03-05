@@ -14,7 +14,7 @@ namespace NetSatis.BackOffice.Cari
         NetSatisContext context = new NetSatisContext();
         public List<Entities.Tables.Cari> secilen = new List<Entities.Tables.Cari>();
         public bool secildi = false;
-       
+
         private int sec;
         string DosyaYolu = $@"{Application.StartupPath}\Gorunum\CariSecSavedLayout.xml";
         public frmCariSec(bool cokluSecim = false)
@@ -120,7 +120,8 @@ namespace NetSatis.BackOffice.Cari
         private void frmCariSec_FormClosing(object sender, FormClosingEventArgs e)
         {
             gridView1.ClearColumnsFilter();
-            gridControl1.MainView.SaveLayoutToXml(DosyaYolu);
+            if (Directory.Exists($@"{Application.StartupPath}\Gorunum\"))
+                gridControl1.MainView.SaveLayoutToXml(DosyaYolu);
         }
 
         private void brnCariDuzenle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

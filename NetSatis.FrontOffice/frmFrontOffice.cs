@@ -66,12 +66,9 @@ namespace NetSatis.FrontOffice
             //kodOlustur.BarButonOlustur();
             if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_doviz)))
             {
-                calcDolar.Visible = true;
-                calcEuro.Visible = true;
-                calcRub.Visible = true;
-                labelControl26.Visible = true;
-                labelControl27.Visible = true;
-                labelControl28.Visible = true;
+                layUSD.Visibility =
+                    layEURO.Visibility =
+                    layRUB.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             }
             //var stoklar = context.sto.AsNoTracking().Where(w=>w.Durumu).ToList();
             gridContStokHareket.DataSource = context.StokHareketleri.Local.ToBindingList();
@@ -258,27 +255,37 @@ namespace NetSatis.FrontOffice
                 }
                 xtraTabControl1.TabPages.Add(page);
             }
-            var AcikHesapButon = new SimpleButton
+            var AcikHesapButon = new Button
             {
                 Name = "AcikHesap",
                 Text = "&Açık Hesap",
-                Height = 48,
+                Height = flowOdemeTurleri.Height - 10,
                 Width = 92,
                 BackColor = Color.DarkCyan,
-                ForeColor = Color.Black
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Margin = new Padding(2),
+                Font = new Font(Font.FontFamily, Font.Size, FontStyle.Bold),
+                Cursor = Cursors.Hand,
+
             };
             AcikHesapButon.Click += AcikHesap_Click;
             flowOdemeTurleri.Controls.Add(AcikHesapButon);
             foreach (var item in context.OdemeTurleri.ToList())
             {
-                var buton = new SimpleButton
+                var buton = new Button
                 {
                     Name = item.OdemeTuruKodu,
                     Tag = item.Id,
                     Text = item.OdemeTuruAdi,
-                    Height = 48,
-                    Width = 92
+                    Height = flowOdemeTurleri.Height - 10,
+                    Width = 92,
+                    FlatStyle = FlatStyle.Flat,
+                    Margin = new Padding(2),
+                    Font = new Font(Font.FontFamily, Font.Size, FontStyle.Bold),
+                    Cursor = Cursors.Hand,
                 };
+
                 buton.Click += OdemeEkle_Click;
                 flowOdemeTurleri.Controls.Add(buton);
             }
@@ -1070,8 +1077,7 @@ namespace NetSatis.FrontOffice
 
             if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_Terazi)))
             {
-                textBox1.Visible = true;
-                labelControl3.Visible = true;
+                layTerazi.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
                 serialPort1.PortName = (Convert.ToString(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_TeraziPort)));
 
                 serialPort1.Open();
@@ -1088,7 +1094,7 @@ namespace NetSatis.FrontOffice
                 txtKod.Text = CodeTool.fiskodolustur(ayar.HizliSatisOnEki, ayar.HizliSatisSiradakiNo.ToString());
                 fisNo = ayar.HizliSatisSiradakiNo;
             }
-
+            navigationPane1.Dock = DockStyle.Right;
             //txtKod.Text =
             //    CodeTool.fiskodolustur(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_PesFisOnEki), SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_PesFisKodu));
         }

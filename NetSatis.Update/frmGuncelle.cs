@@ -35,7 +35,7 @@ namespace NetSatis.Update
                     Directory.CreateDirectory(tempPath);
                 else
                 {
-                    Directory.Delete(tempPath,true);
+                    Directory.Delete(tempPath, true);
                     Directory.CreateDirectory(tempPath);
                 }
 
@@ -84,7 +84,7 @@ namespace NetSatis.Update
             {
 
 
-                
+
                 if (!File.Exists(updateFile))
                 {
                     MessageBox.Show("Güncelleme dosyası bulunamadı", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);

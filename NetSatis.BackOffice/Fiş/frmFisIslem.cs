@@ -2866,7 +2866,7 @@ namespace NetSatis.BackOffice.Fiş
             }
         }
 
-        private void repoStokSec_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private   void repoStokSec_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             var obj = sender as ButtonEdit;
             if (obj == null)
@@ -2883,7 +2883,7 @@ namespace NetSatis.BackOffice.Fiş
                     var seciliStok = frm.secilen.FirstOrDefault();
                     if (seciliStok == null)
                         return;
-                    StokHareketeEkle(seciliStok);
+                     StokHareketeEkle(seciliStok);
 
 
                     break;
@@ -2893,7 +2893,7 @@ namespace NetSatis.BackOffice.Fiş
             }
         }
 
-        private void repobtnBarkod_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private   void repobtnBarkod_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             var obj = sender as ButtonEdit;
             if (obj == null)
@@ -2911,6 +2911,7 @@ namespace NetSatis.BackOffice.Fiş
                         //Buradan
                         var entity = form.secilen.FirstOrDefault();
                         StokHareketeEkle(entity);
+
 
                     }
                     break;
@@ -2942,7 +2943,7 @@ namespace NetSatis.BackOffice.Fiş
             }
         }
 
-        private void repobtnBarkod_KeyDown(object sender, KeyEventArgs e)
+        private async void repobtnBarkod_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
@@ -2959,7 +2960,7 @@ namespace NetSatis.BackOffice.Fiş
 
                     var entityStok = context.Stoklar.Include("Barkod").FirstOrDefault(x => x.Barkodu.Equals(search) || x.Barkod.Any(s => s.Barkodu.Equals(search)));
 
-                    StokHareketeEkle(entityStok);
+                     StokHareketeEkle(entityStok); 
                     break;
                 case Keys.Tab:
                     if (gridStokHareket.ActiveEditor.EditValue != gridStokHareket.ActiveEditor.OldEditValue)
@@ -2975,7 +2976,7 @@ namespace NetSatis.BackOffice.Fiş
             if (seciliStok == null)
             {
                 MessageBox.Show("Barkod Bulunamadı..");
-                gridStokHareket.ActiveEditor.EditValue = null;
+                        gridStokHareket.ActiveEditor.EditValue = gridStokHareket.ActiveEditor.OldEditValue;
                 return;
             }
             var entityStok = context.Stoklar.Include(x => x.StokHareket).FirstOrDefault(x => x.Id == seciliStok.Id);
@@ -3038,8 +3039,7 @@ namespace NetSatis.BackOffice.Fiş
             stokHareketDal.AddOrUpdate(context, row);
 
             await HepsiniHesapla();
-            gridStokHareket.RefreshData();
-
+            gridStokHareket.RefreshData(); 
         }
 
         private void gridStokHareket_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)

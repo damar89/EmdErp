@@ -31,28 +31,46 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKullaniciGiris));
             this.lblBaslik = new DevExpress.XtraEditors.LabelControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.btnGiris = new DevExpress.XtraEditors.SimpleButton();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.btnParolaUnuttum = new DevExpress.XtraEditors.SimpleButton();
-            this.txtKullanici = new DevExpress.XtraEditors.TextEdit();
-            this.txtParola = new DevExpress.XtraEditors.TextEdit();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.checkAnimsa = new DevExpress.XtraEditors.CheckEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullanici.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtParola.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            this.txtParola = new DevExpress.XtraEditors.TextEdit();
+            this.txtKullanici = new DevExpress.XtraEditors.TextEdit();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.simpleSeparator1 = new DevExpress.XtraLayout.SimpleSeparator();
+            this.simpleSeparator2 = new DevExpress.XtraLayout.SimpleSeparator();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkAnimsa.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtParola.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKullanici.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBaslik
             // 
-            this.lblBaslik.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBaslik.Appearance.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblBaslik.Appearance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblBaslik.Appearance.Options.UseFont = true;
             this.lblBaslik.Appearance.Options.UseImageAlign = true;
@@ -60,40 +78,47 @@
             this.lblBaslik.Appearance.Options.UseTextOptions = true;
             this.lblBaslik.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblBaslik.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblBaslik.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.lblBaslik.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblBaslik.Location = new System.Drawing.Point(0, 0);
+            this.lblBaslik.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblBaslik.Location = new System.Drawing.Point(7, 7);
             this.lblBaslik.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(477, 35);
+            this.lblBaslik.Size = new System.Drawing.Size(389, 49);
+            this.lblBaslik.StyleController = this.layoutControl1;
             this.lblBaslik.TabIndex = 9;
             this.lblBaslik.Text = "Kullanıcı Girişi";
             // 
-            // groupControl1
+            // layoutControl1
             // 
-            this.groupControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.groupControl1.Appearance.Options.UseBackColor = true;
-            this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.groupControl1.Controls.Add(this.btnKapat);
-            this.groupControl1.Controls.Add(this.btnGiris);
-            this.groupControl1.Controls.Add(this.btnParolaUnuttum);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 173);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(477, 57);
-            this.groupControl1.TabIndex = 3;
+            this.layoutControl1.Controls.Add(this.btnGiris);
+            this.layoutControl1.Controls.Add(this.btnKapat);
+            this.layoutControl1.Controls.Add(this.btnParolaUnuttum);
+            this.layoutControl1.Controls.Add(this.checkAnimsa);
+            this.layoutControl1.Controls.Add(this.lblBaslik);
+            this.layoutControl1.Controls.Add(this.txtParola);
+            this.layoutControl1.Controls.Add(this.txtKullanici);
+            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(451, 20, 650, 400);
+            this.layoutControl1.Root = this.Root;
+            this.layoutControl1.Size = new System.Drawing.Size(403, 277);
+            this.layoutControl1.TabIndex = 11;
+            this.layoutControl1.Text = "layoutControl1";
             // 
-            // btnKapat
+            // btnGiris
             // 
-            this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKapat.ImageOptions.ImageIndex = 3;
-            this.btnKapat.ImageOptions.ImageList = this.ımageList1;
-            this.btnKapat.Location = new System.Drawing.Point(387, 23);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(85, 31);
-            this.btnKapat.TabIndex = 2;
-            this.btnKapat.Text = " Kapat";
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
+            this.btnGiris.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGiris.Appearance.Font = new System.Drawing.Font("Calibri", 20F);
+            this.btnGiris.Appearance.Options.UseFont = true;
+            this.btnGiris.ImageOptions.ImageIndex = 2;
+            this.btnGiris.ImageOptions.ImageList = this.ımageList1;
+            this.btnGiris.Location = new System.Drawing.Point(7, 179);
+            this.btnGiris.Name = "btnGiris";
+            this.btnGiris.Size = new System.Drawing.Size(389, 38);
+            this.btnGiris.StyleController = this.layoutControl1;
+            this.btnGiris.TabIndex = 0;
+            this.btnGiris.Text = "Giriş Yap";
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // ımageList1
             // 
@@ -104,46 +129,49 @@
             this.ımageList1.Images.SetKeyName(2, "keygiris.ico");
             this.ımageList1.Images.SetKeyName(3, "folder_out.png");
             // 
-            // btnGiris
+            // btnKapat
             // 
-            this.btnGiris.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGiris.ImageOptions.ImageIndex = 2;
-            this.btnGiris.ImageOptions.ImageList = this.ımageList1;
-            this.btnGiris.Location = new System.Drawing.Point(200, 23);
-            this.btnGiris.Name = "btnGiris";
-            this.btnGiris.Size = new System.Drawing.Size(85, 31);
-            this.btnGiris.TabIndex = 0;
-            this.btnGiris.Text = "Giriş";
-            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
+            this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKapat.ImageOptions.ImageIndex = 3;
+            this.btnKapat.ImageOptions.ImageList = this.ımageList1;
+            this.btnKapat.Location = new System.Drawing.Point(203, 228);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(193, 36);
+            this.btnKapat.StyleController = this.layoutControl1;
+            this.btnKapat.TabIndex = 2;
+            this.btnKapat.Text = " Kapat";
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // btnParolaUnuttum
             // 
             this.btnParolaUnuttum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnParolaUnuttum.Appearance.Options.UseTextOptions = true;
+            this.btnParolaUnuttum.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
             this.btnParolaUnuttum.ImageOptions.ImageIndex = 1;
             this.btnParolaUnuttum.ImageOptions.ImageList = this.ımageList1;
-            this.btnParolaUnuttum.Location = new System.Drawing.Point(291, 23);
+            this.btnParolaUnuttum.Location = new System.Drawing.Point(7, 228);
             this.btnParolaUnuttum.Name = "btnParolaUnuttum";
-            this.btnParolaUnuttum.Size = new System.Drawing.Size(90, 31);
+            this.btnParolaUnuttum.Size = new System.Drawing.Size(192, 36);
+            this.btnParolaUnuttum.StyleController = this.layoutControl1;
             this.btnParolaUnuttum.TabIndex = 1;
-            this.btnParolaUnuttum.Text = "Parolamı\r\nUnuttum";
+            this.btnParolaUnuttum.Text = "Parolamı Unuttum";
             this.btnParolaUnuttum.Click += new System.EventHandler(this.btnParolaUnuttum_Click);
             // 
-            // txtKullanici
+            // checkAnimsa
             // 
-            this.txtKullanici.Location = new System.Drawing.Point(135, 44);
-            this.txtKullanici.Name = "txtKullanici";
-            this.txtKullanici.Properties.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
-            this.txtKullanici.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKullanici.Properties.Appearance.Options.UseFont = true;
-            this.txtKullanici.Properties.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
-            this.txtKullanici.Properties.ContextImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
-            this.txtKullanici.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtKullanici.Properties.ContextImageOptions.Image")));
-            this.txtKullanici.Size = new System.Drawing.Size(311, 36);
-            this.txtKullanici.TabIndex = 0;
+            this.checkAnimsa.Location = new System.Drawing.Point(7, 155);
+            this.checkAnimsa.Name = "checkAnimsa";
+            this.checkAnimsa.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.checkAnimsa.Properties.Appearance.Options.UseFont = true;
+            this.checkAnimsa.Properties.AutoHeight = false;
+            this.checkAnimsa.Properties.Caption = "Beni Anımsa";
+            this.checkAnimsa.Size = new System.Drawing.Size(363, 20);
+            this.checkAnimsa.StyleController = this.layoutControl1;
+            this.checkAnimsa.TabIndex = 2;
             // 
             // txtParola
             // 
-            this.txtParola.Location = new System.Drawing.Point(135, 98);
+            this.txtParola.Location = new System.Drawing.Point(162, 100);
             this.txtParola.Name = "txtParola";
             this.txtParola.Properties.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
             this.txtParola.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -151,64 +179,147 @@
             this.txtParola.Properties.ContextImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
             this.txtParola.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtParola.Properties.ContextImageOptions.Image")));
             this.txtParola.Properties.PasswordChar = '*';
-            this.txtParola.Size = new System.Drawing.Size(311, 36);
+            this.txtParola.Size = new System.Drawing.Size(234, 36);
+            this.txtParola.StyleController = this.layoutControl1;
             this.txtParola.TabIndex = 1;
             // 
-            // labelControl1
+            // txtKullanici
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseTextOptions = true;
-            this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(31, 43);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(98, 37);
-            this.labelControl1.TabIndex = 10;
-            this.labelControl1.Text = "Kullanıcı Adı :";
-            this.labelControl1.UseMnemonic = false;
+            this.txtKullanici.Location = new System.Drawing.Point(162, 60);
+            this.txtKullanici.Name = "txtKullanici";
+            this.txtKullanici.Properties.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
+            this.txtKullanici.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKullanici.Properties.Appearance.Options.UseFont = true;
+            this.txtKullanici.Properties.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
+            this.txtKullanici.Properties.ContextImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
+            this.txtKullanici.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtKullanici.Properties.ContextImageOptions.Image")));
+            this.txtKullanici.Size = new System.Drawing.Size(234, 36);
+            this.txtKullanici.StyleController = this.layoutControl1;
+            this.txtKullanici.TabIndex = 0;
             // 
-            // labelControl2
+            // Root
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Appearance.Options.UseTextOptions = true;
-            this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.Location = new System.Drawing.Point(30, 97);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(98, 37);
-            this.labelControl2.TabIndex = 10;
-            this.labelControl2.Text = "Parola :";
-            this.labelControl2.UseMnemonic = false;
+            this.Root.AppearanceGroup.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Root.AppearanceGroup.BackColor2 = System.Drawing.Color.Teal;
+            this.Root.AppearanceGroup.Options.UseBackColor = true;
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem3,
+            this.layoutControlItem4,
+            this.layoutControlItem7,
+            this.layoutControlItem6,
+            this.layoutControlItem5,
+            this.simpleSeparator1,
+            this.simpleSeparator2});
+            this.Root.Name = "Root";
+            this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(5, 5, 5, 5);
+            this.Root.Size = new System.Drawing.Size(403, 277);
+            this.Root.TextVisible = false;
             // 
-            // checkAnimsa
+            // layoutControlItem1
             // 
-            this.checkAnimsa.Location = new System.Drawing.Point(135, 140);
-            this.checkAnimsa.Name = "checkAnimsa";
-            this.checkAnimsa.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkAnimsa.Properties.Appearance.Options.UseFont = true;
-            this.checkAnimsa.Properties.AutoHeight = false;
-            this.checkAnimsa.Properties.Caption = "Beni Anımsa";
-            this.checkAnimsa.Size = new System.Drawing.Size(130, 27);
-            this.checkAnimsa.TabIndex = 2;
+            this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem1.Control = this.txtKullanici;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 53);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(393, 40);
+            this.layoutControlItem1.Text = "Kullanıcı Adı";
+            this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(150, 20);
+            this.layoutControlItem1.TextToControlDistance = 5;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem2.Control = this.txtParola;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 93);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(393, 40);
+            this.layoutControlItem2.Text = "Parola";
+            this.layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(150, 20);
+            this.layoutControlItem2.TextToControlDistance = 5;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.checkAnimsa;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 148);
+            this.layoutControlItem3.MaxSize = new System.Drawing.Size(367, 24);
+            this.layoutControlItem3.MinSize = new System.Drawing.Size(367, 24);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(393, 24);
+            this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.lblBaslik;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(393, 53);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.btnGiris;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 172);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(393, 42);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.btnParolaUnuttum;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 221);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(196, 46);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.btnKapat;
+            this.layoutControlItem5.Location = new System.Drawing.Point(196, 221);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(197, 46);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
+            // simpleSeparator1
+            // 
+            this.simpleSeparator1.AllowHotTrack = false;
+            this.simpleSeparator1.Location = new System.Drawing.Point(0, 135);
+            this.simpleSeparator1.Name = "simpleSeparator1";
+            this.simpleSeparator1.Size = new System.Drawing.Size(393, 15);
+            this.simpleSeparator1.Spacing = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
+            // 
+            // simpleSeparator2
+            // 
+            this.simpleSeparator2.AllowHotTrack = false;
+            this.simpleSeparator2.Location = new System.Drawing.Point(0, 216);
+            this.simpleSeparator2.Name = "simpleSeparator2";
+            this.simpleSeparator2.Size = new System.Drawing.Size(393, 7);
+            this.simpleSeparator2.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
             // 
             // frmKullaniciGiris
             // 
             this.Appearance.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Appearance.BackColor2 = System.Drawing.Color.Green;
             this.Appearance.ForeColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 230);
-            this.Controls.Add(this.checkAnimsa);
-            this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.txtParola);
-            this.Controls.Add(this.txtKullanici);
-            this.Controls.Add(this.groupControl1);
-            this.Controls.Add(this.lblBaslik);
+            this.ClientSize = new System.Drawing.Size(403, 277);
+            this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("frmKullaniciGiris.IconOptions.Icon")));
             this.KeyPreview = true;
@@ -220,12 +331,22 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmKullaniciGiris_FormClosed);
             this.Load += new System.EventHandler(this.frmKullaniciGiris_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmKullaniciGiris_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtKullanici.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtParola.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.checkAnimsa.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtParola.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKullanici.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -233,7 +354,6 @@
         #endregion
 
         private DevExpress.XtraEditors.LabelControl lblBaslik;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
         private DevExpress.XtraEditors.SimpleButton btnParolaUnuttum;
         private DevExpress.XtraEditors.SimpleButton btnGiris;
@@ -241,8 +361,17 @@
         private DevExpress.XtraEditors.TextEdit txtParola;
         private System.Windows.Forms.ImageList ımageList1;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.CheckEdit checkAnimsa;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
+        private DevExpress.XtraLayout.SimpleSeparator simpleSeparator2;
     }
 }

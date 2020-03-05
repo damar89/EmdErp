@@ -225,7 +225,8 @@ namespace NetSatis.BackOffice.Stok
 
         private void frmStokSec_FormClosing(object sender, FormClosingEventArgs e)
         {
-            gridContStoklar.MainView.SaveLayoutToXml(DosyaYolu);
+            if (Directory.Exists($@"{Application.StartupPath}\Gorunum"))
+                gridContStoklar.MainView.SaveLayoutToXml(DosyaYolu);
         }
 
         private void gridStoklar_RowCountChanged(object sender, EventArgs e)
