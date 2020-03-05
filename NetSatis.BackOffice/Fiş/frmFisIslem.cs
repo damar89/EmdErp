@@ -2162,7 +2162,7 @@ namespace NetSatis.BackOffice.Fiş
                 item.IndirimTutar = satirIndirimTutari;
                 item.ToplamTutar = satirNetTutar;
 
-            } 
+            }
             calcKdvToplam.EditValue = toplamKdvToplam;
             calcAraToplam.EditValue = toplamAraToplam - toplamKdvToplam;
             calcAraToplam.EditValue = toplamAraToplam;
@@ -2855,6 +2855,12 @@ namespace NetSatis.BackOffice.Fiş
                 case Keys.F7:
                     repoStokSec_ButtonClick(sender, new DevExpress.XtraEditors.Controls.ButtonPressedEventArgs(repobtnStokSec.Buttons[1]));
                     break;
+                case Keys.Tab:
+                case Keys.Enter:
+                    if (gridStokHareket.ActiveEditor.EditValue != gridStokHareket.ActiveEditor.OldEditValue)
+                        gridStokHareket.ActiveEditor.EditValue = gridStokHareket.ActiveEditor.OldEditValue;
+                    break;
+
                 default:
                     break;
             }
@@ -2892,9 +2898,11 @@ namespace NetSatis.BackOffice.Fiş
             var obj = sender as ButtonEdit;
             if (obj == null)
                 return;
+
             switch (e.Button.Kind)
             {
                 case DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph:
+
                     string search = gridStokHareket.ActiveEditor.Text;
                     frmStokSec form = new frmStokSec(ref this.context, search);
                     form.ShowDialog();
@@ -2948,9 +2956,16 @@ namespace NetSatis.BackOffice.Fiş
                     string search = gridStokHareket.ActiveEditor.Text;
                     if (string.IsNullOrEmpty(search))
                         return;
+
                     var entityStok = context.Stoklar.Include("Barkod").FirstOrDefault(x => x.Barkodu.Equals(search) || x.Barkod.Any(s => s.Barkodu.Equals(search)));
+
                     StokHareketeEkle(entityStok);
                     break;
+                case Keys.Tab:
+                    if (gridStokHareket.ActiveEditor.EditValue != gridStokHareket.ActiveEditor.OldEditValue)
+                        gridStokHareket.ActiveEditor.EditValue = gridStokHareket.ActiveEditor.OldEditValue;
+                    break;
+
                 default:
                     break;
             }
@@ -3042,6 +3057,20 @@ namespace NetSatis.BackOffice.Fiş
                 e.ErrorText = null;
                 e.Valid = true;
 
+            }
+        }
+
+        private void gridStokHareket_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (gridStokHareket.RowCount == 0)
+                return;
+            if (gridStokHareket.FocusedColumn == gridStokHareket.Columns["ToplamTutar"])
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    gridStokHareket.FocusedRowHandle = GridControl.NewItemRowHandle;
+                    gridStokHareket.FocusedColumn = gridStokHareket.Columns["Stok.StokKodu"];
+                }
             }
         }
     }

@@ -2139,6 +2139,7 @@
             this.gridStokHareket.ShownEditor += new System.EventHandler(this.gridStokHareket_ShownEditor);
             this.gridStokHareket.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.gridStokHareket_InvalidRowException);
             this.gridStokHareket.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gridStokHareket_ValidateRow);
+            this.gridStokHareket.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridStokHareket_KeyDown);
             this.gridStokHareket.RowCountChanged += new System.EventHandler(this.gridStokHareket_RowCountChanged);
             // 
             // colId
