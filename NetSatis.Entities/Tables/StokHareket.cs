@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using NetSatis.Entities.Interface;
 
 namespace NetSatis.Entities.Tables
@@ -7,6 +8,9 @@ namespace NetSatis.Entities.Tables
     public class StokHareket : IEntity
     {
         public int Id { get; set; }
+
+        [NotMapped]
+        public int SiraNo { get; set; } = 0;
         public string FisKodu { get; set; }
         public string FisSeri { get; set; }
         public string Sira { get; set; }
