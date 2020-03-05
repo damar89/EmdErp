@@ -2162,7 +2162,7 @@ namespace NetSatis.BackOffice.Fiş
                 item.IndirimTutar = satirIndirimTutari;
                 item.ToplamTutar = satirNetTutar;
 
-            }
+            } 
             calcKdvToplam.EditValue = toplamKdvToplam;
             calcAraToplam.EditValue = toplamAraToplam - toplamKdvToplam;
             calcAraToplam.EditValue = toplamAraToplam;

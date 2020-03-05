@@ -95,7 +95,7 @@ namespace NetSatis.Update
                     if (File.Exists(startupFileName))
                         File.Delete(startupFileName);
 
-                    File.Copy(tempPath + "\\" + veriler.Name, startupFileName);
+                    File.Copy(tempPath + "\\" + veriler.Name, startupFileName,true);
 
                 }
                 Directory.Delete(tempPath, true);
