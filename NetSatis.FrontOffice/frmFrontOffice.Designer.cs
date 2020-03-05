@@ -947,7 +947,7 @@
             this.lblCariName.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.lblCariName.Location = new System.Drawing.Point(3, 595);
             this.lblCariName.Name = "lblCariName";
-            this.lblCariName.Size = new System.Drawing.Size(276, 41);
+            this.lblCariName.Size = new System.Drawing.Size(292, 41);
             this.lblCariName.TabIndex = 37;
             // 
             // labelControl40
@@ -960,9 +960,9 @@
             this.labelControl40.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl40.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl40.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl40.Location = new System.Drawing.Point(4, 563);
+            this.labelControl40.Location = new System.Drawing.Point(6, 563);
             this.labelControl40.Name = "labelControl40";
-            this.labelControl40.Size = new System.Drawing.Size(272, 20);
+            this.labelControl40.Size = new System.Drawing.Size(289, 20);
             this.labelControl40.TabIndex = 37;
             this.labelControl40.Text = "Seçilen Cari";
             // 
@@ -1054,7 +1054,7 @@
             this.labelControl2.Appearance.Options.UseTextOptions = true;
             this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.Location = new System.Drawing.Point(7, 219);
+            this.labelControl2.Location = new System.Drawing.Point(0, 219);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(112, 22);
             this.labelControl2.TabIndex = 6;
@@ -1071,7 +1071,7 @@
             this.labelControl1.Appearance.Options.UseTextOptions = true;
             this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(3, 178);
+            this.labelControl1.Location = new System.Drawing.Point(5, 174);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(116, 22);
             this.labelControl1.TabIndex = 6;
@@ -1088,7 +1088,7 @@
             this.labelControl8.Appearance.Options.UseTextOptions = true;
             this.labelControl8.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl8.Location = new System.Drawing.Point(7, 255);
+            this.labelControl8.Location = new System.Drawing.Point(3, 255);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(111, 22);
             this.labelControl8.TabIndex = 6;
@@ -2045,13 +2045,13 @@
             this.navigationPage2.Controls.Add(this.checkIrsaliye);
             this.navigationPage2.ImageOptions.Image = global::NetSatis.FrontOffice.Properties.Resources.technology_32x321;
             this.navigationPage2.Name = "navigationPage2";
-            this.navigationPage2.Size = new System.Drawing.Size(305, 782);
+            this.navigationPage2.Size = new System.Drawing.Size(301, 764);
             // 
             // btnKaydet
             // 
             this.btnKaydet.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnKaydet.ImageOptions.ImageIndex = 0;
-            this.btnKaydet.Location = new System.Drawing.Point(66, 51);
+            this.btnKaydet.Location = new System.Drawing.Point(64, 51);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(85, 31);
             this.btnKaydet.TabIndex = 4;
@@ -2061,7 +2061,7 @@
             // 
             // checkIrsaliye
             // 
-            this.checkIrsaliye.Location = new System.Drawing.Point(107, 26);
+            this.checkIrsaliye.Location = new System.Drawing.Point(64, 25);
             this.checkIrsaliye.MenuManager = this.barManager1;
             this.checkIrsaliye.Name = "checkIrsaliye";
             this.checkIrsaliye.Properties.Appearance.ForeColor = System.Drawing.Color.Black;

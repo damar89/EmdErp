@@ -44,7 +44,7 @@
             // txtBarkod
             // 
             this.txtBarkod.EditValue = "";
-            this.txtBarkod.Location = new System.Drawing.Point(4, 44);
+            this.txtBarkod.Location = new System.Drawing.Point(99, 44);
             this.txtBarkod.Name = "txtBarkod";
             this.txtBarkod.Properties.Appearance.BackColor = System.Drawing.Color.Lime;
             this.txtBarkod.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -56,7 +56,7 @@
             this.txtBarkod.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtBarkod.Properties.AutoHeight = false;
             this.txtBarkod.Properties.NullText = "54564";
-            this.txtBarkod.Size = new System.Drawing.Size(509, 36);
+            this.txtBarkod.Size = new System.Drawing.Size(414, 36);
             this.txtBarkod.TabIndex = 0;
             this.txtBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyDown);
             // 
@@ -76,9 +76,9 @@
             // 
             // calcSatisFiyat1
             // 
-            this.calcSatisFiyat1.Location = new System.Drawing.Point(109, 200);
+            this.calcSatisFiyat1.Location = new System.Drawing.Point(109, 149);
             this.calcSatisFiyat1.Name = "calcSatisFiyat1";
-            this.calcSatisFiyat1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.calcSatisFiyat1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.calcSatisFiyat1.Properties.Appearance.Options.UseFont = true;
             this.calcSatisFiyat1.Properties.AutoHeight = false;
             this.calcSatisFiyat1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -89,7 +89,7 @@
             this.calcSatisFiyat1.Properties.EditFormat.FormatString = "c2";
             this.calcSatisFiyat1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.calcSatisFiyat1.Properties.ReadOnly = true;
-            this.calcSatisFiyat1.Size = new System.Drawing.Size(378, 48);
+            this.calcSatisFiyat1.Size = new System.Drawing.Size(404, 23);
             this.calcSatisFiyat1.TabIndex = 6;
             // 
             // labelControl26
@@ -102,9 +102,9 @@
             this.labelControl26.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl26.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl26.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.labelControl26.Location = new System.Drawing.Point(12, 201);
+            this.labelControl26.Location = new System.Drawing.Point(12, 151);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(91, 47);
+            this.labelControl26.Size = new System.Drawing.Size(91, 20);
             this.labelControl26.TabIndex = 7;
             this.labelControl26.Text = "Satış Fiyatı :";
             // 
@@ -118,9 +118,9 @@
             this.labelControl4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.labelControl4.Location = new System.Drawing.Point(10, 153);
+            this.labelControl4.Location = new System.Drawing.Point(12, 125);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(91, 31);
+            this.labelControl4.Size = new System.Drawing.Size(91, 20);
             this.labelControl4.TabIndex = 8;
             this.labelControl4.Text = "  Stok Adı :";
             // 
@@ -136,7 +136,7 @@
             this.labelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl2.Location = new System.Drawing.Point(12, 97);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(91, 36);
+            this.labelControl2.Size = new System.Drawing.Size(91, 20);
             this.labelControl2.TabIndex = 9;
             this.labelControl2.Text = "  Stok Kodu :";
             // 
@@ -164,7 +164,7 @@
             this.txtKod.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.txtKod.Location = new System.Drawing.Point(109, 97);
             this.txtKod.Name = "txtKod";
-            this.txtKod.Size = new System.Drawing.Size(400, 36);
+            this.txtKod.Size = new System.Drawing.Size(400, 20);
             this.txtKod.TabIndex = 9;
             // 
             // txtStokAdi
@@ -177,9 +177,9 @@
             this.txtStokAdi.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtStokAdi.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.txtStokAdi.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.txtStokAdi.Location = new System.Drawing.Point(109, 151);
+            this.txtStokAdi.Location = new System.Drawing.Point(109, 125);
             this.txtStokAdi.Name = "txtStokAdi";
-            this.txtStokAdi.Size = new System.Drawing.Size(400, 36);
+            this.txtStokAdi.Size = new System.Drawing.Size(400, 20);
             this.txtStokAdi.TabIndex = 9;
             // 
             // frmFiyatGor
@@ -197,11 +197,11 @@
             this.Controls.Add(this.txtBarkod);
             this.Controls.Add(this.labelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IconOptions.ShowIcon = false;
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmFiyatGor";
-            this.ShowIcon = false;
             this.Text = "Fiyat Gör";
             this.Load += new System.EventHandler(this.frmFiyatGor_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmFiyatGor_KeyDown);

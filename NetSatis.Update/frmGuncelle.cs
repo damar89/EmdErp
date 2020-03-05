@@ -22,39 +22,50 @@ namespace NetSatis.Update
         }
         public frmGuncelleme()
         {
-
-            InitializeComponent();
-
-            startupPath = Application.StartupPath;
-            tempPath = Path.Combine(startupPath, "temp");
-            updateFile = tempPath + "\\Update.zip";
-
-            if (!Directory.Exists(tempPath))
-                Directory.CreateDirectory(tempPath);
-
-
-
-            if (IsRunning("NetSatis.BackOffice"))
+            try
             {
-                if (MessageBox.Show("Güncelleme işleminden önce açık olan uygulamanızın kapatılması gerekiyor. Onaylıyor musunuz ?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
+
+                InitializeComponent();
+
+                startupPath = Application.StartupPath;
+                tempPath = Path.Combine(startupPath, "temp");
+                updateFile = tempPath + "\\Update.zip";
+
+                if (!Directory.Exists(tempPath))
+                    Directory.CreateDirectory(tempPath);
+                else
                 {
-                    foreach (var process in Process.GetProcessesByName("NetSatis.BackOffice"))
+                    Directory.Delete(tempPath,true);
+                    Directory.CreateDirectory(tempPath);
+                }
+
+
+                if (IsRunning("NetSatis.BackOffice"))
+                {
+                    if (MessageBox.Show("Güncelleme işleminden önce açık olan uygulamanızın kapatılması gerekiyor. Onaylıyor musunuz ?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        process.CloseMainWindow();
-                        process.Kill();
+                        foreach (var process in Process.GetProcessesByName("NetSatis.BackOffice"))
+                        {
+                            process.CloseMainWindow();
+                            process.Kill();
+                        }
+                    }
+                }
+                if (IsRunning("NetSatis.FrontOffice"))
+                {
+                    if (MessageBox.Show("Güncelleme işleminden önce açık olan uygulamanızın kapatılması gerekiyor. Onaylıyor musunuz ?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        foreach (var process in Process.GetProcessesByName("NetSatis.FrontOffice"))
+                        {
+                            process.CloseMainWindow();
+                            process.Kill();
+                        }
                     }
                 }
             }
-            if (IsRunning("NetSatis.FrontOffice"))
+            catch (Exception ex)
             {
-                if (MessageBox.Show("Güncelleme işleminden önce açık olan uygulamanızın kapatılması gerekiyor. Onaylıyor musunuz ?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    foreach (var process in Process.GetProcessesByName("NetSatis.FrontOffice"))
-                    {
-                        process.CloseMainWindow();
-                        process.Kill();
-                    }
-                }
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -73,9 +84,7 @@ namespace NetSatis.Update
             {
 
 
-                if (!Directory.Exists(tempPath))
-                    Directory.CreateDirectory(tempPath);
-
+                
                 if (!File.Exists(updateFile))
                 {
                     MessageBox.Show("Güncelleme dosyası bulunamadı", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -95,7 +104,7 @@ namespace NetSatis.Update
                     if (File.Exists(startupFileName))
                         File.Delete(startupFileName);
 
-                    File.Copy(tempPath + "\\" + veriler.Name, startupFileName,true);
+                    File.Copy(tempPath + "\\" + veriler.Name, startupFileName, true);
 
                 }
                 Directory.Delete(tempPath, true);

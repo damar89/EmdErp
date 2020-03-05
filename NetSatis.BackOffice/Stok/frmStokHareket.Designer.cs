@@ -308,7 +308,7 @@
             this.colHareket.OptionsColumn.AllowEdit = false;
             this.colHareket.Visible = true;
             this.colHareket.VisibleIndex = 1;
-            this.colHareket.Width = 80;
+            this.colHareket.Width = 79;
             // 
             // colStokAdi
             // 
@@ -344,7 +344,7 @@
             this.colTarih.OptionsColumn.AllowEdit = false;
             this.colTarih.Visible = true;
             this.colTarih.VisibleIndex = 2;
-            this.colTarih.Width = 80;
+            this.colTarih.Width = 79;
             // 
             // colSaat
             // 
@@ -375,7 +375,7 @@
             this.colMiktar.OptionsColumn.AllowEdit = false;
             this.colMiktar.Visible = true;
             this.colMiktar.VisibleIndex = 5;
-            this.colMiktar.Width = 68;
+            this.colMiktar.Width = 66;
             // 
             // colKdv
             // 
@@ -385,7 +385,7 @@
             this.colKdv.OptionsColumn.AllowEdit = false;
             this.colKdv.Visible = true;
             this.colKdv.VisibleIndex = 8;
-            this.colKdv.Width = 43;
+            this.colKdv.Width = 41;
             // 
             // colBirimFiyati
             // 
@@ -398,7 +398,7 @@
             this.colBirimFiyati.OptionsColumn.AllowEdit = false;
             this.colBirimFiyati.Visible = true;
             this.colBirimFiyati.VisibleIndex = 6;
-            this.colBirimFiyati.Width = 71;
+            this.colBirimFiyati.Width = 69;
             // 
             // repoFiyat
             // 
@@ -416,7 +416,7 @@
             this.colIndirimOrani.OptionsColumn.AllowEdit = false;
             this.colIndirimOrani.Visible = true;
             this.colIndirimOrani.VisibleIndex = 9;
-            this.colIndirimOrani.Width = 63;
+            this.colIndirimOrani.Width = 61;
             // 
             // colDepoKodu
             // 
@@ -501,7 +501,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colIndirimTutar", "SUM={0:C2}")});
             this.colIndirimTutar.Visible = true;
             this.colIndirimTutar.VisibleIndex = 10;
-            this.colIndirimTutar.Width = 82;
+            this.colIndirimTutar.Width = 80;
             // 
             // colToplamTutar
             // 
@@ -515,7 +515,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colToplamTutar", "SUM={0:C2}")});
             this.colToplamTutar.Visible = true;
             this.colToplamTutar.VisibleIndex = 12;
-            this.colToplamTutar.Width = 121;
+            this.colToplamTutar.Width = 132;
             // 
             // colKdvToplam
             // 
@@ -545,7 +545,7 @@
             this.colCariAdi.OptionsColumn.AllowEdit = false;
             this.colCariAdi.Visible = true;
             this.colCariAdi.VisibleIndex = 3;
-            this.colCariAdi.Width = 122;
+            this.colCariAdi.Width = 121;
             // 
             // colFisTuru
             // 
@@ -555,7 +555,7 @@
             this.colFisTuru.OptionsColumn.AllowEdit = false;
             this.colFisTuru.Visible = true;
             this.colFisTuru.VisibleIndex = 0;
-            this.colFisTuru.Width = 101;
+            this.colFisTuru.Width = 100;
             // 
             // colNetBirimFiyat
             // 
@@ -566,7 +566,7 @@
             this.colNetBirimFiyat.Name = "colNetBirimFiyat";
             this.colNetBirimFiyat.Visible = true;
             this.colNetBirimFiyat.VisibleIndex = 7;
-            this.colNetBirimFiyat.Width = 95;
+            this.colNetBirimFiyat.Width = 93;
             // 
             // colDipIsk
             // 
@@ -577,7 +577,7 @@
             this.colDipIsk.Name = "colDipIsk";
             this.colDipIsk.Visible = true;
             this.colDipIsk.VisibleIndex = 11;
-            this.colDipIsk.Width = 115;
+            this.colDipIsk.Width = 113;
             // 
             // gridView2
             // 
@@ -593,8 +593,8 @@
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.groupControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(1117, 305);
-            this.splitContainerControl2.SplitterPosition = 425;
+            this.splitContainerControl2.Size = new System.Drawing.Size(1117, 301);
+            this.splitContainerControl2.SplitterPosition = 500;
             this.splitContainerControl2.TabIndex = 0;
             this.splitContainerControl2.Text = "splitContainerControl2";
             // 
@@ -604,17 +604,17 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(425, 305);
+            this.groupControl2.Size = new System.Drawing.Size(500, 301);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Depo Bazında Stok Miktarları";
             // 
             // gridContDepoStok
             // 
             this.gridContDepoStok.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridContDepoStok.Location = new System.Drawing.Point(2, 21);
+            this.gridContDepoStok.Location = new System.Drawing.Point(2, 23);
             this.gridContDepoStok.MainView = this.gridDepoStok;
             this.gridContDepoStok.Name = "gridContDepoStok";
-            this.gridContDepoStok.Size = new System.Drawing.Size(421, 282);
+            this.gridContDepoStok.Size = new System.Drawing.Size(496, 276);
             this.gridContDepoStok.TabIndex = 2;
             this.gridContDepoStok.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridDepoStok});
@@ -682,17 +682,17 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(686, 305);
+            this.groupControl3.Size = new System.Drawing.Size(607, 301);
             this.groupControl3.TabIndex = 1;
             this.groupControl3.Text = "Genel Stok Durumu";
             // 
             // gridContGenelStok
             // 
             this.gridContGenelStok.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridContGenelStok.Location = new System.Drawing.Point(2, 21);
+            this.gridContGenelStok.Location = new System.Drawing.Point(2, 23);
             this.gridContGenelStok.MainView = this.gridGenelStok;
             this.gridContGenelStok.Name = "gridContGenelStok";
-            this.gridContGenelStok.Size = new System.Drawing.Size(682, 282);
+            this.gridContGenelStok.Size = new System.Drawing.Size(603, 276);
             this.gridContGenelStok.TabIndex = 2;
             this.gridContGenelStok.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridGenelStok});
