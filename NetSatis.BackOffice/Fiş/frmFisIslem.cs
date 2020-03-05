@@ -2054,6 +2054,7 @@ namespace NetSatis.BackOffice.Fiş
         }
         async Task HepsiniHesapla()
         {
+            await Task.Delay(10);
 
             gridPrsonelHareket.UpdateSummary();
             context.Configuration.AutoDetectChangesEnabled = false;
@@ -2977,6 +2978,7 @@ namespace NetSatis.BackOffice.Fiş
             {
                 MessageBox.Show("Barkod Bulunamadı..");
                 gridStokHareket.ActiveEditor.EditValue = gridStokHareket.ActiveEditor.OldEditValue;
+                gridStokHareket.FocusedColumn = gridStokHareket.Columns["Stok.StokKodu"];
                 return;
             }
             var entityStok = context.Stoklar.Include(x => x.StokHareket).FirstOrDefault(x => x.Id == seciliStok.Id);
@@ -3050,7 +3052,6 @@ namespace NetSatis.BackOffice.Fiş
             {
                 e.ErrorText = "Lütfen Stok Seçiniz!";
                 e.Valid = false;
-
             }
             else
             {
