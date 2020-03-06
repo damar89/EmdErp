@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using System.IO;
+using DevExpress.XtraGrid;
 
 namespace NetSatis.BackOffice.Cari
 {
@@ -71,22 +72,23 @@ namespace NetSatis.BackOffice.Cari
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
-            if (gridView1.GetSelectedRows().Length != 0)
-            {
-                foreach (var row in gridView1.GetSelectedRows())
+            if (gridView1.FocusedRowHandle != GridControl.InvalidRowHandle)
+                if (gridView1.GetSelectedRows().Length != 0)
                 {
-                    string carikodu = gridView1.GetRowCellValue(row, colCariKodu).ToString();
-                    secilen.Add(context.Cariler.SingleOrDefault(c => c.CariKodu == carikodu));
+                    foreach (var row in gridView1.GetSelectedRows())
+                    {
+                        string carikodu = gridView1.GetRowCellValue(row, colCariKodu).ToString();
+                        secilen.Add(context.Cariler.SingleOrDefault(c => c.CariKodu == carikodu));
 
+                    }
+
+                    secildi = true;
+                    this.Close();
                 }
-
-                secildi = true;
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Cari Seçimi Yapılmadı");
-            }
+                else
+                {
+                    MessageBox.Show("Cari Seçimi Yapılmadı");
+                }
         }
 
         private void gridView1_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)

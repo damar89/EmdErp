@@ -106,7 +106,7 @@ namespace NetSatis.FrontOffice
             {
                 var buton = new SimpleButton
                 {
-                    Name = "nakit",
+                    Name = "Nakit",
                     Tag = "1",
                 };
                 OdemeEkle_Click(buton, null);
@@ -344,7 +344,7 @@ namespace NetSatis.FrontOffice
         }
         private void OdemeEkle_Click(object sender, EventArgs e)
         {
-            var buton = (sender as SimpleButton);
+            var buton = (sender as Button);
             if (btnOdemeBol.Checked)
             {
                 if (calcOdenemesiGereken.Value == 0)

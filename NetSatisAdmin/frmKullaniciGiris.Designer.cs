@@ -296,7 +296,7 @@
             // simpleSeparator1
             // 
             this.simpleSeparator1.AllowHotTrack = false;
-            this.simpleSeparator1.Location = new System.Drawing.Point(0, 135);
+            this.simpleSeparator1.Location = new System.Drawing.Point(0, 133);
             this.simpleSeparator1.Name = "simpleSeparator1";
             this.simpleSeparator1.Size = new System.Drawing.Size(393, 15);
             this.simpleSeparator1.Spacing = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
@@ -304,7 +304,7 @@
             // simpleSeparator2
             // 
             this.simpleSeparator2.AllowHotTrack = false;
-            this.simpleSeparator2.Location = new System.Drawing.Point(0, 216);
+            this.simpleSeparator2.Location = new System.Drawing.Point(0, 214);
             this.simpleSeparator2.Name = "simpleSeparator2";
             this.simpleSeparator2.Size = new System.Drawing.Size(393, 7);
             this.simpleSeparator2.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
