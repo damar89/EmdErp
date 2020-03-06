@@ -49,15 +49,13 @@ namespace NetSatis.BackOffice
             string BarkodDizayn = $@"{Application.StartupPath}\BarkodDizayn";
             if (!Directory.Exists(BarkodDizayn)) Directory.CreateDirectory(BarkodDizayn);
 
-            try
-            {
+            try {
                 managerS.LookAndFeel.SetSkinStyle(SettingsTool.AyarOku(SettingsTool.Ayarlar.TemaAyarlari_Tema));
                 //frmKullaniciGiris girisform = new frmKullaniciGiris();
                 //girisform.ShowDialog();
                 barKullaniciAdi.Caption = $"Giriş Yapan Kullanıcı : {RoleTool.KullaniciEntity.KullaniciAdi}";
                 string Name = RoleTool.KullaniciEntity.KullaniciAdi;
-                using (NetSatis.Entities.Context.NetSatisContext db = new Entities.Context.NetSatisContext())
-                {
+                using (NetSatis.Entities.Context.NetSatisContext db = new Entities.Context.NetSatisContext()) {
                     var list = db.Kullanicilar.Where(x => x.KullaniciAdi == Name).FirstOrDefault();
                     UserId = list.Id;
                 }
@@ -67,20 +65,15 @@ namespace NetSatis.BackOffice
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 string guncelVersiyon = indir.DownloadString("https://emdyazilim.com/downloads/version.txt")
                     .Substring(0, 7);
-                if (programVersiyon != guncelVersiyon)
-                {
-                    if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.GenelAyarlar_GuncellemeKontrolu)))
-                    {
+                if (programVersiyon != guncelVersiyon) {
+                    if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.GenelAyarlar_GuncellemeKontrolu))) {
                         if (MessageBox.Show("Programın yeni bir sürümü bulundu güncellemek ister misiniz?",
-                                "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                        {
+                                "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes) {
                             Process.Start($"{Application.StartupPath}\\NetSatis.Update.exe");
                         }
                     }
                 }
-            }
-            catch (Exception)
-            {
+            } catch (Exception) {
                 Application.Exit();
             }
 
@@ -243,12 +236,9 @@ namespace NetSatis.BackOffice
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             string guncelVersiyon = indir.DownloadString("https://emdyazilim.com/downloads/version.txt");
-            if (programVersiyon != guncelVersiyon)
-            {
+            if (programVersiyon != guncelVersiyon) {
                 Process.Start($"{Application.StartupPath}\\NetSatis.Update.exe");
-            }
-            else
-            {
+            } else {
                 MessageBox.Show("Programınız Güncel");
             }
 
@@ -907,13 +897,11 @@ namespace NetSatis.BackOffice
             var x = sender as TreeList;
             int a = 5;
             string name = "";
-            if (x.FocusedNode.Tag != null)
-            {
+            if (x.FocusedNode.Tag != null) {
                 name = x.FocusedNode.Tag.ToString();
             }
 
-            switch (name)
-            {
+            switch (name) {
                 case "Sayım Fişi":
                     FisIslem_Click(x.FocusedNode.Tag.ToString());
                     break;
@@ -1095,18 +1083,18 @@ namespace NetSatis.BackOffice
                     frmStokAnaliz frm = new frmStokAnaliz();
                     frm.Show();
                     break;
-                    case"Gün Sonu Raporu":
-                        frmGunSonuFilter frm4=new frmGunSonuFilter();
+                case "Gün Sonu Raporu":
+                    frmGunSonuFilter frm4 = new frmGunSonuFilter();
                     frm4.Show();
                     break;
-                    case "Cari Stok Hareketleri":
+                case "Cari Stok Hareketleri":
                     frmCariStokHareket frm2 = new frmCariStokHareket();
                     frm2.Show();
                     break;
                 default:
                     break;
             }
-            
+
         }
 
         private void navBarItem30_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -1133,6 +1121,14 @@ namespace NetSatis.BackOffice
             frmFaturaGonder frm = new frmFaturaGonder();
             frm.Show();
 
+        }
+
+        private void frmAnaMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var dr = MessageBox.Show("Çıkmak istediğinizden emin misiniz?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dr == DialogResult.No)
+                e.Cancel = true;
         }
     }
 }

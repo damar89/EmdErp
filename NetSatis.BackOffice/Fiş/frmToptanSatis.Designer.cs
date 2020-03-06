@@ -560,7 +560,7 @@
             this.gridContFisler.Name = "gridContFisler";
             this.gridContFisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpsChkKdvDahil});
-            this.gridContFisler.Size = new System.Drawing.Size(1117, 373);
+            this.gridContFisler.Size = new System.Drawing.Size(1117, 377);
             this.gridContFisler.TabIndex = 0;
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});

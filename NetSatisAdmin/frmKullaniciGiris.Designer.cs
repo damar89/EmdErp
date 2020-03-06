@@ -110,11 +110,12 @@
             this.btnGiris.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGiris.Appearance.Font = new System.Drawing.Font("Calibri", 20F);
             this.btnGiris.Appearance.Options.UseFont = true;
+            this.btnGiris.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGiris.ImageOptions.ImageIndex = 2;
             this.btnGiris.ImageOptions.ImageList = this.ımageList1;
-            this.btnGiris.Location = new System.Drawing.Point(7, 179);
+            this.btnGiris.Location = new System.Drawing.Point(7, 180);
             this.btnGiris.Name = "btnGiris";
-            this.btnGiris.Size = new System.Drawing.Size(389, 38);
+            this.btnGiris.Size = new System.Drawing.Size(389, 40);
             this.btnGiris.StyleController = this.layoutControl1;
             this.btnGiris.TabIndex = 0;
             this.btnGiris.Text = "Giriş Yap";
@@ -132,11 +133,12 @@
             // btnKapat
             // 
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKapat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKapat.ImageOptions.ImageIndex = 3;
             this.btnKapat.ImageOptions.ImageList = this.ımageList1;
-            this.btnKapat.Location = new System.Drawing.Point(203, 228);
+            this.btnKapat.Location = new System.Drawing.Point(203, 232);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(193, 36);
+            this.btnKapat.Size = new System.Drawing.Size(193, 38);
             this.btnKapat.StyleController = this.layoutControl1;
             this.btnKapat.TabIndex = 2;
             this.btnKapat.Text = " Kapat";
@@ -147,11 +149,12 @@
             this.btnParolaUnuttum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnParolaUnuttum.Appearance.Options.UseTextOptions = true;
             this.btnParolaUnuttum.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            this.btnParolaUnuttum.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnParolaUnuttum.ImageOptions.ImageIndex = 1;
             this.btnParolaUnuttum.ImageOptions.ImageList = this.ımageList1;
-            this.btnParolaUnuttum.Location = new System.Drawing.Point(7, 228);
+            this.btnParolaUnuttum.Location = new System.Drawing.Point(7, 232);
             this.btnParolaUnuttum.Name = "btnParolaUnuttum";
-            this.btnParolaUnuttum.Size = new System.Drawing.Size(192, 36);
+            this.btnParolaUnuttum.Size = new System.Drawing.Size(192, 38);
             this.btnParolaUnuttum.StyleController = this.layoutControl1;
             this.btnParolaUnuttum.TabIndex = 1;
             this.btnParolaUnuttum.Text = "Parolamı Unuttum";
@@ -159,7 +162,7 @@
             // 
             // checkAnimsa
             // 
-            this.checkAnimsa.Location = new System.Drawing.Point(7, 155);
+            this.checkAnimsa.Location = new System.Drawing.Point(7, 156);
             this.checkAnimsa.Name = "checkAnimsa";
             this.checkAnimsa.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkAnimsa.Properties.Appearance.Options.UseFont = true;
@@ -248,7 +251,7 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.checkAnimsa;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 148);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 149);
             this.layoutControlItem3.MaxSize = new System.Drawing.Size(367, 24);
             this.layoutControlItem3.MinSize = new System.Drawing.Size(367, 24);
             this.layoutControlItem3.Name = "layoutControlItem3";
@@ -269,27 +272,27 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.btnGiris;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 172);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 173);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(393, 42);
+            this.layoutControlItem7.Size = new System.Drawing.Size(393, 44);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnParolaUnuttum;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 221);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 225);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(196, 46);
+            this.layoutControlItem6.Size = new System.Drawing.Size(196, 42);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnKapat;
-            this.layoutControlItem5.Location = new System.Drawing.Point(196, 221);
+            this.layoutControlItem5.Location = new System.Drawing.Point(196, 225);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(197, 46);
+            this.layoutControlItem5.Size = new System.Drawing.Size(197, 42);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -298,15 +301,15 @@
             this.simpleSeparator1.AllowHotTrack = false;
             this.simpleSeparator1.Location = new System.Drawing.Point(0, 133);
             this.simpleSeparator1.Name = "simpleSeparator1";
-            this.simpleSeparator1.Size = new System.Drawing.Size(393, 15);
+            this.simpleSeparator1.Size = new System.Drawing.Size(393, 16);
             this.simpleSeparator1.Spacing = new DevExpress.XtraLayout.Utils.Padding(7, 7, 7, 7);
             // 
             // simpleSeparator2
             // 
             this.simpleSeparator2.AllowHotTrack = false;
-            this.simpleSeparator2.Location = new System.Drawing.Point(0, 214);
+            this.simpleSeparator2.Location = new System.Drawing.Point(0, 217);
             this.simpleSeparator2.Name = "simpleSeparator2";
-            this.simpleSeparator2.Size = new System.Drawing.Size(393, 7);
+            this.simpleSeparator2.Size = new System.Drawing.Size(393, 8);
             this.simpleSeparator2.Spacing = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
             // 
             // frmKullaniciGiris
