@@ -809,6 +809,13 @@ namespace NetSatis.BackOffice.Fiş
             {
                 cmbTipi.Properties.Items.Add(i.Aciklama);
             }
+        
+
+            if (duzenle)
+            {
+                cmbTipi.Text = _fisentity.Tipi;
+            }
+
             var a = SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_VarsayilanHareketTipi);
             if (a != null)
             {
@@ -816,10 +823,6 @@ namespace NetSatis.BackOffice.Fiş
 
             }
 
-            if (duzenle)
-            {
-                cmbTipi.Text = _fisentity.Tipi;
-            }
             ////if (_fisentity.FisTuru=="Satış İrsaliyesi" || _fisentity.FisTuru == "Alış İrsaliyesi"||_fisentity.FisTuru=="Alınan Sipariş Fişi" || _fisentity.FisTuru == "Verilen Sipariş Fişi"||_fisentity.FisTuru=="Alınan Teklif Fişi" || _fisentity.FisTuru == "Verilen Teklif Fişi")
             ////{
             ////    calcIndirimOrani.ReadOnly=true;
