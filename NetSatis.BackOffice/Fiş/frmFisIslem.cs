@@ -1,13 +1,12 @@
-﻿using System;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Windows.Forms;
+﻿using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Mask;
+using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
 using NetSatis.BackOffice.Cari;
 using NetSatis.BackOffice.Depo;
+using NetSatis.BackOffice.Extensions;
 using NetSatis.BackOffice.Kasa;
 using NetSatis.BackOffice.Personel;
 using NetSatis.BackOffice.Stok;
@@ -17,19 +16,15 @@ using NetSatis.Entities.Tables;
 using NetSatis.Entities.Tables.OtherTables;
 using NetSatis.Entities.Tools;
 using NetSatis.Reports.Fatura_ve_Fiş;
-using System.IO;
-using DevExpress.XtraBars;
-using DevExpress.XtraEditors.Mask;
-using System.Threading;
-using System.ComponentModel;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Data.OleDb;
-using NetSatis.BackOffice.Extensions;
-using DevExpress.XtraGrid;
-using DevExpress.XtraEditors.Popup;
-using DevExpress.Utils.Win;
-using DevExpress.XtraEditors.Repository;
+using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Fiş
 {
@@ -63,13 +58,30 @@ namespace NetSatis.BackOffice.Fiş
             Entities.Tables.Cari entity = null, int userId = 0)
         {
             InitializeComponent();
-            Yukle(fisKodu, fisTuru, cariGetir, entity, userId).GetAwaiter();
+            this.fisKodu = fisKodu;
+            this.fisTuru = fisTuru;
+            this.cariGetir = cariGetir;
+            this.entity = entity;
+            this.userId = userId;
+
         }
 
-        public async Task Yukle(string fisKodu = null, string fisTuru = null, bool cariGetir = false,
+        private void frmFisIslem_Load(object sender, EventArgs e)
+        {
+
+            Yukle(fisKodu, fisTuru, cariGetir, entity, userId);
+            gridStokHareket.SelectCell(GridControl.NewItemRowHandle, gridStokHareket.Columns["StokAdi"]);
+
+        }
+
+        string fisKodu, fisTuru;
+        Entities.Tables.Cari entity;
+        bool cariGetir = false;
+        int userId = 0;
+
+        public void Yukle(string fisKodu = null, string fisTuru = null, bool cariGetir = false,
             Entities.Tables.Cari entity = null, int userId = 0)
         {
-            await Task.Delay(150);
             frontOfficeUserId = userId;
             if (fisKodu != null) {
                 duzenle = true;
@@ -84,7 +96,10 @@ namespace NetSatis.BackOffice.Fiş
                 context.PersonelHareketleri.Where(c => c.FisKodu == fisKodu).Load();
                 toggleCariDevir.IsOn =
                     context.KasaHareketleri.Count(c => c.FisKodu == fisKodu && c.Hareket == "Kasa Giriş") == 0;
+            } else {
+                _fisentity = new Fis();
             }
+
             if (_fisentity.CariId != null) {
                 lblCariAd.Text = _fisentity.Cari.CariAdi;
                 lblCariKod.Text = _fisentity.Cari.CariKodu;
@@ -177,49 +192,30 @@ namespace NetSatis.BackOffice.Fiş
             gridContPersonelHareket.DataSource = context.PersonelHareketleri.Local.ToBindingList();
             FisAyar();
             HepsiniHesapla().GetAwaiter();
+
+            if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi))) {
+                //lblmuhtahsil.Visible = true;
+                toggleMuhtasilmi.Visible = true;
+            }
+            if (_fisentity.FisTuru == "Toptan Satış Faturası" || _fisentity.FisTuru == "Stok Devir Fişi" || _fisentity.FisTuru == "Sayım Fazlası Fişi" || _fisentity.FisTuru == "Sayım Eksiği Fişi" || _fisentity.FisTuru == "Alış Faturası") {
+                gridContStokHareket.ForceInitialize();
+                if (File.Exists(DosyaYolu)) gridContStokHareket.MainView.RestoreLayoutFromXml(DosyaYolu);
+            }
+
+
+
             OdenenTutarGuncelle();
             ButonlariYukle();
 
-            //kdv sıfırlama işlemi bu metod içinde yapılıyor
-            //MustahsilPanel();
+            cmbTipi.Properties.Items.AddRange(eislem.HareketTipiListele().Select(x => x.Aciklama).ToList());
 
-
-            //OdenenTutarGuncelle();
-            //cari getirme alanı
-            //    List<int> listIds = new List<int>();
-            //if (fisKodu != null)
-            //{
-            //    foreach (var item in gridContStokHareket.DataSource as BindingList<StokHareket>)
-            //    {
-            //        listIds.Add(item.StokId);
-            //    }
-            //    context.Stoklar.Where(x => listIds.Contains(x.Id)).Load();
-            //}
-            //context.Stoklar.LoadAsync();
-            //context.Configuration.AutoDetectChangesEnabled = false;
-        }
-
-        private void MustahsilPanel()
-        {
-            if (toggleMuhtasilmi.IsOn) {
-                //panelIndirim.Visible = false;
-                //panelKooperatif.Visible = true;
-                //labelkdvToplam.Text = "Kesinti YEKÜNÜ";
-                if (context.StokHareketleri.Local.ToBindingList().Count > 0)
-                    foreach (var hareket in context.StokHareketleri.Local.ToBindingList())
-                        hareket.Kdv = 0;
-            } else {
-                //panelIndirim.Visible = true;
-                //panelKooperatif.Visible = false;
-                //labelkdvToplam.Text = "Kdv Toplam :";
-                if (context.StokHareketleri.Local.ToBindingList().Count > 0)
-                    foreach (var hareket in context.StokHareketleri.Local.ToBindingList()) {
-                        var s = context.Stoklar.FirstOrDefault(x => x.Id == hareket.StokId);
-                        if (s != null) hareket.Kdv = s.SatisKdv;
-                    }
+            var a = SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_VarsayilanHareketTipi);
+            if (a != null) {
+                cmbTipi.SelectedItem = a;
             }
-            //gridStokHareket.RefreshData();
+
         }
+
         //personel ve ödeme türü eklemek için buton oluşturma
         private void ButonlariYukle()
         {
@@ -750,43 +746,6 @@ namespace NetSatis.BackOffice.Fiş
             } else {
                 calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
             }
-        }
-        private async void frmFisIslem_Load(object sender, EventArgs e)
-        {
-            var combx = eislem.HareketTipiListele();
-            foreach (var i in combx) {
-                cmbTipi.Properties.Items.Add(i.Aciklama);
-            }
-            var a = SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_VarsayilanHareketTipi);
-            if (a != null) {
-                cmbTipi.Text = a;
-
-            }
-
-            if (duzenle) {
-                cmbTipi.Text = _fisentity.Tipi;
-            }
-            ////if (_fisentity.FisTuru=="Satış İrsaliyesi" || _fisentity.FisTuru == "Alış İrsaliyesi"||_fisentity.FisTuru=="Alınan Sipariş Fişi" || _fisentity.FisTuru == "Verilen Sipariş Fişi"||_fisentity.FisTuru=="Alınan Teklif Fişi" || _fisentity.FisTuru == "Verilen Teklif Fişi")
-            ////{
-            ////    calcIndirimOrani.ReadOnly=true;
-            ////    calcIndirimTutari.ReadOnly=true;
-            ////}
-            ///
-            if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi))) {
-                //lblmuhtahsil.Visible = true;
-                toggleMuhtasilmi.Visible = true;
-            }
-            if (_fisentity.FisTuru == "Toptan Satış Faturası" || _fisentity.FisTuru == "Stok Devir Fişi" || _fisentity.FisTuru == "Sayım Fazlası Fişi" || _fisentity.FisTuru == "Sayım Eksiği Fişi" || _fisentity.FisTuru == "Alış Faturası") {
-                gridContStokHareket.ForceInitialize();
-                if (File.Exists(DosyaYolu)) gridContStokHareket.MainView.RestoreLayoutFromXml(DosyaYolu);
-            } else {
-            }
-            OdenenTutarGuncelle();
-            await HepsiniHesapla();
-
-
-            gridStokHareket.SelectCell(GridControl.NewItemRowHandle, gridStokHareket.Columns["StokAdi"]);
-
         }
         private StokHareket StokSec(Entities.Tables.Stok entity)
         {
@@ -1564,10 +1523,7 @@ namespace NetSatis.BackOffice.Fiş
 
             }
         }
-        private void frmFisIslem_Shown(object sender, EventArgs e)
-        {
-            gridStokHareket.SelectCell(GridControl.NewItemRowHandle, gridStokHareket.Columns["StokAdi"]);
-        }
+
         #region Güncellenen Toggle Event Alanı
         private async void toggleKDVDahil_Toggled(object sender, EventArgs e)
         {
@@ -1586,35 +1542,6 @@ namespace NetSatis.BackOffice.Fiş
             if (e.KeyCode == Keys.Escape && MessageBox.Show("Kaydedilmemiş veri olabilir. Çıkmak istediğinize emin misiniz ?", "Uyarı", MessageBoxButtons.YesNo) ==
                 DialogResult.Yes) {
                 this.Close();
-            }
-
-            if (e.KeyCode == Keys.F6) {
-                //var val = txtBarkod.EditValue;
-                //if (val == null)
-                //{
-                //    val = "";
-                //}
-                //frmStokSec form = new frmStokSec(ref this.context, val.ToString());
-                //form.ShowDialog();
-                //if (form.secildi)
-                //{
-                //    //Buradan
-                //    var enti = form.secilen.First();
-                //    if (MinStokAltinda(enti)) return;
-                //    //Buraya kadar
-                //    StokHareket s = StokSec(enti);
-                //    if (context.StokHareketleri.Local.ToBindingList().FirstOrDefault(x => x.StokId == s.StokId) != null)
-                //    {
-                //        s = context.StokHareketleri.Local.ToBindingList().FirstOrDefault(x => x.StokId == s.StokId);
-                //        if (gridStokHareket.GetFocusedRowCellValue("Miktar") != null)
-                //            s.Miktar += Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("Miktar"));// calcMiktar.Value; 
-                //    }
-                //    stokHareketDal.AddOrUpdate(context, s);
-                //    
-
-                //    HepsiniHesapla();
-                //    focusedSatirSec(s.StokId); 
-                //}
             }
         }
         private void btnKaydetYeni_Click(object sender, EventArgs e)
@@ -2726,7 +2653,7 @@ namespace NetSatis.BackOffice.Fiş
 
             }
         }
-
+         
         private void gridStokHareket_KeyDown(object sender, KeyEventArgs e)
         {
             if (gridStokHareket.RowCount == 0)
