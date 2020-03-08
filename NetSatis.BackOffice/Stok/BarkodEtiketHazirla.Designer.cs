@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BarkodEtiketHazirla));
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnBarkodYazdır = new DevExpress.XtraEditors.SimpleButton();
             this.lblUyari = new DevExpress.XtraEditors.LabelControl();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btnSatirSil = new DevExpress.XtraEditors.SimpleButton();
@@ -88,7 +88,7 @@
             // 
             // groupControl3
             // 
-            this.groupControl3.Controls.Add(this.simpleButton1);
+            this.groupControl3.Controls.Add(this.btnBarkodYazdır);
             this.groupControl3.Controls.Add(this.lblUyari);
             this.groupControl3.Controls.Add(this.btnKaydet);
             this.groupControl3.Controls.Add(this.btnSatirSil);
@@ -100,14 +100,15 @@
             this.groupControl3.Size = new System.Drawing.Size(1011, 62);
             this.groupControl3.TabIndex = 13;
             // 
-            // simpleButton1
+            // btnBarkodYazdır
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(537, 30);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 8;
-            this.simpleButton1.Text = "simpleButton1";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.btnBarkodYazdır.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBarkodYazdır.ImageOptions.Image")));
+            this.btnBarkodYazdır.Location = new System.Drawing.Point(524, 24);
+            this.btnBarkodYazdır.Name = "btnBarkodYazdır";
+            this.btnBarkodYazdır.Size = new System.Drawing.Size(120, 33);
+            this.btnBarkodYazdır.TabIndex = 8;
+            this.btnBarkodYazdır.Text = "Barkod Yazdır";
+            this.btnBarkodYazdır.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // lblUyari
             // 
@@ -200,7 +201,7 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.yazdırToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(106, 26);
             // 
             // yazdırToolStripMenuItem
             // 
@@ -208,7 +209,7 @@
             this.rafEtiketToolStripMenuItem,
             this.a4EtiketToolStripMenuItem});
             this.yazdırToolStripMenuItem.Name = "yazdırToolStripMenuItem";
-            this.yazdırToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.yazdırToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.yazdırToolStripMenuItem.Text = "Yazdır";
             // 
             // rafEtiketToolStripMenuItem
@@ -218,26 +219,25 @@
             this.önizleToolStripMenuItem,
             this.düzenleToolStripMenuItem});
             this.rafEtiketToolStripMenuItem.Name = "rafEtiketToolStripMenuItem";
-            this.rafEtiketToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rafEtiketToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.rafEtiketToolStripMenuItem.Text = "Raf Etiket";
             // 
             // yazdırToolStripMenuItem1
             // 
             this.yazdırToolStripMenuItem1.Name = "yazdırToolStripMenuItem1";
-            this.yazdırToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.yazdırToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.yazdırToolStripMenuItem1.Text = "Yazdır";
-            this.yazdırToolStripMenuItem1.Click += new System.EventHandler(this.yazdırToolStripMenuItem1_Click);
             // 
             // önizleToolStripMenuItem
             // 
             this.önizleToolStripMenuItem.Name = "önizleToolStripMenuItem";
-            this.önizleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.önizleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.önizleToolStripMenuItem.Text = "Önizle";
             // 
             // düzenleToolStripMenuItem
             // 
             this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
-            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.düzenleToolStripMenuItem.Text = "Düzenle";
             // 
             // a4EtiketToolStripMenuItem
@@ -247,25 +247,25 @@
             this.önizleToolStripMenuItem1,
             this.düzenleToolStripMenuItem1});
             this.a4EtiketToolStripMenuItem.Name = "a4EtiketToolStripMenuItem";
-            this.a4EtiketToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.a4EtiketToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.a4EtiketToolStripMenuItem.Text = "A4 Etiket";
             // 
             // yazdırToolStripMenuItem2
             // 
             this.yazdırToolStripMenuItem2.Name = "yazdırToolStripMenuItem2";
-            this.yazdırToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.yazdırToolStripMenuItem2.Size = new System.Drawing.Size(116, 22);
             this.yazdırToolStripMenuItem2.Text = "Yazdır";
             // 
             // önizleToolStripMenuItem1
             // 
             this.önizleToolStripMenuItem1.Name = "önizleToolStripMenuItem1";
-            this.önizleToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.önizleToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.önizleToolStripMenuItem1.Text = "Önizle";
             // 
             // düzenleToolStripMenuItem1
             // 
             this.düzenleToolStripMenuItem1.Name = "düzenleToolStripMenuItem1";
-            this.düzenleToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.düzenleToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.düzenleToolStripMenuItem1.Text = "Düzenle";
             // 
             // gridView1
@@ -527,8 +527,8 @@
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl3);
+            this.IconOptions.ShowIcon = false;
             this.Name = "BarkodEtiketHazirla";
-            this.ShowIcon = false;
             this.Text = "Etiket Hazırla";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BarkodEtiketHazirla_FormClosing);
             this.Load += new System.EventHandler(this.BarkodEtiketHazirla_Load);
@@ -582,7 +582,7 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.ButtonEdit txtBarkod;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnBarkodYazdır;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem yazdırToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rafEtiketToolStripMenuItem;

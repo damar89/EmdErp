@@ -40,14 +40,10 @@ namespace NetSatis.BackOffice.Stok
         {
             frmStokSec form = new frmStokSec(true);
             form.ShowDialog();
-            if (form.secildi)
-            {
-                foreach (var itemStok in form.secilen)
-                {
-                    if (context.BarkodEtiketOlustur.Count(c => c.StokKodu == itemStok.Barkodu) == 0)
-                    {
-                        barkodEtiket.AddOrUpdate(context, new BarkodEtiket
-                        {
+            if (form.secildi) {
+                foreach (var itemStok in form.secilen) {
+                    if (context.BarkodEtiketOlustur.Count(c => c.Barkodu == itemStok.Barkodu) == 0) {
+                        barkodEtiket.AddOrUpdate(context, new BarkodEtiket {
                             StokKodu = itemStok.StokKodu,
                             StokAdi = itemStok.StokAdi,
                             Aciklama = itemStok.Aciklama,
@@ -84,8 +80,7 @@ namespace NetSatis.BackOffice.Stok
         private void btnSatirSil_Click(object sender, EventArgs e)
         {
             gridView1.OptionsSelection.MultiSelect = true;
-            if (MessageBox.Show("Seçili olan ürünleri listeden çıkarmak istediğinize emin misiniz ? ", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
+            if (MessageBox.Show("Seçili olan ürünleri listeden çıkarmak istediğinize emin misiniz ? ", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes) {
                 gridView1.DeleteSelectedRows();
                 barkodEtiket.Save(context);
             }
@@ -126,16 +121,16 @@ namespace NetSatis.BackOffice.Stok
         }
         private void txtBarkod_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                Barkod entity;
-                entity = context.Barkodlar.Where(c => c.Barkodu == txtBarkod.Text).SingleOrDefault();
-                var entityStok = context.Stoklar.FirstOrDefault(x => x.Barkodu == txtBarkod.Text);
-
-                if (context.BarkodEtiketOlustur.Count(c => c.StokKodu == entityStok.Barkodu) == 0)
-                {
-                    barkodEtiket.AddOrUpdate(context, new BarkodEtiket
-                    {
+            if (e.KeyCode == Keys.Enter) {
+                //Barkod entity;
+                //entity = context.Barkodlar.Where(c => c.Barkodu == txtBarkod.Text).SingleOrDefault();
+                var entityStok = context.Stoklar.Include("Barkod").FirstOrDefault(x => x.Barkodu.Equals(txtBarkod.Text) || x.Barkod.Any(q => q.Barkodu.Equals(txtBarkod.Text)));
+                if (entityStok == null) {
+                    MessageBox.Show("Aradığınız barkoda ait ürün bulunamadı!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (!context.BarkodEtiketOlustur.Any(c => c.Barkodu.Equals(entityStok.Barkodu))) {
+                    barkodEtiket.AddOrUpdate(context, new BarkodEtiket {
                         StokKodu = entityStok.StokKodu,
                         StokAdi = entityStok.StokAdi,
                         Aciklama = entityStok.Aciklama,
@@ -145,7 +140,7 @@ namespace NetSatis.BackOffice.Stok
 
                         AltGrup = entityStok.AltGrup,
                         AnaGrup = entityStok.AnaGrup,
-                        Barkodu = entityStok.Barkodu,
+                        Barkodu = txtBarkod.Text,
                         Birim = entityStok.Birim,
                         Kategori = entityStok.Kategori,
                         Marka = entityStok.Marka,
@@ -161,11 +156,11 @@ namespace NetSatis.BackOffice.Stok
                         Proje = entityStok.Proje,
                         SezonYil = entityStok.SezonYil
 
-
-
                     });
                     barkodEtiket.Save(context);
                     txtBarkod.Text = "";
+                } else {
+                    MessageBox.Show("Bu barkod daha önce oluşturulmuş", "Barkod oluşturulmuş", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             gridView1.RefreshData();
@@ -173,6 +168,15 @@ namespace NetSatis.BackOffice.Stok
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+            if (gridView1.RowCount == 0)
+                return;
+
+            var r = new rptBarkodRaf();
+            var row = gridView1.GetRow(gridView1.FocusedRowHandle) as BarkodEtiket;
+
+            r.xrBarCode1.Text = row.Barkodu;
+            r.ShowPreview();
+
             //Report rpr = new Report();
             //rpr.Load($@"{Application.StartupPath}\degisimfisi.frx");
             //rpr.SetParameterValue("StokAdi","test1StokAdi");
@@ -181,36 +185,34 @@ namespace NetSatis.BackOffice.Stok
 
             ////rpr.RegisterData();
             //rpr.Design();
-            rptBarkodRaf r = new rptBarkodRaf();
-            List<string> fields=  new List<string>();
-            using (NetSatisContext db = new NetSatisContext())
-            {
-                FisDAL f2 = new FisDAL();
-                var liste = f2.Listelemeler(db, "Toptan Satış Faturası");
 
-                foreach (var obj in (IList)liste)
-                {
-                    Type type = obj.GetType();
+            //List<string> fields = new List<string>();
+            //using (NetSatisContext db = new NetSatisContext()) {
+            //    FisDAL f2 = new FisDAL();
+            //    var liste = f2.Listelemeler(db, "Toptan Satış Faturası");
 
-                    foreach (PropertyInfo prop in type.GetProperties())
-                    {
-                       fields.Add(prop.Name);
-                    }
-                    break;
-                }
+            //    foreach (var obj in (IList)liste) {
+            //        Type type = obj.GetType();
+
+            //        foreach (PropertyInfo prop in type.GetProperties()) {
+            //            fields.Add(prop.Name);
+            //        }
+            //        break;
+            //    }
 
 
-                var list = db.BarkodEtiketOlustur.ToList();
-                r.DataSource = list;
-                r.LoadLayout($@"{Application.StartupPath}\rptBarkodRaf.repx");
-                r.ShowDesigner();
-                // r.ShowDesigner();
-            }
-        }
-
-        private void yazdırToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
+            //    var list = db.BarkodEtiketOlustur.ToList();
+            //    r.DataSource = list;
+            //var fileName = $@"{Application.StartupPath}\rptBarkodRaf.repx";
+            //if (File.Exists(fileName))
+            //    r.LoadLayout(fileName);
+            //else {
+            //    MessageBox.Show("Barkod raporu dizayn dosyası bulunamadı. Dosya adı: " + new FileInfo(fileName).Name);
+            //    return;
+            //}
+            // r.ShowDesigner();
 
         }
+         
     }
 }

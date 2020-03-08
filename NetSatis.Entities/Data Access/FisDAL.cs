@@ -14,8 +14,7 @@ namespace NetSatis.Entities.Data_Access
             var tablo = context.Fisler.Where(c => c.FisKodu == fisKodu).GroupJoin(
                 context.Fisler.Where(c => c.FisKodu == fisKodu), c => c.CariId, c => c.CariId,
                 (fisler, cariler) =>
-                    new
-                    {
+                    new {
                         fisler.Id,
                         fisler.FisKodu,
                         fisler.FisTuru,
@@ -48,8 +47,7 @@ namespace NetSatis.Entities.Data_Access
                                  .Sum(c => c.ToplamTutar) ?? 0) +
                             (context.KasaHareketleri.Where(c => c.CariId == fisler.Cari.Id && c.Hareket == "Kasa Çıkış")
                                  .Sum(c => c.Tutar) ?? 0)
-                    }).Select(k => new
-                    {
+                    }).Select(k => new {
                         k.Id,
                         k.FisKodu,
                         k.FisTuru,
@@ -73,13 +71,12 @@ namespace NetSatis.Entities.Data_Access
                     }).ToList();
             return tablo;
         }
-         public object GunSonu(NetSatisContext context, DateTime baslangic, DateTime bitis)
+        public object GunSonu(NetSatisContext context, DateTime baslangic, DateTime bitis)
         {
             var tablo = context.Fisler.Where(c => c.Tarih >= baslangic && c.Tarih <= bitis).GroupJoin(
                 context.Fisler.Where(c => c.Tarih >= baslangic && c.Tarih <= bitis), c => c.CariId, c => c.CariId,
                 (fisler, cariler) =>
-                   new
-                   {
+                   new {
                        fisler.Id,
                        fisler.FisKodu,
                        fisler.FisTuru,
@@ -106,8 +103,7 @@ namespace NetSatis.Entities.Data_Access
                        fisler.BelgeNo,
                        fisler.IskontoOrani1,
                        fisler.IskontoTutari1,
-                   }).Select(k => new
-                   {
+                   }).Select(k => new {
                        k.Id,
                        k.FisKodu,
                        k.FisTuru,
@@ -139,8 +135,7 @@ namespace NetSatis.Entities.Data_Access
             var tablo = context.Fisler.Where(c => c.FisKodu == fisKodu).GroupJoin(
                 context.Fisler.Where(c => c.FisKodu == fisKodu), c => c.CariId, c => c.CariId,
                 (fisler, cariler) =>
-                    new
-                    {
+                    new {
                         fisler.Id,
                         fisler.FisKodu,
                         fisler.FisTuru,
@@ -173,8 +168,7 @@ namespace NetSatis.Entities.Data_Access
                                  .Sum(c => c.ToplamTutar) ?? 0) +
                             (context.KasaHareketleri.Where(c => c.CariId == fisler.Cari.Id && c.Hareket == "Kasa Çıkış")
                                  .Sum(c => c.Tutar) ?? 0)
-                    }).Select(k => new
-                    {
+                    }).Select(k => new {
                         k.Id,
                         k.FisKodu,
                         k.FisTuru,
@@ -202,8 +196,7 @@ namespace NetSatis.Entities.Data_Access
         {
             var fis = context.Fisler.FirstOrDefault(x => x.FisKodu == fisKodu);
             var kalemler = context.StokHareketleri.Where(x => x.FisKodu == fisKodu);
-            FisKooperatif f = new FisKooperatif
-            {
+            FisKooperatif f = new FisKooperatif {
                 FisKodu = fis.FisKodu,
                 Aciklama = fis.Aciklama,
                 Adres = fis.Adres,
@@ -229,8 +222,7 @@ namespace NetSatis.Entities.Data_Access
         }
         public List<FisKooperatifKalemler> KooperatifFisiKalemleri(NetSatisContext context, string fisKodu)
         {
-            var kalemler = context.StokHareketleri.Where(x => x.FisKodu == fisKodu).Select(x => new FisKooperatifKalemler
-            {
+            var kalemler = context.StokHareketleri.Where(x => x.FisKodu == fisKodu).Select(x => new FisKooperatifKalemler {
                 StokKodu = x.Stok.StokKodu,
                 StokAdi = x.Stok.StokAdi,
                 Birim = x.Stok.Birim,
@@ -247,8 +239,7 @@ namespace NetSatis.Entities.Data_Access
             var tablo = context.Fisler.Where(c => c.Tarih >= baslangic && c.Tarih <= bitis).GroupJoin(
                 context.Fisler.Where(c => c.Tarih >= baslangic && c.Tarih <= bitis), c => c.CariId, c => c.CariId,
                 (fisler, cariler) =>
-                   new
-                   {
+                   new {
                        fisler.Id,
                        fisler.FisKodu,
                        fisler.FisTuru,
@@ -275,8 +266,7 @@ namespace NetSatis.Entities.Data_Access
                        fisler.BelgeNo,
                        fisler.IskontoOrani1,
                        fisler.IskontoTutari1,
-                   }).Select(k => new
-                   {
+                   }).Select(k => new {
                        k.Id,
                        k.FisKodu,
                        k.FisTuru,
@@ -308,8 +298,7 @@ namespace NetSatis.Entities.Data_Access
             var tablo = context.Fisler.Where(c => c.FisTuru == fisTuru).GroupJoin(
                 context.Fisler.Where(c => c.FisTuru == fisTuru), c => c.CariId, c => c.CariId,
                 (fisler, cariler) =>
-                   new
-                   {
+                   new {
                        fisler.Id,
                        fisler.FisKodu,
                        fisler.FisTuru,
@@ -346,8 +335,7 @@ namespace NetSatis.Entities.Data_Access
                        .Sum(c => c.ToplamTutar) ?? 0) +
                        (context.KasaHareketleri.Where(c => c.CariId == fisler.Cari.Id && c.Hareket == "Kasa Çıkış")
                        .Sum(c => c.Tutar) ?? 0)
-                   }).Select(k => new
-                   {
+                   }).Select(k => new {
                        k.Id,
                        k.FisKodu,
                        k.FisTuru,
@@ -382,8 +370,7 @@ namespace NetSatis.Entities.Data_Access
             var tablo = context.Fisler.Where(c => (c.FisTuru == fisTuru || c.FisTuru == fisTuru2 || c.FisTuru == fisTuru3) && (c.VadeTarihi >= baslangic && c.VadeTarihi <= bitis)).GroupJoin(
                context.Fisler.Where(c => c.FisTuru == fisTuru || c.FisTuru == fisTuru2 || c.FisTuru == fisTuru3), c => c.CariId, c => c.CariId,
                (fisler, cariler) =>
-                  new
-                  {
+                  new {
                       fisler.Id,
                       fisler.FisKodu,
                       fisler.FisTuru,
@@ -422,8 +409,7 @@ namespace NetSatis.Entities.Data_Access
                       .Sum(c => c.ToplamTutar) ?? 0) +
                       (context.KasaHareketleri.Where(c => c.CariId == fisler.Cari.Id && c.Hareket == "Kasa Çıkış")
                       .Sum(c => c.Tutar) ?? 0)
-                  }).Select(k => new
-                  {
+                  }).Select(k => new {
                       k.Id,
                       k.FisKodu,
                       k.FisTuru,
@@ -459,8 +445,7 @@ namespace NetSatis.Entities.Data_Access
             var tablo = context.Fisler.Where(c => (c.FisTuru == fisTuru || c.FisTuru == fisTuru2) && (c.Tarih >= baslangic && c.Tarih <= bitis)).GroupJoin(
                 context.Fisler.Where(c => c.FisTuru == fisTuru || c.FisTuru == fisTuru2), c => c.CariId, c => c.CariId,
                 (fisler, cariler) =>
-                   new
-                   {
+                   new {
                        fisler.Id,
                        fisler.FisKodu,
                        fisler.FisTuru,
@@ -498,8 +483,7 @@ namespace NetSatis.Entities.Data_Access
                        .Sum(c => c.ToplamTutar) ?? 0) +
                        (context.KasaHareketleri.Where(c => c.CariId == fisler.Cari.Id && c.Hareket == "Kasa Çıkış")
                        .Sum(c => c.Tutar) ?? 0)
-                   }).Select(k => new
-                   {
+                   }).Select(k => new {
                        k.Id,
                        k.FisKodu,
                        k.FisTuru,
@@ -535,8 +519,7 @@ namespace NetSatis.Entities.Data_Access
             var tablo = context.Fisler.Where(c => (c.FisTuru == fisTuru) && (c.Tarih >= baslangic && c.Tarih <= bitis)).GroupJoin(
                 context.Fisler.Where(c => c.FisTuru == fisTuru), c => c.CariId, c => c.CariId,
                 (fisler, cariler) =>
-                   new
-                   {
+                   new {
                        fisler.Id,
                        fisler.FisKodu,
                        fisler.FisTuru,
@@ -573,8 +556,7 @@ namespace NetSatis.Entities.Data_Access
                        .Sum(c => c.ToplamTutar) ?? 0) +
                        (context.KasaHareketleri.Where(c => c.CariId == fisler.Cari.Id && c.Hareket == "Kasa Çıkış")
                        .Sum(c => c.Tutar) ?? 0)
-                   }).Select(k => new
-                   {
+                   }).Select(k => new {
                        k.Id,
                        k.FisKodu,
                        k.FisTuru,
@@ -609,8 +591,7 @@ namespace NetSatis.Entities.Data_Access
             var tablo = context.Fisler.Where(c => c.FisTuru == fisTuru).GroupJoin(
                 context.Fisler.Where(c => c.FisTuru == fisTuru && c.Tarih >= baslangic && c.Tarih <= bitis), c => c.CariId, c => c.CariId,
                 (fisler, cariler) =>
-                   new
-                   {
+                   new {
                        fisler.Id,
                        fisler.FisKodu,
                        fisler.FisTuru,
@@ -648,8 +629,7 @@ namespace NetSatis.Entities.Data_Access
                        .Sum(c => c.ToplamTutar) ?? 0) +
                        (context.KasaHareketleri.Where(c => c.CariId == fisler.Cari.Id && c.Hareket == "Kasa Çıkış")
                        .Sum(c => c.Tutar) ?? 0)
-                   }).Select(k => new
-                   {
+                   }).Select(k => new {
                        k.Id,
                        k.FisKodu,
                        k.FisTuru,

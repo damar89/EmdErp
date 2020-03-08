@@ -11,6 +11,8 @@ namespace NetSatis.BackOffice.Stok
         public rptBarkodRaf()
         {
             InitializeComponent();
+           
+
         }
 
     }
