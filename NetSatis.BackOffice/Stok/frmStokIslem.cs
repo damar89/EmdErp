@@ -129,17 +129,23 @@ namespace NetSatis.BackOffice.Stok
         }
         private void btnKaydet_Click(object sender, EventArgs e)
         {
+
+            var firstIndex = -1;
+
             if (btnKategori.Text != "") {
-                int firstIndex = btnKategori.Text.IndexOf(" - ");
-                btnKategori.Text = btnKategori.Text.Substring(0, firstIndex);
+                firstIndex = btnKategori.Text.IndexOf(" - ");
+                if (firstIndex >= 0)
+                    btnKategori.Text = btnKategori.Text.Substring(0, firstIndex);
             }
             if (btnAnaGrup.Text != "") {
-                int first1Index = btnAnaGrup.Text.IndexOf(" - ");
-                btnAnaGrup.Text = btnAnaGrup.Text.Substring(0, first1Index);
+                firstIndex = btnAnaGrup.Text.IndexOf(" - ");
+                if (firstIndex >= 0)
+                    btnAnaGrup.Text = btnAnaGrup.Text.Substring(0, firstIndex);
             }
             if (btnAltGrup.Text != "") {
-                int first2Index = btnAltGrup.Text.IndexOf(" - ");
-                btnAltGrup.Text = btnAltGrup.Text.Substring(0, first2Index);
+                firstIndex = btnAltGrup.Text.IndexOf(" - ");
+                if (firstIndex >= 0)
+                    btnAltGrup.Text = btnAltGrup.Text.Substring(0, firstIndex);
             }
             if (peResim.Image != null) {
                 Image img = peResim.Image;
@@ -935,7 +941,7 @@ namespace NetSatis.BackOffice.Stok
         {
             this.BeginInvoke(new EditorSelectAllProc(EditorSelectAll), (Control)sender);
         }
-         
+
         private void txtStokAdi_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             if (e.Button.Tag.ToString() == "find") {
@@ -948,7 +954,7 @@ namespace NetSatis.BackOffice.Stok
                     //Buraya kadar
                     Olustur(enti, false);
                 }
-            } else if (e.Button.Tag.ToString() == "clear") { 
+            } else if (e.Button.Tag.ToString() == "clear") {
                 txtStokAdi.Tag =
                     txtStokAdi.Text = null;
             }

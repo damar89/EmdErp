@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraPrinting.BarCode.Code128Generator code128Generator1 = new DevExpress.XtraPrinting.BarCode.Code128Generator();
+            DevExpress.XtraPrinting.BarCode.EAN13Generator eaN13Generator1 = new DevExpress.XtraPrinting.BarCode.EAN13Generator();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
@@ -38,13 +38,13 @@
             // TopMargin
             // 
             this.TopMargin.Dpi = 254F;
-            this.TopMargin.HeightF = 74F;
+            this.TopMargin.HeightF = 0F;
             this.TopMargin.Name = "TopMargin";
             // 
             // BottomMargin
             // 
             this.BottomMargin.Dpi = 254F;
-            this.BottomMargin.HeightF = 58F;
+            this.BottomMargin.HeightF = 0F;
             this.BottomMargin.Name = "BottomMargin";
             // 
             // Detail
@@ -52,20 +52,21 @@
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrBarCode1});
             this.Detail.Dpi = 254F;
-            this.Detail.HeightF = 259.375F;
-            this.Detail.HierarchyPrintOptions.Indent = 20F;
+            this.Detail.HeightF = 296.75F;
             this.Detail.MultiColumn.Mode = DevExpress.XtraReports.UI.MultiColumnMode.UseColumnCount;
             this.Detail.Name = "Detail";
             // 
             // xrBarCode1
             // 
             this.xrBarCode1.Dpi = 254F;
-            this.xrBarCode1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 103.1875F);
+            this.xrBarCode1.LocationFloat = new DevExpress.Utils.PointFloat(153.4584F, 25.00001F);
             this.xrBarCode1.Module = 5.08F;
             this.xrBarCode1.Name = "xrBarCode1";
-            this.xrBarCode1.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 96F);
-            this.xrBarCode1.SizeF = new System.Drawing.SizeF(521.2292F, 82.02084F);
-            this.xrBarCode1.Symbology = code128Generator1;
+            this.xrBarCode1.Padding = new DevExpress.XtraPrinting.PaddingInfo(26, 26, 0, 0, 254F);
+            this.xrBarCode1.SizeF = new System.Drawing.SizeF(606.0833F, 211.75F);
+            this.xrBarCode1.StylePriority.UseTextAlignment = false;
+            this.xrBarCode1.Symbology = eaN13Generator1;
+            this.xrBarCode1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
             // 
             // rptBarkodRaf
             // 
@@ -75,13 +76,13 @@
             this.Detail});
             this.Dpi = 254F;
             this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(29, 29, 74, 58);
+            this.Margins = new System.Drawing.Printing.Margins(8, 8, 0, 0);
             this.PageHeight = 400;
-            this.PageWidth = 600;
+            this.PageWidth = 937;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
             this.SnapGridSize = 25F;
-            this.Version = "19.1";
+            this.Version = "19.2";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -91,6 +92,6 @@
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
         private DevExpress.XtraReports.UI.DetailBand Detail;
-        private DevExpress.XtraReports.UI.XRBarCode xrBarCode1;
+        public DevExpress.XtraReports.UI.XRBarCode xrBarCode1;
     }
 }
