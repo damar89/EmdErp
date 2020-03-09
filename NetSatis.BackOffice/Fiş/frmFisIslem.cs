@@ -1780,111 +1780,117 @@ namespace NetSatis.BackOffice.Fiş
         }
         async Task HepsiniHesapla()
         {
-            await Task.Delay(10);
+            try {
 
-            gridPrsonelHareket.UpdateSummary();
-            context.Configuration.AutoDetectChangesEnabled = false;
-            decimal toplamSatirIndirimTutari = 0;
-            decimal toplamAraToplam = 0;
-            decimal toplamKdvToplam = 0;
-            decimal toplamGenelToplam = 0;
-            decimal tumGridinSatirIndirimSonrasiToplami = 0;
-            int siraNo = 1;
-            foreach (StokHareket item in context.StokHareketleri.Local) {
-                decimal satirTutari = Convert.ToDecimal(item.Miktar) * Convert.ToDecimal(item.BirimFiyati);
-                tumGridinSatirIndirimSonrasiToplami +=
-                    satirTutari - satirTutari * Convert.ToDecimal(item.IndirimOrani) / 100
-                    - (satirTutari - satirTutari * Convert.ToDecimal(item.IndirimOrani) / 100) *
-                    Convert.ToDecimal(item.IndirimOrani2) / 100 -
-                    (satirTutari - satirTutari * Convert.ToDecimal(item.IndirimOrani) / 100 -
-                    (satirTutari - satirTutari * Convert.ToDecimal(item.IndirimOrani) / 100) * Convert.ToDecimal(item.IndirimOrani2) / 100) *
-                    Convert.ToDecimal(item.IndirimOrani3) / 100;
-            }
-            foreach (StokHareket item in context.StokHareketleri.Local.OrderByDescending(x => x.Tarih)) {
-                item.SiraNo = siraNo;
-                siraNo++;
+                await Task.Delay(10);
 
-                decimal miktar = Convert.ToDecimal(item.Miktar);
-                decimal birimfiyat = Convert.ToDecimal(item.BirimFiyati);
-                decimal kdv = Convert.ToDecimal(item.Kdv);
-                decimal indirimOrani = Convert.ToDecimal(item.IndirimOrani);
-                decimal indirimOrani2 = Convert.ToDecimal(item.IndirimOrani2);
-                decimal indirimOrani3 = Convert.ToDecimal(item.IndirimOrani3);
-                decimal aratoplam = miktar * birimfiyat;
-                if (toggleKDVDahil.IsOn) {
-                    aratoplam = aratoplam / (1 + kdv / 100);
+                gridPrsonelHareket.UpdateSummary();
+                context.Configuration.AutoDetectChangesEnabled = false;
+                decimal? toplamSatirIndirimTutari = 0;
+                decimal? toplamAraToplam = 0;
+                decimal? toplamKdvToplam = 0;
+                decimal? toplamGenelToplam = 0;
+                decimal? tumGridinSatirIndirimSonrasiToplami = 0;
+                int siraNo = 1;
+                foreach (StokHareket item in context.StokHareketleri.Local) {
+                    decimal? satirTutari = Math.Round((item.Miktar * item.BirimFiyati).Value, 2);
+                    tumGridinSatirIndirimSonrasiToplami +=
+                        satirTutari - satirTutari * item.IndirimOrani / 100
+                        - (satirTutari - satirTutari * item.IndirimOrani / 100) *
+                        item.IndirimOrani2 / 100 -
+                        (satirTutari - satirTutari * item.IndirimOrani / 100 -
+                        (satirTutari - satirTutari * item.IndirimOrani / 100) * item.IndirimOrani2 / 100) *
+                        item.IndirimOrani3 / 100;
                 }
-                toplamAraToplam += aratoplam;
-                decimal satirIndirimSonrasiToplam = aratoplam
-                    - aratoplam * indirimOrani / 100
-                    - (aratoplam
-                    - aratoplam * indirimOrani / 100) * indirimOrani2 / 100
-                    - (aratoplam
-                    - aratoplam * indirimOrani / 100
-                    - (aratoplam
-                    - aratoplam * indirimOrani / 100) * indirimOrani2 / 100) * indirimOrani3 / 100;
-                decimal satirIndirimTutari = aratoplam - satirIndirimSonrasiToplam;
-                toplamSatirIndirimTutari += satirIndirimTutari;
-                decimal tumIndirimlerSonrasiToplam = 0;
-                decimal dipIskontoPayi = 0;
-                decimal dipIskontoOrani = Convert.ToDecimal(calcIndirimOrani.EditValue);
-                decimal dipIskontoTutari = Convert.ToDecimal(calcIndirimTutari.EditValue);
-                decimal kdvToplam = 0;
-                decimal satirNetTutar = 0;
-                if (toggleKDVDahil.IsOn) {
-                    if (dipIskontoOrani != 0) {
-                        tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - satirIndirimSonrasiToplam * dipIskontoOrani / 100;
-                        dipIskontoPayi = satirIndirimSonrasiToplam - tumIndirimlerSonrasiToplam;
-                    } else if (dipIskontoTutari != 0) {
-                        dipIskontoPayi = dipIskontoTutari * satirIndirimSonrasiToplam / tumGridinSatirIndirimSonrasiToplami;
-                        tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - dipIskontoPayi;
-                    } else {
-                        tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam;
+                foreach (StokHareket item in context.StokHareketleri.Local.OrderByDescending(x => x.Tarih)) {
+                    item.SiraNo = siraNo;
+                    siraNo++;
+
+                    decimal? miktar = item.Miktar;
+                    decimal? birimfiyat = item.BirimFiyati;
+                    decimal? kdv = item.Kdv;
+                    decimal? indirimOrani = item.IndirimOrani;
+                    decimal? indirimOrani2 = item.IndirimOrani2;
+                    decimal? indirimOrani3 = item.IndirimOrani3;
+                    decimal? aratoplam = Math.Round((miktar * birimfiyat).Value, 2);
+                    if (toggleKDVDahil.IsOn) {
+                        aratoplam = aratoplam / (1 + kdv / 100);
                     }
-                    //kdvToplam = tumIndirimlerSonrasiToplam - tumIndirimlerSonrasiToplam / (1 + kdv / 100);
-                    kdvToplam = tumIndirimlerSonrasiToplam * (kdv / 100);
-                    satirNetTutar = tumIndirimlerSonrasiToplam + kdvToplam;
-                } else {
-                    if (dipIskontoOrani != 0) {
-                        tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - satirIndirimSonrasiToplam * dipIskontoOrani / 100;
-                        dipIskontoPayi = satirIndirimSonrasiToplam - tumIndirimlerSonrasiToplam;
-                    } else if (dipIskontoTutari != 0) {
-                        dipIskontoPayi = dipIskontoTutari * satirIndirimSonrasiToplam / tumGridinSatirIndirimSonrasiToplami;
-                        tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - dipIskontoPayi;
+                    toplamAraToplam += aratoplam;
+                    decimal? satirIndirimSonrasiToplam = aratoplam
+                        - aratoplam * indirimOrani / 100
+                        - (aratoplam
+                        - aratoplam * indirimOrani / 100) * indirimOrani2 / 100
+                        - (aratoplam
+                        - aratoplam * indirimOrani / 100
+                        - (aratoplam
+                        - aratoplam * indirimOrani / 100) * indirimOrani2 / 100) * indirimOrani3 / 100;
+                    decimal? satirIndirimTutari = aratoplam - satirIndirimSonrasiToplam;
+                    toplamSatirIndirimTutari += satirIndirimTutari;
+                    decimal? tumIndirimlerSonrasiToplam = 0;
+                    decimal? dipIskontoPayi = 0;
+                    decimal? dipIskontoOrani = Convert.ToDecimal(calcIndirimOrani.EditValue);
+                    decimal? dipIskontoTutari = Convert.ToDecimal(calcIndirimTutari.EditValue);
+                    decimal? kdvToplam = 0;
+                    decimal? satirNetTutar = 0;
+                    if (toggleKDVDahil.IsOn) {
+                        if (dipIskontoOrani != 0) {
+                            tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - satirIndirimSonrasiToplam * dipIskontoOrani / 100;
+                            dipIskontoPayi = satirIndirimSonrasiToplam - tumIndirimlerSonrasiToplam;
+                        } else if (dipIskontoTutari != 0) {
+                            dipIskontoPayi = dipIskontoTutari * satirIndirimSonrasiToplam / tumGridinSatirIndirimSonrasiToplami;
+                            tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - dipIskontoPayi;
+                        } else {
+                            tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam;
+                        }
+                        //kdvToplam = tumIndirimlerSonrasiToplam - tumIndirimlerSonrasiToplam / (1 + kdv / 100);
+                        kdvToplam = Math.Round(tumIndirimlerSonrasiToplam.Value * (kdv / 100).Value, 2);
+                        satirNetTutar = Math.Round(tumIndirimlerSonrasiToplam.Value + kdvToplam.Value, 2);
                     } else {
-                        tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam;
+                        if (dipIskontoOrani != 0) {
+                            tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - satirIndirimSonrasiToplam * dipIskontoOrani / 100;
+                            dipIskontoPayi = satirIndirimSonrasiToplam - tumIndirimlerSonrasiToplam;
+                        } else if (dipIskontoTutari != 0) {
+                            dipIskontoPayi = dipIskontoTutari * satirIndirimSonrasiToplam / tumGridinSatirIndirimSonrasiToplami;
+                            tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - dipIskontoPayi;
+                        } else {
+                            tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam;
+                        }
+                        kdvToplam = Math.Round(tumIndirimlerSonrasiToplam.Value * (kdv / 100).Value, 2);
+                        satirNetTutar = Math.Round(tumIndirimlerSonrasiToplam.Value + kdvToplam.Value, 2);
                     }
-                    kdvToplam = tumIndirimlerSonrasiToplam * (kdv / 100);
-                    satirNetTutar = tumIndirimlerSonrasiToplam + kdvToplam;
+                    toplamKdvToplam += kdvToplam;
+                    toplamGenelToplam += satirNetTutar;
+
+
+                    item.DipIskontoPayi = Math.Round(dipIskontoPayi.Value, 2);
+                    item.KdvToplam = Math.Round(kdvToplam.Value, 2);
+                    item.AraToplam = Math.Round(aratoplam.Value, 2);
+                    item.IndirimTutar = Math.Round(satirIndirimTutari.Value, 2);
+                    item.ToplamTutar = Math.Round(satirNetTutar.Value, 2);
+
                 }
-                toplamKdvToplam += kdvToplam;
-                toplamGenelToplam += satirNetTutar;
+                calcKdvToplam.EditValue = Math.Round(toplamKdvToplam.Value, 2);
+                calcAraToplam.EditValue = Math.Round((toplamAraToplam - toplamKdvToplam).Value, 2);
+                calcAraToplam.EditValue = Math.Round(toplamAraToplam.Value, 2);
+                calcGenelToplam.EditValue = Math.Round(toplamGenelToplam.Value, 2);
+                calcIndirimToplami.EditValue = Math.Round(toplamSatirIndirimTutari.Value, 2);
+                calcOdenemesiGereken.EditValue = Math.Round((toplamGenelToplam - calcOdenenTutar.Value).Value, 2);
+                if (_fisentity.FisTuru == "Masraf Fişi" ||
+                    _fisentity.FisTuru == "Tahsilat Fişi" ||
+                    _fisentity.FisTuru == "Ödeme Fişi" ||
+                    _fisentity.FisTuru == "Cari Devir Fişi")
+                    calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
+                //if (_fisentity.FisTuru == "Tahsilat Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
+                //if (_fisentity.FisTuru == "Ödeme Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
+                //if (_fisentity.FisTuru == "Cari Devir Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
+                //if (_fisentity.FisTuru == "Hakediş Fişi") calcGenelToplam.Value = Convert.ToDecimal(colOdenecekTutar.SummaryItem.SummaryValue);
+                gridStokHareket.RefreshData();
 
+            } catch (Exception ex) {
 
-                item.DipIskontoPayi = dipIskontoPayi;
-                item.KdvToplam = kdvToplam;
-                item.AraToplam = aratoplam;
-                item.IndirimTutar = satirIndirimTutari;
-                item.ToplamTutar = satirNetTutar;
 
             }
-            calcKdvToplam.EditValue = toplamKdvToplam;
-            calcAraToplam.EditValue = toplamAraToplam - toplamKdvToplam;
-            calcAraToplam.EditValue = toplamAraToplam;
-            calcGenelToplam.EditValue = toplamGenelToplam;
-            calcIndirimToplami.EditValue = toplamSatirIndirimTutari;
-            calcOdenemesiGereken.EditValue = toplamGenelToplam - calcOdenenTutar.Value;
-            if (_fisentity.FisTuru == "Masraf Fişi" ||
-                _fisentity.FisTuru == "Tahsilat Fişi" ||
-                _fisentity.FisTuru == "Ödeme Fişi" ||
-                _fisentity.FisTuru == "Cari Devir Fişi")
-                calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
-            //if (_fisentity.FisTuru == "Tahsilat Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
-            //if (_fisentity.FisTuru == "Ödeme Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
-            //if (_fisentity.FisTuru == "Cari Devir Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
-            //if (_fisentity.FisTuru == "Hakediş Fişi") calcGenelToplam.Value = Convert.ToDecimal(colOdenecekTutar.SummaryItem.SummaryValue);
-            gridStokHareket.RefreshData();
-
 
         }
         private async void repoFiyat_EditValueChanged(object sender, EventArgs e)
@@ -2288,51 +2294,53 @@ namespace NetSatis.BackOffice.Fiş
                 }
             }
 
-            for (int i = 0; i < gridStokHareket.RowCount; i++) //EFATURA DÜZENLEME
-            {
-                decimal fyt = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString());
-                decimal fyt2 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar"));
-                int stokid = Convert.ToInt32(gridStokHareket.GetRowCellValue(i, "StokId"));
+            //EFATURA YENİ DÜZENLEME
+            foreach (var stok in context.StokHareketleri.Local) {
+                decimal fyt = stok.KdvToplam.Value;// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString());
+                decimal fyt2 = stok.ToplamTutar.Value;// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar"));
+                var stokTempid = stok.TempId;// Convert.ToInt32(gridStokHareket.GetRowCellValue(i, "StokId"));
                 NetSatis.EDonusum.Models.Donusum.Details d = null;
                 if (duzenle) {
-                    var res = c.Detail.Where(x => x.MasterId == id && x.StokId == stokid).FirstOrDefault();
+                    var res = c.Detail.Where(x => x.MasterId == id && x.TempId == stokTempid).FirstOrDefault();
                     if (res == null) {
                         d = new EDonusum.Models.Donusum.Details {
                             HareketTipi = eislem.HareketIdGetir(cmbTipi.Text),
                             //Magaza="",
                             HarTip = HarTipi,
-                            Isk1 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani").ToString()),
-                            Isk2 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani2").ToString()),
-                            Isk3 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani3").ToString()),
+                            Isk1 = stok.IndirimOrani.Value, // Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani").ToString()),
+                            Isk2 = stok.IndirimOrani2.Value,//Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani2").ToString()),
+                            Isk3 = stok.IndirimOrani3.Value,//Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani3").ToString()),
                             IskontoTutar = Convert.ToDecimal(calcIndirimToplami.Value.ToString()),
-                            Kdv = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString()),
-                            KdvOrani = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Kdv").ToString()),
-                            KdvDahilFiyat = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar".ToString())),
+                            Kdv = stok.KdvToplam.Value,//Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString()),
+                            KdvOrani = stok.Kdv,//Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Kdv").ToString()),
+                            KdvDahilFiyat = stok.ToplamTutar.Value,//Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar".ToString())),
                             MasterId = id,
                             Matrah = fyt2 - fyt,
-                            Miktar = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Miktar")),
+                            Miktar = stok.Miktar.Value,//Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Miktar")),
                             MusteriKodu = Convert.ToInt32(_fisentity.CariId),
-                            StokId = stokid,
-                            Tutar = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "BirimFiyati").ToString())
+                            StokId = stok.StokId,
+                            TempId = stokTempid,
+                            Tutar = stok.BirimFiyati.Value,//Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "BirimFiyati").ToString())
                         };
                         eislem.DetailsOlustur(d);
                     } else {
 
                         res.HareketTipi = eislem.HareketIdGetir(cmbTipi.Text);
                         res.HarTip = HarTipi;
-                        res.Isk1 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani").ToString());
-                        res.Isk2 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani2").ToString());
-                        res.Isk3 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani3").ToString());
+                        res.Isk1 = stok.IndirimOrani.Value;// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani").ToString());
+                        res.Isk2 = stok.IndirimOrani2.Value;//Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani2").ToString());
+                        res.Isk3 = stok.IndirimOrani3.Value;//Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani3").ToString());
                         res.IskontoTutar = Convert.ToDecimal(calcIndirimToplami.Value.ToString());
-                        res.Kdv = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString());
-                        res.KdvOrani = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Kdv").ToString());
-                        res.KdvDahilFiyat = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar".ToString()));
+                        res.Kdv = stok.KdvToplam.Value;// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString());
+                        res.KdvOrani = stok.Kdv;// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Kdv").ToString());
+                        res.KdvDahilFiyat = stok.ToplamTutar.Value;// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar".ToString()));
                         res.MasterId = id;
                         res.Matrah = fyt2 - fyt;
-                        res.Miktar = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Miktar"));
+                        res.Miktar = stok.Miktar.Value;// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Miktar"));
                         res.MusteriKodu = Convert.ToInt32(_fisentity.CariId);
-                        res.StokId = stokid;
-                        res.Tutar = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "BirimFiyati").ToString());
+                        res.StokId = stok.StokId;
+                        res.TempId = stokTempid;
+                        res.Tutar = stok.BirimFiyati.Value;// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "BirimFiyati").ToString());
                         eislem.DetailsGuncelle(res);
                     }
                 } else {
@@ -2340,23 +2348,95 @@ namespace NetSatis.BackOffice.Fiş
                         HareketTipi = eislem.HareketIdGetir(cmbTipi.Text),
                         //Magaza="",
                         HarTip = HarTipi,
-                        Isk1 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani").ToString()),
-                        Isk2 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani2").ToString()),
-                        Isk3 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani3").ToString()),
+                        Isk1 = stok.IndirimOrani.Value,// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani").ToString()),
+                        Isk2 = stok.IndirimOrani2.Value,// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani2").ToString()),
+                        Isk3 = stok.IndirimOrani3.Value,// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani3").ToString()),
                         IskontoTutar = Convert.ToDecimal(calcIndirimToplami.Value.ToString()),
-                        Kdv = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString()),
-                        KdvOrani = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Kdv").ToString()),
-                        KdvDahilFiyat = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar".ToString())),
+                        Kdv = stok.KdvToplam.Value,// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString()),
+                        KdvOrani = stok.Kdv,// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Kdv").ToString()),
+                        KdvDahilFiyat = stok.ToplamTutar.Value,// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar".ToString())),
                         MasterId = id,
                         Matrah = fyt2 - fyt,
-                        Miktar = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Miktar")),
+                        Miktar = stok.Miktar.Value,// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Miktar")),
                         MusteriKodu = Convert.ToInt32(_fisentity.CariId),
-                        StokId = stokid,
-                        Tutar = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "BirimFiyati").ToString())
+                        TempId = stokTempid,
+                        StokId = stok.StokId,
+                        Tutar = stok.BirimFiyati.Value// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "BirimFiyati").ToString())
                     };
                     eislem.DetailsOlustur(d);
                 }
             }
+
+
+            //for (int i = 0; i < gridStokHareket.RowCount; i++) //EFATURA DÜZENLEME
+            //{ 
+            //    decimal fyt = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString());
+            //    decimal fyt2 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar"));
+            //    int stokid = Convert.ToInt32(gridStokHareket.GetRowCellValue(i, "StokId"));
+            //    NetSatis.EDonusum.Models.Donusum.Details d = null;
+            //    if (duzenle) {
+            //        var res = c.Detail.Where(x => x.MasterId == id && x.StokId == stokid).FirstOrDefault();
+            //        if (res == null) {
+            //            d = new EDonusum.Models.Donusum.Details {
+            //                HareketTipi = eislem.HareketIdGetir(cmbTipi.Text),
+            //                //Magaza="",
+            //                HarTip = HarTipi,
+            //                Isk1 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani").ToString()),
+            //                Isk2 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani2").ToString()),
+            //                Isk3 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani3").ToString()),
+            //                IskontoTutar = Convert.ToDecimal(calcIndirimToplami.Value.ToString()),
+            //                Kdv = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString()),
+            //                KdvOrani = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Kdv").ToString()),
+            //                KdvDahilFiyat = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar".ToString())),
+            //                MasterId = id,
+            //                Matrah = fyt2 - fyt,
+            //                Miktar = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Miktar")),
+            //                MusteriKodu = Convert.ToInt32(_fisentity.CariId),
+            //                StokId = stokid,
+            //                Tutar = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "BirimFiyati").ToString())
+            //            };
+            //            eislem.DetailsOlustur(d);
+            //        } else {
+
+            //            res.HareketTipi = eislem.HareketIdGetir(cmbTipi.Text);
+            //            res.HarTip = HarTipi;
+            //            res.Isk1 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani").ToString());
+            //            res.Isk2 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani2").ToString());
+            //            res.Isk3 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani3").ToString());
+            //            res.IskontoTutar = Convert.ToDecimal(calcIndirimToplami.Value.ToString());
+            //            res.Kdv = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString());
+            //            res.KdvOrani = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Kdv").ToString());
+            //            res.KdvDahilFiyat = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar".ToString()));
+            //            res.MasterId = id;
+            //            res.Matrah = fyt2 - fyt;
+            //            res.Miktar = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Miktar"));
+            //            res.MusteriKodu = Convert.ToInt32(_fisentity.CariId);
+            //            res.StokId = stokid;
+            //            res.Tutar = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "BirimFiyati").ToString());
+            //            eislem.DetailsGuncelle(res);
+            //        }
+            //    } else {
+            //        d = new EDonusum.Models.Donusum.Details {
+            //            HareketTipi = eislem.HareketIdGetir(cmbTipi.Text),
+            //            //Magaza="",
+            //            HarTip = HarTipi,
+            //            Isk1 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani").ToString()),
+            //            Isk2 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani2").ToString()),
+            //            Isk3 = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimOrani3").ToString()),
+            //            IskontoTutar = Convert.ToDecimal(calcIndirimToplami.Value.ToString()),
+            //            Kdv = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString()),
+            //            KdvOrani = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Kdv").ToString()),
+            //            KdvDahilFiyat = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar".ToString())),
+            //            MasterId = id,
+            //            Matrah = fyt2 - fyt,
+            //            Miktar = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "Miktar")),
+            //            MusteriKodu = Convert.ToInt32(_fisentity.CariId),
+            //            StokId = stokid,
+            //            Tutar = Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "BirimFiyati").ToString())
+            //        };
+            //        eislem.DetailsOlustur(d);
+            //    }
+            //}
         }
 
         private void txtSeri_KeyDown(object sender, KeyEventArgs e)
@@ -2653,7 +2733,7 @@ namespace NetSatis.BackOffice.Fiş
 
             }
         }
-         
+
         private void gridStokHareket_KeyDown(object sender, KeyEventArgs e)
         {
             if (gridStokHareket.RowCount == 0)

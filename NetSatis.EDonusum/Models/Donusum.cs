@@ -62,6 +62,8 @@ namespace NetSatis.EDonusum.Models
             public decimal Isk2 { get; set; }
             public decimal Isk3 { get; set; }
             public int HareketTipi { get; set; }
+            public Guid TempId { get; set; }
+
         }
         public class MasterView
         {
