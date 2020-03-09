@@ -104,7 +104,7 @@ namespace NetSatis.FrontOffice
             }
             if (keyData == Keys.F1)
             {
-                var buton = new SimpleButton
+                var buton = new Button
                 {
                     Name = "Nakit",
                     Tag = "1",
@@ -113,7 +113,7 @@ namespace NetSatis.FrontOffice
             }
             if (keyData == Keys.F3)
             {
-                var buton = new SimpleButton
+                var buton = new Button
                 {
                     Name = "Kredi Kartı",
                     Tag = "2",
