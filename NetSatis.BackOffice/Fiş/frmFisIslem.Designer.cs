@@ -1966,8 +1966,7 @@
             this.gridContStokHareket.Size = new System.Drawing.Size(1134, 236);
             this.gridContStokHareket.TabIndex = 2;
             this.gridContStokHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridStokHareket});
-            this.gridContStokHareket.ProcessGridKey += new System.Windows.Forms.KeyEventHandler(this.gridContStokHareket_ProcessGridKey);
+            this.gridStokHareket}); 
             // 
             // contextMenuStrip1
             // 
