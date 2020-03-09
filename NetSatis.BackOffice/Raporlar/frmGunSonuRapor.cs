@@ -84,13 +84,13 @@ namespace NetSatis.BackOffice.Raporlar
 
 
             var odemeTuru = new List<ornek>();
-            var resAcikHesap = (from f in context.Fisler.Where(s => s.Tarih >= baslangic && s.Tarih <= bitis)
-                                from k in context.KasaHareketleri.GroupBy(x => x.OdemeTuru)
+            var resAcikHesap = (from f in context.Fisler.Where(s => s.Tarih >= baslangic && s.Tarih <= bitis && (s.FisTuru == "Toptan Satış Faturası" || s.FisTuru == "Perakende Satış Faturası"))
+                                from k in context.KasaHareketleri.Where(x => x.FisKodu == f.FisKodu).GroupBy(x => x.OdemeTuru).DefaultIfEmpty()
+                                    //from kk in context.KasaHareketleri.Where(x => x.FisKodu != f.FisKodu).GroupBy(x => x.FisKodu).DefaultIfEmpty()
                                 select new
                                 {
-                                    OdemeTuru = k.Key != null ? (string.IsNullOrEmpty(k.Key.OdemeTuruAdi) ? "Açık Hesap" : k.Key.OdemeTuruAdi) : "Açık Hesap",
-                                    kasaTutar = k.Key != null ? (string.IsNullOrEmpty(k.Key.OdemeTuruAdi) ? k.Where(x => x.FisKodu != f.FisKodu).Sum(s => s.Tutar) : k.Where(x => x.FisKodu == f.FisKodu).Sum(s => s.Tutar)) : k.Where(x => x.FisKodu != f.FisKodu).Sum(s => s.Tutar),
-
+                                    OdemeTuru = (k.Key != null ? (string.IsNullOrEmpty(k.Key.OdemeTuruAdi) ? "Açık Hesap" : k.Key.OdemeTuruAdi) : "Açık Hesap"),
+                                    kasaTutar = (k.Key != null ? (string.IsNullOrEmpty(k.Key.OdemeTuruAdi) ? f.ToplamTutar : k.Where(x => x.FisKodu == f.FisKodu).Sum(s => s.Tutar)) : f.ToplamTutar),
                                 }).ToList();
             foreach (var item in resAcikHesap.GroupBy(x => x.OdemeTuru).ToList())
             {
