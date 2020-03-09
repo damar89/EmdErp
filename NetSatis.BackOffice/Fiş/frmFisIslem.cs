@@ -58,6 +58,7 @@ namespace NetSatis.BackOffice.Fiş
             Entities.Tables.Cari entity = null, int userId = 0)
         {
             InitializeComponent();
+            gridContKasaHareket.ForceInitialize();
             this.fisKodu = fisKodu;
             this.fisTuru = fisTuru;
             this.cariGetir = cariGetir;
@@ -1885,27 +1886,25 @@ namespace NetSatis.BackOffice.Fiş
                 //if (_fisentity.FisTuru == "Ödeme Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
                 //if (_fisentity.FisTuru == "Cari Devir Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
                 //if (_fisentity.FisTuru == "Hakediş Fişi") calcGenelToplam.Value = Convert.ToDecimal(colOdenecekTutar.SummaryItem.SummaryValue);
+                //gridStokHareket.PostEditor();
                 gridStokHareket.RefreshData();
+                gridContKasaHareket.Refresh();
 
             } catch (Exception ex) {
-
-
+                System.Diagnostics.Debug.WriteLine("Hesaplama yaparken hata oluştu. Hata=>decimal değere null değer atandı.\nDetay=> " + ex.Message);
             }
 
         }
         private async void repoFiyat_EditValueChanged(object sender, EventArgs e)
         {
-            gridStokHareket.PostEditor();
             await HepsiniHesapla();
         }
         private async void repoMiktar_EditValueChanged(object sender, EventArgs e)
         {
-            gridStokHareket.PostEditor();
             await HepsiniHesapla();
         }
         private async void repoIskonto_EditValueChanged(object sender, EventArgs e)
         {
-            gridStokHareket.PostEditor();
             await HepsiniHesapla();
         }
         private async void calcIndirimOrani_EditValueChanged(object sender, EventArgs e)
@@ -2531,7 +2530,6 @@ namespace NetSatis.BackOffice.Fiş
 
         private async void repoKdv_EditValueChanged(object sender, EventArgs e)
         {
-            gridStokHareket.PostEditor();
             await HepsiniHesapla();
         }
 
@@ -2605,6 +2603,7 @@ namespace NetSatis.BackOffice.Fiş
                     obj.Text = null;
                     break;
             }
+
         }
         private async void repositoryItemButtonEdit6_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
@@ -2623,7 +2622,6 @@ namespace NetSatis.BackOffice.Fiş
 
                 await HepsiniHesapla();
 
-                gridStokHareket.RefreshData();
 
             }
         }
@@ -2632,6 +2630,7 @@ namespace NetSatis.BackOffice.Fiş
         {
             switch (e.KeyCode) {
                 case Keys.F6:
+                case Keys.F10:
                     repoStokSec_ButtonClick(sender, new DevExpress.XtraEditors.Controls.ButtonPressedEventArgs(repobtnStokSec.Buttons[0]));
                     break;
                 case Keys.F7:
@@ -2663,7 +2662,7 @@ namespace NetSatis.BackOffice.Fiş
                 gridStokHareket.FocusedColumn = gridStokHareket.Columns["Stok.StokKodu"];
                 return;
             }
-            var entityStok = context.Stoklar.Include(x => x.StokHareket).FirstOrDefault(x => x.Id == seciliStok.Id);
+            var entityStok = context.Stoklar.FirstOrDefault(x => x.Id == seciliStok.Id);
 
             if (MinStokAltinda(entityStok)) return;
             StokHareket s = StokSec(entityStok);
@@ -2719,7 +2718,6 @@ namespace NetSatis.BackOffice.Fiş
             stokHareketDal.AddOrUpdate(context, row);
 
             await HepsiniHesapla();
-            gridStokHareket.RefreshData();
         }
 
         private void gridStokHareket_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
@@ -2736,15 +2734,29 @@ namespace NetSatis.BackOffice.Fiş
             }
         }
 
+
         private void gridStokHareket_KeyDown(object sender, KeyEventArgs e)
         {
+
             if (gridStokHareket.RowCount == 0)
                 return;
+
             if (gridStokHareket.FocusedColumn == gridStokHareket.Columns["ToplamTutar"]) {
                 if (e.KeyCode == Keys.Enter) {
                     gridStokHareket.FocusedRowHandle = GridControl.NewItemRowHandle;
                     gridStokHareket.FocusedColumn = gridStokHareket.Columns["Stok.StokKodu"];
                 }
+            }
+
+            var stok = gridStokHareket.GetRow(gridStokHareket.FocusedRowHandle) as StokHareket;
+            if (stok == null || stok.StokId == 0)
+                return;
+            if (e.KeyCode == Keys.F8) {
+                var frm = new frmStokIslem(stok.Stok);
+                frm.Show();
+            } else if (e.KeyCode == Keys.F12) {
+                var frm = new frmStokHareket(stok.StokId);
+                frm.Show();
             }
         }
     }

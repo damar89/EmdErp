@@ -246,6 +246,7 @@
             this.colIndirimTutar3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIndirimTutar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colToplamTutar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rpsTutar = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.colKdvToplam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBarkod = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStokId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -344,7 +345,6 @@
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.popupMenu3 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.rpsTutar = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
@@ -426,6 +426,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repoDepo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoSeri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoSil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpsTutar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryMustahsil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kdvDegisim)).BeginInit();
@@ -483,7 +484,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rpsTutar)).BeginInit();
             this.SuspendLayout();
             // 
             // ımageList2
@@ -1967,6 +1967,7 @@
             this.gridContStokHareket.TabIndex = 2;
             this.gridContStokHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridStokHareket});
+            this.gridContStokHareket.ProcessGridKey += new System.Windows.Forms.KeyEventHandler(this.gridContStokHareket_ProcessGridKey);
             // 
             // contextMenuStrip1
             // 
@@ -2548,6 +2549,15 @@
             this.colToplamTutar.Visible = true;
             this.colToplamTutar.VisibleIndex = 14;
             this.colToplamTutar.Width = 179;
+            // 
+            // rpsTutar
+            // 
+            this.rpsTutar.AutoHeight = false;
+            this.rpsTutar.DisplayFormat.FormatString = "c2";
+            this.rpsTutar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.rpsTutar.EditFormat.FormatString = "c2";
+            this.rpsTutar.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.rpsTutar.Name = "rpsTutar";
             // 
             // colKdvToplam
             // 
@@ -3596,15 +3606,6 @@
             this.popupMenu3.Manager = this.barManager1;
             this.popupMenu3.Name = "popupMenu3";
             // 
-            // rpsTutar
-            // 
-            this.rpsTutar.AutoHeight = false;
-            this.rpsTutar.DisplayFormat.FormatString = "c2";
-            this.rpsTutar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.rpsTutar.EditFormat.FormatString = "c2";
-            this.rpsTutar.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.rpsTutar.Name = "rpsTutar";
-            // 
             // frmFisIslem
             // 
             this.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
@@ -3709,6 +3710,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repoDepo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoSeri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoSil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpsTutar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryMustahsil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kdvDegisim)).EndInit();
@@ -3766,7 +3768,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rpsTutar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
