@@ -99,8 +99,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTKalemler.Columns.Add("KalemKDVTutari", typeof(decimal));
             DTKalemler.Columns.Add("KalemKDVliIndirimliToplam", typeof(string));
             DTKalemler.TableName = "FaturaKalemler";
-            foreach (var item in stokHareketleri)
-            {
+            foreach (var item in stokHareketleri) {
                 DataRow f = DTKalemler.NewRow();
                 f["KalemBarkod"] = item.Stok.Barkodu;
                 f["KalemBirim"] = item.Stok.Birim;
@@ -113,8 +112,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
                 f["KalemStokAdi"] = item.Stok.StokAdi;
                 f["KalemStokKodu"] = item.Stok.StokKodu;
                 //f.KalemToplam
-                if (fisBilgi.KDVDahil)
-                {
+                if (fisBilgi.KDVDahil) {
                     f["KalemBirimFiyati"] = (decimal)item.BirimFiyati;
 
                 }
@@ -125,12 +123,9 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
                 f["KalemKDVliIndirimliToplam"] = (decimal)item.KdvToplam;
                 f["KalemKDVTutari"] = (decimal)item.KdvToplam;
 
-                if (KDVLer.ContainsKey(item.Kdv))
-                {
+                if (KDVLer.ContainsKey(item.Kdv)) {
                     KDVLer[item.Kdv] += (decimal)item.KdvToplam;
-                }
-                else
-                {
+                } else {
                     KDVLer.Add(item.Kdv, (decimal)item.KdvToplam);
                 }
 
@@ -143,8 +138,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTKDVler.Columns.Add("KDV", typeof(int));
             DTKDVler.Columns.Add("Tutar", typeof(string));
             DTKDVler.TableName = "FaturaKDVler";
-            foreach (var item in KDVLer)
-            {
+            foreach (var item in KDVLer) {
                 DataRow dr = DTKDVler.NewRow();
 
                 dr["KDV"] = item.Key.ToString();
@@ -253,8 +247,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTKalemler.Columns.Add("KalemKDVTutari", typeof(decimal));
             DTKalemler.Columns.Add("KalemKDVliIndirimliToplam", typeof(string));
             DTKalemler.TableName = "FaturaKalemler";
-            foreach (var item in stokHareketleri)
-            {
+            foreach (var item in stokHareketleri) {
                 DataRow f = DTKalemler.NewRow();
                 f["KalemBarkod"] = item.Stok.Barkodu;
                 f["KalemBirim"] = item.Stok.Birim;
@@ -275,12 +268,9 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
                 f["KalemKDVliIndirimliToplam"] = (decimal)item.KdvToplam;
                 f["KalemKDVTutari"] = (decimal)item.KdvToplam;
 
-                if (KDVLer.ContainsKey(item.Kdv))
-                {
+                if (KDVLer.ContainsKey(item.Kdv)) {
                     KDVLer[item.Kdv] += (decimal)item.KdvToplam;
-                }
-                else
-                {
+                } else {
                     KDVLer.Add(item.Kdv, (decimal)item.KdvToplam);
                 }
 
@@ -293,8 +283,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTKDVler.Columns.Add("KDV", typeof(int));
             DTKDVler.Columns.Add("Tutar", typeof(string));
             DTKDVler.TableName = "FaturaKDVler";
-            foreach (var item in KDVLer)
-            {
+            foreach (var item in KDVLer) {
                 DataRow dr = DTKDVler.NewRow();
 
                 dr["KDV"] = item.Key.ToString();
@@ -407,8 +396,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTKalemler.Columns.Add("KalemKDVTutari", typeof(decimal));
             DTKalemler.Columns.Add("KalemKDVliIndirimliToplam", typeof(string));
             DTKalemler.TableName = "FaturaKalemler";
-            foreach (var item in stokHareketleri)
-            {
+            foreach (var item in stokHareketleri) {
                 DataRow f = DTKalemler.NewRow();
                 f["KalemBarkod"] = item.Stok.Barkodu;
                 f["KalemBirim"] = item.Stok.Birim;
@@ -422,8 +410,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
                 f["KalemStokAdi"] = item.Stok.StokAdi;
                 f["KalemStokKodu"] = item.Stok.StokKodu;
                 //f.KalemToplam
-                if (fisBilgi.KDVDahil)
-                {
+                if (fisBilgi.KDVDahil) {
                     f["KalemBirimFiyati"] = (decimal)item.KdvHaric_;
 
                 }
@@ -434,12 +421,9 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
                 f["KalemKDVliIndirimliToplam"] = (decimal)item.KdvToplam;
                 f["KalemKDVTutari"] = (decimal)item.KdvToplam;
 
-                if (KDVLer.ContainsKey(item.Kdv))
-                {
+                if (KDVLer.ContainsKey(item.Kdv)) {
                     KDVLer[item.Kdv] += (decimal)item.KdvToplam;
-                }
-                else
-                {
+                } else {
                     KDVLer.Add(item.Kdv, (decimal)item.KdvToplam);
                 }
 
@@ -452,8 +436,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTKDVler.Columns.Add("KDV", typeof(int));
             DTKDVler.Columns.Add("Tutar", typeof(string));
             DTKDVler.TableName = "FaturaKDVler";
-            foreach (var item in KDVLer)
-            {
+            foreach (var item in KDVLer) {
                 DataRow dr = DTKDVler.NewRow();
 
                 dr["KDV"] = item.Key.ToString();
@@ -567,8 +550,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTKalemler.Columns.Add("KalemKDVTutari", typeof(decimal));
             DTKalemler.Columns.Add("KalemKDVliIndirimliToplam", typeof(string));
             DTKalemler.TableName = "FaturaKalemler";
-            foreach (var item in stokHareketleri)
-            {
+            foreach (var item in stokHareketleri) {
                 DataRow f = DTKalemler.NewRow();
                 f["KalemBarkod"] = item.Stok.Barkodu;
                 f["KalemBirim"] = item.Stok.Birim;
@@ -581,8 +563,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
                 f["KalemStokAdi"] = item.Stok.StokAdi;
                 f["KalemStokKodu"] = item.Stok.StokKodu;
                 //f.KalemToplam
-                if (fisBilgi.KDVDahil)
-                {
+                if (fisBilgi.KDVDahil) {
                     f["KalemBirimFiyati"] = (decimal)item.KdvHaric_;
 
                 }
@@ -593,12 +574,9 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
                 f["KalemKDVliIndirimliToplam"] = (decimal)item.KdvToplam;
                 f["KalemKDVTutari"] = (decimal)item.KdvToplam;
 
-                if (KDVLer.ContainsKey(item.Kdv))
-                {
+                if (KDVLer.ContainsKey(item.Kdv)) {
                     KDVLer[item.Kdv] += (decimal)item.KdvToplam;
-                }
-                else
-                {
+                } else {
                     KDVLer.Add(item.Kdv, (decimal)item.KdvToplam);
                 }
 
@@ -611,8 +589,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTKDVler.Columns.Add("KDV", typeof(int));
             DTKDVler.Columns.Add("Tutar", typeof(string));
             DTKDVler.TableName = "FaturaKDVler";
-            foreach (var item in KDVLer)
-            {
+            foreach (var item in KDVLer) {
                 DataRow dr = DTKDVler.NewRow();
 
                 dr["KDV"] = item.Key.ToString();
@@ -726,8 +703,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTKalemler.Columns.Add("KalemKDVTutari", typeof(decimal));
             DTKalemler.Columns.Add("KalemKDVliIndirimliToplam", typeof(string));
             DTKalemler.TableName = "FaturaKalemler";
-            foreach (var item in stokHareketleri)
-            {
+            foreach (var item in stokHareketleri) {
                 DataRow f = DTKalemler.NewRow();
                 f["KalemBarkod"] = item.Stok.Barkodu;
                 f["KalemBirim"] = item.Stok.Birim;
@@ -740,8 +716,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
                 f["KalemStokAdi"] = item.Stok.StokAdi;
                 f["KalemStokKodu"] = item.Stok.StokKodu;
                 //f.KalemToplam
-                if (fisBilgi.KDVDahil)
-                {
+                if (fisBilgi.KDVDahil) {
                     f["KalemBirimFiyati"] = (decimal)item.KdvHaric_;
 
                 }
@@ -752,12 +727,9 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
                 f["KalemKDVliIndirimliToplam"] = (decimal)item.KdvToplam;
                 f["KalemKDVTutari"] = (decimal)item.KdvToplam;
 
-                if (KDVLer.ContainsKey(item.Kdv))
-                {
+                if (KDVLer.ContainsKey(item.Kdv)) {
                     KDVLer[item.Kdv] += (decimal)item.KdvToplam;
-                }
-                else
-                {
+                } else {
                     KDVLer.Add(item.Kdv, (decimal)item.KdvToplam);
                 }
 
@@ -770,8 +742,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTKDVler.Columns.Add("KDV", typeof(int));
             DTKDVler.Columns.Add("Tutar", typeof(string));
             DTKDVler.TableName = "FaturaKDVler";
-            foreach (var item in KDVLer)
-            {
+            foreach (var item in KDVLer) {
                 DataRow dr = DTKDVler.NewRow();
 
                 dr["KDV"] = item.Key.ToString();
@@ -872,8 +843,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTKalemler.Columns.Add("KalemKDVTutari", typeof(decimal));
             DTKalemler.Columns.Add("KalemKDVliIndirimliToplam", typeof(string));
             DTKalemler.TableName = "FaturaKalemler";
-            foreach (var item in stokHareketleri)
-            {
+            foreach (var item in stokHareketleri) {
                 DataRow f = DTKalemler.NewRow();
                 f["KalemBarkod"] = item.Stok.Barkodu;
                 f["KalemBirim"] = item.Stok.Birim;
@@ -886,8 +856,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
                 f["KalemStokAdi"] = item.Stok.StokAdi;
                 f["KalemStokKodu"] = item.Stok.StokKodu;
                 //f.KalemToplam
-                if (fisBilgi.KDVDahil)
-                {
+                if (fisBilgi.KDVDahil) {
                     f["KalemBirimFiyati"] = (decimal)item.KdvHaric_;
 
                 }
@@ -898,12 +867,9 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
                 f["KalemKDVliIndirimliToplam"] = (decimal)item.KdvToplam;
                 f["KalemKDVTutari"] = (decimal)item.KdvToplam;
 
-                if (KDVLer.ContainsKey(item.Kdv))
-                {
+                if (KDVLer.ContainsKey(item.Kdv)) {
                     KDVLer[item.Kdv] += (decimal)item.KdvToplam;
-                }
-                else
-                {
+                } else {
                     KDVLer.Add(item.Kdv, (decimal)item.KdvToplam);
                 }
 
@@ -916,8 +882,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTKDVler.Columns.Add("KDV", typeof(int));
             DTKDVler.Columns.Add("Tutar", typeof(string));
             DTKDVler.TableName = "FaturaKDVler";
-            foreach (var item in KDVLer)
-            {
+            foreach (var item in KDVLer) {
                 DataRow dr = DTKDVler.NewRow();
 
                 dr["KDV"] = item.Key.ToString();
@@ -1019,19 +984,15 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
 
             if (Lnqlst == null) return dt;
 
-            foreach (T Record in Lnqlst)
-            {
+            foreach (T Record in Lnqlst) {
 
-                if (columns == null)
-                {
+                if (columns == null) {
                     columns = ((Type)Record.GetType()).GetProperties();
-                    foreach (PropertyInfo GetProperty in columns)
-                    {
+                    foreach (PropertyInfo GetProperty in columns) {
                         Type colType = GetProperty.PropertyType;
 
                         if ((colType.IsGenericType) && (colType.GetGenericTypeDefinition()
-                        == typeof(Nullable<>)))
-                        {
+                        == typeof(Nullable<>))) {
                             colType = colType.GetGenericArguments()[0];
                         }
 
@@ -1041,8 +1002,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
 
                 DataRow dr = dt.NewRow();
 
-                foreach (PropertyInfo pinfo in columns)
-                {
+                foreach (PropertyInfo pinfo in columns) {
                     dr[pinfo.Name] = pinfo.GetValue(Record, null) == null ? DBNull.Value : pinfo.GetValue
                     (Record, null);
                 }
@@ -1056,14 +1016,12 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
         {
             PropertyDescriptorCollection props = TypeDescriptor.GetProperties(typeof(T));
             DataTable table = new DataTable();
-            for (int i = 0; i < props.Count; i++)
-            {
+            for (int i = 0; i < props.Count; i++) {
                 PropertyDescriptor prop = props[i];
                 table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType);
             }
             object[] values = new object[props.Count];
-            foreach (T item in list)
-            {
+            foreach (T item in list) {
                 for (int i = 0; i < values.Length; i++)
                     values[i] = props[i].GetValue(item) ?? DBNull.Value;
                 table.Rows.Add(values);
@@ -1077,16 +1035,13 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
 
             //Get all the properties
             PropertyInfo[] Props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
-            foreach (PropertyInfo prop in Props)
-            {
+            foreach (PropertyInfo prop in Props) {
                 //Setting column names as Property names
                 dataTable.Columns.Add(prop.Name);
             }
-            foreach (T item in items)
-            {
+            foreach (T item in items) {
                 var values = new object[Props.Length];
-                for (int i = 0; i < Props.Length; i++)
-                {
+                for (int i = 0; i < Props.Length; i++) {
                     //inserting property values to datatable rows
                     values[i] = Props[i].GetValue(item, null);
                 }
@@ -1100,8 +1055,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
         {
             PropertyDescriptorCollection props = TypeDescriptor.GetProperties(typeof(T));
             DataTable table = new DataTable();
-            for (int i = 0; i < props.Count; i++)
-            {
+            for (int i = 0; i < props.Count; i++) {
                 PropertyDescriptor prop = props[i];
                 if (prop.PropertyType.IsGenericType && prop.PropertyType.GetGenericTypeDefinition() == typeof(Nullable<>))
                     table.Columns.Add(prop.Name, prop.PropertyType.GetGenericArguments()[0]);
@@ -1110,10 +1064,8 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             }
 
             object[] values = new object[props.Count];
-            foreach (T item in data)
-            {
-                for (int i = 0; i < values.Length; i++)
-                {
+            foreach (T item in data) {
+                for (int i = 0; i < values.Length; i++) {
                     values[i] = props[i].GetValue(item);
                 }
                 table.Rows.Add(values);

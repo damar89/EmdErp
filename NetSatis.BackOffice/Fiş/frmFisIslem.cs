@@ -2302,6 +2302,8 @@ namespace NetSatis.BackOffice.Fiş
                 NetSatis.EDonusum.Models.Donusum.Details d = null;
                 if (duzenle) {
                     var res = c.Detail.Where(x => x.MasterId == id && x.TempId == stokTempid).FirstOrDefault();
+                    if (res == null)
+                        res = c.Detail.FirstOrDefault(x => x.MasterId == id && x.StokId == stok.StokId);
                     if (res == null) {
                         d = new EDonusum.Models.Donusum.Details {
                             HareketTipi = eislem.HareketIdGetir(cmbTipi.Text),

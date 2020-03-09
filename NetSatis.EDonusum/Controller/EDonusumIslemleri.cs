@@ -7,10 +7,8 @@ namespace NetSatis.EDonusum.Controller
     {
         public void HareketTipiOlustur(string Kodu, string Aciklama)
         {
-            using (VTContext db = new VTContext())
-            {
-                Models.Donusum.HareketTipi h = new Models.Donusum.HareketTipi
-                {
+            using (VTContext db = new VTContext()) {
+                Models.Donusum.HareketTipi h = new Models.Donusum.HareketTipi {
                     Aciklama = Aciklama,
                     Kodu = Kodu
                 };
@@ -20,8 +18,7 @@ namespace NetSatis.EDonusum.Controller
         }
         public Models.Donusum.HareketTipi HareketTipiGetir(int id)
         {
-            using (VTContext db = new VTContext())
-            {
+            using (VTContext db = new VTContext()) {
 
                 return db.HareketTipi.Where(x => x.Id == id).FirstOrDefault();
 
@@ -30,24 +27,21 @@ namespace NetSatis.EDonusum.Controller
         public List<Models.Donusum.HareketTipi> HareketTipiListele()
         {
 
-            using (VTContext db = new VTContext())
-            {
+            using (VTContext db = new VTContext()) {
                 var list = db.HareketTipi.ToList();
                 return list;
             }
         }
         public int HareketIdGetir(string Aciklama)
         {
-            using (VTContext db = new VTContext())
-            {
+            using (VTContext db = new VTContext()) {
                 var list = db.HareketTipi.Where(x => x.Aciklama == Aciklama).FirstOrDefault();
                 return list.Id;
             }
         }
         public void HareketTipiDuzenle(int id, string Kodu, string Aciklama)
         {
-            using (VTContext db = new VTContext())
-            {
+            using (VTContext db = new VTContext()) {
                 var list = db.HareketTipi.Where(x => x.Id == id).FirstOrDefault();
                 list.Kodu = Kodu;
                 list.Aciklama = Aciklama;
@@ -56,8 +50,7 @@ namespace NetSatis.EDonusum.Controller
         }
         public void HareketTipiSil(int id)
         {
-            using (VTContext db = new VTContext())
-            {
+            using (VTContext db = new VTContext()) {
                 var list = db.HareketTipi.Where(x => x.Id == id).FirstOrDefault();
                 db.HareketTipi.Remove(list);
                 db.SaveChanges();
@@ -66,13 +59,11 @@ namespace NetSatis.EDonusum.Controller
         public int MasterOlustur(Models.Donusum.Master _master)
         {
             string f = _master.FisKodu;
-            using (VTContext db = new VTContext())
-            {
+            using (VTContext db = new VTContext()) {
                 db.Master.Add(_master);
                 db.SaveChanges();
             }
-            using (VTContext dbs = new VTContext())
-            {
+            using (VTContext dbs = new VTContext()) {
                 var list = dbs.Master.Where(x => x.FisKodu == f).FirstOrDefault();
                 return list.Id;
             }
@@ -80,8 +71,7 @@ namespace NetSatis.EDonusum.Controller
         public int MasterGuncelle(Models.Donusum.Master _master)
         {
             string f = _master.FisKodu;
-            using (VTContext db = new VTContext())
-            {
+            using (VTContext db = new VTContext()) {
                 var temp = db.Master.FirstOrDefault(x => x.FisKodu == _master.FisKodu);
                 temp.Aciklama = _master.Aciklama;
                 temp.AlisVerisNo = _master.AlisVerisNo;
@@ -110,12 +100,10 @@ namespace NetSatis.EDonusum.Controller
         }
         public void MasterSil(int id)
         {
-            using (VTContext db = new VTContext())
-            {
+            using (VTContext db = new VTContext()) {
 
                 var temp = db.Master.Where(x => x.AlisVerisNo == id).FirstOrDefault();
-                if (temp != null)
-                {
+                if (temp != null) {
                     db.Master.Remove(temp);
                     var detailTemp = db.Detail.Where(x => x.MasterId == temp.Id).ToList();
                     db.Detail.RemoveRange(detailTemp);
@@ -131,17 +119,17 @@ namespace NetSatis.EDonusum.Controller
         }
         public void DetailsOlustur(Models.Donusum.Details _details)
         {
-            using (VTContext db = new VTContext())
-            {
+            using (VTContext db = new VTContext()) {
                 db.Detail.Add(_details);
                 db.SaveChanges();
             }
         }
         public void DetailsGuncelle(Models.Donusum.Details _details)
         {
-            using (VTContext db = new VTContext())
-            {
+            using (VTContext db = new VTContext()) {
                 var temp = db.Detail.FirstOrDefault(x => x.MasterId == _details.MasterId && x.TempId == _details.TempId);
+                if (temp == null)
+                    temp = db.Detail.FirstOrDefault(x => x.MasterId == _details.MasterId && x.StokId == _details.StokId);
                 if (temp == null)
                     return;
                 temp.HareketTipi = _details.HareketTipi;
@@ -159,13 +147,13 @@ namespace NetSatis.EDonusum.Controller
                 temp.MusteriKodu = _details.MusteriKodu;
                 temp.StokId = _details.StokId;
                 temp.Tutar = _details.Tutar;
+                temp.TempId = _details.TempId;
                 db.SaveChanges();
             }
         }
         public void DetailsSil(int id)
         {
-            using (VTContext db = new VTContext())
-            {
+            using (VTContext db = new VTContext()) {
                 var temp = db.Detail.FirstOrDefault(x => x.Id == id);
                 db.Detail.Remove(temp);
                 db.SaveChanges();
