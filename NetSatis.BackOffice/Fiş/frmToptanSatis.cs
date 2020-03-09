@@ -26,12 +26,9 @@ namespace NetSatis.BackOffice.Fiş
         {
             Listele();
 
-            if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi)))
-            {
+            if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi))) {
                 btnMustahsil.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
-            }
-            else
-            {
+            } else {
                 btnMustahsil.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             }
         }
@@ -56,30 +53,23 @@ namespace NetSatis.BackOffice.Fiş
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (gridFisler.RowCount != 0)
-                {
-                    if (MessageBox.Show("Seçili Olan Veriyi Silmek İstediğinize Emin Misiniz ?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                    {
+            try {
+                if (gridFisler.RowCount != 0) {
+                    if (MessageBox.Show("Seçili Olan Veriyi Silmek İstediğinize Emin Misiniz ?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes) {
                         int id = Convert.ToInt32(gridFisler.GetFocusedRowCellValue(colId).ToString());
                         string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
                         string fisTuru = gridFisler.GetFocusedRowCellValue(colFisTuru).ToString();
                         string faturaFisKodu = context.Fisler.FirstOrDefault(x => x.FisKodu == secilen).FaturaFisKodu;
-                        if (!String.IsNullOrEmpty(faturaFisKodu) && (fisTuru == "Satış İrsaliyesi" || fisTuru == "Alış İrsaliyesi"))
-                        {
+                        if (!String.IsNullOrEmpty(faturaFisKodu) && (fisTuru == "Satış İrsaliyesi" || fisTuru == "Alış İrsaliyesi")) {
                             MessageBox.Show("Faturalandırılmış irsaliyeleri silemezsiniz.");
                             return;
-                        }
-                        else
-                        {
+                        } else {
                             bool carietkilesin = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_CariEtkilesin));
                             bool stoketkilesin = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_StoguEtkilesin));
                             var list = context.Fisler.Where(x => x.FaturaFisKodu == secilen).ToList();
                             string[] ids = new string[list.Count];
                             int i = 0;
-                            foreach (var item in list)
-                            {
+                            foreach (var item in list) {
                                 ids[i] = item.FisKodu;
                                 i++;
                             }
@@ -100,9 +90,7 @@ namespace NetSatis.BackOffice.Fiş
                         }
                     }
                 }
-            }
-            catch (Exception)
-            {
+            } catch (Exception) {
                 MessageBox.Show("Seçili fiş bulunamadı.");
             }
 
@@ -118,22 +106,16 @@ namespace NetSatis.BackOffice.Fiş
 
         private void btnDuzenle_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (gridFisler.RowCount != 0)
-                {
+            try {
+                if (gridFisler.RowCount != 0) {
                     string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
                     string fisturu = gridFisler.GetFocusedRowCellValue(colFisTuru).ToString();
                     frmFisIslem form = new frmFisIslem(secilen, fisturu);
                     form.Show();
-                }
-                else
-                {
+                } else {
                     MessageBox.Show("Seçili fiş bulunamadı.");
                 }
-            }
-            catch (Exception)
-            {
+            } catch (Exception) {
 
                 MessageBox.Show("Seçili fiş bulunamadı.");
             }
@@ -142,6 +124,8 @@ namespace NetSatis.BackOffice.Fiş
 
         private void gridFisler_DoubleClick(object sender, EventArgs e)
         {
+            if (gridFisler.RowCount == 0 || gridFisler.FocusedRowHandle < 0)
+                return;
             string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
             string fisturu = gridFisler.GetFocusedRowCellValue(colFisTuru).ToString();
             frmFisIslem form = new frmFisIslem(secilen, fisturu);
@@ -150,8 +134,7 @@ namespace NetSatis.BackOffice.Fiş
 
         private void gridFisler_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
         {
-            if (e.HitInfo.InRow)
-            {
+            if (e.HitInfo.InRow) {
                 var p2 = MousePosition; popupMenu1.ShowPopup(p2);
             }
         }
@@ -165,24 +148,19 @@ namespace NetSatis.BackOffice.Fiş
 
         private void btnFaturaduzenle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (gridFisler.RowCount != 0)
-            {
+            if (gridFisler.RowCount != 0) {
                 string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
                 frmFisIslem form = new frmFisIslem(secilen, null);
                 form.Show();
-            }
-            else
-            {
+            } else {
                 MessageBox.Show("Seçili fiş bulunamadı.");
             }
         }
 
         private void btnFtrSil_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (gridFisler.RowCount != 0)
-            {
-                if (MessageBox.Show("Seçili Olan Veriyi Silmek İstediğinize Emin Misiniz ?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
+            if (gridFisler.RowCount != 0) {
+                if (MessageBox.Show("Seçili Olan Veriyi Silmek İstediğinize Emin Misiniz ?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes) {
                     string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
                     fisDal.Delete(context, c => c.FisKodu == secilen);
                     kasaHareketDal.Delete(context, c => c.FisKodu == secilen);
@@ -190,9 +168,7 @@ namespace NetSatis.BackOffice.Fiş
                     fisDal.Save(context);
                     Listele();
                 }
-            }
-            else
-            {
+            } else {
                 MessageBox.Show("Seçili fiş bulunamadı.");
             }
         }
