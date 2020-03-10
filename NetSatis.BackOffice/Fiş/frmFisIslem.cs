@@ -1783,6 +1783,7 @@ namespace NetSatis.BackOffice.Fiş
         {
             try {
 
+                gridStokHareket.PostEditor();
                 await Task.Delay(10);
 
                 gridPrsonelHareket.UpdateSummary();
@@ -1844,7 +1845,6 @@ namespace NetSatis.BackOffice.Fiş
                         } else {
                             tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam;
                         }
-                        //kdvToplam = tumIndirimlerSonrasiToplam - tumIndirimlerSonrasiToplam / (1 + kdv / 100);
                         kdvToplam = Math.Round(tumIndirimlerSonrasiToplam.Value * (kdv / 100).Value, 2);
                         satirNetTutar = Math.Round(tumIndirimlerSonrasiToplam.Value + kdvToplam.Value, 2);
                     } else {
@@ -1886,7 +1886,6 @@ namespace NetSatis.BackOffice.Fiş
                 //if (_fisentity.FisTuru == "Ödeme Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
                 //if (_fisentity.FisTuru == "Cari Devir Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
                 //if (_fisentity.FisTuru == "Hakediş Fişi") calcGenelToplam.Value = Convert.ToDecimal(colOdenecekTutar.SummaryItem.SummaryValue);
-                //gridStokHareket.PostEditor();
                 gridStokHareket.RefreshData();
                 gridContKasaHareket.Refresh();
 
