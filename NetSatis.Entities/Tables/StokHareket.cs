@@ -52,16 +52,16 @@ namespace NetSatis.Entities.Tables
         public int SaveUser { get; set; }
         public int EditUser { get; set; }
 
-        private Guid _tempId;
+        private Guid _tempId = Guid.Empty;
         public Guid TempId
         {
             get {
-                if (_tempId == null||_tempId==Guid.Parse( "00000000-0000-0000-0000-000000000000"))
-                    return Guid.NewGuid();
+                if (_tempId == Guid.Empty || _tempId == Guid.Parse("00000000-0000-0000-0000-000000000000"))
+                    _tempId = Guid.NewGuid();
                 return _tempId;
             }
             set {
-                if (value == null)
+                if (value == Guid.Empty || _tempId == Guid.Parse("00000000-0000-0000-0000-000000000000"))
                     _tempId = Guid.NewGuid();
                 else
                     _tempId = value;
