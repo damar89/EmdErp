@@ -1807,6 +1807,8 @@ namespace NetSatis.BackOffice.Fiş
                 foreach (StokHareket item in context.StokHareketleri.Local.OrderByDescending(x => x.Tarih)) {
                     item.SiraNo = siraNo;
                     siraNo++;
+                    if (item.TempId == Guid.Empty || item.TempId == Guid.Parse("00000000-0000-0000-0000-000000000000"))
+                        item.TempId = Guid.NewGuid();
 
                     decimal? miktar = item.Miktar;
                     decimal? birimfiyat = item.BirimFiyati;
