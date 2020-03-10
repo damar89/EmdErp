@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NetSatis.Entities.Interface;
+﻿using NetSatis.Entities.Interface;
+using System;
 namespace NetSatis.Entities.Tables
 {
     public class Masraf : IEntity

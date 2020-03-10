@@ -8,8 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NetSatis.Reports.DizaynFormlar {
-    
+namespace NetSatis.Reports.DizaynFormlar
+{
+
     public partial class rptFaturaBarkodlu : DevExpress.XtraReports.UI.XtraReport {
         private void InitializeComponent() {
             DevExpress.XtraReports.ReportInitializer reportInitializer = new DevExpress.XtraReports.ReportInitializer(this, "NetSatis.Reports.DizaynFormlar.rptFaturaBarkodlu.repx");

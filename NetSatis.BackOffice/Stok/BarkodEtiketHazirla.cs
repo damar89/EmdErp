@@ -1,17 +1,12 @@
-﻿using System;
-using System.Data.Entity;
-using System.Linq;
-using System.Windows.Forms;
+﻿using DevExpress.XtraReports.UI;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
+using System;
+using System.Data.Entity;
 using System.IO;
-using DevExpress.XtraReports.UI;
-
-using System.Data;
-using System.Collections;
-using System.Reflection;
-using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Stok
 {

@@ -1,5 +1,5 @@
-﻿using System;
-using NetSatis.Entities.Interface;
+﻿using NetSatis.Entities.Interface;
+using System;
 
 namespace NetSatis.Entities.Tables
 {

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using IniParser;
+﻿using IniParser;
 using IniParser.Model;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace NetSatis.Entities.Tools
 {

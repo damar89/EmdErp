@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
+﻿using DevExpress.XtraNavBar;
+using DevExpress.XtraReports.UI;
+using NetSatis.Reports.Cari;
+using System;
 using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using DevExpress.XtraNavBar;
-using DevExpress.XtraReports.UI;
-using NetSatis.Reports.Stok;
-using NetSatis.Reports.Cari;
 
 namespace NetSatis.BackOffice.Raporlar
 {

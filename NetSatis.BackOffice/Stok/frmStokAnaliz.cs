@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
-using DevExpress.XtraEditors.Mask;
+﻿using DevExpress.XtraEditors.Mask;
 using NetSatis.BackOffice.Extensions;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
+using System;
+using System.Linq;
 
 namespace NetSatis.BackOffice.Stok
 {

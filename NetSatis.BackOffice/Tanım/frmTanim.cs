@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.CodeParser;
-using DevExpress.XtraBars.Navigation;
-using NetSatis.Entities.Context;
+﻿using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
+using System;
+using System.Data;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Tanım
 {

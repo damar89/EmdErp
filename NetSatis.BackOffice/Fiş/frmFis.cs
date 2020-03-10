@@ -1,10 +1,10 @@
-﻿using System;
-using System.Linq;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraEditors;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tools;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 namespace NetSatis.BackOffice.Fiş
 {
     public partial class frmFis : Form

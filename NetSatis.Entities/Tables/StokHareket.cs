@@ -1,7 +1,7 @@
-﻿using System;
+﻿using NetSatis.Entities.Interface;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using NetSatis.Entities.Interface;
 
 namespace NetSatis.Entities.Tables
 {

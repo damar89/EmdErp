@@ -1,7 +1,7 @@
-﻿using System;
+﻿using NetSatis.Entities.Tables.OtherTables;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using NetSatis.Entities.Tables.OtherTables;
 
 namespace NetSatis.BackOffice.Fiyat_Değiştir
 {

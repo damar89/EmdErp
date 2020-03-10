@@ -10,9 +10,10 @@
 
 #pragma warning disable 1591
 
-namespace NetSatis.Reports {
-    
-    
+namespace NetSatis.Reports
+{
+
+
     /// <summary>
     ///Represents a strongly typed in-memory cache of data.
     ///</summary>

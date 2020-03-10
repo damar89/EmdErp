@@ -1,8 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
-using DevExpress.DataAccess.ObjectBinding;
+﻿using DevExpress.DataAccess.ObjectBinding;
 using DevExpress.XtraReports.UI;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;

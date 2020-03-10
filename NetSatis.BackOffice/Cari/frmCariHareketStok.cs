@@ -1,11 +1,11 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using DevExpress.XtraPrinting;
 using DevExpress.XtraReports.UI;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Reports.Cari;
-using DevExpress.XtraPrinting;
+using System;
 using System.IO;
+using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Cari
 {

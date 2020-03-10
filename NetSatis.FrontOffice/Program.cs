@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using DevExpress.LookAndFeel;
+using DevExpress.Skins;
+using DevExpress.UserSkins;
+using DevExpress.XtraEditors;
+using NetSatis.Entities.Tools;
+using NetSatisAdmin;
+using System;
 using System.Globalization;
-using System.Linq;
+using System.IO;
+using System.Net;
 using System.Threading;
 using System.Windows.Forms;
-using DevExpress.UserSkins;
-using DevExpress.Skins;
-using DevExpress.LookAndFeel;
-using NetSatisAdmin;
-using NetSatis.Entities.Tools;
-using System.Net;
-using System.IO;
-using DevExpress.XtraEditors;
-using NetSatis.BackOffice;
 
 namespace NetSatis.FrontOffice
 {

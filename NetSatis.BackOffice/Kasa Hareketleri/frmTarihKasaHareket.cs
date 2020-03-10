@@ -1,8 +1,8 @@
-﻿using System;
-using System.Windows.Forms;
-using NetSatis.Entities.Data_Access;
+﻿using DevExpress.XtraPrinting;
 using NetSatis.Entities.Context;
-using DevExpress.XtraPrinting;
+using NetSatis.Entities.Data_Access;
+using System;
+using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Kasa_Hareketleri
 {

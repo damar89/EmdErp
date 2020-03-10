@@ -1,13 +1,13 @@
-﻿using System;
+﻿using DevExpress.DataProcessing;
+using DevExpress.XtraGrid;
+using NetSatis.Entities.Context;
+using NetSatis.Entities.Data_Access;
+using System;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Windows.Forms;
-using DevExpress.DataProcessing;
-using DevExpress.XtraGrid;
-using NetSatis.Entities.Context;
-using NetSatis.Entities.Data_Access;
 
 namespace NetSatis.BackOffice.Kod
 {

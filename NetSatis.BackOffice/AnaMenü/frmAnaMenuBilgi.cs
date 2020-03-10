@@ -1,19 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraEditors;
 using NetSatis.BackOffice.Cari;
 using NetSatis.BackOffice.Depo;
-using NetSatis.BackOffice.Kasa;
-using NetSatis.BackOffice.Stok;
 using NetSatis.BackOffice.Fiş;
+using NetSatis.BackOffice.Kasa;
 using NetSatis.BackOffice.Raporlar;
+using NetSatis.BackOffice.Stok;
 
 namespace NetSatis.BackOffice.AnaMenü
 {

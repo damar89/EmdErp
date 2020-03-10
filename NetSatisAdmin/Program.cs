@@ -1,14 +1,14 @@
-﻿using System;
+﻿using DevExpress.LookAndFeel;
+using DevExpress.Skins;
+using DevExpress.UserSkins;
+using DevExpress.XtraEditors;
+using NetSatis.Entities.Tools;
+using System;
 using System.Globalization;
+using System.IO;
+using System.Net;
 using System.Threading;
 using System.Windows.Forms;
-using DevExpress.UserSkins;
-using DevExpress.Skins;
-using DevExpress.LookAndFeel;
-using NetSatis.Entities.Tools;
-using System.Net;
-using System.IO;
-using DevExpress.XtraEditors;
 
 namespace NetSatisAdmin
 {

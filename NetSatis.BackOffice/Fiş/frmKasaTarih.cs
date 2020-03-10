@@ -1,8 +1,8 @@
-﻿using System;
-using DevExpress.XtraEditors.Mask;
+﻿using DevExpress.XtraEditors.Mask;
 using NetSatis.BackOffice.Kasa_Hareketleri;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
+using System;
 
 namespace NetSatis.BackOffice.Raporlar
 {

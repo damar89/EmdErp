@@ -1,6 +1,6 @@
-﻿using System;
+﻿using NetSatis.Entities.Interface;
+using System;
 using System.Collections.Generic;
-using NetSatis.Entities.Interface;
 
 namespace NetSatis.Entities.Tables
 {

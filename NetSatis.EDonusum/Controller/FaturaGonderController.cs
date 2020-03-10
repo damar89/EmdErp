@@ -1,5 +1,6 @@
 ﻿using Ionic.Zip;
 using NetSatis.EDonusum.FitServices;
+using NetSatis.EDonusum.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -10,7 +11,6 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
-using NetSatis.EDonusum.Models;
 using UBLObject;
 
 namespace NetSatis.EDonusum.Controller

@@ -1,4 +1,8 @@
-﻿using System;
+﻿using NetSatis.Entities.Context;
+using NetSatis.Entities.Data_Access;
+using NetSatis.Entities.Tables;
+using NetSatis.Entities.Tools;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
@@ -6,10 +10,6 @@ using System.IO.Ports;
 using System.Linq;
 using System.Printing;
 using System.Windows.Forms;
-using NetSatis.Entities.Context;
-using NetSatis.Entities.Data_Access;
-using NetSatis.Entities.Tables;
-using NetSatis.Entities.Tools;
 
 
 namespace NetSatis.BackOffice.Ayarlar

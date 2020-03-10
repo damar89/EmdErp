@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NetSatis.Entities.Tables
+﻿namespace NetSatis.Entities.Tables
 {
-   public class GenelToplam
+    public class GenelToplam
     {
         public string Bilgi { get; set; }
         public int KayitSayisi { get; set; }

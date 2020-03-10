@@ -1,11 +1,11 @@
-﻿using System;
-using System.Linq;
-using System.Windows.Forms;
-using NetSatis.Entities.Context;
+﻿using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
 using NetSatis.Entities.Tools;
 using NetSatis.Reports.Fatura_ve_Fiş;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Fiş
 {

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
-using DevExpress.XtraReports.UI;
-using NetSatis.Entities.Data_Access;
+﻿using DevExpress.DataAccess.ObjectBinding;
 using NetSatis.Entities.Context;
-using DevExpress.DataAccess.ObjectBinding;
-using System.Collections.Generic;
-using NetSatis.Entities.Tables;
+using NetSatis.Entities.Data_Access;
+using System;
 
 namespace NetSatis.Reports.Kasa
 {

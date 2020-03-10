@@ -1,10 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Windows.Forms;
-using NetSatis.BackOffice.Kasa;
+﻿using NetSatis.BackOffice.Kasa;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Tables;
-using NetSatis.Entities.Tools;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Fiş
 {

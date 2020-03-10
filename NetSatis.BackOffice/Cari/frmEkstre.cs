@@ -1,8 +1,8 @@
-﻿using System;
-using System.Windows.Forms;
-using DevExpress.XtraEditors.Mask;
+﻿using DevExpress.XtraEditors.Mask;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
+using System;
+using System.Windows.Forms;
 namespace NetSatis.BackOffice.Cari
 {
     public partial class frmEkstre : DevExpress.XtraEditors.XtraForm

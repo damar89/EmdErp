@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.Entity;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraWizard;
+﻿using DevExpress.XtraWizard;
 using NetSatis.BackOffice.Stok;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
+using System;
+using System.ComponentModel;
+using System.Data.Entity;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.İndirim
 {

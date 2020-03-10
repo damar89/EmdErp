@@ -1,13 +1,4 @@
 ﻿using System;
-using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
-using DevExpress.DataAccess.ObjectBinding;
-using DevExpress.XtraReports.UI;
-using NetSatis.Entities.Context;
-using NetSatis.Entities.Data_Access;
-using NetSatis.Entities.Tables;
-using System.Data;
 
 namespace NetSatis.Reports.Fatura_ve_Fiş
 {

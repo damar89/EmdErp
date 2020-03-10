@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using NetSatis.Entities.Context;
+﻿using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
-using NetSatis.Entities.Mapping;
 using NetSatis.Entities.Tables;
+using System;
 
 namespace NetSatisAdmin
 {

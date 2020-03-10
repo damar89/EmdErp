@@ -1,10 +1,10 @@
-﻿using System;
+﻿using DevExpress.DataAccess.ObjectBinding;
 using DevExpress.XtraReports.UI;
-using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Context;
-using DevExpress.DataAccess.ObjectBinding;
-using System.Collections.Generic;
+using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
+using System;
+using System.Collections.Generic;
 
 namespace NetSatis.Reports.Cari
 {

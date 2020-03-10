@@ -1,8 +1,8 @@
-﻿using System;
-using System.Windows.Forms;
-using NetSatis.BackOffice.Fiş;
+﻿using NetSatis.BackOffice.Fiş;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
+using System;
+using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Kasa_Hareketleri
 {

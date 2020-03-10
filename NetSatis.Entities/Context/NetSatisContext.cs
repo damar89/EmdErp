@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NetSatis.Entities.Mapping;
+﻿using NetSatis.Entities.Mapping;
 using NetSatis.Entities.Migrations;
 using NetSatis.Entities.Tables;
 using NetSatis.Entities.Tools;
+using System.Data.Entity;
 
 namespace NetSatis.Entities.Context
 {

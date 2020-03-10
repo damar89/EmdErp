@@ -1,12 +1,12 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using DevExpress.XtraEditors.Mask;
+using DevExpress.XtraPrinting;
+using NetSatis.Entities;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
-using DevExpress.XtraPrinting;
-using System.Linq;
-using DevExpress.XtraEditors.Mask;
-using NetSatis.Entities;
+using System;
 using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Cari
 {

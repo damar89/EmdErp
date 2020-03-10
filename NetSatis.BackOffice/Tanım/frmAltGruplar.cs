@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Windows.Forms;
-using NetSatis.Entities.Context;
+﻿using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
+using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Tanım
 {

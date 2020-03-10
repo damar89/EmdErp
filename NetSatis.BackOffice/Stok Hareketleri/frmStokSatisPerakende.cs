@@ -1,13 +1,12 @@
-﻿using System;
-using System.Drawing.Printing;
-using System.IO;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraPrinting;
 using NetSatis.BackOffice.Fiş;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
+using System;
+using System.IO;
+using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Stok_Hareketleri
 {

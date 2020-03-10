@@ -1,12 +1,12 @@
-﻿using System;
+﻿using NetSatis.Entities.Tables.OtherTables;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using NetSatis.Entities.Tables.OtherTables;
-using System.Net;
-using System.IO;
 
 namespace NetSatis.BackOffice.Döviz_Kurları
 {

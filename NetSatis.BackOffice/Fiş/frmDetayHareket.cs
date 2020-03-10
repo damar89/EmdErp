@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using DevExpress.XtraPrinting;
+﻿using DevExpress.XtraPrinting;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
-using NetSatis.Entities.Tables;
-using NetSatis.Entities.Tools;
+using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
+using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Fiş
 {

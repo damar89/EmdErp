@@ -1,8 +1,8 @@
-﻿using System.Linq;
-using System.Linq.Dynamic;
-using FluentValidation.Validators;
+﻿using FluentValidation.Validators;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Interface;
+using System.Linq;
+using System.Linq.Dynamic;
 
 namespace NetSatis.Entities.Extensions.FluentValidation
 {

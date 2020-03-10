@@ -1,15 +1,10 @@
-﻿using System;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Windows.Forms;
+﻿using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Mask;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
 using NetSatis.BackOffice.Cari;
 using NetSatis.BackOffice.Depo;
-using NetSatis.BackOffice.Kasa;
-using NetSatis.BackOffice.Personel;
 using NetSatis.BackOffice.Stok;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
@@ -17,10 +12,12 @@ using NetSatis.Entities.Tables;
 using NetSatis.Entities.Tables.OtherTables;
 using NetSatis.Entities.Tools;
 using NetSatis.Reports.Fatura_ve_Fiş;
-using System.IO;
-using DevExpress.XtraBars;
-using DevExpress.XtraEditors.Mask;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Fiş
 {

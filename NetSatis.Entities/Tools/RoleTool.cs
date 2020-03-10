@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 using NetSatis.Entities.Context;
-using DevExpress.XtraBars.Ribbon;
 using NetSatis.Entities.Tables;
+using System;
+using System.Linq;
 
 namespace NetSatis.Entities.Tools
 {

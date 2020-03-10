@@ -1,14 +1,14 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using DevExpress.Data.Filtering;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Views.Base;
+using NetSatis.BackOffice.Fiş;
 using NetSatis.BackOffice.Raporlar;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Reports.Cari;
-using NetSatis.BackOffice.Fiş;
+using System;
 using System.IO;
-using DevExpress.XtraGrid.Columns;
-using DevExpress.XtraGrid.Views.Base;
-using DevExpress.Data.Filtering;
+using System.Windows.Forms;
 namespace NetSatis.BackOffice.Cari
 {
     public partial class frmCari : Form

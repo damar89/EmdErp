@@ -1,14 +1,12 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using NetSatis.Entities;
+using NetSatis.Entities.Context;
+using NetSatis.Entities.Data_Access;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using DevExpress.Data.Filtering;
-using DevExpress.XtraEditors;
-using DevExpress.XtraGrid.Columns;
-using NetSatis.Entities;
-using NetSatis.Entities.Context;
-using NetSatis.Entities.Data_Access;
 
 namespace NetSatis.BackOffice.Stok
 {

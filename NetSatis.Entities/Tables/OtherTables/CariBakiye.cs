@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NetSatis.Entities.Tables
+﻿namespace NetSatis.Entities.Tables
 {
-   public class CariBakiye
+    public class CariBakiye
     {
         public int CariId { get; set; }
         public decimal RiskLimiti { get; set; }

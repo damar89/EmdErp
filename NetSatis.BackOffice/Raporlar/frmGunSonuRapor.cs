@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraPrinting;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
-using NetSatis.BackOffice.Extensions;
-using DevExpress.XtraPrinting;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 
 namespace NetSatis.BackOffice.Raporlar
 {

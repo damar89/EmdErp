@@ -1,9 +1,9 @@
-﻿using System;
+﻿using NetSatis.Entities.Context;
+using NetSatis.Entities.Data_Access;
+using System;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using NetSatis.Entities.Context;
-using NetSatis.Entities.Data_Access;
-using System.IO;
 
 namespace NetSatis.BackOffice.Stok
 {

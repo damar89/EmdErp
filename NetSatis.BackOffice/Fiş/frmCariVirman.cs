@@ -1,29 +1,13 @@
-﻿using System;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraReports.UI;
-using NetSatis.BackOffice.Cari;
-using NetSatis.BackOffice.Depo;
-using NetSatis.BackOffice.Kasa;
-using NetSatis.BackOffice.Personel;
-using NetSatis.BackOffice.Stok;
+﻿using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Mask;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
 using NetSatis.Entities.Tables.OtherTables;
 using NetSatis.Entities.Tools;
-using NetSatis.Reports.Fatura_ve_Fiş;
-using System.IO;
-using DevExpress.XtraBars;
-using DevExpress.XtraEditors.Mask;
-using System.Threading;
-using System.ComponentModel;
-using System.Collections.Generic;
-using System.Data.OleDb;
+using System.Data;
+using System.Data.Entity;
+using System.Linq;
 namespace NetSatis.BackOffice.Fiş
 {
     public partial class frmCariVirman : XtraForm

@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.Entity;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using NetSatis.Entities.Context;
+﻿using NetSatis.Entities.Context;
 using NetSatis.Entities.Tools;
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace NetSatis.Backup
 {

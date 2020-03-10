@@ -1,15 +1,15 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using DevExpress.Data.Filtering;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraPrinting;
 using NetSatis.BackOffice.Raporlar;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tools;
 using NetSatis.Reports.Stok;
+using System;
 using System.IO;
-using DevExpress.XtraPrinting;
-using DevExpress.XtraGrid.Columns;
-using DevExpress.Data.Filtering;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Stok
 {

@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
+﻿using DevExpress.XtraGrid;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
+using System;
+using System.Collections.Generic;
 using System.IO;
-using DevExpress.XtraGrid;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Cari
 {

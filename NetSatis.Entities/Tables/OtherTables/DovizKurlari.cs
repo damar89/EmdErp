@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NetSatis.Entities.Tables.OtherTables
 {
-   public class DovizKurlari
+    public class DovizKurlari
     {
         public string CurrencyCode { get; set; }
         public string Isim { get; set; }

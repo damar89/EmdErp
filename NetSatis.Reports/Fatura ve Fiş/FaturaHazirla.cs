@@ -1,18 +1,13 @@
-﻿using DevExpress.XtraReports.Parameters;
-using DevExpress.XtraReports.UI;
+﻿using DevExpress.XtraReports.UI;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
+using NetSatis.Entities.Tools;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using NetSatis.Entities.Tools;
 
 namespace NetSatis.Reports.Fatura_ve_Fiş
 {

@@ -1,17 +1,16 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using NetSatis.BackOffice.Tanım;
+using NetSatis.Entities.Context;
+using NetSatis.Entities.Data_Access;
+using NetSatis.Entities.Tables;
+using NetSatis.Entities.Tools;
+using System;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using NetSatis.BackOffice.Extensions;
-using NetSatis.BackOffice.Tanım;
-using NetSatis.Entities.Context;
-using NetSatis.Entities.Data_Access;
-using NetSatis.Entities.Tables;
-using NetSatis.Entities.Tools;
 namespace NetSatis.BackOffice.Stok
 {
     public partial class frmStokIslem : XtraForm

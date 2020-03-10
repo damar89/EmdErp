@@ -1,9 +1,9 @@
-﻿using System;
-using NetSatis.Entities.Context;
+﻿using NetSatis.Entities.Context;
+using NetSatis.Entities.Data_Access;
+using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Windows.Forms;
-using NetSatis.Entities.Data_Access;
 namespace NetSatis.FrontOffice
 {
     public partial class frmFiyatGor : DevExpress.XtraEditors.XtraForm

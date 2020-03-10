@@ -1,7 +1,6 @@
-﻿using System;
-using System.Windows.Forms;
-using NetSatis.Entities.Context;
+﻿using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
+using System;
 
 namespace NetSatis.BackOffice.Tanım
 {

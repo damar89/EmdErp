@@ -1,8 +1,8 @@
-﻿using System;
+﻿using DevExpress.XtraEditors.Mask;
 using NetSatis.BackOffice.Fiş;
-using NetSatis.Entities.Data_Access;
-using DevExpress.XtraEditors.Mask;
 using NetSatis.Entities.Context;
+using NetSatis.Entities.Data_Access;
+using System;
 namespace NetSatis.BackOffice.Raporlar
 {
     public partial class frmTarihliSatis : DevExpress.XtraEditors.XtraForm

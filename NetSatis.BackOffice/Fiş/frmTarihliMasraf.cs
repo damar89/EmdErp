@@ -1,6 +1,6 @@
-﻿using System;
-using NetSatis.BackOffice.Fiş;
+﻿using NetSatis.BackOffice.Fiş;
 using NetSatis.Entities.Data_Access;
+using System;
 
 namespace NetSatis.BackOffice.Raporlar
 {

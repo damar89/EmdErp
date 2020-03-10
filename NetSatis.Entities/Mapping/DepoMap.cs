@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using NetSatis.Entities.Tables;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NetSatis.Entities.Tables;
 
 namespace NetSatis.Entities.Mapping
 {
-   public class DepoMap:EntityTypeConfiguration<Depo>
+    public class DepoMap:EntityTypeConfiguration<Depo>
     {
         public DepoMap()
         {

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NetSatis.Entities.Interface;
+﻿using NetSatis.Entities.Interface;
 
 namespace NetSatis.Entities.Tables
 {
-   public class Kod:IEntity
+    public class Kod:IEntity
     {
         public int Id { get; set; }
         public string Tablo { get; set; }

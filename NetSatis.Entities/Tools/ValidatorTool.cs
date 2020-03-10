@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using FluentValidation;
+﻿using FluentValidation;
 using NetSatis.Entities.Interface;
+using System.Windows.Forms;
 
 namespace NetSatis.Entities.Tools
 {
-   public static class ValidatorTool
+    public static class ValidatorTool
     {
        public static bool Validate(IValidator validator,IEntity entity)
         {

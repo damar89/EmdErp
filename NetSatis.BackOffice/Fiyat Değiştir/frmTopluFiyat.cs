@@ -1,9 +1,9 @@
-﻿using System;
-using System.Data.Entity;
-using System.Windows.Forms;
-using NetSatis.BackOffice.Stok;
+﻿using NetSatis.BackOffice.Stok;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
+using System;
+using System.Data.Entity;
+using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Fiyat_Değiştir
 {

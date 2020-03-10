@@ -1,20 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.Entity;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using NetSatis.BackOffice.Tanım;
+﻿using NetSatis.BackOffice.Tanım;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
-using NetSatis.Entities.Tables;
-using NetSatis.Entities.Tools;
-using NetSatis.Entities.Validations;
+using System;
+using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Masraf
 {

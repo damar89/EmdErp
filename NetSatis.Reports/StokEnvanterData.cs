@@ -10,9 +10,10 @@ namespace NetSatis.Reports
     {
     }
 }
-namespace NetSatis.Reports {
-    
-    
+namespace NetSatis.Reports
+{
+
+
     public partial class StokEnvanterData {
     }
 }
