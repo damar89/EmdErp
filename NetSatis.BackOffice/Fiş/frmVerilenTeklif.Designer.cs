@@ -51,6 +51,7 @@
             this.barSubItem6 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.btnFaturalandır = new DevExpress.XtraBars.BarButtonItem();
+            this.btnYazdır = new DevExpress.XtraBars.BarButtonItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -93,7 +94,6 @@
             this.colKDVDahil = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.colFaturaNo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnYazdır = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -304,6 +304,13 @@
             this.btnFaturalandır.Name = "btnFaturalandır";
             this.btnFaturalandır.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFaturalandır_ItemClick);
             // 
+            // btnYazdır
+            // 
+            this.btnYazdır.Caption = "Teklifi Yazdır";
+            this.btnYazdır.Id = 26;
+            this.btnYazdır.Name = "btnYazdır";
+            this.btnYazdır.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnYazdır_ItemClick);
+            // 
             // barManager1
             // 
             this.barManager1.DockControls.Add(this.barDockControlTop);
@@ -460,7 +467,6 @@
             this.btnSil.Size = new System.Drawing.Size(85, 31);
             this.btnSil.TabIndex = 4;
             this.btnSil.Text = "Sil";
-            this.btnSil.Visible = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnDuzenle
@@ -519,7 +525,7 @@
             this.gridContFisler.Name = "gridContFisler";
             this.gridContFisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpsChkKdvDahil});
-            this.gridContFisler.Size = new System.Drawing.Size(1023, 354);
+            this.gridContFisler.Size = new System.Drawing.Size(1023, 349);
             this.gridContFisler.TabIndex = 0;
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});
@@ -769,13 +775,6 @@
             this.colFaturaNo.OptionsColumn.AllowEdit = false;
             this.colFaturaNo.Visible = true;
             this.colFaturaNo.VisibleIndex = 13;
-            // 
-            // btnYazdır
-            // 
-            this.btnYazdır.Caption = "Teklifi Yazdır";
-            this.btnYazdır.Id = 26;
-            this.btnYazdır.Name = "btnYazdır";
-            this.btnYazdır.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnYazdır_ItemClick);
             // 
             // frmVerilenTeklif
             // 

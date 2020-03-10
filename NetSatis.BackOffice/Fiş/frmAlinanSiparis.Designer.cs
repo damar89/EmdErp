@@ -55,6 +55,7 @@
             this.barSubItem6 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.btnFaturalandir = new DevExpress.XtraBars.BarButtonItem();
+            this.btnYazdir = new DevExpress.XtraBars.BarButtonItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -91,7 +92,6 @@
             this.colKDVDahil = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.colFaturaKodu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnYazdir = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -165,7 +165,6 @@
             this.btnSil.Size = new System.Drawing.Size(85, 31);
             this.btnSil.TabIndex = 4;
             this.btnSil.Text = "Sil";
-            this.btnSil.Visible = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnDuzenle
@@ -179,7 +178,6 @@
             this.btnDuzenle.Size = new System.Drawing.Size(85, 31);
             this.btnDuzenle.TabIndex = 3;
             this.btnDuzenle.Text = "Düzenle";
-            this.btnDuzenle.Visible = false;
             this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
             // 
             // popupMenu1
@@ -352,6 +350,13 @@
             this.btnFaturalandir.Id = 25;
             this.btnFaturalandir.Name = "btnFaturalandir";
             this.btnFaturalandir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFaturalandir_ItemClick);
+            // 
+            // btnYazdir
+            // 
+            this.btnYazdir.Caption = "Siparişi Yazdır";
+            this.btnYazdir.Id = 26;
+            this.btnYazdir.Name = "btnYazdir";
+            this.btnYazdir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnYazdir_ItemClick);
             // 
             // barManager1
             // 
@@ -740,13 +745,6 @@
             this.colFaturaKodu.OptionsColumn.AllowEdit = false;
             this.colFaturaKodu.Visible = true;
             this.colFaturaKodu.VisibleIndex = 13;
-            // 
-            // btnYazdir
-            // 
-            this.btnYazdir.Caption = "Siparişi Yazdır";
-            this.btnYazdir.Id = 26;
-            this.btnYazdir.Name = "btnYazdir";
-            this.btnYazdir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnYazdir_ItemClick);
             // 
             // frmAlinanSiparis
             // 

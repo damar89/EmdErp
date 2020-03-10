@@ -472,7 +472,6 @@
             this.btnDuzenle.Size = new System.Drawing.Size(85, 31);
             this.btnDuzenle.TabIndex = 3;
             this.btnDuzenle.Text = "Düzenle";
-            this.btnDuzenle.Visible = false;
             this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
             // 
             // lblBaslik
@@ -519,7 +518,7 @@
             this.gridContFisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpsChkKdvDahil,
             this.repoSecim});
-            this.gridContFisler.Size = new System.Drawing.Size(1023, 353);
+            this.gridContFisler.Size = new System.Drawing.Size(1023, 349);
             this.gridContFisler.TabIndex = 0;
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});

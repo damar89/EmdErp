@@ -105,14 +105,21 @@ namespace NetSatis.BackOffice.Fiş
 
         private void btnDuzenle_Click(object sender, EventArgs e)
         {
-            if (gridFisler.RowCount != 0)
+            try
             {
-                string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
-                string fisturu = gridFisler.GetFocusedRowCellValue(colFisTuru).ToString();
-                frmFisIslem form = new frmFisIslem(secilen, fisturu);
-                form.Show();
+                if (gridFisler.RowCount != 0)
+                {
+                    string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
+                    string fisturu = gridFisler.GetFocusedRowCellValue(colFisTuru).ToString();
+                    frmFisIslem form = new frmFisIslem(secilen, fisturu);
+                    form.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Seçili fiş bulunamadı.");
+                }
             }
-            else
+            catch (Exception)
             {
                 MessageBox.Show("Seçili fiş bulunamadı.");
             }
