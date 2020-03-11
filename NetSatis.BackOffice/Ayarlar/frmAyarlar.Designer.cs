@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAyarlar));
             this.lblBaslik = new DevExpress.XtraEditors.LabelControl();
-            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.ımageList1 = new System.Windows.Forms.ImageList();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
@@ -119,7 +118,7 @@
             this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
-            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.serialPort1 = new System.IO.Ports.SerialPort();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
@@ -182,7 +181,7 @@
             this.lblBaslik.Location = new System.Drawing.Point(0, 0);
             this.lblBaslik.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(947, 24);
+            this.lblBaslik.Size = new System.Drawing.Size(933, 24);
             this.lblBaslik.TabIndex = 8;
             this.lblBaslik.Text = "Ayarlar";
             // 
@@ -200,9 +199,9 @@
             this.groupControl1.Controls.Add(this.btnKapat);
             this.groupControl1.Controls.Add(this.btnKaydet);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 611);
+            this.groupControl1.Location = new System.Drawing.Point(0, 607);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(947, 57);
+            this.groupControl1.Size = new System.Drawing.Size(933, 57);
             this.groupControl1.TabIndex = 11;
             // 
             // btnKapat
@@ -210,7 +209,7 @@
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.ImageIndex = 3;
             this.btnKapat.ImageOptions.ImageList = this.ımageList1;
-            this.btnKapat.Location = new System.Drawing.Point(857, 23);
+            this.btnKapat.Location = new System.Drawing.Point(843, 23);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(85, 31);
             this.btnKapat.TabIndex = 1;
@@ -222,7 +221,7 @@
             this.btnKaydet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKaydet.ImageOptions.ImageIndex = 2;
             this.btnKaydet.ImageOptions.ImageList = this.ımageList1;
-            this.btnKaydet.Location = new System.Drawing.Point(766, 23);
+            this.btnKaydet.Location = new System.Drawing.Point(752, 23);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(85, 31);
             this.btnKaydet.TabIndex = 0;
@@ -249,7 +248,7 @@
             this.navigationPage6});
             this.navigationPane1.RegularSize = new System.Drawing.Size(947, 587);
             this.navigationPane1.SelectedPage = this.navigationPage1;
-            this.navigationPane1.Size = new System.Drawing.Size(947, 587);
+            this.navigationPane1.Size = new System.Drawing.Size(933, 583);
             this.navigationPane1.State = DevExpress.XtraBars.Navigation.NavigationPaneState.Expanded;
             this.navigationPane1.TabIndex = 12;
             this.navigationPane1.Text = "Genel Ayarlar";
@@ -288,7 +287,7 @@
             this.toggleDoviz.Name = "toggleDoviz";
             this.toggleDoviz.Properties.OffText = "Hayır";
             this.toggleDoviz.Properties.OnText = "Evet";
-            this.toggleDoviz.Size = new System.Drawing.Size(207, 18);
+            this.toggleDoviz.Size = new System.Drawing.Size(207, 24);
             this.toggleDoviz.TabIndex = 9;
             // 
             // toggleMinMiktar
@@ -297,7 +296,7 @@
             this.toggleMinMiktar.Name = "toggleMinMiktar";
             this.toggleMinMiktar.Properties.OffText = "Hayır";
             this.toggleMinMiktar.Properties.OnText = "Evet";
-            this.toggleMinMiktar.Size = new System.Drawing.Size(207, 18);
+            this.toggleMinMiktar.Size = new System.Drawing.Size(207, 24);
             this.toggleMinMiktar.TabIndex = 9;
             // 
             // labelControl31
@@ -320,7 +319,7 @@
             this.toggleStokEksi.Name = "toggleStokEksi";
             this.toggleStokEksi.Properties.OffText = "Hayır";
             this.toggleStokEksi.Properties.OnText = "Evet";
-            this.toggleStokEksi.Size = new System.Drawing.Size(207, 18);
+            this.toggleStokEksi.Size = new System.Drawing.Size(207, 24);
             this.toggleStokEksi.TabIndex = 9;
             // 
             // labelControl24
@@ -536,7 +535,7 @@
             this.toggleGuncelle.Name = "toggleGuncelle";
             this.toggleGuncelle.Properties.OffText = "Hayır";
             this.toggleGuncelle.Properties.OnText = "Evet";
-            this.toggleGuncelle.Size = new System.Drawing.Size(95, 18);
+            this.toggleGuncelle.Size = new System.Drawing.Size(95, 24);
             this.toggleGuncelle.TabIndex = 0;
             // 
             // cmbSiparisDizayn
@@ -693,7 +692,7 @@
             this.toggleAlisFiyat.Name = "toggleAlisFiyat";
             this.toggleAlisFiyat.Properties.OffText = "Hayır";
             this.toggleAlisFiyat.Properties.OnText = "Evet";
-            this.toggleAlisFiyat.Size = new System.Drawing.Size(110, 18);
+            this.toggleAlisFiyat.Size = new System.Drawing.Size(110, 24);
             this.toggleAlisFiyat.TabIndex = 3;
             // 
             // togStoguEtkilesinmi
@@ -702,7 +701,7 @@
             this.togStoguEtkilesinmi.Name = "togStoguEtkilesinmi";
             this.togStoguEtkilesinmi.Properties.OffText = "Hayır";
             this.togStoguEtkilesinmi.Properties.OnText = "Evet";
-            this.togStoguEtkilesinmi.Size = new System.Drawing.Size(106, 18);
+            this.togStoguEtkilesinmi.Size = new System.Drawing.Size(106, 24);
             this.togStoguEtkilesinmi.TabIndex = 3;
             // 
             // togCariEtkilesinmi
@@ -711,7 +710,7 @@
             this.togCariEtkilesinmi.Name = "togCariEtkilesinmi";
             this.togCariEtkilesinmi.Properties.OffText = "Hayır";
             this.togCariEtkilesinmi.Properties.OnText = "Evet";
-            this.togCariEtkilesinmi.Size = new System.Drawing.Size(104, 18);
+            this.togCariEtkilesinmi.Size = new System.Drawing.Size(104, 24);
             this.togCariEtkilesinmi.TabIndex = 3;
             // 
             // toggIrsaliye
@@ -720,7 +719,7 @@
             this.toggIrsaliye.Name = "toggIrsaliye";
             this.toggIrsaliye.Properties.OffText = "Hayır";
             this.toggIrsaliye.Properties.OnText = "Evet";
-            this.toggIrsaliye.Size = new System.Drawing.Size(104, 18);
+            this.toggIrsaliye.Size = new System.Drawing.Size(104, 24);
             this.toggIrsaliye.TabIndex = 3;
             // 
             // toggleBilgiFisiSorulsunmu
@@ -729,7 +728,7 @@
             this.toggleBilgiFisiSorulsunmu.Name = "toggleBilgiFisiSorulsunmu";
             this.toggleBilgiFisiSorulsunmu.Properties.OffText = "Hayır";
             this.toggleBilgiFisiSorulsunmu.Properties.OnText = "Evet";
-            this.toggleBilgiFisiSorulsunmu.Size = new System.Drawing.Size(108, 18);
+            this.toggleBilgiFisiSorulsunmu.Size = new System.Drawing.Size(108, 24);
             this.toggleBilgiFisiSorulsunmu.TabIndex = 3;
             // 
             // toggTerazi
@@ -738,7 +737,7 @@
             this.toggTerazi.Name = "toggTerazi";
             this.toggTerazi.Properties.OffText = "Hayır";
             this.toggTerazi.Properties.OnText = "Evet";
-            this.toggTerazi.Size = new System.Drawing.Size(106, 18);
+            this.toggTerazi.Size = new System.Drawing.Size(106, 24);
             this.toggTerazi.TabIndex = 2;
             // 
             // toggleBilgiFisiYazdirilsinmi
@@ -747,7 +746,7 @@
             this.toggleBilgiFisiYazdirilsinmi.Name = "toggleBilgiFisiYazdirilsinmi";
             this.toggleBilgiFisiYazdirilsinmi.Properties.OffText = "Hayır";
             this.toggleBilgiFisiYazdirilsinmi.Properties.OnText = "Evet";
-            this.toggleBilgiFisiYazdirilsinmi.Size = new System.Drawing.Size(106, 18);
+            this.toggleBilgiFisiYazdirilsinmi.Size = new System.Drawing.Size(106, 24);
             this.toggleBilgiFisiYazdirilsinmi.TabIndex = 2;
             // 
             // textEdit4
@@ -1201,7 +1200,7 @@
             this.kopKoparatifmi.Name = "kopKoparatifmi";
             this.kopKoparatifmi.Properties.OffText = "Hayır";
             this.kopKoparatifmi.Properties.OnText = "Evet";
-            this.kopKoparatifmi.Size = new System.Drawing.Size(117, 18);
+            this.kopKoparatifmi.Size = new System.Drawing.Size(117, 24);
             this.kopKoparatifmi.TabIndex = 9;
             // 
             // labelControl29
@@ -1321,7 +1320,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(947, 668);
+            this.ClientSize = new System.Drawing.Size(933, 664);
             this.Controls.Add(this.navigationPane1);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.lblBaslik);
