@@ -98,6 +98,7 @@
             this.colFisTuru = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNetBirimFiyat = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDipIsk = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNetToplamTutar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -313,7 +314,8 @@
             this.colCariAdi,
             this.colFisTuru,
             this.colNetBirimFiyat,
-            this.colDipIsk});
+            this.colDipIsk,
+            this.colNetToplamTutar});
             this.gridStokHareket.GridControl = this.gridContStokHareket;
             this.gridStokHareket.Name = "gridStokHareket";
             this.gridStokHareket.OptionsView.ShowAutoFilterRow = true;
@@ -622,6 +624,19 @@
             this.colDipIsk.VisibleIndex = 12;
             this.colDipIsk.Width = 115;
             // 
+            // colNetToplamTutar
+            // 
+            this.colNetToplamTutar.AppearanceCell.Options.UseTextOptions = true;
+            this.colNetToplamTutar.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colNetToplamTutar.Caption = "Net Tutar";
+            this.colNetToplamTutar.DisplayFormat.FormatString = "C2";
+            this.colNetToplamTutar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colNetToplamTutar.FieldName = "NetToplamTutar";
+            this.colNetToplamTutar.Name = "colNetToplamTutar";
+            this.colNetToplamTutar.OptionsColumn.AllowEdit = false;
+            this.colNetToplamTutar.Visible = true;
+            this.colNetToplamTutar.VisibleIndex = 14;
+            // 
             // gridView2
             // 
             this.gridView2.GridControl = this.gridContStokHareket;
@@ -635,10 +650,11 @@
             this.Controls.Add(this.gridContStokHareket);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.IconOptions.ShowIcon = false;
             this.Name = "frmStokAnaliz";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stok Analiz";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmStokAnaliz_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtpBitis.Properties.CalendarTimeProperties)).EndInit();
@@ -705,5 +721,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton btnGoster;
+        private DevExpress.XtraGrid.Columns.GridColumn colNetToplamTutar;
     }
 }

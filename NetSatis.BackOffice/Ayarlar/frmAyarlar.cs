@@ -91,15 +91,9 @@ namespace NetSatis.BackOffice.Ayarlar
             cmbFisYazici.Text =
                 SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_BilgiFisiYazici);
 
-            //gridLookKasa.Properties.DataSource = kasaDal.GetAll(context);
-
-            //gridLookKasa.EditValue = SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_VarsayilanKasa);
-
             txtFirmaAdi.Text = SettingsTool.AyarOku(SettingsTool.Ayarlar.FirmaAyarlari_FirmaAdi);
 
             toggleGuncelle.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.GenelAyarlar_GuncellemeKontrolu));
-            //toggleToptanSatis.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_ToptanFiyat));
-
             toggleBilgiFisiYazdirilsinmi.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.BilgiFisi_BilgiFisiYazdirilsinmi));
             toggTerazi.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_Terazi));
             toggleAlisFiyat.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_AlisFiyat));
@@ -110,6 +104,10 @@ namespace NetSatis.BackOffice.Ayarlar
 
             kopKoparatifmi.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi));
 
+            calcUsd.Text = SettingsTool.AyarOku(SettingsTool.Ayarlar.DolarKur_Usd);
+            calcEuro.Text = SettingsTool.AyarOku(SettingsTool.Ayarlar.DolarKur_Euro);
+            calcRub.Text = SettingsTool.AyarOku(SettingsTool.Ayarlar.DolarKur_Rub);
+            calcBarKodu.Text = SettingsTool.AyarOku(SettingsTool.Ayarlar.BarkodAyarlari_Barkodu);
 
 
             toggleStokEksi.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisStok_EksiyeDusme));

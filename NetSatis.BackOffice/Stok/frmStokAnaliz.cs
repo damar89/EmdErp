@@ -63,5 +63,13 @@ namespace NetSatis.BackOffice.Stok
 
             }
         }
+
+        private void frmStokAnaliz_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode==System.Windows.Forms.Keys.Escape)
+            {
+                this.Close();
+            }
+        }
     }
 }

@@ -49,7 +49,6 @@ namespace NetSatis.Entities.Data_Access
                            altKat.AltGrupAdi,
                            s.Tarih,
                            s.Aciklama,
-                           //OdemeTuru = odemeTuru == null ? "Acik Hesap" : odemeTuru.OdemeTuruAdi,
                            s.Borsa,
                            s.Bagkur,
                            s.Mera,
@@ -63,13 +62,14 @@ namespace NetSatis.Entities.Data_Access
                            s.DipIskontoPayi,
                            cari.CariAdi,
                            s.ToplamTutar,
-                           cari.CariKodu
+                           cari.CariKodu,
+                           NetBirimFiyat = s.BirimFiyati - (s.IndirimTutar + s.DipIskontoPayi),
+              
+                           NetToplamTutar= (s.BirimFiyati - (s.IndirimTutar + s.DipIskontoPayi))*s.Miktar
+
                        });
 
             return res.ToList();
-
-
-
 
             if (filter == null)
             {

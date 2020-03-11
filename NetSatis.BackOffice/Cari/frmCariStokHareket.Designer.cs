@@ -67,6 +67,9 @@
             this.txtKod = new DevExpress.XtraEditors.ButtonEdit();
             this.txtCariAdi = new DevExpress.XtraEditors.ButtonEdit();
             this.gridContStokHareket = new DevExpress.XtraGrid.GridControl();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.görünümüKaydetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yazdırToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridStokHareket = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFisKodu = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -110,9 +113,6 @@
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.görünümüKaydetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yazdırToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dtpBitis.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpBitis.Properties)).BeginInit();
@@ -123,6 +123,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCariAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridContStokHareket)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridStokHareket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpsTutar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoDepo)).BeginInit();
@@ -139,13 +140,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtpBitis
             // 
             this.dtpBitis.EditValue = new System.DateTime(2018, 11, 2, 22, 37, 28, 478);
-            this.dtpBitis.Location = new System.Drawing.Point(894, 54);
+            this.dtpBitis.Location = new System.Drawing.Point(894, 56);
             this.dtpBitis.Name = "dtpBitis";
             this.dtpBitis.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.dtpBitis.Properties.AutoHeight = false;
@@ -186,7 +186,7 @@
             // btnGoster
             // 
             this.btnGoster.ImageOptions.SvgImage = global::NetSatis.BackOffice.Properties.Resources.refreshallpivottable;
-            this.btnGoster.Location = new System.Drawing.Point(1327, 28);
+            this.btnGoster.Location = new System.Drawing.Point(1327, 30);
             this.btnGoster.Name = "btnGoster";
             this.btnGoster.Size = new System.Drawing.Size(76, 48);
             this.btnGoster.StyleController = this.layoutControl1;
@@ -198,7 +198,7 @@
             // dtpBaslangic
             // 
             this.dtpBaslangic.EditValue = new System.DateTime(2018, 11, 2, 22, 37, 17, 404);
-            this.dtpBaslangic.Location = new System.Drawing.Point(894, 28);
+            this.dtpBaslangic.Location = new System.Drawing.Point(894, 30);
             this.dtpBaslangic.Name = "dtpBaslangic";
             this.dtpBaslangic.Properties.AutoHeight = false;
             editorButtonImageOptions2.Image = global::NetSatis.BackOffice.Properties.Resources.today_16x162;
@@ -221,7 +221,7 @@
             // 
             // txtKod
             // 
-            this.txtKod.Location = new System.Drawing.Point(85, 28);
+            this.txtKod.Location = new System.Drawing.Point(85, 30);
             this.txtKod.Name = "txtKod";
             this.txtKod.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -233,13 +233,13 @@
             // 
             // txtCariAdi
             // 
-            this.txtCariAdi.Location = new System.Drawing.Point(85, 52);
+            this.txtCariAdi.Location = new System.Drawing.Point(85, 54);
             this.txtCariAdi.Name = "txtCariAdi";
             editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
             this.txtCariAdi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.txtCariAdi.Properties.MaxLength = 500;
-            this.txtCariAdi.Size = new System.Drawing.Size(380, 22);
+            this.txtCariAdi.Size = new System.Drawing.Size(380, 24);
             this.txtCariAdi.StyleController = this.layoutControl1;
             this.txtCariAdi.TabIndex = 4;
             this.txtCariAdi.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtCariAdi_ButtonClick);
@@ -248,7 +248,7 @@
             // gridContStokHareket
             // 
             this.gridContStokHareket.ContextMenuStrip = this.contextMenuStrip1;
-            this.gridContStokHareket.Location = new System.Drawing.Point(4, 85);
+            this.gridContStokHareket.Location = new System.Drawing.Point(4, 87);
             this.gridContStokHareket.MainView = this.gridStokHareket;
             this.gridContStokHareket.Name = "gridContStokHareket";
             this.gridContStokHareket.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -257,10 +257,34 @@
             this.repoDepo,
             this.repoSeri,
             this.rpsTutar});
-            this.gridContStokHareket.Size = new System.Drawing.Size(1404, 574);
+            this.gridContStokHareket.Size = new System.Drawing.Size(1404, 572);
             this.gridContStokHareket.TabIndex = 7;
             this.gridContStokHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridStokHareket});
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.görünümüKaydetToolStripMenuItem,
+            this.yazdırToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(172, 48);
+            // 
+            // görünümüKaydetToolStripMenuItem
+            // 
+            this.görünümüKaydetToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.save_16x16;
+            this.görünümüKaydetToolStripMenuItem.Name = "görünümüKaydetToolStripMenuItem";
+            this.görünümüKaydetToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.görünümüKaydetToolStripMenuItem.Text = "Görünümü Kaydet";
+            this.görünümüKaydetToolStripMenuItem.Click += new System.EventHandler(this.görünümüKaydetToolStripMenuItem_Click);
+            // 
+            // yazdırToolStripMenuItem
+            // 
+            this.yazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x164;
+            this.yazdırToolStripMenuItem.Name = "yazdırToolStripMenuItem";
+            this.yazdırToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.yazdırToolStripMenuItem.Text = "Yazdır";
+            this.yazdırToolStripMenuItem.Click += new System.EventHandler(this.yazdırToolStripMenuItem_Click);
             // 
             // gridStokHareket
             // 
@@ -296,7 +320,6 @@
             this.gridStokHareket.Name = "gridStokHareket";
             this.gridStokHareket.OptionsView.ColumnAutoWidth = false;
             this.gridStokHareket.OptionsView.ShowAutoFilterRow = true;
-            this.gridStokHareket.OptionsView.ShowFooter = true;
             // 
             // colId
             // 
@@ -322,6 +345,7 @@
             this.colStokKodu.OptionsColumn.AllowEdit = false;
             this.colStokKodu.Visible = true;
             this.colStokKodu.VisibleIndex = 3;
+            this.colStokKodu.Width = 100;
             // 
             // colHareket
             // 
@@ -341,7 +365,7 @@
             this.colStokAdi.OptionsColumn.AllowEdit = false;
             this.colStokAdi.Visible = true;
             this.colStokAdi.VisibleIndex = 4;
-            this.colStokAdi.Width = 179;
+            this.colStokAdi.Width = 268;
             // 
             // colBarkodTuru
             // 
@@ -387,7 +411,7 @@
             this.colBirimi.Name = "colBirimi";
             this.colBirimi.OptionsColumn.AllowEdit = false;
             this.colBirimi.Visible = true;
-            this.colBirimi.VisibleIndex = 7;
+            this.colBirimi.VisibleIndex = 6;
             this.colBirimi.Width = 58;
             // 
             // colMiktar
@@ -399,7 +423,7 @@
             this.colMiktar.Name = "colMiktar";
             this.colMiktar.OptionsColumn.AllowEdit = false;
             this.colMiktar.Visible = true;
-            this.colMiktar.VisibleIndex = 8;
+            this.colMiktar.VisibleIndex = 7;
             this.colMiktar.Width = 68;
             // 
             // colKdv
@@ -409,7 +433,7 @@
             this.colKdv.Name = "colKdv";
             this.colKdv.OptionsColumn.AllowEdit = false;
             this.colKdv.Visible = true;
-            this.colKdv.VisibleIndex = 10;
+            this.colKdv.VisibleIndex = 9;
             this.colKdv.Width = 43;
             // 
             // colBirimFiyati
@@ -422,7 +446,7 @@
             this.colBirimFiyati.Name = "colBirimFiyati";
             this.colBirimFiyati.OptionsColumn.AllowEdit = false;
             this.colBirimFiyati.Visible = true;
-            this.colBirimFiyati.VisibleIndex = 9;
+            this.colBirimFiyati.VisibleIndex = 8;
             this.colBirimFiyati.Width = 71;
             // 
             // rpsTutar
@@ -442,7 +466,7 @@
             this.colIndirimOrani.Name = "colIndirimOrani";
             this.colIndirimOrani.OptionsColumn.AllowEdit = false;
             this.colIndirimOrani.Visible = true;
-            this.colIndirimOrani.VisibleIndex = 11;
+            this.colIndirimOrani.VisibleIndex = 10;
             this.colIndirimOrani.Width = 63;
             // 
             // colDepoKodu
@@ -530,7 +554,7 @@
             this.colIndirimTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colIndirimTutar", "{0:n2}")});
             this.colIndirimTutar.Visible = true;
-            this.colIndirimTutar.VisibleIndex = 12;
+            this.colIndirimTutar.VisibleIndex = 11;
             this.colIndirimTutar.Width = 82;
             // 
             // colToplamTutar
@@ -545,7 +569,7 @@
             this.colToplamTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colToplamTutar", "{0:n2}")});
             this.colToplamTutar.Visible = true;
-            this.colToplamTutar.VisibleIndex = 14;
+            this.colToplamTutar.VisibleIndex = 13;
             this.colToplamTutar.Width = 121;
             // 
             // colKdvToplam
@@ -575,8 +599,6 @@
             this.colCariAdi.FieldName = "CariAdi";
             this.colCariAdi.Name = "colCariAdi";
             this.colCariAdi.OptionsColumn.AllowEdit = false;
-            this.colCariAdi.Visible = true;
-            this.colCariAdi.VisibleIndex = 6;
             this.colCariAdi.Width = 122;
             // 
             // colFisTuru
@@ -587,7 +609,7 @@
             this.colFisTuru.OptionsColumn.AllowEdit = false;
             this.colFisTuru.Visible = true;
             this.colFisTuru.VisibleIndex = 0;
-            this.colFisTuru.Width = 101;
+            this.colFisTuru.Width = 118;
             // 
             // colNetBirimFiyat
             // 
@@ -610,7 +632,7 @@
             this.colDipIsk.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "DipIskontoPayi", "{0:n2}")});
             this.colDipIsk.Visible = true;
-            this.colDipIsk.VisibleIndex = 13;
+            this.colDipIsk.VisibleIndex = 12;
             this.colDipIsk.Width = 115;
             // 
             // repoFiyat
@@ -646,7 +668,7 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1408, 81);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1408, 83);
             this.layoutControlGroup1.Text = "Stok Bilgileri";
             // 
             // layoutControlItem2
@@ -728,35 +750,11 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.gridContStokHareket;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 81);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 83);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(1408, 578);
+            this.layoutControlItem7.Size = new System.Drawing.Size(1408, 576);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.görünümüKaydetToolStripMenuItem,
-            this.yazdırToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
-            // 
-            // görünümüKaydetToolStripMenuItem
-            // 
-            this.görünümüKaydetToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.save_16x16;
-            this.görünümüKaydetToolStripMenuItem.Name = "görünümüKaydetToolStripMenuItem";
-            this.görünümüKaydetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.görünümüKaydetToolStripMenuItem.Text = "Görünümü Kaydet";
-            this.görünümüKaydetToolStripMenuItem.Click += new System.EventHandler(this.görünümüKaydetToolStripMenuItem_Click);
-            // 
-            // yazdırToolStripMenuItem
-            // 
-            this.yazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x164;
-            this.yazdırToolStripMenuItem.Name = "yazdırToolStripMenuItem";
-            this.yazdırToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.yazdırToolStripMenuItem.Text = "Yazdır";
-            this.yazdırToolStripMenuItem.Click += new System.EventHandler(this.yazdırToolStripMenuItem_Click);
             // 
             // printDialog1
             // 
@@ -782,6 +780,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCariAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridContStokHareket)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridStokHareket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpsTutar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoDepo)).EndInit();
@@ -798,7 +797,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

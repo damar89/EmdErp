@@ -2742,8 +2742,10 @@ namespace NetSatis.BackOffice.Fiş
             if (gridStokHareket.RowCount == 0)
                 return;
 
-            if (gridStokHareket.FocusedColumn == gridStokHareket.Columns["ToplamTutar"]) {
-                if (e.KeyCode == Keys.Enter) {
+            if (gridStokHareket.FocusedColumn == gridStokHareket.Columns["ToplamTutar"])
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
                     gridStokHareket.FocusedRowHandle = GridControl.NewItemRowHandle;
                     gridStokHareket.FocusedColumn = gridStokHareket.Columns["Stok.StokKodu"];
                 }
@@ -2752,12 +2754,17 @@ namespace NetSatis.BackOffice.Fiş
             var stok = gridStokHareket.GetRow(gridStokHareket.FocusedRowHandle) as StokHareket;
             if (stok == null || stok.StokId == 0)
                 return;
-            if (e.KeyCode == Keys.F8) {
-                var frm = new frmStokIslem(stok.Stok);
-                frm.Show();
-            } else if (e.KeyCode == Keys.F12) {
-                var frm = new frmStokHareket(stok.StokId);
-                frm.Show();
+            if (e.KeyCode == Keys.F8)
+            {
+                seçiliStoğuDüzenleToolStripMenuItem.PerformClick();
+            }
+            else if (e.KeyCode == Keys.F12)
+            {
+                seçiliStoğunHareketleriToolStripMenuItem.PerformClick();
+            }
+            else if (e.KeyCode == Keys.F10)
+            {
+                stokKartınıAçToolStripMenuItem.PerformClick();
             }
         }
     }

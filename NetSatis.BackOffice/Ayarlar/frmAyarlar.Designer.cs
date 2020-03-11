@@ -107,11 +107,7 @@
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl40 = new DevExpress.XtraEditors.LabelControl();
             this.navigationPage3 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.calcStokKodu = new DevExpress.XtraEditors.CalcEdit();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.navigationPage4 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.calcCariKodu = new DevExpress.XtraEditors.CalcEdit();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.navigationPage5 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.btnDuzenle = new System.Windows.Forms.Button();
             this.kopKoparatifmi = new DevExpress.XtraEditors.ToggleSwitch();
@@ -163,10 +159,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbTahsilat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbBilgiFisi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            this.navigationPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.calcStokKodu.Properties)).BeginInit();
-            this.navigationPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.calcCariKodu.Properties)).BeginInit();
             this.navigationPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kopKoparatifmi.Properties)).BeginInit();
             this.navigationPage6.SuspendLayout();
@@ -258,6 +250,7 @@
             this.navigationPane1.RegularSize = new System.Drawing.Size(947, 587);
             this.navigationPane1.SelectedPage = this.navigationPage1;
             this.navigationPane1.Size = new System.Drawing.Size(947, 587);
+            this.navigationPane1.State = DevExpress.XtraBars.Navigation.NavigationPaneState.Expanded;
             this.navigationPane1.TabIndex = 12;
             this.navigationPane1.Text = "Genel Ayarlar";
             // 
@@ -287,7 +280,7 @@
             this.navigationPage1.Controls.Add(this.cmbSiparisDizayn);
             this.navigationPage1.Controls.Add(this.cmbFaturaDizayn);
             this.navigationPage1.Name = "navigationPage1";
-            this.navigationPage1.Size = new System.Drawing.Size(847, 527);
+            this.navigationPage1.Size = new System.Drawing.Size(826, 514);
             // 
             // toggleDoviz
             // 
@@ -295,7 +288,7 @@
             this.toggleDoviz.Name = "toggleDoviz";
             this.toggleDoviz.Properties.OffText = "Hayır";
             this.toggleDoviz.Properties.OnText = "Evet";
-            this.toggleDoviz.Size = new System.Drawing.Size(207, 24);
+            this.toggleDoviz.Size = new System.Drawing.Size(207, 18);
             this.toggleDoviz.TabIndex = 9;
             // 
             // toggleMinMiktar
@@ -304,7 +297,7 @@
             this.toggleMinMiktar.Name = "toggleMinMiktar";
             this.toggleMinMiktar.Properties.OffText = "Hayır";
             this.toggleMinMiktar.Properties.OnText = "Evet";
-            this.toggleMinMiktar.Size = new System.Drawing.Size(207, 24);
+            this.toggleMinMiktar.Size = new System.Drawing.Size(207, 18);
             this.toggleMinMiktar.TabIndex = 9;
             // 
             // labelControl31
@@ -327,7 +320,7 @@
             this.toggleStokEksi.Name = "toggleStokEksi";
             this.toggleStokEksi.Properties.OffText = "Hayır";
             this.toggleStokEksi.Properties.OnText = "Evet";
-            this.toggleStokEksi.Size = new System.Drawing.Size(207, 24);
+            this.toggleStokEksi.Size = new System.Drawing.Size(207, 18);
             this.toggleStokEksi.TabIndex = 9;
             // 
             // labelControl24
@@ -543,7 +536,7 @@
             this.toggleGuncelle.Name = "toggleGuncelle";
             this.toggleGuncelle.Properties.OffText = "Hayır";
             this.toggleGuncelle.Properties.OnText = "Evet";
-            this.toggleGuncelle.Size = new System.Drawing.Size(95, 24);
+            this.toggleGuncelle.Size = new System.Drawing.Size(95, 18);
             this.toggleGuncelle.TabIndex = 0;
             // 
             // cmbSiparisDizayn
@@ -624,7 +617,7 @@
             this.navigationPage2.Controls.Add(this.labelControl23);
             this.navigationPage2.Controls.Add(this.labelControl40);
             this.navigationPage2.Name = "navigationPage2";
-            this.navigationPage2.Size = new System.Drawing.Size(847, 527);
+            this.navigationPage2.Size = new System.Drawing.Size(826, 514);
             // 
             // comboBox1
             // 
@@ -700,7 +693,7 @@
             this.toggleAlisFiyat.Name = "toggleAlisFiyat";
             this.toggleAlisFiyat.Properties.OffText = "Hayır";
             this.toggleAlisFiyat.Properties.OnText = "Evet";
-            this.toggleAlisFiyat.Size = new System.Drawing.Size(110, 24);
+            this.toggleAlisFiyat.Size = new System.Drawing.Size(110, 18);
             this.toggleAlisFiyat.TabIndex = 3;
             // 
             // togStoguEtkilesinmi
@@ -709,7 +702,7 @@
             this.togStoguEtkilesinmi.Name = "togStoguEtkilesinmi";
             this.togStoguEtkilesinmi.Properties.OffText = "Hayır";
             this.togStoguEtkilesinmi.Properties.OnText = "Evet";
-            this.togStoguEtkilesinmi.Size = new System.Drawing.Size(106, 24);
+            this.togStoguEtkilesinmi.Size = new System.Drawing.Size(106, 18);
             this.togStoguEtkilesinmi.TabIndex = 3;
             // 
             // togCariEtkilesinmi
@@ -718,7 +711,7 @@
             this.togCariEtkilesinmi.Name = "togCariEtkilesinmi";
             this.togCariEtkilesinmi.Properties.OffText = "Hayır";
             this.togCariEtkilesinmi.Properties.OnText = "Evet";
-            this.togCariEtkilesinmi.Size = new System.Drawing.Size(104, 24);
+            this.togCariEtkilesinmi.Size = new System.Drawing.Size(104, 18);
             this.togCariEtkilesinmi.TabIndex = 3;
             // 
             // toggIrsaliye
@@ -727,7 +720,7 @@
             this.toggIrsaliye.Name = "toggIrsaliye";
             this.toggIrsaliye.Properties.OffText = "Hayır";
             this.toggIrsaliye.Properties.OnText = "Evet";
-            this.toggIrsaliye.Size = new System.Drawing.Size(104, 24);
+            this.toggIrsaliye.Size = new System.Drawing.Size(104, 18);
             this.toggIrsaliye.TabIndex = 3;
             // 
             // toggleBilgiFisiSorulsunmu
@@ -736,7 +729,7 @@
             this.toggleBilgiFisiSorulsunmu.Name = "toggleBilgiFisiSorulsunmu";
             this.toggleBilgiFisiSorulsunmu.Properties.OffText = "Hayır";
             this.toggleBilgiFisiSorulsunmu.Properties.OnText = "Evet";
-            this.toggleBilgiFisiSorulsunmu.Size = new System.Drawing.Size(108, 24);
+            this.toggleBilgiFisiSorulsunmu.Size = new System.Drawing.Size(108, 18);
             this.toggleBilgiFisiSorulsunmu.TabIndex = 3;
             // 
             // toggTerazi
@@ -745,7 +738,7 @@
             this.toggTerazi.Name = "toggTerazi";
             this.toggTerazi.Properties.OffText = "Hayır";
             this.toggTerazi.Properties.OnText = "Evet";
-            this.toggTerazi.Size = new System.Drawing.Size(106, 24);
+            this.toggTerazi.Size = new System.Drawing.Size(106, 18);
             this.toggTerazi.TabIndex = 2;
             // 
             // toggleBilgiFisiYazdirilsinmi
@@ -754,7 +747,7 @@
             this.toggleBilgiFisiYazdirilsinmi.Name = "toggleBilgiFisiYazdirilsinmi";
             this.toggleBilgiFisiYazdirilsinmi.Properties.OffText = "Hayır";
             this.toggleBilgiFisiYazdirilsinmi.Properties.OnText = "Evet";
-            this.toggleBilgiFisiYazdirilsinmi.Size = new System.Drawing.Size(106, 24);
+            this.toggleBilgiFisiYazdirilsinmi.Size = new System.Drawing.Size(106, 18);
             this.toggleBilgiFisiYazdirilsinmi.TabIndex = 2;
             // 
             // textEdit4
@@ -1024,9 +1017,9 @@
             this.labelControl5.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl5.Location = new System.Drawing.Point(725, 90);
+            this.labelControl5.Location = new System.Drawing.Point(711, 90);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(35, 21);
+            this.labelControl5.Size = new System.Drawing.Size(49, 21);
             this.labelControl5.TabIndex = 1;
             this.labelControl5.Text = "Fatura Yazıcısı Seç :";
             this.labelControl5.Visible = false;
@@ -1174,64 +1167,14 @@
             // navigationPage3
             // 
             this.navigationPage3.Caption = "StokAyarlari";
-            this.navigationPage3.Controls.Add(this.calcStokKodu);
-            this.navigationPage3.Controls.Add(this.labelControl8);
             this.navigationPage3.Name = "navigationPage3";
-            this.navigationPage3.Size = new System.Drawing.Size(959, 603);
-            // 
-            // calcStokKodu
-            // 
-            this.calcStokKodu.Location = new System.Drawing.Point(119, 4);
-            this.calcStokKodu.Name = "calcStokKodu";
-            this.calcStokKodu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcStokKodu.Size = new System.Drawing.Size(109, 20);
-            this.calcStokKodu.TabIndex = 3;
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Appearance.BorderColor = System.Drawing.Color.Silver;
-            this.labelControl8.Appearance.Options.UseBorderColor = true;
-            this.labelControl8.Appearance.Options.UseTextOptions = true;
-            this.labelControl8.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl8.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl8.Location = new System.Drawing.Point(3, 3);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(110, 21);
-            this.labelControl8.TabIndex = 2;
-            this.labelControl8.Text = "Stok Kodu Başlangıç :";
+            this.navigationPage3.Size = new System.Drawing.Size(826, 514);
             // 
             // navigationPage4
             // 
             this.navigationPage4.Caption = "Cari Ayarlari";
-            this.navigationPage4.Controls.Add(this.calcCariKodu);
-            this.navigationPage4.Controls.Add(this.labelControl9);
             this.navigationPage4.Name = "navigationPage4";
-            this.navigationPage4.Size = new System.Drawing.Size(959, 603);
-            // 
-            // calcCariKodu
-            // 
-            this.calcCariKodu.Location = new System.Drawing.Point(120, 3);
-            this.calcCariKodu.Name = "calcCariKodu";
-            this.calcCariKodu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcCariKodu.Size = new System.Drawing.Size(120, 20);
-            this.calcCariKodu.TabIndex = 4;
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Appearance.BorderColor = System.Drawing.Color.Silver;
-            this.labelControl9.Appearance.Options.UseBorderColor = true;
-            this.labelControl9.Appearance.Options.UseTextOptions = true;
-            this.labelControl9.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl9.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl9.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl9.Location = new System.Drawing.Point(3, 3);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(110, 21);
-            this.labelControl9.TabIndex = 3;
-            this.labelControl9.Text = "Cari Kodu Başlangıç :";
+            this.navigationPage4.Size = new System.Drawing.Size(826, 514);
             // 
             // navigationPage5
             // 
@@ -1240,7 +1183,7 @@
             this.navigationPage5.Controls.Add(this.kopKoparatifmi);
             this.navigationPage5.Controls.Add(this.labelControl29);
             this.navigationPage5.Name = "navigationPage5";
-            this.navigationPage5.Size = new System.Drawing.Size(853, 535);
+            this.navigationPage5.Size = new System.Drawing.Size(826, 514);
             // 
             // btnDuzenle
             // 
@@ -1258,7 +1201,7 @@
             this.kopKoparatifmi.Name = "kopKoparatifmi";
             this.kopKoparatifmi.Properties.OffText = "Hayır";
             this.kopKoparatifmi.Properties.OnText = "Evet";
-            this.kopKoparatifmi.Size = new System.Drawing.Size(117, 24);
+            this.kopKoparatifmi.Size = new System.Drawing.Size(117, 18);
             this.kopKoparatifmi.TabIndex = 9;
             // 
             // labelControl29
@@ -1285,10 +1228,11 @@
             this.navigationPage6.Controls.Add(this.labelControl26);
             this.navigationPage6.Controls.Add(this.labelControl25);
             this.navigationPage6.Name = "navigationPage6";
-            this.navigationPage6.Size = new System.Drawing.Size(859, 543);
+            this.navigationPage6.Size = new System.Drawing.Size(826, 514);
             // 
             // calcRub
             // 
+            this.calcRub.EditValue = "";
             this.calcRub.Location = new System.Drawing.Point(62, 66);
             this.calcRub.Name = "calcRub";
             this.calcRub.Properties.Appearance.Options.UseTextOptions = true;
@@ -1303,6 +1247,7 @@
             // 
             // calcEuro
             // 
+            this.calcEuro.EditValue = "";
             this.calcEuro.Location = new System.Drawing.Point(62, 40);
             this.calcEuro.Name = "calcEuro";
             this.calcEuro.Properties.Appearance.Options.UseTextOptions = true;
@@ -1317,6 +1262,7 @@
             // 
             // calcUsd
             // 
+            this.calcUsd.EditValue = "";
             this.calcUsd.Location = new System.Drawing.Point(62, 14);
             this.calcUsd.Name = "calcUsd";
             this.calcUsd.Properties.Appearance.Options.UseTextOptions = true;
@@ -1380,11 +1326,11 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.lblBaslik);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.IconOptions.ShowIcon = false;
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAyarlar";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ayarlar";
             this.Load += new System.EventHandler(this.frmAyarlar_Load);
@@ -1428,10 +1374,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbTahsilat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbBilgiFisi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            this.navigationPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.calcStokKodu.Properties)).EndInit();
-            this.navigationPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.calcCariKodu.Properties)).EndInit();
             this.navigationPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kopKoparatifmi.Properties)).EndInit();
             this.navigationPage6.ResumeLayout(false);
@@ -1465,11 +1407,7 @@
         private DevExpress.XtraEditors.CalcEdit calcFisKodu;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage3;
-        private DevExpress.XtraEditors.CalcEdit calcStokKodu;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage4;
-        private DevExpress.XtraEditors.CalcEdit calcCariKodu;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.CalcEdit calcBarKodu;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.TextEdit txtFirmaAdi;
