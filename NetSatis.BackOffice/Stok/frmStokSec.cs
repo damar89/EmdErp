@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Columns;
 using NetSatis.Entities;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
@@ -283,5 +284,24 @@ namespace NetSatis.BackOffice.Stok
                 return;
             obj.Text = null;
         }
+
+        private void gridStoklar_ColumnFilterChanged(object sender, EventArgs e)
+        {
+            if (gridStoklar.FocusedColumn.FilterInfo.Value != null)
+            {
+                string filter = gridStoklar.FocusedColumn.FilterInfo.Value.ToString();
+                filter = filter.Replace(' ', '%');
+                if (filter[filter.Length - 1] != '%')
+                {
+                    filter += '%';
+                }
+                if (filter[0] != '%')
+                {
+                    filter = '%' + filter;
+                }
+                gridStoklar.FocusedColumn.FilterInfo = new ColumnFilterInfo("[" + gridStoklar.FocusedColumn.FieldName + "] LIKE '" + filter + "'");
+            }
+        }
+
     }
 }

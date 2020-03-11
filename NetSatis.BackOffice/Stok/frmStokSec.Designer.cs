@@ -255,6 +255,7 @@
             this.gridStoklar.OptionsView.ShowAutoFilterRow = true;
             this.gridStoklar.OptionsView.ShowGroupPanel = false;
             this.gridStoklar.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridStoklar_PopupMenuShowing);
+            this.gridStoklar.ColumnFilterChanged += new System.EventHandler(this.gridStoklar_ColumnFilterChanged);
             this.gridStoklar.DoubleClick += new System.EventHandler(this.gridStoklar_DoubleClick);
             this.gridStoklar.RowCountChanged += new System.EventHandler(this.gridStoklar_RowCountChanged);
             // 
@@ -591,9 +592,9 @@
             // btnTemizle
             // 
             this.btnTemizle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTemizle.ImageOptions.Image")));
-            this.btnTemizle.Location = new System.Drawing.Point(186, 29);
+            this.btnTemizle.Location = new System.Drawing.Point(184, 27);
             this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(38, 36);
+            this.btnTemizle.Size = new System.Drawing.Size(40, 38);
             this.btnTemizle.StyleController = this.layoutControl1;
             this.btnTemizle.TabIndex = 7;
             this.btnTemizle.ToolTip = "F5";
@@ -604,9 +605,9 @@
             this.btnSorgula.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btnSorgula.Appearance.Options.UseFont = true;
             this.btnSorgula.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSorgula.ImageOptions.Image")));
-            this.btnSorgula.Location = new System.Drawing.Point(8, 29);
+            this.btnSorgula.Location = new System.Drawing.Point(8, 27);
             this.btnSorgula.Name = "btnSorgula";
-            this.btnSorgula.Size = new System.Drawing.Size(174, 36);
+            this.btnSorgula.Size = new System.Drawing.Size(172, 38);
             this.btnSorgula.StyleController = this.layoutControl1;
             this.btnSorgula.TabIndex = 6;
             this.btnSorgula.Text = "Bul (F4)";
@@ -685,7 +686,7 @@
             this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
             this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem3.Control = this.txtStokKodu;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 118);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 120);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 0, 0, 0);
             this.layoutControlItem3.Size = new System.Drawing.Size(220, 39);
@@ -698,7 +699,7 @@
             this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
             this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem2.Control = this.txtStokAdi;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 79);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 81);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 0, 0, 0);
             this.layoutControlItem2.Size = new System.Drawing.Size(220, 39);
@@ -711,7 +712,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
             this.emptySpaceItem1.AppearanceItemCaption.Options.UseFont = true;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 157);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 159);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 0, 0, 0);
             this.emptySpaceItem1.Size = new System.Drawing.Size(220, 390);
@@ -722,16 +723,16 @@
             this.layoutControlItem5.Control = this.btnSorgula;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(178, 40);
+            this.layoutControlItem5.Size = new System.Drawing.Size(176, 42);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnTemizle;
-            this.layoutControlItem6.Location = new System.Drawing.Point(178, 0);
+            this.layoutControlItem6.Location = new System.Drawing.Point(176, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(42, 40);
+            this.layoutControlItem6.Size = new System.Drawing.Size(44, 42);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -740,7 +741,7 @@
             this.layoutControlItem7.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
             this.layoutControlItem7.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem7.Control = this.txtAramaMetni;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 40);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 42);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 0, 0, 0);
             this.layoutControlItem7.Size = new System.Drawing.Size(220, 39);
