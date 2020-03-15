@@ -30,14 +30,21 @@ namespace NetSatisAdmin
             }
             context = new NetSatisContext();
 
+            KlasoreIzinVer();
         }
 
         private void KlasoreIzinVer()
         {
-            DirectorySecurity izin = Directory.GetAccessControl(Application.StartupPath);
-            SecurityIdentifier everyone = new SecurityIdentifier(WellKnownSidType.WorldSid, null);
-            izin.AddAccessRule(new FileSystemAccessRule(everyone, FileSystemRights.FullControl, AccessControlType.Allow));
-            Directory.SetAccessControl(Application.StartupPath, izin);
+            //DirectorySecurity izin = Directory.GetAccessControl(Application.StartupPath);
+            //SecurityIdentifier everyone = new SecurityIdentifier(WellKnownSidType.WorldSid, null);
+            //izin.AddAccessRule(new FileSystemAccessRule(everyone, FileSystemRights.FullControl, AccessControlType.Allow));
+            //Directory.SetAccessControl(Application.StartupPath, izin);
+
+
+            DirectoryInfo dInfo = new DirectoryInfo(Application.StartupPath);
+            DirectorySecurity dSecurity = dInfo.GetAccessControl();
+            dSecurity.AddAccessRule(new FileSystemAccessRule(new SecurityIdentifier(WellKnownSidType.WorldSid, null), FileSystemRights.FullControl, InheritanceFlags.ObjectInherit | InheritanceFlags.ContainerInherit, PropagationFlags.NoPropagateInherit, AccessControlType.Allow));
+            dInfo.SetAccessControl(dSecurity); 
 
         }
 
