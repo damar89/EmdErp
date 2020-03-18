@@ -11,6 +11,7 @@ namespace NetSatis.Entities.Tables
         public string Tipi { get; set; }
         public string Proje { get; set; }
         public string OzelKod { get; set; }
+        public string OzelKod2 { get; set; }
         public string FisKodu { get; set; }
         public string CariIrsaliye { get; set; }
         public string StokIrsaliye { get; set; }
@@ -55,9 +56,7 @@ namespace NetSatis.Entities.Tables
         public string SiparisFisKodu { get; set; }
         public string TeklifFisKodu { get; set; }
         public string FaturaFisKodu { get; set; }
-        public string ProjeAdi { get; set; }
-        public string OzelKod { get; set; }
-        public string OzelKod2 { get; set; }
+        public string ProjeAdi { get; set; } 
         public int SaveUser { get; set; }
         public int EditUser { get; set; }
         public bool EfaturaDurumu { get; set; }
