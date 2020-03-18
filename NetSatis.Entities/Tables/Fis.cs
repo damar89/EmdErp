@@ -9,6 +9,8 @@ namespace NetSatis.Entities.Tables
         public string Seri { get; set; }
         public string Sira { get; set; }
         public string Tipi { get; set; }
+        public string Proje { get; set; }
+        public string OzelKod { get; set; }
         public string FisKodu { get; set; }
         public string CariIrsaliye { get; set; }
         public string StokIrsaliye { get; set; }

@@ -43,6 +43,8 @@ namespace NetSatis.Entities.Context
         public DbSet<AltGrup> AltGruplar { get; set; }
         public DbSet<Ayar> Ayarlar { get; set; }
         public DbSet<FirmaSabitleri> FirmaSabitleri { get; set; }
+        public DbSet<Proje> Projeler { get; set; }
+        public DbSet<OzelKod> OzelKodlar { get; set; }
         public DbSet<eKullaniciBilgileri> EKullaniciBilgileri { get; set; }
         public DbSet<Api> Api { get; set; }
 
@@ -75,6 +77,8 @@ namespace NetSatis.Entities.Context
             modelBuilder.Configurations.Add(new AnaGrupMap());
             modelBuilder.Configurations.Add(new AltGrupMap());
             modelBuilder.Configurations.Add(new FirmaSabitMap());
+            modelBuilder.Configurations.Add(new ProjeMap());
+            modelBuilder.Configurations.Add(new OzelKodMap());
             modelBuilder.Configurations.Add(new eKullaniciBilgileriMap());
 
         }
