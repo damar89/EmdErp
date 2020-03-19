@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Stok
@@ -99,14 +100,25 @@ namespace NetSatis.BackOffice.Stok
             gridContStoklar.Select();
         }
 
-        private void frmStokSec_KeyDown(object sender, KeyEventArgs e)
+        private async void frmStokSec_KeyDown(object sender, KeyEventArgs e)
         {
 
             if (e.KeyCode == Keys.Escape)
                 this.Close();
+            try
+            {
+                if (!e.Alt && e.KeyCode == Keys.Enter)
+                {
+                    await Task.Delay(100);
+                    gridStoklar_DoubleClick(null, null);
+                }
+            }
+            catch (Exception)
+            {
 
-            if (!e.Alt && e.KeyCode == Keys.Enter)
-                gridStoklar_DoubleClick(null, null);
+                throw;
+            }
+
 
             if (e.Alt && e.KeyCode == Keys.Y)
                 btnStokEkle.PerformClick();

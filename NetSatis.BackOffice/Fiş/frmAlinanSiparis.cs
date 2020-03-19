@@ -183,6 +183,8 @@ namespace NetSatis.BackOffice.Fiş
                 fis.CepTelefonu = tempFis.CepTelefonu;
                 fis.FaturaUnvani = tempFis.FaturaUnvani;
                 fis.Il = tempFis.Il;
+                fis.Proje = tempFis.Proje;
+                fis.OzelKod = tempFis.OzelKod;
                 fis.Ilce = tempFis.Ilce;
                 fis.KDVDahil = tempFis.KDVDahil;
                 fis.PlasiyerId = tempFis.PlasiyerId;

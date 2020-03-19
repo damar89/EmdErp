@@ -231,7 +231,7 @@
     <Compile Include="Tables\OdemeTuru.cs" />
     <Compile Include="Tables\OtherTables\TopluIskonto.cs" />
     <Compile Include="Tables\OzelKod.cs" />
-    <Compile Include="Tables\OzelKodMap.cs" />
+    <Compile Include="Mapping\OzelKodMap.cs" />
     <Compile Include="Tables\Personel.cs" />
     <Compile Include="Tables\PersonelHareket.cs" />
     <Compile Include="Tables\Proje.cs" />

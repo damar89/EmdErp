@@ -182,7 +182,8 @@ namespace NetSatis.BackOffice.Fiş
                 fis.Ilce = tempFis.Ilce;
                 fis.KDVDahil = tempFis.KDVDahil;
                 fis.PlasiyerId = tempFis.PlasiyerId;
-
+                fis.Proje = tempFis.Proje;
+                fis.OzelKod = tempFis.OzelKod;
                 fis.Semt = tempFis.Semt;
                 fis.VergiDairesi = tempFis.VergiDairesi;
                 fis.VadeTarihi = DateTime.Now;

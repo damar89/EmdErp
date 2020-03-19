@@ -99,6 +99,8 @@
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.colEfaturaDurumu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.colProje = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colOzelKod = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -560,7 +562,7 @@
             this.gridContFisler.Name = "gridContFisler";
             this.gridContFisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpsChkKdvDahil});
-            this.gridContFisler.Size = new System.Drawing.Size(1117, 377);
+            this.gridContFisler.Size = new System.Drawing.Size(1117, 373);
             this.gridContFisler.TabIndex = 0;
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});
@@ -588,7 +590,9 @@
             this.colToplamTutar,
             this.colAciklama,
             this.colKDVDahil,
-            this.colEfaturaDurumu});
+            this.colEfaturaDurumu,
+            this.colProje,
+            this.colOzelKod});
             this.gridFisler.GridControl = this.gridContFisler;
             this.gridFisler.Name = "gridFisler";
             this.gridFisler.OptionsView.ShowAutoFilterRow = true;
@@ -807,14 +811,30 @@
             this.colEfaturaDurumu.FieldName = "EfaturaDurumu";
             this.colEfaturaDurumu.Name = "colEfaturaDurumu";
             this.colEfaturaDurumu.OptionsColumn.AllowEdit = false;
-            this.colEfaturaDurumu.Visible = true;
-            this.colEfaturaDurumu.VisibleIndex = 13;
             this.colEfaturaDurumu.Width = 96;
             // 
             // popupMenu2
             // 
             this.popupMenu2.Manager = this.barManager1;
             this.popupMenu2.Name = "popupMenu2";
+            // 
+            // colProje
+            // 
+            this.colProje.Caption = "Proje Adı";
+            this.colProje.FieldName = "Proje";
+            this.colProje.Name = "colProje";
+            this.colProje.OptionsColumn.AllowEdit = false;
+            this.colProje.Visible = true;
+            this.colProje.VisibleIndex = 13;
+            // 
+            // colOzelKod
+            // 
+            this.colOzelKod.Caption = "Özel Kod";
+            this.colOzelKod.FieldName = "OzelKod";
+            this.colOzelKod.Name = "colOzelKod";
+            this.colOzelKod.OptionsColumn.AllowEdit = false;
+            this.colOzelKod.Visible = true;
+            this.colOzelKod.VisibleIndex = 14;
             // 
             // frmToptanSatis
             // 
@@ -918,5 +938,7 @@
         private DevExpress.XtraBars.PopupMenu popupMenu2;
         private DevExpress.XtraBars.BarButtonItem efaturaGitti;
         private DevExpress.XtraGrid.Columns.GridColumn colEfaturaDurumu;
+        private DevExpress.XtraGrid.Columns.GridColumn colProje;
+        private DevExpress.XtraGrid.Columns.GridColumn colOzelKod;
     }
 }

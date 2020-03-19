@@ -36,6 +36,8 @@ namespace NetSatis.BackOffice.Fiş
         NetSatisContext context = new NetSatisContext();
         FisAyarlari ayarlar = new FisAyarlari();
         FisDAL fisDal = new FisDAL();
+        OzelKodDAL ozelkodDal = new OzelKodDAL();
+        ProjeDAL projeDal = new ProjeDAL();
         bool stoklarYuklendi = false;
         MasrafHareketDAL masrafHareketDal = new MasrafHareketDAL();
         StokHareketDAL stokHareketDal = new StokHareketDAL();
@@ -184,6 +186,13 @@ namespace NetSatis.BackOffice.Fiş
                                 DataSourceUpdateMode.OnPropertyChanged);
             cmbTipi.DataBindings.Add("EditValue", _fisentity, "Tipi", false,
               DataSourceUpdateMode.OnPropertyChanged);
+
+            cmbProje.DataBindings.Add("EditValue", _fisentity, "Proje", false,
+            DataSourceUpdateMode.OnPropertyChanged);
+
+            cmbOzelKod.DataBindings.Add("EditValue", _fisentity, "OzelKod", false,
+          DataSourceUpdateMode.OnPropertyChanged);
+
             txtAciklama.DataBindings.Add("Text", _fisentity, "Aciklama", false,
                 DataSourceUpdateMode.OnPropertyChanged);
             toggleKDVDahil.DataBindings.Add("EditValue", _fisentity, "KDVDahil", false,
@@ -225,12 +234,14 @@ namespace NetSatis.BackOffice.Fiş
             ButonlariYukle();
 
             cmbTipi.Properties.Items.AddRange(eislem.HareketTipiListele().Select(x => x.Aciklama).ToList());
-
             var a = SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_VarsayilanHareketTipi);
             if (a != null)
             {
                 cmbTipi.SelectedItem = a;
             }
+
+            cmbProje.Properties.Items.AddRange(projeDal.GetAll(context).Select(x => x.ProjeAdi).ToList());
+            cmbOzelKod.Properties.Items.AddRange(ozelkodDal.GetAll(context).Select(x => x.OzelKodAdi).ToList());
 
         }
 
@@ -1471,6 +1482,8 @@ namespace NetSatis.BackOffice.Fiş
                     stokVeri.SaveUser = frmAnaMenu.UserId;
                 }
                 stokVeri.Sira = txtSira.Text;
+                stokVeri.Proje = cmbProje.SelectedText;
+                stokVeri.OzelKod = cmbOzelKod.SelectedText;
                 stokVeri.Tipi = cmbTipi.Text;
                 stokVeri.Hareket = ayarlar.StokHareketi;
                 stokVeri.FisTuru = ayarlar.FisTurleri;
@@ -1566,6 +1579,8 @@ namespace NetSatis.BackOffice.Fiş
             _fisentity.Sira = txtSira.Text;
             _fisentity.Seri = txtSeri.Text;
             _fisentity.Tipi = cmbTipi.Text;
+            _fisentity.Proje = cmbProje.SelectedText;
+            _fisentity.OzelKod = cmbOzelKod.SelectedText;
             _fisentity.ToplamTutar = calcGenelToplam.Value;
             _fisentity.IskontoOrani1 = calcIndirimOrani.Value;
             _fisentity.IskontoTutari1 = calcIndirimToplami.Value + toplamDipIskontoPayi;

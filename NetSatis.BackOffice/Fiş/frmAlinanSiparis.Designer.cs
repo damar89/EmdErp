@@ -92,6 +92,8 @@
             this.colKDVDahil = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.colFaturaKodu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProje = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colOzelKod = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -518,7 +520,9 @@
             this.colToplamTutar,
             this.colAciklama,
             this.colKDVDahil,
-            this.colFaturaKodu});
+            this.colFaturaKodu,
+            this.colProje,
+            this.colOzelKod});
             this.gridFisler.GridControl = this.gridContFisler;
             this.gridFisler.Name = "gridFisler";
             this.gridFisler.OptionsClipboard.AllowCopy = DevExpress.Utils.DefaultBoolean.True;
@@ -746,6 +750,24 @@
             this.colFaturaKodu.Visible = true;
             this.colFaturaKodu.VisibleIndex = 13;
             // 
+            // colProje
+            // 
+            this.colProje.Caption = "Proje Adı";
+            this.colProje.FieldName = "Proje";
+            this.colProje.Name = "colProje";
+            this.colProje.OptionsColumn.AllowEdit = false;
+            this.colProje.Visible = true;
+            this.colProje.VisibleIndex = 14;
+            // 
+            // colOzelKod
+            // 
+            this.colOzelKod.Caption = "Özel Kod";
+            this.colOzelKod.FieldName = "OzelKod";
+            this.colOzelKod.Name = "colOzelKod";
+            this.colOzelKod.OptionsColumn.AllowEdit = false;
+            this.colOzelKod.Visible = true;
+            this.colOzelKod.VisibleIndex = 15;
+            // 
             // frmAlinanSiparis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -841,5 +863,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colFaturaKodu;
         private DevExpress.XtraBars.BarButtonItem btnFaturalandir;
         private DevExpress.XtraBars.BarButtonItem btnYazdir;
+        private DevExpress.XtraGrid.Columns.GridColumn colProje;
+        private DevExpress.XtraGrid.Columns.GridColumn colOzelKod;
     }
 }

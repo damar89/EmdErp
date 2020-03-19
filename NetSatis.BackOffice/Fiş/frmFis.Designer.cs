@@ -90,6 +90,8 @@
             this.colAciklama = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKDVDahil = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.colProje = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colOzelKod = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -498,7 +500,9 @@
             this.colIskontoTutari3,
             this.colToplamTutar,
             this.colAciklama,
-            this.colKDVDahil});
+            this.colKDVDahil,
+            this.colProje,
+            this.colOzelKod});
             this.gridFisler.GridControl = this.gridContFisler;
             this.gridFisler.Name = "gridFisler";
             this.gridFisler.OptionsView.ShowAutoFilterRow = true;
@@ -715,6 +719,24 @@
             this.rpsChkKdvDahil.AutoHeight = false;
             this.rpsChkKdvDahil.Name = "rpsChkKdvDahil";
             // 
+            // colProje
+            // 
+            this.colProje.Caption = "Proje Adı";
+            this.colProje.FieldName = "Proje";
+            this.colProje.Name = "colProje";
+            this.colProje.OptionsColumn.AllowEdit = false;
+            this.colProje.Visible = true;
+            this.colProje.VisibleIndex = 13;
+            // 
+            // colOzelKod
+            // 
+            this.colOzelKod.Caption = "Özel Kod";
+            this.colOzelKod.FieldName = "OzelKod";
+            this.colOzelKod.Name = "colOzelKod";
+            this.colOzelKod.OptionsColumn.AllowEdit = false;
+            this.colOzelKod.Visible = true;
+            this.colOzelKod.VisibleIndex = 14;
+            // 
             // frmFis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -808,5 +830,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colVadeTarihi;
         private DevExpress.XtraBars.BarSubItem barSubItem6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraGrid.Columns.GridColumn colProje;
+        private DevExpress.XtraGrid.Columns.GridColumn colOzelKod;
     }
 }

@@ -16,6 +16,8 @@ namespace NetSatis.Entities.Tables
         public string Sira { get; set; }
         public string Tipi { get; set; }
         public string Hareket { get; set; }
+        public string Proje { get; set; }
+        public string OzelKod { get; set; }
         public string StokIrsaliye { get; set; }
         public string FisTuru { get; set; }
         public int StokId { get; set; }

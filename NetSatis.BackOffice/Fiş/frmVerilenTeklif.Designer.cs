@@ -94,6 +94,8 @@
             this.colKDVDahil = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.colFaturaNo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProje = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colOzelKod = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -113,9 +115,9 @@
             this.groupControl1.Controls.Add(this.btnSil);
             this.groupControl1.Controls.Add(this.btnDuzenle);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 393);
+            this.groupControl1.Location = new System.Drawing.Point(0, 398);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1023, 57);
+            this.groupControl1.Size = new System.Drawing.Size(961, 57);
             this.groupControl1.TabIndex = 7;
             // 
             // dropDownButton1
@@ -126,7 +128,7 @@
             this.dropDownButton1.DropDownControl = this.popupMenu1;
             this.dropDownButton1.ImageOptions.ImageIndex = 2;
             this.dropDownButton1.ImageOptions.ImageList = this.imgMenu;
-            this.dropDownButton1.Location = new System.Drawing.Point(572, 23);
+            this.dropDownButton1.Location = new System.Drawing.Point(510, 23);
             this.dropDownButton1.Name = "dropDownButton1";
             this.dropDownButton1.Size = new System.Drawing.Size(85, 31);
             this.dropDownButton1.TabIndex = 6;
@@ -352,15 +354,15 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1023, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(961, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 450);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 455);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1023, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(961, 0);
             // 
             // barDockControlLeft
             // 
@@ -368,15 +370,15 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 450);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 455);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1023, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(961, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 450);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 455);
             // 
             // barButtonItem1
             // 
@@ -436,7 +438,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.ImageIndex = 0;
             this.btnKapat.ImageOptions.ImageList = this.imgMenu;
-            this.btnKapat.Location = new System.Drawing.Point(933, 23);
+            this.btnKapat.Location = new System.Drawing.Point(871, 23);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(85, 31);
             this.btnKapat.TabIndex = 5;
@@ -449,7 +451,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGuncelle.ImageOptions.ImageIndex = 3;
             this.btnGuncelle.ImageOptions.ImageList = this.imgMenu;
-            this.btnGuncelle.Location = new System.Drawing.Point(845, 23);
+            this.btnGuncelle.Location = new System.Drawing.Point(783, 23);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(85, 31);
             this.btnGuncelle.TabIndex = 5;
@@ -462,7 +464,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSil.ImageOptions.ImageIndex = 4;
             this.btnSil.ImageOptions.ImageList = this.imgMenu;
-            this.btnSil.Location = new System.Drawing.Point(754, 23);
+            this.btnSil.Location = new System.Drawing.Point(692, 23);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(85, 31);
             this.btnSil.TabIndex = 4;
@@ -475,7 +477,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDuzenle.ImageOptions.ImageIndex = 1;
             this.btnDuzenle.ImageOptions.ImageList = this.imgMenu;
-            this.btnDuzenle.Location = new System.Drawing.Point(663, 23);
+            this.btnDuzenle.Location = new System.Drawing.Point(601, 23);
             this.btnDuzenle.Name = "btnDuzenle";
             this.btnDuzenle.Size = new System.Drawing.Size(85, 31);
             this.btnDuzenle.TabIndex = 3;
@@ -499,7 +501,7 @@
             this.lblBaslik.Location = new System.Drawing.Point(0, 0);
             this.lblBaslik.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(1023, 32);
+            this.lblBaslik.Size = new System.Drawing.Size(961, 32);
             this.lblBaslik.TabIndex = 6;
             this.lblBaslik.Text = "Verilen Teklif Listesi";
             // 
@@ -512,7 +514,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.gridContFisler);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1023, 393);
+            this.splitContainerControl1.Size = new System.Drawing.Size(961, 398);
             this.splitContainerControl1.SplitterPosition = 34;
             this.splitContainerControl1.TabIndex = 8;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -525,7 +527,7 @@
             this.gridContFisler.Name = "gridContFisler";
             this.gridContFisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpsChkKdvDahil});
-            this.gridContFisler.Size = new System.Drawing.Size(1023, 349);
+            this.gridContFisler.Size = new System.Drawing.Size(961, 354);
             this.gridContFisler.TabIndex = 0;
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});
@@ -553,7 +555,9 @@
             this.colToplamTutar,
             this.colAciklama,
             this.colKDVDahil,
-            this.colFaturaNo});
+            this.colFaturaNo,
+            this.colProje,
+            this.colOzelKod});
             this.gridFisler.GridControl = this.gridContFisler;
             this.gridFisler.Name = "gridFisler";
             this.gridFisler.OptionsView.ShowAutoFilterRow = true;
@@ -776,11 +780,33 @@
             this.colFaturaNo.Visible = true;
             this.colFaturaNo.VisibleIndex = 13;
             // 
+            // colProje
+            // 
+            this.colProje.AppearanceCell.Options.UseTextOptions = true;
+            this.colProje.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colProje.Caption = "Proje Adı";
+            this.colProje.FieldName = "Proje";
+            this.colProje.Name = "colProje";
+            this.colProje.OptionsColumn.AllowEdit = false;
+            this.colProje.Visible = true;
+            this.colProje.VisibleIndex = 14;
+            // 
+            // colOzelKod
+            // 
+            this.colOzelKod.AppearanceCell.Options.UseTextOptions = true;
+            this.colOzelKod.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colOzelKod.Caption = "Özel Kod";
+            this.colOzelKod.FieldName = "OzelKod";
+            this.colOzelKod.Name = "colOzelKod";
+            this.colOzelKod.OptionsColumn.AllowEdit = false;
+            this.colOzelKod.Visible = true;
+            this.colOzelKod.VisibleIndex = 15;
+            // 
             // frmVerilenTeklif
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1023, 450);
+            this.ClientSize = new System.Drawing.Size(961, 455);
             this.Controls.Add(this.lblBaslik);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.groupControl1);
@@ -872,5 +898,7 @@
         private DevExpress.XtraBars.BarButtonItem btnFaturalandır;
         private DevExpress.XtraGrid.Columns.GridColumn colFaturaNo;
         private DevExpress.XtraBars.BarButtonItem btnYazdır;
+        private DevExpress.XtraGrid.Columns.GridColumn colProje;
+        private DevExpress.XtraGrid.Columns.GridColumn colOzelKod;
     }
 }

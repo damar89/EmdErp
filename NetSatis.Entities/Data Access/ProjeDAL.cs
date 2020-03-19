@@ -8,6 +8,9 @@ namespace NetSatis.Entities.Data_Access
 {
     public class ProjeDAL : EntityRepositoryBase<NetSatisContext, Proje, ProjeValidator>
     {
+        public ProjeDAL()
+        {
 
+        }
     }
 }

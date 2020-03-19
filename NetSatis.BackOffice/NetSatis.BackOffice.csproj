@@ -939,6 +939,30 @@
     <Compile Include="Tanım\frmKategoriler.Designer.cs">
       <DependentUpon>frmKategoriler.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tanım\frmOzelKod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanım\frmOzelKod.Designer.cs">
+      <DependentUpon>frmOzelKod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tanım\frmOzelKodIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanım\frmOzelKodIslem.Designer.cs">
+      <DependentUpon>frmOzelKodIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tanım\frmProje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanım\frmProje.Designer.cs">
+      <DependentUpon>frmProje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tanım\frmProjeIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanım\frmProjeIslem.Designer.cs">
+      <DependentUpon>frmProjeIslem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tanım\frmTanim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1254,6 +1278,7 @@
     <EmbeddedResource Include="Personel\frmPersonelSec.resx">
       <DependentUpon>frmPersonelSec.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -1363,6 +1388,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tanım\frmKategoriler.resx">
       <DependentUpon>frmKategoriler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tanım\frmOzelKod.resx">
+      <DependentUpon>frmOzelKod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tanım\frmOzelKodIslem.resx">
+      <DependentUpon>frmOzelKodIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tanım\frmProje.resx">
+      <DependentUpon>frmProje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tanım\frmProjeIslem.resx">
+      <DependentUpon>frmProjeIslem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tanım\frmTanim.resx">
       <DependentUpon>frmTanim.cs</DependentUpon>
