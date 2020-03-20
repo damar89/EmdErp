@@ -201,7 +201,7 @@
             this.xrLabel4,
             this.lblYaziyla});
             this.PageFooter.Dpi = 254F;
-            this.PageFooter.HeightF = 240.5625F;
+            this.PageFooter.HeightF = 259.2498F;
             this.PageFooter.Name = "PageFooter";
             // 
             // xrLabel5
@@ -388,7 +388,7 @@
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
             this.SnapGridSize = 25F;
-            this.Version = "17.1";
+            this.Version = "19.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

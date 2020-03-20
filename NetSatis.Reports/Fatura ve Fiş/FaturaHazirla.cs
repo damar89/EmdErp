@@ -18,13 +18,14 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             NetSatisContext context = new NetSatisContext();
             StokHareketDAL stokHareketDal = new StokHareketDAL();
             FisDAL fisDal = new FisDAL();
+            var cariDal = new CariDAL();
 
             Fis fisBilgi = fisDal.GetByFilter(context, c => c.FisKodu == FisKodu);
             List<StokHareket> stokHareketleri = stokHareketDal.GetAll(context, c => c.FisKodu == FisKodu);
 
+            decimal? bakiye = cariDal.cariBakiyesi(context, Convert.ToInt32(fisBilgi.CariId))?.Bakiye;
 
             Dictionary<int, decimal> KDVLer = new Dictionary<int, decimal>();
-
 
             #region FaturaBilgiler
             DataTable DTBilgiler = new DataTable();
@@ -49,6 +50,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTBilgiler.Columns.Add("FisBelgeNo", typeof(string));
             DTBilgiler.Columns.Add("FisTuru", typeof(string));
             DTBilgiler.Columns.Add("FisCepTel", typeof(string));
+            DTBilgiler.Columns.Add("Bakiye", typeof(decimal));
             DTBilgiler.TableName = "FaturaBilgiler";
             DataRow row = DTBilgiler.NewRow();
             row["CariAdiFaturaUnvan"] = fisBilgi.FaturaUnvani;
@@ -72,6 +74,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             row["FisKDVToplam"] = (decimal)fisBilgi.KdvToplam_;
             row["FisKodu"] = fisBilgi.FisKodu;
             row["FisTuru"] = fisBilgi.FisTuru;
+            row["Bakiye"] = bakiye;
             DTBilgiler.Rows.Add(row);
             #endregion
 
@@ -182,6 +185,9 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             Fis fisBilgi = fisDal.GetByFilter(context, c => c.FisKodu == FisKodu);
             List<StokHareket> stokHareketleri = stokHareketDal.GetAll(context, c => c.FisKodu == FisKodu);
 
+            var cariDal = new CariDAL();
+            decimal? bakiye = cariDal.cariBakiyesi(context, Convert.ToInt32(fisBilgi.CariId))?.Bakiye;
+
 
             Dictionary<int, decimal> KDVLer = new Dictionary<int, decimal>();
 
@@ -205,6 +211,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTBilgiler.Columns.Add("FisBelgeNo", typeof(string));
             DTBilgiler.Columns.Add("FisTuru", typeof(string));
             DTBilgiler.Columns.Add("FisCepTel", typeof(string));
+            DTBilgiler.Columns.Add("Bakiye", typeof(decimal));
             DTBilgiler.TableName = "FaturaBilgiler";
             DataRow row = DTBilgiler.NewRow();
             row["CariAdiFaturaUnvan"] = fisBilgi.FaturaUnvani;
@@ -224,6 +231,8 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             row["FisKDVToplam"] = (decimal)fisBilgi.KdvToplam_;
             row["FisKodu"] = fisBilgi.FisKodu;
             row["FisTuru"] = fisBilgi.FisTuru;
+            row["Bakiye"] = bakiye;
+            
             DTBilgiler.Rows.Add(row);
             #endregion
 

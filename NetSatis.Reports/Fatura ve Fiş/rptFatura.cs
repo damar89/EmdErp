@@ -19,6 +19,14 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
 
             Fis fisBilgi = fisDal.GetByFilter(context, c => c.FisKodu == fisKodu);
 
+
+            var cariDal = new CariDAL();
+            //cari bakiye bilgisi
+            decimal bakiye = 0;
+            if (fisBilgi.CariId.HasValue)
+                bakiye = cariDal.cariBakiyesi(context, fisBilgi.CariId.Value).Bakiye;
+
+
             ObjectDataSource stokHareketDataSource = new ObjectDataSource { DataSource = stokHareketDal.GetAll(context, c => c.FisKodu == fisKodu) };
 
             //fatura başlık
@@ -30,7 +38,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             lblVergiNo.Text = fisBilgi.Cari.VergiNo;
 
 
-              lblIkametgah.Text =  fisBilgi.Cari.Ilce + "-" + fisBilgi.Cari.Il;
+            lblIkametgah.Text = fisBilgi.Cari.Ilce + "-" + fisBilgi.Cari.Il;
             //fatura ürünler
             this.DataSource = stokHareketDataSource;
             //colBarkodu.DataBindings.Add("Text", this.DataSource, "Stok.Barkodu");
@@ -45,8 +53,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
 
             // KDV siz Fiyat
             // [BirimFiyati] / (ToDecimal([Kdv]) / 100 + 1)//hesaplamalar
-            if (fisBilgi.KDVDahil)
-            {
+            if (fisBilgi.KDVDahil) {
                 CalculatedField calcKdvSizBF = new CalculatedField();
                 this.CalculatedFields.Add(calcKdvSizBF);
                 calcKdvSizBF.Name = "KdvSizBirimFiyati";
@@ -58,12 +65,9 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             CalculatedField calcIndirimTutari = new CalculatedField();
             this.CalculatedFields.Add(calcIndirimTutari);
             calcIndirimTutari.Name = "IndirimTutari";
-            if (fisBilgi.KDVDahil)
-            {
+            if (fisBilgi.KDVDahil) {
                 calcIndirimTutari.Expression = "([KdvSizBirimFiyati]*[Miktar])/100*[IndirimOrani]";
-            }
-            else
-            {
+            } else {
                 calcIndirimTutari.Expression = "([BirimFiyati]*[Miktar])/100*[IndirimOrani]";
             }
 
@@ -71,12 +75,9 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             CalculatedField calcKdvToplam = new CalculatedField();
             this.CalculatedFields.Add(calcKdvToplam);
             calcKdvToplam.Name = "KdvTutari";
-            if (fisBilgi.KDVDahil)
-            {
+            if (fisBilgi.KDVDahil) {
                 calcKdvToplam.Expression = "([KdvSizBirimFiyati]*[Miktar]-[IndirimTutari]) / 100* [Kdv]";
-            }
-            else
-            {
+            } else {
                 calcKdvToplam.Expression = "([BirimFiyati]*[Miktar]-[IndirimTutari]) / 100* [Kdv]";
             }
 
@@ -85,12 +86,9 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             CalculatedField calcTutar = new CalculatedField();
             this.CalculatedFields.Add(calcTutar);
             calcTutar.Name = "Tutar";
-            if (fisBilgi.KDVDahil)
-            {
+            if (fisBilgi.KDVDahil) {
                 calcTutar.Expression = "[KdvSizBirimFiyati]*[Miktar]";
-            }
-            else
-            {
+            } else {
                 calcTutar.Expression = "[BirimFiyati]*[Miktar]";
             }
 
@@ -98,12 +96,9 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             CalculatedField calcKdvliTutar = new CalculatedField();
             this.CalculatedFields.Add(calcKdvliTutar);
             calcKdvliTutar.Name = "KdvliTutar";
-            if (fisBilgi.KDVDahil)
-            {
+            if (fisBilgi.KDVDahil) {
                 calcKdvliTutar.Expression = "([KdvSizBirimFiyati]*[Miktar])-[IndirimTutari]+[KdvTutari]";
-            }
-            else
-            {
+            } else {
                 calcKdvliTutar.Expression = "([BirimFiyati]*[Miktar])-[IndirimTutari]+[KdvTutari]";
             }
 
