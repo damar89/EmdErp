@@ -290,19 +290,19 @@ namespace NetSatis.BackOffice.Ayarlar
             {
 
             }
-            try
-            {
-                string str6 = lookMustahsil.GetColumnValue("Path").ToString();
-                if (!string.IsNullOrEmpty(str6))
-                {
-                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.MustahsilDizayn_DosyaAdi5, lookMustahsil.GetColumnValue("FileName").ToString());
-                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.MustahsilDizayn_DosyaYolu5, lookMustahsil.GetColumnValue("Path").ToString());
-                }
-            }
-            catch (Exception)
-            {
+            //try
+            //{
+            //    string str6 = lookMustahsil.GetColumnValue("Path").ToString();
+            //    if (!string.IsNullOrEmpty(str6))
+            //    {
+            //        SettingsTool.AyarDegistir(SettingsTool.Ayarlar.MustahsilDizayn_DosyaAdi5, lookMustahsil.GetColumnValue("FileName").ToString());
+            //        SettingsTool.AyarDegistir(SettingsTool.Ayarlar.MustahsilDizayn_DosyaYolu5, lookMustahsil.GetColumnValue("Path").ToString());
+            //    }
+            //}
+            //catch (Exception)
+            //{
 
-            }
+            //}
             try
             {
                 string str7 = cmbBilgiFisDizayn.GetColumnValue("Path").ToString();
