@@ -1,6 +1,8 @@
 ﻿using DevExpress.DataAccess.ObjectBinding;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
+using NetSatis.Entities.Tables;
+using System;
 
 namespace NetSatis.Reports.Fatura_ve_Fiş
 {
@@ -13,12 +15,12 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             FisDAL fisDal = new FisDAL();
             NetSatisContext context = new NetSatisContext();
             ObjectDataSource cariBakiyeDataSource = new ObjectDataSource { DataSource = cariDal.GetCariler(context) };
+            Fis fisBilgi = fisDal.GetByFilter(context, c => c.FisKodu == fisKodu);
+
+            decimal? bakiye = cariDal.cariBakiyesi(context, Convert.ToInt32(fisBilgi.CariId))?.Bakiye;
 
 
-            var fisBilgi = fisDal.Fatura(context, fisKodu);
-
-
-            //blCariAdı.DataBindings.Add("Text", cariEntity, "CariAdi");
+            //blCariAdı.DataBindings.Add("Text", cariEntity, "CariAdi");a
             ////fatura başlık
             //lblCariKodu.DataBindings.Add("Text", fisBilgi, "CariKodu");
             lblCariAdi.DataBindings.Add("Text", fisBilgi, "CariAdi");

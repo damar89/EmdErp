@@ -320,7 +320,6 @@
             this.xrLabel5.StylePriority.UseTextAlignment = false;
             this.xrLabel5.Text = "Kalan Bakiye :";
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.xrLabel5.Visible = false;
             // 
             // colBakiye
             // 
@@ -335,7 +334,6 @@
             this.colBakiye.Text = "colBakiye";
             this.colBakiye.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.colBakiye.TextFormatString = "{0:c2}";
-            this.colBakiye.Visible = false;
             // 
             // FirmaAdi
             // 
@@ -362,7 +360,7 @@
             this.RollPaper = true;
             this.ShowPrintMarginsWarning = false;
             this.SnapGridSize = 25F;
-            this.Version = "18.2";
+            this.Version = "19.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
