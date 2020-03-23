@@ -859,7 +859,28 @@ namespace NetSatis.FrontOffice
                 depoid = 1;
             }
             stokHareket.DepoId = depoid;
-            stokHareket.BirimFiyati = txtIslem.Text == "Alış Faturası" ? entity.AlisFiyati1 : entity.SatisFiyati1;
+            //stokHareket.BirimFiyati = txtIslem.Text == "Alış Faturası" ? entity.AlisFiyati1 : entity.SatisFiyati1;
+
+            if (cmbFiyat.SelectedIndex == 0 && txtIslem.Text == "SATIŞ")
+            {
+                stokHareket.BirimFiyati = txtIslem.Text == "Alış Faturası" ? entity.AlisFiyati1 : entity.SatisFiyati1;
+            }
+            else if (cmbFiyat.SelectedIndex == 1 && txtIslem.Text == "SATIŞ")
+            {
+                stokHareket.BirimFiyati = txtIslem.Text == "Alış Faturası" ? entity.AlisFiyati1 : entity.SatisFiyati2;
+            }
+            else if (cmbFiyat.SelectedIndex == 2 && txtIslem.Text == "SATIŞ")
+            {
+                stokHareket.BirimFiyati = txtIslem.Text == "Alış Faturası" ? entity.AlisFiyati1 : entity.SatisFiyati3;
+            }
+            else if (cmbFiyat.SelectedIndex == 3 && txtIslem.Text == "SATIŞ")
+            {
+                stokHareket.BirimFiyati = txtIslem.Text == "Alış Faturası" ? entity.AlisFiyati1 : entity.SatisFiyati4;
+            }
+            else
+            {
+                stokHareket.BirimFiyati = txtIslem.Text == "Alış Faturası" || txtIslem.Text == "Alış İade Faturası" || txtIslem.Text == "Alış İrsaliyesi" || txtIslem.Text == "Verilen Sipariş Fişi" || txtIslem.Text == "Alınan Teklif Fişi" || txtIslem.Text == "Stok Devir Fişi" || txtIslem.Text == "Sayım Fazlası Fişi" || txtIslem.Text == "Sayım Eksiği Fişi" || txtIslem.Text == "Sayım Giriş Fişi" ? entity.AlisFiyati1 : entity.SatisFiyati1;
+            }
 
             if (textBox1.Text != "")
             {
