@@ -105,19 +105,19 @@ namespace NetSatis.BackOffice.Stok
 
             if (e.KeyCode == Keys.Escape)
                 this.Close();
-            try
-            {
-                if (!e.Alt && e.KeyCode == Keys.Enter)
-                {
-                    await Task.Delay(100);
-                    gridStoklar_DoubleClick(null, null);
-                }
-            }
-            catch (Exception)
-            {
+            //try
+            //{
+            //    if (!e.Alt && e.KeyCode == Keys.Enter)
+            //    {
+            //        await Task.Delay(100);
+            //        gridStoklar_DoubleClick(null, null);
+            //    }
+            //}
+            //catch (Exception)
+            //{
 
-                throw;
-            }
+            //    throw;
+            //}
 
 
             if (e.Alt && e.KeyCode == Keys.Y)

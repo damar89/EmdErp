@@ -1282,6 +1282,9 @@ namespace NetSatis.BackOffice.Fiş
         {
             try
             {
+                gridStokHareket.FocusedRowHandle = GridControl.NewItemRowHandle;
+                return;
+
                 if (_fisentity.Tipi == "")
                 {
                     MessageBox.Show("Lütfen hareket tipi seçiniz.");
