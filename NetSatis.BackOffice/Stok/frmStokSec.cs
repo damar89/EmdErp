@@ -100,7 +100,7 @@ namespace NetSatis.BackOffice.Stok
             gridContStoklar.Select();
         }
 
-        private async void frmStokSec_KeyDown(object sender, KeyEventArgs e)
+        private void frmStokSec_KeyDown(object sender, KeyEventArgs e)
         {
 
             if (e.KeyCode == Keys.Escape)
