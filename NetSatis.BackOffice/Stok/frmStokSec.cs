@@ -133,6 +133,7 @@ namespace NetSatis.BackOffice.Stok
 
             if (e.KeyCode == Keys.F4)
                 Sorgula();
+
             if (e.KeyCode == Keys.F5)
                 btnTemizle.PerformClick();
         }

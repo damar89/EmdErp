@@ -30,11 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStok));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -45,10 +40,17 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
             this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
             this.imgMenu = new System.Windows.Forms.ImageList(this.components);
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSorgula = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -80,7 +82,7 @@
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnEkle = new DevExpress.XtraEditors.SimpleButton();
             this.btnDuzenle = new DevExpress.XtraEditors.SimpleButton();
-            this.txtStokAdi = new DevExpress.XtraEditors.ButtonEdit();
+            this.txtAramaMetni = new DevExpress.XtraEditors.ButtonEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -103,6 +105,8 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layGroupKayitSayisi = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -122,7 +126,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBarkodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStokAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAramaMetni.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -130,6 +134,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layGroupKayitSayisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -168,7 +174,7 @@
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.ImageIndex = 0;
             this.btnKapat.ImageOptions.ImageList = this.imgMenu;
-            this.btnKapat.Location = new System.Drawing.Point(1053, 645);
+            this.btnKapat.Location = new System.Drawing.Point(1084, 645);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(99, 38);
             this.btnKapat.StyleController = this.layoutControl1;
@@ -178,6 +184,8 @@
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.btnTemizle);
+            this.layoutControl1.Controls.Add(this.btnSorgula);
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.btnKapat);
             this.layoutControl1.Controls.Add(this.btnGuncelle);
@@ -188,23 +196,45 @@
             this.layoutControl1.Controls.Add(this.btnSil);
             this.layoutControl1.Controls.Add(this.btnEkle);
             this.layoutControl1.Controls.Add(this.btnDuzenle);
-            this.layoutControl1.Controls.Add(this.txtStokAdi);
+            this.layoutControl1.Controls.Add(this.txtAramaMetni);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1210, 432, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1162, 693);
+            this.layoutControl1.Size = new System.Drawing.Size(1193, 693);
             this.layoutControl1.TabIndex = 7;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // btnTemizle
+            // 
+            this.btnTemizle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnTemizle.ImageOptions.SvgImage")));
+            this.btnTemizle.Location = new System.Drawing.Point(146, 28);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(90, 38);
+            this.btnTemizle.StyleController = this.layoutControl1;
+            this.btnTemizle.TabIndex = 8;
+            this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
+            // 
+            // btnSorgula
+            // 
+            this.btnSorgula.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSorgula.ImageOptions.SvgImage")));
+            this.btnSorgula.Location = new System.Drawing.Point(9, 28);
+            this.btnSorgula.Name = "btnSorgula";
+            this.btnSorgula.Size = new System.Drawing.Size(133, 38);
+            this.btnSorgula.StyleController = this.layoutControl1;
+            this.btnSorgula.TabIndex = 7;
+            this.btnSorgula.Text = "Bul (F4)";
+            this.btnSorgula.Click += new System.EventHandler(this.btnSorgula_Click);
+            // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.gridControl1.Location = new System.Drawing.Point(245, 4);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(913, 612);
+            this.gridControl1.Size = new System.Drawing.Size(944, 612);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -454,7 +484,7 @@
             this.btnGuncelle.ImageOptions.ImageIndex = 3;
             this.btnGuncelle.ImageOptions.ImageList = this.imgMenu;
             this.btnGuncelle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnGuncelle.ImageOptions.SvgImage")));
-            this.btnGuncelle.Location = new System.Drawing.Point(934, 645);
+            this.btnGuncelle.Location = new System.Drawing.Point(965, 645);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(115, 38);
             this.btnGuncelle.StyleController = this.layoutControl1;
@@ -467,7 +497,7 @@
             this.btnStokHareket.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStokHareket.ImageOptions.ImageIndex = 4;
             this.btnStokHareket.ImageOptions.ImageList = this.imgMenu;
-            this.btnStokHareket.Location = new System.Drawing.Point(814, 645);
+            this.btnStokHareket.Location = new System.Drawing.Point(845, 645);
             this.btnStokHareket.Name = "btnStokHareket";
             this.btnStokHareket.Size = new System.Drawing.Size(116, 38);
             this.btnStokHareket.StyleController = this.layoutControl1;
@@ -477,20 +507,19 @@
             // 
             // txtBarkodu
             // 
-            this.txtBarkodu.Location = new System.Drawing.Point(9, 132);
+            this.txtBarkodu.Location = new System.Drawing.Point(9, 177);
             this.txtBarkodu.Name = "txtBarkodu";
             this.txtBarkodu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBarkodu.Properties.Appearance.Options.UseFont = true;
             this.txtBarkodu.Properties.AutoHeight = false;
-            editorButtonImageOptions4.ImageIndex = 0;
-            editorButtonImageOptions4.ImageList = this.ımageList2;
+            editorButtonImageOptions1.ImageIndex = 0;
+            editorButtonImageOptions1.ImageList = this.ımageList2;
             this.txtBarkodu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.txtBarkodu.Size = new System.Drawing.Size(227, 24);
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.txtBarkodu.Size = new System.Drawing.Size(227, 25);
             this.txtBarkodu.StyleController = this.layoutControl1;
             this.txtBarkodu.TabIndex = 0;
-            this.txtBarkodu.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtBarkodu_ButtonClick);
-            this.txtBarkodu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkodu_KeyDown);
+            this.txtBarkodu.Visible = false;
             // 
             // btnKopyala
             // 
@@ -498,7 +527,7 @@
             this.btnKopyala.ImageOptions.ImageIndex = 6;
             this.btnKopyala.ImageOptions.ImageList = this.imgMenu;
             this.btnKopyala.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnKopyala.ImageOptions.SvgImage")));
-            this.btnKopyala.Location = new System.Drawing.Point(694, 645);
+            this.btnKopyala.Location = new System.Drawing.Point(725, 645);
             this.btnKopyala.Name = "btnKopyala";
             this.btnKopyala.Size = new System.Drawing.Size(116, 38);
             this.btnKopyala.StyleController = this.layoutControl1;
@@ -508,27 +537,26 @@
             // 
             // txtStokKodu
             // 
-            this.txtStokKodu.Location = new System.Drawing.Point(9, 88);
+            this.txtStokKodu.Location = new System.Drawing.Point(9, 131);
             this.txtStokKodu.Name = "txtStokKodu";
             this.txtStokKodu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtStokKodu.Properties.Appearance.Options.UseFont = true;
             this.txtStokKodu.Properties.AutoHeight = false;
-            editorButtonImageOptions1.ImageIndex = 0;
-            editorButtonImageOptions1.ImageList = this.ımageList2;
+            editorButtonImageOptions2.ImageIndex = 0;
+            editorButtonImageOptions2.ImageList = this.ımageList2;
             this.txtStokKodu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.txtStokKodu.Size = new System.Drawing.Size(227, 24);
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.txtStokKodu.Size = new System.Drawing.Size(227, 26);
             this.txtStokKodu.StyleController = this.layoutControl1;
             this.txtStokKodu.TabIndex = 0;
-            this.txtStokKodu.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtStokKodu_ButtonClick);
-            this.txtStokKodu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtStokKodu_KeyDown);
+            this.txtStokKodu.Visible = false;
             // 
             // btnSil
             // 
             this.btnSil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSil.ImageOptions.ImageIndex = 7;
             this.btnSil.ImageOptions.ImageList = this.imgMenu;
-            this.btnSil.Location = new System.Drawing.Point(567, 645);
+            this.btnSil.Location = new System.Drawing.Point(598, 645);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(123, 38);
             this.btnSil.StyleController = this.layoutControl1;
@@ -542,7 +570,7 @@
             this.btnEkle.ImageOptions.ImageIndex = 2;
             this.btnEkle.ImageOptions.ImageList = this.imgMenu;
             this.btnEkle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEkle.ImageOptions.SvgImage")));
-            this.btnEkle.Location = new System.Drawing.Point(317, 645);
+            this.btnEkle.Location = new System.Drawing.Point(348, 645);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(121, 38);
             this.btnEkle.StyleController = this.layoutControl1;
@@ -555,7 +583,7 @@
             this.btnDuzenle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDuzenle.ImageOptions.ImageIndex = 1;
             this.btnDuzenle.ImageOptions.ImageList = this.imgMenu;
-            this.btnDuzenle.Location = new System.Drawing.Point(442, 645);
+            this.btnDuzenle.Location = new System.Drawing.Point(473, 645);
             this.btnDuzenle.Name = "btnDuzenle";
             this.btnDuzenle.Size = new System.Drawing.Size(121, 38);
             this.btnDuzenle.StyleController = this.layoutControl1;
@@ -563,23 +591,21 @@
             this.btnDuzenle.Text = "Düzenle";
             this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
             // 
-            // txtStokAdi
+            // txtAramaMetni
             // 
-            this.txtStokAdi.Location = new System.Drawing.Point(9, 44);
-            this.txtStokAdi.MenuManager = this.barManager1;
-            this.txtStokAdi.Name = "txtStokAdi";
-            this.txtStokAdi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtStokAdi.Properties.Appearance.Options.UseFont = true;
-            this.txtStokAdi.Properties.AutoHeight = false;
-            editorButtonImageOptions2.ImageIndex = 0;
-            editorButtonImageOptions2.ImageList = this.ımageList2;
-            this.txtStokAdi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.txtStokAdi.Size = new System.Drawing.Size(227, 24);
-            this.txtStokAdi.StyleController = this.layoutControl1;
-            this.txtStokAdi.TabIndex = 0;
-            this.txtStokAdi.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtStokAdi_ButtonClick);
-            this.txtStokAdi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtStokAdi_KeyDown);
+            this.txtAramaMetni.Location = new System.Drawing.Point(9, 86);
+            this.txtAramaMetni.MenuManager = this.barManager1;
+            this.txtAramaMetni.Name = "txtAramaMetni";
+            this.txtAramaMetni.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAramaMetni.Properties.Appearance.Options.UseFont = true;
+            this.txtAramaMetni.Properties.AutoHeight = false;
+            editorButtonImageOptions3.ImageIndex = 0;
+            editorButtonImageOptions3.ImageList = this.ımageList2;
+            this.txtAramaMetni.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.txtAramaMetni.Size = new System.Drawing.Size(227, 25);
+            this.txtAramaMetni.StyleController = this.layoutControl1;
+            this.txtAramaMetni.TabIndex = 0;
             // 
             // barManager1
             // 
@@ -608,7 +634,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1162, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1193, 0);
             // 
             // barDockControlBottom
             // 
@@ -616,7 +642,7 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 693);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1162, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1193, 0);
             // 
             // barDockControlLeft
             // 
@@ -630,7 +656,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1162, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(1193, 0);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 693);
             // 
@@ -751,7 +777,7 @@
             this.layGroupKayitSayisi});
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
-            this.Root.Size = new System.Drawing.Size(1162, 693);
+            this.Root.Size = new System.Drawing.Size(1193, 693);
             this.Root.TextVisible = false;
             // 
             // layoutControlGroup1
@@ -760,7 +786,9 @@
             this.layoutControlItem1,
             this.layoutControlItem2,
             this.layoutControlItem3,
-            this.emptySpaceItem2});
+            this.emptySpaceItem2,
+            this.layoutControlItem13,
+            this.layoutControlItem12});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
@@ -769,57 +797,75 @@
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.txtStokAdi;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.MaxSize = new System.Drawing.Size(231, 44);
-            this.layoutControlItem1.MinSize = new System.Drawing.Size(231, 44);
+            this.layoutControlItem1.Control = this.txtAramaMetni;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 42);
+            this.layoutControlItem1.MaxSize = new System.Drawing.Size(231, 45);
+            this.layoutControlItem1.MinSize = new System.Drawing.Size(231, 45);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(231, 44);
+            this.layoutControlItem1.Size = new System.Drawing.Size(231, 45);
             this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem1.Text = "Stok Adı Giriniz";
+            this.layoutControlItem1.Text = "Arama Metni Giriniz :";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(112, 13);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txtStokKodu;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 44);
-            this.layoutControlItem2.MaxSize = new System.Drawing.Size(231, 44);
-            this.layoutControlItem2.MinSize = new System.Drawing.Size(231, 44);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 87);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(231, 44);
-            this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem2.Size = new System.Drawing.Size(231, 46);
             this.layoutControlItem2.Text = "Stok Kodu Giriniz";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(112, 13);
+            this.layoutControlItem2.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txtBarkodu;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 88);
-            this.layoutControlItem3.MaxSize = new System.Drawing.Size(231, 44);
-            this.layoutControlItem3.MinSize = new System.Drawing.Size(231, 44);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 133);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(231, 44);
-            this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem3.Size = new System.Drawing.Size(231, 45);
             this.layoutControlItem3.Text = "Stok Barkodu Okutunuz";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(112, 13);
+            this.layoutControlItem3.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 132);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 178);
+            this.emptySpaceItem2.MinSize = new System.Drawing.Size(104, 24);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(231, 455);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(231, 409);
+            this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.btnSorgula;
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(137, 42);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem13.TextVisible = false;
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.btnTemizle;
+            this.layoutControlItem12.Location = new System.Drawing.Point(137, 0);
+            this.layoutControlItem12.MinSize = new System.Drawing.Size(80, 26);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(94, 42);
+            this.layoutControlItem12.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem12.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.gridControl1;
             this.layoutControlItem4.Location = new System.Drawing.Point(241, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(917, 616);
+            this.layoutControlItem4.Size = new System.Drawing.Size(948, 616);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -837,7 +883,7 @@
             this.layGroupKayitSayisi.Location = new System.Drawing.Point(0, 616);
             this.layGroupKayitSayisi.Name = "layGroupKayitSayisi";
             this.layGroupKayitSayisi.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-            this.layGroupKayitSayisi.Size = new System.Drawing.Size(1158, 73);
+            this.layGroupKayitSayisi.Size = new System.Drawing.Size(1189, 73);
             this.layGroupKayitSayisi.Text = "Listelenen Kayıt Sayısı:";
             // 
             // emptySpaceItem1
@@ -845,13 +891,13 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(307, 42);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(338, 42);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnEkle;
-            this.layoutControlItem5.Location = new System.Drawing.Point(307, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(338, 0);
             this.layoutControlItem5.MaxSize = new System.Drawing.Size(125, 42);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(125, 42);
             this.layoutControlItem5.Name = "layoutControlItem5";
@@ -863,7 +909,7 @@
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnDuzenle;
-            this.layoutControlItem6.Location = new System.Drawing.Point(432, 0);
+            this.layoutControlItem6.Location = new System.Drawing.Point(463, 0);
             this.layoutControlItem6.MaxSize = new System.Drawing.Size(125, 42);
             this.layoutControlItem6.MinSize = new System.Drawing.Size(125, 42);
             this.layoutControlItem6.Name = "layoutControlItem6";
@@ -875,7 +921,7 @@
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.btnSil;
-            this.layoutControlItem7.Location = new System.Drawing.Point(557, 0);
+            this.layoutControlItem7.Location = new System.Drawing.Point(588, 0);
             this.layoutControlItem7.MaxSize = new System.Drawing.Size(127, 42);
             this.layoutControlItem7.MinSize = new System.Drawing.Size(127, 42);
             this.layoutControlItem7.Name = "layoutControlItem7";
@@ -887,7 +933,7 @@
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.btnKopyala;
-            this.layoutControlItem8.Location = new System.Drawing.Point(684, 0);
+            this.layoutControlItem8.Location = new System.Drawing.Point(715, 0);
             this.layoutControlItem8.MaxSize = new System.Drawing.Size(120, 42);
             this.layoutControlItem8.MinSize = new System.Drawing.Size(120, 42);
             this.layoutControlItem8.Name = "layoutControlItem8";
@@ -899,7 +945,7 @@
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.btnStokHareket;
-            this.layoutControlItem9.Location = new System.Drawing.Point(804, 0);
+            this.layoutControlItem9.Location = new System.Drawing.Point(835, 0);
             this.layoutControlItem9.MaxSize = new System.Drawing.Size(120, 42);
             this.layoutControlItem9.MinSize = new System.Drawing.Size(120, 42);
             this.layoutControlItem9.Name = "layoutControlItem9";
@@ -911,7 +957,7 @@
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.btnGuncelle;
-            this.layoutControlItem10.Location = new System.Drawing.Point(924, 0);
+            this.layoutControlItem10.Location = new System.Drawing.Point(955, 0);
             this.layoutControlItem10.MaxSize = new System.Drawing.Size(119, 42);
             this.layoutControlItem10.MinSize = new System.Drawing.Size(119, 42);
             this.layoutControlItem10.Name = "layoutControlItem10";
@@ -923,7 +969,7 @@
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.btnKapat;
-            this.layoutControlItem11.Location = new System.Drawing.Point(1043, 0);
+            this.layoutControlItem11.Location = new System.Drawing.Point(1074, 0);
             this.layoutControlItem11.MaxSize = new System.Drawing.Size(103, 42);
             this.layoutControlItem11.MinSize = new System.Drawing.Size(103, 42);
             this.layoutControlItem11.Name = "layoutControlItem11";
@@ -956,7 +1002,7 @@
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1162, 693);
+            this.ClientSize = new System.Drawing.Size(1193, 693);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -977,7 +1023,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBarkodu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokKodu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStokAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAramaMetni.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
@@ -985,6 +1031,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layGroupKayitSayisi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
@@ -1054,7 +1102,7 @@
         private System.Windows.Forms.ImageList ımageList2;
         private System.Windows.Forms.ImageList ımageList1;
         private DevExpress.XtraEditors.ButtonEdit txtStokKodu;
-        private DevExpress.XtraEditors.ButtonEdit txtStokAdi;
+        private DevExpress.XtraEditors.ButtonEdit txtAramaMetni;
         private DevExpress.XtraEditors.ButtonEdit txtBarkodu;
         private DevExpress.XtraBars.BarButtonItem btnStokDuzenle;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
@@ -1074,5 +1122,9 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private DevExpress.XtraEditors.SimpleButton btnSorgula;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+        private DevExpress.XtraEditors.SimpleButton btnTemizle;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
     }
 }
