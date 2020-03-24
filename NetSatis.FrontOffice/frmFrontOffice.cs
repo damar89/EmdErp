@@ -533,7 +533,7 @@ namespace NetSatis.FrontOffice
             _fisentity.KDVDahil = true;
             _fisentity.ToplamTutar = calcGenelToplam.Value;
             _fisentity.IskontoOrani1 = calcIndirimOrani.Value;
-            _fisentity.IskontoTutari1 = calcIndirimToplami.Value;
+            _fisentity.IskontoTutari1 = calcIndirimToplami.Value + toplamDipIskontoPayi; ;
             _fisentity.Tarih = Convert.ToDateTime(DateTime.Now);
             _fisentity.AraToplam_ = txtAraToplam.Value;
             _fisentity.KdvToplam_ = calcKdvToplam.Value;
