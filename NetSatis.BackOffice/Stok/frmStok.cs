@@ -2,6 +2,7 @@
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraPrinting;
 using NetSatis.BackOffice.Raporlar;
+using NetSatis.Entities;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tools;
@@ -232,6 +233,8 @@ namespace NetSatis.BackOffice.Stok
             {
                 btnKopyala.PerformClick();
             }
+            if (e.KeyCode == Keys.F4)
+                Sorgula();
         }
         private void gridView1_RowCountChanged(object sender, EventArgs e)
         {
@@ -306,67 +309,113 @@ namespace NetSatis.BackOffice.Stok
             }
             return filtre;
         }
-        private void txtStokKodu_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData == Keys.Enter)
-            {
-                if (txtStokKodu.Text != "")
-                {
-                    gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokKodu"), new OperandValue(filtreyeCevir(txtStokKodu.Text)), BinaryOperatorType.Like);
-                }
-            }
-        }
-        private void txtBarkodu_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData == Keys.Enter)
-            {
-                if (txtBarkodu.Text != "")
-                {
-                    var barkod = context.Barkodlar.Where(x => x.Barkodu == txtBarkodu.Text).FirstOrDefault();
-                    if (barkod != null)
-                    {
-                        gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokKodu"), new OperandValue(barkod.Stok.StokKodu), BinaryOperatorType.Like);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Barkod bulunamadı.");
-                    }
+        //private void txtStokKodu_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    try
+        //    {
+        //        Sorgula();
+        //    }
+        //    catch (Exception)
+        //    {
 
-                    //gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("Barkodu"), new OperandValue(filtreyeCevir(txtBarkodu.Text)), BinaryOperatorType.Like);
-                }
-            }
-        }
-        private void txtStokAdi_KeyDown(object sender, KeyEventArgs e)
+        //        throw;
+        //    }
+        //}
+        //private void txtBarkodu_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    try
+        //    {
+        //        Sorgula();
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        throw;
+        //    }
+        //}
+        void Sorgula()
         {
-            if (e.KeyData == Keys.Enter)
+            var pred = PredicateBuilder.True<Entities.Tables.Stok>();
+
+            if (!string.IsNullOrEmpty(txtStokKodu.Text))
             {
-                if (txtStokAdi.Text != "")
+                pred = pred.And(x => x.StokKodu.Contains(txtStokKodu.Text));
+            }
+            if (!string.IsNullOrEmpty(txtAramaMetni.Text))
+            {
+                pred = pred.And(x => x.StokAdi.Contains(txtAramaMetni.Text));
+            }
+            if (!string.IsNullOrEmpty(txtBarkodu.Text))
+            {
+                pred = pred.And(x => x.Barkodu.Contains(txtBarkodu.Text));
+            }
+            if (!string.IsNullOrEmpty(txtAramaMetni.Text))
+            {
+                foreach (string item in txtAramaMetni.Text.Split(' '))
                 {
-                    gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokAdi"), new OperandValue(filtreyeCevir(txtStokAdi.Text)), BinaryOperatorType.Like);
+                    if (!string.IsNullOrEmpty(item))
+                        pred = pred.And(x => x.StokAdi.Contains(item) || x.Barkodu.Contains(item) || x.StokKodu.Contains(item));
                 }
+
             }
+            gridControl1.DataSource = stokDal.StokAdiylaStokGetir(context, pred);
+
+            gridControl1.ForceInitialize();
+            gridControl1.Select();
+
         }
-        private void txtStokKodu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
-            if (txtStokKodu.Text != "")
-            {
-                gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokKodu"), new OperandValue(filtreyeCevir(txtStokKodu.Text)), BinaryOperatorType.Like);
-            }
-        }
-        private void txtStokAdi_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
-            if (txtStokAdi.Text != "")
-            {
-                gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("StokAdi"), new OperandValue(filtreyeCevir(txtStokAdi.Text)), BinaryOperatorType.Like);
-            }
-        }
-        private void txtBarkodu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
-            if (txtBarkodu.Text != "")
-            {
-                gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("Barkodu"), new OperandValue(filtreyeCevir(txtBarkodu.Text)), BinaryOperatorType.Like);
-            }
-        }
+        //private void txtStokAdi_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.KeyData == Keys.Enter)
+        //    {
+        //        try
+        //        {
+        //            Sorgula();
+        //        }
+        //        catch (Exception)
+        //        {
+
+        //            throw;
+        //        }
+        //    }
+        //}
+        //private void txtStokKodu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        //{
+        //    try
+        //    {
+        //        Sorgula();
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        throw;
+        //    }
+
+        //}
+        //private void txtStokAdi_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        //{
+        //    try
+        //    {
+        //        Sorgula();
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        throw;
+        //    }
+        //}
+        //private void txtBarkodu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        //{
+        //    try
+        //    {
+        //        Sorgula();
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        throw;
+        //    }
+        //}
         private void btnStokDuzenle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
@@ -391,6 +440,20 @@ namespace NetSatis.BackOffice.Stok
             {
                 throw;
             }
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            txtAramaMetni.Text =
+                txtBarkodu.Text=
+                         txtStokKodu.Text = null;
+
+            txtAramaMetni.Focus();
+        }
+
+        private void btnSorgula_Click(object sender, EventArgs e)
+        {
+            Sorgula();
         }
     }
 }

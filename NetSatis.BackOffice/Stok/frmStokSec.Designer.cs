@@ -570,6 +570,7 @@
             this.txtStokKodu.Size = new System.Drawing.Size(218, 20);
             this.txtStokKodu.StyleController = this.layoutControl1;
             this.txtStokKodu.TabIndex = 0;
+            this.txtStokKodu.Visible = false;
             this.txtStokKodu.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtFilterClear);
             // 
             // layoutControl1
@@ -628,6 +629,7 @@
             this.txtStokAdi.Size = new System.Drawing.Size(218, 20);
             this.txtStokAdi.StyleController = this.layoutControl1;
             this.txtStokAdi.TabIndex = 0;
+            this.txtStokAdi.Visible = false;
             this.txtStokAdi.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtFilterClear);
             // 
             // txtAramaMetni
@@ -693,6 +695,7 @@
             this.layoutControlItem3.Text = "Stok Kodu";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(73, 16);
+            this.layoutControlItem3.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem2
             // 
@@ -706,6 +709,7 @@
             this.layoutControlItem2.Text = "Stok Adı";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(73, 16);
+            this.layoutControlItem2.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // emptySpaceItem1
             // 
