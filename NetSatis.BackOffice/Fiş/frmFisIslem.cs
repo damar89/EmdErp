@@ -3109,6 +3109,7 @@ namespace NetSatis.BackOffice.Fiş
                 row.Bagkur = s.Bagkur;
                 row.Barkod = s.Barkod;
                 row.BirimFiyati = s.BirimFiyati;
+                row.SatisFiyati = s.SatisFiyati;
                 row.Borsa = s.Borsa;
                 row.Depo = s.Depo;
                 row.DepoId = s.Depo != null ? s.DepoId : 0;

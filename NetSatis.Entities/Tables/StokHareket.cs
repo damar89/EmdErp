@@ -57,14 +57,11 @@ namespace NetSatis.Entities.Tables
         public decimal? KarOrani
         {
             get {
-                if (Stok == null || !SatisFiyati.HasValue || !BirimFiyati.HasValue || BirimFiyati.Value == 0)
-                    return 0;
-                decimal k = 0, y = 0;
-                k = (SatisFiyati.Value * 100) / BirimFiyati.Value;
+                if (!BirimFiyati.HasValue || BirimFiyati.Value == 0)
+                    return SatisFiyati.Value * 100;
 
-
-
-                return k-100;
+                var res = (SatisFiyati.Value * 100) / BirimFiyati.Value;
+                return res - 100;
             }
         }
         public int SaveUser { get; set; }
