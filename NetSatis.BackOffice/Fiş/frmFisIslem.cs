@@ -1390,6 +1390,7 @@ namespace NetSatis.BackOffice.Fiş
                     stokVeri.Hareket = ayarlar.StokHareketi;
                     stokVeri.FisTuru = ayarlar.FisTurleri;
                     toplamDipIskontoPayi += Convert.ToDecimal(stokVeri.DipIskontoPayi);
+
                     if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_AlisFiyat))) {
                         if (_fisentity.FisTuru == "Alış Faturası" || _fisentity.FisTuru == "Alış İrsaliyesi") {
                             stokVeri.Stok.AlisFiyati1 = stokVeri.BirimFiyati;
