@@ -21,6 +21,7 @@ namespace NetSatis.Entities.Mapping
             this.Property(p => p.StokIrsaliye).HasMaxLength(120);
             this.Property(p => p.Miktar).HasPrecision(12, 2);
             this.Property(p => p.BirimFiyati).HasPrecision(12, 2);
+            this.Property(p => p.SatisFiyati).HasPrecision(12, 2);
             this.Property(p => p.IndirimOrani).HasPrecision(5, 2);
             this.Property(p => p.IndirimOrani2).HasPrecision(5, 2);
             this.Property(p => p.IndirimOrani3).HasPrecision(5, 2);
@@ -56,6 +57,7 @@ namespace NetSatis.Entities.Mapping
             this.Property(p => p.Bagkur).HasColumnName("Bagkur");
 
             this.Property(p => p.BirimFiyati).HasColumnName("BirimFiyati");
+            this.Property(p => p.SatisFiyati).HasColumnName("SatisFiyati");
             this.Property(p => p.IndirimOrani).HasColumnName("IndirimOrani");
             this.Property(p => p.IndirimOrani2).HasColumnName("IndirimOrani2");
             this.Property(p => p.IndirimOrani3).HasColumnName("IndirimOrani3");

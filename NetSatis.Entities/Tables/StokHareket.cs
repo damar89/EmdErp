@@ -29,6 +29,7 @@ namespace NetSatis.Entities.Tables
         public decimal? Zirai { get; set; } = 0;
         public decimal? Mera { get; set; } = 0;
         public decimal? BirimFiyati { get; set; } = 0;
+        public decimal? SatisFiyati { get; set; } = 0;
         public decimal? IndirimOrani { get; set; } = 0;
         public decimal? IndirimOrani2 { get; set; } = 0;
         public decimal? IndirimOrani3 { get; set; } = 0;
@@ -56,10 +57,10 @@ namespace NetSatis.Entities.Tables
         public decimal? KarOrani
         {
             get {
-                if (Stok == null || !Stok.SatisFiyati1.HasValue || !BirimFiyati.HasValue || BirimFiyati.Value == 0)
+                if (Stok == null || !SatisFiyati.HasValue || !BirimFiyati.HasValue || BirimFiyati.Value == 0)
                     return 0;
                 decimal k = 0, y = 0;
-                k = (Stok.SatisFiyati1.Value * 100) / BirimFiyati.Value;
+                k = (SatisFiyati.Value * 100) / BirimFiyati.Value;
 
 
 
