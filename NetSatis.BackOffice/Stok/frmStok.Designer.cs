@@ -209,9 +209,9 @@
             // btnTemizle
             // 
             this.btnTemizle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnTemizle.ImageOptions.SvgImage")));
-            this.btnTemizle.Location = new System.Drawing.Point(146, 28);
+            this.btnTemizle.Location = new System.Drawing.Point(146, 30);
             this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(90, 38);
+            this.btnTemizle.Size = new System.Drawing.Size(90, 36);
             this.btnTemizle.StyleController = this.layoutControl1;
             this.btnTemizle.TabIndex = 8;
             this.btnTemizle.Text = "Temizle";
@@ -220,9 +220,9 @@
             // btnSorgula
             // 
             this.btnSorgula.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSorgula.ImageOptions.SvgImage")));
-            this.btnSorgula.Location = new System.Drawing.Point(9, 28);
+            this.btnSorgula.Location = new System.Drawing.Point(9, 30);
             this.btnSorgula.Name = "btnSorgula";
-            this.btnSorgula.Size = new System.Drawing.Size(133, 38);
+            this.btnSorgula.Size = new System.Drawing.Size(133, 36);
             this.btnSorgula.StyleController = this.layoutControl1;
             this.btnSorgula.TabIndex = 7;
             this.btnSorgula.Text = "Bul (F4)";
@@ -234,7 +234,7 @@
             this.gridControl1.Location = new System.Drawing.Point(245, 4);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(944, 612);
+            this.gridControl1.Size = new System.Drawing.Size(944, 610);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -507,7 +507,7 @@
             // 
             // txtBarkodu
             // 
-            this.txtBarkodu.Location = new System.Drawing.Point(9, 177);
+            this.txtBarkodu.Location = new System.Drawing.Point(9, 178);
             this.txtBarkodu.Name = "txtBarkodu";
             this.txtBarkodu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBarkodu.Properties.Appearance.Options.UseFont = true;
@@ -546,7 +546,7 @@
             editorButtonImageOptions2.ImageList = this.ımageList2;
             this.txtStokKodu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.txtStokKodu.Size = new System.Drawing.Size(227, 26);
+            this.txtStokKodu.Size = new System.Drawing.Size(227, 27);
             this.txtStokKodu.StyleController = this.layoutControl1;
             this.txtStokKodu.TabIndex = 0;
             this.txtStokKodu.Visible = false;
@@ -792,13 +792,13 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(241, 616);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(241, 614);
             this.layoutControlGroup1.Text = "Stok Arama";
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.txtAramaMetni;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 42);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 40);
             this.layoutControlItem1.MaxSize = new System.Drawing.Size(231, 45);
             this.layoutControlItem1.MinSize = new System.Drawing.Size(231, 45);
             this.layoutControlItem1.Name = "layoutControlItem1";
@@ -811,32 +811,30 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txtStokKodu;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 87);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 85);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(231, 46);
+            this.layoutControlItem2.Size = new System.Drawing.Size(231, 47);
             this.layoutControlItem2.Text = "Stok Kodu Giriniz";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(112, 13);
-            this.layoutControlItem2.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txtBarkodu;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 133);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 132);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(231, 45);
             this.layoutControlItem3.Text = "Stok Barkodu Okutunuz";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(112, 13);
-            this.layoutControlItem3.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 178);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 177);
             this.emptySpaceItem2.MinSize = new System.Drawing.Size(104, 24);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(231, 409);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(231, 406);
             this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -845,7 +843,7 @@
             this.layoutControlItem13.Control = this.btnSorgula;
             this.layoutControlItem13.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(137, 42);
+            this.layoutControlItem13.Size = new System.Drawing.Size(137, 40);
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextVisible = false;
             // 
@@ -855,7 +853,7 @@
             this.layoutControlItem12.Location = new System.Drawing.Point(137, 0);
             this.layoutControlItem12.MinSize = new System.Drawing.Size(80, 26);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(94, 42);
+            this.layoutControlItem12.Size = new System.Drawing.Size(94, 40);
             this.layoutControlItem12.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
@@ -865,7 +863,7 @@
             this.layoutControlItem4.Control = this.gridControl1;
             this.layoutControlItem4.Location = new System.Drawing.Point(241, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(948, 616);
+            this.layoutControlItem4.Size = new System.Drawing.Size(948, 614);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -880,10 +878,10 @@
             this.layoutControlItem9,
             this.layoutControlItem10,
             this.layoutControlItem11});
-            this.layGroupKayitSayisi.Location = new System.Drawing.Point(0, 616);
+            this.layGroupKayitSayisi.Location = new System.Drawing.Point(0, 614);
             this.layGroupKayitSayisi.Name = "layGroupKayitSayisi";
             this.layGroupKayitSayisi.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-            this.layGroupKayitSayisi.Size = new System.Drawing.Size(1189, 73);
+            this.layGroupKayitSayisi.Size = new System.Drawing.Size(1189, 75);
             this.layGroupKayitSayisi.Text = "Listelenen Kayıt Sayısı:";
             // 
             // emptySpaceItem1

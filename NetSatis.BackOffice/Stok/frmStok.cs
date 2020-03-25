@@ -345,6 +345,10 @@ namespace NetSatis.BackOffice.Stok
             {
                 pred = pred.And(x => x.StokAdi.Contains(txtAramaMetni.Text));
             }
+            if (!string.IsNullOrEmpty(txtBarkodu.Text))
+            {
+                pred = pred.And(x => x.Barkodu.Contains(txtBarkodu.Text));
+            }
             if (!string.IsNullOrEmpty(txtAramaMetni.Text))
             {
                 foreach (string item in txtAramaMetni.Text.Split(' '))
@@ -441,6 +445,7 @@ namespace NetSatis.BackOffice.Stok
         private void btnTemizle_Click(object sender, EventArgs e)
         {
             txtAramaMetni.Text =
+                txtBarkodu.Text=
                          txtStokKodu.Text = null;
 
             txtAramaMetni.Focus();

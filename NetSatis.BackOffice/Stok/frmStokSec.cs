@@ -70,7 +70,7 @@ namespace NetSatis.BackOffice.Stok
                 foreach (var row in gridStoklar.GetSelectedRows())
                 {
                     string stokKodu = gridStoklar.GetRowCellValue(row, colStokKodu).ToString();
-                    secilen.Add(context.Stoklar.SingleOrDefault(c => c.StokKodu == stokKodu));
+                    secilen.Add(context.Stoklar.FirstOrDefault(c => c.StokKodu == stokKodu));
                 }
 
                 secildi = true;
@@ -133,7 +133,6 @@ namespace NetSatis.BackOffice.Stok
 
             if (e.KeyCode == Keys.F4)
                 Sorgula();
-
             if (e.KeyCode == Keys.F5)
                 btnTemizle.PerformClick();
         }
@@ -145,7 +144,7 @@ namespace NetSatis.BackOffice.Stok
                 foreach (var row in gridStoklar.GetSelectedRows())
                 {
                     string stokKodu = gridStoklar.GetRowCellValue(row, colStokKodu).ToString();
-                    secilen.Add(context.Stoklar.SingleOrDefault(c => c.StokKodu == stokKodu));
+                    secilen.Add(context.Stoklar.FirstOrDefault(c => c.StokKodu == stokKodu));
                 }
 
                 secildi = true;
