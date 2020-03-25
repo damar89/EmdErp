@@ -234,12 +234,6 @@ namespace NetSatis.BackOffice.Stok
             }
         }
 
-        private void frmStokSec_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (Directory.Exists($@"{Application.StartupPath}\Gorunum"))
-                gridContStoklar.MainView.SaveLayoutToXml(DosyaYolu);
-        }
-
         private void gridStoklar_RowCountChanged(object sender, EventArgs e)
         {
             int kayitsayisi; // kayıt sayısını tutacak değişkenimiz
@@ -315,5 +309,10 @@ namespace NetSatis.BackOffice.Stok
             }
         }
 
+        private void btnDizaynKaydet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (Directory.Exists($@"{Application.StartupPath}\Gorunum"))
+                gridContStoklar.MainView.SaveLayoutToXml(DosyaYolu);
+        }
     }
 }

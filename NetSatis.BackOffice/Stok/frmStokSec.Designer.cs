@@ -88,6 +88,7 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.btnDizaynKaydet = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridContStoklar)).BeginInit();
@@ -455,7 +456,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnDuzenle),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnGuncelle),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketler),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnStokEkle)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnStokEkle),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDizaynKaydet)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
@@ -517,8 +519,9 @@
             this.btnDuzenle,
             this.btnGuncelle,
             this.btnHareketler,
-            this.btnGorunumSakla});
-            this.barManager1.MaxItemId = 7;
+            this.btnGorunumSakla,
+            this.btnDizaynKaydet});
+            this.barManager1.MaxItemId = 8;
             // 
             // barDockControlTop
             // 
@@ -593,9 +596,9 @@
             // btnTemizle
             // 
             this.btnTemizle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTemizle.ImageOptions.Image")));
-            this.btnTemizle.Location = new System.Drawing.Point(184, 27);
+            this.btnTemizle.Location = new System.Drawing.Point(184, 29);
             this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(40, 38);
+            this.btnTemizle.Size = new System.Drawing.Size(40, 36);
             this.btnTemizle.StyleController = this.layoutControl1;
             this.btnTemizle.TabIndex = 7;
             this.btnTemizle.ToolTip = "F5";
@@ -606,9 +609,9 @@
             this.btnSorgula.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btnSorgula.Appearance.Options.UseFont = true;
             this.btnSorgula.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSorgula.ImageOptions.Image")));
-            this.btnSorgula.Location = new System.Drawing.Point(8, 27);
+            this.btnSorgula.Location = new System.Drawing.Point(8, 29);
             this.btnSorgula.Name = "btnSorgula";
-            this.btnSorgula.Size = new System.Drawing.Size(172, 38);
+            this.btnSorgula.Size = new System.Drawing.Size(172, 36);
             this.btnSorgula.StyleController = this.layoutControl1;
             this.btnSorgula.TabIndex = 6;
             this.btnSorgula.Text = "Bul (F4)";
@@ -688,7 +691,7 @@
             this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
             this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem3.Control = this.txtStokKodu;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 120);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 118);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 0, 0, 0);
             this.layoutControlItem3.Size = new System.Drawing.Size(220, 39);
@@ -702,7 +705,7 @@
             this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
             this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem2.Control = this.txtStokAdi;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 81);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 79);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 0, 0, 0);
             this.layoutControlItem2.Size = new System.Drawing.Size(220, 39);
@@ -716,7 +719,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
             this.emptySpaceItem1.AppearanceItemCaption.Options.UseFont = true;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 159);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 157);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 0, 0, 0);
             this.emptySpaceItem1.Size = new System.Drawing.Size(220, 390);
@@ -727,7 +730,7 @@
             this.layoutControlItem5.Control = this.btnSorgula;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(176, 42);
+            this.layoutControlItem5.Size = new System.Drawing.Size(176, 40);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -736,7 +739,7 @@
             this.layoutControlItem6.Control = this.btnTemizle;
             this.layoutControlItem6.Location = new System.Drawing.Point(176, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(44, 42);
+            this.layoutControlItem6.Size = new System.Drawing.Size(44, 40);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -745,7 +748,7 @@
             this.layoutControlItem7.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
             this.layoutControlItem7.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem7.Control = this.txtAramaMetni;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 42);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 40);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 0, 0, 0);
             this.layoutControlItem7.Size = new System.Drawing.Size(220, 39);
@@ -761,6 +764,13 @@
             this.layoutControlItem4.Size = new System.Drawing.Size(1100, 64);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
+            // 
+            // btnDizaynKaydet
+            // 
+            this.btnDizaynKaydet.Caption = "Dizaynı Kaydet";
+            this.btnDizaynKaydet.Id = 7;
+            this.btnDizaynKaydet.Name = "btnDizaynKaydet";
+            this.btnDizaynKaydet.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDizaynKaydet_ItemClick);
             // 
             // frmStokSec
             // 
@@ -779,7 +789,6 @@
             this.Name = "frmStokSec";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stok Seç";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmStokSec_FormClosing);
             this.Load += new System.EventHandler(this.frmStokSec_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmStokSec_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -870,5 +879,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraEditors.ButtonEdit txtAramaMetni;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraBars.BarButtonItem btnDizaynKaydet;
     }
 }
