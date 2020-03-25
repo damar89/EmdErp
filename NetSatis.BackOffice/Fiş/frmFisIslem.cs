@@ -1399,27 +1399,6 @@ namespace NetSatis.BackOffice.Fiş
                         }
                     }
 
-                    //for (int i = 0; i < gridStokHareket.RowCount; i++)
-                    //{
-                    //    string stokkodu = gridStokHareket.GetRowCellValue(i, "Stok.StokKodu").ToString();
-                    //    string stokAdi = gridStokHareket.GetRowCellValue(i, "Stok.StokAdi").ToString();
-                    //    if (stokVeri.Stok.StokKodu.Equals(stokkodu) && stokVeri.Stok.StokAdi.Equals(stokAdi))
-                    //    {
-                    //        stokVeri.ToplamTutar =
-                    //            Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar").ToString());
-                    //        stokVeri.KdvToplam =
-                    //            Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString());
-                    //        stokVeri.KdvHaric_ =
-                    //            Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "colKsizTutar"));
-                    //        stokVeri.IndirimTutar =
-                    //            Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimTutar").ToString());
-                    //        // Stok harekete yazmak
-                    //        //stokVeri.IndirimTutar2 =
-                    //        //    Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimTutar2").ToString());
-                    //        //stokVeri.IndirimTutar3 =
-                    //        //    Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "IndirimTutar3").ToString());
-                    //    }
-                    //}
                 }
 
 
@@ -1490,9 +1469,7 @@ namespace NetSatis.BackOffice.Fiş
                 if (!result) {
                     return;
                 }
-                foreach (var item in context.StokHareketleri.Local) {
-                    context.Entry(item.Stok).State = EntityState.Unchanged;
-                }
+                
                 context.SaveChanges();
 
                 FaturaOlustur();
@@ -2856,6 +2833,13 @@ namespace NetSatis.BackOffice.Fiş
             }
         }
 
+        private void repobtnStokSec_Leave(object sender, EventArgs e)
+        {
+            if (gridStokHareket.ActiveEditor == null)
+                return;
+            if (gridStokHareket.ActiveEditor.EditValue != gridStokHareket.ActiveEditor.OldEditValue)
+                gridStokHareket.ActiveEditor.EditValue = gridStokHareket.ActiveEditor.OldEditValue;
+        }
 
         private void gridStokHareket_KeyDown(object sender, KeyEventArgs e)
         {

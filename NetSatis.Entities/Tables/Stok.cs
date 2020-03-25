@@ -39,16 +39,6 @@ namespace NetSatis.Entities.Tables
         public decimal? AlisFiyati1 { get; set; }
         public decimal? AlisFiyati2 { get; set; }
         public decimal? AlisFiyati3 { get; set; }
-        [NotMapped]
-        public decimal? KarOrani
-        {
-            get
-            {
-                decimal r = 0;
-                r = SatisFiyati1.Value * 100 / AlisFiyati1.Value;
-                return 0;
-            }
-        }
         public decimal? SatisFiyati1 { get; set; }
         public decimal? SatisFiyati2 { get; set; }
         public decimal? SatisFiyati3 { get; set; }
