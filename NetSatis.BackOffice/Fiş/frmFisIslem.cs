@@ -75,10 +75,16 @@ namespace NetSatis.BackOffice.Fiş
 
             Yukle(fisKodu, fisTuru, cariGetir, entity, userId);
             gridStokHareket.SelectCell(GridControl.NewItemRowHandle, gridStokHareket.Columns["StokAdi"]);
-            if (txtFisTuru.Text != "Alış Faturası" && txtFisTuru.Text != "Alış İrsaliyesi")
-            {
-                colKarOrani.AppearanceCell.ForeColor = Color.White;
-                colSatisFiyat.OptionsColumn.AllowEdit = false;
+            if (txtFisTuru.Text == "Alış Faturası" || txtFisTuru.Text == "Alış İrsaliyesi") {
+                colSatisFiyat.Visible =
+                colSatisFiyat.OptionsColumn.AllowShowHide =
+                colKarOrani.Visible =
+                colKarOrani.OptionsColumn.AllowShowHide = true;
+            } else {
+                colSatisFiyat.Visible =
+                colSatisFiyat.OptionsColumn.AllowShowHide =
+                colKarOrani.Visible =
+                colKarOrani.OptionsColumn.AllowShowHide = false;
             }
 
         }
@@ -92,29 +98,24 @@ namespace NetSatis.BackOffice.Fiş
             Entities.Tables.Cari entity = null, int userId = 0)
         {
             frontOfficeUserId = userId;
-            if (fisKodu != null)
-            {
+            if (fisKodu != null) {
                 duzenle = true;
             }
             kodOlustur = new CodeTool(this, CodeTool.Table.Fis);
             kodOlustur.BarButonOlustur();
             cmbTarih.Properties.Mask.MaskType = MaskType.DateTimeAdvancingCaret;
             cmbVadeTarihi.Properties.Mask.MaskType = MaskType.DateTimeAdvancingCaret;
-            if (fisKodu != null)
-            {
+            if (fisKodu != null) {
                 _fisentity = context.Fisler.Where(c => c.FisKodu == fisKodu).SingleOrDefault();
                 context.KasaHareketleri.Where(c => c.FisKodu == fisKodu).Load();
                 context.PersonelHareketleri.Where(c => c.FisKodu == fisKodu).Load();
                 toggleCariDevir.IsOn =
                     context.KasaHareketleri.Count(c => c.FisKodu == fisKodu && c.Hareket == "Kasa Giriş") == 0;
-            }
-            else
-            {
+            } else {
                 _fisentity = new Fis();
             }
 
-            if (_fisentity.CariId != null)
-            {
+            if (_fisentity.CariId != null) {
                 lblCariAd.Text = _fisentity.Cari.CariAdi;
                 lblCariKod.Text = _fisentity.Cari.CariKodu;
                 txtFaturaUnvani.Text = _fisentity.Cari.FaturaUnvani;
@@ -122,9 +123,7 @@ namespace NetSatis.BackOffice.Fiş
                 lblAlacak.Text = entityBakiye.Alacak.ToString("C2");
                 lblBorc.Text = entityBakiye.Borc.ToString("C2");
                 lblBakiye.Text = entityBakiye.Bakiye.ToString("C2");
-            }
-            else
-            {
+            } else {
                 _fisentity.FisTuru = fisTuru;
 
                 _fisentity.Tarih = DateTime.Now;
@@ -137,23 +136,18 @@ namespace NetSatis.BackOffice.Fiş
                 fisTuru == "Satış İrsaliyesi" || fisTuru == "Alış İrsaliyesi" || fisTuru == "Alınan Sipariş Fişi" ||
                 fisTuru == "Verilen Sipariş Fişi" || fisTuru == "Alınan Teklif Fişi" ||
                 fisTuru == "Verilen Teklif Fişi" || fisTuru == "Sayım Fazlası Fişi" || fisTuru == "Sayım Eksiği Fişi" ||
-                fisTuru == "Stok Devir Fişi" || fisTuru == null)
-            {
-                if (fisKodu != null)
-                {
+                fisTuru == "Stok Devir Fişi" || fisTuru == null) {
+                if (fisKodu != null) {
                     context.StokHareketleri.Where(c => c.FisKodu == fisKodu).Load();
                 }
                 context.Depolar.Load();
                 context.Kasalar.Load();
-            }
-            else
-            {
+            } else {
                 context.Kasalar.Load();
                 context.Depolar.Load();
             }
             //cari getirme alanı
-            if (cariGetir)
-            {
+            if (cariGetir) {
                 entityBakiye = this.cariDal.cariBakiyesi(context, entity.Id);
                 _cariId = entity.Id;
                 _fisentity.CariId = entity.Id;
@@ -203,16 +197,14 @@ namespace NetSatis.BackOffice.Fiş
                 DataSourceUpdateMode.OnPropertyChanged);
             toggleKDVDahil.DataBindings.Add("EditValue", _fisentity, "KDVDahil", false,
                 DataSourceUpdateMode.OnPropertyChanged);
-            if (!duzenle)
-            {
+            if (!duzenle) {
                 var kod = context.Kodlar.Where(c => c.Tablo == "fis").First();
                 _fisentity.FisKodu = CodeTool.fiskodolustur(kod.OnEki, kod.SonDeger.ToString());
             }
             calcIndirimOrani.EditValue = _fisentity.DipIskOran;
             calcIndirimTutari.EditValue = _fisentity.DipIskTutari;
             cmbAy.Month = DateTime.Now.Month;
-            for (int i = DateTime.Now.Year - 2; i <= DateTime.Now.Year + 2; i++)
-            {
+            for (int i = DateTime.Now.Year - 2; i <= DateTime.Now.Year + 2; i++) {
                 cmbYil.Properties.Items.Add(i);
             }
             cmbYil.Text = DateTime.Now.Year.ToString();
@@ -223,13 +215,11 @@ namespace NetSatis.BackOffice.Fiş
             FisAyar();
             HepsiniHesapla().GetAwaiter();
 
-            if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi)))
-            {
+            if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi))) {
                 //lblmuhtahsil.Visible = true;
                 toggleMuhtasilmi.Visible = true;
             }
-            if (_fisentity.FisTuru == "Toptan Satış Faturası" || _fisentity.FisTuru == "Stok Devir Fişi" || _fisentity.FisTuru == "Sayım Fazlası Fişi" || _fisentity.FisTuru == "Sayım Eksiği Fişi" || _fisentity.FisTuru == "Alış Faturası")
-            {
+            if (_fisentity.FisTuru == "Toptan Satış Faturası" || _fisentity.FisTuru == "Stok Devir Fişi" || _fisentity.FisTuru == "Sayım Fazlası Fişi" || _fisentity.FisTuru == "Sayım Eksiği Fişi" || _fisentity.FisTuru == "Alış Faturası") {
                 gridContStokHareket.ForceInitialize();
                 if (File.Exists(DosyaYolu)) gridContStokHareket.MainView.RestoreLayoutFromXml(DosyaYolu);
             }
@@ -241,8 +231,7 @@ namespace NetSatis.BackOffice.Fiş
 
             cmbTipi.Properties.Items.AddRange(eislem.HareketTipiListele().Select(x => x.Aciklama).ToList());
             var a = SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_VarsayilanHareketTipi);
-            if (a != null)
-            {
+            if (a != null) {
                 cmbTipi.SelectedItem = a;
             }
 
@@ -254,10 +243,8 @@ namespace NetSatis.BackOffice.Fiş
         //personel ve ödeme türü eklemek için buton oluşturma
         private void ButonlariYukle()
         {
-            foreach (var item in context.OdemeTurleri.AsNoTracking().ToList())
-            {
-                var buton = new SimpleButton
-                {
+            foreach (var item in context.OdemeTurleri.AsNoTracking().ToList()) {
+                var buton = new SimpleButton {
                     Name = item.OdemeTuruKodu,
                     Tag = item.Id,
                     Text = item.OdemeTuruAdi,
@@ -267,8 +254,7 @@ namespace NetSatis.BackOffice.Fiş
                 buton.Click += OdemeEkle_Click;
                 flowOdemeTurleri.Controls.Add(buton);
             }
-            var PersonelSecimIptal = new CheckButton
-            {
+            var PersonelSecimIptal = new CheckButton {
                 Name = "Yok",
                 Text = "Yok",
                 GroupIndex = 1,
@@ -278,10 +264,8 @@ namespace NetSatis.BackOffice.Fiş
             };
             PersonelSecimIptal.Click += PersonelYukle_Click;
             flowPersonel.Controls.Add(PersonelSecimIptal);
-            foreach (var item in context.Personeller.ToList())
-            {
-                var buton = new CheckButton
-                {
+            foreach (var item in context.Personeller.ToList()) {
+                var buton = new CheckButton {
                     Name = item.PersonelKodu,
                     Text = item.PersonelAdi,
                     GroupIndex = 1,
@@ -296,12 +280,9 @@ namespace NetSatis.BackOffice.Fiş
         private void PersonelYukle_Click(object sender, EventArgs e)
         {
             var buton = sender as CheckButton;
-            if (buton.Name == "Yok")
-            {
+            if (buton.Name == "Yok") {
                 _fisentity.PlasiyerId = null;
-            }
-            else
-            {
+            } else {
                 _fisentity.PlasiyerId = Convert.ToInt32(buton.Name);
             }
         }
@@ -318,53 +299,37 @@ namespace NetSatis.BackOffice.Fiş
             //    }
             //    else
             //    {
-            if (ayarlar.SatisEkrani == false && txtFisTuru.Text != "Hakediş Fişi" && txtFisTuru.Text != "Masraf Fişi")
-            {
+            if (ayarlar.SatisEkrani == false && txtFisTuru.Text != "Hakediş Fişi" && txtFisTuru.Text != "Masraf Fişi") {
 
                 frmOdemeEkrani form = new frmOdemeEkrani(Convert.ToInt32(buton.Tag), null, frontOfficeUserId);
                 form.ShowDialog();
-                if (form.entity != null)
-                {
+                if (form.entity != null) {
                     kasaHareketDal.AddOrUpdate(context, form.entity);
                     OdenenTutarGuncelle();
                 }
-            }
-            else if (txtFisTuru.Text == "Masraf Fişi")
-            {
+            } else if (txtFisTuru.Text == "Masraf Fişi") {
                 frmMasrafEkrani form = new frmMasrafEkrani(Convert.ToInt32(buton.Tag));
                 form.ShowDialog();
-                if (form.entity != null)
-                {
+                if (form.entity != null) {
                     kasaHareketDal.AddOrUpdate(context, form.entity);
                     OdenenTutarGuncelle();
                 }
-            }
-            else
-            {
-                if (calcOdenemesiGereken.Value <= 0)
-                {
+            } else {
+                if (calcOdenemesiGereken.Value <= 0) {
                     MessageBox.Show("Ödenemsi Gereken Tutar Ödenmemiş Durumdadır.");
-                }
-                else
-                {
-                    if (txtFisTuru.Text != "Hakediş Fişi")
-                    {
+                } else {
+                    if (txtFisTuru.Text != "Hakediş Fişi") {
                         int userId = 0;
-                        if (frontOfficeUserId != 0)
-                        {
+                        if (frontOfficeUserId != 0) {
                             userId = frontOfficeUserId;
-                        }
-                        else
-                        {
+                        } else {
                             userId = frmAnaMenu.UserId;
                         }
                         int kasaid = Convert.ToInt32(context.Kullanicilar.Where(x => x.Id == userId).AsNoTracking().FirstOrDefault().KasaId);
-                        if (kasaid == 0)
-                        {
+                        if (kasaid == 0) {
                             kasaid = 1;
                         }
-                        KasaHareket entityKasaHareket = new KasaHareket
-                        {
+                        KasaHareket entityKasaHareket = new KasaHareket {
                             OdemeTuruId = Convert.ToInt32(buton.Tag),
                             KasaId = kasaid,
                             Tarih = Convert.ToDateTime(cmbTarih.DateTime),
@@ -372,13 +337,9 @@ namespace NetSatis.BackOffice.Fiş
                         };
                         kasaHareketDal.AddOrUpdate(context, entityKasaHareket);
                         OdenenTutarGuncelle();
-                    }
-                    else
-                    {
-                        for (int i = 0; i < gridPrsonelHareket.RowCount; i++)
-                        {
-                            KasaHareket entityKasaHareket = new KasaHareket
-                            {
+                    } else {
+                        for (int i = 0; i < gridPrsonelHareket.RowCount; i++) {
+                            KasaHareket entityKasaHareket = new KasaHareket {
                                 //kontrol edilecek
                                 CariId = _cariId,
                                 OdemeTuruId = Convert.ToInt32(buton.Tag),
@@ -395,8 +356,7 @@ namespace NetSatis.BackOffice.Fiş
         }
         private void FisAyar()
         {
-            switch (_fisentity.FisTuru)
-            {
+            switch (_fisentity.FisTuru) {
                 case "Alış Faturası":
                     ayarlar.StokHareketi = "Stok Giriş";
                     ayarlar.FisTurleri = "Alış Faturası";
@@ -438,12 +398,9 @@ namespace NetSatis.BackOffice.Fiş
                     btnSiparisYazdir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
                     lblSatir.Visible = true;
                     lblSatirSayisi.Visible = true;
-                    if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi)))
-                    {
+                    if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi))) {
                         btnMuhtahsil.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
-                    }
-                    else
-                    {
+                    } else {
                         btnMuhtahsil.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
                     }
                     siparişYazdırToolStripMenuItem.Visible = false;
@@ -889,13 +846,10 @@ namespace NetSatis.BackOffice.Fiş
         private void OdenenTutarGuncelle()
         {
             gridKasaHareket.UpdateSummary();
-            if (frontOfficeUserId != 0 || ayarlar.SatisEkrani || _fisentity.FisTuru == "Hakediş Fişi")
-            {
+            if (frontOfficeUserId != 0 || ayarlar.SatisEkrani || _fisentity.FisTuru == "Hakediş Fişi") {
                 calcOdenenTutar.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
                 calcOdenemesiGereken.Value = calcGenelToplam.Value - calcOdenenTutar.Value;
-            }
-            else
-            {
+            } else {
                 calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
             }
         }
@@ -906,33 +860,24 @@ namespace NetSatis.BackOffice.Fiş
 
             stokHareket.Stok = entity;
             stokHareket.StokId = entity.Id;
-            if (_fisentity.FisTuru == "Alış Faturası" || _fisentity.FisTuru == "Alış İade Faturası" || _fisentity.FisTuru == "Alış İrsaliyesi")
-            {
+            if (_fisentity.FisTuru == "Alış Faturası" || _fisentity.FisTuru == "Alış İade Faturası" || _fisentity.FisTuru == "Alış İrsaliyesi") {
                 stokHareket.IndirimOrani = 0;
-            }
-            else
-            {
+            } else {
                 stokHareket.IndirimOrani = indirimDal.StokIndirimi(context, entity.StokKodu);
             }
-            if (_fisentity.CariId != null)
-            {
+            if (_fisentity.CariId != null) {
                 var oran = context.Cariler.FirstOrDefault(x => x.Id == _fisentity.CariId).IskontoOrani;
 
                 stokHareket.IndirimOrani2 =
                     txtFisTuru.Text == "Toptan Satış Faturası" && oran != null ? oran : 0;
-            }
-            else
-            {
+            } else {
                 stokHareket.IndirimOrani2 = 0;
             }
             stokHareket.IndirimOrani3 = 0;
             int depoid = Convert.ToInt32(context.Kullanicilar.FirstOrDefault(x => x.Id == frmAnaMenu.UserId).DepoId);
-            if (depoid == 0)
-            {
+            if (depoid == 0) {
                 //depoid = 1;
-            }
-            else
-            {
+            } else {
                 stokHareket.Depo = context.Depolar.FirstOrDefault(x => x.Id == depoid);
                 stokHareket.DepoId = depoid;
             }
@@ -944,24 +889,15 @@ namespace NetSatis.BackOffice.Fiş
             //}
 
 
-            if (cmbFiyat.SelectedIndex == 0 && txtFisTuru.Text == "Toptan Satış Faturası")
-            {
+            if (cmbFiyat.SelectedIndex == 0 && txtFisTuru.Text == "Toptan Satış Faturası") {
                 stokHareket.BirimFiyati = entity.SatisFiyati1;
-            }
-            else if (cmbFiyat.SelectedIndex == 1 && txtFisTuru.Text == "Toptan Satış Faturası")
-            {
+            } else if (cmbFiyat.SelectedIndex == 1 && txtFisTuru.Text == "Toptan Satış Faturası") {
                 stokHareket.BirimFiyati = entity.SatisFiyati2;
-            }
-            else if (cmbFiyat.SelectedIndex == 2 && txtFisTuru.Text == "Toptan Satış Faturası")
-            {
+            } else if (cmbFiyat.SelectedIndex == 2 && txtFisTuru.Text == "Toptan Satış Faturası") {
                 stokHareket.BirimFiyati = entity.SatisFiyati3;
-            }
-            else if (cmbFiyat.SelectedIndex == 3 && txtFisTuru.Text == "Toptan Satış Faturası")
-            {
+            } else if (cmbFiyat.SelectedIndex == 3 && txtFisTuru.Text == "Toptan Satış Faturası") {
                 stokHareket.BirimFiyati = entity.SatisFiyati4;
-            }
-            else
-            {
+            } else {
                 stokHareket.BirimFiyati = txtFisTuru.Text == "Alış Faturası" || txtFisTuru.Text == "Alış İade Faturası" || txtFisTuru.Text == "Alış İrsaliyesi" || txtFisTuru.Text == "Verilen Sipariş Fişi" || txtFisTuru.Text == "Alınan Teklif Fişi" || txtFisTuru.Text == "Stok Devir Fişi" || txtFisTuru.Text == "Sayım Fazlası Fişi" || txtFisTuru.Text == "Sayım Eksiği Fişi" || txtFisTuru.Text == "Sayım Giriş Fişi" ? entity.AlisFiyati1 : entity.SatisFiyati1;
             }
             if (txtFisTuru.Text == "Alış Faturası" || txtFisTuru.Text == "Alış İrsaliyesi")
@@ -1045,21 +981,16 @@ namespace NetSatis.BackOffice.Fiş
             decimal minAdet = Convert.ToDecimal(entity.MinmumStokMiktari);
             var EksiKontrol = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisStok_EksiyeDusme));
             var MinKontrol = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisStok_MinMiktar));
-            if (entity.MinmumStokMiktari != null && adet == minAdet && MinKontrol)
-            {
+            if (entity.MinmumStokMiktari != null && adet == minAdet && MinKontrol) {
                 //Eğer minimum stok miktarına ulaşmışsa
                 if (StokMinimumKontrolMesaj(
                         "Seçtiğiniz Stok Zaten Minimum Stok Miktarına Ulaşmış. İşleme Devam Etmek İstiyor musunuz?") !=
                     DialogResult.Yes) return true;
-            }
-            else if (adet < 0 && EksiKontrol)
-            {//Eğer stok eksiye düşmüş ise
+            } else if (adet < 0 && EksiKontrol) {//Eğer stok eksiye düşmüş ise
                 if (StokMinimumKontrolMesaj(
                         "Seçtiğiniz Stok Zaten Eksi Miktara Düşmüştür.İşleme Devam Etmek İstiyor musunuz?") !=
                     DialogResult.Yes) return true;
-            }
-            else if (entity.MinmumStokMiktari != null && adet < minAdet && MinKontrol)
-            {
+            } else if (entity.MinmumStokMiktari != null && adet < minAdet && MinKontrol) {
                 //eğer stok minimum stok miktarının altına düşmüş ise
                 if (StokMinimumKontrolMesaj(
                         "Seçtiğiniz Stok Zaten Minimum Stok Miktarının Altındadır. İşleme Devam Etmek İstiyor musunuz?") !=
@@ -1151,8 +1082,7 @@ namespace NetSatis.BackOffice.Fiş
         {
             frmCariSec form = new frmCariSec();
             form.ShowDialog();
-            if (form.secildi)
-            {
+            if (form.secildi) {
                 _entity = form.secilen.FirstOrDefault();
                 entityBakiye = this.cariDal.cariBakiyesi(context, _entity.Id);
                 _cariId = _entity.Id;
@@ -1200,8 +1130,7 @@ namespace NetSatis.BackOffice.Fiş
         {
             frmDepoSec form = new frmDepoSec(Convert.ToInt32(gridStokHareket.GetFocusedRowCellValue(colStokId)));
             form.ShowDialog();
-            if (form.secildi)
-            {
+            if (form.secildi) {
                 gridStokHareket.SetFocusedRowCellValue(colDepoId, form.entity.Id);
                 context.ChangeTracker.DetectChanges();
             }
@@ -1257,8 +1186,7 @@ namespace NetSatis.BackOffice.Fiş
         private async void repoSil_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             if (MessageBox.Show("Seçili Olan Satırı Silmek İstediğinize Emin Misiniz ?", "Uyarı",
-                    MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
+                    MessageBoxButtons.YesNo) == DialogResult.Yes) {
                 gridStokHareket.DeleteSelectedRows();
 
                 await HepsiniHesapla();
@@ -1268,8 +1196,7 @@ namespace NetSatis.BackOffice.Fiş
         {
             frmKasaSec form = new frmKasaSec();
             form.ShowDialog();
-            if (form.secildi)
-            {
+            if (form.secildi) {
                 gridKasaHareket.SetFocusedRowCellValue(colKasaId, form.entity.Id);
                 context.ChangeTracker.DetectChanges();
             }
@@ -1278,8 +1205,7 @@ namespace NetSatis.BackOffice.Fiş
             DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             if (MessageBox.Show("Seçili Olan Satırı Silmek İstediğinize Emin Misiniz ?", "Uyarı",
-                    MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
+                    MessageBoxButtons.YesNo) == DialogResult.Yes) {
                 gridKasaHareket.DeleteSelectedRows();
                 OdenenTutarGuncelle();
             }
@@ -1289,138 +1215,107 @@ namespace NetSatis.BackOffice.Fiş
 
         private void btnSatisBitir_Click(object sender, EventArgs e)
         {
-            try
-            {
+            try {
 
-                if (_fisentity.Tipi == "")
-                {
+                if (_fisentity.Tipi == "") {
                     MessageBox.Show("Lütfen hareket tipi seçiniz.");
                     return;
                 }
 
-                if (duzenle)
-                {
-                    if (_fisentity.Id > 0)
-                    {
-                        if (!String.IsNullOrEmpty(_fisentity.FaturaFisKodu))
-                        {
+                if (duzenle) {
+                    if (_fisentity.Id > 0) {
+                        if (!String.IsNullOrEmpty(_fisentity.FaturaFisKodu)) {
                             MessageBox.Show("Faturalandırılmış irsaliyeler üzerinde değişiklik yapamazsınız.");
                             return;
                         }
                         var temp = context.Fisler.Where(x => x.FaturaFisKodu == _fisentity.FisKodu).ToList();
-                        if (temp.Count != 0)
-                        {
+                        if (temp.Count != 0) {
                             MessageBox.Show("İrsaliyeden faturalandırılmış fatura üzerinde değişiklik yapamazsınız.");
                             return;
                         }
                     }
                 }
 
-                if (_fisentity.FisTuru == "Cari Devir Fişi")
-                {
-                    if (toggleCariDevir.IsOn)
-                    {
+                if (_fisentity.FisTuru == "Cari Devir Fişi") {
+                    if (toggleCariDevir.IsOn) {
                         ayarlar.KasaHareketi = "Kasa Çıkış";
-                    }
-                    else
-                    {
+                    } else {
                         ayarlar.KasaHareketi = "Kasa Giriş";
                     }
                 }
-                if (!Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_CariEtkilesin)))
-                {
+                if (!Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_CariEtkilesin))) {
                     _fisentity.CariIrsaliye = "0";
-                }
-                else
-                {
+                } else {
                     _fisentity.CariIrsaliye = "1";
                 }
-                if (!Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_StoguEtkilesin)))
-                {
+                if (!Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_StoguEtkilesin))) {
                     _fisentity.StokIrsaliye = "0";
-                }
-                else
-                {
+                } else {
                     _fisentity.StokIrsaliye = "1";
                 }
                 string message = null;
                 int hata = 0;
-                if (gridStokHareket.RowCount == 0 && ayarlar.SatisEkrani == true)
-                {
+                if (gridStokHareket.RowCount == 0 && ayarlar.SatisEkrani == true) {
                     message += "- Satış Ekranında eklenmiş bir ürün bulunamadı.." + System.Environment.NewLine;
                     hata++;
                 }
-                if (txtKod.Text == "")
-                {
+                if (txtKod.Text == "") {
                     message += "- Fiş Kodu Alanı Boş Geçilemez." + System.Environment.NewLine;
                     hata++;
                 }
-                if (cmbTipi.Text == "")
-                {
+                if (cmbTipi.Text == "") {
                     message += "- Hareket Tipi Alanı Boş Geçilemez." + System.Environment.NewLine;
                     hata++;
                 }
-                if (txtSira.Text == "" && txtFisTuru.Text == "Alış Faturası" && txtFisTuru.Text == "Alış İade Faturası" && txtFisTuru.Text == "Toptan Satış Faturası" && txtFisTuru.Text == "Satış İade Faturası")
-                {
+                if (txtSira.Text == "" && txtFisTuru.Text == "Alış Faturası" && txtFisTuru.Text == "Alış İade Faturası" && txtFisTuru.Text == "Toptan Satış Faturası" && txtFisTuru.Text == "Satış İade Faturası") {
                     message += "- Sıra No Alanı Boş Geçilemez." + System.Environment.NewLine;
                     hata++;
                 }
-                if (_fisentity.CariId == null && ayarlar.SatisEkrani == false && txtFisTuru.Text != "Hakediş Fişi" && txtFisTuru.Text != "Masraf Fişi")
-                {
+                if (_fisentity.CariId == null && ayarlar.SatisEkrani == false && txtFisTuru.Text != "Hakediş Fişi" && txtFisTuru.Text != "Masraf Fişi") {
                     message += txtFisTuru.Text + " Türünde Cari Seçim Zorunludur. " + System.Environment.NewLine;
                     hata++;
                 }
-                if (gridKasaHareket.RowCount == 0 && ayarlar.SatisEkrani == false && txtFisTuru.Text != "Hakediş Fişi")
-                {
+                if (gridKasaHareket.RowCount == 0 && ayarlar.SatisEkrani == false && txtFisTuru.Text != "Hakediş Fişi") {
                     message += " - Herhangi bir Ödeme Bulunamadı. " + System.Environment.NewLine;
                     hata++;
                 }
                 if (calcOdenemesiGereken.Value != 0 && ayarlar.OdemeEkrani == true &&
-                    string.IsNullOrEmpty(lblCariKod.Text) && txtFisTuru.Text != "Hakediş Fişi")
-                {
+                    string.IsNullOrEmpty(lblCariKod.Text) && txtFisTuru.Text != "Hakediş Fişi") {
                     message +=
                         "- Ödenmesi Gereken Tutar Ödenmemiş Görünüyor.Açık hesap satış yapabilmek için lütfen cari seçiniz." +
                         System.Environment.NewLine;
                     hata++;
                 }
 
-                if (_fisentity.CariId != null && _fisentity.FisTuru == "Toptan Satış Faturası")
-                {
+                if (_fisentity.CariId != null && _fisentity.FisTuru == "Toptan Satış Faturası") {
                     var bakiye = entityBakiye.Bakiye != null ? entityBakiye.Bakiye : 0;
                     var risk = context.Cariler.Where(x => x.Id == _fisentity.CariId).FirstOrDefault().RiskLimiti;
-                    if (risk != null && risk != 0 && Convert.ToDecimal(calcGenelToplam.EditValue) + bakiye > risk)
-                    {
+                    if (risk != null && risk != 0 && Convert.ToDecimal(calcGenelToplam.EditValue) + bakiye > risk) {
 
                         if (MessageBox.Show(
                           $"Risk Limitini astiniz - " + risk + " TL. Devam etmek istiyor musunuz?",
-                          "Uyarı", MessageBoxButtons.YesNo) == DialogResult.No)
-                        {
+                          "Uyarı", MessageBoxButtons.YesNo) == DialogResult.No) {
                             MessageBox.Show("İsteğiniz üzerine işlem iptal edildi.");
                             return;
                         }
                     }
                 }
 
-                if (hata != 0)
-                {
+                if (hata != 0) {
                     MessageBox.Show(message);
                     return;
                 }
 
-                if (calcOdenemesiGereken.Value != 0 && ayarlar.OdemeEkrani == true)
-                {
+                if (calcOdenemesiGereken.Value != 0 && ayarlar.OdemeEkrani == true) {
                     if (MessageBox.Show(
                             $"Ödemenin # {calcOdenemesiGereken.Value.ToString("C2")} # tutarındaki kısmı açık hesap bakiyesi olarak kaydedilecektir. devam etmek istiyor musunuz?",
-                            "Uyarı", MessageBoxButtons.YesNo) == DialogResult.No)
-                    {
+                            "Uyarı", MessageBoxButtons.YesNo) == DialogResult.No) {
                         MessageBox.Show("İsteğiniz üzerine işlem iptal edildi.");
                         return;
                     }
                 }
-                if (!duzenle)
-                {
-                    while (context.Fisler.Where(x => x.FisKodu == txtKod.Text).Count() > 0)
-                    {
+                if (!duzenle) {
+                    while (context.Fisler.Where(x => x.FisKodu == txtKod.Text).Count() > 0) {
                         var firstIndexZero = txtKod.Text.IndexOf('0');
                         var onEk = txtKod.Text.Substring(0, firstIndexZero);
                         var no = Convert.ToInt32(txtKod.Text.Substring(firstIndexZero + 1, txtKod.Text.Length - 1 - firstIndexZero
@@ -1437,30 +1332,23 @@ namespace NetSatis.BackOffice.Fiş
                 sayimfazlasifisi.FisTuru = "Sayım Fazlası Fişi";
                 sayimeksigifisi.FisTuru = "Sayım Eksiği Fişi";
 
-                if (_fisentity.FisTuru == "Sayım Fişi")
-                {
+                if (_fisentity.FisTuru == "Sayım Fişi") {
 
                 }
 
-                foreach (var stokVeri in context.StokHareketleri.Local.ToList())
-                {
-                    if (!Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_StoguEtkilesin)))
-                    {
+                foreach (var stokVeri in context.StokHareketleri.Local.ToList()) {
+                    if (!Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_StoguEtkilesin))) {
                         stokVeri.StokIrsaliye = "0";
-                    }
-                    else
-                    {
+                    } else {
                         stokVeri.StokIrsaliye = "1";
                     }
 
 
-                    if (_fisentity.FisTuru == "Sayım Fişi")
-                    {
+                    if (_fisentity.FisTuru == "Sayım Fişi") {
 
                         var tablo = context.Stoklar.GroupJoin(context.StokHareketleri, c => c.Id, c => c.StokId,
                             (Stoklar, StokHareketleri) =>
-                   new
-                   {
+                   new {
                        Stoklar.StokKodu,
                        StokGiris = StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
                        StokCikis = StokHareketleri.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2") || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
@@ -1476,8 +1364,7 @@ namespace NetSatis.BackOffice.Fiş
                         sh.Depo = stokVeri.Depo;
                         sh.DepoId = stokVeri.DepoId;
 
-                        if (fark > 0)
-                        {
+                        if (fark > 0) {
                             //cikis yapilacak
                             sh.Miktar = fark;
                             sh.Stok = stokVeri.Stok;
@@ -1487,9 +1374,7 @@ namespace NetSatis.BackOffice.Fiş
                             sh.Tarih = cmbTarih.DateTime;
                             sayimfazlasilist.Add(sh);
 
-                        }
-                        else if (fark < 0)
-                        {
+                        } else if (fark < 0) {
                             //giris yapilacak
                             sh.Miktar = fark * -1;
                             sh.Stok = stokVeri.Stok;
@@ -1506,13 +1391,10 @@ namespace NetSatis.BackOffice.Fiş
                     : Convert.ToDateTime(stokVeri.Tarih);
                     stokVeri.FisKodu = txtKod.Text;
                     stokVeri.FisSeri = txtSeri.Text;
-                    if (duzenle == true)
-                    {
+                    if (duzenle == true) {
                         stokVeri.GuncellemeTarihi = Convert.ToDateTime(DateTime.Now);
                         stokVeri.EditUser = frmAnaMenu.UserId;
-                    }
-                    else
-                    {
+                    } else {
                         stokVeri.KayitTarihi = Convert.ToDateTime(DateTime.Now);
                         stokVeri.SaveUser = frmAnaMenu.UserId;
                     }
@@ -1524,10 +1406,8 @@ namespace NetSatis.BackOffice.Fiş
                     stokVeri.FisTuru = ayarlar.FisTurleri;
                     toplamDipIskontoPayi += Convert.ToDecimal(stokVeri.DipIskontoPayi);
 
-                    if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_AlisFiyat)))
-                    {
-                        if (_fisentity.FisTuru == "Alış Faturası" || _fisentity.FisTuru == "Alış İrsaliyesi")
-                        {
+                    if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_AlisFiyat))) {
+                        if (_fisentity.FisTuru == "Alış Faturası" || _fisentity.FisTuru == "Alış İrsaliyesi") {
                             stokVeri.Stok.AlisFiyati1 = stokVeri.BirimFiyati;
                             stokVeri.Stok.AlisFiyati2 = stokVeri.BirimFiyati + ((stokVeri.BirimFiyati * stokVeri.Kdv) / 100);
 
@@ -1538,51 +1418,38 @@ namespace NetSatis.BackOffice.Fiş
 
 
 
-                foreach (var itemHareket in context.PersonelHareketleri.Local.ToList())
-                {
+                foreach (var itemHareket in context.PersonelHareketleri.Local.ToList()) {
                     itemHareket.FisKodu = txtKod.Text;
                     //itemHareket.Id=_fisentity.Personel.Id;
                 }
-                if (ayarlar.OdemeEkrani || context.KasaHareketleri.Local.ToList().Count != 0)
-                {
-                    foreach (var kasaVeri in context.KasaHareketleri.Local.ToList())
-                    {
+                if (ayarlar.OdemeEkrani || context.KasaHareketleri.Local.ToList().Count != 0) {
+                    foreach (var kasaVeri in context.KasaHareketleri.Local.ToList()) {
                         kasaVeri.Tarih = Convert.ToDateTime(cmbTarih.DateTime);
                         kasaVeri.VadeTarihi = Convert.ToDateTime(cmbVadeTarihi.DateTime);
                         kasaVeri.FisTuru = txtFisTuru.Text;
                         kasaVeri.FisKodu = txtKod.Text;
-                        if (duzenle == true)
-                        {
+                        if (duzenle == true) {
                             kasaVeri.GuncellemeTarihi = Convert.ToDateTime(DateTime.Now);
                             kasaVeri.EditUser = frmAnaMenu.UserId;
-                        }
-                        else
-                        {
+                        } else {
                             kasaVeri.KayitTarihi = Convert.ToDateTime(DateTime.Now);
                             kasaVeri.SaveUser = frmAnaMenu.UserId;
                         }
                         kasaVeri.Hareket = ayarlar.KasaHareketi;
-                        if (kasaVeri.FisTuru == "Satış İrsaliyesi")
-                        {
+                        if (kasaVeri.FisTuru == "Satış İrsaliyesi") {
                             kasaVeri.Hareket = "Kasa Giriş";
-                        }
-                        else if (kasaVeri.FisTuru == "Alış İrsaliyesi")
-                        {
+                        } else if (kasaVeri.FisTuru == "Alış İrsaliyesi") {
                             kasaVeri.Hareket = "Kasa Çıkış";
                         }
-                        if (txtFisTuru.Text != "Hakediş Fişi")
-                        {
+                        if (txtFisTuru.Text != "Hakediş Fişi") {
                             kasaVeri.CariId = _fisentity.CariId;
                         }
                     }
                 }
-                if (duzenle == true)
-                {
+                if (duzenle == true) {
                     _fisentity.GuncellemeTarihi = Convert.ToDateTime(DateTime.Now);
                     _fisentity.EditUser = frmAnaMenu.UserId;
-                }
-                else
-                {
+                } else {
                     _fisentity.KayitTarihi = Convert.ToDateTime(DateTime.Now);
                     _fisentity.SaveUser = frmAnaMenu.UserId;
                 }
@@ -1604,11 +1471,9 @@ namespace NetSatis.BackOffice.Fiş
                 _fisentity.DipIskTutari = calcIndirimTutari.Value;
                 _fisentity.DipIskNetTutari = toplamDipIskontoPayi;
                 _fisentity.DipIskOran = calcIndirimOrani.Value;
-                if (!duzenle)
-                {
+                if (!duzenle) {
                     kodOlustur.KodArttirma("fis");
-                    if (_fisentity.FisTuru == "Sayım Fişi")
-                    {
+                    if (_fisentity.FisTuru == "Sayım Fişi") {
                         kodOlustur.KodArttirma("fis");
 
                     }
@@ -1616,8 +1481,7 @@ namespace NetSatis.BackOffice.Fiş
                 }
                 context.ChangeTracker.DetectChanges();
                 bool result = fisDal.AddOrUpdate(context, _fisentity);
-                if (!result)
-                {
+                if (!result) {
                     return;
                 }
 
@@ -1629,16 +1493,14 @@ namespace NetSatis.BackOffice.Fiş
 
                 int oneortwo = 1;
 
-                if (_fisentity.FisTuru == "Sayım Fişi")
-                {
+                if (_fisentity.FisTuru == "Sayım Fişi") {
                     sayimfazlasifisi.Tarih = DateTime.Now;
                     sayimfazlasifisi.KayitTarihi = DateTime.Now;
                     sayimfazlasifisi.GuncellemeTarihi = DateTime.Now;
                     sayimeksigifisi.Tarih = DateTime.Now;
                     sayimeksigifisi.KayitTarihi = DateTime.Now;
                     sayimeksigifisi.GuncellemeTarihi = DateTime.Now;
-                    if (sayimfazlasilist.Count > 0)
-                    {
+                    if (sayimfazlasilist.Count > 0) {
                         oneortwo = 2;
                         var firstIndexZero = txtKod.Text.IndexOf('0');
                         var onEk = txtKod.Text.Substring(0, firstIndexZero);
@@ -1648,15 +1510,13 @@ namespace NetSatis.BackOffice.Fiş
                         sayimfazlasifisi.FisKodu = CodeTool.fiskodolustur(onEk, no.ToString());
 
                         fisDal.AddOrUpdate(context, sayimfazlasifisi);
-                        foreach (var item in sayimfazlasilist)
-                        {
+                        foreach (var item in sayimfazlasilist) {
                             item.FisKodu = sayimfazlasifisi.FisKodu;
                             stokHareketDal.AddOrUpdate(context, item);
                         }
 
                     }
-                    if (sayimeksigilist.Count > 0)
-                    {
+                    if (sayimeksigilist.Count > 0) {
                         var firstIndexZero = txtKod.Text.IndexOf('0');
                         var onEk = txtKod.Text.Substring(0, firstIndexZero);
                         var no = Convert.ToInt32(txtKod.Text.Substring(firstIndexZero + 1, txtKod.Text.Length - 1 - firstIndexZero
@@ -1665,8 +1525,7 @@ namespace NetSatis.BackOffice.Fiş
                         sayimeksigifisi.FisKodu = CodeTool.fiskodolustur(onEk, no.ToString());
 
                         fisDal.AddOrUpdate(context, sayimeksigifisi);
-                        foreach (var item in sayimeksigilist)
-                        {
+                        foreach (var item in sayimeksigilist) {
                             item.FisKodu = sayimeksigifisi.FisKodu;
                             stokHareketDal.AddOrUpdate(context, item);
                         }
@@ -1682,109 +1541,81 @@ namespace NetSatis.BackOffice.Fiş
                 ////SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisAyarlari_FisKodu, sonFisKodu.ToString());
                 //SettingsTool.Save();
                 if (_fisentity.FisTuru == "Toptan Satış Faturası" || _fisentity.FisTuru == "Alış Faturası" ||
-                    _fisentity.FisTuru == "Alış İade Faturası" || _fisentity.FisTuru == "Satış İade Faturası")
-                {
+                    _fisentity.FisTuru == "Alış İade Faturası" || _fisentity.FisTuru == "Satış İade Faturası") {
                     MessageBox.Show("Fatura Başarılı bir şekilde kaydedildi.");
                 }
-                if (_fisentity.FisTuru == "Tahsilat Fişi")
-                {
+                if (_fisentity.FisTuru == "Tahsilat Fişi") {
                     MessageBox.Show("Tahsilat Fişi başarılı bir şekilde kaydedildi.");
                 }
-                if (_fisentity.FisTuru == "Alınan Sipariş Fişi" || _fisentity.FisTuru == "Verilen Sipariş Fişi")
-                {
+                if (_fisentity.FisTuru == "Alınan Sipariş Fişi" || _fisentity.FisTuru == "Verilen Sipariş Fişi") {
                     MessageBox.Show("Sipariş Fişi başarılı bir şekilde kaydedildi.");
                 }
-                if (_fisentity.FisTuru == "Alınan Teklif Fişi" || _fisentity.FisTuru == "Verilen Teklif Fişi")
-                {
+                if (_fisentity.FisTuru == "Alınan Teklif Fişi" || _fisentity.FisTuru == "Verilen Teklif Fişi") {
                     MessageBox.Show("Teklif Fişi başarılı bir şekilde kaydedildi.");
                 }
-                if (_fisentity.FisTuru == "Satış İrsaliyesi" || _fisentity.FisTuru == "Alış İrsaliyesi")
-                {
+                if (_fisentity.FisTuru == "Satış İrsaliyesi" || _fisentity.FisTuru == "Alış İrsaliyesi") {
                     MessageBox.Show("İrsaliye başarılı bir şekilde kaydedildi.");
                 }
-                if (_fisentity.FisTuru == "Ödeme Fişi")
-                {
+                if (_fisentity.FisTuru == "Ödeme Fişi") {
                     MessageBox.Show("Ödeme Fişi başarılı bir şekilde kaydedildi.");
                 }
-                if (_fisentity.FisTuru == "Cari Devir Fişi")
-                {
+                if (_fisentity.FisTuru == "Cari Devir Fişi") {
                     MessageBox.Show("Cari Devir Fişi başarılı bir şekilde kaydedildi.");
                 }
-                if (_fisentity.FisTuru == "Stok Devir Fişi")
-                {
+                if (_fisentity.FisTuru == "Stok Devir Fişi") {
                     MessageBox.Show("Stok Devir Fişi başarılı bir şekilde kaydedildi.");
                 }
-                if (_fisentity.FisTuru == "Sayım Fazlası Fişi")
-                {
+                if (_fisentity.FisTuru == "Sayım Fazlası Fişi") {
                     MessageBox.Show("Sayım Fazlası Fişi başarılı bir şekilde kaydedildi.");
                 }
-                if (_fisentity.FisTuru == "Sayım Eksiği Fişi")
-                {
+                if (_fisentity.FisTuru == "Sayım Eksiği Fişi") {
                     MessageBox.Show("Sayım Eksiği Fişi başarılı bir şekilde kaydedildi.");
                 }
                 basariylaKaydedildi = true;
                 if (_fisentity.FisTuru == "Toptan Satış Faturası" && MessageBox.Show("Faturayı Yazdırmak İster isiniz ?", "Uyarı", MessageBoxButtons.YesNo) ==
-                    DialogResult.Yes)
-                {
+                    DialogResult.Yes) {
                     FaturaHazirla f = new FaturaHazirla();
                     f.FaturaHazirlama(txtKod.Text);
-                }
-                else
-                {
+                } else {
                     this.Close();
                 }
                 if (_fisentity.FisTuru == "Tahsilat Fişi" && MessageBox.Show("Tahsilat Fişi Yazdırmak İster isiniz ?", "Uyarı", MessageBoxButtons.YesNo) ==
-                    DialogResult.Yes)
-                {
+                    DialogResult.Yes) {
                     ReportsPrintTool yazdir = new ReportsPrintTool();
                     rptTahsilat tahsilat = new rptTahsilat(txtKod.Text);
                     yazdir.RaporYazdir(tahsilat, ReportsPrintTool.Belge.Tahsilat);
                     tahsilat.ShowPreview();
-                }
-                else
-                {
+                } else {
                     this.Close();
                 }
                 if (_fisentity.FisTuru == "Satış İrsaliyesi" && MessageBox.Show("İrsaliyeyi Yazdırmak İster isiniz ?", "Uyarı", MessageBoxButtons.YesNo) ==
-                    DialogResult.Yes)
-                {
+                    DialogResult.Yes) {
                     FaturaHazirla f = new FaturaHazirla();
                     f.IrsaliyeHazirlama(txtKod.Text);
-                }
-                else
-                {
+                } else {
                     this.Close();
                 }
                 if (_fisentity.FisTuru == "Alınan Sipariş Fişi" && MessageBox.Show("Siparişi Yazdırmak İster isiniz ?", "Uyarı", MessageBoxButtons.YesNo) ==
-                   DialogResult.Yes)
-                {
+                   DialogResult.Yes) {
                     FaturaHazirla f = new FaturaHazirla();
                     f.SiparisHazirlama(txtKod.Text);
-                }
-                else
-                {
+                } else {
                     this.Close();
                 }
                 if (_fisentity.FisTuru == "Verilen Teklif Fişi" && MessageBox.Show("Teklifi Yazdırmak İster isiniz ?", "Uyarı", MessageBoxButtons.YesNo) ==
-                   DialogResult.Yes)
-                {
+                   DialogResult.Yes) {
                     FaturaHazirla f = new FaturaHazirla();
                     f.TeklifHazirlama(txtKod.Text);
-                }
-                else
-                {
+                } else {
                     this.Close();
                 }
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 MessageBox.Show("Hata oluştu: " + ex.Message + "\nDetay: " + ex.InnerException, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void cmbTarih_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            if (e.Button.Index == 1)
-            {
+            if (e.Button.Index == 1) {
                 cmbTarih.DateTime = Convert.ToDateTime(DateTime.Now);
             }
         }
@@ -1796,13 +1627,10 @@ namespace NetSatis.BackOffice.Fiş
             DateTime time = new DateTime(Convert.ToInt32(cmbYil.Text), cmbAy.Month, 1);
             frmPersonelSec form = new frmPersonelSec(time);
             form.ShowDialog();
-            if (form.secildi)
-            {
-                foreach (var itemHareket in form.secilen.ToList())
-                {
+            if (form.secildi) {
+                foreach (var itemHareket in form.secilen.ToList()) {
                     if (context.PersonelHareketleri.Local.Count(c =>
-                            c.Donemi == time && c.PersonelKodu == itemHareket.PersonelKodu) == 0)
-                    {
+                            c.Donemi == time && c.PersonelKodu == itemHareket.PersonelKodu) == 0) {
                         personelHareketDal.AddOrUpdate(context, itemHareket);
                     }
                 }
@@ -1826,85 +1654,68 @@ namespace NetSatis.BackOffice.Fiş
         private void frmFisIslem_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape && MessageBox.Show("Kaydedilmemiş veri olabilir. Çıkmak istediğinize emin misiniz ?", "Uyarı", MessageBoxButtons.YesNo) ==
-                DialogResult.Yes)
-            {
+                DialogResult.Yes) {
                 this.Close();
             }
         }
         private void btnKaydetYeni_Click(object sender, EventArgs e)
         {
-            if (_fisentity.FisTuru == "Cari Devir Fişi")
-            {
-                if (toggleCariDevir.IsOn)
-                {
+            if (_fisentity.FisTuru == "Cari Devir Fişi") {
+                if (toggleCariDevir.IsOn) {
                     ayarlar.KasaHareketi = "Kasa Çıkış";
-                }
-                else
-                {
+                } else {
                     ayarlar.KasaHareketi = "Kasa Giriş";
                 }
             }
             string message = null;
             int hata = 0;
-            if (gridStokHareket.RowCount == 0 && ayarlar.SatisEkrani == true)
-            {
+            if (gridStokHareket.RowCount == 0 && ayarlar.SatisEkrani == true) {
                 message += "- Satış Ekranında eklenmiş bir ürün bulunamadı.." + System.Environment.NewLine;
                 hata++;
             }
-            if (txtKod.Text == "")
-            {
+            if (txtKod.Text == "") {
                 message += "- Fiş Kodu Alanı Boş Geçilemez." + System.Environment.NewLine;
                 hata++;
             }
-            if (_fisentity.CariId == null && ayarlar.SatisEkrani == false && txtFisTuru.Text != "Hakediş Fişi")
-            {
+            if (_fisentity.CariId == null && ayarlar.SatisEkrani == false && txtFisTuru.Text != "Hakediş Fişi") {
                 message += txtFisTuru.Text + " Türünde Cari Seçim Zorunludur. " + System.Environment.NewLine;
                 hata++;
             }
-            if (gridKasaHareket.RowCount == 0 && ayarlar.SatisEkrani == false && txtFisTuru.Text != "Hakediş Fişi")
-            {
+            if (gridKasaHareket.RowCount == 0 && ayarlar.SatisEkrani == false && txtFisTuru.Text != "Hakediş Fişi") {
                 message += " - Herhangi bir Ödeme Bulunamadı. " + System.Environment.NewLine;
                 hata++;
             }
             if (calcOdenemesiGereken.Value != 0 && ayarlar.OdemeEkrani == true &&
-                string.IsNullOrEmpty(lblCariKod.Text) && txtFisTuru.Text != "Hakediş Fişi")
-            {
+                string.IsNullOrEmpty(lblCariKod.Text) && txtFisTuru.Text != "Hakediş Fişi") {
                 message +=
                     "- Ödenmesi Gereken Tutar Ödenmemiş Görünüyor.Açık hesap satış yapabilmek için lütfen cari seçiniz." +
                     System.Environment.NewLine;
                 hata++;
             }
-            if (hata != 0)
-            {
+            if (hata != 0) {
                 MessageBox.Show(message);
                 return;
             }
-            if (calcOdenemesiGereken.Value != 0 && ayarlar.OdemeEkrani == true)
-            {
+            if (calcOdenemesiGereken.Value != 0 && ayarlar.OdemeEkrani == true) {
                 if (MessageBox.Show(
                         $"Ödemenin # {calcOdenemesiGereken.Value.ToString("C2")} # tutarındaki kısmı açık hesap bakiyesi olarak kaydedilecektir. devam etmek istiyor musunuz?",
-                        "Uyarı", MessageBoxButtons.YesNo) == DialogResult.No)
-                {
+                        "Uyarı", MessageBoxButtons.YesNo) == DialogResult.No) {
                     MessageBox.Show("İsteğiniz üzerine işlem iptal edildi.");
                     return;
                 }
             }
-            foreach (var stokVeri in context.StokHareketleri.Local.ToList())
-            {
+            foreach (var stokVeri in context.StokHareketleri.Local.ToList()) {
                 stokVeri.Tarih = stokVeri.Tarih == null
                     ? Convert.ToDateTime(cmbTarih.DateTime)
                     : Convert.ToDateTime(stokVeri.Tarih);
                 stokVeri.FisKodu = txtKod.Text;
                 stokVeri.Hareket = ayarlar.StokHareketi;
             }
-            foreach (var itemHareket in context.PersonelHareketleri.Local.ToList())
-            {
+            foreach (var itemHareket in context.PersonelHareketleri.Local.ToList()) {
                 itemHareket.FisKodu = txtKod.Text;
             }
-            if (ayarlar.OdemeEkrani)
-            {
-                foreach (var kasaVeri in context.KasaHareketleri.Local.ToList())
-                {
+            if (ayarlar.OdemeEkrani) {
+                foreach (var kasaVeri in context.KasaHareketleri.Local.ToList()) {
                     kasaVeri.Tarih = kasaVeri.Tarih == null
                         ? Convert.ToDateTime(cmbTarih.DateTime)
                         : Convert.ToDateTime(kasaVeri.Tarih);
@@ -1914,8 +1725,7 @@ namespace NetSatis.BackOffice.Fiş
                     kasaVeri.FisKodu = txtKod.Text;
                     kasaVeri.FisTuru = txtFisTuru.Text;
                     kasaVeri.Hareket = ayarlar.KasaHareketi;
-                    if (txtFisTuru.Text != "Hakediş Fişi")
-                    {
+                    if (txtFisTuru.Text != "Hakediş Fişi") {
                         kasaVeri.CariId = _cariId;
                     }
                 }
@@ -1933,8 +1743,7 @@ namespace NetSatis.BackOffice.Fiş
             ////SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisAyarlari_FisKodu, sonFisKodu.ToString());
             //SettingsTool.Save();
             MessageBox.Show("Fatura Başarılı bir şekilde kaydedildi.");
-            if (gridStokHareket.RowCount != 0)
-            {
+            if (gridStokHareket.RowCount != 0) {
                 Temizle();
                 _fisentity.CariId = null;
                 _fisentity.BelgeNo = null;
@@ -1952,16 +1761,13 @@ namespace NetSatis.BackOffice.Fiş
                 context.KasaHareketleri.Local.Clear();
                 context.PersonelHareketleri.Local.Clear();
                 context.Kodlar.Local.Clear();
-            }
-            else
-            {
+            } else {
                 MessageBox.Show("Mevcutta bir fatura bulunmadı");
             }
         }
         private void gridKasaHareket_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
         {
-            if (e.HitInfo.InRow)
-            {
+            if (e.HitInfo.InRow) {
                 var p2 = MousePosition; popupMenu1.ShowPopup(p2);
             }
         }
@@ -1980,15 +1786,13 @@ namespace NetSatis.BackOffice.Fiş
         }
         private void cmbVadeTarihi_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            if (e.Button.Index == 1)
-            {
+            if (e.Button.Index == 1) {
                 cmbTarih.DateTime = Convert.ToDateTime(DateTime.Now);
             }
         }
         private void gridStokHareket_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
         {
-            if (e.HitInfo.InRow)
-            {
+            if (e.HitInfo.InRow) {
                 var p2 = MousePosition; popupMenu2.ShowPopup(p2);
             }
         }
@@ -2040,12 +1844,10 @@ namespace NetSatis.BackOffice.Fiş
         }
         private void btnAlisFaturalandir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (gridStokHareket.RowCount != 0)
-            {
+            if (gridStokHareket.RowCount != 0) {
                 if (MessageBox.Show(
                         "Bu Evrağı Faturalandırmak İstediğinize Emin Misiniz ? ",
-                        "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
+                        "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes) {
                     _fisentity.FisTuru = "Alış Faturası";
                     ayarlar.StokHareketi = "Stok Giriş";
                     ayarlar.KasaHareketi = "Kasa Çıkış";
@@ -2053,9 +1855,7 @@ namespace NetSatis.BackOffice.Fiş
                     _fisentity.VadeTarihi = DateTime.Now;
                     MessageBox.Show("Faturaya Dönüştürme işlemi gerçekleşti.");
                 }
-            }
-            else
-            {
+            } else {
                 this.Close();
             }
         }
@@ -2072,8 +1872,7 @@ namespace NetSatis.BackOffice.Fiş
         }
         private void btnGorunum_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (_fisentity.FisTuru == "Toptan Satış Faturası" || _fisentity.FisTuru == "Stok Devir Fişi" || _fisentity.FisTuru == "Sayım Fazlası Fişi" || _fisentity.FisTuru == "Sayım Eksiği Fişi" || _fisentity.FisTuru == "Alış Faturası")
-            {
+            if (_fisentity.FisTuru == "Toptan Satış Faturası" || _fisentity.FisTuru == "Stok Devir Fişi" || _fisentity.FisTuru == "Sayım Fazlası Fişi" || _fisentity.FisTuru == "Sayım Eksiği Fişi" || _fisentity.FisTuru == "Alış Faturası") {
                 gridStokHareket.ClearColumnsFilter();
                 //if (!File.Exists(DosyaYolu)) File.Create(DosyaYolu);
                 gridContStokHareket.MainView.SaveLayoutToXml(DosyaYolu);
@@ -2081,12 +1880,10 @@ namespace NetSatis.BackOffice.Fiş
         }
         private void frmFisIslem_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (basariylaKaydedildi == false && gridStokHareket.RowCount != 0)
-            {
+            if (basariylaKaydedildi == false && gridStokHareket.RowCount != 0) {
                 if (MessageBox.Show(
                         "Satış Ekranında Ürünler Var. İşlemi İptal Edip Çıkmak İstediğinize Emin Misiniz?",
-                        "DİKKAT", MessageBoxButtons.YesNo) == DialogResult.No)
-                {
+                        "DİKKAT", MessageBoxButtons.YesNo) == DialogResult.No) {
                     e.Cancel = true;
                 }
             }
@@ -2097,8 +1894,7 @@ namespace NetSatis.BackOffice.Fiş
         }
         async Task HepsiniHesapla()
         {
-            try
-            {
+            try {
 
                 gridStokHareket.PostEditor();
                 await Task.Delay(10);
@@ -2111,8 +1907,7 @@ namespace NetSatis.BackOffice.Fiş
                 decimal? toplamGenelToplam = 0;
                 decimal? tumGridinSatirIndirimSonrasiToplami = 0;
                 int siraNo = 1;
-                foreach (StokHareket item in context.StokHareketleri.Local)
-                {
+                foreach (StokHareket item in context.StokHareketleri.Local) {
                     decimal? satirTutari = Math.Round((item.Miktar * item.BirimFiyati).Value, 2);
                     tumGridinSatirIndirimSonrasiToplami +=
                         satirTutari - satirTutari * item.IndirimOrani / 100
@@ -2122,8 +1917,7 @@ namespace NetSatis.BackOffice.Fiş
                         (satirTutari - satirTutari * item.IndirimOrani / 100) * item.IndirimOrani2 / 100) *
                         item.IndirimOrani3 / 100;
                 }
-                foreach (StokHareket item in context.StokHareketleri.Local.OrderByDescending(x => x.Tarih))
-                {
+                foreach (StokHareket item in context.StokHareketleri.Local.OrderByDescending(x => x.Tarih)) {
                     item.SiraNo = siraNo;
                     siraNo++;
                     if (item.TempId == Guid.Empty || item.TempId == Guid.Parse("00000000-0000-0000-0000-000000000000"))
@@ -2136,8 +1930,7 @@ namespace NetSatis.BackOffice.Fiş
                     decimal? indirimOrani2 = item.IndirimOrani2;
                     decimal? indirimOrani3 = item.IndirimOrani3;
                     decimal? aratoplam = Math.Round((miktar * birimfiyat).Value, 2);
-                    if (toggleKDVDahil.IsOn)
-                    {
+                    if (toggleKDVDahil.IsOn) {
                         aratoplam = aratoplam / (1 + kdv / 100);
                     }
                     toplamAraToplam += aratoplam;
@@ -2157,39 +1950,26 @@ namespace NetSatis.BackOffice.Fiş
                     decimal? dipIskontoTutari = Convert.ToDecimal(calcIndirimTutari.EditValue);
                     decimal? kdvToplam = 0;
                     decimal? satirNetTutar = 0;
-                    if (toggleKDVDahil.IsOn)
-                    {
-                        if (dipIskontoOrani != 0)
-                        {
+                    if (toggleKDVDahil.IsOn) {
+                        if (dipIskontoOrani != 0) {
                             tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - satirIndirimSonrasiToplam * dipIskontoOrani / 100;
                             dipIskontoPayi = satirIndirimSonrasiToplam - tumIndirimlerSonrasiToplam;
-                        }
-                        else if (dipIskontoTutari != 0)
-                        {
+                        } else if (dipIskontoTutari != 0) {
                             dipIskontoPayi = dipIskontoTutari * satirIndirimSonrasiToplam / tumGridinSatirIndirimSonrasiToplami;
                             tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - dipIskontoPayi;
-                        }
-                        else
-                        {
+                        } else {
                             tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam;
                         }
                         kdvToplam = Math.Round(tumIndirimlerSonrasiToplam.Value * (kdv / 100).Value, 2);
                         satirNetTutar = Math.Round(tumIndirimlerSonrasiToplam.Value + kdvToplam.Value, 2);
-                    }
-                    else
-                    {
-                        if (dipIskontoOrani != 0)
-                        {
+                    } else {
+                        if (dipIskontoOrani != 0) {
                             tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - satirIndirimSonrasiToplam * dipIskontoOrani / 100;
                             dipIskontoPayi = satirIndirimSonrasiToplam - tumIndirimlerSonrasiToplam;
-                        }
-                        else if (dipIskontoTutari != 0)
-                        {
+                        } else if (dipIskontoTutari != 0) {
                             dipIskontoPayi = dipIskontoTutari * satirIndirimSonrasiToplam / tumGridinSatirIndirimSonrasiToplami;
                             tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - dipIskontoPayi;
-                        }
-                        else
-                        {
+                        } else {
                             tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam;
                         }
                         kdvToplam = Math.Round(tumIndirimlerSonrasiToplam.Value * (kdv / 100).Value, 2);
@@ -2224,9 +2004,7 @@ namespace NetSatis.BackOffice.Fiş
                 gridStokHareket.RefreshData();
                 gridContKasaHareket.Refresh();
 
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 System.Diagnostics.Debug.WriteLine("Hesaplama yaparken hata oluştu. Hata=>decimal değere null değer atandı.\nDetay=> " + ex.Message);
             }
 
@@ -2246,12 +2024,9 @@ namespace NetSatis.BackOffice.Fiş
         private async void calcIndirimOrani_EditValueChanged(object sender, EventArgs e)
         {
             CalcEdit edit = sender as CalcEdit;
-            if (Convert.ToDecimal(edit.EditValue) != 0)
-            {
+            if (Convert.ToDecimal(edit.EditValue) != 0) {
                 calcIndirimTutari.Properties.ReadOnly = true;
-            }
-            else
-            {
+            } else {
                 calcIndirimTutari.Properties.ReadOnly = false;
             }
             await HepsiniHesapla();
@@ -2259,12 +2034,9 @@ namespace NetSatis.BackOffice.Fiş
         private async void calcIndirimTutari_EditValueChanged(object sender, EventArgs e)
         {
             CalcEdit edit = sender as CalcEdit;
-            if (Convert.ToDecimal(edit.EditValue) != 0)
-            {
+            if (Convert.ToDecimal(edit.EditValue) != 0) {
                 calcIndirimOrani.Properties.ReadOnly = true;
-            }
-            else
-            {
+            } else {
                 calcIndirimOrani.Properties.ReadOnly = false;
             }
             await HepsiniHesapla();
@@ -2305,8 +2077,7 @@ namespace NetSatis.BackOffice.Fiş
             OleDbConnection CNN;
             openFileDialog1.Filter = "Excel Files|*.xls;*.xlsx;";
             DialogResult OkeyMi = openFileDialog1.ShowDialog();
-            if (OkeyMi == DialogResult.OK)
-            {
+            if (OkeyMi == DialogResult.OK) {
                 if (!openFileDialog1.FileName.Contains(".xlsx"))
                     CNN = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + openFileDialog1.FileName + ";" + "Extended Properties='Excel 8.0;HDR=YES;'");
                 else
@@ -2317,14 +2088,12 @@ namespace NetSatis.BackOffice.Fiş
                 DA.Fill(DT);
                 CNN.Close();
                 string olmayanBarkodlar = "";
-                foreach (DataRow item in DT.Rows)
-                {
+                foreach (DataRow item in DT.Rows) {
                     Barkod entity;
                     StokHareket sh = new StokHareket();
                     string barkodveyastokkodu = item[DT.Columns[0].ColumnName].ToString();
                     var entityStok = context.Stoklar.FirstOrDefault(x => x.Barkodu == barkodveyastokkodu || x.StokKodu == barkodveyastokkodu);
-                    if (entityStok != null)
-                    {
+                    if (entityStok != null) {
                         sh = StokSec(entityStok);
                         sh.Miktar = Convert.ToDecimal(item[DT.Columns[1].ColumnName]);
                         sh.BirimFiyati = Convert.ToDecimal(item[DT.Columns[2].ColumnName]);
@@ -2334,12 +2103,9 @@ namespace NetSatis.BackOffice.Fiş
                         stokHareketDal.AddOrUpdate(context, sh);
                         await HepsiniHesapla();
 
-                    }
-                    else
-                    {
+                    } else {
                         entity = context.Barkodlar.Where(c => c.Barkodu == barkodveyastokkodu).SingleOrDefault();
-                        if (entity != null)
-                        {
+                        if (entity != null) {
                             sh = StokSec(entity.Stok);
                             sh.Miktar = Convert.ToDecimal(item[DT.Columns[1].ColumnName]);
                             sh.BirimFiyati = Convert.ToDecimal(item[DT.Columns[2].ColumnName]);
@@ -2349,15 +2115,12 @@ namespace NetSatis.BackOffice.Fiş
                             stokHareketDal.AddOrUpdate(context, sh);
 
                             await HepsiniHesapla();
-                        }
-                        else
-                        {
+                        } else {
                             olmayanBarkodlar += item[DT.Columns[0].ColumnName].ToString() + ",";
                         }
                     }
                 }
-                if (olmayanBarkodlar != "")
-                {
+                if (olmayanBarkodlar != "") {
                     MessageBox.Show(olmayanBarkodlar.Substring(0, olmayanBarkodlar.Length - 1) + "numarali barkodlar/stok kodlari bulunamadi");
                 }
                 MessageBox.Show("İşlem başarıyla gerçekleştirildi.");
@@ -2368,8 +2131,7 @@ namespace NetSatis.BackOffice.Fiş
             OleDbConnection CNN;
             openFileDialog1.Filter = "Excel Files|*.xls;*.xlsx;";
             DialogResult OkeyMi = openFileDialog1.ShowDialog();
-            if (OkeyMi == DialogResult.OK)
-            {
+            if (OkeyMi == DialogResult.OK) {
                 if (!openFileDialog1.FileName.Contains(".xlsx"))
                     CNN = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + openFileDialog1.FileName + ";" + "Extended Properties='Excel 8.0;HDR=YES;'");
                 else
@@ -2380,17 +2142,14 @@ namespace NetSatis.BackOffice.Fiş
                 DA.Fill(DT);
                 CNN.Close();
                 string olmayanBarkodlar = "";
-                foreach (DataRow item in DT.Rows)
-                {
+                foreach (DataRow item in DT.Rows) {
                     Barkod entity;
                     StokHareket sh = new StokHareket();
-                    try
-                    {
+                    try {
                         var str = item[DT.Columns[0].ColumnName].ToString();
 
                         var entityStok = context.Stoklar.FirstOrDefault(x => x.Barkodu == str || x.StokKodu == str);
-                        if (entityStok != null)
-                        {
+                        if (entityStok != null) {
                             sh = StokSec(entityStok);
                             sh.Miktar = Convert.ToDecimal(item[DT.Columns[1].ColumnName]);
                             sh.BirimFiyati = Convert.ToDecimal(item[DT.Columns[2].ColumnName]);
@@ -2400,12 +2159,9 @@ namespace NetSatis.BackOffice.Fiş
                             stokHareketDal.AddOrUpdate(context, sh);
                             await HepsiniHesapla();
 
-                        }
-                        else
-                        {
+                        } else {
                             entity = context.Barkodlar.Where(c => c.Barkodu == str).SingleOrDefault();
-                            if (entity != null)
-                            {
+                            if (entity != null) {
                                 sh = StokSec(entity.Stok);
                                 sh.Miktar = Convert.ToDecimal(item[DT.Columns[1].ColumnName]);
                                 sh.BirimFiyati = Convert.ToDecimal(item[DT.Columns[2].ColumnName]);
@@ -2415,19 +2171,14 @@ namespace NetSatis.BackOffice.Fiş
                                 stokHareketDal.AddOrUpdate(context, sh);
 
                                 await HepsiniHesapla();
-                            }
-                            else
-                            {
+                            } else {
                                 olmayanBarkodlar += item[DT.Columns[0].ColumnName].ToString() + ",";
                             }
                         }
-                    }
-                    catch (Exception)
-                    {
+                    } catch (Exception) {
                     }
                 }
-                if (olmayanBarkodlar != "")
-                {
+                if (olmayanBarkodlar != "") {
                     MessageBox.Show(olmayanBarkodlar.Substring(0, olmayanBarkodlar.Length - 1) + "numarali barkodlar/stok kodlari bulunamadi");
                 }
                 MessageBox.Show("İşlem başarıyla gerçekleştirildi.");
@@ -2435,36 +2186,28 @@ namespace NetSatis.BackOffice.Fiş
         }
         private void btnStokGuncelle_ItemClick(object sender, ItemClickEventArgs e)
         {
-            try
-            {
-                if (gridStokHareket.RowCount != 0)
-                {
+            try {
+                if (gridStokHareket.RowCount != 0) {
                     sec = Convert.ToInt32(gridStokHareket.GetFocusedRowCellValue(colStokId));
                     frmStokIslem form = new frmStokIslem(stokDAL.GetByFilter(context, c => c.Id == sec));
                     form.ShowDialog();
-                }
-                else
-                {
+                } else {
                     MessageBox.Show("Seçili Stok Bulunamadı");
                 }
-            }
-            catch (Exception)
-            {
+            } catch (Exception) {
                 throw;
             }
         }
         private void btnExcelAktar_ItemClick(object sender, ItemClickEventArgs e)
         {
             SaveFileDialog save = new SaveFileDialog();
-            if (save.ShowDialog() == DialogResult.OK)
-            {
+            if (save.ShowDialog() == DialogResult.OK) {
                 gridStokHareket.ExportToXlsx(save.FileName + ".xlsx");
             }
         }
         private void görünümüKaydetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (_fisentity.FisTuru == "Toptan Satış Faturası" || _fisentity.FisTuru == "Stok Devir Fişi" || _fisentity.FisTuru == "Sayım Fazlası Fişi" || _fisentity.FisTuru == "Sayım Eksiği Fişi" || _fisentity.FisTuru == "Alış Faturası")
-            {
+            if (_fisentity.FisTuru == "Toptan Satış Faturası" || _fisentity.FisTuru == "Stok Devir Fişi" || _fisentity.FisTuru == "Sayım Fazlası Fişi" || _fisentity.FisTuru == "Sayım Eksiği Fişi" || _fisentity.FisTuru == "Alış Faturası") {
                 gridStokHareket.ClearColumnsFilter();
                 //if (!File.Exists(DosyaYolu)) File.Create(DosyaYolu);
                 gridContStokHareket.MainView.SaveLayoutToXml(DosyaYolu);
@@ -2472,21 +2215,15 @@ namespace NetSatis.BackOffice.Fiş
         }
         private void seçiliStoğuDüzenleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (gridStokHareket.RowCount != 0)
-                {
+            try {
+                if (gridStokHareket.RowCount != 0) {
                     sec = Convert.ToInt32(gridStokHareket.GetFocusedRowCellValue(colStokId));
                     frmStokIslem form = new frmStokIslem(stokDAL.GetByFilter(context, c => c.Id == sec));
                     form.ShowDialog();
-                }
-                else
-                {
+                } else {
                     MessageBox.Show("Seçili Stok Bulunamadı");
                 }
-            }
-            catch (Exception)
-            {
+            } catch (Exception) {
                 throw;
             }
         }
@@ -2523,99 +2260,79 @@ namespace NetSatis.BackOffice.Fiş
         private void FaturaOlustur()   //BURADAN AŞAĞISI
         {
             string HarTipi = "";
-            if (txtFisTuru.Text == "Alış Faturası")
-            {
+            if (txtFisTuru.Text == "Alış Faturası") {
                 HarTipi = "FA";
             }
-            if (txtFisTuru.Text == "Toptan Satış Faturası")
-            {
+            if (txtFisTuru.Text == "Toptan Satış Faturası") {
                 HarTipi = "FS";
             }
-            if (txtFisTuru.Text == "Alış İade Faturası")
-            {
+            if (txtFisTuru.Text == "Alış İade Faturası") {
                 HarTipi = "AI";
             }
-            if (txtFisTuru.Text == "Satış İade Faturası")
-            {
+            if (txtFisTuru.Text == "Satış İade Faturası") {
                 HarTipi = "SI";
             }
-            if (txtFisTuru.Text == "Satış İrsaliyesi")
-            {
+            if (txtFisTuru.Text == "Satış İrsaliyesi") {
                 HarTipi = "IS";
                 cmbTipi.Text = "-";
             }
-            if (txtFisTuru.Text == "Alış İrsaliyesi")
-            {
+            if (txtFisTuru.Text == "Alış İrsaliyesi") {
                 HarTipi = "IA";
                 cmbTipi.Text = "-";
             }
-            if (txtFisTuru.Text == "Alınan Sipariş Fişi")
-            {
+            if (txtFisTuru.Text == "Alınan Sipariş Fişi") {
                 HarTipi = "SA";
                 cmbTipi.Text = "-";
             }
-            if (txtFisTuru.Text == "Verilen Sipariş Fişi")
-            {
+            if (txtFisTuru.Text == "Verilen Sipariş Fişi") {
                 HarTipi = "SV";
                 cmbTipi.Text = "-";
             }
-            if (txtFisTuru.Text == "Verilen Teklif Fişi")
-            {
+            if (txtFisTuru.Text == "Verilen Teklif Fişi") {
                 HarTipi = "TV";
                 cmbTipi.Text = "-";
             }
-            if (txtFisTuru.Text == "Alınan Teklif Fişi")
-            {
+            if (txtFisTuru.Text == "Alınan Teklif Fişi") {
                 HarTipi = "TA";
                 cmbTipi.Text = "-";
             }
-            if (txtFisTuru.Text == "Stok Devir Fişi")
-            {
+            if (txtFisTuru.Text == "Stok Devir Fişi") {
                 HarTipi = "SD";
                 cmbTipi.Text = "-";
             }
-            if (txtFisTuru.Text == "Sayım Ekiği Fişi")
-            {
+            if (txtFisTuru.Text == "Sayım Ekiği Fişi") {
                 HarTipi = "SG";
                 cmbTipi.Text = "-";
             }
-            if (txtFisTuru.Text == "Sayım Fazlası Fişi")
-            {
+            if (txtFisTuru.Text == "Sayım Fazlası Fişi") {
                 HarTipi = "SC";
                 cmbTipi.Text = "-";
             }
-            if (txtFisTuru.Text == "Ödeme Fişi")
-            {
+            if (txtFisTuru.Text == "Ödeme Fişi") {
                 HarTipi = "OF";
                 cmbTipi.Text = "-";
             }
-            if (txtFisTuru.Text == "Tahsilat Fişi")
-            {
+            if (txtFisTuru.Text == "Tahsilat Fişi") {
                 HarTipi = "TF";
                 cmbTipi.Text = "-";
             }
-            if (txtFisTuru.Text == "Sayım Fişi")
-            {
+            if (txtFisTuru.Text == "Sayım Fişi") {
                 HarTipi = "SY";
                 cmbTipi.Text = "-";
             }
-            if (txtFisTuru.Text == "Cari Devir Fişi")
-            {
+            if (txtFisTuru.Text == "Cari Devir Fişi") {
                 HarTipi = "CD";
                 cmbTipi.Text = "-";
             }
-            if (txtFisTuru.Text == "Masraf Fişi")
-            {
+            if (txtFisTuru.Text == "Masraf Fişi") {
                 HarTipi = "MF";
                 cmbTipi.Text = "-";
             }
             NetSatis.EDonusum.Models.Donusum.Master m = null;
-            if (duzenle)
-            {
+            if (duzenle) {
                 EDonusum.VTContext c = new EDonusum.VTContext();
                 var res = c.Master.Where(x => x.FisKodu == txtKod.Text).FirstOrDefault();
-                if (res != null)
-                {
+                if (res != null) {
                     m = res;
                     m.Aciklama = txtAciklama.Text;
                     m.AlisVerisNo = _fisentity.Id;
@@ -2640,11 +2357,8 @@ namespace NetSatis.BackOffice.Fiş
                     m.DipIskonto = Convert.ToDecimal(calcIndirimToplami.Value);
                     DetailsDuzenle(eislem.MasterGuncelle(m), HarTipi);
                 }
-            }
-            else
-            {
-                m = new EDonusum.Models.Donusum.Master
-                {
+            } else {
+                m = new EDonusum.Models.Donusum.Master {
                     Aciklama = txtAciklama.Text,
                     AlisVerisNo = _fisentity.Id,
                     DokumanKodu = "",
@@ -2678,41 +2392,33 @@ namespace NetSatis.BackOffice.Fiş
 
             var detailsList = c.Detail.Where(x => x.MasterId == id).ToList();
 
-            for (int i = 0; i < detailsList.Count; i++)
-            {
+            for (int i = 0; i < detailsList.Count; i++) {
                 bool found = false;
-                for (int j = 0; j < gridStokHareket.RowCount; j++)
-                {
+                for (int j = 0; j < gridStokHareket.RowCount; j++) {
                     int stokid = Convert.ToInt32(gridStokHareket.GetRowCellValue(j, "StokId"));
 
-                    if (stokid == detailsList[i].StokId)
-                    {
+                    if (stokid == detailsList[i].StokId) {
                         found = true;
                         break;
                     }
                 }
-                if (!found)
-                {
+                if (!found) {
                     eislem.DetailsSil(detailsList[i].Id);
                 }
             }
 
             //EFATURA YENİ DÜZENLEME
-            foreach (var stok in context.StokHareketleri.Local)
-            {
+            foreach (var stok in context.StokHareketleri.Local) {
                 decimal fyt = stok.KdvToplam.Value;// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "KdvToplam").ToString());
                 decimal fyt2 = stok.ToplamTutar.Value;// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "ToplamTutar"));
                 var stokTempid = stok.TempId;// Convert.ToInt32(gridStokHareket.GetRowCellValue(i, "StokId"));
                 NetSatis.EDonusum.Models.Donusum.Details d = null;
-                if (duzenle)
-                {
+                if (duzenle) {
                     var res = c.Detail.Where(x => x.MasterId == id && x.TempId == stokTempid).FirstOrDefault();
                     if (res == null)
                         res = c.Detail.FirstOrDefault(x => x.MasterId == id && x.StokId == stok.StokId);
-                    if (res == null)
-                    {
-                        d = new EDonusum.Models.Donusum.Details
-                        {
+                    if (res == null) {
+                        d = new EDonusum.Models.Donusum.Details {
                             HareketTipi = eislem.HareketIdGetir(cmbTipi.Text),
                             //Magaza="",
                             HarTip = HarTipi,
@@ -2732,9 +2438,7 @@ namespace NetSatis.BackOffice.Fiş
                             Tutar = stok.BirimFiyati.Value,//Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "BirimFiyati").ToString())
                         };
                         eislem.DetailsOlustur(d);
-                    }
-                    else
-                    {
+                    } else {
 
                         res.HareketTipi = eislem.HareketIdGetir(cmbTipi.Text);
                         res.HarTip = HarTipi;
@@ -2754,11 +2458,8 @@ namespace NetSatis.BackOffice.Fiş
                         res.Tutar = stok.BirimFiyati.Value;// Convert.ToDecimal(gridStokHareket.GetRowCellValue(i, "BirimFiyati").ToString());
                         eislem.DetailsGuncelle(res);
                     }
-                }
-                else
-                {
-                    d = new EDonusum.Models.Donusum.Details
-                    {
+                } else {
+                    d = new EDonusum.Models.Donusum.Details {
                         HareketTipi = eislem.HareketIdGetir(cmbTipi.Text),
                         //Magaza="",
                         HarTip = HarTipi,
@@ -2855,24 +2556,18 @@ namespace NetSatis.BackOffice.Fiş
 
         private void txtSeri_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
+            if (e.KeyCode == Keys.Enter) {
                 this.ActiveControl = txtSira;
                 string kod = txtSeri.Text;
-                if (kod != "")
-                {
+                if (kod != "") {
                     var lastFis = context.Fisler.Where(x => x.Seri == kod).OrderByDescending(x => x.KayitTarihi).FirstOrDefault();
-                    if (lastFis != null && lastFis.Sira != null && lastFis.Sira != "")
-                    {
+                    if (lastFis != null && lastFis.Sira != null && lastFis.Sira != "") {
                         int serino = 1;
-                        try
-                        {
+                        try {
                             serino = Convert.ToInt32(lastFis.Sira) + 1;
                             txtSira.Text = serino.ToString();
                             txtSira.SelectionLength = 0;
-                        }
-                        catch
-                        {
+                        } catch {
                         }
                     }
                 }
@@ -2883,12 +2578,10 @@ namespace NetSatis.BackOffice.Fiş
         {
             if (gridStokHareket.FocusedColumn.FieldName == "Miktar"
                 || gridStokHareket.FocusedColumn.FieldName == "BirimFiyati"
-                )
-            {
+                ) {
                 BeginInvoke(new Action(() =>
           {
-              if (gridStokHareket.ActiveEditor != null)
-              {
+              if (gridStokHareket.ActiveEditor != null) {
                   gridStokHareket.ActiveEditor.SelectAll();
               }
           }));
@@ -2914,50 +2607,37 @@ namespace NetSatis.BackOffice.Fiş
         private void exceleAktarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog save = new SaveFileDialog();
-            if (save.ShowDialog() == DialogResult.OK)
-            {
+            if (save.ShowDialog() == DialogResult.OK) {
                 gridStokHareket.ExportToXlsx(save.FileName + ".xlsx");
             }
         }
 
         private void stokKartınıAçToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (gridStokHareket.RowCount != 0)
-                {
+            try {
+                if (gridStokHareket.RowCount != 0) {
                     string aramaMetni = gridStokHareket.GetFocusedRowCellValue(colStokAdi).GetString();
                     frmStokSec form = new frmStokSec(ref this.context, aramaMetni);
                     form.ShowDialog();
-                }
-                else
-                {
+                } else {
                     MessageBox.Show("Seçili Stok Bulunamadı");
                 }
-            }
-            catch (Exception)
-            {
+            } catch (Exception) {
                 throw;
             }
         }
 
         private void seçiliStoğunHareketleriToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (gridStokHareket.RowCount != 0)
-                {
+            try {
+                if (gridStokHareket.RowCount != 0) {
                     sec = Convert.ToInt32(gridStokHareket.GetFocusedRowCellValue(colStokId));
                     frmStokHareket frmstokhareket = new frmStokHareket(sec);
                     frmstokhareket.ShowDialog();
-                }
-                else
-                {
+                } else {
                     MessageBox.Show("Seçili Stok Bulunamadı");
                 }
-            }
-            catch (Exception)
-            {
+            } catch (Exception) {
                 throw;
             }
         }
@@ -2969,8 +2649,7 @@ namespace NetSatis.BackOffice.Fiş
 
         private void repoStokSec_KeyDown(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode)
-            {
+            switch (e.KeyCode) {
                 case Keys.F6:
                     repoStokSec_ButtonClick(sender, new DevExpress.XtraEditors.Controls.ButtonPressedEventArgs(repobtnStokSec.Buttons[0]));
                     break;
@@ -2993,8 +2672,7 @@ namespace NetSatis.BackOffice.Fiş
             var obj = sender as ButtonEdit;
             if (obj == null)
                 return;
-            switch (e.Button.Kind)
-            {
+            switch (e.Button.Kind) {
                 case DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph:
                     var frm = new frmStokSec(ref context, obj.Text, false);
                     frm.ShowDialog();
@@ -3021,15 +2699,13 @@ namespace NetSatis.BackOffice.Fiş
             if (obj == null)
                 return;
 
-            switch (e.Button.Kind)
-            {
+            switch (e.Button.Kind) {
                 case DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph:
 
                     string search = gridStokHareket.ActiveEditor.Text;
                     frmStokSec form = new frmStokSec(ref this.context, search);
                     form.ShowDialog();
-                    if (form.secildi)
-                    {
+                    if (form.secildi) {
                         //Buradan
                         var entity = form.secilen.FirstOrDefault();
                         StokHareketeEkle(entity);
@@ -3048,8 +2724,7 @@ namespace NetSatis.BackOffice.Fiş
             string search = gridStokHareket.ActiveEditor.Text;
             frmStokSec form = new frmStokSec(ref this.context, search);
             form.ShowDialog();
-            if (form.secildi)
-            {
+            if (form.secildi) {
                 //Buradan
                 var enti = form.secilen.First();
                 if (MinStokAltinda(enti)) return;
@@ -3067,8 +2742,7 @@ namespace NetSatis.BackOffice.Fiş
 
         private void repobtnBarkod_KeyDown(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode)
-            {
+            switch (e.KeyCode) {
                 case Keys.F6:
                 case Keys.F10:
                     repoStokSec_ButtonClick(sender, new DevExpress.XtraEditors.Controls.ButtonPressedEventArgs(repobtnStokSec.Buttons[0]));
@@ -3096,8 +2770,7 @@ namespace NetSatis.BackOffice.Fiş
         }
         async void StokHareketeEkle(Entities.Tables.Stok seciliStok)
         {
-            if (seciliStok == null)
-            {
+            if (seciliStok == null) {
                 MessageBox.Show("Barkod Bulunamadı..");
                 gridStokHareket.ActiveEditor.EditValue = gridStokHareket.ActiveEditor.OldEditValue;
                 gridStokHareket.FocusedColumn = gridStokHareket.Columns["Stok.StokKodu"];
@@ -3108,8 +2781,7 @@ namespace NetSatis.BackOffice.Fiş
             if (MinStokAltinda(entityStok)) return;
             StokHareket s = StokSec(entityStok);
             var row = gridStokHareket.GetRow(gridStokHareket.FocusedRowHandle) as StokHareket;
-            if (row != null)
-            {
+            if (row != null) {
                 row.Aciklama = s.Aciklama;
                 row.AraToplam = s.AraToplam;
                 row.Bagkur = s.Bagkur;
@@ -3153,11 +2825,8 @@ namespace NetSatis.BackOffice.Fiş
 
                 gridStokHareket.UpdateCurrentRow();
 
-            }
-            else
-            {
-                if (s.StokId != 0)
-                {
+            } else {
+                if (s.StokId != 0) {
                     row = s;
                 }
             }
@@ -3170,13 +2839,10 @@ namespace NetSatis.BackOffice.Fiş
         {
             var stok = e.Row as StokHareket;
 
-            if (stok.StokId == 0)
-            {
+            if (stok.StokId == 0) {
                 e.ErrorText = "Lütfen Stok Seçiniz!";
                 e.Valid = false;
-            }
-            else
-            {
+            } else {
                 e.ErrorText = null;
                 e.Valid = true;
 
@@ -3193,7 +2859,7 @@ namespace NetSatis.BackOffice.Fiş
 
         private void gridStokHareket_RowCellStyle(object sender, RowCellStyleEventArgs e)
         {
-           
+
         }
 
         private void gridStokHareket_KeyDown(object sender, KeyEventArgs e)
@@ -3202,10 +2868,8 @@ namespace NetSatis.BackOffice.Fiş
             if (gridStokHareket.RowCount == 0)
                 return;
 
-            if (gridStokHareket.FocusedColumn == gridStokHareket.Columns["ToplamTutar"])
-            {
-                if (e.KeyCode == Keys.Enter)
-                {
+            if (gridStokHareket.FocusedColumn == gridStokHareket.Columns["ToplamTutar"]) {
+                if (e.KeyCode == Keys.Enter) {
                     gridStokHareket.FocusedRowHandle = GridControl.NewItemRowHandle;
                     gridStokHareket.FocusedColumn = gridStokHareket.Columns["Stok.StokKodu"];
                 }
@@ -3214,16 +2878,11 @@ namespace NetSatis.BackOffice.Fiş
             var stok = gridStokHareket.GetRow(gridStokHareket.FocusedRowHandle) as StokHareket;
             if (stok == null || stok.StokId == 0)
                 return;
-            if (e.KeyCode == Keys.F8)
-            {
+            if (e.KeyCode == Keys.F8) {
                 seçiliStoğuDüzenleToolStripMenuItem.PerformClick();
-            }
-            else if (e.KeyCode == Keys.F12)
-            {
+            } else if (e.KeyCode == Keys.F12) {
                 seçiliStoğunHareketleriToolStripMenuItem.PerformClick();
-            }
-            else if (e.KeyCode == Keys.F10)
-            {
+            } else if (e.KeyCode == Keys.F10) {
                 stokKartınıAçToolStripMenuItem.PerformClick();
             }
         }
