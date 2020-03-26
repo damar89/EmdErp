@@ -21,6 +21,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Data.OleDb;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -74,6 +75,11 @@ namespace NetSatis.BackOffice.Fiş
 
             Yukle(fisKodu, fisTuru, cariGetir, entity, userId);
             gridStokHareket.SelectCell(GridControl.NewItemRowHandle, gridStokHareket.Columns["StokAdi"]);
+            if (txtFisTuru.Text != "Alış Faturası" && txtFisTuru.Text != "Alış İrsaliyesi")
+            {
+                colKarOrani.AppearanceCell.ForeColor = Color.White;
+                colSatisFiyat.OptionsColumn.AllowEdit = false;
+            }
 
         }
 
@@ -3183,6 +3189,11 @@ namespace NetSatis.BackOffice.Fiş
                 return;
             if (gridStokHareket.ActiveEditor.EditValue != gridStokHareket.ActiveEditor.OldEditValue)
                 gridStokHareket.ActiveEditor.EditValue = gridStokHareket.ActiveEditor.OldEditValue;
+        }
+
+        private void gridStokHareket_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+           
         }
 
         private void gridStokHareket_KeyDown(object sender, KeyEventArgs e)

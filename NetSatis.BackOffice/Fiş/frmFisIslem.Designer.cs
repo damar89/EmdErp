@@ -40,6 +40,10 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression1 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression2 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -95,6 +99,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject50 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject51 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject52 = new DevExpress.Utils.SerializableAppearanceObject();
+            this.colKarOrani = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
             this.lblBaslik = new DevExpress.XtraEditors.LabelControl();
             this.ımageList3 = new System.Windows.Forms.ImageList(this.components);
@@ -270,7 +275,6 @@
             this.colDipIskontoPayi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSatisFiyat = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colKarOrani = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.kdvDegisim = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -495,6 +499,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu3)).BeginInit();
             this.SuspendLayout();
+            // 
+            // colKarOrani
+            // 
+            this.colKarOrani.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colKarOrani.AppearanceCell.Options.UseFont = true;
+            this.colKarOrani.AppearanceCell.Options.UseTextOptions = true;
+            this.colKarOrani.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colKarOrani.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colKarOrani.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colKarOrani.AppearanceHeader.Options.UseFont = true;
+            this.colKarOrani.AppearanceHeader.Options.UseForeColor = true;
+            this.colKarOrani.AppearanceHeader.Options.UseTextOptions = true;
+            this.colKarOrani.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colKarOrani.Caption = "Kâr Oranı";
+            this.colKarOrani.DisplayFormat.FormatString = "% {0:n2}";
+            this.colKarOrani.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colKarOrani.FieldName = "KarOrani";
+            this.colKarOrani.Name = "colKarOrani";
+            this.colKarOrani.OptionsColumn.AllowEdit = false;
+            this.colKarOrani.Visible = true;
+            this.colKarOrani.VisibleIndex = 12;
+            this.colKarOrani.Width = 56;
             // 
             // ımageList2
             // 
@@ -2203,6 +2229,22 @@
             this.colSatisFiyat,
             this.colKarOrani});
             this.gridStokHareket.CustomizationFormBounds = new System.Drawing.Rectangle(1104, 317, 260, 232);
+            gridFormatRule1.Column = this.colKarOrani;
+            gridFormatRule1.ColumnApplyTo = this.colKarOrani;
+            gridFormatRule1.Name = "Format0";
+            formatConditionRuleExpression1.Appearance.BackColor = System.Drawing.Color.Lime;
+            formatConditionRuleExpression1.Appearance.Options.UseBackColor = true;
+            formatConditionRuleExpression1.Expression = "[KarOrani] > 0";
+            gridFormatRule1.Rule = formatConditionRuleExpression1;
+            gridFormatRule2.Column = this.colKarOrani;
+            gridFormatRule2.ColumnApplyTo = this.colKarOrani;
+            gridFormatRule2.Name = "Format1";
+            formatConditionRuleExpression2.Appearance.BackColor = System.Drawing.Color.LightSalmon;
+            formatConditionRuleExpression2.Appearance.Options.UseBackColor = true;
+            formatConditionRuleExpression2.Expression = "[KarOrani] < 0";
+            gridFormatRule2.Rule = formatConditionRuleExpression2;
+            this.gridStokHareket.FormatRules.Add(gridFormatRule1);
+            this.gridStokHareket.FormatRules.Add(gridFormatRule2);
             this.gridStokHareket.GridControl = this.gridContStokHareket;
             this.gridStokHareket.Name = "gridStokHareket";
             this.gridStokHareket.OptionsNavigation.AutoFocusNewRow = true;
@@ -2239,7 +2281,6 @@
             this.colStokKodu.Name = "colStokKodu";
             this.colStokKodu.Visible = true;
             this.colStokKodu.VisibleIndex = 2;
-            this.colStokKodu.Width = 72;
             // 
             // repobtnBarkod
             // 
@@ -2267,7 +2308,7 @@
             this.colStokAdi.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colStokAdi.Visible = true;
             this.colStokAdi.VisibleIndex = 3;
-            this.colStokAdi.Width = 187;
+            this.colStokAdi.Width = 180;
             // 
             // repobtnStokSec
             // 
@@ -2298,7 +2339,7 @@
             this.colBirimi.OptionsColumn.AllowEdit = false;
             this.colBirimi.Visible = true;
             this.colBirimi.VisibleIndex = 4;
-            this.colBirimi.Width = 51;
+            this.colBirimi.Width = 44;
             // 
             // colMiktar
             // 
@@ -2318,7 +2359,7 @@
             this.colMiktar.Name = "colMiktar";
             this.colMiktar.Visible = true;
             this.colMiktar.VisibleIndex = 5;
-            this.colMiktar.Width = 47;
+            this.colMiktar.Width = 49;
             // 
             // repoMiktar
             // 
@@ -2348,7 +2389,7 @@
             this.colKdv.Name = "colKdv";
             this.colKdv.Visible = true;
             this.colKdv.VisibleIndex = 6;
-            this.colKdv.Width = 36;
+            this.colKdv.Width = 35;
             // 
             // repoKdv
             // 
@@ -2379,7 +2420,7 @@
             this.colBirimFiyati.OptionsFilter.AllowFilter = false;
             this.colBirimFiyati.Visible = true;
             this.colBirimFiyati.VisibleIndex = 7;
-            this.colBirimFiyati.Width = 50;
+            this.colBirimFiyati.Width = 72;
             // 
             // repoFiyat
             // 
@@ -2414,7 +2455,7 @@
             this.colIndirimOrani.Name = "colIndirimOrani";
             this.colIndirimOrani.Visible = true;
             this.colIndirimOrani.VisibleIndex = 8;
-            this.colIndirimOrani.Width = 40;
+            this.colIndirimOrani.Width = 38;
             // 
             // repoIskonto
             // 
@@ -2442,7 +2483,7 @@
             this.colIndirimOrani3.Name = "colIndirimOrani3";
             this.colIndirimOrani3.Visible = true;
             this.colIndirimOrani3.VisibleIndex = 10;
-            this.colIndirimOrani3.Width = 45;
+            this.colIndirimOrani3.Width = 33;
             // 
             // colIndirimOrani2
             // 
@@ -2460,7 +2501,7 @@
             this.colIndirimOrani2.Name = "colIndirimOrani2";
             this.colIndirimOrani2.Visible = true;
             this.colIndirimOrani2.VisibleIndex = 9;
-            this.colIndirimOrani2.Width = 33;
+            this.colIndirimOrani2.Width = 44;
             // 
             // colDepoKodu
             // 
@@ -2539,7 +2580,7 @@
             this.colSil.Name = "colSil";
             this.colSil.Visible = true;
             this.colSil.VisibleIndex = 0;
-            this.colSil.Width = 22;
+            this.colSil.Width = 21;
             // 
             // repoSil
             // 
@@ -2595,8 +2636,8 @@
             this.colIndirimTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colIndirimTutar", "SUM={0:C2}")});
             this.colIndirimTutar.Visible = true;
-            this.colIndirimTutar.VisibleIndex = 12;
-            this.colIndirimTutar.Width = 67;
+            this.colIndirimTutar.VisibleIndex = 14;
+            this.colIndirimTutar.Width = 86;
             // 
             // colToplamTutar
             // 
@@ -2618,8 +2659,8 @@
             this.colToplamTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colToplamTutar", "SUM={0:C2}")});
             this.colToplamTutar.Visible = true;
-            this.colToplamTutar.VisibleIndex = 14;
-            this.colToplamTutar.Width = 161;
+            this.colToplamTutar.VisibleIndex = 16;
+            this.colToplamTutar.Width = 119;
             // 
             // rpsTutar
             // 
@@ -2682,8 +2723,8 @@
             this.colAraToplam.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colAraToplam", "SUM={0:C2}")});
             this.colAraToplam.Visible = true;
-            this.colAraToplam.VisibleIndex = 13;
-            this.colAraToplam.Width = 76;
+            this.colAraToplam.VisibleIndex = 15;
+            this.colAraToplam.Width = 79;
             // 
             // colKsizTutar
             // 
@@ -2821,8 +2862,8 @@
             this.colDipIskontoPayi.Name = "colDipIskontoPayi";
             this.colDipIskontoPayi.OptionsColumn.AllowEdit = false;
             this.colDipIskontoPayi.Visible = true;
-            this.colDipIskontoPayi.VisibleIndex = 11;
-            this.colDipIskontoPayi.Width = 71;
+            this.colDipIskontoPayi.VisibleIndex = 13;
+            this.colDipIskontoPayi.Width = 72;
             // 
             // gridColumn1
             // 
@@ -2839,27 +2880,27 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 1;
-            this.gridColumn1.Width = 44;
+            this.gridColumn1.Width = 46;
             // 
             // colSatisFiyat
             // 
+            this.colSatisFiyat.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colSatisFiyat.AppearanceCell.Options.UseFont = true;
+            this.colSatisFiyat.AppearanceCell.Options.UseTextOptions = true;
+            this.colSatisFiyat.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSatisFiyat.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colSatisFiyat.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colSatisFiyat.AppearanceHeader.Options.UseFont = true;
+            this.colSatisFiyat.AppearanceHeader.Options.UseForeColor = true;
+            this.colSatisFiyat.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSatisFiyat.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colSatisFiyat.Caption = "Satış Fiyat";
             this.colSatisFiyat.ColumnEdit = this.repoFiyat;
             this.colSatisFiyat.FieldName = "SatisFiyati";
             this.colSatisFiyat.Name = "colSatisFiyat";
             this.colSatisFiyat.Visible = true;
-            this.colSatisFiyat.VisibleIndex = 15;
-            // 
-            // colKarOrani
-            // 
-            this.colKarOrani.Caption = "Kâr Oranı";
-            this.colKarOrani.DisplayFormat.FormatString = "% {0:n2}";
-            this.colKarOrani.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colKarOrani.FieldName = "KarOrani";
-            this.colKarOrani.Name = "colKarOrani";
-            this.colKarOrani.OptionsColumn.AllowEdit = false;
-            this.colKarOrani.Visible = true;
-            this.colKarOrani.VisibleIndex = 16;
+            this.colSatisFiyat.VisibleIndex = 11;
+            this.colSatisFiyat.Width = 65;
             // 
             // repositoryItemButtonEdit6
             // 
