@@ -520,7 +520,7 @@
             this.colKarOrani.OptionsColumn.AllowEdit = false;
             this.colKarOrani.Visible = true;
             this.colKarOrani.VisibleIndex = 12;
-            this.colKarOrani.Width = 56;
+            this.colKarOrani.Width = 58;
             // 
             // ımageList2
             // 
@@ -672,7 +672,7 @@
             // cmbFiyat
             // 
             this.cmbFiyat.EditValue = "Fiyat 1";
-            this.cmbFiyat.Location = new System.Drawing.Point(515, 100);
+            this.cmbFiyat.Location = new System.Drawing.Point(515, 72);
             this.cmbFiyat.MenuManager = this.barManager1;
             this.cmbFiyat.Name = "cmbFiyat";
             this.cmbFiyat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -944,7 +944,7 @@
             // 
             // cmbOzelKod
             // 
-            this.cmbOzelKod.Location = new System.Drawing.Point(515, 52);
+            this.cmbOzelKod.Location = new System.Drawing.Point(515, 24);
             this.cmbOzelKod.MenuManager = this.barManager1;
             this.cmbOzelKod.Name = "cmbOzelKod";
             this.cmbOzelKod.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -955,7 +955,7 @@
             // 
             // cmbProje
             // 
-            this.cmbProje.Location = new System.Drawing.Point(515, 28);
+            this.cmbProje.Location = new System.Drawing.Point(515, 0);
             this.cmbProje.MenuManager = this.barManager1;
             this.cmbProje.Name = "cmbProje";
             this.cmbProje.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -973,7 +973,7 @@
             this.lblCariKod.Appearance.Options.UseTextOptions = true;
             this.lblCariKod.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblCariKod.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblCariKod.Location = new System.Drawing.Point(840, 112);
+            this.lblCariKod.Location = new System.Drawing.Point(840, 84);
             this.lblCariKod.Name = "lblCariKod";
             this.lblCariKod.Size = new System.Drawing.Size(293, 16);
             this.lblCariKod.StyleController = this.layoutControl2;
@@ -983,7 +983,7 @@
             // 
             this.txtFaturaUnvani.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFaturaUnvani.Location = new System.Drawing.Point(840, 152);
+            this.txtFaturaUnvani.Location = new System.Drawing.Point(840, 124);
             this.txtFaturaUnvani.Name = "txtFaturaUnvani";
             this.txtFaturaUnvani.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtFaturaUnvani.Properties.Appearance.Options.UseFont = true;
@@ -1000,7 +1000,7 @@
             // toggleCariDevir
             // 
             this.toggleCariDevir.EditValue = true;
-            this.toggleCariDevir.Location = new System.Drawing.Point(515, 4);
+            this.toggleCariDevir.Location = new System.Drawing.Point(515, -24);
             this.toggleCariDevir.MenuManager = this.barManager1;
             this.toggleCariDevir.Name = "toggleCariDevir";
             this.toggleCariDevir.Properties.AutoHeight = false;
@@ -1021,7 +1021,7 @@
             this.lblCariAd.Appearance.Options.UseTextOptions = true;
             this.lblCariAd.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblCariAd.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblCariAd.Location = new System.Drawing.Point(840, 132);
+            this.lblCariAd.Location = new System.Drawing.Point(840, 104);
             this.lblCariAd.Name = "lblCariAd";
             this.lblCariAd.Size = new System.Drawing.Size(293, 16);
             this.lblCariAd.StyleController = this.layoutControl2;
@@ -1029,7 +1029,7 @@
             // 
             // toggleKDVDahil
             // 
-            this.toggleKDVDahil.Location = new System.Drawing.Point(294, 169);
+            this.toggleKDVDahil.Location = new System.Drawing.Point(294, 141);
             this.toggleKDVDahil.MenuManager = this.barManager1;
             this.toggleKDVDahil.Name = "toggleKDVDahil";
             this.toggleKDVDahil.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
@@ -1046,7 +1046,7 @@
             this.lblBorc.Appearance.Options.UseTextOptions = true;
             this.lblBorc.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblBorc.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblBorc.Location = new System.Drawing.Point(907, 78);
+            this.lblBorc.Location = new System.Drawing.Point(907, 50);
             this.lblBorc.Name = "lblBorc";
             this.lblBorc.Size = new System.Drawing.Size(226, 13);
             this.lblBorc.StyleController = this.layoutControl2;
@@ -1055,7 +1055,7 @@
             // 
             // toggleMuhtasilmi
             // 
-            this.toggleMuhtasilmi.Location = new System.Drawing.Point(584, 169);
+            this.toggleMuhtasilmi.Location = new System.Drawing.Point(584, 141);
             this.toggleMuhtasilmi.Name = "toggleMuhtasilmi";
             this.toggleMuhtasilmi.Properties.AutoHeight = false;
             this.toggleMuhtasilmi.Properties.OffText = "Hayır";
@@ -1070,7 +1070,7 @@
             this.btnKod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.btnKod.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
-            this.btnKod.Location = new System.Drawing.Point(723, 169);
+            this.btnKod.Location = new System.Drawing.Point(723, 141);
             this.btnKod.Name = "btnKod";
             this.btnKod.Size = new System.Drawing.Size(60, 22);
             this.btnKod.StyleController = this.layoutControl2;
@@ -1085,7 +1085,7 @@
             this.lblBakiye.Appearance.Options.UseTextOptions = true;
             this.lblBakiye.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblBakiye.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblBakiye.Location = new System.Drawing.Point(907, 95);
+            this.lblBakiye.Location = new System.Drawing.Point(907, 67);
             this.lblBakiye.Name = "lblBakiye";
             this.lblBakiye.Size = new System.Drawing.Size(225, 13);
             this.lblBakiye.StyleController = this.layoutControl2;
@@ -1099,7 +1099,7 @@
             this.lblAlacak.Appearance.Options.UseTextOptions = true;
             this.lblAlacak.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblAlacak.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblAlacak.Location = new System.Drawing.Point(907, 61);
+            this.lblAlacak.Location = new System.Drawing.Point(907, 33);
             this.lblAlacak.Name = "lblAlacak";
             this.lblAlacak.Size = new System.Drawing.Size(226, 13);
             this.lblAlacak.StyleController = this.layoutControl2;
@@ -1115,7 +1115,7 @@
             this.btnTemizle.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.btnTemizle.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnTemizle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnTemizle.ImageOptions.SvgImage")));
-            this.btnTemizle.Location = new System.Drawing.Point(840, 4);
+            this.btnTemizle.Location = new System.Drawing.Point(840, -24);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(144, 53);
             this.btnTemizle.StyleController = this.layoutControl2;
@@ -1127,7 +1127,7 @@
             // 
             this.txtFisTuru.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtFisTuru.Location = new System.Drawing.Point(71, 169);
+            this.txtFisTuru.Location = new System.Drawing.Point(71, 141);
             this.txtFisTuru.Name = "txtFisTuru";
             this.txtFisTuru.Properties.ReadOnly = true;
             this.txtFisTuru.Size = new System.Drawing.Size(219, 20);
@@ -1137,7 +1137,7 @@
             // cmbTipi
             // 
             this.cmbTipi.EditValue = "A";
-            this.cmbTipi.Location = new System.Drawing.Point(515, 76);
+            this.cmbTipi.Location = new System.Drawing.Point(515, 48);
             this.cmbTipi.MenuManager = this.barManager1;
             this.cmbTipi.Name = "cmbTipi";
             this.cmbTipi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1149,7 +1149,7 @@
             // 
             // txtAciklama
             // 
-            this.txtAciklama.Location = new System.Drawing.Point(71, 124);
+            this.txtAciklama.Location = new System.Drawing.Point(71, 96);
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Size = new System.Drawing.Size(712, 41);
             this.txtAciklama.StyleController = this.layoutControl2;
@@ -1160,7 +1160,7 @@
             this.cmbTarih.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cmbTarih.EditValue = null;
-            this.cmbTarih.Location = new System.Drawing.Point(71, 76);
+            this.cmbTarih.Location = new System.Drawing.Point(71, 48);
             this.cmbTarih.Name = "cmbTarih";
             this.cmbTarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
@@ -1193,7 +1193,7 @@
             this.btnCariSec.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.btnCariSec.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopLeft;
             this.btnCariSec.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCariSec.ImageOptions.SvgImage")));
-            this.btnCariSec.Location = new System.Drawing.Point(988, 4);
+            this.btnCariSec.Location = new System.Drawing.Point(988, -24);
             this.btnCariSec.Name = "btnCariSec";
             this.btnCariSec.Size = new System.Drawing.Size(144, 53);
             this.btnCariSec.StyleController = this.layoutControl2;
@@ -1206,7 +1206,7 @@
             this.cmbVadeTarihi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cmbVadeTarihi.EditValue = null;
-            this.cmbVadeTarihi.Location = new System.Drawing.Point(71, 100);
+            this.cmbVadeTarihi.Location = new System.Drawing.Point(71, 72);
             this.cmbVadeTarihi.Name = "cmbVadeTarihi";
             this.cmbVadeTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
@@ -1233,7 +1233,7 @@
             this.txtKod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtKod.Enabled = false;
-            this.txtKod.Location = new System.Drawing.Point(71, 4);
+            this.txtKod.Location = new System.Drawing.Point(71, -24);
             this.txtKod.Name = "txtKod";
             this.txtKod.Size = new System.Drawing.Size(294, 20);
             this.txtKod.StyleController = this.layoutControl2;
@@ -1243,7 +1243,7 @@
             // 
             this.txtBelgeNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBelgeNo.Location = new System.Drawing.Point(71, 52);
+            this.txtBelgeNo.Location = new System.Drawing.Point(71, 24);
             this.txtBelgeNo.Name = "txtBelgeNo";
             this.txtBelgeNo.Properties.MaxLength = 20;
             this.txtBelgeNo.Size = new System.Drawing.Size(294, 20);
@@ -1254,7 +1254,7 @@
             // 
             this.txtSira.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtSira.Location = new System.Drawing.Point(229, 28);
+            this.txtSira.Location = new System.Drawing.Point(229, 0);
             this.txtSira.Name = "txtSira";
             this.txtSira.Properties.Appearance.Options.UseTextOptions = true;
             this.txtSira.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -1267,7 +1267,7 @@
             // 
             this.txtSeri.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtSeri.Location = new System.Drawing.Point(71, 28);
+            this.txtSeri.Location = new System.Drawing.Point(71, 0);
             this.txtSeri.Name = "txtSeri";
             this.txtSeri.Properties.MaxLength = 20;
             this.txtSeri.Size = new System.Drawing.Size(154, 20);
@@ -2281,6 +2281,7 @@
             this.colStokKodu.Name = "colStokKodu";
             this.colStokKodu.Visible = true;
             this.colStokKodu.VisibleIndex = 2;
+            this.colStokKodu.Width = 74;
             // 
             // repobtnBarkod
             // 
@@ -2308,7 +2309,7 @@
             this.colStokAdi.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colStokAdi.Visible = true;
             this.colStokAdi.VisibleIndex = 3;
-            this.colStokAdi.Width = 180;
+            this.colStokAdi.Width = 178;
             // 
             // repobtnStokSec
             // 
@@ -2339,7 +2340,7 @@
             this.colBirimi.OptionsColumn.AllowEdit = false;
             this.colBirimi.Visible = true;
             this.colBirimi.VisibleIndex = 4;
-            this.colBirimi.Width = 44;
+            this.colBirimi.Width = 43;
             // 
             // colMiktar
             // 
@@ -2359,7 +2360,7 @@
             this.colMiktar.Name = "colMiktar";
             this.colMiktar.Visible = true;
             this.colMiktar.VisibleIndex = 5;
-            this.colMiktar.Width = 49;
+            this.colMiktar.Width = 48;
             // 
             // repoMiktar
             // 
@@ -2389,7 +2390,7 @@
             this.colKdv.Name = "colKdv";
             this.colKdv.Visible = true;
             this.colKdv.VisibleIndex = 6;
-            this.colKdv.Width = 35;
+            this.colKdv.Width = 34;
             // 
             // repoKdv
             // 
@@ -2420,7 +2421,7 @@
             this.colBirimFiyati.OptionsFilter.AllowFilter = false;
             this.colBirimFiyati.Visible = true;
             this.colBirimFiyati.VisibleIndex = 7;
-            this.colBirimFiyati.Width = 72;
+            this.colBirimFiyati.Width = 71;
             // 
             // repoFiyat
             // 
@@ -2455,7 +2456,7 @@
             this.colIndirimOrani.Name = "colIndirimOrani";
             this.colIndirimOrani.Visible = true;
             this.colIndirimOrani.VisibleIndex = 8;
-            this.colIndirimOrani.Width = 38;
+            this.colIndirimOrani.Width = 37;
             // 
             // repoIskonto
             // 
@@ -2483,7 +2484,7 @@
             this.colIndirimOrani3.Name = "colIndirimOrani3";
             this.colIndirimOrani3.Visible = true;
             this.colIndirimOrani3.VisibleIndex = 10;
-            this.colIndirimOrani3.Width = 33;
+            this.colIndirimOrani3.Width = 37;
             // 
             // colIndirimOrani2
             // 
@@ -2501,7 +2502,7 @@
             this.colIndirimOrani2.Name = "colIndirimOrani2";
             this.colIndirimOrani2.Visible = true;
             this.colIndirimOrani2.VisibleIndex = 9;
-            this.colIndirimOrani2.Width = 44;
+            this.colIndirimOrani2.Width = 43;
             // 
             // colDepoKodu
             // 
@@ -2637,7 +2638,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colIndirimTutar", "SUM={0:C2}")});
             this.colIndirimTutar.Visible = true;
             this.colIndirimTutar.VisibleIndex = 14;
-            this.colIndirimTutar.Width = 86;
+            this.colIndirimTutar.Width = 83;
             // 
             // colToplamTutar
             // 
@@ -2660,7 +2661,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colToplamTutar", "SUM={0:C2}")});
             this.colToplamTutar.Visible = true;
             this.colToplamTutar.VisibleIndex = 16;
-            this.colToplamTutar.Width = 119;
+            this.colToplamTutar.Width = 111;
             // 
             // rpsTutar
             // 
@@ -2724,7 +2725,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colAraToplam", "SUM={0:C2}")});
             this.colAraToplam.Visible = true;
             this.colAraToplam.VisibleIndex = 15;
-            this.colAraToplam.Width = 79;
+            this.colAraToplam.Width = 91;
             // 
             // colKsizTutar
             // 
@@ -2863,7 +2864,7 @@
             this.colDipIskontoPayi.OptionsColumn.AllowEdit = false;
             this.colDipIskontoPayi.Visible = true;
             this.colDipIskontoPayi.VisibleIndex = 13;
-            this.colDipIskontoPayi.Width = 72;
+            this.colDipIskontoPayi.Width = 69;
             // 
             // gridColumn1
             // 
@@ -2880,7 +2881,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 1;
-            this.gridColumn1.Width = 46;
+            this.gridColumn1.Width = 53;
             // 
             // colSatisFiyat
             // 
@@ -2900,7 +2901,7 @@
             this.colSatisFiyat.Name = "colSatisFiyat";
             this.colSatisFiyat.Visible = true;
             this.colSatisFiyat.VisibleIndex = 11;
-            this.colSatisFiyat.Width = 65;
+            this.colSatisFiyat.Width = 63;
             // 
             // repositoryItemButtonEdit6
             // 
