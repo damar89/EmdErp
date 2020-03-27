@@ -22,7 +22,7 @@ namespace NetSatis.BackOffice.Tanım
 
         private void FirmaSabitleri_Load(object sender, EventArgs e)
         {
-            gridControl1.DataSource = firmasabitDal.GetAll(context);
+            gridControl1.DataSource = firmasabitDal.StokListele(context);
         }
 
         private void btnSil_Click(object sender, EventArgs e)

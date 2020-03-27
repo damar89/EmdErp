@@ -885,7 +885,7 @@ namespace NetSatis.BackOffice.Stok
                 var list = db.Stoklar.Where(x => x.StokKodu == txtKod.Text).FirstOrDefault();
                 secilen = list.Id;
             }
-            var hareket = dal.GetAll(context, c => c.StokId == secilen);
+            var hareket = dal.StokListele(context, c => c.StokId == secilen);
             if (hareket.Count > 0) {
                 MessageBox.Show("Hareket görmüş bir stok silinemez.");
                 return;

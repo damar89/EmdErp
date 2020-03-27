@@ -26,7 +26,7 @@ namespace NetSatis.BackOffice.Masraf
         }
         private void MasrafListele()
         {
-            gridControl1.DataSource = masrafDAL.GetAll(context);
+            gridControl1.DataSource = masrafDAL.StokListele(context);
 
         }
 

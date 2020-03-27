@@ -26,7 +26,7 @@ namespace NetSatis.BackOffice.Depo
 
         private void Guncelle()
         {
-            gridContHareket.DataSource = stokHareketDal.GetAll(context, c => c.DepoId == _depoId);
+            gridContHareket.DataSource = stokHareketDal.StokListele(context, c => c.DepoId == _depoId);
             gridContDepoStok.DataSource = stokHareketDal.DepoStokListele(context,_depoId);
             gridContIstatistik.DataSource = stokHareketDal.DepoIstatistlikListele(context, _depoId);
 

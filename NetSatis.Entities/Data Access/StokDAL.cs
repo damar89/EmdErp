@@ -111,6 +111,12 @@ namespace NetSatis.Entities.Data_Access
                 return tablo;
             }
         }
+
+        public object StokListeleMiktar()
+        {
+            throw new NotImplementedException();
+        }
+
         public object StokListeleMiktar(NetSatisContext context, string MevcutStok)
         {
             var tablo = context.Stoklar.GroupJoin(context.StokHareketleri, c => c.Id, c => c.StokId,

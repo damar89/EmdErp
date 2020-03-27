@@ -26,7 +26,7 @@ namespace NetSatis.BackOffice.Fiş
         private void frmFaturaGonder_Load(object sender, EventArgs e)
         {
             context = new NetSatisContext();
-            gridContFisler.DataSource = fisDal.GetAll(context);
+            gridContFisler.DataSource = fisDal.StokListele(context);
         }
         public void FaturaGonder()
         {

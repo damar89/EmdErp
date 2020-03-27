@@ -28,7 +28,7 @@ namespace NetSatis.BackOffice.Tanım
 
         public void Listele()
         {
-            gridContDepolar.DataSource = ozelkodDal.GetAll(context);
+            gridContDepolar.DataSource = ozelkodDal.StokListele(context);
 
         }
 

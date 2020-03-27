@@ -33,7 +33,7 @@ namespace NetSatis.BackOffice.Tanım
 
         public void Listele()
         {
-            gridContKategoriler.DataSource = kategoriDal.GetAll(context);
+            gridContKategoriler.DataSource = kategoriDal.StokListele(context);
 
         }
 

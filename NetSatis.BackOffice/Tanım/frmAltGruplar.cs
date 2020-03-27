@@ -33,7 +33,7 @@ namespace NetSatis.BackOffice.Tanım
 
         public void Listele()
         {
-                 var fullList = altgrupDal.GetAll(context);
+                 var fullList = altgrupDal.StokListele(context);
             if (_anagrupkodu != "")
             {
                 gridContAltGruplar.DataSource = fullList.Where(x => x.Kod.StartsWith(_anagrupkodu + "."));

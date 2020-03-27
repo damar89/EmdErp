@@ -49,7 +49,7 @@ namespace NetSatis.BackOffice.Stok
                 {
                     StokHareketDAL dal = new StokHareketDAL();
                     secilen = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
-                    var hareket = dal.GetAll(context, c => c.StokId == secilen);
+                    var hareket = dal.StokListele(context, c => c.StokId == secilen);
                     if (hareket.Count > 0)
                     {
                         MessageBox.Show("Hareket görmüş bir stok silinemez.");

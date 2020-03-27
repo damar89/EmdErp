@@ -18,11 +18,11 @@ namespace NetSatis.BackOffice.Raporlar
         public frmTarihliPerakende()
         {
             InitializeComponent();
-             lokKategori.Properties.DataSource = kategoriDal.GetAll(context);
-            lookAnaGrup.Properties.DataSource = anagrupDal.GetAll(context);
-            lookAltGrup.Properties.DataSource = altgrupDal.GetAll(context);
-            lookMarka.Properties.DataSource = stokDal.GetAll(context);
-            lookUretici.Properties.DataSource = stokDal.GetAll(context);
+             lokKategori.Properties.DataSource = kategoriDal.StokListele(context);
+            lookAnaGrup.Properties.DataSource = anagrupDal.StokListele(context);
+            lookAltGrup.Properties.DataSource = altgrupDal.StokListele(context);
+            lookMarka.Properties.DataSource = stokDal.StokListele(context);
+            lookUretici.Properties.DataSource = stokDal.StokListele(context);
             dtpBaslangic.DateTime = new DateTime(DateTime.Now.Year, 1, 1, 00, 00, 00);
             dtpBitis.DateTime = new DateTime(DateTime.Now.Year, 12, 31, 23, 59, 59);
             dtpBaslangic.Properties.Mask.MaskType = MaskType.DateTimeAdvancingCaret;

@@ -27,7 +27,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
                 bakiye = cariDal.cariBakiyesi(context, fisBilgi.CariId.Value).Bakiye;
 
 
-            ObjectDataSource stokHareketDataSource = new ObjectDataSource { DataSource = stokHareketDal.GetAll(context, c => c.FisKodu == fisKodu) };
+            ObjectDataSource stokHareketDataSource = new ObjectDataSource { DataSource = stokHareketDal.StokListele(context, c => c.FisKodu == fisKodu) };
 
             //fatura başlık
 

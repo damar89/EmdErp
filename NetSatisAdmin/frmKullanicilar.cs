@@ -19,7 +19,7 @@ namespace NetSatisAdmin
 
         private void Guncelle()
         {
-            gridControl1.DataSource = kullaniciDal.GetAll(context);
+            gridControl1.DataSource = kullaniciDal.StokListele(context);
         }
 
         private void btnKapat_Click(object sender, EventArgs e)

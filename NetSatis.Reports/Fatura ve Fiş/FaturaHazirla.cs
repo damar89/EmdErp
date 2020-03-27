@@ -21,7 +21,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             var cariDal = new CariDAL();
 
             Fis fisBilgi = fisDal.GetByFilter(context, c => c.FisKodu == FisKodu);
-            List<StokHareket> stokHareketleri = stokHareketDal.GetAll(context, c => c.FisKodu == FisKodu);
+            List<StokHareket> stokHareketleri = stokHareketDal.StokListele(context, c => c.FisKodu == FisKodu);
 
             decimal? bakiye = cariDal.cariBakiyesi(context, Convert.ToInt32(fisBilgi.CariId))?.Bakiye;
 
@@ -183,7 +183,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             FisDAL fisDal = new FisDAL();
 
             Fis fisBilgi = fisDal.GetByFilter(context, c => c.FisKodu == FisKodu);
-            List<StokHareket> stokHareketleri = stokHareketDal.GetAll(context, c => c.FisKodu == FisKodu);
+            List<StokHareket> stokHareketleri = stokHareketDal.StokListele(context, c => c.FisKodu == FisKodu);
 
             var cariDal = new CariDAL();
             decimal? bakiye = cariDal.cariBakiyesi(context, Convert.ToInt32(fisBilgi.CariId))?.Bakiye;
@@ -335,7 +335,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             FisDAL fisDal = new FisDAL();
 
             Fis fisBilgi = fisDal.GetByFilter(context, c => c.FisKodu == FisKodu);
-            List<StokHareket> stokHareketleri = stokHareketDal.GetAll(context, c => c.FisKodu == FisKodu);
+            List<StokHareket> stokHareketleri = stokHareketDal.StokListele(context, c => c.FisKodu == FisKodu);
 
 
             Dictionary<int, decimal> KDVLer = new Dictionary<int, decimal>();
@@ -488,7 +488,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             FisDAL fisDal = new FisDAL();
 
             Fis fisBilgi = fisDal.GetByFilter(context, c => c.FisKodu == FisKodu);
-            List<StokHareket> stokHareketleri = stokHareketDal.GetAll(context, c => c.FisKodu == FisKodu);
+            List<StokHareket> stokHareketleri = stokHareketDal.StokListele(context, c => c.FisKodu == FisKodu);
 
 
             Dictionary<int, decimal> KDVLer = new Dictionary<int, decimal>();
@@ -641,7 +641,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             FisDAL fisDal = new FisDAL();
 
             Fis fisBilgi = fisDal.GetByFilter(context, c => c.FisKodu == FisKodu);
-            List<StokHareket> stokHareketleri = stokHareketDal.GetAll(context, c => c.FisKodu == FisKodu);
+            List<StokHareket> stokHareketleri = stokHareketDal.StokListele(context, c => c.FisKodu == FisKodu);
 
 
             Dictionary<int, decimal> KDVLer = new Dictionary<int, decimal>();
@@ -781,7 +781,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             FisDAL fisDal = new FisDAL();
 
             Fis fisBilgi = fisDal.GetByFilter(context, c => c.FisKodu == FisKodu);
-            List<StokHareket> stokHareketleri = stokHareketDal.GetAll(context, c => c.FisKodu == FisKodu);
+            List<StokHareket> stokHareketleri = stokHareketDal.StokListele(context, c => c.FisKodu == FisKodu);
 
 
             Dictionary<int, decimal> KDVLer = new Dictionary<int, decimal>();

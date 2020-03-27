@@ -18,10 +18,13 @@ namespace NetSatis.FrontOffice
             InitializeComponent();
             context = new NetSatisContext();
             txtBarkod.Focus();
-        }
+      
+                   }
         private void frmFiyatGor_Load(object sender, EventArgs e)
         {
             txtBarkod.Focus();
+
+
         }
         private void bindingSource()
         {

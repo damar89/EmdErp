@@ -47,8 +47,8 @@ namespace NetSatis.BackOffice.Fiş
         {
             InitializeComponent();
             gridContStokHareket.DataSource = context.StokHareketleri.Local.ToBindingList();
-            lookDepoGiris.Properties.DataSource = depoDal.GetAll(context);
-            lookdDepoCikis.Properties.DataSource = depoDal.GetAll(context);
+            lookDepoGiris.Properties.DataSource = depoDal.StokListele(context);
+            lookdDepoCikis.Properties.DataSource = depoDal.StokListele(context);
             kodOlustur = new CodeTool(this, CodeTool.Table.Fis);
             kodOlustur.BarButonOlustur();
 
