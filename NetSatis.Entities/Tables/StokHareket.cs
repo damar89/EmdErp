@@ -57,6 +57,8 @@ namespace NetSatis.Entities.Tables
         public decimal? KarOrani
         {
             get {
+                if (!SatisFiyati.HasValue)
+                    return 0;
                 if (!BirimFiyati.HasValue || BirimFiyati.Value == 0)
                     return SatisFiyati.Value * 100;
 
