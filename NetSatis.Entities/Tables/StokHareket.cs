@@ -60,6 +60,7 @@ namespace NetSatis.Entities.Tables
                 if (!SatisFiyati.HasValue)
                     return 0;
                 if (!BirimFiyati.HasValue || BirimFiyati.Value == 0)
+                
                     return SatisFiyati.Value * 100;
 
                 var res = (SatisFiyati.Value * 100) / BirimFiyati.Value;
