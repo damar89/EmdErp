@@ -604,6 +604,9 @@ namespace NetSatis.BackOffice.Stok
                 _entity.KayitTarihi = Convert.ToDateTime(DateTime.Now);
                 _entity.SaveUser = frmAnaMenu.UserId;
             }
+            var r = stokDal.StokAdetler(context, _entity.Id);
+            if(r.HasValue)
+            lblMiktar.Text = r.Value.ToString("n2");
         }
         private void btnKaydetYeni_Click(object sender, EventArgs e)
         {

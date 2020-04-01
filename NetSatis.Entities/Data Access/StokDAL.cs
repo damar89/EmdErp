@@ -111,6 +111,19 @@ namespace NetSatis.Entities.Data_Access
                 return tablo;
             }
         }
+        public decimal? StokAdetler(NetSatisContext context, int StokId)
+        {
+            var res = from s in context.Stoklar.Where(x=>x.Id==StokId)
+                      join ss in context.StokHareketleri.GroupBy(x=>x.StokId) on s.Id equals ss.Key
+                      select new
+                      {
+                          MevcutStok = (ss.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0) -
+                                   (ss.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Satış Faturası2")
+                                   || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")
+                                   ).Sum(c => c.Miktar) ?? 0)
+                      };
+            return res.FirstOrDefault()?.MevcutStok;
+        }
 
         public object StokListeleMiktar()
         {

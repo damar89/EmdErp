@@ -270,6 +270,8 @@ namespace NetSatis.BackOffice.Stok
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.lblMiktar = new DevExpress.XtraEditors.LabelControl();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
@@ -381,6 +383,7 @@ namespace NetSatis.BackOffice.Stok
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBaslik
@@ -461,6 +464,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // layoutControl2
             // 
+            this.layoutControl2.Controls.Add(this.lblMiktar);
             this.layoutControl2.Controls.Add(this.calcwebBayiSatisFiyat);
             this.layoutControl2.Controls.Add(this.calcDevirGirisi);
             this.layoutControl2.Controls.Add(this.togWeb);
@@ -544,7 +548,7 @@ namespace NetSatis.BackOffice.Stok
             this.togWeb.Name = "togWeb";
             this.togWeb.Properties.OffText = "Hayır";
             this.togWeb.Properties.OnText = "Evet";
-            this.togWeb.Size = new System.Drawing.Size(386, 18);
+            this.togWeb.Size = new System.Drawing.Size(238, 18);
             this.togWeb.StyleController = this.layoutControl2;
             this.togWeb.TabIndex = 30;
             // 
@@ -1717,7 +1721,8 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlGroup7.GroupStyle = DevExpress.Utils.GroupStyle.Title;
             this.layoutControlGroup7.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem45,
-            this.layoutControlItem46});
+            this.layoutControlItem46,
+            this.layoutControlItem12});
             this.layoutControlGroup7.Location = new System.Drawing.Point(0, 475);
             this.layoutControlGroup7.Name = "layoutControlGroup7";
             this.layoutControlGroup7.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
@@ -1741,7 +1746,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem46.Control = this.togWeb;
             this.layoutControlItem46.Location = new System.Drawing.Point(293, 0);
             this.layoutControlItem46.Name = "layoutControlItem46";
-            this.layoutControlItem46.Size = new System.Drawing.Size(471, 24);
+            this.layoutControlItem46.Size = new System.Drawing.Size(323, 24);
             this.layoutControlItem46.Text = "Webe Gönder";
             this.layoutControlItem46.TextSize = new System.Drawing.Size(78, 13);
             // 
@@ -2007,6 +2012,26 @@ namespace NetSatis.BackOffice.Stok
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
+            // lblMiktar
+            // 
+            this.lblMiktar.Appearance.Options.UseTextOptions = true;
+            this.lblMiktar.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.lblMiktar.Location = new System.Drawing.Point(705, 505);
+            this.lblMiktar.Name = "lblMiktar";
+            this.lblMiktar.Size = new System.Drawing.Size(63, 13);
+            this.lblMiktar.StyleController = this.layoutControl2;
+            this.lblMiktar.TabIndex = 31;
+            this.lblMiktar.Text = "labelControl1";
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.lblMiktar;
+            this.layoutControlItem12.Location = new System.Drawing.Point(616, 0);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(148, 24);
+            this.layoutControlItem12.Text = "Stok Miktarı";
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(78, 13);
+            // 
             // frmStokIslem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2137,6 +2162,7 @@ namespace NetSatis.BackOffice.Stok
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2267,5 +2293,7 @@ namespace NetSatis.BackOffice.Stok
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
         private ButtonEdit txtStokAdi;
+        private LabelControl lblMiktar;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
     }
 }
