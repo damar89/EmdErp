@@ -31,8 +31,18 @@ namespace NetSatis.BackOffice.Stok
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions24 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStokIslem));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject93 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject94 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject95 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject96 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions25 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject97 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject98 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject99 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject100 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -137,16 +147,6 @@ namespace NetSatis.BackOffice.Stok
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject82 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject83 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject84 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions22 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject85 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject86 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject87 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject88 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions23 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject89 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject90 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject91 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject92 = new DevExpress.Utils.SerializableAppearanceObject();
             this.lblBaslik = new DevExpress.XtraEditors.LabelControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
@@ -154,6 +154,7 @@ namespace NetSatis.BackOffice.Stok
             this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.calcwebBayiSatisFiyat = new DevExpress.XtraEditors.CalcEdit();
+            this.lblMiktar = new DevExpress.XtraEditors.ComboBoxEdit();
             this.calcDevirGirisi = new DevExpress.XtraEditors.ComboBoxEdit();
             this.togWeb = new DevExpress.XtraEditors.ToggleSwitch();
             this.calcZirai = new DevExpress.XtraEditors.CalcEdit();
@@ -244,8 +245,9 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem44 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlGroup7 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem45 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem46 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem45 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.gridContBarkod = new DevExpress.XtraGrid.GridControl();
@@ -270,8 +272,6 @@ namespace NetSatis.BackOffice.Stok
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.lblMiktar = new DevExpress.XtraEditors.LabelControl();
-            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
@@ -280,6 +280,7 @@ namespace NetSatis.BackOffice.Stok
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calcwebBayiSatisFiyat.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblMiktar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcDevirGirisi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.togWeb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcZirai.Properties)).BeginInit();
@@ -364,8 +365,9 @@ namespace NetSatis.BackOffice.Stok
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.tabNavigationPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridContBarkod)).BeginInit();
@@ -383,7 +385,6 @@ namespace NetSatis.BackOffice.Stok
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBaslik
@@ -464,8 +465,8 @@ namespace NetSatis.BackOffice.Stok
             // 
             // layoutControl2
             // 
-            this.layoutControl2.Controls.Add(this.lblMiktar);
             this.layoutControl2.Controls.Add(this.calcwebBayiSatisFiyat);
+            this.layoutControl2.Controls.Add(this.lblMiktar);
             this.layoutControl2.Controls.Add(this.calcDevirGirisi);
             this.layoutControl2.Controls.Add(this.togWeb);
             this.layoutControl2.Controls.Add(this.calcZirai);
@@ -514,19 +515,36 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcwebBayiSatisFiyat
             // 
-            this.calcwebBayiSatisFiyat.Location = new System.Drawing.Point(587, 453);
+            this.calcwebBayiSatisFiyat.Location = new System.Drawing.Point(609, 453);
             this.calcwebBayiSatisFiyat.Name = "calcwebBayiSatisFiyat";
             this.calcwebBayiSatisFiyat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcwebBayiSatisFiyat.Size = new System.Drawing.Size(169, 20);
+            this.calcwebBayiSatisFiyat.Size = new System.Drawing.Size(147, 20);
             this.calcwebBayiSatisFiyat.StyleController = this.layoutControl2;
             this.calcwebBayiSatisFiyat.TabIndex = 28;
             this.calcwebBayiSatisFiyat.Enter += new System.EventHandler(this.calcwebBayiSatisFiyat_Enter);
             this.calcwebBayiSatisFiyat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.calcSatisFiyat3_KeyDown);
             // 
+            // lblMiktar
+            // 
+            this.lblMiktar.Location = new System.Drawing.Point(615, 505);
+            this.lblMiktar.Name = "lblMiktar";
+            this.lblMiktar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lblMiktar.Properties.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "8",
+            "18"});
+            this.lblMiktar.Properties.ReadOnly = true;
+            this.lblMiktar.Size = new System.Drawing.Size(153, 20);
+            this.lblMiktar.StyleController = this.layoutControl2;
+            this.lblMiktar.TabIndex = 29;
+            this.lblMiktar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.calcSatisKdv_KeyDown);
+            // 
             // calcDevirGirisi
             // 
-            this.calcDevirGirisi.Location = new System.Drawing.Point(89, 505);
+            this.calcDevirGirisi.Location = new System.Drawing.Point(111, 505);
             this.calcDevirGirisi.Name = "calcDevirGirisi";
             this.calcDevirGirisi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -535,7 +553,7 @@ namespace NetSatis.BackOffice.Stok
             "1",
             "8",
             "18"});
-            this.calcDevirGirisi.Size = new System.Drawing.Size(208, 20);
+            this.calcDevirGirisi.Size = new System.Drawing.Size(138, 20);
             this.calcDevirGirisi.StyleController = this.layoutControl2;
             this.calcDevirGirisi.TabIndex = 29;
             this.calcDevirGirisi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.calcSatisKdv_KeyDown);
@@ -544,11 +562,11 @@ namespace NetSatis.BackOffice.Stok
             // 
             this.togWeb.EditValue = true;
             this.togWeb.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.togWeb.Location = new System.Drawing.Point(382, 505);
+            this.togWeb.Location = new System.Drawing.Point(356, 505);
             this.togWeb.Name = "togWeb";
             this.togWeb.Properties.OffText = "Hayır";
             this.togWeb.Properties.OnText = "Evet";
-            this.togWeb.Size = new System.Drawing.Size(238, 18);
+            this.togWeb.Size = new System.Drawing.Size(152, 18);
             this.togWeb.StyleController = this.layoutControl2;
             this.togWeb.TabIndex = 30;
             // 
@@ -567,11 +585,11 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcSatisFiyat3
             // 
-            this.calcSatisFiyat3.Location = new System.Drawing.Point(337, 453);
+            this.calcSatisFiyat3.Location = new System.Drawing.Point(359, 453);
             this.calcSatisFiyat3.Name = "calcSatisFiyat3";
             this.calcSatisFiyat3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcSatisFiyat3.Size = new System.Drawing.Size(169, 20);
+            this.calcSatisFiyat3.Size = new System.Drawing.Size(147, 20);
             this.calcSatisFiyat3.StyleController = this.layoutControl2;
             this.calcSatisFiyat3.TabIndex = 25;
             this.calcSatisFiyat3.Enter += new System.EventHandler(this.calcSatisFiyat3_Enter);
@@ -579,11 +597,11 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcWebSatisFiyat
             // 
-            this.calcWebSatisFiyat.Location = new System.Drawing.Point(587, 433);
+            this.calcWebSatisFiyat.Location = new System.Drawing.Point(609, 433);
             this.calcWebSatisFiyat.Name = "calcWebSatisFiyat";
             this.calcWebSatisFiyat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcWebSatisFiyat.Size = new System.Drawing.Size(169, 20);
+            this.calcWebSatisFiyat.Size = new System.Drawing.Size(147, 20);
             this.calcWebSatisFiyat.StyleController = this.layoutControl2;
             this.calcWebSatisFiyat.TabIndex = 27;
             this.calcWebSatisFiyat.Enter += new System.EventHandler(this.calcWebSatisFiyat_Enter);
@@ -604,11 +622,11 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcSatisFiyat2
             // 
-            this.calcSatisFiyat2.Location = new System.Drawing.Point(337, 433);
+            this.calcSatisFiyat2.Location = new System.Drawing.Point(359, 433);
             this.calcSatisFiyat2.Name = "calcSatisFiyat2";
             this.calcSatisFiyat2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcSatisFiyat2.Size = new System.Drawing.Size(169, 20);
+            this.calcSatisFiyat2.Size = new System.Drawing.Size(147, 20);
             this.calcSatisFiyat2.StyleController = this.layoutControl2;
             this.calcSatisFiyat2.TabIndex = 24;
             this.calcSatisFiyat2.Enter += new System.EventHandler(this.calcSatisFiyat2_Enter);
@@ -616,11 +634,11 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcAlisFiyat3
             // 
-            this.calcAlisFiyat3.Location = new System.Drawing.Point(87, 453);
+            this.calcAlisFiyat3.Location = new System.Drawing.Point(109, 453);
             this.calcAlisFiyat3.Name = "calcAlisFiyat3";
             this.calcAlisFiyat3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcAlisFiyat3.Size = new System.Drawing.Size(169, 20);
+            this.calcAlisFiyat3.Size = new System.Drawing.Size(147, 20);
             this.calcAlisFiyat3.StyleController = this.layoutControl2;
             this.calcAlisFiyat3.TabIndex = 22;
             this.calcAlisFiyat3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.calcAlisFiyat3_KeyDown);
@@ -665,37 +683,37 @@ namespace NetSatis.BackOffice.Stok
             // 
             // btnOzelKod
             // 
-            this.btnOzelKod.Location = new System.Drawing.Point(390, 307);
+            this.btnOzelKod.Location = new System.Drawing.Point(412, 307);
             this.btnOzelKod.Name = "btnOzelKod";
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
-            editorButtonImageOptions2.ImageUri.Uri = "Delete;Size16x16;Colored";
+            editorButtonImageOptions24.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions24.Image")));
+            editorButtonImageOptions25.ImageUri.Uri = "Delete;Size16x16;Colored";
             this.btnOzelKod.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions24, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject93, serializableAppearanceObject94, serializableAppearanceObject95, serializableAppearanceObject96, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions25, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject97, serializableAppearanceObject98, serializableAppearanceObject99, serializableAppearanceObject100, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnOzelKod.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnOzelKod_ButtonClick);
-            this.btnOzelKod.Size = new System.Drawing.Size(197, 24);
+            this.btnOzelKod.Size = new System.Drawing.Size(175, 24);
             this.btnOzelKod.StyleController = this.layoutControl2;
             this.btnOzelKod.TabIndex = 18;
             this.btnOzelKod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnOzelKod_KeyDown);
             // 
             // calcAlisFiyat2
             // 
-            this.calcAlisFiyat2.Location = new System.Drawing.Point(87, 433);
+            this.calcAlisFiyat2.Location = new System.Drawing.Point(109, 433);
             this.calcAlisFiyat2.Name = "calcAlisFiyat2";
             this.calcAlisFiyat2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcAlisFiyat2.Size = new System.Drawing.Size(169, 20);
+            this.calcAlisFiyat2.Size = new System.Drawing.Size(147, 20);
             this.calcAlisFiyat2.StyleController = this.layoutControl2;
             this.calcAlisFiyat2.TabIndex = 21;
             this.calcAlisFiyat2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.calcAlisFiyat2_KeyDown);
             // 
             // calcSatisFiyat4
             // 
-            this.calcSatisFiyat4.Location = new System.Drawing.Point(587, 413);
+            this.calcSatisFiyat4.Location = new System.Drawing.Point(609, 413);
             this.calcSatisFiyat4.Name = "calcSatisFiyat4";
             this.calcSatisFiyat4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcSatisFiyat4.Size = new System.Drawing.Size(169, 20);
+            this.calcSatisFiyat4.Size = new System.Drawing.Size(147, 20);
             this.calcSatisFiyat4.StyleController = this.layoutControl2;
             this.calcSatisFiyat4.TabIndex = 26;
             this.calcSatisFiyat4.Enter += new System.EventHandler(this.calcSatisFiyat4_Enter);
@@ -703,35 +721,35 @@ namespace NetSatis.BackOffice.Stok
             // 
             // txtAciklama
             // 
-            this.txtAciklama.Location = new System.Drawing.Point(88, 172);
+            this.txtAciklama.Location = new System.Drawing.Point(110, 172);
             this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(681, 16);
+            this.txtAciklama.Size = new System.Drawing.Size(659, 16);
             this.txtAciklama.StyleController = this.layoutControl2;
             this.txtAciklama.TabIndex = 8;
             this.txtAciklama.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAciklama_KeyDown);
             // 
             // btnSezonYil
             // 
-            this.btnSezonYil.Location = new System.Drawing.Point(390, 285);
+            this.btnSezonYil.Location = new System.Drawing.Point(412, 285);
             this.btnSezonYil.Name = "btnSezonYil";
-            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
-            editorButtonImageOptions4.ImageUri.Uri = "Delete;Size16x16;Colored";
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            editorButtonImageOptions2.ImageUri.Uri = "Delete;Size16x16;Colored";
             this.btnSezonYil.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnSezonYil.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSezonYil_ButtonClick);
-            this.btnSezonYil.Size = new System.Drawing.Size(197, 24);
+            this.btnSezonYil.Size = new System.Drawing.Size(175, 24);
             this.btnSezonYil.StyleController = this.layoutControl2;
             this.btnSezonYil.TabIndex = 17;
             this.btnSezonYil.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnSezonYil_KeyDown);
             // 
             // calcSatisFiyat1
             // 
-            this.calcSatisFiyat1.Location = new System.Drawing.Point(337, 413);
+            this.calcSatisFiyat1.Location = new System.Drawing.Point(359, 413);
             this.calcSatisFiyat1.Name = "calcSatisFiyat1";
             this.calcSatisFiyat1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcSatisFiyat1.Size = new System.Drawing.Size(169, 20);
+            this.calcSatisFiyat1.Size = new System.Drawing.Size(147, 20);
             this.calcSatisFiyat1.StyleController = this.layoutControl2;
             this.calcSatisFiyat1.TabIndex = 23;
             this.calcSatisFiyat1.Enter += new System.EventHandler(this.calcSatisFiyat1_Enter);
@@ -800,56 +818,56 @@ namespace NetSatis.BackOffice.Stok
             // 
             // btnPozisyon
             // 
-            this.btnPozisyon.Location = new System.Drawing.Point(390, 263);
+            this.btnPozisyon.Location = new System.Drawing.Point(412, 263);
             this.btnPozisyon.Name = "btnPozisyon";
-            editorButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions5.Image")));
-            editorButtonImageOptions6.ImageUri.Uri = "Delete;Size16x16;Colored";
+            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
+            editorButtonImageOptions4.ImageUri.Uri = "Delete;Size16x16;Colored";
             this.btnPozisyon.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnPozisyon.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnPozisyon_ButtonClick);
-            this.btnPozisyon.Size = new System.Drawing.Size(197, 24);
+            this.btnPozisyon.Size = new System.Drawing.Size(175, 24);
             this.btnPozisyon.StyleController = this.layoutControl2;
             this.btnPozisyon.TabIndex = 16;
             this.btnPozisyon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnPozisyon_KeyDown);
             // 
             // btnUretici
             // 
-            this.btnUretici.Location = new System.Drawing.Point(87, 307);
+            this.btnUretici.Location = new System.Drawing.Point(109, 307);
             this.btnUretici.Name = "btnUretici";
-            editorButtonImageOptions7.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions7.Image")));
-            editorButtonImageOptions8.ImageUri.Uri = "Delete;Size16x16;Colored";
+            editorButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions5.Image")));
+            editorButtonImageOptions6.ImageUri.Uri = "Delete;Size16x16;Colored";
             this.btnUretici.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject25, serializableAppearanceObject26, serializableAppearanceObject27, serializableAppearanceObject28, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject29, serializableAppearanceObject30, serializableAppearanceObject31, serializableAppearanceObject32, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnUretici.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnUretici_ButtonClick);
-            this.btnUretici.Size = new System.Drawing.Size(222, 24);
+            this.btnUretici.Size = new System.Drawing.Size(200, 24);
             this.btnUretici.StyleController = this.layoutControl2;
             this.btnUretici.TabIndex = 13;
             this.btnUretici.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnUretici_KeyDown);
             // 
             // btnProje
             // 
-            this.btnProje.Location = new System.Drawing.Point(390, 241);
+            this.btnProje.Location = new System.Drawing.Point(412, 241);
             this.btnProje.Name = "btnProje";
-            editorButtonImageOptions9.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions9.Image")));
-            editorButtonImageOptions10.ImageUri.Uri = "Delete;Size16x16;Colored";
+            editorButtonImageOptions7.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions7.Image")));
+            editorButtonImageOptions8.ImageUri.Uri = "Delete;Size16x16;Colored";
             this.btnProje.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions9, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject33, serializableAppearanceObject34, serializableAppearanceObject35, serializableAppearanceObject36, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions10, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject37, serializableAppearanceObject38, serializableAppearanceObject39, serializableAppearanceObject40, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject25, serializableAppearanceObject26, serializableAppearanceObject27, serializableAppearanceObject28, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject29, serializableAppearanceObject30, serializableAppearanceObject31, serializableAppearanceObject32, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnProje.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnProje_ButtonClick);
-            this.btnProje.Size = new System.Drawing.Size(197, 24);
+            this.btnProje.Size = new System.Drawing.Size(175, 24);
             this.btnProje.StyleController = this.layoutControl2;
             this.btnProje.TabIndex = 15;
             this.btnProje.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnProje_KeyDown);
             // 
             // calcAlisFiyat1
             // 
-            this.calcAlisFiyat1.Location = new System.Drawing.Point(87, 413);
+            this.calcAlisFiyat1.Location = new System.Drawing.Point(109, 413);
             this.calcAlisFiyat1.Name = "calcAlisFiyat1";
             this.calcAlisFiyat1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcAlisFiyat1.Size = new System.Drawing.Size(169, 20);
+            this.calcAlisFiyat1.Size = new System.Drawing.Size(147, 20);
             this.calcAlisFiyat1.StyleController = this.layoutControl2;
             this.calcAlisFiyat1.TabIndex = 20;
             this.calcAlisFiyat1.Enter += new System.EventHandler(this.calcAlisFiyat1_Enter);
@@ -857,7 +875,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             // calcSatisKdv
             // 
-            this.calcSatisKdv.Location = new System.Drawing.Point(89, 361);
+            this.calcSatisKdv.Location = new System.Drawing.Point(111, 361);
             this.calcSatisKdv.Name = "calcSatisKdv";
             this.calcSatisKdv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -866,33 +884,33 @@ namespace NetSatis.BackOffice.Stok
             "1",
             "8",
             "18"});
-            this.calcSatisKdv.Size = new System.Drawing.Size(217, 20);
+            this.calcSatisKdv.Size = new System.Drawing.Size(195, 20);
             this.calcSatisKdv.StyleController = this.layoutControl2;
             this.calcSatisKdv.TabIndex = 19;
             this.calcSatisKdv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.calcSatisKdv_KeyDown);
             // 
             // btnMarka
             // 
-            this.btnMarka.Location = new System.Drawing.Point(87, 285);
+            this.btnMarka.Location = new System.Drawing.Point(109, 285);
             this.btnMarka.Name = "btnMarka";
-            editorButtonImageOptions11.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions11.Image")));
-            editorButtonImageOptions12.ImageUri.Uri = "Delete;Size16x16;Colored";
+            editorButtonImageOptions9.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions9.Image")));
+            editorButtonImageOptions10.ImageUri.Uri = "Delete;Size16x16;Colored";
             this.btnMarka.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions11, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F5), serializableAppearanceObject41, serializableAppearanceObject42, serializableAppearanceObject43, serializableAppearanceObject44, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions12, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject45, serializableAppearanceObject46, serializableAppearanceObject47, serializableAppearanceObject48, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions9, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F5), serializableAppearanceObject33, serializableAppearanceObject34, serializableAppearanceObject35, serializableAppearanceObject36, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions10, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject37, serializableAppearanceObject38, serializableAppearanceObject39, serializableAppearanceObject40, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnMarka.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnMarka_ButtonClick);
-            this.btnMarka.Size = new System.Drawing.Size(222, 24);
+            this.btnMarka.Size = new System.Drawing.Size(200, 24);
             this.btnMarka.StyleController = this.layoutControl2;
             this.btnMarka.TabIndex = 12;
             this.btnMarka.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnMarka_KeyDown);
             // 
             // calcMaxStokMiktari
             // 
-            this.calcMaxStokMiktari.Location = new System.Drawing.Point(396, 150);
+            this.calcMaxStokMiktari.Location = new System.Drawing.Point(418, 150);
             this.calcMaxStokMiktari.Name = "calcMaxStokMiktari";
             this.calcMaxStokMiktari.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcMaxStokMiktari.Size = new System.Drawing.Size(190, 20);
+            this.calcMaxStokMiktari.Size = new System.Drawing.Size(168, 20);
             this.calcMaxStokMiktari.StyleController = this.layoutControl2;
             this.calcMaxStokMiktari.TabIndex = 7;
             this.calcMaxStokMiktari.KeyDown += new System.Windows.Forms.KeyEventHandler(this.calcMaxStokMiktari_KeyDown);
@@ -900,7 +918,7 @@ namespace NetSatis.BackOffice.Stok
             // cmbBarkodTuru
             // 
             this.cmbBarkodTuru.EditValue = "Serbest";
-            this.cmbBarkodTuru.Location = new System.Drawing.Point(396, 128);
+            this.cmbBarkodTuru.Location = new System.Drawing.Point(418, 128);
             this.cmbBarkodTuru.Name = "cmbBarkodTuru";
             this.cmbBarkodTuru.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -910,30 +928,30 @@ namespace NetSatis.BackOffice.Stok
             "Ean13",
             "Serbest"});
             this.cmbBarkodTuru.Properties.NullText = "Serbest";
-            this.cmbBarkodTuru.Size = new System.Drawing.Size(190, 20);
+            this.cmbBarkodTuru.Size = new System.Drawing.Size(168, 20);
             this.cmbBarkodTuru.StyleController = this.layoutControl2;
             this.cmbBarkodTuru.TabIndex = 6;
             this.cmbBarkodTuru.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbBarkodTuru_KeyDown);
             // 
             // btnAltGrup
             // 
-            this.btnAltGrup.Location = new System.Drawing.Point(87, 263);
+            this.btnAltGrup.Location = new System.Drawing.Point(109, 263);
             this.btnAltGrup.Name = "btnAltGrup";
-            editorButtonImageOptions13.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions13.Image")));
-            editorButtonImageOptions14.ImageUri.Uri = "Delete;Size16x16;Colored";
+            editorButtonImageOptions11.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions11.Image")));
+            editorButtonImageOptions12.ImageUri.Uri = "Delete;Size16x16;Colored";
             this.btnAltGrup.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions13, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject49, serializableAppearanceObject50, serializableAppearanceObject51, serializableAppearanceObject52, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions14, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject53, serializableAppearanceObject54, serializableAppearanceObject55, serializableAppearanceObject56, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions11, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject41, serializableAppearanceObject42, serializableAppearanceObject43, serializableAppearanceObject44, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions12, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject45, serializableAppearanceObject46, serializableAppearanceObject47, serializableAppearanceObject48, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnAltGrup.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.btnAltGrup.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnAltGrup_ButtonClick);
-            this.btnAltGrup.Size = new System.Drawing.Size(222, 24);
+            this.btnAltGrup.Size = new System.Drawing.Size(200, 24);
             this.btnAltGrup.StyleController = this.layoutControl2;
             this.btnAltGrup.TabIndex = 11;
             this.btnAltGrup.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAltGrup_KeyDown);
             // 
             // calcMinStokMiktari
             // 
-            this.calcMinStokMiktari.Location = new System.Drawing.Point(88, 150);
+            this.calcMinStokMiktari.Location = new System.Drawing.Point(110, 150);
             this.calcMinStokMiktari.Name = "calcMinStokMiktari";
             this.calcMinStokMiktari.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -942,38 +960,38 @@ namespace NetSatis.BackOffice.Stok
             this.calcMinStokMiktari.Properties.EditFormat.FormatString = "{0:n}";
             this.calcMinStokMiktari.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.calcMinStokMiktari.Properties.Mask.EditMask = "n";
-            this.calcMinStokMiktari.Size = new System.Drawing.Size(221, 20);
+            this.calcMinStokMiktari.Size = new System.Drawing.Size(199, 20);
             this.calcMinStokMiktari.StyleController = this.layoutControl2;
             this.calcMinStokMiktari.TabIndex = 5;
             this.calcMinStokMiktari.KeyDown += new System.Windows.Forms.KeyEventHandler(this.calcMinStokMiktari_KeyDown);
             // 
             // btnAnaGrup
             // 
-            this.btnAnaGrup.Location = new System.Drawing.Point(87, 241);
+            this.btnAnaGrup.Location = new System.Drawing.Point(109, 241);
             this.btnAnaGrup.Name = "btnAnaGrup";
-            editorButtonImageOptions15.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions15.Image")));
-            editorButtonImageOptions16.ImageUri.Uri = "Delete;Size16x16;Colored";
+            editorButtonImageOptions13.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions13.Image")));
+            editorButtonImageOptions14.ImageUri.Uri = "Delete;Size16x16;Colored";
             this.btnAnaGrup.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions15, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject57, serializableAppearanceObject58, serializableAppearanceObject59, serializableAppearanceObject60, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions16, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject61, serializableAppearanceObject62, serializableAppearanceObject63, serializableAppearanceObject64, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions13, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject49, serializableAppearanceObject50, serializableAppearanceObject51, serializableAppearanceObject52, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions14, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject53, serializableAppearanceObject54, serializableAppearanceObject55, serializableAppearanceObject56, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnAnaGrup.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.btnAnaGrup.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnAnaGrup_ButtonClick);
-            this.btnAnaGrup.Size = new System.Drawing.Size(222, 24);
+            this.btnAnaGrup.Size = new System.Drawing.Size(200, 24);
             this.btnAnaGrup.StyleController = this.layoutControl2;
             this.btnAnaGrup.TabIndex = 10;
             this.btnAnaGrup.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAnaGrup_KeyDown);
             // 
             // btnModel
             // 
-            this.btnModel.Location = new System.Drawing.Point(390, 219);
+            this.btnModel.Location = new System.Drawing.Point(412, 219);
             this.btnModel.Name = "btnModel";
-            editorButtonImageOptions17.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions17.Image")));
-            editorButtonImageOptions18.ImageUri.Uri = "Delete;Size16x16;Colored";
+            editorButtonImageOptions15.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions15.Image")));
+            editorButtonImageOptions16.ImageUri.Uri = "Delete;Size16x16;Colored";
             this.btnModel.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions17, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject65, serializableAppearanceObject66, serializableAppearanceObject67, serializableAppearanceObject68, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions18, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject69, serializableAppearanceObject70, serializableAppearanceObject71, serializableAppearanceObject72, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions15, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject57, serializableAppearanceObject58, serializableAppearanceObject59, serializableAppearanceObject60, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions16, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject61, serializableAppearanceObject62, serializableAppearanceObject63, serializableAppearanceObject64, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnModel.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnModel_ButtonClick);
-            this.btnModel.Size = new System.Drawing.Size(197, 24);
+            this.btnModel.Size = new System.Drawing.Size(175, 24);
             this.btnModel.StyleController = this.layoutControl2;
             this.btnModel.TabIndex = 14;
             this.btnModel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnModel_KeyDown);
@@ -991,25 +1009,25 @@ namespace NetSatis.BackOffice.Stok
             // 
             // btnKategori
             // 
-            this.btnKategori.Location = new System.Drawing.Point(87, 219);
+            this.btnKategori.Location = new System.Drawing.Point(109, 219);
             this.btnKategori.Name = "btnKategori";
-            editorButtonImageOptions19.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions19.Image")));
-            editorButtonImageOptions20.ImageUri.Uri = "Delete;Size16x16;Colored";
+            editorButtonImageOptions17.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions17.Image")));
+            editorButtonImageOptions18.ImageUri.Uri = "Delete;Size16x16;Colored";
             this.btnKategori.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions19, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject73, serializableAppearanceObject74, serializableAppearanceObject75, serializableAppearanceObject76, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions20, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject77, serializableAppearanceObject78, serializableAppearanceObject79, serializableAppearanceObject80, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions17, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject65, serializableAppearanceObject66, serializableAppearanceObject67, serializableAppearanceObject68, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions18, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject69, serializableAppearanceObject70, serializableAppearanceObject71, serializableAppearanceObject72, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnKategori.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.btnKategori.Properties.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnKategori_ButtonClick);
-            this.btnKategori.Size = new System.Drawing.Size(222, 24);
+            this.btnKategori.Size = new System.Drawing.Size(200, 24);
             this.btnKategori.StyleController = this.layoutControl2;
             this.btnKategori.TabIndex = 9;
             this.btnKategori.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnKategori_KeyDown);
             // 
             // txtGaranti
             // 
-            this.txtGaranti.Location = new System.Drawing.Point(88, 128);
+            this.txtGaranti.Location = new System.Drawing.Point(110, 128);
             this.txtGaranti.Name = "txtGaranti";
-            this.txtGaranti.Size = new System.Drawing.Size(221, 20);
+            this.txtGaranti.Size = new System.Drawing.Size(199, 20);
             this.txtGaranti.StyleController = this.layoutControl2;
             this.txtGaranti.TabIndex = 4;
             this.txtGaranti.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtGaranti_KeyDown);
@@ -1018,22 +1036,22 @@ namespace NetSatis.BackOffice.Stok
             // 
             this.togDurum.EditValue = true;
             this.togDurum.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.togDurum.Location = new System.Drawing.Point(88, 29);
+            this.togDurum.Location = new System.Drawing.Point(110, 29);
             this.togDurum.Name = "togDurum";
             this.togDurum.Properties.OffText = "Pasif";
             this.togDurum.Properties.OnText = "Aktif";
-            this.togDurum.Size = new System.Drawing.Size(513, 18);
+            this.togDurum.Size = new System.Drawing.Size(491, 18);
             this.togDurum.StyleController = this.layoutControl2;
             this.togDurum.TabIndex = 0;
             // 
             // txtKod
             // 
-            this.txtKod.Location = new System.Drawing.Point(88, 55);
+            this.txtKod.Location = new System.Drawing.Point(110, 55);
             this.txtKod.Name = "txtKod";
             this.txtKod.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtKod.Properties.MaxLength = 150;
-            this.txtKod.Size = new System.Drawing.Size(386, 20);
+            this.txtKod.Size = new System.Drawing.Size(364, 20);
             this.txtKod.StyleController = this.layoutControl2;
             this.txtKod.TabIndex = 0;
             this.txtKod.Click += new System.EventHandler(this.txtKod_Click);
@@ -1042,10 +1060,10 @@ namespace NetSatis.BackOffice.Stok
             // txtBirim
             // 
             this.txtBirim.EditValue = "ADET";
-            this.txtBirim.Location = new System.Drawing.Point(88, 106);
+            this.txtBirim.Location = new System.Drawing.Point(110, 106);
             this.txtBirim.Name = "txtBirim";
             this.txtBirim.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Down, "", -1, true, true, false, editorButtonImageOptions21, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject81, serializableAppearanceObject82, serializableAppearanceObject83, serializableAppearanceObject84, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Down, "", -1, true, true, false, editorButtonImageOptions19, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject73, serializableAppearanceObject74, serializableAppearanceObject75, serializableAppearanceObject76, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.txtBirim.Properties.Items.AddRange(new object[] {
             "ADET",
             "BAĞ",
@@ -1072,7 +1090,7 @@ namespace NetSatis.BackOffice.Stok
             "STAND",
             "TAKIM",
             "TIR"});
-            this.txtBirim.Size = new System.Drawing.Size(221, 20);
+            this.txtBirim.Size = new System.Drawing.Size(199, 20);
             this.txtBirim.StyleController = this.layoutControl2;
             this.txtBirim.TabIndex = 3;
             this.txtBirim.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtBirim_ButtonClick_1);
@@ -1080,15 +1098,15 @@ namespace NetSatis.BackOffice.Stok
             // 
             // txtStokAdi
             // 
-            this.txtStokAdi.Location = new System.Drawing.Point(88, 78);
+            this.txtStokAdi.Location = new System.Drawing.Point(110, 78);
             this.txtStokAdi.Name = "txtStokAdi";
-            editorButtonImageOptions22.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions22.Image")));
-            editorButtonImageOptions23.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions23.Image")));
+            editorButtonImageOptions20.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions20.Image")));
+            editorButtonImageOptions21.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions21.Image")));
             this.txtStokAdi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 40, true, true, false, editorButtonImageOptions22, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject85, serializableAppearanceObject86, serializableAppearanceObject87, serializableAppearanceObject88, "", "find", null, DevExpress.Utils.ToolTipAnchor.Default),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 30, true, true, false, editorButtonImageOptions23, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject89, serializableAppearanceObject90, serializableAppearanceObject91, serializableAppearanceObject92, "", "clear", null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 40, true, true, false, editorButtonImageOptions20, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject77, serializableAppearanceObject78, serializableAppearanceObject79, serializableAppearanceObject80, "", "find", null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 30, true, true, false, editorButtonImageOptions21, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject81, serializableAppearanceObject82, serializableAppearanceObject83, serializableAppearanceObject84, "", "clear", null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.txtStokAdi.Properties.MaxLength = 500;
-            this.txtStokAdi.Size = new System.Drawing.Size(484, 24);
+            this.txtStokAdi.Size = new System.Drawing.Size(462, 24);
             this.txtStokAdi.StyleController = this.layoutControl2;
             this.txtStokAdi.TabIndex = 2;
             this.txtStokAdi.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtStokAdi_ButtonClick);
@@ -1146,7 +1164,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem8.Size = new System.Drawing.Size(596, 26);
             this.layoutControlItem8.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem8.Text = "Durumu";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem18
             // 
@@ -1172,7 +1190,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem9.Size = new System.Drawing.Size(469, 24);
             this.layoutControlItem9.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem9.Text = "Stok Kodu";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem10
             // 
@@ -1198,7 +1216,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem11.Size = new System.Drawing.Size(566, 24);
             this.layoutControlItem11.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem11.Text = "Stok Adı";
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem13
             // 
@@ -1211,7 +1229,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem13.Size = new System.Drawing.Size(304, 25);
             this.layoutControlItem13.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem13.Text = "Birim";
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem14
             // 
@@ -1224,7 +1242,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem14.Size = new System.Drawing.Size(304, 22);
             this.layoutControlItem14.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem14.Text = "Garanti Süresi";
-            this.layoutControlItem14.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem15
             // 
@@ -1237,7 +1255,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem15.Size = new System.Drawing.Size(277, 22);
             this.layoutControlItem15.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem15.Text = "Barkod Türü";
-            this.layoutControlItem15.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem16
             // 
@@ -1250,7 +1268,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem16.Size = new System.Drawing.Size(304, 22);
             this.layoutControlItem16.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem16.Text = "Min. Stok Miktarı";
-            this.layoutControlItem16.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem17
             // 
@@ -1263,7 +1281,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem17.Size = new System.Drawing.Size(277, 22);
             this.layoutControlItem17.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem17.Text = "Max Stok Miktarı";
-            this.layoutControlItem17.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem19
             // 
@@ -1273,7 +1291,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem19.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
             this.layoutControlItem19.Size = new System.Drawing.Size(764, 18);
             this.layoutControlItem19.Text = "Açıklama";
-            this.layoutControlItem19.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem19.TextSize = new System.Drawing.Size(100, 13);
             // 
             // emptySpaceItem2
             // 
@@ -1342,7 +1360,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem20.Size = new System.Drawing.Size(303, 22);
             this.layoutControlItem20.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem20.Text = "Kategori";
-            this.layoutControlItem20.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem20.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem21
             // 
@@ -1355,7 +1373,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem21.Size = new System.Drawing.Size(278, 22);
             this.layoutControlItem21.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem21.Text = "Model";
-            this.layoutControlItem21.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem21.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem22
             // 
@@ -1368,7 +1386,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem22.Size = new System.Drawing.Size(303, 22);
             this.layoutControlItem22.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem22.Text = "Ana Grup";
-            this.layoutControlItem22.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem22.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem23
             // 
@@ -1381,7 +1399,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem23.Size = new System.Drawing.Size(303, 22);
             this.layoutControlItem23.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem23.Text = "Alt Grup";
-            this.layoutControlItem23.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem23.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem24
             // 
@@ -1394,7 +1412,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem24.Size = new System.Drawing.Size(303, 22);
             this.layoutControlItem24.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem24.Text = "Marka";
-            this.layoutControlItem24.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem24.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem25
             // 
@@ -1407,7 +1425,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem25.Size = new System.Drawing.Size(303, 22);
             this.layoutControlItem25.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem25.Text = "Üretici";
-            this.layoutControlItem25.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem25.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem26
             // 
@@ -1420,7 +1438,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem26.Size = new System.Drawing.Size(278, 22);
             this.layoutControlItem26.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem26.Text = "Proje";
-            this.layoutControlItem26.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem26.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem28
             // 
@@ -1433,7 +1451,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem28.Size = new System.Drawing.Size(278, 22);
             this.layoutControlItem28.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem28.Text = "Sezon Yıl";
-            this.layoutControlItem28.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem28.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem29
             // 
@@ -1446,7 +1464,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem29.Size = new System.Drawing.Size(278, 22);
             this.layoutControlItem29.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem29.Text = "Özel Kod";
-            this.layoutControlItem29.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem29.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem27
             // 
@@ -1459,7 +1477,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem27.Size = new System.Drawing.Size(278, 22);
             this.layoutControlItem27.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem27.Text = "Pozisyon";
-            this.layoutControlItem27.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem27.TextSize = new System.Drawing.Size(100, 13);
             // 
             // emptySpaceItem6
             // 
@@ -1501,7 +1519,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem30.Size = new System.Drawing.Size(302, 24);
             this.layoutControlItem30.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem30.Text = "Kdv";
-            this.layoutControlItem30.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem30.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layBagkur
             // 
@@ -1596,7 +1614,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem36.Size = new System.Drawing.Size(250, 20);
             this.layoutControlItem36.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem36.Text = "Alış Fiyat - 1";
-            this.layoutControlItem36.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem36.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem37
             // 
@@ -1609,7 +1627,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem37.Size = new System.Drawing.Size(250, 20);
             this.layoutControlItem37.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem37.Text = "Satış Fiyat - 1";
-            this.layoutControlItem37.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem37.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem38
             // 
@@ -1622,7 +1640,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem38.Size = new System.Drawing.Size(250, 20);
             this.layoutControlItem38.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem38.Text = "Satış Fiyat - 4";
-            this.layoutControlItem38.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem38.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem39
             // 
@@ -1635,7 +1653,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem39.Size = new System.Drawing.Size(250, 20);
             this.layoutControlItem39.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem39.Text = "Alış Fiyat - 2";
-            this.layoutControlItem39.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem39.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem40
             // 
@@ -1648,7 +1666,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem40.Size = new System.Drawing.Size(250, 20);
             this.layoutControlItem40.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem40.Text = "Alış Fiyat - 3";
-            this.layoutControlItem40.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem40.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem41
             // 
@@ -1661,7 +1679,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem41.Size = new System.Drawing.Size(250, 20);
             this.layoutControlItem41.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem41.Text = "Satış Fiyat - 2";
-            this.layoutControlItem41.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem41.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem42
             // 
@@ -1674,7 +1692,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem42.Size = new System.Drawing.Size(250, 20);
             this.layoutControlItem42.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem42.Text = "Satış Fiyat - 3";
-            this.layoutControlItem42.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem42.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem43
             // 
@@ -1687,7 +1705,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem43.Size = new System.Drawing.Size(250, 20);
             this.layoutControlItem43.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem43.Text = "Web Satış Fiyatı";
-            this.layoutControlItem43.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem43.TextSize = new System.Drawing.Size(100, 13);
             // 
             // layoutControlItem44
             // 
@@ -1700,7 +1718,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlItem44.Size = new System.Drawing.Size(250, 20);
             this.layoutControlItem44.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem44.Text = "Web Bayi Fiyatı";
-            this.layoutControlItem44.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem44.TextSize = new System.Drawing.Size(100, 13);
             // 
             // emptySpaceItem7
             // 
@@ -1720,8 +1738,8 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlGroup7.ExpandOnDoubleClick = true;
             this.layoutControlGroup7.GroupStyle = DevExpress.Utils.GroupStyle.Title;
             this.layoutControlGroup7.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem45,
             this.layoutControlItem46,
+            this.layoutControlItem45,
             this.layoutControlItem12});
             this.layoutControlGroup7.Location = new System.Drawing.Point(0, 475);
             this.layoutControlGroup7.Name = "layoutControlGroup7";
@@ -1729,26 +1747,32 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControlGroup7.Size = new System.Drawing.Size(772, 54);
             this.layoutControlGroup7.Text = "Diğer Alanlar";
             // 
+            // layoutControlItem46
+            // 
+            this.layoutControlItem46.Control = this.togWeb;
+            this.layoutControlItem46.Location = new System.Drawing.Point(245, 0);
+            this.layoutControlItem46.Name = "layoutControlItem46";
+            this.layoutControlItem46.Size = new System.Drawing.Size(259, 24);
+            this.layoutControlItem46.Text = "Webe Gönder";
+            this.layoutControlItem46.TextSize = new System.Drawing.Size(100, 13);
+            // 
             // layoutControlItem45
             // 
             this.layoutControlItem45.Control = this.calcDevirGirisi;
             this.layoutControlItem45.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem45.MaxSize = new System.Drawing.Size(293, 24);
-            this.layoutControlItem45.MinSize = new System.Drawing.Size(293, 24);
             this.layoutControlItem45.Name = "layoutControlItem45";
-            this.layoutControlItem45.Size = new System.Drawing.Size(293, 24);
-            this.layoutControlItem45.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem45.Size = new System.Drawing.Size(245, 24);
             this.layoutControlItem45.Text = "Stok Devir Girişi";
-            this.layoutControlItem45.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem45.TextSize = new System.Drawing.Size(100, 13);
             // 
-            // layoutControlItem46
+            // layoutControlItem12
             // 
-            this.layoutControlItem46.Control = this.togWeb;
-            this.layoutControlItem46.Location = new System.Drawing.Point(293, 0);
-            this.layoutControlItem46.Name = "layoutControlItem46";
-            this.layoutControlItem46.Size = new System.Drawing.Size(323, 24);
-            this.layoutControlItem46.Text = "Webe Gönder";
-            this.layoutControlItem46.TextSize = new System.Drawing.Size(78, 13);
+            this.layoutControlItem12.Control = this.lblMiktar;
+            this.layoutControlItem12.Location = new System.Drawing.Point(504, 0);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(260, 24);
+            this.layoutControlItem12.Text = "Mevcut Stok Miktarı :";
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(100, 13);
             // 
             // emptySpaceItem1
             // 
@@ -2012,26 +2036,6 @@ namespace NetSatis.BackOffice.Stok
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
-            // lblMiktar
-            // 
-            this.lblMiktar.Appearance.Options.UseTextOptions = true;
-            this.lblMiktar.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.lblMiktar.Location = new System.Drawing.Point(705, 505);
-            this.lblMiktar.Name = "lblMiktar";
-            this.lblMiktar.Size = new System.Drawing.Size(63, 13);
-            this.lblMiktar.StyleController = this.layoutControl2;
-            this.lblMiktar.TabIndex = 31;
-            this.lblMiktar.Text = "labelControl1";
-            // 
-            // layoutControlItem12
-            // 
-            this.layoutControlItem12.Control = this.lblMiktar;
-            this.layoutControlItem12.Location = new System.Drawing.Point(616, 0);
-            this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(148, 24);
-            this.layoutControlItem12.Text = "Stok Miktarı";
-            this.layoutControlItem12.TextSize = new System.Drawing.Size(78, 13);
-            // 
             // frmStokIslem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2059,6 +2063,7 @@ namespace NetSatis.BackOffice.Stok
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.calcwebBayiSatisFiyat.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblMiktar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcDevirGirisi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.togWeb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcZirai.Properties)).EndInit();
@@ -2143,8 +2148,9 @@ namespace NetSatis.BackOffice.Stok
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem46)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.tabNavigationPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridContBarkod)).EndInit();
@@ -2162,7 +2168,6 @@ namespace NetSatis.BackOffice.Stok
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2293,7 +2298,8 @@ namespace NetSatis.BackOffice.Stok
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
         private ButtonEdit txtStokAdi;
-        private LabelControl lblMiktar;
+       
+        private ComboBoxEdit lblMiktar;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
     }
 }

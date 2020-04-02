@@ -206,6 +206,7 @@ namespace NetSatis.BackOffice.Stok
                 kodOlustur.KodArttirma();
                 stokDal.Save(context);
                 calcDevirGirisi.Text = "";
+                lblMiktar.Text = "";
                 if (!kaydetYeni) {
                     this.Close();
                 }
@@ -504,6 +505,7 @@ namespace NetSatis.BackOffice.Stok
             calcMera.DataBindings.Clear();
             calcSatisKdv.DataBindings.Clear();
             calcDevirGirisi.DataBindings.Clear();
+
             calcAlisFiyat1.DataBindings.Clear();
             calcAlisFiyat2.DataBindings.Clear();
             calcAlisFiyat3.DataBindings.Clear();
@@ -618,6 +620,7 @@ namespace NetSatis.BackOffice.Stok
             togWeb.EditValue = false;
             txtKod.Focus();
             calcDevirGirisi.Text = "";
+            lblMiktar.Text = "";
         }
         private void btnYeni_Click(object sender, EventArgs e)
         {
@@ -632,6 +635,7 @@ namespace NetSatis.BackOffice.Stok
             calcDevirGirisi.Text = "";
             togDurum.EditValue = true;
             togWeb.EditValue = false;
+            lblMiktar.Text = "";
             txtKod.Focus();
         }
         private void gridBarkod_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)

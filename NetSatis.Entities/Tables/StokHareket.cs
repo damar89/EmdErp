@@ -56,17 +56,19 @@ namespace NetSatis.Entities.Tables
         [NotMapped]
         public decimal? KarOrani
         {
-            get {
+            get
+            {
                 if (!SatisFiyati.HasValue)
                     return 0;
                 if (!BirimFiyati.HasValue || BirimFiyati.Value == 0)
-                
+
                     return SatisFiyati.Value * 100;
 
                 var res = (SatisFiyati.Value * 100) / BirimFiyati.Value;
                 return res - 100;
             }
         }
+
         public int SaveUser { get; set; }
         public int EditUser { get; set; }
 

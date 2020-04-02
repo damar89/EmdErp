@@ -38,6 +38,9 @@ namespace NetSatis.FrontOffice
                 DataSourceUpdateMode.OnPropertyChanged);
             calcSatisFiyat1.DataBindings[0].FormattingEnabled = true;
             calcSatisFiyat1.DataBindings[0].FormatString = "C2";
+            var r = stokDal.StokAdetler(context, _entity.Id);
+            if (r.HasValue)
+                lblMiktar.Text = r.Value.ToString("n2");
         }
         private void txtBarkod_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
