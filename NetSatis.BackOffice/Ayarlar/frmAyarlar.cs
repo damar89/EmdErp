@@ -504,6 +504,11 @@ namespace NetSatis.BackOffice.Ayarlar
 
 
         }
+
+        private void navigationPage2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
     public class FaturaDizaynTemp
