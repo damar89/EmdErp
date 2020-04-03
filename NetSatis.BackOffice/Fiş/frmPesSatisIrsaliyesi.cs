@@ -162,7 +162,7 @@ namespace NetSatis.BackOffice.Fiş
 
                 if (i == 0)
                 {
-                    fis.FisTuru = "Perakende Satış Faturası2";
+                    fis.FisTuru = "Perakende Fatura";
 
                     var firstIndexZero = tempFis.FisKodu.IndexOf('0');
                     var onEk = tempFis.FisKodu.Substring(0, firstIndexZero);
@@ -189,7 +189,7 @@ namespace NetSatis.BackOffice.Fiş
                     foreach (var item in stokHareketleri)
                     {
 
-                        item.FisTuru = "Perakende Satış Faturası2";
+                        item.FisTuru = "Perakende Fatura";
                         item.Hareket = "Stok Çıkış";
 
 
