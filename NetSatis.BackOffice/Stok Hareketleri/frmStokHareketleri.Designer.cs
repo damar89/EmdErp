@@ -108,6 +108,9 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.btnExcel = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -291,6 +294,7 @@
             this.gridStokHareket.OptionsPrint.EnableAppearanceEvenRow = true;
             this.gridStokHareket.OptionsPrint.PrintFooter = false;
             this.gridStokHareket.OptionsPrint.PrintGroupFooter = false;
+            this.gridStokHareket.OptionsView.ColumnAutoWidth = false;
             this.gridStokHareket.OptionsView.ShowAutoFilterRow = true;
             this.gridStokHareket.OptionsView.ShowFooter = true;
             this.gridStokHareket.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridStokHareket_PopupMenuShowing);
@@ -501,7 +505,7 @@
             this.colDepoAdi.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.colDepoAdi.Visible = true;
             this.colDepoAdi.VisibleIndex = 1;
-            this.colDepoAdi.Width = 53;
+            this.colDepoAdi.Width = 80;
             // 
             // repoDepo
             // 
@@ -807,7 +811,8 @@
             // popupMenu1
             // 
             this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnYazdir)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnYazdir),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem1)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
@@ -826,8 +831,11 @@
             this.barManager1.DockControls.Add(this.barDockControlRight);
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.btnYazdir});
-            this.barManager1.MaxItemId = 1;
+            this.btnYazdir,
+            this.barButtonItem1,
+            this.barSubItem1,
+            this.btnExcel});
+            this.barManager1.MaxItemId = 4;
             // 
             // barDockControlTop
             // 
@@ -860,6 +868,27 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1120, 0);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 540);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Id = 1;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "Dışa Aktar";
+            this.barSubItem1.Id = 2;
+            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnExcel)});
+            this.barSubItem1.Name = "barSubItem1";
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Caption = "Excel";
+            this.btnExcel.Id = 3;
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExcel_ItemClick);
             // 
             // frmStokHareketleri
             // 
@@ -957,5 +986,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colBagkurToplam;
         private DevExpress.XtraGrid.Columns.GridColumn colFisTutarı;
         private DevExpress.XtraGrid.Columns.GridColumn colFisTuru;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarButtonItem btnExcel;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }
 }

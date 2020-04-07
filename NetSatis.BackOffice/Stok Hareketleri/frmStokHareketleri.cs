@@ -113,5 +113,14 @@ namespace NetSatis.BackOffice.Stok_Hareketleri
             //if (!File.Exists(DosyaYolu)) File.Create(DosyaYolu);
             gridContStokHareket.MainView.SaveLayoutToXml(DosyaYolu);
         }
+
+        private void btnExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                gridStokHareket.ExportToXlsx(save.FileName + ".xlsx");
+            }
+        }
     }
 }
