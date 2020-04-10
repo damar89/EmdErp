@@ -1,4 +1,4 @@
-﻿namespace NetSatis.Utils
+﻿namespace NetSatis.Utils.Raporlama
 {
     partial class FrmDashboard
     {

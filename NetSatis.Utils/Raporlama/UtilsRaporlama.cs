@@ -4,7 +4,7 @@ using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
 using NetSatis.Utils.Raporlama;
 
-namespace NetSatis.Utils
+namespace NetSatis.Utils.Raporlama
 {
     public class UtilsRaporlama
     {

@@ -5,7 +5,7 @@ using NetSatis.Entities.Tables;
 using NetSatis.Utils.Raporlama;
 using System.IO;
 
-namespace NetSatis.Utils
+namespace NetSatis.Utils.Raporlama
 {
     public partial class FrmDashboard : XtraForm
     {

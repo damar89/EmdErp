@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace NetSatis.Utils
+namespace NetSatis.Utils.Raporlama
 {
     public partial class FrmRaporUstBilgi : XtraForm
     {

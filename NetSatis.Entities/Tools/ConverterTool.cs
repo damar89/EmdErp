@@ -6,9 +6,7 @@ using System;
 namespace NetSatis.Entities.Tools
 {
     public static class ConverterTool
-    {
-        private static object frmAnaMenu;
-
+    { 
         private static StokHareket StokToStokHareket(NetSatisContext context, Entities.Tables.Stok entity, decimal miktar)
         {
             

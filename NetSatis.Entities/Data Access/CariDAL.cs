@@ -421,12 +421,7 @@ namespace NetSatis.Entities.Data_Access
             return liste;
         }
         public object CariFisAyrinti(NetSatisContext context, int cariId, DateTime baslangic, DateTime bitis)
-        {
-            var str = "İrsaliye";
-            if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_CariEtkilesin)))
-            {
-                str = "";
-            }
+        { 
             var result = context.Fisler.Where(c => c.CariId == cariId && c.Tarih >= baslangic && c.Tarih <= bitis).OrderBy(f => f.Tarih).Select(k => new
             {
                 k.Tarih,

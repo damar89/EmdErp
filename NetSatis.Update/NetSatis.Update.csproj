@@ -53,12 +53,7 @@
     <Reference Include="DevExpress.BonusSkins.v19.2" />
     <Reference Include="DevExpress.Data.v19.2" />
     <Reference Include="DevExpress.Utils.v19.2" />
-    <Reference Include="DevExpress.Sparkline.v19.2.Core" />
     <Reference Include="DevExpress.XtraEditors.v19.2" />
-    <Reference Include="DevExpress.Office.v19.2.Core" />
-    <Reference Include="DevExpress.RichEdit.v19.2.Core" />
-    <Reference Include="DevExpress.RichEdit.v19.2.Export" />
-    <Reference Include="DevExpress.Printing.v19.2.Core" />
     <Reference Include="System">
       <Private>True</Private>
     </Reference>
@@ -68,28 +63,10 @@
     <Reference Include="System.IO.Compression.FileSystem">
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Xml.Linq">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.CSharp">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Data">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Deployment">
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Drawing">
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Windows.Forms">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Xml">
       <Private>True</Private>
     </Reference>
   </ItemGroup>

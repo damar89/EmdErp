@@ -8,7 +8,7 @@ using System;
 using System.IO;
 using System.Windows.Forms;
 
-namespace NetSatis.Utils
+namespace NetSatis.Utils.Raporlama
 {
     public partial class FrmRaporTasarla : XtraForm
     {
