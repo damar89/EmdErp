@@ -1413,6 +1413,10 @@
       <Project>{9CE84B4F-E739-4567-9960-FDB5BE7121F2}</Project>
       <Name>NetSatis.Reports</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NetSatis.Utils\NetSatis.Utils.csproj">
+      <Project>{0d76b5ba-348c-4ddc-b519-2f0c8ff0b0fa}</Project>
+      <Name>NetSatis.Utils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NetSatisAdmin\NetSatisAdmin.csproj">
       <Project>{CC6EAE6F-6C35-4485-BE6C-ACB9A6B03000}</Project>
       <Name>NetSatisAdmin</Name>

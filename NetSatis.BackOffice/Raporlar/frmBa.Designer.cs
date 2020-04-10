@@ -58,7 +58,7 @@
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(176, 12);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(212, 16);
+            this.labelControl1.Size = new System.Drawing.Size(218, 17);
             this.labelControl1.TabIndex = 13;
             this.labelControl1.Text = "Ba Raporlaması için Yıl ve Ay Seçiniz.";
             // 
@@ -137,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 184);
+            this.ClientSize = new System.Drawing.Size(488, 177);
             this.Controls.Add(this.cmbTipi);
             this.Controls.Add(this.btnGoster);
             this.Controls.Add(this.labelControl4);
@@ -146,10 +146,10 @@
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.cmbYil);
             this.Controls.Add(this.cmbAy);
+            this.IconOptions.ShowIcon = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmBa";
-            this.ShowIcon = false;
             this.Text = "Ba Raporla";
             ((System.ComponentModel.ISupportInitialize)(this.cmbYil.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAy.Properties)).EndInit();

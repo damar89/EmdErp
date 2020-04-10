@@ -3,11 +3,13 @@ using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
 using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-
+using DevExpress.XtraBars;
+using NetSatis.Utils.Raporlama;
 namespace NetSatis.BackOffice.Stok
 {
     public partial class BarkodEtiketHazirla : DevExpress.XtraEditors.XtraForm
@@ -87,6 +89,8 @@ namespace NetSatis.BackOffice.Stok
             txtBarkod.Focus();
             gridControl1.ForceInitialize();
             if (File.Exists(DosyaYolu)) gridControl1.MainView.RestoreLayoutFromXml(DosyaYolu);
+
+            YazdirSecenekleriEkle();
         }
 
         private void BarkodEtiketHazirla_FormClosing(object sender, FormClosingEventArgs e)
@@ -161,53 +165,81 @@ namespace NetSatis.BackOffice.Stok
             gridView1.RefreshData();
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        //private void simpleButton1_Click(object sender, EventArgs e)
+        //{
+        //    if (gridView1.RowCount == 0)
+        //        return;
+
+        //    var r = new rptBarkodRaf();
+        //    var row = gridView1.GetRow(gridView1.FocusedRowHandle) as BarkodEtiket;
+
+        //    r.xrBarCode1.Text = row.Barkodu;
+        //    r.ShowPreview();
+
+        //    //Report rpr = new Report();
+        //    //rpr.Load($@"{Application.StartupPath}\degisimfisi.frx");
+        //    //rpr.SetParameterValue("StokAdi","test1StokAdi");
+        //    //NetSatisContext db = new NetSatisContext();
+        //    //var list = db.BarkodEtiketOlustur.ToList();
+
+        //    ////rpr.RegisterData();
+        //    //rpr.Design();
+
+        //    //List<string> fields = new List<string>();
+        //    //using (NetSatisContext db = new NetSatisContext()) {
+        //    //    FisDAL f2 = new FisDAL();
+        //    //    var liste = f2.Listelemeler(db, "Toptan Satış Faturası");
+
+        //    //    foreach (var obj in (IList)liste) {
+        //    //        Type type = obj.GetType();
+
+        //    //        foreach (PropertyInfo prop in type.GetProperties()) {
+        //    //            fields.Add(prop.Name);
+        //    //        }
+        //    //        break;
+        //    //    }
+
+
+        //    //    var list = db.BarkodEtiketOlustur.ToList();
+        //    //    r.DataSource = list;
+        //    //var fileName = $@"{Application.StartupPath}\rptBarkodRaf.repx";
+        //    //if (File.Exists(fileName))
+        //    //    r.LoadLayout(fileName);
+        //    //else {
+        //    //    MessageBox.Show("Barkod raporu dizayn dosyası bulunamadı. Dosya adı: " + new FileInfo(fileName).Name);
+        //    //    return;
+        //    //}
+        //    // r.ShowDesigner();
+
+        //}
+
+        private void gridView1_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
         {
-            if (gridView1.RowCount == 0)
+            if (e.HitInfo.InRow) {
+                popupMenu1.ShowPopup(MousePosition);
+            }
+        }
+
+        void YazdirSecenekleriEkle()
+        {
+           new UtilsRaporlama().YazdirmaSecenekleriniEkle(popupMenu1, DizaynTipi.BarkodEtiket, Br_ItemClick);
+        }
+
+        private void Br_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var r = ((IEnumerable<BarkodEtiket>)gridControl1.DataSource).ToList();
+            if (r == null)
                 return;
 
-            var r = new rptBarkodRaf();
-            var row = gridView1.GetRow(gridView1.FocusedRowHandle) as BarkodEtiket;
-
-            r.xrBarCode1.Text = row.Barkodu;
-            r.ShowPreview();
-
-            //Report rpr = new Report();
-            //rpr.Load($@"{Application.StartupPath}\degisimfisi.frx");
-            //rpr.SetParameterValue("StokAdi","test1StokAdi");
-            //NetSatisContext db = new NetSatisContext();
-            //var list = db.BarkodEtiketOlustur.ToList();
-
-            ////rpr.RegisterData();
-            //rpr.Design();
-
-            //List<string> fields = new List<string>();
-            //using (NetSatisContext db = new NetSatisContext()) {
-            //    FisDAL f2 = new FisDAL();
-            //    var liste = f2.Listelemeler(db, "Toptan Satış Faturası");
-
-            //    foreach (var obj in (IList)liste) {
-            //        Type type = obj.GetType();
-
-            //        foreach (PropertyInfo prop in type.GetProperties()) {
-            //            fields.Add(prop.Name);
-            //        }
-            //        break;
-            //    }
-
-
-            //    var list = db.BarkodEtiketOlustur.ToList();
-            //    r.DataSource = list;
-            //var fileName = $@"{Application.StartupPath}\rptBarkodRaf.repx";
-            //if (File.Exists(fileName))
-            //    r.LoadLayout(fileName);
-            //else {
-            //    MessageBox.Show("Barkod raporu dizayn dosyası bulunamadı. Dosya adı: " + new FileInfo(fileName).Name);
-            //    return;
-            //}
-            // r.ShowDesigner();
+            new FrmRaporTasarla(r, DizaynTipi.BarkodEtiket, true, false, Convert.ToInt32(e.Item.Tag));
 
         }
-         
+
+        private void btnRaporlaTasarla_ItemClick(object sender, EventArgs e)
+        {
+            FrmRaporTasarla rp = new FrmRaporTasarla(new List<BarkodEtiket>(), DizaynTipi.BarkodEtiket);
+            rp.ShowDialog();
+            YazdirSecenekleriEkle();
+        }
     }
 }

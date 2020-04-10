@@ -31,23 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BarkodEtiketHazirla));
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.btnBarkodYazdır = new DevExpress.XtraEditors.SimpleButton();
+            this.btnRaporHazirla = new DevExpress.XtraEditors.SimpleButton();
             this.lblUyari = new DevExpress.XtraEditors.LabelControl();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btnSatirSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnUrunEkle = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.yazdırToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rafEtiketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yazdırToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.önizleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.a4EtiketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yazdırToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.önizleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.düzenleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStokKodu = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -76,19 +66,32 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtBarkod = new DevExpress.XtraEditors.ButtonEdit();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem3 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.barLargeButtonItem4 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBarkod.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl3
             // 
-            this.groupControl3.Controls.Add(this.btnBarkodYazdır);
+            this.groupControl3.Controls.Add(this.btnRaporHazirla);
             this.groupControl3.Controls.Add(this.lblUyari);
             this.groupControl3.Controls.Add(this.btnKaydet);
             this.groupControl3.Controls.Add(this.btnSatirSil);
@@ -100,15 +103,15 @@
             this.groupControl3.Size = new System.Drawing.Size(1011, 62);
             this.groupControl3.TabIndex = 13;
             // 
-            // btnBarkodYazdır
+            // btnRaporHazirla
             // 
-            this.btnBarkodYazdır.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBarkodYazdır.ImageOptions.Image")));
-            this.btnBarkodYazdır.Location = new System.Drawing.Point(524, 24);
-            this.btnBarkodYazdır.Name = "btnBarkodYazdır";
-            this.btnBarkodYazdır.Size = new System.Drawing.Size(120, 33);
-            this.btnBarkodYazdır.TabIndex = 8;
-            this.btnBarkodYazdır.Text = "Barkod Yazdır";
-            this.btnBarkodYazdır.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.btnRaporHazirla.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRaporHazirla.ImageOptions.Image")));
+            this.btnRaporHazirla.Location = new System.Drawing.Point(524, 24);
+            this.btnRaporHazirla.Name = "btnRaporHazirla";
+            this.btnRaporHazirla.Size = new System.Drawing.Size(120, 33);
+            this.btnRaporHazirla.TabIndex = 8;
+            this.btnRaporHazirla.Text = "Rapor Hazırla";
+            this.btnRaporHazirla.Click += new System.EventHandler(this.btnRaporlaTasarla_ItemClick);
             // 
             // lblUyari
             // 
@@ -186,7 +189,6 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.ContextMenuStrip = this.contextMenuStrip1;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 65);
             this.gridControl1.MainView = this.gridView1;
@@ -195,78 +197,6 @@
             this.gridControl1.TabIndex = 14;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.yazdırToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(106, 26);
-            // 
-            // yazdırToolStripMenuItem
-            // 
-            this.yazdırToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rafEtiketToolStripMenuItem,
-            this.a4EtiketToolStripMenuItem});
-            this.yazdırToolStripMenuItem.Name = "yazdırToolStripMenuItem";
-            this.yazdırToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
-            this.yazdırToolStripMenuItem.Text = "Yazdır";
-            // 
-            // rafEtiketToolStripMenuItem
-            // 
-            this.rafEtiketToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.yazdırToolStripMenuItem1,
-            this.önizleToolStripMenuItem,
-            this.düzenleToolStripMenuItem});
-            this.rafEtiketToolStripMenuItem.Name = "rafEtiketToolStripMenuItem";
-            this.rafEtiketToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.rafEtiketToolStripMenuItem.Text = "Raf Etiket";
-            // 
-            // yazdırToolStripMenuItem1
-            // 
-            this.yazdırToolStripMenuItem1.Name = "yazdırToolStripMenuItem1";
-            this.yazdırToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
-            this.yazdırToolStripMenuItem1.Text = "Yazdır";
-            // 
-            // önizleToolStripMenuItem
-            // 
-            this.önizleToolStripMenuItem.Name = "önizleToolStripMenuItem";
-            this.önizleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.önizleToolStripMenuItem.Text = "Önizle";
-            // 
-            // düzenleToolStripMenuItem
-            // 
-            this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
-            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.düzenleToolStripMenuItem.Text = "Düzenle";
-            // 
-            // a4EtiketToolStripMenuItem
-            // 
-            this.a4EtiketToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.yazdırToolStripMenuItem2,
-            this.önizleToolStripMenuItem1,
-            this.düzenleToolStripMenuItem1});
-            this.a4EtiketToolStripMenuItem.Name = "a4EtiketToolStripMenuItem";
-            this.a4EtiketToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.a4EtiketToolStripMenuItem.Text = "A4 Etiket";
-            // 
-            // yazdırToolStripMenuItem2
-            // 
-            this.yazdırToolStripMenuItem2.Name = "yazdırToolStripMenuItem2";
-            this.yazdırToolStripMenuItem2.Size = new System.Drawing.Size(116, 22);
-            this.yazdırToolStripMenuItem2.Text = "Yazdır";
-            // 
-            // önizleToolStripMenuItem1
-            // 
-            this.önizleToolStripMenuItem1.Name = "önizleToolStripMenuItem1";
-            this.önizleToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
-            this.önizleToolStripMenuItem1.Text = "Önizle";
-            // 
-            // düzenleToolStripMenuItem1
-            // 
-            this.düzenleToolStripMenuItem1.Name = "düzenleToolStripMenuItem1";
-            this.düzenleToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
-            this.düzenleToolStripMenuItem1.Text = "Düzenle";
             // 
             // gridView1
             // 
@@ -298,6 +228,7 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridView1_PopupMenuShowing);
             // 
             // colId
             // 
@@ -519,6 +450,97 @@
             this.txtBarkod.TabIndex = 5;
             this.txtBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyDown);
             // 
+            // popupMenu1
+            // 
+            this.popupMenu1.Manager = this.barManager1;
+            this.popupMenu1.Name = "popupMenu1";
+            // 
+            // barManager1
+            // 
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barLargeButtonItem1,
+            this.barLargeButtonItem2,
+            this.barLargeButtonItem3,
+            this.barSubItem1,
+            this.barLargeButtonItem4,
+            this.barSubItem2});
+            this.barManager1.MaxItemId = 6;
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Size = new System.Drawing.Size(1011, 0);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 505);
+            this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Size = new System.Drawing.Size(1011, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 505);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(1011, 0);
+            this.barDockControlRight.Manager = this.barManager1;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 505);
+            // 
+            // barLargeButtonItem1
+            // 
+            this.barLargeButtonItem1.Caption = "Yazdır";
+            this.barLargeButtonItem1.Id = 0;
+            this.barLargeButtonItem1.Name = "barLargeButtonItem1";
+            // 
+            // barLargeButtonItem2
+            // 
+            this.barLargeButtonItem2.Caption = "Duzenle";
+            this.barLargeButtonItem2.Id = 1;
+            this.barLargeButtonItem2.Name = "barLargeButtonItem2";
+            // 
+            // barLargeButtonItem3
+            // 
+            this.barLargeButtonItem3.Caption = "Önizle";
+            this.barLargeButtonItem3.Id = 2;
+            this.barLargeButtonItem3.Name = "barLargeButtonItem3";
+            // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "barSubItem1";
+            this.barSubItem1.Id = 3;
+            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem4)});
+            this.barSubItem1.Name = "barSubItem1";
+            // 
+            // barLargeButtonItem4
+            // 
+            this.barLargeButtonItem4.Caption = "barLargeButtonItem4";
+            this.barLargeButtonItem4.Id = 4;
+            this.barLargeButtonItem4.Name = "barLargeButtonItem4";
+            // 
+            // barSubItem2
+            // 
+            this.barSubItem2.Caption = "barSubItem2";
+            this.barSubItem2.Id = 5;
+            this.barSubItem2.Name = "barSubItem2";
+            // 
             // BarkodEtiketHazirla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -527,6 +549,10 @@
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl3);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
             this.IconOptions.ShowIcon = false;
             this.Name = "BarkodEtiketHazirla";
             this.Text = "Etiket Hazırla";
@@ -536,12 +562,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtBarkod.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -582,16 +610,18 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.ButtonEdit txtBarkod;
-        private DevExpress.XtraEditors.SimpleButton btnBarkodYazdır;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem yazdırToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rafEtiketToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem yazdırToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem önizleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem düzenleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem a4EtiketToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem yazdırToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem önizleToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem düzenleToolStripMenuItem1;
+        private DevExpress.XtraEditors.SimpleButton btnRaporHazirla;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem1;
+        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem3;
+        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem2;
+        private DevExpress.XtraBars.BarManager barManager1;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraBars.BarSubItem barSubItem2;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem4;
     }
 }

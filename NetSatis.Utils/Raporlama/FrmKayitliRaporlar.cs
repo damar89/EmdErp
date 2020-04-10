@@ -40,7 +40,7 @@ namespace NetSatis.Utils.Raporlama
             var dr = XtraMessageBox.Show("Silmek istediğinizden emin misiniz?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (dr == DialogResult.No)
                 return;
-            var resID = Convert.ToInt32(gvRaporlar.GetRowCellValue(gvRaporlar.FocusedRowHandle, "ID"));
+            var resID = Convert.ToInt32(gvRaporlar.GetRowCellValue(gvRaporlar.FocusedRowHandle, "Id"));
             raporDal.Delete(context, x => x.Id == resID);
                 raporDal.Save(context);
 
@@ -49,7 +49,7 @@ namespace NetSatis.Utils.Raporlama
 
         private void btnDuzenle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var resID = Convert.ToInt32(gvRaporlar.GetRowCellValue(gvRaporlar.FocusedRowHandle, "ID"));
+            var resID = Convert.ToInt32(gvRaporlar.GetRowCellValue(gvRaporlar.FocusedRowHandle, "Id"));
             secilenRaporTasarimi = raporDal.GetByFilter(context, x => x.Id == resID);
             this.Close();
         }
@@ -60,7 +60,7 @@ namespace NetSatis.Utils.Raporlama
             frm.ShowDialog();
             if (frm.Vazgecildi)
                 return;
-            var resID = Convert.ToInt32(gvRaporlar.GetRowCellValue(gvRaporlar.FocusedRowHandle, "ID"));
+            var resID = Convert.ToInt32(gvRaporlar.GetRowCellValue(gvRaporlar.FocusedRowHandle, "Id"));
             secilenRaporTasarimi = raporDal.GetByFilter(context, x => x.Id == resID);
 
             secilenRaporTasarimi.DizaynIsmi = frm.RaporIsmi;

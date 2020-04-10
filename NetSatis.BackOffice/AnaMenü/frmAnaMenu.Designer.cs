@@ -349,7 +349,7 @@
             this.ribbonControl1.ShowCategoryInCaption = false;
             this.ribbonControl1.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl1.Size = new System.Drawing.Size(1008, 128);
+            this.ribbonControl1.Size = new System.Drawing.Size(1008, 135);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
@@ -1530,7 +1530,7 @@
             this.treeList1.CustomizationFormBounds = new System.Drawing.Rectangle(797, 413, 266, 240);
             this.treeList1.Dock = System.Windows.Forms.DockStyle.Left;
             this.treeList1.HtmlImages = this.ımageList1;
-            this.treeList1.Location = new System.Drawing.Point(0, 128);
+            this.treeList1.Location = new System.Drawing.Point(0, 135);
             this.treeList1.Name = "treeList1";
             this.treeList1.BeginUnboundLoad();
             this.treeList1.AppendNode(new object[] {
@@ -1719,7 +1719,7 @@
             this.treeList1.OptionsView.ShowTreeLines = DevExpress.Utils.DefaultBoolean.True;
             this.treeList1.OptionsView.ShowVertLines = true;
             this.treeList1.SelectImageList = this.ımageList2;
-            this.treeList1.Size = new System.Drawing.Size(305, 610);
+            this.treeList1.Size = new System.Drawing.Size(305, 603);
             this.treeList1.TabIndex = 15;
             this.treeList1.ViewStyle = DevExpress.XtraTreeList.TreeListViewStyle.TreeView;
             this.treeList1.Click += new System.EventHandler(this.treeList1_Click);

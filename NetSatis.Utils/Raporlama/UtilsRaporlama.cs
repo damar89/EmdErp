@@ -10,10 +10,7 @@ namespace NetSatis.Utils.Raporlama
     {
         RaporlamaDAL raporDal = new RaporlamaDAL();
         NetSatisContext context = new NetSatisContext();
-        public UtilsRaporlama()
-        {
-
-        }
+    
         public void YazdirmaSecenekleriniEkle(BarSubItem btnYazdir, DizaynTipi dizaynTipi, ItemClickEventHandler action)
         {
 

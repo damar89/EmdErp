@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBsRapor));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBaRapor));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,18 +60,19 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(949, 551);
+            this.gridControl1.Size = new System.Drawing.Size(933, 544);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(18, 18);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.yazdırToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(128, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(144, 52);
             // 
             // toolStripMenuItem1
             // 
@@ -81,14 +82,14 @@
             this.pdfToolStripMenuItem});
             this.toolStripMenuItem1.Image = global::NetSatis.BackOffice.Properties.Resources.export_16x161;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(127, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(143, 24);
             this.toolStripMenuItem1.Text = "Dışa Aktar";
             // 
             // excelToolStripMenuItem
             // 
             this.excelToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.exporttoxls_16x16;
             this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
-            this.excelToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.excelToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
             this.excelToolStripMenuItem.Text = "Excel";
             this.excelToolStripMenuItem.Click += new System.EventHandler(this.excelToolStripMenuItem_Click);
             // 
@@ -96,7 +97,7 @@
             // 
             this.cvsToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.exporttoxlsx_16x161;
             this.cvsToolStripMenuItem.Name = "cvsToolStripMenuItem";
-            this.cvsToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.cvsToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
             this.cvsToolStripMenuItem.Text = "Csv";
             this.cvsToolStripMenuItem.Click += new System.EventHandler(this.cvsToolStripMenuItem_Click);
             // 
@@ -104,7 +105,7 @@
             // 
             this.pdfToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.exporttopdf_16x16;
             this.pdfToolStripMenuItem.Name = "pdfToolStripMenuItem";
-            this.pdfToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.pdfToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
             this.pdfToolStripMenuItem.Text = "Pdf";
             this.pdfToolStripMenuItem.Click += new System.EventHandler(this.pdfToolStripMenuItem_Click);
             // 
@@ -112,7 +113,7 @@
             // 
             this.yazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printdialog_16x16;
             this.yazdırToolStripMenuItem.Name = "yazdırToolStripMenuItem";
-            this.yazdırToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.yazdırToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.yazdırToolStripMenuItem.Text = "Yazdır";
             this.yazdırToolStripMenuItem.Click += new System.EventHandler(this.yazdırToolStripMenuItem_Click);
             // 
@@ -181,16 +182,16 @@
             this.groupControl1.Controls.Add(this.btnExcel);
             this.groupControl1.Controls.Add(this.btnKapat);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 551);
+            this.groupControl1.Location = new System.Drawing.Point(0, 544);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(949, 64);
+            this.groupControl1.Size = new System.Drawing.Size(933, 64);
             this.groupControl1.TabIndex = 1;
             // 
             // btnExcel
             // 
             this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.ImageOptions.Image")));
-            this.btnExcel.Location = new System.Drawing.Point(743, 23);
+            this.btnExcel.Location = new System.Drawing.Point(735, 23);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(109, 36);
             this.btnExcel.TabIndex = 0;
@@ -201,7 +202,7 @@
             // 
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnKapat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnKapat.ImageOptions.SvgImage")));
-            this.btnKapat.Location = new System.Drawing.Point(858, 23);
+            this.btnKapat.Location = new System.Drawing.Point(850, 23);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(84, 36);
             this.btnKapat.TabIndex = 0;
@@ -212,11 +213,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 615);
+            this.ClientSize = new System.Drawing.Size(933, 608);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl1);
+            this.IconOptions.ShowIcon = false;
             this.Name = "frmBaRapor";
-            this.ShowIcon = false;
             this.Text = "Ba Rapor";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

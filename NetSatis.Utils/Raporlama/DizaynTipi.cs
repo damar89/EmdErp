@@ -8,15 +8,9 @@ namespace NetSatis.Utils.Raporlama
 {
     public enum DizaynTipi
     {
-        VerilenTeklif,
-        AlisSiparisi,
-        SatisKontrati,
-        AlisKontrati,
-        GenelRaporlama,
         Cari,
-        Urun,
-        IsTakibi,
-        OperasyonTakibi,
-        Kontrat
+     Stok,
+     Barkod,
+     BarkodEtiket
     }
 }
