@@ -27,7 +27,7 @@ namespace NetSatis.BackOffice.Fiş
             _odemeTuruBilgi = context.OdemeTurleri.SingleOrDefault(c => c.Id == odemeTuruId);
 
             txtOdemeTuru.Text = _odemeTuruBilgi.OdemeTuruAdi;
-            lookMasraf.Properties.DataSource = masrafDal.StokListele(context);
+            lookMasraf.Properties.DataSource = masrafDal.GetAll(context);
             txtKasaKodu.Text = _kasaBilgi.KasaKodu;
             txtKasaAdi.Text = _kasaBilgi.KasaAdi;
 

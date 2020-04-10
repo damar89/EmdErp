@@ -28,7 +28,7 @@ namespace NetSatis.BackOffice.Depo
 
         public void Listele()
         {
-            gridContDepolar.DataSource = depoDal.StokListele(context);
+            gridContDepolar.DataSource = depoDal.GetAll(context);
 
         }
 

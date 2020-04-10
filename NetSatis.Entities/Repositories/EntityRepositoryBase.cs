@@ -35,7 +35,7 @@ namespace NetSatis.Entities.Repositories
         {
             context.SaveChanges();
         }
-        public List<TEntity> StokListele(TContext context, Expression<Func<TEntity, bool>> filter = null)
+        public List<TEntity> GetAll(TContext context, Expression<Func<TEntity, bool>> filter = null)
         {
             return filter == null ? context.Set<TEntity>().ToList() : context.Set<TEntity>().Where(filter).ToList();
         }

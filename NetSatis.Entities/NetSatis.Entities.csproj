@@ -84,6 +84,7 @@
     <Reference Include="System.Core">
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing">
       <Private>True</Private>
     </Reference>
@@ -144,6 +145,7 @@
     <Compile Include="Data Access\PersonelDal.cs" />
     <Compile Include="Data Access\PersonelHareketDAL.cs" />
     <Compile Include="Data Access\ProjeDAL.cs" />
+    <Compile Include="Data Access\RaporlamaDAL.cs" />
     <Compile Include="Data Access\StokDAL.cs" />
     <Compile Include="Data Access\StokHareketDAL.cs" />
     <Compile Include="Data Access\TanimDAL.cs" />
@@ -158,6 +160,7 @@
     <Compile Include="Mapping\FirmaSabitMap.cs" />
     <Compile Include="Mapping\KategoriMap.cs" />
     <Compile Include="Mapping\ProjeMap.cs" />
+    <Compile Include="Mapping\RaporTasarimlariMap.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -235,6 +238,7 @@
     <Compile Include="Tables\Personel.cs" />
     <Compile Include="Tables\PersonelHareket.cs" />
     <Compile Include="Tables\Proje.cs" />
+    <Compile Include="Tables\RaporTasarimlari.cs" />
     <Compile Include="Tables\Stok.cs" />
     <Compile Include="Tables\StokHareket.cs" />
     <Compile Include="Tables\Tanim.cs" />
@@ -274,6 +278,7 @@
     <Compile Include="Validations\PersonelHareketValidator.cs" />
     <Compile Include="Validations\PersonelValidator.cs" />
     <Compile Include="Validations\ProjeValidator.cs" />
+    <Compile Include="Validations\RaporlamaValidator.cs" />
     <Compile Include="Validations\StokHareketValidator.cs" />
     <Compile Include="Validations\StokValidator.cs" />
     <Compile Include="Validations\TanimValidator.cs" />

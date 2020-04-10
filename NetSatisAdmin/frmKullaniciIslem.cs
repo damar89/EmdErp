@@ -22,8 +22,8 @@ namespace NetSatisAdmin
         {
             InitializeComponent();
             treeList1.ExpandAll();
-            gridlookDepo.Properties.DataSource = depoDal.StokListele(context);
-            gridLookKasa.Properties.DataSource = kasaDal.StokListele(context);
+            gridlookDepo.Properties.DataSource = depoDal.GetAll(context);
+            gridLookKasa.Properties.DataSource = kasaDal.GetAll(context);
 
             if (entity != null)
             {

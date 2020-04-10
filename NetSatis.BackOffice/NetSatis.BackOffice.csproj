@@ -1278,7 +1278,6 @@
     <EmbeddedResource Include="Personel\frmPersonelSec.resx">
       <DependentUpon>frmPersonelSec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -1474,6 +1473,10 @@
     <ProjectReference Include="..\NetSatis.Update\NetSatis.Update.csproj">
       <Project>{62ad5364-ad42-482e-ab5b-285a1eea3bad}</Project>
       <Name>NetSatis.Update</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetSatis.Utils\NetSatis.Utils.csproj">
+      <Project>{0d76b5ba-348c-4ddc-b519-2f0c8ff0b0fa}</Project>
+      <Name>NetSatis.Utils</Name>
     </ProjectReference>
     <ProjectReference Include="..\NetSatisAdmin\NetSatisAdmin.csproj">
       <Project>{CC6EAE6F-6C35-4485-BE6C-ACB9A6B03000}</Project>

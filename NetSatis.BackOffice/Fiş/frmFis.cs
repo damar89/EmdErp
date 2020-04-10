@@ -24,7 +24,7 @@ namespace NetSatis.BackOffice.Fiş
         private void Listele()
         {
             context = new NetSatisContext();
-            gridContFisler.DataSource = fisDal.StokListele(context);
+            gridContFisler.DataSource = fisDal.GetAll(context);
         }
         private void btnGuncelle_Click(object sender, EventArgs e)
         {

@@ -21,7 +21,7 @@ namespace NetSatis.BackOffice.Tanım
 
         private void frmEkullanici_Load(object sender, EventArgs e)
         {
-            gridControl1.DataSource = ekullaniciBilgileriDAL.StokListele(context);
+            gridControl1.DataSource = ekullaniciBilgileriDAL.GetAll(context);
         }
 
         private void btnSil_Click(object sender, EventArgs e)

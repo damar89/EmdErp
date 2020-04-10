@@ -29,7 +29,7 @@ namespace NetSatis.BackOffice.Ödeme_Türü
 
         void Listele()
         {
-            gridContKasaHareket.DataSource = kasaHareketDal.StokListele(context, c => c.OdemeTuruId == _odemeTuruId);
+            gridContKasaHareket.DataSource = kasaHareketDal.GetAll(context, c => c.OdemeTuruId == _odemeTuruId);
             gridContKasaBakiye.DataSource = odemeTuruDal.KasaToplamListele(context, _odemeTuruId);
             gridContGenelToplam.DataSource = odemeTuruDal.GenelToplamListele(context, _odemeTuruId);
         }

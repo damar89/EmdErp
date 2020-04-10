@@ -15,7 +15,7 @@ namespace NetSatis.Reports.Stok
             NetSatisContext context = new NetSatisContext();
             StokHareketDAL stokHareketDal = new StokHareketDAL();
 
-            ObjectDataSource datasource = new ObjectDataSource { DataSource = stokHareketDal.StokListele(context) };
+            ObjectDataSource datasource = new ObjectDataSource { DataSource = stokHareketDal.GetAll(context) };
 
             this.DataSource = datasource;
 

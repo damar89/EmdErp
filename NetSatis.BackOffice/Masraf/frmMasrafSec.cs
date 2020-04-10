@@ -47,7 +47,7 @@ namespace NetSatis.BackOffice.Masraf
 
         private void frmMasrafSec_Load(object sender, EventArgs e)
         {
-            gridContStoklar.DataSource = masrafDal.StokListele(context);
+            gridContStoklar.DataSource = masrafDal.GetAll(context);
         }
 
         private void gridStoklar_KeyDown(object sender, KeyEventArgs e)

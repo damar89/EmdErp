@@ -19,7 +19,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
 
             Fis fisBilgi = fisDal.GetByFilter(context, c => c.FisKodu == fisKodu);
 
-            ObjectDataSource stokHareketDataSource = new ObjectDataSource { DataSource = stokHareketDal.StokListele(context, c => c.FisKodu == fisKodu) };
+            ObjectDataSource stokHareketDataSource = new ObjectDataSource { DataSource = stokHareketDal.GetAll(context, c => c.FisKodu == fisKodu) };
 
             //fatura başlık
 

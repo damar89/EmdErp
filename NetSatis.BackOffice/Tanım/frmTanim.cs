@@ -57,7 +57,7 @@ namespace NetSatis.BackOffice.Tanım
 
         void Listele()
         {
-            gridContTanim.DataSource = tanimDal.StokListele(context, c => c.Turu == _tanimTuru.ToString());
+            gridContTanim.DataSource = tanimDal.GetAll(context, c => c.Turu == _tanimTuru.ToString());
 
         }
 

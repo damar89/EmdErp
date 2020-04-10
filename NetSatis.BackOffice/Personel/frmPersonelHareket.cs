@@ -29,7 +29,7 @@ namespace NetSatis.BackOffice.Personel
 
         private void Listele()
         {
-            gridContPersonelHareket.DataSource = fisDal.StokListele(context, c => c.PlasiyerId == _personelId);
+            gridContPersonelHareket.DataSource = fisDal.GetAll(context, c => c.PlasiyerId == _personelId);
             gridContFisToplam.DataSource = personelDal.PersonelFisToplam(context, _personelId);
 
 

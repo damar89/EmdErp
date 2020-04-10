@@ -28,8 +28,7 @@ namespace NetSatis.BackOffice.Raporlar
         private int mmToPixel(int mm)
         {
             return Convert.ToInt32(mm * 3.7795275591);
-            
-
+             
         }
 
         private void wizardControl1_FinishClick(object sender, CancelEventArgs e)

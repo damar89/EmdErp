@@ -29,7 +29,7 @@ namespace NetSatis.BackOffice.Kasa
         }
         public void Guncelle()
         {
-            gridContKasaHareket.DataSource = kasaHareketDal.StokListele(context, c => c.KasaId == _kasaId);
+            gridContKasaHareket.DataSource = kasaHareketDal.GetAll(context, c => c.KasaId == _kasaId);
             gridContOdemeTuruToplam.DataSource = kasaDal.OdemeTuruToplamListele(context, _kasaId);
             gridContGenelToplam.DataSource = kasaDal.GenelToplamListele(context, _kasaId);
         }

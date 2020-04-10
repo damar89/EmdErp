@@ -19,9 +19,9 @@ namespace NetSatis.BackOffice.Raporlar
         public frmTarihliDetay()
         {
             InitializeComponent();
-            lokKategori.Properties.DataSource = kategoriDal.StokListele(context);
-            lookAnaGrup.Properties.DataSource = anagrupDal.StokListele(context);
-            lookAltGrup.Properties.DataSource = altgrupDal.StokListele(context);
+            lokKategori.Properties.DataSource = kategoriDal.GetAll(context);
+            lookAnaGrup.Properties.DataSource = anagrupDal.GetAll(context);
+            lookAltGrup.Properties.DataSource = altgrupDal.GetAll(context);
             lookMarka.Properties.DataSource = stokDal.StokListele(context);
             lookUretici.Properties.DataSource = stokDal.StokListele(context);
 

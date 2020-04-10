@@ -44,7 +44,7 @@ namespace NetSatis.BackOffice.Cari
                 {
                     KasaHareketDAL dal = new KasaHareketDAL();
                     secilen = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
-                    var hareket = dal.StokListele(context, c => c.CariId == secilen);
+                    var hareket = dal.GetAll(context, c => c.CariId == secilen);
                     if (hareket.Count > 0)
                     {
                         MessageBox.Show("Hareket görmüş bir cari silinemez.");

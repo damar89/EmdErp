@@ -255,8 +255,8 @@ namespace NetSatis.BackOffice.Fiş
                 cmbTipi.SelectedItem = a;
             }
 
-            cmbProje.Properties.Items.AddRange(projeDal.StokListele(context).Select(x => x.ProjeAdi).ToList());
-            cmbOzelKod.Properties.Items.AddRange(ozelkodDal.StokListele(context).Select(x => x.OzelKodAdi).ToList());
+            cmbProje.Properties.Items.AddRange(projeDal.GetAll(context).Select(x => x.ProjeAdi).ToList());
+            cmbOzelKod.Properties.Items.AddRange(ozelkodDal.GetAll(context).Select(x => x.OzelKodAdi).ToList());
 
         }
 

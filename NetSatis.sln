@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.902
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSatis.Entities", "NetSatis.Entities\NetSatis.Entities.csproj", "{09D91E15-402A-45D0-9C04-E723F42131F7}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmdSoft.Lisans", "EmdSoft.Lisans\EmdSoft.Lisans.csproj", "{614F44B6-0C72-4951-B5DB-6546CCC1A54D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSatis.EDonusum", "NetSatis.EDonusum\NetSatis.EDonusum.csproj", "{AC177A68-ED93-4079-BD91-A10DD9BA8109}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSatis.Utils", "NetSatis.Utils\NetSatis.Utils.csproj", "{0D76B5BA-348C-4DDC-B519-2F0C8FF0B0FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{AC177A68-ED93-4079-BD91-A10DD9BA8109}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC177A68-ED93-4079-BD91-A10DD9BA8109}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC177A68-ED93-4079-BD91-A10DD9BA8109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D76B5BA-348C-4DDC-B519-2F0C8FF0B0FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D76B5BA-348C-4DDC-B519-2F0C8FF0B0FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D76B5BA-348C-4DDC-B519-2F0C8FF0B0FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D76B5BA-348C-4DDC-B519-2F0C8FF0B0FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
