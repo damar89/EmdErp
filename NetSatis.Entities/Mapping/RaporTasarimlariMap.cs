@@ -16,6 +16,8 @@ namespace NetSatis.Entities.Mapping
             this.HasKey(p => p.Id);
             this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             this.Property(p => p.Id).HasColumnName("Id");
+            this.Property(p => p.DizaynAraci).IsRequired();
+            this.Property(p => p.DizaynAraci).HasColumnName("DizaynAraci");
             this.Property(p => p.DizaynIsmi).IsRequired();
             this.Property(p => p.DizaynIsmi).HasColumnName("DizaynIsmi");
             this.Property(p => p.DizaynIsmi).HasMaxLength(750);

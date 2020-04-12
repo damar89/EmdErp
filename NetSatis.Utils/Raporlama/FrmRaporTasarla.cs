@@ -78,7 +78,11 @@ namespace NetSatis.Utils.Raporlama
                         return;
                     }
                     DizaynIsmi = frmRaporUstBilgi.RaporIsmi;
-                }
+                    raporTasarimlari.DuzenlemeTarihi = (DateTime?)null;
+                } else
+                    raporTasarimlari.DuzenlemeTarihi = DateTime.Now;
+
+                raporTasarimlari.DizaynAraci = this.Name;
 
                 raporDal.AddOrUpdate(context, raporTasarimlari);
                 raporDal.Save(context);
@@ -94,7 +98,7 @@ namespace NetSatis.Utils.Raporlama
 
         private void btnKayitliRaporlar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var frm = new FrmKayitliRaporlar(dizaynTipi);
+            var frm = new FrmKayitliRaporlar(dizaynTipi, this.Name);
             frm.ShowDialog();
             if (frm.secilenRaporTasarimi != null)
                 raporTasarimlari = frm.secilenRaporTasarimi;

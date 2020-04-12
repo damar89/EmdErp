@@ -17,10 +17,12 @@ namespace NetSatis.Utils.Raporlama
 
         RaporlamaDAL raporDal = new RaporlamaDAL();
         NetSatisContext context = new NetSatisContext();
-        public FrmKayitliRaporlar(DizaynTipi _dizaynTipi)
+        private string dizaynAraci = null;
+        public FrmKayitliRaporlar(DizaynTipi _dizaynTipi, string DizaynAraci)
         {
             InitializeComponent();
             dizaynTipi = _dizaynTipi;
+            dizaynAraci = DizaynAraci;
         }
 
 
@@ -31,7 +33,7 @@ namespace NetSatis.Utils.Raporlama
 
         private void FrmKayitliRaporlar_Load(object sender, EventArgs e)
         {
-            var res = raporDal.GetAll(context, x => x.DizaynTipi == dizaynTipi.ToString());// repo.Rapor.Getir(x => x.DizaynTipi == dizaynTipi.ToString()).ToList();
+            var res = raporDal.GetAll(context, x => x.DizaynTipi == dizaynTipi.ToString() && x.DizaynAraci == dizaynAraci);// repo.Rapor.Getir(x => x.DizaynTipi == dizaynTipi.ToString()).ToList();
             grRaporlar.DataSource = res;
         }
 
@@ -42,9 +44,9 @@ namespace NetSatis.Utils.Raporlama
                 return;
             var resID = Convert.ToInt32(gvRaporlar.GetRowCellValue(gvRaporlar.FocusedRowHandle, "Id"));
             raporDal.Delete(context, x => x.Id == resID);
-                raporDal.Save(context);
+            raporDal.Save(context);
 
-                gvRaporlar.DeleteRow(gvRaporlar.FocusedRowHandle);
+            gvRaporlar.DeleteRow(gvRaporlar.FocusedRowHandle);
         }
 
         private void btnDuzenle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -69,7 +71,7 @@ namespace NetSatis.Utils.Raporlama
 
             XtraMessageBox.Show("Rapor ismi güncellendi", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
             secilenRaporTasarimi = null;
-            var res = raporDal.GetAll(context, x => x.DizaynTipi == dizaynTipi.ToString());// repo.Rapor.Getir(x => x.DizaynTipi == dizaynTipi.ToString()).ToList();
+            var res = raporDal.GetAll(context, x => x.DizaynTipi == dizaynTipi.ToString() && x.DizaynAraci == dizaynAraci);// repo.Rapor.Getir(x => x.DizaynTipi == dizaynTipi.ToString()).ToList();
             grRaporlar.DataSource = res;
         }
     }
