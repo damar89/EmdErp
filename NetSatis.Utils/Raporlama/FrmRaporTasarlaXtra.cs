@@ -27,16 +27,21 @@ namespace NetSatis.Utils.Raporlama
         UtilsRaporlama util = new UtilsRaporlama();
         NetSatisContext context = new NetSatisContext();
         private XtraReport seciliRapor = new XtraReport();
-        public FrmRaporTasarlaXtra(object datasource, DizaynTipi _dizaynTipi, bool OnIzle = false, bool Yazdir = false, int DesingID = 0)
+        public FrmRaporTasarlaXtra(object datasource, DizaynTipi _dizaynTipi, bool OnIzle = false, bool Yazdir = false, int DesingID = 0, int copiesCount = 1)
         {
             InitializeComponent();
             dizaynTipi = _dizaynTipi;
             dataSource = datasource;
-            if (OnIzle) {
+            if (OnIzle)
+            {
                 util.OnIzle(DesingID, dataSource);
-            } else if (Yazdir) {
-                util.Yazdir(DesingID, dataSource);
-            } else {
+            }
+            else if (Yazdir)
+            {
+                util.Yazdir(DesingID, dataSource, copiesCount);
+            }
+            else
+            {
                 seciliRapor = new XtraReport();
                 seciliRapor.DataSource = dataSource;
                 reportDesigner1.OpenReport(seciliRapor);
@@ -44,7 +49,8 @@ namespace NetSatis.Utils.Raporlama
         }
         public RaporTasarimlari raporTasarimlari
         {
-            get {
+            get
+            {
                 MemoryStream memoryStream = new MemoryStream();
                 seciliRapor.SaveLayout(memoryStream);
                 memoryStream.Seek(0, SeekOrigin.Begin);
@@ -55,7 +61,8 @@ namespace NetSatis.Utils.Raporlama
                 _raporTasarimlari.DizaynTipi = dizaynTipi.ToString();
                 return _raporTasarimlari;
             }
-            set {
+            set
+            {
                 _raporTasarimlari = value;
                 DizaynIsmi = _raporTasarimlari.DizaynIsmi;
 
@@ -67,17 +74,21 @@ namespace NetSatis.Utils.Raporlama
 
         private void btnKaydet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            try {
-                if (raporTasarimlari.Id == 0) {
+            try
+            {
+                if (raporTasarimlari.Id == 0)
+                {
                     raporTasarimlari.DuzenlemeTarihi = (DateTime?)null;
                     FrmRaporUstBilgi frmRaporUstBilgi = new FrmRaporUstBilgi();
                     frmRaporUstBilgi.ShowDialog();
-                    if (frmRaporUstBilgi.Vazgecildi) {
+                    if (frmRaporUstBilgi.Vazgecildi)
+                    {
                         XtraMessageBox.Show("Kayıt işlemi başarısız!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     DizaynIsmi = frmRaporUstBilgi.RaporIsmi;
-                } else
+                }
+                else
                     raporTasarimlari.DuzenlemeTarihi = DateTime.Now;
 
                 raporTasarimlari.DizaynAraci = this.Name;
@@ -86,7 +97,9 @@ namespace NetSatis.Utils.Raporlama
 
                 XtraMessageBox.Show("Kayıt işlemi başarılı", "Rapor Tasarımı Kaydedildi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            } catch (Exception err) {
+            }
+            catch (Exception err)
+            {
                 throw err;
             }
 
@@ -107,9 +120,12 @@ namespace NetSatis.Utils.Raporlama
                 return;
 
             var dr = XtraMessageBox.Show("Son Değişiklikleri Kaydetmek istermisiniz?", this.Text, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            if (dr == DialogResult.Cancel) {
+            if (dr == DialogResult.Cancel)
+            {
                 e.Cancel = true;
-            } else if (dr == DialogResult.Yes) {
+            }
+            else if (dr == DialogResult.Yes)
+            {
                 btnKaydet_ItemClick(null, null);
             }
         }

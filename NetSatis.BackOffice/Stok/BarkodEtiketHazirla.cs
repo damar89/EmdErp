@@ -222,22 +222,19 @@ namespace NetSatis.BackOffice.Stok
 
         void YazdirSecenekleriEkle()
         {
-           new UtilsRaporlama().YazdirmaSecenekleriniEkle(popupMenu1, DizaynTipi.BarkodEtiket, Br_ItemClick);
+           new UtilsRaporlama().YazdirmaSecenekleriniEkle(popupMenu1, DizaynTipi.BarkodEtiket, Br_ItemClick); 
         }
-
+         
         private void Br_ItemClick(object sender, ItemClickEventArgs e)
-        { 
+        {
             //tüm grid
-            //var r = ((IEnumerable<BarkodEtiket>)gridControl1.DataSource).ToList();
-            var r = new List<BarkodEtiket>();
-            r.Add(gridView1.GetRow(gridView1.FocusedRowHandle) as BarkodEtiket);
-            
+            var r = ((IEnumerable<BarkodEtiket>)gridControl1.DataSource).ToList(); 
             if (r == null)
                 return;
 
-            new FrmRaporTasarlaXtra(r, DizaynTipi.BarkodEtiket, true, false, Convert.ToInt32(e.Item.Tag));
-
-        }
+            new FrmRaporTasarlaXtra(r, DizaynTipi.BarkodEtiket, false, true, Convert.ToInt32(e.Item.Tag));
+            
+        } 
 
         private void btnRaporlaTasarla_ItemClick(object sender, EventArgs e)
         {

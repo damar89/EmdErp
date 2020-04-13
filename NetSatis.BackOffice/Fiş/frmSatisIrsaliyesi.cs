@@ -3,6 +3,7 @@ using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
 using NetSatis.Entities.Tools;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
@@ -169,6 +170,7 @@ namespace NetSatis.BackOffice.Fiş
             decimal fisKdvToplam = 0;
             decimal fisAraToplam = 0;
             decimal fisToplamTutar = 0;
+            IQueryable<Entities.Tables.StokHareket> hareketler = null;
             for (int i = 0; i < gridFisler.GetSelectedRows().Length; i++)
             {
                 var irsaliyeId = Convert.ToInt32(gridFisler.GetRowCellValue(gridFisler.GetSelectedRows()[i], "Id"));
@@ -286,10 +288,105 @@ namespace NetSatis.BackOffice.Fiş
             fis.StokIrsaliye = "1";
             fis.CariIrsaliye = "1";
             context.Fisler.Add(fis);
+
             context.SaveChanges();
+            FaturaOlustur(fis, hareketler.ToList());
 
             MessageBox.Show("Seçilen irsaliyeler başarıyla faturalandırılmıştır.");
             Listele();
+
+        }
+        NetSatis.EDonusum.Controller.EDonusumIslemleri eislem = new EDonusum.Controller.EDonusumIslemleri();
+        private void FaturaOlustur(Entities.Tables.Fis fis, List<Entities.Tables.StokHareket> hareketler)   //BURADAN AŞAĞISI
+        {
+            string HarTipi = "SF";
+            string cmbTipi = "A";
+
+
+            NetSatis.EDonusum.Models.Donusum.Master m = null;
+            m = new EDonusum.Models.Donusum.Master
+            {
+                Aciklama = fis.Aciklama,
+                AlisVerisNo = fis.Id,
+                DokumanKodu = "",
+                EditDate = DateTime.Now,
+                EditUser = frmAnaMenu.UserId,
+                FisKodu = fis.FisKodu,
+                FisTuru = fis.FisTuru,
+                HareketTipi = 1,
+                HarTip = HarTipi,
+                IslemTarihi = fis.Tarih.Value,
+                Kdv = fis.KdvToplam_.Value,
+                MusteriKodu = fis.CariId.Value,
+                Matrah = (fis.ToplamTutar - fis.KdvToplam_).Value,
+                NetTutar = fis.ToplamTutar.Value,
+                SaveDate = DateTime.Now,
+                SaveUser = frmAnaMenu.UserId,
+                SeriKodu = fis.Seri,
+                SiraKodu = fis.Sira,
+                Tutar = fis.AraToplam_.Value,
+                VadeTarihi = fis.VadeTarihi.Value,
+                DipIskonto = fis.DipIskNetTutari.Value,
+            };
+            DetailsDuzenle(eislem.MasterOlustur(m), HarTipi, fis, hareketler);
+
+
+        }
+        private void DetailsDuzenle(int id, string HarTipi, Fis fis, List<Entities.Tables.StokHareket> hareketler)
+        {
+            EDonusum.VTContext c = new EDonusum.VTContext();
+
+            var detailsList = c.Detail.Where(x => x.MasterId == id).ToList();
+
+            for (int i = 0; i < detailsList.Count; i++)
+            {
+                bool found = false;
+                foreach (var item in hareketler)
+                {
+
+                    if (item.StokId == detailsList[i].StokId)
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found)
+                {
+                    eislem.DetailsSil(detailsList[i].Id);
+                }
+            }
+
+            //EFATURA YENİ DÜZENLEME
+            foreach (var stok in hareketler)
+            {
+                decimal fyt = stok.KdvToplam.Value;
+                decimal fyt2 = stok.ToplamTutar.Value;
+                NetSatis.EDonusum.Models.Donusum.Details d = null;
+
+                d = new EDonusum.Models.Donusum.Details
+                {
+                    HareketTipi = 1,
+                    //Magaza="",
+                    HarTip = HarTipi,
+                    Isk1 = stok.IndirimOrani.Value,
+                    Isk2 = stok.IndirimOrani2.Value,
+                    Isk3 = stok.IndirimOrani3.Value,
+                    IskontoTutar = fis.DipIskNetTutari.Value,
+                    Kdv = stok.KdvToplam.Value,
+                    KdvOrani = stok.Kdv,
+                    KdvDahilFiyat = stok.ToplamTutar.Value,
+                    MasterId = id,
+                    Matrah = fyt2 - fyt,
+                    Miktar = stok.Miktar.Value,
+                    MusteriKodu = fis.CariId.Value,
+                    TempId = Guid.NewGuid(),
+                    StokId = stok.StokId,
+                    Tutar = stok.BirimFiyati.Value
+                };
+
+                eislem.DetailsOlustur(d);
+            }
+
 
         }
 
