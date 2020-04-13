@@ -31,7 +31,7 @@ namespace NetSatis.BackOffice.Raporlar
             DateTime dtBaslangic = dtpBaslangic.DateTime;
             DateTime dtBitis = dtpBitis.DateTime;
             dtBitis = dtBitis.AddHours(23).AddMinutes(59).AddSeconds(59);
-            frmSatisRapor form = new frmSatisRapor(dtBaslangic, dtBitis,user);
+            frmPerakendeListesi form = new frmPerakendeListesi(dtBaslangic, dtBitis,user);
             form.Show();
             this.Close();
         }
