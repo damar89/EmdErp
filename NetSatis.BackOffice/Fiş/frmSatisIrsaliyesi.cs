@@ -239,12 +239,12 @@ namespace NetSatis.BackOffice.Fiş
 
                 //buraya kadar --------------------------------------
 
-
-
                 var tempirsaliye = context.Fisler.Where(x => x.Id == irsaliyeId).FirstOrDefault();
                 tempirsaliye.FaturaFisKodu = yeniFisKodu;
                 tempirsaliye.CariIrsaliye = "0";
                 tempirsaliye.StokIrsaliye = "0";
+
+
 
                 var tempirsaliyestokhar = context.StokHareketleri.Where(x => x.FisKodu == referansIrsaliyeKodu);
                 foreach (var item in tempirsaliyestokhar)
@@ -253,24 +253,23 @@ namespace NetSatis.BackOffice.Fiş
                 }
                 context.SaveChanges();
 
-                var stokHareketleri = context.StokHareketleri.Where(x => x.FisKodu == referansIrsaliyeKodu);
+                hareketler = context.StokHareketleri.Where(x => x.FisKodu == referansIrsaliyeKodu);
 
-                if (stokHareketleri != null)
+                if (hareketler != null)
                 {
-                    foreach (var item in stokHareketleri)
+                    foreach (var item in hareketler)
                     {
                         if (item.FisTuru == "Satış İrsaliyesi")
                         {
                             item.FisTuru = "Toptan Satış Faturası";
                             item.Hareket = "Stok Çıkış";
-                            item.Tipi = "A";
+
 
                         }
                         else if (item.FisTuru == "Alış İrsaliyesi")
                         {
                             item.FisTuru = "Alış Faturası";
                             item.Hareket = "Stok Giriş";
-                            item.Tipi = "A";
 
                         }
                         item.FisKodu = yeniFisKodu;
@@ -279,7 +278,6 @@ namespace NetSatis.BackOffice.Fiş
 
                     }
                 }
-
 
             }
             fis.KdvToplam_ = fisKdvToplam;
@@ -290,6 +288,7 @@ namespace NetSatis.BackOffice.Fiş
             context.Fisler.Add(fis);
 
             context.SaveChanges();
+
             FaturaOlustur(fis, hareketler.ToList());
 
             MessageBox.Show("Seçilen irsaliyeler başarıyla faturalandırılmıştır.");

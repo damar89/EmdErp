@@ -27,7 +27,7 @@ namespace NetSatis.Utils.Raporlama
         UtilsRaporlama util = new UtilsRaporlama();
         NetSatisContext context = new NetSatisContext();
         private XtraReport seciliRapor = new XtraReport();
-        public FrmRaporTasarlaXtra(object datasource, DizaynTipi _dizaynTipi, bool OnIzle = false, bool Yazdir = false, int DesingID = 0, int copiesCount = 1)
+        public FrmRaporTasarlaXtra(object datasource, DizaynTipi _dizaynTipi, bool OnIzle = false, bool Yazdir = false, int DesingID = 0)
         {
             InitializeComponent();
             dizaynTipi = _dizaynTipi;
@@ -38,7 +38,7 @@ namespace NetSatis.Utils.Raporlama
             }
             else if (Yazdir)
             {
-                util.Yazdir(DesingID, dataSource, copiesCount);
+                util.Yazdir(DesingID, dataSource);
             }
             else
             {

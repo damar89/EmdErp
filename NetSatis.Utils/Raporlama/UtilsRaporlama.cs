@@ -59,12 +59,11 @@ namespace NetSatis.Utils.Raporlama
             var rpt = new ReportPrintTool(rapor);
             rpt.ShowRibbonPreview();
         }
-        public void Yazdir(int ReportID, object data,int copiesCount=1)
+        public void Yazdir(int ReportID, object data)
         {
             var rapor = RaporTasarimGetir(DesignID: ReportID);
             rapor.DataSource = data;
             var rpt = new ReportPrintTool(rapor);
-            rpt.PrinterSettings.Copies = copiesCount;
             rpt.Print();
         }
 
