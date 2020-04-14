@@ -30,36 +30,36 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAnaMenu));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem1 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem2 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem3 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem4 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem5 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem10 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem11 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem6 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem12 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem13 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem7 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem14 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem15 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem8 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem16 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem17 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem9 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem18 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem19 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem10 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem20 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem21 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem11 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem22 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem23 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem12 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem24 = new DevExpress.Utils.ToolTipTitleItem();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnStok = new DevExpress.XtraBars.BarButtonItem();
             this.btnCariler = new DevExpress.XtraBars.BarButtonItem();
@@ -349,7 +349,7 @@
             this.ribbonControl1.ShowCategoryInCaption = false;
             this.ribbonControl1.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl1.Size = new System.Drawing.Size(1008, 135);
+            this.ribbonControl1.Size = new System.Drawing.Size(1008, 128);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
@@ -363,16 +363,16 @@
             this.btnStok.LargeWidth = 75;
             this.btnStok.MergeOrder = 75;
             this.btnStok.Name = "btnStok";
-            toolTipTitleItem1.Text = "(F3)";
-            toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "Stok Listesi";
-            toolTipTitleItem2.LeftIndent = 6;
-            toolTipTitleItem2.Text = "Stok Listesi Açılır";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            superToolTip1.Items.Add(toolTipSeparatorItem1);
-            superToolTip1.Items.Add(toolTipTitleItem2);
-            this.btnStok.SuperTip = superToolTip1;
+            toolTipTitleItem13.Text = "(F3)";
+            toolTipItem7.LeftIndent = 6;
+            toolTipItem7.Text = "Stok Listesi";
+            toolTipTitleItem14.LeftIndent = 6;
+            toolTipTitleItem14.Text = "Stok Listesi Açılır";
+            superToolTip7.Items.Add(toolTipTitleItem13);
+            superToolTip7.Items.Add(toolTipItem7);
+            superToolTip7.Items.Add(toolTipSeparatorItem7);
+            superToolTip7.Items.Add(toolTipTitleItem14);
+            this.btnStok.SuperTip = superToolTip7;
             this.btnStok.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnStok_ItemClick);
             // 
             // btnCariler
@@ -384,16 +384,16 @@
             this.btnCariler.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F5);
             this.btnCariler.LargeWidth = 75;
             this.btnCariler.Name = "btnCariler";
-            toolTipTitleItem3.Text = "(F5)";
-            toolTipItem2.LeftIndent = 6;
-            toolTipItem2.Text = "Cari Listesi";
-            toolTipTitleItem4.LeftIndent = 6;
-            toolTipTitleItem4.Text = "Cari Listeler Ekranı Açılır";
-            superToolTip2.Items.Add(toolTipTitleItem3);
-            superToolTip2.Items.Add(toolTipItem2);
-            superToolTip2.Items.Add(toolTipSeparatorItem2);
-            superToolTip2.Items.Add(toolTipTitleItem4);
-            this.btnCariler.SuperTip = superToolTip2;
+            toolTipTitleItem15.Text = "(F5)";
+            toolTipItem8.LeftIndent = 6;
+            toolTipItem8.Text = "Cari Listesi";
+            toolTipTitleItem16.LeftIndent = 6;
+            toolTipTitleItem16.Text = "Cari Listeler Ekranı Açılır";
+            superToolTip8.Items.Add(toolTipTitleItem15);
+            superToolTip8.Items.Add(toolTipItem8);
+            superToolTip8.Items.Add(toolTipSeparatorItem8);
+            superToolTip8.Items.Add(toolTipTitleItem16);
+            this.btnCariler.SuperTip = superToolTip8;
             this.btnCariler.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCariler_ItemClick);
             // 
             // barSatisEkrani
@@ -526,16 +526,16 @@
             this.barButtonItem20.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F8);
             this.barButtonItem20.LargeWidth = 75;
             this.barButtonItem20.Name = "barButtonItem20";
-            toolTipTitleItem5.Text = "(F8)";
-            toolTipItem3.LeftIndent = 6;
-            toolTipItem3.Text = "Alış Faturası";
-            toolTipTitleItem6.LeftIndent = 6;
-            toolTipTitleItem6.Text = "Alış Faturası İşleme Formu Açılır";
-            superToolTip3.Items.Add(toolTipTitleItem5);
-            superToolTip3.Items.Add(toolTipItem3);
-            superToolTip3.Items.Add(toolTipSeparatorItem3);
-            superToolTip3.Items.Add(toolTipTitleItem6);
-            this.barButtonItem20.SuperTip = superToolTip3;
+            toolTipTitleItem17.Text = "(F8)";
+            toolTipItem9.LeftIndent = 6;
+            toolTipItem9.Text = "Alış Faturası";
+            toolTipTitleItem18.LeftIndent = 6;
+            toolTipTitleItem18.Text = "Alış Faturası İşleme Formu Açılır";
+            superToolTip9.Items.Add(toolTipTitleItem17);
+            superToolTip9.Items.Add(toolTipItem9);
+            superToolTip9.Items.Add(toolTipSeparatorItem9);
+            superToolTip9.Items.Add(toolTipTitleItem18);
+            this.barButtonItem20.SuperTip = superToolTip9;
             this.barButtonItem20.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.FisIslem_Click);
             // 
             // barButtonItem21
@@ -554,16 +554,16 @@
             this.barButtonItem22.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F9);
             this.barButtonItem22.LargeWidth = 75;
             this.barButtonItem22.Name = "barButtonItem22";
-            toolTipTitleItem7.Text = "(F9)";
-            toolTipItem4.LeftIndent = 6;
-            toolTipItem4.Text = "Satış Faturası";
-            toolTipTitleItem8.LeftIndent = 6;
-            toolTipTitleItem8.Text = "Satış Faturası İşleme Formu Açılır";
-            superToolTip4.Items.Add(toolTipTitleItem7);
-            superToolTip4.Items.Add(toolTipItem4);
-            superToolTip4.Items.Add(toolTipSeparatorItem4);
-            superToolTip4.Items.Add(toolTipTitleItem8);
-            this.barButtonItem22.SuperTip = superToolTip4;
+            toolTipTitleItem19.Text = "(F9)";
+            toolTipItem10.LeftIndent = 6;
+            toolTipItem10.Text = "Satış Faturası";
+            toolTipTitleItem20.LeftIndent = 6;
+            toolTipTitleItem20.Text = "Satış Faturası İşleme Formu Açılır";
+            superToolTip10.Items.Add(toolTipTitleItem19);
+            superToolTip10.Items.Add(toolTipItem10);
+            superToolTip10.Items.Add(toolTipSeparatorItem10);
+            superToolTip10.Items.Add(toolTipTitleItem20);
+            this.barButtonItem22.SuperTip = superToolTip10;
             this.barButtonItem22.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.FisIslem_Click);
             // 
             // barButtonItem23
@@ -740,16 +740,16 @@
             this.btnStokAc.Name = "btnStokAc";
             this.btnStokAc.SmallWithoutTextWidth = 75;
             this.btnStokAc.SmallWithTextWidth = 75;
-            toolTipTitleItem9.Text = "(F2)";
-            toolTipItem5.LeftIndent = 6;
-            toolTipItem5.Text = "Yeni Stok Ekle";
-            toolTipTitleItem10.LeftIndent = 6;
-            toolTipTitleItem10.Text = "Stok İşlem Formu Açılır";
-            superToolTip5.Items.Add(toolTipTitleItem9);
-            superToolTip5.Items.Add(toolTipItem5);
-            superToolTip5.Items.Add(toolTipSeparatorItem5);
-            superToolTip5.Items.Add(toolTipTitleItem10);
-            this.btnStokAc.SuperTip = superToolTip5;
+            toolTipTitleItem21.Text = "(F2)";
+            toolTipItem11.LeftIndent = 6;
+            toolTipItem11.Text = "Yeni Stok Ekle";
+            toolTipTitleItem22.LeftIndent = 6;
+            toolTipTitleItem22.Text = "Stok İşlem Formu Açılır";
+            superToolTip11.Items.Add(toolTipTitleItem21);
+            superToolTip11.Items.Add(toolTipItem11);
+            superToolTip11.Items.Add(toolTipSeparatorItem11);
+            superToolTip11.Items.Add(toolTipTitleItem22);
+            this.btnStokAc.SuperTip = superToolTip11;
             this.btnStokAc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnStokAc_ItemClick);
             // 
             // btnCariAc
@@ -762,16 +762,16 @@
             this.btnCariAc.LargeWidth = 75;
             this.btnCariAc.MergeOrder = 75;
             this.btnCariAc.Name = "btnCariAc";
-            toolTipTitleItem11.Text = "(F4)";
-            toolTipItem6.LeftIndent = 6;
-            toolTipItem6.Text = "Yeni Cari İşlemleri";
-            toolTipTitleItem12.LeftIndent = 6;
-            toolTipTitleItem12.Text = "Cari İşlem Formu Açılır";
-            superToolTip6.Items.Add(toolTipTitleItem11);
-            superToolTip6.Items.Add(toolTipItem6);
-            superToolTip6.Items.Add(toolTipSeparatorItem6);
-            superToolTip6.Items.Add(toolTipTitleItem12);
-            this.btnCariAc.SuperTip = superToolTip6;
+            toolTipTitleItem23.Text = "(F4)";
+            toolTipItem12.LeftIndent = 6;
+            toolTipItem12.Text = "Yeni Cari İşlemleri";
+            toolTipTitleItem24.LeftIndent = 6;
+            toolTipTitleItem24.Text = "Cari İşlem Formu Açılır";
+            superToolTip12.Items.Add(toolTipTitleItem23);
+            superToolTip12.Items.Add(toolTipItem12);
+            superToolTip12.Items.Add(toolTipSeparatorItem12);
+            superToolTip12.Items.Add(toolTipTitleItem24);
+            this.btnCariAc.SuperTip = superToolTip12;
             this.btnCariAc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCariAc_ItemClick);
             // 
             // btnListeler
@@ -1447,10 +1447,10 @@
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.barKullaniciAdi);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 738);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 740);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1008, 34);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1008, 32);
             // 
             // xtraTabbedMdiManager1
             // 
@@ -1530,11 +1530,11 @@
             this.treeList1.CustomizationFormBounds = new System.Drawing.Rectangle(797, 413, 266, 240);
             this.treeList1.Dock = System.Windows.Forms.DockStyle.Left;
             this.treeList1.HtmlImages = this.ımageList1;
-            this.treeList1.Location = new System.Drawing.Point(0, 135);
+            this.treeList1.Location = new System.Drawing.Point(0, 128);
             this.treeList1.Name = "treeList1";
             this.treeList1.BeginUnboundLoad();
             this.treeList1.AppendNode(new object[] {
-            "Stok Yönetimi"}, -1, 104, 104, -1, "Stok Yönetimi");
+            "Stok Yönetimi"}, -1, 104, 104, -1);
             this.treeList1.AppendNode(new object[] {
             "Stok Tanıtım Kartı"}, 0, 0, 1, -1, "Stok Tanıtım Kartı");
             this.treeList1.AppendNode(new object[] {
@@ -1544,7 +1544,7 @@
             this.treeList1.AppendNode(new object[] {
             "Stok Transfer"}, 0, 0, 1, -1, "Stok Transfer");
             this.treeList1.AppendNode(new object[] {
-            "Sayım"}, 0, 2, 2, -1, "Sayım");
+            "Sayım"}, 0, 2, 2, -1);
             this.treeList1.AppendNode(new object[] {
             "Sayım Fişi"}, 5, 0, 1, -1, "Sayım Fişi");
             this.treeList1.AppendNode(new object[] {
@@ -1552,13 +1552,13 @@
             this.treeList1.AppendNode(new object[] {
             "Sayım Eksiği Fişi"}, 5, 0, 1, -1, "Sayım Eksiği Fişi");
             this.treeList1.AppendNode(new object[] {
-            "Cari Yönetimi"}, -1, 7, 7, -1, "Cari Yönetimi");
+            "Cari Yönetimi"}, -1, 7, 7, -1);
             this.treeList1.AppendNode(new object[] {
             "Cari Tanıtım Kartı"}, 9, 0, 1, -1, "Cari Tanıtım Kartı");
             this.treeList1.AppendNode(new object[] {
             "Cari Listesi"}, 9, 0, 1, -1, "Cari Listesi");
             this.treeList1.AppendNode(new object[] {
-            "Fatura Yönetimi"}, -1, 6, 6, -1, "Fatura Yönetimi");
+            "Fatura Yönetimi"}, -1, 6, 6, -1);
             this.treeList1.AppendNode(new object[] {
             "Toptan Satış Faturası"}, 12, 0, 1, -1, "Toptan Satış Faturası");
             this.treeList1.AppendNode(new object[] {
@@ -1602,101 +1602,103 @@
             this.treeList1.AppendNode(new object[] {
             "Alınan Siparişler"}, 31, 0, 1, -1, "Alınan Siparişler");
             this.treeList1.AppendNode(new object[] {
+            "Sipariş Faturalandır"}, 28, "Sipariş Faturalandır");
+            this.treeList1.AppendNode(new object[] {
             "Teklif Yönetimi"}, -1, 40, 40, -1);
             this.treeList1.AppendNode(new object[] {
-            "Verilen Teklif Fişi"}, 34, 0, 1, -1, "Verilen Teklif Fişi");
+            "Verilen Teklif Fişi"}, 35, 0, 1, -1, "Verilen Teklif Fişi");
             this.treeList1.AppendNode(new object[] {
-            "Alınan Teklif Fişi"}, 34, 0, 1, -1, "Alınan Teklif Fişi");
+            "Alınan Teklif Fişi"}, 35, 0, 1, -1, "Alınan Teklif Fişi");
             this.treeList1.AppendNode(new object[] {
-            "Listeler"}, 34, 2, 2, -1);
+            "Listeler"}, 35, 2, 2, -1);
             this.treeList1.AppendNode(new object[] {
-            "Verilen Teklifler"}, 37, 0, 1, -1, "Verilen Teklifler");
+            "Verilen Teklifler"}, 38, 0, 1, -1, "Verilen Teklifler");
             this.treeList1.AppendNode(new object[] {
-            "Alınan Teklifler"}, 37, 0, 1, -1, "Alınan Teklifler");
+            "Alınan Teklifler"}, 38, 0, 1, -1, "Alınan Teklifler");
             this.treeList1.AppendNode(new object[] {
             "Finans Yönetimi"}, -1, 42, 42, -1);
             this.treeList1.AppendNode(new object[] {
-            "Tahsilat Fişi"}, 40, 0, 1, -1, "Tahsilat Fişi");
+            "Tahsilat Fişi"}, 41, 0, 1, -1, "Tahsilat Fişi");
             this.treeList1.AppendNode(new object[] {
-            "Ödeme Fişi"}, 40, 0, 1, -1, "Ödeme Fişi");
+            "Ödeme Fişi"}, 41, 0, 1, -1, "Ödeme Fişi");
             this.treeList1.AppendNode(new object[] {
-            "Masraf Fişi"}, 40, 0, 1, -1, "Masraf Fişi");
+            "Masraf Fişi"}, 41, 0, 1, -1, "Masraf Fişi");
             this.treeList1.AppendNode(new object[] {
-            "Cari Devir Fişi"}, 40, 0, 1, -1, "Cari Devir Fişi");
+            "Cari Devir Fişi"}, 41, 0, 1, -1, "Cari Devir Fişi");
             this.treeList1.AppendNode(new object[] {
             "Tanım İşlemleri"}, -1, 73, 73, -1);
             this.treeList1.AppendNode(new object[] {
-            "Ödeme Türü Tanıtım Kartı"}, 45, 0, 1, -1, "Ödeme Türü Tanıtım Kartı");
+            "Ödeme Türü Tanıtım Kartı"}, 46, 0, 1, -1, "Ödeme Türü Tanıtım Kartı");
             this.treeList1.AppendNode(new object[] {
-            "Masraf Tanıtım Kartı"}, 45, 0, 1, -1, "Masraf Tanıtım Kartı");
+            "Masraf Tanıtım Kartı"}, 46, 0, 1, -1, "Masraf Tanıtım Kartı");
             this.treeList1.AppendNode(new object[] {
-            "Kasa Tanıtım Kartı"}, 45, 0, 1, -1, "Kasa Tanıtım Kartı");
+            "Kasa Tanıtım Kartı"}, 46, 0, 1, -1, "Kasa Tanıtım Kartı");
             this.treeList1.AppendNode(new object[] {
-            "Hareket Tipi"}, 45, 0, 1, -1, "Hareket Tipi");
+            "Hareket Tipi"}, 46, 0, 1, -1, "Hareket Tipi");
             this.treeList1.AppendNode(new object[] {
-            "Depo Tanıtım Kartı"}, 45, 0, 1, -1, "Depo Tanıtım Kartı");
+            "Depo Tanıtım Kartı"}, 46, 0, 1, -1, "Depo Tanıtım Kartı");
             this.treeList1.AppendNode(new object[] {
-            "Personel Tanıtım Kartı"}, 45, 0, 1, -1, "Personel Tanıtım Kartı");
+            "Personel Tanıtım Kartı"}, 46, 0, 1, -1, "Personel Tanıtım Kartı");
             this.treeList1.AppendNode(new object[] {
-            "Proje Tanım"}, 45, "Proje Tanım");
+            "Proje Tanım"}, 46, "Proje Tanım");
             this.treeList1.AppendNode(new object[] {
-            "Özel Kod Tanım"}, 45, "Özel Kod Tanım");
+            "Özel Kod Tanım"}, 46, "Özel Kod Tanım");
             this.treeList1.AppendNode(new object[] {
             "Raporlar"}, -1, 106, 106, -1);
             this.treeList1.AppendNode(new object[] {
-            "Stok Raporları"}, 54, 2, 2, -1);
+            "Stok Raporları"}, 55, 2, 2, -1);
             this.treeList1.AppendNode(new object[] {
-            "Genel Stok Hareketleri"}, 55, 0, 1, -1, "Genel Stok Hareketleri");
+            "Genel Stok Hareketleri"}, 56, 0, 1, -1, "Genel Stok Hareketleri");
             this.treeList1.AppendNode(new object[] {
-            "Stok Analiz"}, 55, "Stok Analiz");
+            "Stok Analiz"}, 56, "Stok Analiz");
             this.treeList1.AppendNode(new object[] {
-            "Alış Raporları"}, 54, 2, 2, -1);
+            "Alış Raporları"}, 55, 2, 2, -1);
             this.treeList1.AppendNode(new object[] {
-            "Genel Alış Raporu"}, 58, 0, 1, -1, "Genel Alış Raporu");
+            "Genel Alış Raporu"}, 59, 0, 1, -1, "Genel Alış Raporu");
             this.treeList1.AppendNode(new object[] {
-            "Tarih Aralıklı Alış Raporu"}, 58, 0, 1, -1, "Tarih Aralıklı Alış Raporu");
+            "Tarih Aralıklı Alış Raporu"}, 59, 0, 1, -1, "Tarih Aralıklı Alış Raporu");
             this.treeList1.AppendNode(new object[] {
-            "İade Listeleri"}, 58, 0, 1, -1, "İade Listeleri");
+            "İade Listeleri"}, 59, 0, 1, -1, "İade Listeleri");
             this.treeList1.AppendNode(new object[] {
-            "Satış Raporları"}, 54, 2, 2, -1);
+            "Satış Raporları"}, 55, 2, 2, -1);
             this.treeList1.AppendNode(new object[] {
-            "Satış Raporu"}, 62, 0, 1, -1, "Satış Raporu");
+            "Satış Raporu"}, 63, 0, 1, -1, "Satış Raporu");
             this.treeList1.AppendNode(new object[] {
-            "Tarih Aralıklı Satış Raporu"}, 62, 0, 1, -1, "Tarih Aralıklı Satış Raporu");
+            "Tarih Aralıklı Satış Raporu"}, 63, 0, 1, -1, "Tarih Aralıklı Satış Raporu");
             this.treeList1.AppendNode(new object[] {
-            "Kar Zarar Raporu Alış Fiyatından"}, 62, 0, 1, -1, "Kar Zarar Raporu Alış Fiyatından");
+            "Kar Zarar Raporu Alış Fiyatından"}, 63, 0, 1, -1, "Kar Zarar Raporu Alış Fiyatından");
             this.treeList1.AppendNode(new object[] {
-            "Kar Zarar Analizi"}, 62, 0, 1, -1, "Kar Zarar Analizi");
+            "Kar Zarar Analizi"}, 63, 0, 1, -1, "Kar Zarar Analizi");
             this.treeList1.AppendNode(new object[] {
-            "Tarih Aralıklı Kar Zarar Analizi"}, 62, 0, 1, -1, "Tarih Aralıklı Kar Zarar Analizi");
+            "Tarih Aralıklı Kar Zarar Analizi"}, 63, 0, 1, -1, "Tarih Aralıklı Kar Zarar Analizi");
             this.treeList1.AppendNode(new object[] {
-            "Finans Raporları"}, 54, 2, 2, -1);
+            "Finans Raporları"}, 55, 2, 2, -1);
             this.treeList1.AppendNode(new object[] {
-            "Ödeme Listesi"}, 68, 0, 1, -1, "Ödeme Listesi");
+            "Ödeme Listesi"}, 69, 0, 1, -1, "Ödeme Listesi");
             this.treeList1.AppendNode(new object[] {
-            "Tahsilat Listesi"}, 68, 0, 1, -1, "Tahsilat Listesi");
+            "Tahsilat Listesi"}, 69, 0, 1, -1, "Tahsilat Listesi");
             this.treeList1.AppendNode(new object[] {
-            "Masraf Dökümü"}, 68, 0, 1, -1, "Masraf Dökümü");
+            "Masraf Dökümü"}, 69, 0, 1, -1, "Masraf Dökümü");
             this.treeList1.AppendNode(new object[] {
-            "Ba Form"}, 68, 0, 1, -1, "Ba Form");
+            "Ba Form"}, 69, 0, 1, -1, "Ba Form");
             this.treeList1.AppendNode(new object[] {
-            "Bs Form"}, 68, 0, 1, -1, "Bs Form");
+            "Bs Form"}, 69, 0, 1, -1, "Bs Form");
             this.treeList1.AppendNode(new object[] {
-            "Cari Raporları"}, 54, 2, 2, -1);
+            "Cari Raporları"}, 55, 2, 2, -1);
             this.treeList1.AppendNode(new object[] {
-            "Cari Bakiye Durum Raporu"}, 74, 0, 1, -1, "Cari Bakiye Durum Raporu");
+            "Cari Bakiye Durum Raporu"}, 75, 0, 1, -1, "Cari Bakiye Durum Raporu");
             this.treeList1.AppendNode(new object[] {
-            "Cari Hesap Ekstresi"}, 74, 0, 1, -1, "Cari Hesap Ekstresi");
+            "Cari Hesap Ekstresi"}, 75, 0, 1, -1, "Cari Hesap Ekstresi");
             this.treeList1.AppendNode(new object[] {
-            "Cari Stok Hareketleri"}, 74, "Cari Stok Hareketleri");
+            "Cari Stok Hareketleri"}, 75, "Cari Stok Hareketleri");
             this.treeList1.AppendNode(new object[] {
-            "Kasa Raporu"}, 54, 2, 2, -1);
+            "Kasa Raporu"}, 55, 2, 2, -1);
             this.treeList1.AppendNode(new object[] {
-            "Günlük Kasa Raporu"}, 78, 0, 1, -1, "Günlük Kasa Raporu");
+            "Günlük Kasa Raporu"}, 79, 0, 1, -1, "Günlük Kasa Raporu");
             this.treeList1.AppendNode(new object[] {
-            "Kasa Raporu Detaylı"}, 78, 0, 1, -1, "Kasa Raporu Detaylı");
+            "Kasa Raporu Detaylı"}, 79, 0, 1, -1, "Kasa Raporu Detaylı");
             this.treeList1.AppendNode(new object[] {
-            "Gün Sonu Raporu"}, 78, "Gün Sonu Raporu");
+            "Gün Sonu Raporu"}, 79, "Gün Sonu Raporu");
             this.treeList1.EndUnboundLoad();
             this.treeList1.OptionsBehavior.PopulateServiceColumns = true;
             this.treeList1.OptionsCustomization.AllowFilter = false;
@@ -1719,7 +1721,7 @@
             this.treeList1.OptionsView.ShowTreeLines = DevExpress.Utils.DefaultBoolean.True;
             this.treeList1.OptionsView.ShowVertLines = true;
             this.treeList1.SelectImageList = this.ımageList2;
-            this.treeList1.Size = new System.Drawing.Size(305, 603);
+            this.treeList1.Size = new System.Drawing.Size(305, 612);
             this.treeList1.TabIndex = 15;
             this.treeList1.ViewStyle = DevExpress.XtraTreeList.TreeListViewStyle.TreeView;
             this.treeList1.Click += new System.EventHandler(this.treeList1_Click);

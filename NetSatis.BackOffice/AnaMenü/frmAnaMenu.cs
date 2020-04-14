@@ -13,6 +13,7 @@ using NetSatis.BackOffice.Kasa;
 using NetSatis.BackOffice.Kasa_Hareketleri;
 using NetSatis.BackOffice.Masraf;
 using NetSatis.BackOffice.Ödeme_Türü;
+using NetSatis.BackOffice.OzelServis;
 using NetSatis.BackOffice.Personel;
 using NetSatis.BackOffice.Raporlar;
 using NetSatis.BackOffice.Stok;
@@ -1110,12 +1111,16 @@ namespace NetSatis.BackOffice
                     frmOzelKod frm5 = new frmOzelKod();
                     frm5.Show();
                     break;
+                case "Sipariş Faturalandır":
+                    frmSiparisTarih frm6 = new frmSiparisTarih();
+                    frm6.Show();
+                    break;
                 default:
                     break;
             }
 
         }
-
+        
         private void navBarItem30_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             frmBs frm = new frmBs();
