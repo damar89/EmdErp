@@ -255,7 +255,7 @@ namespace NetSatis.BackOffice.Stok
             SaveFileDialog save = new SaveFileDialog();
             if (save.ShowDialog() == DialogResult.OK)
             {
-                gridView1.ExportToXlsx(save.FileName + ".pdf");
+                gridView1.ExportToPdf(save.FileName + ".pdf");
             }
         }
         private void btnYazdir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -270,7 +270,7 @@ namespace NetSatis.BackOffice.Stok
             SaveFileDialog save = new SaveFileDialog();
             if (save.ShowDialog() == DialogResult.OK)
             {
-                gridView1.ExportToXlsx(save.FileName + ".docx");
+                gridView1.ExportToDocx(save.FileName + ".docx");
             }
         }
         private void btnDizayn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

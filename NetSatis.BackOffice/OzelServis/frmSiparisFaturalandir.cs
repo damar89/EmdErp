@@ -23,7 +23,7 @@ namespace NetSatis.BackOffice.OzelServis
         {
             InitializeComponent();
             context = new NetSatisContext();
-            gridContFisler.DataSource = fisDal.SiparisFaturalandir(context, "Alınan Sipariş Fişi",baslangic,bitis);
+            gridContFisler.DataSource = fisDal.SiparisFaturalandir(context, "Alınan Sipariş Fişi", baslangic, bitis);
         }
 
         private void frmSiparisFaturalandir_Load(object sender, EventArgs e)
@@ -33,7 +33,7 @@ namespace NetSatis.BackOffice.OzelServis
 
         private void Listele()
         {
-            
+
 
         }
 
@@ -365,7 +365,7 @@ namespace NetSatis.BackOffice.OzelServis
             foreach (var stok in hareketler)
             {
                 decimal fyt = stok.KdvToplam.Value;
-                decimal fyt2 = stok.ToplamTutar.Value; 
+                decimal fyt2 = stok.ToplamTutar.Value;
                 NetSatis.EDonusum.Models.Donusum.Details d = null;
 
                 d = new EDonusum.Models.Donusum.Details

@@ -164,5 +164,14 @@ namespace NetSatis.BackOffice.Cari
             gridStokHareket.ClearColumnsFilter();
             gridContStokHareket.MainView.SaveLayoutToXml(DosyaYolu);
         }
+
+        private void excelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                gridStokHareket.ExportToXlsx(save.FileName + ".xlsx");
+            }
+        }
     }
 }
