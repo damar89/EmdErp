@@ -629,6 +629,7 @@ namespace NetSatis.FrontOffice
             _fisentity = new Fis();
             _cariId = null;
             lblRiskLimiti.Text = null;
+            txtAciklama.Text = null;
             lblCariName.Text = null;
             lblCariKod.Text = null;
             lblCariAd.Text = null;
@@ -961,6 +962,7 @@ namespace NetSatis.FrontOffice
             txtCepTel.Text = null;
             txtIl.Text = null;
             txtIlce.Text = null;
+            txtAciklama.Text = null;
             txtAdres.Text = null;
             txtSemt.Text = null;
             lblRiskLimiti.Text = "Görüntülenemiyor";
@@ -1377,6 +1379,7 @@ namespace NetSatis.FrontOffice
             lblCariName.Text = null;
             _cariId = null;
             _fisentity.CariId = null;
+            txtAciklama.Text = null;
             txtFaturaUnvani.Text = null;
             txtVergiDairesi.Text = null;
             txtVergiNo.Text = null;
