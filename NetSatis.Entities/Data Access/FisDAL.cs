@@ -715,7 +715,7 @@ namespace NetSatis.Entities.Data_Access
         }
         public object PerakendeFis(NetSatisContext context, string fisTuru, DateTime baslangic, DateTime bitis)
         {
-            var tablo = context.Fisler.Where(c => c.FisTuru == fisTuru).GroupJoin(
+            var tablo = context.Fisler.Where(c => c.FisTuru == fisTuru && c.Tarih >= baslangic && c.Tarih <= bitis).GroupJoin(
                 context.Fisler.Where(c => c.FisTuru == fisTuru && c.Tarih >= baslangic && c.Tarih <= bitis), c => c.CariId, c => c.CariId,
                 (fisler, cariler) =>
                    new
