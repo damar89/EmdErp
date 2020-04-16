@@ -1563,8 +1563,9 @@ namespace NetSatis.BackOffice.Fiş
                     {
                         if (_fisentity.FisTuru == "Alış Faturası" || _fisentity.FisTuru == "Alış İrsaliyesi")
                         {
-                            stokVeri.Stok.AlisFiyati1 = stokVeri.BirimFiyati - ((stokVeri.BirimFiyati * stokVeri.IndirimOrani) / 100);
-                            stokVeri.Stok.AlisFiyati2 = stokVeri.BirimFiyati + ((stokVeri.BirimFiyati * stokVeri.Kdv) / 100);
+                            stokVeri.Stok.AlisFiyati1 = stokVeri.BirimFiyati - stokVeri.IndirimTutar + stokVeri.IndirimTutar2 + stokVeri.IndirimTutar3;
+                            stokVeri.Stok.AlisFiyati2 = stokVeri.BirimFiyati;
+                            stokVeri.Stok.AlisFiyati3 = stokVeri.BirimFiyati + ((stokVeri.BirimFiyati * stokVeri.Kdv) / 100);
 
                         }
                     }
