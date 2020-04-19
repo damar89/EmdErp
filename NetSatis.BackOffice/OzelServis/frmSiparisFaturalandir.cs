@@ -1,4 +1,5 @@
-﻿using NetSatis.Entities.Context;
+﻿using NetSatis.BackOffice.Fiş;
+using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
 using NetSatis.Entities.Tools;
@@ -8,9 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace NetSatis.BackOffice.Fiş
+namespace NetSatis.BackOffice.OzelServis
 {
-    public partial class frmAlinanSiparis : Form
+    public partial class frmSiparisFaturalandir : Form
     {
         NetSatisContext context = new NetSatisContext();
         FisDAL fisDal = new FisDAL();
@@ -18,20 +19,21 @@ namespace NetSatis.BackOffice.Fiş
         StokHareketDAL stokHareketDal = new StokHareketDAL();
 
 
-        public frmAlinanSiparis()
+        public frmSiparisFaturalandir(DateTime baslangic, DateTime bitis)
         {
             InitializeComponent();
+            context = new NetSatisContext();
+            gridContFisler.DataSource = fisDal.SiparisFaturalandir(context, "Alınan Sipariş Fişi", baslangic, bitis);
         }
 
-        private void frmAlinanSiparis_Load(object sender, EventArgs e)
+        private void frmSiparisFaturalandir_Load(object sender, EventArgs e)
         {
             Listele();
         }
 
         private void Listele()
         {
-            context = new NetSatisContext();
-            gridContFisler.DataSource = fisDal.Listelemeler(context, "Alınan Sipariş Fişi");
+
 
         }
 
@@ -137,7 +139,7 @@ namespace NetSatis.BackOffice.Fiş
             form.Show();
         }
 
-        private void frmAlinanSiparis_KeyDown(object sender, KeyEventArgs e)
+        private void frmSiparisFaturalandir_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {
@@ -363,7 +365,7 @@ namespace NetSatis.BackOffice.Fiş
             foreach (var stok in hareketler)
             {
                 decimal fyt = stok.KdvToplam.Value;
-                decimal fyt2 = stok.ToplamTutar.Value; 
+                decimal fyt2 = stok.ToplamTutar.Value;
                 NetSatis.EDonusum.Models.Donusum.Details d = null;
 
                 d = new EDonusum.Models.Donusum.Details

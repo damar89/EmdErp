@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStokSec));
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression1 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression2 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
             this.lblBaslik = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.lblKayitSayisi = new DevExpress.XtraEditors.LabelControl();
@@ -65,6 +69,7 @@
             this.btnGuncelle = new DevExpress.XtraBars.BarButtonItem();
             this.btnHareketler = new DevExpress.XtraBars.BarButtonItem();
             this.btnStokEkle = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDizaynKaydet = new DevExpress.XtraBars.BarButtonItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -88,7 +93,6 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.btnDizaynKaydet = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridContStoklar)).BeginInit();
@@ -251,6 +255,22 @@
             this.StokCikis,
             this.colAltGrup});
             this.gridStoklar.CustomizationFormBounds = new System.Drawing.Rectangle(900, 365, 260, 232);
+            gridFormatRule1.Column = this.MevcutStok;
+            gridFormatRule1.ColumnApplyTo = this.MevcutStok;
+            gridFormatRule1.Name = "Format0";
+            formatConditionRuleExpression1.Appearance.BackColor = System.Drawing.Color.Lime;
+            formatConditionRuleExpression1.Appearance.Options.UseBackColor = true;
+            formatConditionRuleExpression1.Expression = "[MevcutStok] > 0";
+            gridFormatRule1.Rule = formatConditionRuleExpression1;
+            gridFormatRule2.Column = this.MevcutStok;
+            gridFormatRule2.ColumnApplyTo = this.MevcutStok;
+            gridFormatRule2.Name = "Format1";
+            formatConditionRuleExpression2.Appearance.BackColor = System.Drawing.Color.LightCoral;
+            formatConditionRuleExpression2.Appearance.Options.UseBackColor = true;
+            formatConditionRuleExpression2.Expression = "[MevcutStok] < 0";
+            gridFormatRule2.Rule = formatConditionRuleExpression2;
+            this.gridStoklar.FormatRules.Add(gridFormatRule1);
+            this.gridStoklar.FormatRules.Add(gridFormatRule2);
             this.gridStoklar.GridControl = this.gridContStoklar;
             this.gridStoklar.Name = "gridStoklar";
             this.gridStoklar.OptionsView.ShowAutoFilterRow = true;
@@ -275,7 +295,7 @@
             this.colDurumu.OptionsColumn.AllowEdit = false;
             this.colDurumu.Visible = true;
             this.colDurumu.VisibleIndex = 0;
-            this.colDurumu.Width = 46;
+            this.colDurumu.Width = 56;
             // 
             // colStokKodu
             // 
@@ -286,7 +306,6 @@
             this.colStokKodu.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Like;
             this.colStokKodu.Visible = true;
             this.colStokKodu.VisibleIndex = 2;
-            this.colStokKodu.Width = 62;
             // 
             // colStokAdi
             // 
@@ -308,7 +327,7 @@
             this.colBirim.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Like;
             this.colBirim.Visible = true;
             this.colBirim.VisibleIndex = 4;
-            this.colBirim.Width = 38;
+            this.colBirim.Width = 49;
             // 
             // colKategori
             // 
@@ -319,7 +338,7 @@
             this.colKategori.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Like;
             this.colKategori.Visible = true;
             this.colKategori.VisibleIndex = 5;
-            this.colKategori.Width = 36;
+            this.colKategori.Width = 47;
             // 
             // colAnaGrup
             // 
@@ -330,7 +349,7 @@
             this.colAnaGrup.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Like;
             this.colAnaGrup.Visible = true;
             this.colAnaGrup.VisibleIndex = 6;
-            this.colAnaGrup.Width = 52;
+            this.colAnaGrup.Width = 67;
             // 
             // colUretici
             // 
@@ -339,8 +358,6 @@
             this.colUretici.Name = "colUretici";
             this.colUretici.OptionsColumn.AllowEdit = false;
             this.colUretici.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Like;
-            this.colUretici.Visible = true;
-            this.colUretici.VisibleIndex = 9;
             this.colUretici.Width = 47;
             // 
             // colMarka
@@ -350,8 +367,6 @@
             this.colMarka.Name = "colMarka";
             this.colMarka.OptionsColumn.AllowEdit = false;
             this.colMarka.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Like;
-            this.colMarka.Visible = true;
-            this.colMarka.VisibleIndex = 8;
             this.colMarka.Width = 52;
             // 
             // colAlisKdv
@@ -384,8 +399,8 @@
             this.colSatisFiyati1.OptionsColumn.AllowEdit = false;
             this.colSatisFiyati1.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Like;
             this.colSatisFiyati1.Visible = true;
-            this.colSatisFiyati1.VisibleIndex = 10;
-            this.colSatisFiyati1.Width = 58;
+            this.colSatisFiyati1.VisibleIndex = 7;
+            this.colSatisFiyati1.Width = 76;
             // 
             // colSatisFiyati2
             // 
@@ -402,7 +417,7 @@
             this.colBarkod.OptionsColumn.AllowEdit = false;
             this.colBarkod.Visible = true;
             this.colBarkod.VisibleIndex = 1;
-            this.colBarkod.Width = 52;
+            this.colBarkod.Width = 63;
             // 
             // MevcutStok
             // 
@@ -413,7 +428,8 @@
             this.MevcutStok.Name = "MevcutStok";
             this.MevcutStok.OptionsColumn.AllowEdit = false;
             this.MevcutStok.Visible = true;
-            this.MevcutStok.VisibleIndex = 13;
+            this.MevcutStok.VisibleIndex = 10;
+            this.MevcutStok.Width = 104;
             // 
             // StokGiris
             // 
@@ -424,8 +440,8 @@
             this.StokGiris.Name = "StokGiris";
             this.StokGiris.OptionsColumn.AllowEdit = false;
             this.StokGiris.Visible = true;
-            this.StokGiris.VisibleIndex = 11;
-            this.StokGiris.Width = 60;
+            this.StokGiris.VisibleIndex = 8;
+            this.StokGiris.Width = 78;
             // 
             // StokCikis
             // 
@@ -436,8 +452,8 @@
             this.StokCikis.Name = "StokCikis";
             this.StokCikis.OptionsColumn.AllowEdit = false;
             this.StokCikis.Visible = true;
-            this.StokCikis.VisibleIndex = 12;
-            this.StokCikis.Width = 60;
+            this.StokCikis.VisibleIndex = 9;
+            this.StokCikis.Width = 78;
             // 
             // colAltGrup
             // 
@@ -445,8 +461,6 @@
             this.colAltGrup.FieldName = "AltGrupAdi";
             this.colAltGrup.Name = "colAltGrup";
             this.colAltGrup.OptionsColumn.AllowEdit = false;
-            this.colAltGrup.Visible = true;
-            this.colAltGrup.VisibleIndex = 7;
             this.colAltGrup.Width = 60;
             // 
             // popupMenu1
@@ -505,6 +519,13 @@
             this.btnStokEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnStokEkle.ImageOptions.LargeImage")));
             this.btnStokEkle.Name = "btnStokEkle";
             this.btnStokEkle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnStokEkle_ItemClick);
+            // 
+            // btnDizaynKaydet
+            // 
+            this.btnDizaynKaydet.Caption = "Dizaynı Kaydet";
+            this.btnDizaynKaydet.Id = 7;
+            this.btnDizaynKaydet.Name = "btnDizaynKaydet";
+            this.btnDizaynKaydet.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDizaynKaydet_ItemClick);
             // 
             // barManager1
             // 
@@ -764,13 +785,6 @@
             this.layoutControlItem4.Size = new System.Drawing.Size(1100, 64);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
-            // 
-            // btnDizaynKaydet
-            // 
-            this.btnDizaynKaydet.Caption = "Dizaynı Kaydet";
-            this.btnDizaynKaydet.Id = 7;
-            this.btnDizaynKaydet.Name = "btnDizaynKaydet";
-            this.btnDizaynKaydet.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDizaynKaydet_ItemClick);
             // 
             // frmStokSec
             // 

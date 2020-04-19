@@ -583,7 +583,7 @@ namespace NetSatis.BackOffice.Stok
                 if (anagrup == null)
                 {
                     AnaGrup k = new AnaGrup();
-                    k.Kod = KategoriKodu;
+                    k.Kod = AnaGrupKodu;
                     k.AnaGrupAdi = AnaGrupDegisken;
                     k.EditUser = frmAnaMenu.UserId;
                     k.GuncellemeTarihi = DateTime.Now;
@@ -593,7 +593,7 @@ namespace NetSatis.BackOffice.Stok
                 if (altgrup == null)
                 {
                     AltGrup k = new AltGrup();
-                    k.Kod = KategoriKodu;
+                    k.Kod = AltGrupKodu;
                     k.AltGrupAdi = AltGrupDegisken;
                     k.EditUser = frmAnaMenu.UserId;
                     k.GuncellemeTarihi = DateTime.Now;

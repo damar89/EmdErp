@@ -1,39 +1,21 @@
 ﻿using DevExpress.XtraEditors.Mask;
-using NetSatis.BackOffice.Fiş;
 using NetSatis.Entities.Context;
-using NetSatis.Entities.Data_Access;
 using System;
 
-namespace NetSatis.BackOffice.Raporlar
+namespace NetSatis.BackOffice.OzelServis
 {
-    public partial class frmPerakendeTarihFilter : DevExpress.XtraEditors.XtraForm
+    public partial class frmSiparisTarih : DevExpress.XtraEditors.XtraForm
     {
-        FisDAL fisDal = new FisDAL();
-        StokHareketDAL stokHareketDal = new StokHareketDAL();
-        KategoriDAL kategoriDal = new KategoriDAL();
-        AnaGrupDAL anagrupDal = new AnaGrupDAL();
-        AltGrupDAL altgrupDal = new AltGrupDAL();
-        StokDAL stokDal = new StokDAL();
         NetSatisContext context = new NetSatisContext();
         int user = 0;
-        public frmPerakendeTarihFilter(int userId = 0)
+        public frmSiparisTarih(int userId = 0)
         {
             user = userId;
             InitializeComponent();
-
             dtpBaslangic.DateTime = new DateTime(DateTime.Now.Year, 1, 1, 00, 00, 00);
             dtpBitis.DateTime = new DateTime(DateTime.Now.Year, 12, 31, 23, 59, 59);
             dtpBaslangic.Properties.Mask.MaskType = MaskType.DateTimeAdvancingCaret;
             dtpBitis.Properties.Mask.MaskType = MaskType.DateTimeAdvancingCaret;
-        }
-        private void btnGoster_Click(object sender, EventArgs e)
-        {
-            DateTime dtBaslangic = dtpBaslangic.DateTime;
-            DateTime dtBitis = dtpBitis.DateTime;
-            dtBitis = dtBitis.AddHours(23).AddMinutes(59).AddSeconds(59);
-            frmPerakendeListesi form = new frmPerakendeListesi(dtBaslangic, dtBitis,user);
-            form.Show();
-            this.Close();
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
@@ -41,21 +23,32 @@ namespace NetSatis.BackOffice.Raporlar
             this.Close();
         }
 
-     private void dtpBaslangic_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private void btnGoster_Click(object sender, EventArgs e)
+        {
+            DateTime dtBaslangic = dtpBaslangic.DateTime;
+            DateTime dtBitis = dtpBitis.DateTime;
+            dtBitis = dtBitis.AddHours(23).AddMinutes(59).AddSeconds(59);
+
+            frmSiparisFaturalandir form = new frmSiparisFaturalandir(dtBaslangic, dtBitis);
+            form.Show();
+            this.Close();
+        }
+
+        private void dtpBaslangic_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             if (e.Button.Index == 1)
             {
-                 dtpBaslangic.EditValue = new DateTime(DateTime.Now.Year,DateTime.Now.Month,DateTime.Now.Day , 0,0,0);
+                dtpBaslangic.EditValue = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0);
             }
         }
 
         private void dtpBitis_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-          
+
             if (e.Button.Index == 1)
             {
 
-                dtpBitis.EditValue = new DateTime(DateTime.Now.Year,DateTime.Now.Month,DateTime.Now.Day , 23,59,59);
+                dtpBitis.EditValue = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 23, 59, 59);
             }
         }
     }

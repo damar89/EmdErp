@@ -1563,8 +1563,9 @@ namespace NetSatis.BackOffice.Fiş
                     {
                         if (_fisentity.FisTuru == "Alış Faturası" || _fisentity.FisTuru == "Alış İrsaliyesi")
                         {
-                            stokVeri.Stok.AlisFiyati1 = stokVeri.BirimFiyati;
-                            stokVeri.Stok.AlisFiyati2 = stokVeri.BirimFiyati + ((stokVeri.BirimFiyati * stokVeri.Kdv) / 100);
+                            stokVeri.Stok.AlisFiyati1 = stokVeri.BirimFiyati - stokVeri.IndirimTutar + stokVeri.IndirimTutar2 + stokVeri.IndirimTutar3;
+                            stokVeri.Stok.AlisFiyati2 = stokVeri.BirimFiyati;
+                            stokVeri.Stok.AlisFiyati3 = stokVeri.BirimFiyati + ((stokVeri.BirimFiyati * stokVeri.Kdv) / 100);
 
                         }
                     }
@@ -2751,7 +2752,7 @@ namespace NetSatis.BackOffice.Fiş
                             HareketTipi = eislem.HareketIdGetir(cmbTipi.Text),
                             //Magaza="",
                             HarTip = HarTipi,
-                            Isk1 = stok.IndirimOrani.Value, 
+                            Isk1 = stok.IndirimOrani.Value,
                             Isk2 = stok.IndirimOrani2.Value,
                             Isk3 = stok.IndirimOrani3.Value,
                             IskontoTutar = Convert.ToDecimal(calcIndirimToplami.Value.ToString()),
@@ -2815,7 +2816,7 @@ namespace NetSatis.BackOffice.Fiş
                     eislem.DetailsOlustur(d);
                 }
             }
-      
+
         }
 
         private void txtSeri_KeyDown(object sender, KeyEventArgs e)
@@ -3159,6 +3160,11 @@ namespace NetSatis.BackOffice.Fiş
         private void gridStokHareket_RowCellStyle(object sender, RowCellStyleEventArgs e)
         {
 
+        }
+
+        private void toggleKDVDahil_EditValueChanged(object sender, EventArgs e)
+        {
+         HepsiniHesapla();
         }
 
         private void gridStokHareket_KeyDown(object sender, KeyEventArgs e)

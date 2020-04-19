@@ -14,9 +14,10 @@ namespace NetSatis.BackOffice.Fiş
         KasaHareketDAL kasaHareketDal = new KasaHareketDAL();
         StokHareketDAL stokHareketDal = new StokHareketDAL();
 
-
-        public frmPerakendeListesi(DateTime baslangic, DateTime bitis)
+        int user = 0;
+        public frmPerakendeListesi(DateTime baslangic, DateTime bitis, int userId = 0)
         {
+            user = userId;
             InitializeComponent();
             gridContFisler.DataSource = fisDal.PerakendeFis(context, "Perakende Satış Faturası", baslangic, bitis);
         }

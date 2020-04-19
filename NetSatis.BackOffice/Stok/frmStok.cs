@@ -34,7 +34,7 @@ namespace NetSatis.BackOffice.Stok
         }
         public void GetAll()
         {
-            gridControl1.DataSource = stokDal.StokListele(context);
+            gridControl1.DataSource = stokDal.StokAdiylaStokGetir(context);
             gridView1.BestFitColumns();
         }
         private void btnKapat_Click(object sender, EventArgs e)
@@ -255,7 +255,7 @@ namespace NetSatis.BackOffice.Stok
             SaveFileDialog save = new SaveFileDialog();
             if (save.ShowDialog() == DialogResult.OK)
             {
-                gridView1.ExportToXlsx(save.FileName + ".pdf");
+                gridView1.ExportToPdf(save.FileName + ".pdf");
             }
         }
         private void btnYazdir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -270,7 +270,7 @@ namespace NetSatis.BackOffice.Stok
             SaveFileDialog save = new SaveFileDialog();
             if (save.ShowDialog() == DialogResult.OK)
             {
-                gridView1.ExportToXlsx(save.FileName + ".docx");
+                gridView1.ExportToDocx(save.FileName + ".docx");
             }
         }
         private void btnDizayn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -337,24 +337,20 @@ namespace NetSatis.BackOffice.Stok
         {
             var pred = PredicateBuilder.True<Entities.Tables.Stok>();
 
-            if (!string.IsNullOrEmpty(txtStokKodu.Text))
+            if (!string.IsNullOrEmpty(txtAramaMetni.Text))
             {
-                pred = pred.And(x => x.StokKodu.Contains(txtStokKodu.Text));
+                pred = pred.And(x => x.StokKodu.Contains(txtAramaMetni.Text));
             }
             if (!string.IsNullOrEmpty(txtAramaMetni.Text))
             {
                 pred = pred.And(x => x.StokAdi.Contains(txtAramaMetni.Text));
-            }
-            if (!string.IsNullOrEmpty(txtBarkodu.Text))
-            {
-                pred = pred.And(x => x.Barkodu.Contains(txtBarkodu.Text));
             }
             if (!string.IsNullOrEmpty(txtAramaMetni.Text))
             {
                 foreach (string item in txtAramaMetni.Text.Split(' '))
                 {
                     if (!string.IsNullOrEmpty(item))
-                        pred = pred.And(x => x.StokAdi.Contains(item) || x.Barkodu.Contains(item) || x.StokKodu.Contains(item));
+                        pred = pred.And(x => x.StokAdi.Contains(item) || x.Barkod.Any(s => s.Barkodu.Contains(item)) || x.Barkodu.Contains(item) || x.StokKodu.Contains(item));
                 }
 
             }
@@ -428,7 +424,7 @@ namespace NetSatis.BackOffice.Stok
                     form.ShowDialog();
                     if (form.saved)
                     {
-                        gridControl1.DataSource = stokDal.StokListele(context);
+                        gridControl1.DataSource = stokDal.StokAdiylaStokGetir(context);
                     }
                 }
                 else
