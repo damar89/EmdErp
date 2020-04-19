@@ -4,6 +4,7 @@ using NetSatis.Entities.Tables;
 using NetSatis.Entities.Validations;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 namespace NetSatis.Entities.Data_Access
@@ -317,9 +318,9 @@ namespace NetSatis.Entities.Data_Access
         {
             IQueryable<Stok> tablo;
             if (pred != null)
-                tablo = context.Stoklar.Where(pred);
+                tablo = context.Stoklar.Where(pred).Include("Barkod");
             else
-                tablo = context.Stoklar;
+                tablo = context.Stoklar.Include("Barkod");
 
             #region duzenleme
             // if (result.Count == 1)
