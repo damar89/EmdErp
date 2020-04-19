@@ -27,7 +27,8 @@ namespace NetSatis.BackOffice.Raporlar
         {
             DateTime dtBaslangic = dtpBaslangic.DateTime;
             DateTime dtBitis = dtpBitis.DateTime;
-            dtBitis = dtBitis.AddHours(23).AddMinutes(59).AddSeconds(59);
+            //Bu Şekilde Çalışıyor
+            //dtBitis = dtBitis.AddHours(23).AddMinutes(59).AddSeconds(59);
 
             frmGunSonuRapor form = new frmGunSonuRapor(dtBaslangic, dtBitis, user);
             form.Show();

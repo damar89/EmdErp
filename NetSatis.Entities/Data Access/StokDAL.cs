@@ -316,6 +316,8 @@ namespace NetSatis.Entities.Data_Access
         }
         public object StokAdiylaStokGetir(NetSatisContext context, Expression<Func<Stok, bool>> pred = null)
         {
+
+            // ikisi de barkod ile arama yapıyor olması lazım, beraber kontrol edelim.
             IQueryable<Stok> tablo;
             if (pred != null)
                 tablo = context.Stoklar.Where(pred).Include("Barkod");
