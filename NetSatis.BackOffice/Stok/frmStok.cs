@@ -28,14 +28,17 @@ namespace NetSatis.BackOffice.Stok
         }
         private void frmStok_Load(object sender, EventArgs e)
         {
-            GetAll();
+            Sorgula();
+            gridView1.BestFitColumns();
             gridControl1.ForceInitialize();
             if (File.Exists(DosyaYolu)) gridControl1.MainView.RestoreLayoutFromXml(DosyaYolu);
         }
         public void GetAll()
         {
-            gridControl1.DataSource = stokDal.StokAdiylaStokGetir(context);
-            gridView1.BestFitColumns();
+            //gridControl1.DataSource = stokDal.StokAdiylaStokGetir(context);
+            Sorgula();
+
+
         }
         private void btnKapat_Click(object sender, EventArgs e)
         {
@@ -58,7 +61,7 @@ namespace NetSatis.BackOffice.Stok
                     barkodDal.Delete(context, c => c.StokId == secilen);
                     barkodDal.Save(context); stokDal.Delete(context, c => c.Id == secilen);
                     stokDal.Save(context);
-                    GetAll();
+                    Sorgula();
                     //secilen = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
                     //stokDal.Delete(context, c => c.Id == secilen);
                     //stokDal.Save(context);
@@ -75,7 +78,7 @@ namespace NetSatis.BackOffice.Stok
             form.ShowDialog();
             if (form.saved)
             {
-                GetAll();
+                Sorgula();
             }
         }
         private void btnDuzenle_Click(object sender, EventArgs e)
@@ -89,7 +92,7 @@ namespace NetSatis.BackOffice.Stok
                     form.ShowDialog();
                     if (form.saved)
                     {
-                        GetAll();
+                        Sorgula();
                     }
                 }
                 else
@@ -115,7 +118,7 @@ namespace NetSatis.BackOffice.Stok
                     form.ShowDialog();
                     if (form.saved)
                     {
-                        GetAll();
+                        Sorgula();
                     }
                 }
                 else
@@ -130,7 +133,7 @@ namespace NetSatis.BackOffice.Stok
         }
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            GetAll();
+            Sorgula();
         }
         private void btnStokHareket_Click(object sender, EventArgs e)
         {
@@ -196,7 +199,7 @@ namespace NetSatis.BackOffice.Stok
                 form.ShowDialog();
                 if (form.saved)
                 {
-                    GetAll();
+                    Sorgula();
                 }
             }
             catch (Exception)
@@ -441,7 +444,7 @@ namespace NetSatis.BackOffice.Stok
         private void btnTemizle_Click(object sender, EventArgs e)
         {
             txtAramaMetni.Text =
-                txtBarkodu.Text=
+                txtBarkodu.Text =
                          txtStokKodu.Text = null;
 
             txtAramaMetni.Focus();
