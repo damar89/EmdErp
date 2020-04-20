@@ -225,13 +225,13 @@ namespace NetSatis.BackOffice.Fiş
 
                     }
 
-                    var firstIndexZero = tempFis.FisKodu.IndexOf('0');
-                    var onEk = tempFis.FisKodu.Substring(0, firstIndexZero);
-
-                    var no = Convert.ToInt32(tempFis.FisKodu.Substring(firstIndexZero + 1, tempFis.FisKodu.Length - 1 - firstIndexZero));
-                    no++;
-
+                    //var firstIndexZero = tempFis.FisKodu.IndexOf('0');
                     var kod = context.Kodlar.Where(c => c.Tablo == "fis").First();
+                    var onEk = kod.OnEki;
+
+                    //var no = Convert.ToInt32(tempFis.FisKodu.Substring(firstIndexZero + 1, tempFis.FisKodu.Length - 1 - firstIndexZero));
+                    kod.SonDeger++;
+
                     yeniFisKodu = CodeTool.fiskodolustur(onEk, kod.SonDeger.ToString());
                     fis.FisKodu = yeniFisKodu;
 
