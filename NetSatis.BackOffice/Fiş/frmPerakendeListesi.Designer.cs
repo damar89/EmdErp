@@ -138,8 +138,8 @@
             // 
             this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem7),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem8),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem9),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem8),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnBilgiFisi)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
@@ -148,6 +148,7 @@
             // 
             this.barButtonItem7.Caption = "Düzenle";
             this.barButtonItem7.Id = 25;
+            this.barButtonItem7.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.editcontact_16x16;
             this.barButtonItem7.Name = "barButtonItem7";
             this.barButtonItem7.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
@@ -174,6 +175,7 @@
             // 
             this.btnBilgiFisi.Caption = "Bilgi Fişi Yazdır";
             this.btnBilgiFisi.Id = 28;
+            this.btnBilgiFisi.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.printdialog_16x16;
             this.btnBilgiFisi.Name = "btnBilgiFisi";
             this.btnBilgiFisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBilgiFisi_ItemClick);
             // 
@@ -538,7 +540,7 @@
             this.gridContFisler.Name = "gridContFisler";
             this.gridContFisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpsChkKdvDahil});
-            this.gridContFisler.Size = new System.Drawing.Size(1023, 354);
+            this.gridContFisler.Size = new System.Drawing.Size(1023, 349);
             this.gridContFisler.TabIndex = 0;
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});

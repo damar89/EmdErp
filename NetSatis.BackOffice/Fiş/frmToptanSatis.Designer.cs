@@ -98,9 +98,11 @@
             this.colKDVDahil = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.colEfaturaDurumu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.colProje = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOzelKod = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.btnBilgiFisi = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -147,7 +149,9 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnFaturaGuncelle),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnFtrSil),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnMustahsil),
-            new DevExpress.XtraBars.LinkPersistInfo(this.efaturaGitti)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.efaturaGitti),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnBilgiFisi),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem7)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
@@ -234,8 +238,10 @@
             this.btnFaturaGuncelle,
             this.btnFtrSil,
             this.btnMustahsil,
-            this.efaturaGitti});
-            this.barManager1.MaxItemId = 31;
+            this.efaturaGitti,
+            this.btnBilgiFisi,
+            this.barButtonItem7});
+            this.barManager1.MaxItemId = 33;
             // 
             // barDockControlTop
             // 
@@ -813,11 +819,6 @@
             this.colEfaturaDurumu.OptionsColumn.AllowEdit = false;
             this.colEfaturaDurumu.Width = 96;
             // 
-            // popupMenu2
-            // 
-            this.popupMenu2.Manager = this.barManager1;
-            this.popupMenu2.Name = "popupMenu2";
-            // 
             // colProje
             // 
             this.colProje.Caption = "Proje Adı";
@@ -835,6 +836,27 @@
             this.colOzelKod.OptionsColumn.AllowEdit = false;
             this.colOzelKod.Visible = true;
             this.colOzelKod.VisibleIndex = 14;
+            // 
+            // popupMenu2
+            // 
+            this.popupMenu2.Manager = this.barManager1;
+            this.popupMenu2.Name = "popupMenu2";
+            // 
+            // btnBilgiFisi
+            // 
+            this.btnBilgiFisi.Caption = "Bilgi Fişi Yazdır";
+            this.btnBilgiFisi.Id = 31;
+            this.btnBilgiFisi.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
+            this.btnBilgiFisi.Name = "btnBilgiFisi";
+            this.btnBilgiFisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBilgiFisi_ItemClick);
+            // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Caption = "Proforma Fatura Yazdır";
+            this.barButtonItem7.Id = 32;
+            this.barButtonItem7.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x164;
+            this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
             // 
             // frmToptanSatis
             // 
@@ -940,5 +962,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colEfaturaDurumu;
         private DevExpress.XtraGrid.Columns.GridColumn colProje;
         private DevExpress.XtraGrid.Columns.GridColumn colOzelKod;
+        private DevExpress.XtraBars.BarButtonItem btnBilgiFisi;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
     }
 }

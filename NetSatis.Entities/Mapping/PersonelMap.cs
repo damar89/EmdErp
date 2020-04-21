@@ -10,24 +10,24 @@ namespace NetSatis.Entities.Mapping
         {
             this.HasKey(p => p.Id);
             this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(p => p.Unvani).HasMaxLength(15);
-            this.Property(p => p.PersonelKodu).HasMaxLength(15);
-            this.Property(p => p.PersonelAdi).HasMaxLength(75);
+            this.Property(p => p.Unvani).HasMaxLength(120);
+            this.Property(p => p.PersonelKodu).HasMaxLength(120);
+            this.Property(p => p.PersonelAdi).HasMaxLength(120);
             this.Property(p => p.TcKimlikNo).HasMaxLength(11);
-            this.Property(p => p.VergiDairesi).HasMaxLength(20);
-            this.Property(p => p.VergiNo).HasMaxLength(15);
-            this.Property(p => p.Telefon).HasMaxLength(20);
-            this.Property(p => p.CepTelefonu).HasMaxLength(20);
+            this.Property(p => p.VergiDairesi).HasMaxLength(200);
+            this.Property(p => p.VergiNo).HasMaxLength(19);
+            this.Property(p => p.Telefon).HasMaxLength(120);
+            this.Property(p => p.CepTelefonu).HasMaxLength(120);
             this.Property(p => p.Fax).HasMaxLength(20);
-            this.Property(p => p.Email).HasMaxLength(50);
+            this.Property(p => p.Email).HasMaxLength(120);
             this.Property(p => p.Web).HasMaxLength(50);
             this.Property(p => p.Il).HasMaxLength(20);
             this.Property(p => p.Ilce).HasMaxLength(20);
             this.Property(p => p.Semt).HasMaxLength(20);
-            this.Property(p => p.Adres).HasMaxLength(100);
+            this.Property(p => p.Adres).HasMaxLength(1005);
             this.Property(p => p.PrimOrani).HasPrecision(5, 2);
             this.Property(p => p.AylikMaasi).HasPrecision(8, 2);
-            this.Property(p => p.Aciklama).HasMaxLength(200);
+            this.Property(p => p.Aciklama).HasMaxLength(2000);
 
             this.ToTable("Personeller");
             this.Property(p => p.Id).HasColumnName("Id");

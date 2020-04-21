@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraPrinting;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
+using NetSatis.Reports.Fatura_ve_Fiş;
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -107,6 +108,20 @@ namespace NetSatis.BackOffice.Fiş
         {
             gridStokHareket.ClearColumnsFilter();
             gridContStokHareket.MainView.SaveLayoutToXml(DosyaYolu);
+        }
+
+        private void btnFatura_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string secilen = gridStokHareket.GetFocusedRowCellValue(colFisKodu).ToString();
+            FaturaHazirla f = new FaturaHazirla();
+            f.FaturaHazirlama(secilen);
+        }
+
+        private void btnBilgiFisi_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string secilen = gridStokHareket.GetFocusedRowCellValue(colFisKodu).ToString();
+            FaturaHazirla f = new FaturaHazirla();
+            f.BilgiFisi(secilen);
         }
     }
 }

@@ -324,7 +324,7 @@ namespace NetSatis.Entities.Data_Access
                 s.Odenen,
                 s.KalanOdeme,
                 s.kasaHareket,
-                Durum = (s.FisTuru == "Alış Faturası" || s.FisTuru == "Satış İade Faturası" || s.FisTuru == "Tahsilat Fişi" || (s.FisTuru == "Cari Devir Fişi" && s.kasaHareket == "Kasa Giriş")) ?
+                Durum = (s.FisTuru == "Alış Faturası" || s.FisTuru == "Satış İade Faturası" || s.FisTuru == "Masraf Faturası" || s.FisTuru == "Tahsilat Fişi" || (s.FisTuru == "Cari Devir Fişi" && s.kasaHareket == "Kasa Giriş")) ?
                 s.ToplamTutar - s.Odenen > 0 ? "A" : s.ToplamTutar - s.Odenen < 0 ? "B" : "K" :
                 s.ToplamTutar - s.Odenen > 0 ? "B" : s.ToplamTutar - s.Odenen < 0 ? "A" : "K",
                 AktifTutar = context.Fisler.Where(c => c.CariId == cariId && c.Tarih <= s.Tarih).Select(j => new
@@ -339,7 +339,7 @@ namespace NetSatis.Entities.Data_Access
                 }).Select(l => new
                 {
                     kDurum =
-                        (l.FisTuru == "Alış Faturası" || l.FisTuru == "Satış İade Faturası" || l.FisTuru == "Perakende İade Faturası") ? (l.KalanOdeme > 0 ? l.KalanOdeme * -1 : l.KalanOdeme) :
+                        (l.FisTuru == "Alış Faturası" || l.FisTuru == "Satış İade Faturası" || s.FisTuru == "Masraf Faturası" || l.FisTuru == "Perakende İade Faturası") ? (l.KalanOdeme > 0 ? l.KalanOdeme * -1 : l.KalanOdeme) :
                         (l.FisTuru == "Tahsilat Fişi" ||
                          (l.FisTuru == "Cari Devir Fişi" && l.kasaHareket == "Kasa Giriş")) ? l.Odenen * -1 :
                                 (l.FisTuru == "Tahsilat Fişi" || (l.FisTuru == "Cari Devir Fişi" && l.kasaHareket == "Kasa Çıkış")) ? l.Odenen :
@@ -360,7 +360,7 @@ namespace NetSatis.Entities.Data_Access
         public object CariFisAyrintiStok(NetSatisContext context, int cariId, DateTime baslangic, DateTime bitis)
         {
             var fisler = context.Fisler.Where(x => x.CariId == cariId && x.Tarih >= baslangic && x.Tarih <= bitis).OrderBy(f => f.Tarih).ToList();
-            
+
             List<KooperatifEkstreModel> liste = new List<KooperatifEkstreModel>();
             foreach (var fis in fisler)
             {
@@ -377,11 +377,11 @@ namespace NetSatis.Entities.Data_Access
                             Birim = x.Stok.Birim,
                             FisKodu = fis.FisKodu,
                             SatirTutari = x.BirimFiyati * x.Miktar,
-                            IndirimTutari=x.IndirimTutar,
-                            DipIndirim=x.DipIskontoPayi,
+                            IndirimTutari = x.IndirimTutar,
+                            DipIndirim = x.DipIskontoPayi,
                             BirimFiyat = x.BirimFiyati,
                             //SatirTutari = x.ToplamTutar,
-                            FisTutari = x.BirimFiyati*x.Miktar-(x.DipIskontoPayi+x.IndirimTutar),
+                            FisTutari = x.BirimFiyati * x.Miktar - (x.DipIskontoPayi + x.IndirimTutar),
                             Aciklama = fis.Aciklama,
                             ZiraiToplam = x.Zirai,
                             MeraToplam = x.Mera,
@@ -421,7 +421,7 @@ namespace NetSatis.Entities.Data_Access
             return liste;
         }
         public object CariFisAyrinti(NetSatisContext context, int cariId, DateTime baslangic, DateTime bitis)
-        { 
+        {
             var result = context.Fisler.Where(c => c.CariId == cariId && c.Tarih >= baslangic && c.Tarih <= bitis).OrderBy(f => f.Tarih).Select(k => new
             {
                 k.Tarih,
@@ -457,7 +457,7 @@ namespace NetSatis.Entities.Data_Access
                 s.Odenen,
                 s.KalanOdeme,
                 s.kasaHareket,
-                Durum = (s.FisTuru == "Alış Faturası" || s.FisTuru == "Satış İade Faturası" || s.FisTuru == "Tahsilat Fişi" || (s.FisTuru == "Cari Devir Fişi" && s.kasaHareket == "Kasa Giriş")) ?
+                Durum = (s.FisTuru == "Alış Faturası" || s.FisTuru == "Satış İade Faturası" || s.FisTuru == "Masraf Faturası" || s.FisTuru == "Tahsilat Fişi" || (s.FisTuru == "Cari Devir Fişi" && s.kasaHareket == "Kasa Giriş")) ?
                 s.ToplamTutar - s.Odenen > 0 ? "A" : s.ToplamTutar - s.Odenen < 0 ? "B" : "K" :
                 s.ToplamTutar - s.Odenen > 0 ? "B" : s.ToplamTutar - s.Odenen < 0 ? "A" : "K",
                 AktifTutar = context.Fisler.Where(c => c.CariId == cariId && c.Tarih <= s.Tarih).Select(j => new
@@ -472,7 +472,7 @@ namespace NetSatis.Entities.Data_Access
                 }).Select(l => new
                 {
                     kDurum =
-                        (l.FisTuru == "Alış Faturası" || l.FisTuru == "Satış İade Faturası" || l.FisTuru == "Perakende İade Faturası") ? (l.KalanOdeme > 0 ? l.KalanOdeme * -1 : l.KalanOdeme) :
+                        (l.FisTuru == "Alış Faturası" || l.FisTuru == "Satış İade Faturası" || s.FisTuru == "Masraf Faturası" || l.FisTuru == "Perakende İade Faturası") ? (l.KalanOdeme > 0 ? l.KalanOdeme * -1 : l.KalanOdeme) :
                         (l.FisTuru == "Tahsilat Fişi" ||
                          (l.FisTuru == "Cari Devir Fişi" && l.kasaHareket == "Kasa Giriş")) ? l.Odenen * -1 :
                                 (l.FisTuru == "Tahsilat Fişi" || (l.FisTuru == "Cari Devir Fişi" && l.kasaHareket == "Kasa Çıkış")) ? l.Odenen :
@@ -571,8 +571,8 @@ namespace NetSatis.Entities.Data_Access
         //}
         public object CariGenelToplam(NetSatisContext context, int cariId)
         {
-            string[] Faturalar = { "Alış Faturası", "Satış İade Faturası", "Perakende İade İrsaliyesi", "Perakende İade Faturası" };
-            string[] SatisFaturalar = { "Perakende Satış Faturası", "Toptan Satış Faturası", "Alış İade Faturası", "Perakende Satış İrsaliyesi" };
+            string[] Faturalar = { "Alış Faturası", "Satış İade Faturası", "Perakende İade İrsaliyesi", "Perakende İade Faturası", "Masraf Faturası" };
+            string[] SatisFaturalar = { "Perakende Satış Faturası", "Toptan Satış Faturası", "Alış İade Faturası", "Perakende Satış İrsaliyesi", "Hizmet Faturası" };
 
             decimal alacak = (context.Fisler.Where(c => c.CariId == cariId && (SatisFaturalar.Contains(c.FisTuru)
                 || (c.FisTuru == "Satış İrsaliyesi" && c.CariIrsaliye == "1"))
@@ -610,8 +610,8 @@ namespace NetSatis.Entities.Data_Access
         }
         public object CariGenelToplam(NetSatisContext context, int cariId, DateTime baslangic, DateTime bitis) //Olmuyor
         {
-            string[] Faturalar = { "Alış Faturası", "Satış İade Faturası", "Perakende İade İrsaliyesi", "Perakende İade Faturası" }; //Ödeme Fişi
-            string[] SatisFaturalar = { "Perakende Satış Faturası", "Toptan Satış Faturası", "Alış İade Faturası", "Perakende Satış İrsaliyesi" }; //Tahsilat Fişi
+            string[] Faturalar = { "Alış Faturası", "Satış İade Faturası", "Perakende İade İrsaliyesi", "Perakende İade Faturası", "Masraf Faturası" }; //Ödeme Fişi
+            string[] SatisFaturalar = { "Perakende Satış Faturası", "Toptan Satış Faturası", "Alış İade Faturası", "Perakende Satış İrsaliyesi", "Hizmet Faturası" }; //Tahsilat Fişi
             decimal alacak =
                 (context.Fisler.Where(c => c.CariId == cariId && c.Tarih >= baslangic && c.Tarih <= bitis && SatisFaturalar.Contains(c.FisTuru))
                      .Sum(c => c.ToplamTutar) ?? 0) +
@@ -644,8 +644,8 @@ namespace NetSatis.Entities.Data_Access
         }
         public CariBakiye cariBakiyesi(NetSatisContext context, int cariId)
         {
-            string[] Faturalar = { "Alış Faturası", "Satış İade Faturası", "Perakende İade İrsaliyesi", "Perakende İade Faturası" };
-            string[] SatisFaturalar = { "Perakende Satış Faturası", "Toptan Satış Faturası", "Alış İade Faturası", "Perakende Satış İrsaliyesi" };
+            string[] Faturalar = { "Alış Faturası", "Satış İade Faturası", "Perakende İade İrsaliyesi", "Perakende İade Faturası", "Masraf Faturası" };
+            string[] SatisFaturalar = { "Perakende Satış Faturası", "Toptan Satış Faturası", "Alış İade Faturası", "Perakende Satış İrsaliyesi", "Hizmet Faturası" };
             decimal borc =
                 (context.Fisler.Where(c => c.CariId == cariId && SatisFaturalar.Contains(c.FisTuru))
                      .Sum(c => c.ToplamTutar) ?? 0) +

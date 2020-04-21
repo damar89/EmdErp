@@ -1578,127 +1578,131 @@
             this.treeList1.AppendNode(new object[] {
             "Alış Faturaları"}, 17, 0, 1, -1, "Alış Faturaları");
             this.treeList1.AppendNode(new object[] {
+            "Masraf Faturası"}, 12, "Masraf Faturası");
+            this.treeList1.AppendNode(new object[] {
+            "Hizmet Faturası"}, 12, "Hizmet Faturası");
+            this.treeList1.AppendNode(new object[] {
             "İrsaliye Yönetimi"}, -1, 8, 8, -1);
             this.treeList1.AppendNode(new object[] {
-            "Satış İrsaliyesi"}, 22, 0, 1, -1, "Satış İrsaliyesi");
+            "Satış İrsaliyesi"}, 24, 0, 1, -1, "Satış İrsaliyesi");
             this.treeList1.AppendNode(new object[] {
-            "Alış İrsaliyesi"}, 22, 0, 1, -1, "Alış İrsaliyesi");
+            "Alış İrsaliyesi"}, 24, 0, 1, -1, "Alış İrsaliyesi");
             this.treeList1.AppendNode(new object[] {
-            "Listeler"}, 22, 2, 2, -1);
+            "Listeler"}, 24, 2, 2, -1);
             this.treeList1.AppendNode(new object[] {
-            "Satış İrsaliyeleri"}, 25, 0, 1, -1, "Satış İrsaliyeleri");
+            "Satış İrsaliyeleri"}, 27, 0, 1, -1, "Satış İrsaliyeleri");
             this.treeList1.AppendNode(new object[] {
-            "Alış İrsaliyeleri"}, 25, 0, 1, -1, "Alış İrsaliyeleri");
+            "Alış İrsaliyeleri"}, 27, 0, 1, -1, "Alış İrsaliyeleri");
             this.treeList1.AppendNode(new object[] {
             "Sipariş Yönetimi"}, -1, 10, 10, -1);
             this.treeList1.AppendNode(new object[] {
-            "Verilen Sipariş Fişi"}, 28, 0, 1, -1, "Verilen Sipariş Fişi");
+            "Verilen Sipariş Fişi"}, 30, 0, 1, -1, "Verilen Sipariş Fişi");
             this.treeList1.AppendNode(new object[] {
-            "Alınan Sipariş Fişi"}, 28, 0, 1, -1, "Alınan Sipariş Fişi");
+            "Alınan Sipariş Fişi"}, 30, 0, 1, -1, "Alınan Sipariş Fişi");
             this.treeList1.AppendNode(new object[] {
-            "Listeler"}, 28, 2, 2, -1);
+            "Listeler"}, 30, 2, 2, -1);
             this.treeList1.AppendNode(new object[] {
-            "Verilen Siparişler"}, 31, 0, 1, -1, "Verilen Siparişler");
+            "Verilen Siparişler"}, 33, 0, 1, -1, "Verilen Siparişler");
             this.treeList1.AppendNode(new object[] {
-            "Alınan Siparişler"}, 31, 0, 1, -1, "Alınan Siparişler");
+            "Alınan Siparişler"}, 33, 0, 1, -1, "Alınan Siparişler");
             this.treeList1.AppendNode(new object[] {
-            "Sipariş Faturalandır"}, 28, "Sipariş Faturalandır");
+            "Sipariş Faturalandır"}, 30, "Sipariş Faturalandır");
             this.treeList1.AppendNode(new object[] {
             "Teklif Yönetimi"}, -1, 40, 40, -1);
             this.treeList1.AppendNode(new object[] {
-            "Verilen Teklif Fişi"}, 35, 0, 1, -1, "Verilen Teklif Fişi");
+            "Verilen Teklif Fişi"}, 37, 0, 1, -1, "Verilen Teklif Fişi");
             this.treeList1.AppendNode(new object[] {
-            "Alınan Teklif Fişi"}, 35, 0, 1, -1, "Alınan Teklif Fişi");
+            "Alınan Teklif Fişi"}, 37, 0, 1, -1, "Alınan Teklif Fişi");
             this.treeList1.AppendNode(new object[] {
-            "Listeler"}, 35, 2, 2, -1);
+            "Listeler"}, 37, 2, 2, -1);
             this.treeList1.AppendNode(new object[] {
-            "Verilen Teklifler"}, 38, 0, 1, -1, "Verilen Teklifler");
+            "Verilen Teklifler"}, 40, 0, 1, -1, "Verilen Teklifler");
             this.treeList1.AppendNode(new object[] {
-            "Alınan Teklifler"}, 38, 0, 1, -1, "Alınan Teklifler");
+            "Alınan Teklifler"}, 40, 0, 1, -1, "Alınan Teklifler");
             this.treeList1.AppendNode(new object[] {
             "Finans Yönetimi"}, -1, 42, 42, -1);
             this.treeList1.AppendNode(new object[] {
-            "Tahsilat Fişi"}, 41, 0, 1, -1, "Tahsilat Fişi");
+            "Tahsilat Fişi"}, 43, 0, 1, -1, "Tahsilat Fişi");
             this.treeList1.AppendNode(new object[] {
-            "Ödeme Fişi"}, 41, 0, 1, -1, "Ödeme Fişi");
+            "Ödeme Fişi"}, 43, 0, 1, -1, "Ödeme Fişi");
             this.treeList1.AppendNode(new object[] {
-            "Masraf Fişi"}, 41, 0, 1, -1, "Masraf Fişi");
+            "Masraf Fişi"}, 43, 0, 1, -1, "Masraf Fişi");
             this.treeList1.AppendNode(new object[] {
-            "Cari Devir Fişi"}, 41, 0, 1, -1, "Cari Devir Fişi");
+            "Cari Devir Fişi"}, 43, 0, 1, -1, "Cari Devir Fişi");
             this.treeList1.AppendNode(new object[] {
             "Tanım İşlemleri"}, -1, 73, 73, -1);
             this.treeList1.AppendNode(new object[] {
-            "Ödeme Türü Tanıtım Kartı"}, 46, 0, 1, -1, "Ödeme Türü Tanıtım Kartı");
+            "Ödeme Türü Tanıtım Kartı"}, 48, 0, 1, -1, "Ödeme Türü Tanıtım Kartı");
             this.treeList1.AppendNode(new object[] {
-            "Masraf Tanıtım Kartı"}, 46, 0, 1, -1, "Masraf Tanıtım Kartı");
+            "Masraf Tanıtım Kartı"}, 48, 0, 1, -1, "Masraf Tanıtım Kartı");
             this.treeList1.AppendNode(new object[] {
-            "Kasa Tanıtım Kartı"}, 46, 0, 1, -1, "Kasa Tanıtım Kartı");
+            "Kasa Tanıtım Kartı"}, 48, 0, 1, -1, "Kasa Tanıtım Kartı");
             this.treeList1.AppendNode(new object[] {
-            "Hareket Tipi"}, 46, 0, 1, -1, "Hareket Tipi");
+            "Hareket Tipi"}, 48, 0, 1, -1, "Hareket Tipi");
             this.treeList1.AppendNode(new object[] {
-            "Depo Tanıtım Kartı"}, 46, 0, 1, -1, "Depo Tanıtım Kartı");
+            "Depo Tanıtım Kartı"}, 48, 0, 1, -1, "Depo Tanıtım Kartı");
             this.treeList1.AppendNode(new object[] {
-            "Personel Tanıtım Kartı"}, 46, 0, 1, -1, "Personel Tanıtım Kartı");
+            "Personel Tanıtım Kartı"}, 48, 0, 1, -1, "Personel Tanıtım Kartı");
             this.treeList1.AppendNode(new object[] {
-            "Proje Tanım"}, 46, "Proje Tanım");
+            "Proje Tanım"}, 48, "Proje Tanım");
             this.treeList1.AppendNode(new object[] {
-            "Özel Kod Tanım"}, 46, "Özel Kod Tanım");
+            "Özel Kod Tanım"}, 48, "Özel Kod Tanım");
             this.treeList1.AppendNode(new object[] {
             "Raporlar"}, -1, 106, 106, -1);
             this.treeList1.AppendNode(new object[] {
-            "Stok Raporları"}, 55, 2, 2, -1);
+            "Stok Raporları"}, 57, 2, 2, -1);
             this.treeList1.AppendNode(new object[] {
-            "Genel Stok Hareketleri"}, 56, 0, 1, -1, "Genel Stok Hareketleri");
+            "Genel Stok Hareketleri"}, 58, 0, 1, -1, "Genel Stok Hareketleri");
             this.treeList1.AppendNode(new object[] {
-            "Stok Analiz"}, 56, "Stok Analiz");
+            "Stok Analiz"}, 58, "Stok Analiz");
             this.treeList1.AppendNode(new object[] {
-            "Alış Raporları"}, 55, 2, 2, -1);
+            "Alış Raporları"}, 57, 2, 2, -1);
             this.treeList1.AppendNode(new object[] {
-            "Genel Alış Raporu"}, 59, 0, 1, -1, "Genel Alış Raporu");
+            "Genel Alış Raporu"}, 61, 0, 1, -1, "Genel Alış Raporu");
             this.treeList1.AppendNode(new object[] {
-            "Tarih Aralıklı Alış Raporu"}, 59, 0, 1, -1, "Tarih Aralıklı Alış Raporu");
+            "Tarih Aralıklı Alış Raporu"}, 61, 0, 1, -1, "Tarih Aralıklı Alış Raporu");
             this.treeList1.AppendNode(new object[] {
-            "İade Listeleri"}, 59, 0, 1, -1, "İade Listeleri");
+            "İade Listeleri"}, 61, 0, 1, -1, "İade Listeleri");
             this.treeList1.AppendNode(new object[] {
-            "Satış Raporları"}, 55, 2, 2, -1);
+            "Satış Raporları"}, 57, 2, 2, -1);
             this.treeList1.AppendNode(new object[] {
-            "Satış Raporu"}, 63, 0, 1, -1, "Satış Raporu");
+            "Satış Raporu"}, 65, 0, 1, -1, "Satış Raporu");
             this.treeList1.AppendNode(new object[] {
-            "Tarih Aralıklı Satış Raporu"}, 63, 0, 1, -1, "Tarih Aralıklı Satış Raporu");
+            "Tarih Aralıklı Satış Raporu"}, 65, 0, 1, -1, "Tarih Aralıklı Satış Raporu");
             this.treeList1.AppendNode(new object[] {
-            "Kar Zarar Raporu Alış Fiyatından"}, 63, 0, 1, -1, "Kar Zarar Raporu Alış Fiyatından");
+            "Kar Zarar Raporu Alış Fiyatından"}, 65, 0, 1, -1, "Kar Zarar Raporu Alış Fiyatından");
             this.treeList1.AppendNode(new object[] {
-            "Kar Zarar Analizi"}, 63, 0, 1, -1, "Kar Zarar Analizi");
+            "Kar Zarar Analizi"}, 65, 0, 1, -1, "Kar Zarar Analizi");
             this.treeList1.AppendNode(new object[] {
-            "Tarih Aralıklı Kar Zarar Analizi"}, 63, 0, 1, -1, "Tarih Aralıklı Kar Zarar Analizi");
+            "Tarih Aralıklı Kar Zarar Analizi"}, 65, 0, 1, -1, "Tarih Aralıklı Kar Zarar Analizi");
             this.treeList1.AppendNode(new object[] {
-            "Finans Raporları"}, 55, 2, 2, -1);
+            "Finans Raporları"}, 57, 2, 2, -1);
             this.treeList1.AppendNode(new object[] {
-            "Ödeme Listesi"}, 69, 0, 1, -1, "Ödeme Listesi");
+            "Ödeme Listesi"}, 71, 0, 1, -1, "Ödeme Listesi");
             this.treeList1.AppendNode(new object[] {
-            "Tahsilat Listesi"}, 69, 0, 1, -1, "Tahsilat Listesi");
+            "Tahsilat Listesi"}, 71, 0, 1, -1, "Tahsilat Listesi");
             this.treeList1.AppendNode(new object[] {
-            "Masraf Dökümü"}, 69, 0, 1, -1, "Masraf Dökümü");
+            "Masraf Dökümü"}, 71, 0, 1, -1, "Masraf Dökümü");
             this.treeList1.AppendNode(new object[] {
-            "Ba Form"}, 69, 0, 1, -1, "Ba Form");
+            "Ba Form"}, 71, 0, 1, -1, "Ba Form");
             this.treeList1.AppendNode(new object[] {
-            "Bs Form"}, 69, 0, 1, -1, "Bs Form");
+            "Bs Form"}, 71, 0, 1, -1, "Bs Form");
             this.treeList1.AppendNode(new object[] {
-            "Cari Raporları"}, 55, 2, 2, -1);
+            "Cari Raporları"}, 57, 2, 2, -1);
             this.treeList1.AppendNode(new object[] {
-            "Cari Bakiye Durum Raporu"}, 75, 0, 1, -1, "Cari Bakiye Durum Raporu");
+            "Cari Bakiye Durum Raporu"}, 77, 0, 1, -1, "Cari Bakiye Durum Raporu");
             this.treeList1.AppendNode(new object[] {
-            "Cari Hesap Ekstresi"}, 75, 0, 1, -1, "Cari Hesap Ekstresi");
+            "Cari Hesap Ekstresi"}, 77, 0, 1, -1, "Cari Hesap Ekstresi");
             this.treeList1.AppendNode(new object[] {
-            "Cari Stok Hareketleri"}, 75, "Cari Stok Hareketleri");
+            "Cari Stok Hareketleri"}, 77, "Cari Stok Hareketleri");
             this.treeList1.AppendNode(new object[] {
-            "Kasa Raporu"}, 55, 2, 2, -1);
+            "Kasa Raporu"}, 57, 2, 2, -1);
             this.treeList1.AppendNode(new object[] {
-            "Günlük Kasa Raporu"}, 79, 0, 1, -1, "Günlük Kasa Raporu");
+            "Günlük Kasa Raporu"}, 81, 0, 1, -1, "Günlük Kasa Raporu");
             this.treeList1.AppendNode(new object[] {
-            "Kasa Raporu Detaylı"}, 79, 0, 1, -1, "Kasa Raporu Detaylı");
+            "Kasa Raporu Detaylı"}, 81, 0, 1, -1, "Kasa Raporu Detaylı");
             this.treeList1.AppendNode(new object[] {
-            "Gün Sonu Raporu"}, 79, "Gün Sonu Raporu");
+            "Gün Sonu Raporu"}, 81, "Gün Sonu Raporu");
             this.treeList1.EndUnboundLoad();
             this.treeList1.OptionsBehavior.PopulateServiceColumns = true;
             this.treeList1.OptionsCustomization.AllowFilter = false;

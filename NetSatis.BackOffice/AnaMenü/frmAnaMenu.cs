@@ -1115,6 +1115,14 @@ namespace NetSatis.BackOffice
                     frmSiparisTarih frm6 = new frmSiparisTarih();
                     frm6.Show();
                     break;
+                case "Masraf Faturası":
+                    frmFisIslem frm7 = new frmFisIslem();
+                    frm7.Show();
+                    break;
+                case "Hizmet Faturası":
+                    frmFisIslem frm8 = new frmFisIslem();
+                    frm8.Show();
+                    break;
                 default:
                     break;
             }

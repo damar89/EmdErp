@@ -124,6 +124,8 @@
             this.colAltGrup = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMarka = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.btnFatura = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBilgiFisi = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -171,7 +173,9 @@
             this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem7),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem8),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnDizayn)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDizayn),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnFatura),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnBilgiFisi)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
@@ -257,8 +261,10 @@
             this.barButtonItem8,
             this.barButtonItem9,
             this.barButtonItem10,
-            this.btnDizayn});
-            this.barManager1.MaxItemId = 31;
+            this.btnDizayn,
+            this.btnFatura,
+            this.btnBilgiFisi});
+            this.barManager1.MaxItemId = 33;
             // 
             // barDockControlTop
             // 
@@ -896,6 +902,22 @@
             this.gridView2.GridControl = this.gridContStokHareket;
             this.gridView2.Name = "gridView2";
             // 
+            // btnFatura
+            // 
+            this.btnFatura.Caption = "Fatura Yazdır";
+            this.btnFatura.Id = 31;
+            this.btnFatura.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.printdialog_16x16;
+            this.btnFatura.Name = "btnFatura";
+            this.btnFatura.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFatura_ItemClick);
+            // 
+            // btnBilgiFisi
+            // 
+            this.btnBilgiFisi.Caption = "Bilgi Fişi Yazdır";
+            this.btnBilgiFisi.Id = 32;
+            this.btnBilgiFisi.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.printdialog_16x16;
+            this.btnBilgiFisi.Name = "btnBilgiFisi";
+            this.btnBilgiFisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBilgiFisi_ItemClick_1);
+            // 
             // frmPesinSatislar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1007,5 +1029,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colAltGrup;
         private DevExpress.XtraGrid.Columns.GridColumn colMarka;
         private DevExpress.XtraBars.BarButtonItem btnDizayn;
+        private DevExpress.XtraBars.BarButtonItem btnFatura;
+        private DevExpress.XtraBars.BarButtonItem btnBilgiFisi;
     }
 }

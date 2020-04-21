@@ -303,6 +303,8 @@
             // 
             this.btnFaturalandır.Caption = "Teklifi Faturalandır";
             this.btnFaturalandır.Id = 25;
+            this.btnFaturalandır.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFaturalandır.ImageOptions.Image")));
+            this.btnFaturalandır.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnFaturalandır.ImageOptions.LargeImage")));
             this.btnFaturalandır.Name = "btnFaturalandır";
             this.btnFaturalandır.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFaturalandır_ItemClick);
             // 
@@ -310,6 +312,8 @@
             // 
             this.btnYazdır.Caption = "Teklifi Yazdır";
             this.btnYazdır.Id = 26;
+            this.btnYazdır.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnYazdır.ImageOptions.Image")));
+            this.btnYazdır.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnYazdır.ImageOptions.LargeImage")));
             this.btnYazdır.Name = "btnYazdır";
             this.btnYazdır.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnYazdır_ItemClick);
             // 

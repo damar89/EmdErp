@@ -30,7 +30,7 @@ namespace NetSatis.BackOffice.Fiş
         private void Listele()
         {
             context = new NetSatisContext();
-            gridContFisler.DataSource = fisDal.PerakendeFis(context, "Perakende Satış Faturası", DateTime.MinValue, DateTime.MaxValue);
+            //gridContFisler.DataSource = fisDal.PerakendeFis(context, "Perakende Satış Faturası", DateTime.MinValue, DateTime.MaxValue);
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)

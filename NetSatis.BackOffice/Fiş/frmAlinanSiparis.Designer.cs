@@ -94,6 +94,7 @@
             this.colFaturaKodu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProje = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOzelKod = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnBilgiFisi = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -191,7 +192,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem2),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem6),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnFaturalandir),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnYazdir)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnYazdir),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnBilgiFisi)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
@@ -350,6 +352,8 @@
             // 
             this.btnFaturalandir.Caption = "Siparişi Faturalandır";
             this.btnFaturalandir.Id = 25;
+            this.btnFaturalandir.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFaturalandir.ImageOptions.Image")));
+            this.btnFaturalandir.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnFaturalandir.ImageOptions.LargeImage")));
             this.btnFaturalandir.Name = "btnFaturalandir";
             this.btnFaturalandir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFaturalandir_ItemClick);
             // 
@@ -357,6 +361,7 @@
             // 
             this.btnYazdir.Caption = "Siparişi Yazdır";
             this.btnYazdir.Id = 26;
+            this.btnYazdir.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x16;
             this.btnYazdir.Name = "btnYazdir";
             this.btnYazdir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnYazdir_ItemClick);
             // 
@@ -392,8 +397,9 @@
             this.barSubItem6,
             this.barButtonItem6,
             this.btnFaturalandir,
-            this.btnYazdir});
-            this.barManager1.MaxItemId = 27;
+            this.btnYazdir,
+            this.btnBilgiFisi});
+            this.barManager1.MaxItemId = 28;
             // 
             // barDockControlTop
             // 
@@ -768,6 +774,13 @@
             this.colOzelKod.Visible = true;
             this.colOzelKod.VisibleIndex = 15;
             // 
+            // btnBilgiFisi
+            // 
+            this.btnBilgiFisi.Caption = "Bilgi Fişi Olarak Yazdır";
+            this.btnBilgiFisi.Id = 27;
+            this.btnBilgiFisi.Name = "btnBilgiFisi";
+            this.btnBilgiFisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBilgiFisi_ItemClick);
+            // 
             // frmAlinanSiparis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -865,5 +878,6 @@
         private DevExpress.XtraBars.BarButtonItem btnYazdir;
         private DevExpress.XtraGrid.Columns.GridColumn colProje;
         private DevExpress.XtraGrid.Columns.GridColumn colOzelKod;
+        private DevExpress.XtraBars.BarButtonItem btnBilgiFisi;
     }
 }

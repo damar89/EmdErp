@@ -422,6 +422,38 @@ namespace NetSatis.BackOffice.Fiş
                     lblBaslik.Text = "Alış Faturası";
                     navPersonelIslem.Dispose();
                     break;
+                case "Masraf Faturası":
+                    ayarlar.StokHareketi = "Stok Giriş";
+                    ayarlar.FisTurleri = "Masraf Faturası";
+                    ayarlar.KasaHareketi = "Kasa Çıkış";
+                    ayarlar.SatisEkrani = true;
+                    siparişYazdırToolStripMenuItem.Visible = false;
+                    bilgiFişiYazdırToolStripMenuItem.Visible = false;
+                    teklifYazdırToolStripMenuItem.Visible = false;
+                    irsaliyeYazdırToolStripMenuItem.Visible = false;
+                    lblSatir.Visible = true;
+                    lblSatirSayisi.Visible = true;
+                    ayarlar.OdemeEkrani = true;
+                    lblBaslik.Appearance.ImageIndex = 0;
+                    lblBaslik.Text = "Masraf Faturası";
+                    navPersonelIslem.Dispose();
+                    break;
+                case "Hizmet Faturası":
+                    ayarlar.StokHareketi = "Stok Çıkış";
+                    ayarlar.FisTurleri = "Hizmet Faturası";
+                    ayarlar.KasaHareketi = "Kasa Giriş";
+                    ayarlar.SatisEkrani = true;
+                    siparişYazdırToolStripMenuItem.Visible = false;
+                    bilgiFişiYazdırToolStripMenuItem.Visible = false;
+                    teklifYazdırToolStripMenuItem.Visible = false;
+                    irsaliyeYazdırToolStripMenuItem.Visible = false;
+                    lblSatir.Visible = true;
+                    lblSatirSayisi.Visible = true;
+                    ayarlar.OdemeEkrani = true;
+                    lblBaslik.Appearance.ImageIndex = 0;
+                    lblBaslik.Text = "Hizmet Faturası";
+                    navPersonelIslem.Dispose();
+                    break;
                 case "Perakende Satış Faturası":
                     ayarlar.StokHareketi = "Stok Çıkış";
                     ayarlar.KasaHareketi = "Kasa Giriş";

@@ -412,6 +412,13 @@ namespace NetSatis.BackOffice.Fiş
             FaturaHazirla f = new FaturaHazirla();
             f.SiparisHazirlama(secilen);
         }
+
+        private void btnBilgiFisi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
+            FaturaHazirla f = new FaturaHazirla();
+            f.BilgiFisi(secilen);
+        }
     }
 
 }
