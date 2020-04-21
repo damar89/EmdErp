@@ -13,12 +13,10 @@ namespace NetSatis.Entities.Data_Access
     {
         public object StokListele(NetSatisContext context, bool hepsi = true)
         {
-            if (hepsi)
-            {
+            if (hepsi) {
                 var tablo = context.Stoklar.GroupJoin(context.StokHareketleri, c => c.Id, c => c.StokId,
             (Stoklar, StokHareketleri) =>
-                new
-                {
+                new {
                     Stoklar.Id,
                     Stoklar.Durumu,
                     Stoklar.WebAcikMi,
@@ -61,13 +59,10 @@ namespace NetSatis.Entities.Data_Access
                                  ).Sum(c => c.Miktar) ?? 0),
                 }).ToList();
                 return tablo;
-            }
-            else
-            {
+            } else {
                 var tablo = context.Stoklar.GroupJoin(context.StokHareketleri, c => c.Id, c => c.StokId,
                 (Stoklar, StokHareketleri) =>
-                new
-                {
+                new {
                     Stoklar.Id,
                     Stoklar.Durumu,
                     Stoklar.WebAcikMi,
@@ -114,10 +109,9 @@ namespace NetSatis.Entities.Data_Access
         }
         public decimal? StokAdetler(NetSatisContext context, int StokId)
         {
-            var res = from s in context.Stoklar.Where(x=>x.Id==StokId)
-                      join ss in context.StokHareketleri.GroupBy(x=>x.StokId) on s.Id equals ss.Key
-                      select new
-                      {
+            var res = from s in context.Stoklar.Where(x => x.Id == StokId)
+                      join ss in context.StokHareketleri.GroupBy(x => x.StokId) on s.Id equals ss.Key
+                      select new {
                           MevcutStok = (ss.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0) -
                                    (ss.Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Fatura")
                                    || (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")
@@ -130,8 +124,7 @@ namespace NetSatis.Entities.Data_Access
         {
             var tablo = context.Stoklar.GroupJoin(context.StokHareketleri, c => c.Id, c => c.StokId,
                 (Stoklar, StokHareketleri) =>
-                    new
-                    {
+                    new {
                         Stoklar.Id,
                         Stoklar.Durumu,
                         Stoklar.WebAcikMi,
@@ -178,8 +171,7 @@ namespace NetSatis.Entities.Data_Access
         {
             var tablo = context.Stoklar.GroupJoin(context.StokHareketleri, c => c.Id, c => c.StokId,
                 (Stoklar, StokHareketleri) =>
-                    new
-                    {
+                    new {
                         Stoklar.Id,
                         Stoklar.Durumu,
                         Stoklar.WebAcikMi,
@@ -216,12 +208,10 @@ namespace NetSatis.Entities.Data_Access
             string metin1 = result.Count > 0 ? result[0] : "";
             string metin2 = result.Count > 1 ? result[1] : "";
             string metin3 = result.Count > 2 ? result[2] : "";
-            if (result.Count == 1)
-            {
+            if (result.Count == 1) {
                 var tablo = context.Stoklar.GroupJoin(context.StokHareketleri, c => c.Id, c => c.StokId,
                     (Stoklar, StokHareketleri) =>
-           new
-           {
+           new {
                Stoklar.Id,
                Stoklar.Durumu,
                Stoklar.WebAcikMi,
@@ -247,13 +237,10 @@ namespace NetSatis.Entities.Data_Access
                                  ).Sum(c => c.Miktar) ?? 0),
            }).Where(x => x.StokKodu.Contains(metin1)).ToList();
                 return tablo;
-            }
-            else if (result.Count == 2)
-            {
+            } else if (result.Count == 2) {
                 var tablo = context.Stoklar.GroupJoin(context.StokHareketleri, c => c.Id, c => c.StokId,
                     (Stoklar, StokHareketleri) =>
-           new
-           {
+           new {
                Stoklar.Id,
                Stoklar.Durumu,
                Stoklar.WebAcikMi,
@@ -279,13 +266,10 @@ namespace NetSatis.Entities.Data_Access
                                  ).Sum(c => c.Miktar) ?? 0),
            }).Where(x => x.StokKodu.Contains(metin1) && x.StokAdi.Contains(metin2)).ToList();
                 return tablo;
-            }
-            else if (result.Count > 2)
-            {
+            } else if (result.Count > 2) {
                 var tablo = context.Stoklar.GroupJoin(context.StokHareketleri, c => c.Id, c => c.StokId,
              (Stoklar, StokHareketleri) =>
-    new
-    {
+    new {
         Stoklar.Id,
         Stoklar.Durumu,
         Stoklar.WebAcikMi,
@@ -320,7 +304,7 @@ namespace NetSatis.Entities.Data_Access
             // ikisi de barkod ile arama yapıyor olması lazım, beraber kontrol edelim.
             IQueryable<Stok> tablo;
             if (pred != null)
-                tablo = context.Stoklar.Where(pred).Include("Barkod");
+                tablo = context.Stoklar.Include(x => x.Barkod).Where(pred);
             else
                 tablo = context.Stoklar.Include("Barkod");
 
@@ -427,8 +411,7 @@ namespace NetSatis.Entities.Data_Access
             #endregion
             var res = tablo.GroupJoin(context.StokHareketleri, c => c.Id, c => c.StokId,
                   (Stoklar, StokHareketleri) =>
-                         new
-                         {
+                         new {
                              Stoklar.Id,
                              Stoklar.Durumu,
                              Stoklar.WebAcikMi,
@@ -442,8 +425,8 @@ namespace NetSatis.Entities.Data_Access
                              KategoriAdi = context.Kategoriler.FirstOrDefault(x => x.Kod == Stoklar.Kategori).KategoriAdi ?? "",
                              AltGrupAdi = context.AltGruplar.FirstOrDefault(x => x.Kod == Stoklar.AltGrup).AltGrupAdi ?? "",
                              AnaGrupAdi = context.AnaGruplar.FirstOrDefault(x => x.Kod == Stoklar.AnaGrup).AnaGrupAdi ?? "",
-                        //Stoklar.AlisKdv,
-                        Stoklar.SatisKdv,
+                             //Stoklar.AlisKdv,
+                             Stoklar.SatisKdv,
                              Stoklar.SatisFiyati1,
                              Stoklar.SatisFiyati2,
                              StokGiris = StokHareketleri.Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar) ?? 0,
