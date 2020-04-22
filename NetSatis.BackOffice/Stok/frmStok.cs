@@ -342,14 +342,6 @@ namespace NetSatis.BackOffice.Stok
 
             if (!string.IsNullOrEmpty(txtAramaMetni.Text))
             {
-                pred = pred.And(x => x.StokKodu.Contains(txtAramaMetni.Text));
-            }
-            if (!string.IsNullOrEmpty(txtAramaMetni.Text))
-            {
-                pred = pred.And(x => x.StokAdi.Contains(txtAramaMetni.Text));
-            }
-            if (!string.IsNullOrEmpty(txtAramaMetni.Text))
-            {
                 foreach (string item in txtAramaMetni.Text.Split(' '))
                 {
                     if (!string.IsNullOrEmpty(item))
