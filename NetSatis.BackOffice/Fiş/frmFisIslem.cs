@@ -1589,6 +1589,7 @@ namespace NetSatis.BackOffice.Fiş
                     stokVeri.Tipi = cmbTipi.Text;
                     stokVeri.Hareket = ayarlar.StokHareketi;
                     stokVeri.FisTuru = ayarlar.FisTurleri;
+                    
                     toplamDipIskontoPayi += Convert.ToDecimal(stokVeri.DipIskontoPayi);
 
                     if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_AlisFiyat)))
@@ -1596,8 +1597,10 @@ namespace NetSatis.BackOffice.Fiş
                         if (_fisentity.FisTuru == "Alış Faturası" || _fisentity.FisTuru == "Alış İrsaliyesi")
                         {
                             stokVeri.Stok.AlisFiyati1 = stokVeri.BirimFiyati;
-                            stokVeri.Stok.AlisFiyati2 =
-                            stokVeri.Stok.AlisFiyati3 = stokVeri.BirimFiyati - stokVeri.IndirimTutar + stokVeri.IndirimTutar2 + stokVeri.IndirimTutar3 + (stokVeri.BirimFiyati - stokVeri.IndirimTutar + stokVeri.IndirimTutar2 + stokVeri.IndirimTutar3 * stokVeri.Kdv / 100);
+
+                            stokVeri.Stok.AlisFiyati2 = stokVeri.BirimFiyati - stokVeri.IndirimTutar + stokVeri.IndirimTutar2 + stokVeri.IndirimTutar3;
+
+                            stokVeri.Stok.AlisFiyati3 = stokVeri.BirimFiyati - stokVeri.IndirimTutar + stokVeri.IndirimTutar2 + stokVeri.IndirimTutar3 + (stokVeri.BirimFiyati * stokVeri.Kdv / 100);
 
                         }
                     }
