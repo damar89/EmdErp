@@ -32,7 +32,7 @@ namespace NetSatis.BackOffice.Ayarlar
 
             comboBoxEdit1.SelectedIndex =
                 Convert.ToInt32(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_FaturaYazirmaAyari));
-
+            cmbVarsayilanKdv.SelectedIndex = Convert.ToInt32(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisStok_VarsayilanKdv));
             //gridLookKasa.Properties.DataSource = kasaDal.GetAll(context);
             try
             {
@@ -168,6 +168,8 @@ namespace NetSatis.BackOffice.Ayarlar
                 }
 
                 context.SaveChanges();
+
+                SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisStok_VarsayilanKdv, cmbVarsayilanKdv.ToString());
 
                 SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisAyarlari_PesFisKodu, calcFisKodu.Value.ToString());
                 SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisAyarlari_PesFisOnEki, txtOnEk.Text);

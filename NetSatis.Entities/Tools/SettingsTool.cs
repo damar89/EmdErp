@@ -54,6 +54,7 @@ namespace NetSatis.Entities.Tools
             BilgiFisiDizayn_DosyaYolu6,
             SatisStok_EksiyeDusme,
             SatisStok_MinMiktar,
+            SatisStok_VarsayilanKdv,
             TemaAyarlari_Tema,
             Kooperatif_Kooperatifmi,
             Kooperatif_Zirai,
@@ -65,6 +66,7 @@ namespace NetSatis.Entities.Tools
             DolarKur_Euro,
             DolarKur_Rub,
             Lisans_LisansKey
+           
 
 
 

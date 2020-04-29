@@ -155,7 +155,6 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.calcwebBayiSatisFiyat = new DevExpress.XtraEditors.CalcEdit();
             this.lblMiktar = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.calcDevirGirisi = new DevExpress.XtraEditors.ComboBoxEdit();
             this.togWeb = new DevExpress.XtraEditors.ToggleSwitch();
             this.calcZirai = new DevExpress.XtraEditors.CalcEdit();
             this.calcSatisFiyat3 = new DevExpress.XtraEditors.CalcEdit();
@@ -272,6 +271,7 @@ namespace NetSatis.BackOffice.Stok
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.calcDevirGirisi = new DevExpress.XtraEditors.CalcEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
@@ -281,7 +281,6 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calcwebBayiSatisFiyat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblMiktar.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcDevirGirisi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.togWeb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcZirai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcSatisFiyat3.Properties)).BeginInit();
@@ -385,6 +384,7 @@ namespace NetSatis.BackOffice.Stok
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcDevirGirisi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBaslik
@@ -471,7 +471,6 @@ namespace NetSatis.BackOffice.Stok
             // 
             this.layoutControl2.Controls.Add(this.calcwebBayiSatisFiyat);
             this.layoutControl2.Controls.Add(this.lblMiktar);
-            this.layoutControl2.Controls.Add(this.calcDevirGirisi);
             this.layoutControl2.Controls.Add(this.togWeb);
             this.layoutControl2.Controls.Add(this.calcZirai);
             this.layoutControl2.Controls.Add(this.calcSatisFiyat3);
@@ -508,6 +507,7 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControl2.Controls.Add(this.txtKod);
             this.layoutControl2.Controls.Add(this.txtBirim);
             this.layoutControl2.Controls.Add(this.txtStokAdi);
+            this.layoutControl2.Controls.Add(this.calcDevirGirisi);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl2.Location = new System.Drawing.Point(0, 0);
             this.layoutControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -548,23 +548,6 @@ namespace NetSatis.BackOffice.Stok
             this.lblMiktar.StyleController = this.layoutControl2;
             this.lblMiktar.TabIndex = 29;
             this.lblMiktar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.calcSatisKdv_KeyDown);
-            // 
-            // calcDevirGirisi
-            // 
-            this.calcDevirGirisi.Location = new System.Drawing.Point(131, 620);
-            this.calcDevirGirisi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.calcDevirGirisi.Name = "calcDevirGirisi";
-            this.calcDevirGirisi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcDevirGirisi.Properties.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "8",
-            "18"});
-            this.calcDevirGirisi.Size = new System.Drawing.Size(164, 22);
-            this.calcDevirGirisi.StyleController = this.layoutControl2;
-            this.calcDevirGirisi.TabIndex = 29;
-            this.calcDevirGirisi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.calcSatisKdv_KeyDown);
             // 
             // togWeb
             // 
@@ -2094,6 +2077,19 @@ namespace NetSatis.BackOffice.Stok
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
+            // calcDevirGirisi
+            // 
+            this.calcDevirGirisi.Location = new System.Drawing.Point(131, 620);
+            this.calcDevirGirisi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.calcDevirGirisi.Name = "calcDevirGirisi";
+            this.calcDevirGirisi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.calcDevirGirisi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.calcDevirGirisi.Size = new System.Drawing.Size(164, 22);
+            this.calcDevirGirisi.StyleController = this.layoutControl2;
+            this.calcDevirGirisi.TabIndex = 29;
+            this.calcDevirGirisi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.calcSatisKdv_KeyDown);
+            // 
             // frmStokIslem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -2107,7 +2103,7 @@ namespace NetSatis.BackOffice.Stok
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(800, 714);
+            this.MaximumSize = new System.Drawing.Size(930, 868);
             this.Name = "frmStokIslem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stok Kartı İşlemleri";
@@ -2123,7 +2119,6 @@ namespace NetSatis.BackOffice.Stok
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.calcwebBayiSatisFiyat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblMiktar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcDevirGirisi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.togWeb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcZirai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcSatisFiyat3.Properties)).EndInit();
@@ -2227,6 +2222,7 @@ namespace NetSatis.BackOffice.Stok
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcDevirGirisi.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2292,7 +2288,6 @@ namespace NetSatis.BackOffice.Stok
         private CalcEdit calcwebBayiSatisFiyat;
         private CalcEdit calcWebSatisFiyat;
         private CalcEdit calcSatisFiyat4;
-        private ComboBoxEdit calcDevirGirisi;
         private SimpleButton btnSil;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControl layoutControl2;
@@ -2360,5 +2355,6 @@ namespace NetSatis.BackOffice.Stok
        
         private ComboBoxEdit lblMiktar;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private CalcEdit calcDevirGirisi;
     }
 }

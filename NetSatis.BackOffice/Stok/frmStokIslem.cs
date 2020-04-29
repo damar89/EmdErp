@@ -44,6 +44,7 @@ namespace NetSatis.BackOffice.Stok
                 guncelle = true;
             }
             Olustur(entity, kopyala);
+           
         }
         private void Olustur(Entities.Tables.Stok entity, bool kopyala = false)
         {

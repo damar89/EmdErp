@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -46,7 +45,7 @@
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2010 Blue";
+        
             // 
             // frmKisayol
             // 
@@ -67,6 +66,5 @@
         #endregion
 
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
     }
 }
