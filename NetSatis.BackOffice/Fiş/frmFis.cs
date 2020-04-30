@@ -140,5 +140,14 @@ namespace NetSatis.BackOffice.Fiş
                 btnKapat.PerformClick();
             }
         }
+
+        private void exceleAktarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                gridFisler.ExportToXlsx(save.FileName + ".xlsx");
+            }
+        }
     }
 }
