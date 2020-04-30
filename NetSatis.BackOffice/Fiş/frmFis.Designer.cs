@@ -92,6 +92,9 @@
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.colProje = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOzelKod = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.exceleAktarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -101,6 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridContFisler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridFisler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpsChkKdvDahil)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -307,8 +311,9 @@
             this.barSubItem5,
             this.barButtonItem5,
             this.barSubItem6,
-            this.barButtonItem6});
-            this.barManager1.MaxItemId = 25;
+            this.barButtonItem6,
+            this.barButtonItem7});
+            this.barManager1.MaxItemId = 26;
             // 
             // barDockControlTop
             // 
@@ -467,6 +472,7 @@
             // 
             // gridContFisler
             // 
+            this.gridContFisler.ContextMenuStrip = this.contextMenuStrip1;
             this.gridContFisler.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridContFisler.Location = new System.Drawing.Point(0, 0);
             this.gridContFisler.MainView = this.gridFisler;
@@ -737,6 +743,27 @@
             this.colOzelKod.Visible = true;
             this.colOzelKod.VisibleIndex = 14;
             // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Caption = "barButtonItem7";
+            this.barButtonItem7.Id = 25;
+            this.barButtonItem7.Name = "barButtonItem7";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exceleAktarToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(139, 26);
+            // 
+            // exceleAktarToolStripMenuItem
+            // 
+            this.exceleAktarToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.exporttoxlsx_16x16;
+            this.exceleAktarToolStripMenuItem.Name = "exceleAktarToolStripMenuItem";
+            this.exceleAktarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exceleAktarToolStripMenuItem.Text = "Excele Aktar";
+            this.exceleAktarToolStripMenuItem.Click += new System.EventHandler(this.exceleAktarToolStripMenuItem_Click);
+            // 
             // frmFis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -763,6 +790,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridContFisler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridFisler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpsChkKdvDahil)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -832,5 +860,8 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraGrid.Columns.GridColumn colProje;
         private DevExpress.XtraGrid.Columns.GridColumn colOzelKod;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem exceleAktarToolStripMenuItem;
     }
 }
