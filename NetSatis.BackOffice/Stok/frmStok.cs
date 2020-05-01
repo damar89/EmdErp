@@ -36,9 +36,7 @@ namespace NetSatis.BackOffice.Stok
         public void GetAll()
         {
             //gridControl1.DataSource = stokDal.StokAdiylaStokGetir(context);
-            Sorgula();
-
-
+            Sorgula(); 
         }
         private void btnKapat_Click(object sender, EventArgs e)
         {

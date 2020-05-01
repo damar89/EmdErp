@@ -21,6 +21,7 @@ namespace NetSatis.FrontOffice
         [STAThread]
         static void Main()
         {
+            DevExpress.Data.CurrencyDataController.DisableThreadingProblemsDetection = true;
             bool prog;
             Mutex mtx = new Mutex(true, "NetSatis.FrontOffice", out prog);
             if (!prog)

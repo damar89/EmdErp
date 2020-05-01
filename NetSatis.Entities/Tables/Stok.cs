@@ -54,5 +54,17 @@ namespace NetSatis.Entities.Tables
         public virtual ICollection<Barkod> Barkod { get; set; }
         public virtual ICollection<StokHareket> StokHareket { get; set; }
 
+        [NotMapped]
+        public string KategoriAdi { get; set; }
+        [NotMapped]
+        public string AltGrupAdi { get; set; }
+        [NotMapped]
+        public string AnaGrupAdi { get; set; }
+        [NotMapped]
+        public decimal? StokGiris { get; set; }
+        [NotMapped]
+        public decimal? StokCikis { get; set; }
+        [NotMapped]
+        public decimal? MevcutStok { get; set; }
     }
 }

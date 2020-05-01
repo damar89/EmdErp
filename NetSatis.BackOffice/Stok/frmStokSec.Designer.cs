@@ -278,7 +278,6 @@
             this.gridStoklar.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridStoklar_PopupMenuShowing);
             this.gridStoklar.ColumnFilterChanged += new System.EventHandler(this.gridStoklar_ColumnFilterChanged);
             this.gridStoklar.DoubleClick += new System.EventHandler(this.gridStoklar_DoubleClick);
-            this.gridStoklar.RowCountChanged += new System.EventHandler(this.gridStoklar_RowCountChanged);
             // 
             // colId
             // 
