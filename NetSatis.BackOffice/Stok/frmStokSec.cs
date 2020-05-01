@@ -8,13 +8,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NetSatis.BackOffice.Annotations;
 
 namespace NetSatis.BackOffice.Stok
 {
-    public partial class frmStokSec : DevExpress.XtraEditors.XtraForm
+    public partial class frmStokSec : DevExpress.XtraEditors.XtraForm, INotifyPropertyChanged
     {
         StokDAL stokDal = new StokDAL();
         NetSatisContext context;
@@ -23,7 +25,7 @@ namespace NetSatis.BackOffice.Stok
         private int sec;
         string DosyaYolu = $@"{Application.StartupPath}\Gorunum\StokSec_SavedLayout.xml";
 
-        private BindingList<Entities.Tables.Stok> TumStoklar;
+        private List<Entities.Tables.Stok> TumStoklar { get; set; }
 
         public frmStokSec(bool cokluSecim = false)
         {
@@ -61,27 +63,17 @@ namespace NetSatis.BackOffice.Stok
 
             }
         }
-        private async void frmStokSec_Load(object sender, EventArgs e)
+        private void frmStokSec_Load(object sender, EventArgs e)
         {
 
             if (File.Exists(DosyaYolu)) gridContStoklar.MainView.RestoreLayoutFromXml(DosyaYolu);
 
-            TumStoklar = new BindingList<Entities.Tables.Stok>()
-            {
-                AllowEdit = false,
-                AllowNew = false,
-                AllowRemove = false,
-                RaiseListChangedEvents = true
-            };
+            TumStoklar = new List<Entities.Tables.Stok>();
 
             gridContStoklar.DataSource = TumStoklar;
-            gridContStoklar.Select();
 
-            tokenSource.Cancel();
-            tokenSource.Dispose();
-            tokenSource = new CancellationTokenSource();
-            await Task.Delay(1000);
-            await Sorgula(tokenSource.Token);
+            btnSorgula.PerformClick();
+            txtAramaMetni.Focus();
 
         }
 
@@ -107,8 +99,6 @@ namespace NetSatis.BackOffice.Stok
         {
             this.Close();
         }
-
-
 
         private void frmStokSec_KeyDown(object sender, KeyEventArgs e)
         {
@@ -195,7 +185,11 @@ namespace NetSatis.BackOffice.Stok
                 form.ShowDialog();
                 if (form.saved)
                 {
-                    TumStoklar = new BindingList<Entities.Tables.Stok>(stokDal.StokSec(context));
+                    #region eski kod
+                    //TumStoklar = stokDal.StokSec(context);
+                    //OnPropertyChanged(nameof(TumStoklar)); 
+                    #endregion
+                    btnSorgula.PerformClick();
                 }
 
             }
@@ -213,7 +207,12 @@ namespace NetSatis.BackOffice.Stok
 
         private void btnGuncelle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            TumStoklar = new BindingList<Entities.Tables.Stok>(stokDal.StokSec(context));
+            btnSorgula.PerformClick();
+
+            #region eski kodlar
+            //TumStoklar = stokDal.StokSec(context);
+            //OnPropertyChanged(nameof(TumStoklar)); 
+            #endregion
         }
 
         private void btnHareketler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -230,59 +229,42 @@ namespace NetSatis.BackOffice.Stok
         }
 
         private CancellationTokenSource tokenSource = new CancellationTokenSource();
-        Task Sorgula(CancellationToken token)
+        async Task Sorgula(CancellationToken token)
         {
-            return Task.Factory.StartNew(async () =>
+
+            if (token.IsCancellationRequested)
+                return;
+            TumStoklar.Clear();
+            var pred = PredicateBuilder.True<Entities.Tables.Stok>();
+
+            if (!string.IsNullOrEmpty(txtStokKodu.Text))
+                pred = pred.And(x => x.StokKodu.Contains(txtStokKodu.Text));
+            if (!string.IsNullOrEmpty(txtStokAdi.Text))
+                pred = pred.And(x => x.StokAdi.Contains(txtStokAdi.Text));
+            if (!string.IsNullOrEmpty(txtAramaMetni.Text))
+            {
+                foreach (string item in txtAramaMetni.Text.Split(' '))
+                {
+                    if (!string.IsNullOrEmpty(item))
+                        pred = pred.And(x => x.StokAdi.Contains(item) || x.Barkod.Any(s => s.Barkodu.Contains(item)) || x.Barkodu.Contains(item) || x.StokKodu.Contains(item));
+                }
+            }
+
+            var take = 5000;
+            var count = Math.Ceiling(
+                Convert.ToDecimal(stokDal.StokKayitSayisi(context, pred) / Convert.ToDecimal(take)));
+            if (token.IsCancellationRequested)
+                return;
+            for (int i = 0; i < count; i++)
             {
                 if (token.IsCancellationRequested)
-                    return;
-                TumStoklar.Clear();
-                var pred = PredicateBuilder.True<Entities.Tables.Stok>();
-
-                if (!string.IsNullOrEmpty(txtStokKodu.Text))
-                {
-                    pred = pred.And(x => x.StokKodu.Contains(txtStokKodu.Text));
-                }
-                if (!string.IsNullOrEmpty(txtStokAdi.Text))
-                {
-                    pred = pred.And(x => x.StokAdi.Contains(txtStokAdi.Text));
-                }
-                if (!string.IsNullOrEmpty(txtAramaMetni.Text))
-                {
-                    foreach (string item in txtAramaMetni.Text.Split(' '))
-                    {
-                        if (!string.IsNullOrEmpty(item))
-                            pred = pred.And(x => x.StokAdi.Contains(item) || x.Barkod.Any(s => s.Barkodu.Contains(item)) || x.Barkodu.Contains(item) || x.StokKodu.Contains(item));
-                    }
-
-                }
-                //gridContStoklar.DataSource = stokDal.StokAdiylaStokGetir(context, pred);
-
-                var count = Math.Ceiling(Convert.ToDouble(stokDal.StokKayitSayisi(context) / 100));
-                if (token.IsCancellationRequested)
-                    return;
-                var lst = new List<Entities.Tables.Stok>();
-
-                for (int i = 0; i < count; i++)
-                {
-                    if (token.IsCancellationRequested)
-                        break;
-                    lst.AddRange(stokDal.StokAdiylaStokGetir(context, pred, 10000 * i, 10000));
-                    gridContStoklar.DataSource = lst;
-                 
-                    
-                    await Task.Delay(100);
-                    //foreach (var item in lst)
-                    //{
-                    //    if (token.IsCancellationRequested)
-                    //        break; 
-                    //    TumStoklar.Add(item); 
-                    //}
-                }
-                gridContStoklar.RefreshDataSource();
+                    break;
+                TumStoklar.AddRange(stokDal.StokAdiylaStokGetir(context, pred, take * i, take));
+                OnPropertyChanged(nameof(TumStoklar));
+                await Task.Delay(100);
                 gridStoklar.RefreshData();
                 lblKayitSayisi.Text = TumStoklar.Count.ToString();
-            });
+            }
         }
 
         private async void btnSorgula_Click(object sender, EventArgs e)
@@ -290,8 +272,8 @@ namespace NetSatis.BackOffice.Stok
             tokenSource.Cancel();
             tokenSource.Dispose();
             tokenSource = new CancellationTokenSource();
-            await Task.Delay(1000);
-            await Sorgula(tokenSource.Token);
+            await Sorgula(tokenSource.Token); 
+
         }
 
         private void btnTemizle_Click(object sender, EventArgs e)
@@ -333,6 +315,14 @@ namespace NetSatis.BackOffice.Stok
         {
             if (Directory.Exists($@"{Application.StartupPath}\Gorunum"))
                 gridContStoklar.MainView.SaveLayoutToXml(DosyaYolu);
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

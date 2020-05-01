@@ -76,7 +76,8 @@ namespace NetSatis.Entities.Data_Access
             }
             else
             {
-                return StokAdiylaStokGetir(context, (x => x.StokGiris > 0 || x.StokCikis > 0));
+
+                return StokAdiylaStokGetir(context, stokGirisVeCikisSifirdanBuyukOlanlar: true);
 
                 #region eski kodlar
                 //var tablo = context.Stoklar.GroupJoin(context.StokHareketleri, c => c.Id, c => c.StokId,
@@ -188,9 +189,9 @@ namespace NetSatis.Entities.Data_Access
             #endregion
         }
 
-        public int StokKayitSayisi(NetSatisContext context)
+        public int StokKayitSayisi(NetSatisContext context, Expression<Func<Stok, bool>> pred = null)
         {
-            return context.Stoklar.Count();
+            return pred == null ? context.Stoklar.Count() : context.Stoklar.Where(pred).Count();
         }
 
         /// <summary>
@@ -201,7 +202,7 @@ namespace NetSatis.Entities.Data_Access
         /// <param name="take">kaç adet kayıt getirmesi gerektiği belirtilir.</param>
         /// <param name="skip">kaç adet kayıt atlamsı gerektiği belirtilir.</param>
         /// <returns></returns>
-        public List<Stok> StokAdiylaStokGetir(NetSatisContext context, Expression<Func<Stok, bool>> pred = null, int skip = 0,int take = 0)
+        public List<Stok> StokAdiylaStokGetir(NetSatisContext context, Expression<Func<Stok, bool>> pred = null, int skip = 0, int take = 0, bool stokGirisVeCikisSifirdanBuyukOlanlar = false)
         {
 
             //stok tablosunun ilk halini oluşturur
@@ -217,7 +218,7 @@ namespace NetSatis.Entities.Data_Access
             //getirmesi istenilen ve pas geçilmesi istenilen sayılar belirtilir
             if (take != 0 && skip != 0)
             {
-                tablo = tablo.OrderBy(x=>x.Id).Skip(skip).Take(take);
+                tablo = tablo.OrderBy(x => x.Id).Skip(skip).Take(take);
             }
             else if (take != 0)
             {
@@ -383,6 +384,8 @@ namespace NetSatis.Entities.Data_Access
                              StokCikis = StokCikis(s.SHareket),
                              MevcutStok = MevcutStok(s.SHareket),
                          });
+            if (stokGirisVeCikisSifirdanBuyukOlanlar)
+                resh2 = resh2.Where(x => x.StokGiris.Value > 0 || x.StokCikis.Value > 0);
             return resh2.ToList();
 
         }
@@ -429,7 +432,7 @@ namespace NetSatis.Entities.Data_Access
 
             var res = StokGiris(context, StokId) - StokCikis(context, StokId);
             return res;
-        } 
+        }
 
         #endregion
     }
