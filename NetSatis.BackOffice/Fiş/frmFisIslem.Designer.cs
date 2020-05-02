@@ -355,6 +355,7 @@
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.popupMenu3 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.colMevcutStok = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
@@ -590,7 +591,7 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1270, 511, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1438, 923);
+            this.layoutControl1.Size = new System.Drawing.Size(1438, 679);
             this.layoutControl1.TabIndex = 18;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -742,7 +743,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 923);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 679);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.barDockControlBottom.Size = new System.Drawing.Size(1438, 0);
@@ -754,7 +755,7 @@
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 923);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 679);
             // 
             // barDockControlRight
             // 
@@ -763,7 +764,7 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1438, 0);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 923);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 679);
             // 
             // barFiyat1
             // 
@@ -1644,7 +1645,7 @@
             this.btnKaydetYeni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKaydetYeni.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydetYeni.ImageOptions.Image")));
             this.btnKaydetYeni.ImageOptions.ImageIndex = 1;
-            this.btnKaydetYeni.Location = new System.Drawing.Point(738, 869);
+            this.btnKaydetYeni.Location = new System.Drawing.Point(738, 625);
             this.btnKaydetYeni.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKaydetYeni.Name = "btnKaydetYeni";
             this.btnKaydetYeni.Size = new System.Drawing.Size(409, 48);
@@ -1659,7 +1660,7 @@
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.ImageIndex = 3;
             this.btnKapat.ImageOptions.ImageList = this.ımageList1;
-            this.btnKapat.Location = new System.Drawing.Point(1296, 869);
+            this.btnKapat.Location = new System.Drawing.Point(1296, 625);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(137, 48);
@@ -1684,7 +1685,7 @@
             this.btnSatisBitir.ImageOptions.ImageIndex = 4;
             this.btnSatisBitir.ImageOptions.ImageList = this.ımageList1;
             this.btnSatisBitir.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSatisBitir.ImageOptions.SvgImage")));
-            this.btnSatisBitir.Location = new System.Drawing.Point(1151, 869);
+            this.btnSatisBitir.Location = new System.Drawing.Point(1151, 625);
             this.btnSatisBitir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSatisBitir.Name = "btnSatisBitir";
             this.btnSatisBitir.Size = new System.Drawing.Size(141, 48);
@@ -1696,7 +1697,7 @@
             // calcGenelToplam
             // 
             this.calcGenelToplam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcGenelToplam.Location = new System.Drawing.Point(1238, 795);
+            this.calcGenelToplam.Location = new System.Drawing.Point(1238, 551);
             this.calcGenelToplam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calcGenelToplam.Name = "calcGenelToplam";
             this.calcGenelToplam.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1724,7 +1725,7 @@
             // calcAraToplam
             // 
             this.calcAraToplam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcAraToplam.Location = new System.Drawing.Point(1238, 721);
+            this.calcAraToplam.Location = new System.Drawing.Point(1238, 477);
             this.calcAraToplam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calcAraToplam.Name = "calcAraToplam";
             this.calcAraToplam.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1752,7 +1753,7 @@
             // calcKdvToplam
             // 
             this.calcKdvToplam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcKdvToplam.Location = new System.Drawing.Point(1238, 758);
+            this.calcKdvToplam.Location = new System.Drawing.Point(1238, 514);
             this.calcKdvToplam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calcKdvToplam.Name = "calcKdvToplam";
             this.calcKdvToplam.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1779,7 +1780,7 @@
             // 
             // calcAcikHesapBakiye
             // 
-            this.calcAcikHesapBakiye.Location = new System.Drawing.Point(615, 795);
+            this.calcAcikHesapBakiye.Location = new System.Drawing.Point(615, 551);
             this.calcAcikHesapBakiye.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calcAcikHesapBakiye.Name = "calcAcikHesapBakiye";
             this.calcAcikHesapBakiye.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1807,7 +1808,7 @@
             // calcIndirimToplami
             // 
             this.calcIndirimToplami.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcIndirimToplami.Location = new System.Drawing.Point(927, 721);
+            this.calcIndirimToplami.Location = new System.Drawing.Point(927, 477);
             this.calcIndirimToplami.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calcIndirimToplami.Name = "calcIndirimToplami";
             this.calcIndirimToplami.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1834,7 +1835,7 @@
             // 
             // calcBagkur
             // 
-            this.calcBagkur.Location = new System.Drawing.Point(244, 820);
+            this.calcBagkur.Location = new System.Drawing.Point(244, 576);
             this.calcBagkur.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calcBagkur.Name = "calcBagkur";
             this.calcBagkur.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1867,7 +1868,7 @@
             0,
             0,
             0});
-            this.calcIndirimTutari.Location = new System.Drawing.Point(927, 795);
+            this.calcIndirimTutari.Location = new System.Drawing.Point(927, 551);
             this.calcIndirimTutari.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calcIndirimTutari.Name = "calcIndirimTutari";
             this.calcIndirimTutari.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1895,7 +1896,7 @@
             // 
             // calcOdenemesiGereken
             // 
-            this.calcOdenemesiGereken.Location = new System.Drawing.Point(615, 758);
+            this.calcOdenemesiGereken.Location = new System.Drawing.Point(615, 514);
             this.calcOdenemesiGereken.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calcOdenemesiGereken.Name = "calcOdenemesiGereken";
             this.calcOdenemesiGereken.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1923,7 +1924,7 @@
             // calcIndirimOrani
             // 
             this.calcIndirimOrani.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcIndirimOrani.Location = new System.Drawing.Point(927, 758);
+            this.calcIndirimOrani.Location = new System.Drawing.Point(927, 514);
             this.calcIndirimOrani.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calcIndirimOrani.Name = "calcIndirimOrani";
             this.calcIndirimOrani.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1952,7 +1953,7 @@
             // 
             // lblSatirSayisi
             // 
-            this.lblSatirSayisi.Location = new System.Drawing.Point(87, 721);
+            this.lblSatirSayisi.Location = new System.Drawing.Point(87, 477);
             this.lblSatirSayisi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblSatirSayisi.Name = "lblSatirSayisi";
             this.lblSatirSayisi.Size = new System.Drawing.Size(33, 16);
@@ -1963,7 +1964,7 @@
             // 
             // calcOdenenTutar
             // 
-            this.calcOdenenTutar.Location = new System.Drawing.Point(615, 721);
+            this.calcOdenenTutar.Location = new System.Drawing.Point(615, 477);
             this.calcOdenenTutar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calcOdenenTutar.Name = "calcOdenenTutar";
             this.calcOdenenTutar.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1990,7 +1991,7 @@
             // 
             // calcMera
             // 
-            this.calcMera.Location = new System.Drawing.Point(244, 785);
+            this.calcMera.Location = new System.Drawing.Point(244, 541);
             this.calcMera.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calcMera.Name = "calcMera";
             this.calcMera.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -2017,7 +2018,7 @@
             // 
             // calcBorsa
             // 
-            this.calcBorsa.Location = new System.Drawing.Point(244, 753);
+            this.calcBorsa.Location = new System.Drawing.Point(244, 509);
             this.calcBorsa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calcBorsa.Name = "calcBorsa";
             this.calcBorsa.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -2044,7 +2045,7 @@
             // 
             // lblSatir
             // 
-            this.lblSatir.Location = new System.Drawing.Point(10, 721);
+            this.lblSatir.Location = new System.Drawing.Point(10, 477);
             this.lblSatir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblSatir.Name = "lblSatir";
             this.lblSatir.Size = new System.Drawing.Size(73, 16);
@@ -2065,9 +2066,9 @@
             this.navSatisEkrani,
             this.navPersonelIslem,
             this.navOdemeEkrani});
-            this.navMasraf.RegularSize = new System.Drawing.Size(1428, 350);
+            this.navMasraf.RegularSize = new System.Drawing.Size(1428, 106);
             this.navMasraf.SelectedPage = this.navSatisEkrani;
-            this.navMasraf.Size = new System.Drawing.Size(1428, 350);
+            this.navMasraf.Size = new System.Drawing.Size(1428, 106);
             this.navMasraf.TabIndex = 0;
             this.navMasraf.Text = "Masraf Girişi";
             // 
@@ -2081,7 +2082,7 @@
             this.navSatisEkrani.Name = "navSatisEkrani";
             this.navSatisEkrani.Properties.ShowCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.navSatisEkrani.Properties.ShowExpandButton = DevExpress.Utils.DefaultBoolean.False;
-            this.navSatisEkrani.Size = new System.Drawing.Size(1348, 304);
+            this.navSatisEkrani.Size = new System.Drawing.Size(1348, 60);
             // 
             // layoutControl3
             // 
@@ -2091,7 +2092,7 @@
             this.layoutControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl3.Name = "layoutControl3";
             this.layoutControl3.Root = this.layoutControlGroup3;
-            this.layoutControl3.Size = new System.Drawing.Size(1348, 304);
+            this.layoutControl3.Size = new System.Drawing.Size(1348, 60);
             this.layoutControl3.TabIndex = 3;
             this.layoutControl3.Text = "layoutControl3";
             // 
@@ -2117,7 +2118,7 @@
             this.kdvDegisim,
             this.repobtnStokSec,
             this.rpsTutar});
-            this.gridContStokHareket.Size = new System.Drawing.Size(1340, 296);
+            this.gridContStokHareket.Size = new System.Drawing.Size(1340, 52);
             this.gridContStokHareket.TabIndex = 2;
             this.gridContStokHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridStokHareket});
@@ -2287,7 +2288,8 @@
             this.colDipIskontoPayi,
             this.gridColumn1,
             this.colSatisFiyat,
-            this.colKarOrani});
+            this.colKarOrani,
+            this.colMevcutStok});
             this.gridStokHareket.CustomizationFormBounds = new System.Drawing.Rectangle(1104, 317, 303, 286);
             this.gridStokHareket.DetailHeight = 431;
             gridFormatRule1.Column = this.colKarOrani;
@@ -3037,7 +3039,7 @@
             this.layoutControlItem47});
             this.layoutControlGroup3.Name = "layoutControlGroup3";
             this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1348, 304);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(1348, 60);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // layoutControlItem47
@@ -3045,7 +3047,7 @@
             this.layoutControlItem47.Control = this.gridContStokHareket;
             this.layoutControlItem47.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem47.Name = "layoutControlItem47";
-            this.layoutControlItem47.Size = new System.Drawing.Size(1344, 300);
+            this.layoutControlItem47.Size = new System.Drawing.Size(1344, 56);
             this.layoutControlItem47.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem47.TextVisible = false;
             // 
@@ -3515,7 +3517,7 @@
             // 
             // calcZirai
             // 
-            this.calcZirai.Location = new System.Drawing.Point(244, 721);
+            this.calcZirai.Location = new System.Drawing.Point(244, 477);
             this.calcZirai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calcZirai.Name = "calcZirai";
             this.calcZirai.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -3555,7 +3557,7 @@
             this.layoutControlItem34});
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 4, 4);
-            this.Root.Size = new System.Drawing.Size(1438, 923);
+            this.Root.Size = new System.Drawing.Size(1438, 679);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -3575,7 +3577,7 @@
             this.layoutControlItem2.Control = this.navMasraf;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 330);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1432, 354);
+            this.layoutControlItem2.Size = new System.Drawing.Size(1432, 110);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -3601,7 +3603,7 @@
             this.layoutControlItem4,
             this.emptySpaceItem4,
             this.splitterItem1});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 684);
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 440);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
             this.layoutControlGroup1.Size = new System.Drawing.Size(1432, 179);
@@ -3812,7 +3814,7 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 863);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 619);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(733, 52);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
@@ -3820,7 +3822,7 @@
             // layoutControlItem18
             // 
             this.layoutControlItem18.Control = this.btnKapat;
-            this.layoutControlItem18.Location = new System.Drawing.Point(1291, 863);
+            this.layoutControlItem18.Location = new System.Drawing.Point(1291, 619);
             this.layoutControlItem18.MaxSize = new System.Drawing.Size(141, 52);
             this.layoutControlItem18.MinSize = new System.Drawing.Size(141, 52);
             this.layoutControlItem18.Name = "layoutControlItem18";
@@ -3832,7 +3834,7 @@
             // layoutControlItem19
             // 
             this.layoutControlItem19.Control = this.btnSatisBitir;
-            this.layoutControlItem19.Location = new System.Drawing.Point(1146, 863);
+            this.layoutControlItem19.Location = new System.Drawing.Point(1146, 619);
             this.layoutControlItem19.MaxSize = new System.Drawing.Size(145, 52);
             this.layoutControlItem19.MinSize = new System.Drawing.Size(145, 52);
             this.layoutControlItem19.Name = "layoutControlItem19";
@@ -3844,7 +3846,7 @@
             // layoutControlItem20
             // 
             this.layoutControlItem20.Control = this.btnKaydetYeni;
-            this.layoutControlItem20.Location = new System.Drawing.Point(733, 863);
+            this.layoutControlItem20.Location = new System.Drawing.Point(733, 619);
             this.layoutControlItem20.MinSize = new System.Drawing.Size(120, 49);
             this.layoutControlItem20.Name = "layoutControlItem20";
             this.layoutControlItem20.Size = new System.Drawing.Size(413, 52);
@@ -3905,13 +3907,25 @@
             this.popupMenu3.Manager = this.barManager1;
             this.popupMenu3.Name = "popupMenu3";
             // 
+            // colMevcutStok
+            // 
+            this.colMevcutStok.Caption = "Mevcut Stok";
+            this.colMevcutStok.DisplayFormat.FormatString = "n2";
+            this.colMevcutStok.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colMevcutStok.FieldName = "MevcutStok";
+            this.colMevcutStok.MinWidth = 25;
+            this.colMevcutStok.Name = "colMevcutStok";
+            this.colMevcutStok.Visible = true;
+            this.colMevcutStok.VisibleIndex = 17;
+            this.colMevcutStok.Width = 94;
+            // 
             // frmFisIslem
             // 
             this.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1438, 923);
+            this.ClientSize = new System.Drawing.Size(1438, 679);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -4334,5 +4348,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutFiyat;
         private DevExpress.XtraGrid.Columns.GridColumn colSatisFiyat;
         private DevExpress.XtraGrid.Columns.GridColumn colKarOrani;
+        private DevExpress.XtraGrid.Columns.GridColumn colMevcutStok;
     }
 }

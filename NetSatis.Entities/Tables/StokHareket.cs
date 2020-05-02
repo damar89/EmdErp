@@ -68,6 +68,9 @@ namespace NetSatis.Entities.Tables
                 return res - 100;
             }
         }
+        [NotMapped]
+        public decimal? MevcutStok { get; set; }
+        
 
         public int SaveUser { get; set; }
         public int EditUser { get; set; }

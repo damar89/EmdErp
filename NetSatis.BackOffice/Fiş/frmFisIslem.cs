@@ -1598,10 +1598,14 @@ namespace NetSatis.BackOffice.Fiş
                         {
                             stokVeri.Stok.AlisFiyati1 = stokVeri.BirimFiyati;
 
-                            stokVeri.Stok.AlisFiyati2 = stokVeri.BirimFiyati - stokVeri.IndirimTutar + stokVeri.IndirimTutar2 + stokVeri.IndirimTutar3;
+                            var ind1 = stokVeri.BirimFiyati-(stokVeri.BirimFiyati * stokVeri.IndirimOrani / 100);
+                            var ind2 = ind1-(ind1 * stokVeri.IndirimOrani2 / 100);
+                            var ind3 = ind2-(ind2 * stokVeri.IndirimOrani3 / 100);
 
-                            stokVeri.Stok.AlisFiyati3 = stokVeri.BirimFiyati - stokVeri.IndirimTutar + stokVeri.IndirimTutar2 + stokVeri.IndirimTutar3 + (stokVeri.BirimFiyati * stokVeri.Kdv / 100);
+                            stokVeri.Stok.AlisFiyati2 = ind3;
 
+                            stokVeri.Stok.AlisFiyati3 = ind3 + (ind3 * stokVeri.Kdv / 100);
+                            stokDAL.MevcutStok(context, 1);
                         }
                     }
 
@@ -3117,6 +3121,8 @@ namespace NetSatis.BackOffice.Fiş
                 row.Barkod = s.Barkod;
                 row.BirimFiyati = s.BirimFiyati;
                 row.SatisFiyati = s.SatisFiyati;
+                //burası
+                row.MevcutStok = stokDAL.MevcutStok(context,1);
                 row.Borsa = s.Borsa;
                 row.Depo = s.Depo;
                 row.DepoId = s.Depo != null ? s.DepoId : 0;

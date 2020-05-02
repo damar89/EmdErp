@@ -385,32 +385,32 @@ namespace NetSatis.Entities.Data_Access
                              MevcutStok = MevcutStok(s.SHareket),
                          });
             if (stokGirisVeCikisSifirdanBuyukOlanlar)
-                resh2 = resh2.Where(x => x.StokGiris.Value > 0 || x.StokCikis.Value > 0);
+                resh2 = resh2.Where(x => x.StokGiris.Value != 0 || x.StokCikis.Value != 0);
             return resh2.ToList();
 
         }
         #region Stok giriş, çıkış ve mevcut stok methodları
 
-        decimal? StokGiris(ICollection<StokHareket> hareketler = null)
+        public decimal? StokGiris(ICollection<StokHareket> hareketler = null)
         {
             var res = hareketler
                 .Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1"))
                 .Sum(c => c.Miktar);
             return res;
         }
-        decimal? StokCikis(ICollection<StokHareket> hareketler = null)
+        public decimal? StokCikis(ICollection<StokHareket> hareketler = null)
         {
             var res = hareketler
                 .Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Fatura") ||
                             (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar);
             return res;
         }
-        decimal? MevcutStok(ICollection<StokHareket> hareketler = null)
+        public decimal? MevcutStok(ICollection<StokHareket> hareketler = null)
         {
             var res = StokGiris(hareketler) - StokCikis(hareketler);
             return res;
         }
-        decimal? StokGiris(NetSatisContext context, int StokId)
+        public decimal? StokGiris(NetSatisContext context, int StokId)
         {
 
             var hr = context.StokHareketleri.Where(x => x.StokId == StokId).ToList();
@@ -419,7 +419,7 @@ namespace NetSatis.Entities.Data_Access
                 .Sum(c => c.Miktar);
             return res;
         }
-        decimal? StokCikis(NetSatisContext context, int StokId)
+        public decimal? StokCikis(NetSatisContext context, int StokId)
         {
             var hr = context.StokHareketleri.Where(x => x.StokId == StokId).ToList();
             var res = hr
@@ -427,7 +427,7 @@ namespace NetSatis.Entities.Data_Access
                             (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar);
             return res;
         }
-        decimal? MevcutStok(NetSatisContext context, int StokId)
+        public decimal? MevcutStok(NetSatisContext context, int StokId)
         {
 
             var res = StokGiris(context, StokId) - StokCikis(context, StokId);
