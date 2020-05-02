@@ -267,6 +267,14 @@ namespace NetSatis.BackOffice.Stok
                 gridView1.ExportToXlsx(save.FileName + ".xlsx");
             }
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            tokenSource.Cancel();
+            tokenSource.Dispose();
+
+            base.OnFormClosing(e);
+
+        }
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             SaveFileDialog save = new SaveFileDialog();

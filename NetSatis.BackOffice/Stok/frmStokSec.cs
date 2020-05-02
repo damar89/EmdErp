@@ -272,7 +272,16 @@ namespace NetSatis.BackOffice.Stok
             tokenSource.Cancel();
             tokenSource.Dispose();
             tokenSource = new CancellationTokenSource();
-            await Sorgula(tokenSource.Token); 
+            await Sorgula(tokenSource.Token);
+
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            tokenSource.Cancel();
+            tokenSource.Dispose();
+
+            base.OnFormClosing(e);
 
         }
 

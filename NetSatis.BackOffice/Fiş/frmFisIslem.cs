@@ -1004,6 +1004,8 @@ namespace NetSatis.BackOffice.Fiş
                 stokHareket.DepoId = depoid;
             }
 
+            stokHareket.MevcutStok = stokDAL.MevcutStok(context, entity.Id);
+
 
             //if (toggleToptanSatis.IsOn)
             //{
@@ -1589,7 +1591,7 @@ namespace NetSatis.BackOffice.Fiş
                     stokVeri.Tipi = cmbTipi.Text;
                     stokVeri.Hareket = ayarlar.StokHareketi;
                     stokVeri.FisTuru = ayarlar.FisTurleri;
-                    
+
                     toplamDipIskontoPayi += Convert.ToDecimal(stokVeri.DipIskontoPayi);
 
                     if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_AlisFiyat)))
@@ -1598,9 +1600,9 @@ namespace NetSatis.BackOffice.Fiş
                         {
                             stokVeri.Stok.AlisFiyati1 = stokVeri.BirimFiyati;
 
-                            var ind1 = stokVeri.BirimFiyati-(stokVeri.BirimFiyati * stokVeri.IndirimOrani / 100);
-                            var ind2 = ind1-(ind1 * stokVeri.IndirimOrani2 / 100);
-                            var ind3 = ind2-(ind2 * stokVeri.IndirimOrani3 / 100);
+                            var ind1 = stokVeri.BirimFiyati - (stokVeri.BirimFiyati * stokVeri.IndirimOrani / 100);
+                            var ind2 = ind1 - (ind1 * stokVeri.IndirimOrani2 / 100);
+                            var ind3 = ind2 - (ind2 * stokVeri.IndirimOrani3 / 100);
 
                             stokVeri.Stok.AlisFiyati2 = ind3;
 
@@ -3120,9 +3122,7 @@ namespace NetSatis.BackOffice.Fiş
                 row.Bagkur = s.Bagkur;
                 row.Barkod = s.Barkod;
                 row.BirimFiyati = s.BirimFiyati;
-                row.SatisFiyati = s.SatisFiyati;
-                //burası
-                row.MevcutStok = stokDAL.MevcutStok(context,1);
+                row.SatisFiyati = s.SatisFiyati; 
                 row.Borsa = s.Borsa;
                 row.Depo = s.Depo;
                 row.DepoId = s.Depo != null ? s.DepoId : 0;
@@ -3134,6 +3134,7 @@ namespace NetSatis.BackOffice.Fiş
                 row.GuncellemeTarihi = s.GuncellemeTarihi;
                 row.Hareket = s.Hareket;
                 //row.Id = s.Id;
+                row.MevcutStok = s.MevcutStok;
                 row.IndirimOrani = s.IndirimOrani;
                 row.IndirimOrani2 = s.IndirimOrani2;
                 row.IndirimOrani3 = s.IndirimOrani3;
@@ -3205,7 +3206,7 @@ namespace NetSatis.BackOffice.Fiş
 
         private void toggleKDVDahil_EditValueChanged(object sender, EventArgs e)
         {
-         HepsiniHesapla();
+            HepsiniHesapla();
         }
 
         private void gridStokHareket_KeyDown(object sender, KeyEventArgs e)
