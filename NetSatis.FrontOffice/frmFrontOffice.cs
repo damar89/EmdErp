@@ -1301,9 +1301,9 @@ namespace NetSatis.FrontOffice
         }
         private decimal MevcutStokAdedi(Entities.Tables.Stok entity)
         {
-            decimal MevcutStok = (context.StokHareketleri.Where(c => c.StokId == entity.Id && c.Hareket == "Stok Giriş")
+            decimal MevcutStok = (context.StokHareketleri.Where(c => c.StokId == entity.Id && c.Hareket == "Stok Giriş").AsNoTracking()
                                       .Sum(c => c.Miktar) ?? 0) -
-                                 (context.StokHareketleri.Where(c => c.StokId == entity.Id && c.Hareket == "Stok Çıkış")
+                                 (context.StokHareketleri.Where(c => c.StokId == entity.Id && c.Hareket == "Stok Çıkış").AsNoTracking()
                                       .Sum(c => c.Miktar) ?? 0);
             return MevcutStok;
         }
@@ -1344,7 +1344,7 @@ namespace NetSatis.FrontOffice
         {
             try
             {
-                frmStokSec form = new frmStokSec(ref this.context, txtBarkod.EditValue.ToString());
+                frmStokSec form = new frmStokSec(ref this.context, txtBarkod.EditValue.ToString(),false);
                 form.ShowDialog();
                 if (form.secildi)
                 {
