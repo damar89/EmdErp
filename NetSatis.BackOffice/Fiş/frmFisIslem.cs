@@ -2929,23 +2929,23 @@ namespace NetSatis.BackOffice.Fiş
 
         private void stokKartınıAçToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (gridStokHareket.RowCount != 0)
-                {
-                    string aramaMetni = gridStokHareket.GetFocusedRowCellValue(colStokAdi).GetString();
-                    frmStokSec form = new frmStokSec(ref this.context, aramaMetni);
-                    form.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("Seçili Stok Bulunamadı");
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            //try
+            //{
+            //    if (gridStokHareket.RowCount != 0)
+            //    {
+            //        string aramaMetni = gridStokHareket.GetFocusedRowCellValue(colStokAdi).GetString();
+            //        frmStokSec form = new frmStokSec(ref this.context, aramaMetni);
+            //        form.ShowDialog();
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Seçili Stok Bulunamadı");
+            //    }
+            //}
+            //catch (Exception)
+            //{
+            //    throw;
+            //}
         }
 
         private void seçiliStoğunHareketleriToolStripMenuItem_Click(object sender, EventArgs e)
@@ -3077,9 +3077,9 @@ namespace NetSatis.BackOffice.Fiş
             switch (e.KeyCode)
             {
                 case Keys.F6:
-                case Keys.F10:
-                    repoStokSec_ButtonClick(sender, new DevExpress.XtraEditors.Controls.ButtonPressedEventArgs(repobtnStokSec.Buttons[0]));
-                    break;
+                //case Keys.F10:
+                //    repoStokSec_ButtonClick(sender, new DevExpress.XtraEditors.Controls.ButtonPressedEventArgs(repobtnStokSec.Buttons[0]));
+                //    break;
                 case Keys.F7:
                     repoStokSec_ButtonClick(sender, new DevExpress.XtraEditors.Controls.ButtonPressedEventArgs(repobtnStokSec.Buttons[1]));
                     break;

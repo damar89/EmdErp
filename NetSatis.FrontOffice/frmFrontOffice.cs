@@ -1213,23 +1213,23 @@ namespace NetSatis.FrontOffice
             }
             if (e.KeyCode == Keys.F10)
             {
-                try
-                {
-                    if (gridStokHareket.RowCount != 0)
-                    {
-                        string aramaMetni = gridStokHareket.GetFocusedRowCellValue(colStokAdi).GetString();
-                        frmStokSec form = new frmStokSec(ref this.context, aramaMetni);
-                        form.ShowDialog();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Seçili Stok Bulunamadı");
-                    }
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                //try
+                //{
+                //    if (gridStokHareket.RowCount != 0)
+                //    {
+                //        string aramaMetni = gridStokHareket.GetFocusedRowCellValue(colStokAdi).GetString();
+                //        frmStokSec form = new frmStokSec(ref this.context, aramaMetni);
+                //        form.ShowDialog();
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("Seçili Stok Bulunamadı");
+                //    }
+                //}
+                //catch (Exception)
+                //{
+                //    throw;
+                //}
             }
             if (e.KeyCode == Keys.F12)
             {

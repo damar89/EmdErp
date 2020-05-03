@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFrontOffice));
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression1 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression2 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -238,6 +242,7 @@
             this.colDipIskontoPayi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMaliyetFiyati = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMaliyetTutar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMevcutStok = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryMustahsil = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.navOdeme = new DevExpress.XtraBars.Navigation.NavigationPage();
@@ -297,7 +302,6 @@
             this.radialMenu1 = new DevExpress.XtraBars.Ribbon.RadialMenu(this.components);
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.colMevcutStok = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.naviGenelBilgiler.SuspendLayout();
@@ -2835,6 +2839,22 @@
             this.colMevcutStok});
             this.gridStokHareket.CustomizationFormBounds = new System.Drawing.Rectangle(1106, 317, 303, 286);
             this.gridStokHareket.DetailHeight = 431;
+            gridFormatRule1.Column = this.colMevcutStok;
+            gridFormatRule1.ColumnApplyTo = this.colMevcutStok;
+            gridFormatRule1.Name = "Format0";
+            formatConditionRuleExpression1.Appearance.BackColor = System.Drawing.Color.Lime;
+            formatConditionRuleExpression1.Appearance.Options.UseBackColor = true;
+            formatConditionRuleExpression1.Expression = "[MevcutStok] > 0";
+            gridFormatRule1.Rule = formatConditionRuleExpression1;
+            gridFormatRule2.Column = this.colMevcutStok;
+            gridFormatRule2.ColumnApplyTo = this.colMevcutStok;
+            gridFormatRule2.Name = "Format1";
+            formatConditionRuleExpression2.Appearance.BackColor = System.Drawing.Color.Salmon;
+            formatConditionRuleExpression2.Appearance.Options.UseBackColor = true;
+            formatConditionRuleExpression2.Expression = "[MevcutStok] < 0";
+            gridFormatRule2.Rule = formatConditionRuleExpression2;
+            this.gridStokHareket.FormatRules.Add(gridFormatRule1);
+            this.gridStokHareket.FormatRules.Add(gridFormatRule2);
             this.gridStokHareket.GridControl = this.gridContStokHareket;
             this.gridStokHareket.Name = "gridStokHareket";
             this.gridStokHareket.OptionsView.ShowGroupPanel = false;
@@ -3236,6 +3256,19 @@
             this.colMaliyetTutar.UnboundExpression = "[Miktar] * [MaliyetFiyati] * (1 + ToDecimal([Kdv]) / 100)";
             this.colMaliyetTutar.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.colMaliyetTutar.Width = 87;
+            // 
+            // colMevcutStok
+            // 
+            this.colMevcutStok.Caption = "Mevcut Stok";
+            this.colMevcutStok.DisplayFormat.FormatString = "n2";
+            this.colMevcutStok.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colMevcutStok.FieldName = "MevcutStok";
+            this.colMevcutStok.MinWidth = 25;
+            this.colMevcutStok.Name = "colMevcutStok";
+            this.colMevcutStok.OptionsColumn.AllowEdit = false;
+            this.colMevcutStok.Visible = true;
+            this.colMevcutStok.VisibleIndex = 10;
+            this.colMevcutStok.Width = 94;
             // 
             // repositoryMustahsil
             // 
@@ -4026,19 +4059,6 @@
             // serialPort1
             // 
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
-            // 
-            // colMevcutStok
-            // 
-            this.colMevcutStok.Caption = "Mevcut Stok";
-            this.colMevcutStok.DisplayFormat.FormatString = "n2";
-            this.colMevcutStok.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colMevcutStok.FieldName = "MevcutStok";
-            this.colMevcutStok.MinWidth = 25;
-            this.colMevcutStok.Name = "colMevcutStok";
-            this.colMevcutStok.OptionsColumn.AllowEdit = false;
-            this.colMevcutStok.Visible = true;
-            this.colMevcutStok.VisibleIndex = 10;
-            this.colMevcutStok.Width = 94;
             // 
             // frmFrontOffice
             // 
