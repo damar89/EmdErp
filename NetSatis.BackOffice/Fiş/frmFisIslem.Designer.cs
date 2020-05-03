@@ -275,6 +275,7 @@
             this.colDipIskontoPayi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSatisFiyat = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMevcutStok = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.kdvDegisim = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -355,7 +356,6 @@
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.popupMenu3 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.colMevcutStok = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
@@ -3016,6 +3016,19 @@
             this.colSatisFiyat.VisibleIndex = 11;
             this.colSatisFiyat.Width = 73;
             // 
+            // colMevcutStok
+            // 
+            this.colMevcutStok.Caption = "Mevcut Stok";
+            this.colMevcutStok.DisplayFormat.FormatString = "n2";
+            this.colMevcutStok.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colMevcutStok.FieldName = "MevcutStok";
+            this.colMevcutStok.MinWidth = 25;
+            this.colMevcutStok.Name = "colMevcutStok";
+            this.colMevcutStok.OptionsColumn.AllowEdit = false;
+            this.colMevcutStok.Visible = true;
+            this.colMevcutStok.VisibleIndex = 17;
+            this.colMevcutStok.Width = 94;
+            // 
             // repositoryItemButtonEdit6
             // 
             this.repositoryItemButtonEdit6.AutoHeight = false;
@@ -3906,18 +3919,6 @@
             // 
             this.popupMenu3.Manager = this.barManager1;
             this.popupMenu3.Name = "popupMenu3";
-            // 
-            // colMevcutStok
-            // 
-            this.colMevcutStok.Caption = "Mevcut Stok";
-            this.colMevcutStok.DisplayFormat.FormatString = "n2";
-            this.colMevcutStok.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colMevcutStok.FieldName = "MevcutStok";
-            this.colMevcutStok.MinWidth = 25;
-            this.colMevcutStok.Name = "colMevcutStok";
-            this.colMevcutStok.Visible = true;
-            this.colMevcutStok.VisibleIndex = 17;
-            this.colMevcutStok.Width = 94;
             // 
             // frmFisIslem
             // 

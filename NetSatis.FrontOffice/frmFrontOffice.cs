@@ -863,6 +863,7 @@ namespace NetSatis.FrontOffice
                 depoid = 1;
             }
             stokHareket.DepoId = depoid;
+            stokHareket.MevcutStok = stokDAL.MevcutStok(context, entity.Id);
             //stokHareket.BirimFiyati = txtIslem.Text == "Alış Faturası" ? entity.AlisFiyati1 : entity.SatisFiyati1;
 
             if (cmbFiyat.SelectedIndex == 0 && txtIslem.Text == "SATIŞ")
