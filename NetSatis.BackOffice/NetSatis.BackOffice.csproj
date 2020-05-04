@@ -883,6 +883,12 @@
     <Compile Include="Tanım\frmEkullaniciIslem.Designer.cs">
       <DependentUpon>frmEkullaniciIslem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tanım\frmGrupGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanım\frmGrupGuncelle.Designer.cs">
+      <DependentUpon>frmGrupGuncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tanım\frmKategori.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1240,6 +1246,7 @@
     <EmbeddedResource Include="Personel\frmPersonelSec.resx">
       <DependentUpon>frmPersonelSec.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -1343,6 +1350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tanım\frmEkullaniciIslem.resx">
       <DependentUpon>frmEkullaniciIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tanım\frmGrupGuncelle.resx">
+      <DependentUpon>frmGrupGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tanım\frmKategori.resx">
       <DependentUpon>frmKategori.cs</DependentUpon>

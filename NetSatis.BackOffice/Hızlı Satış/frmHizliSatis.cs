@@ -1,4 +1,5 @@
 ﻿using NetSatis.BackOffice.Stok;
+using NetSatis.BackOffice.Tanım;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
@@ -16,7 +17,8 @@ namespace NetSatis.BackOffice.Hızlı_Satış
         HizliSatisDAL hizliSatisDal = new HizliSatisDAL();
 
         public frmHizliSatis()
-        {InitializeComponent();
+        {
+            InitializeComponent();
             context.HizliSatisGruplari.Load();
             gridUrunEkle.OptionsSelection.MultiSelect = true;
             context.HizliSatislar.Load();
@@ -125,22 +127,23 @@ namespace NetSatis.BackOffice.Hızlı_Satış
                             Resim = itemStok.Resim,
                             StokKodu = itemStok.StokKodu,
                             UrunAdi = itemStok.StokAdi,
-                            Fiyati=Convert.ToDecimal(itemStok.SatisFiyati1),
+                            Fiyati = Convert.ToDecimal(itemStok.SatisFiyati1),
                             GrupId = (int)gridGrupEkle.GetFocusedRowCellValue(colId)
                         });
                         hizliSatisDal.Save(context);
                     }
                 }
             }
-            gridUrunEkle.RefreshData();}
+            gridUrunEkle.RefreshData();
+        }
 
         private void btnUrunSil_Click(object sender, EventArgs e)
         {
             gridUrunEkle.OptionsSelection.MultiSelect = true;
-            if (MessageBox.Show("Seçili olan ürünleri listeden çıkarmak istediğinize emin misiniz ? ","Uyarı",MessageBoxButtons.YesNo)==DialogResult.Yes)
+            if (MessageBox.Show("Seçili olan ürünleri listeden çıkarmak istediğinize emin misiniz ? ", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-               gridUrunEkle.DeleteSelectedRows();
-            hizliSatisDal.Save(context); 
+                gridUrunEkle.DeleteSelectedRows();
+                hizliSatisDal.Save(context);
             }
             gridUrunEkle.RefreshData();
         }
@@ -156,6 +159,32 @@ namespace NetSatis.BackOffice.Hızlı_Satış
             {
 
                 this.Close();
+            }
+        }
+
+        private void btnDuzenle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (gridGrupEkle.RowCount != 0)
+                {
+                    int secilen = Convert.ToInt32(gridGrupEkle.GetFocusedRowCellValue(colId));
+                    frmGrupGuncelle form = new frmGrupGuncelle(hizliSatisGrupDal.GetByFilter(context, c => c.Id == secilen));
+                    form.ShowDialog();
+                    if (form.Kaydedildi)
+                    {
+                        gridGrupEkle.RefreshData();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen Seçim Yapınız.");
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

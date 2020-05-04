@@ -57,6 +57,7 @@
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.btnUrunSil = new DevExpress.XtraEditors.SimpleButton();
             this.lblBaslik = new DevExpress.XtraEditors.LabelControl();
+            this.btnDuzenle = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridContGrupEkle)).BeginInit();
@@ -85,8 +86,8 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.gridContUrunEkle);
             this.splitContainerControl1.Panel2.Controls.Add(this.groupControl3);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(790, 485);
-            this.splitContainerControl1.SplitterPosition = 367;
+            this.splitContainerControl1.Size = new System.Drawing.Size(942, 490);
+            this.splitContainerControl1.SplitterPosition = 417;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
@@ -96,7 +97,7 @@
             this.gridContGrupEkle.Location = new System.Drawing.Point(0, 121);
             this.gridContGrupEkle.MainView = this.gridGrupEkle;
             this.gridContGrupEkle.Name = "gridContGrupEkle";
-            this.gridContGrupEkle.Size = new System.Drawing.Size(367, 302);
+            this.gridContGrupEkle.Size = new System.Drawing.Size(417, 307);
             this.gridContGrupEkle.TabIndex = 12;
             this.gridContGrupEkle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridGrupEkle});
@@ -137,22 +138,24 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.btnDuzenle);
             this.groupControl2.Controls.Add(this.btnSil);
             this.groupControl2.Controls.Add(this.btnVazgec);
             this.groupControl2.Controls.Add(this.btnYeni);
             this.groupControl2.Controls.Add(this.btnKaydet);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl2.Location = new System.Drawing.Point(0, 423);
+            this.groupControl2.Location = new System.Drawing.Point(0, 428);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(367, 62);
+            this.groupControl2.Size = new System.Drawing.Size(417, 62);
             this.groupControl2.TabIndex = 11;
             // 
             // btnSil
             // 
-            this.btnSil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSil.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSil.ImageOptions.ImageIndex = 8;
             this.btnSil.ImageOptions.ImageList = this.ımageList1;
-            this.btnSil.Location = new System.Drawing.Point(103, 25);
+            this.btnSil.Location = new System.Drawing.Point(170, 25);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(77, 34);
             this.btnSil.TabIndex = 1;
@@ -175,23 +178,25 @@
             // 
             // btnVazgec
             // 
-            this.btnVazgec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVazgec.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnVazgec.Enabled = false;
             this.btnVazgec.ImageOptions.ImageIndex = 3;
             this.btnVazgec.ImageOptions.ImageList = this.ımageList1;
-            this.btnVazgec.Location = new System.Drawing.Point(263, 25);
+            this.btnVazgec.Location = new System.Drawing.Point(331, 25);
             this.btnVazgec.Name = "btnVazgec";
-            this.btnVazgec.Size = new System.Drawing.Size(81, 34);
+            this.btnVazgec.Size = new System.Drawing.Size(82, 34);
             this.btnVazgec.TabIndex = 1;
             this.btnVazgec.Text = "Vazgeç";
             this.btnVazgec.Click += new System.EventHandler(this.btnVazgec_Click);
             // 
             // btnYeni
             // 
-            this.btnYeni.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnYeni.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnYeni.ImageOptions.ImageIndex = 0;
             this.btnYeni.ImageOptions.ImageList = this.ımageList1;
-            this.btnYeni.Location = new System.Drawing.Point(17, 25);
+            this.btnYeni.Location = new System.Drawing.Point(3, 25);
             this.btnYeni.Name = "btnYeni";
             this.btnYeni.Size = new System.Drawing.Size(83, 34);
             this.btnYeni.TabIndex = 0;
@@ -200,11 +205,12 @@
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKaydet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnKaydet.Enabled = false;
             this.btnKaydet.ImageOptions.ImageIndex = 7;
             this.btnKaydet.ImageOptions.ImageList = this.ımageList1;
-            this.btnKaydet.Location = new System.Drawing.Point(182, 25);
+            this.btnKaydet.Location = new System.Drawing.Point(250, 25);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(79, 34);
             this.btnKaydet.TabIndex = 0;
@@ -221,7 +227,7 @@
             this.grupBilgi.Enabled = false;
             this.grupBilgi.Location = new System.Drawing.Point(0, 0);
             this.grupBilgi.Name = "grupBilgi";
-            this.grupBilgi.Size = new System.Drawing.Size(367, 121);
+            this.grupBilgi.Size = new System.Drawing.Size(417, 121);
             this.grupBilgi.TabIndex = 0;
             this.grupBilgi.Text = "Grup İşlemleri";
             this.grupBilgi.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
@@ -232,7 +238,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAciklama.Location = new System.Drawing.Point(71, 61);
             this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(291, 46);
+            this.txtAciklama.Size = new System.Drawing.Size(341, 46);
             this.txtAciklama.TabIndex = 2;
             // 
             // txtGrupAdi
@@ -242,7 +248,7 @@
             this.txtGrupAdi.Location = new System.Drawing.Point(71, 34);
             this.txtGrupAdi.Name = "txtGrupAdi";
             this.txtGrupAdi.Properties.AutoHeight = false;
-            this.txtGrupAdi.Size = new System.Drawing.Size(291, 20);
+            this.txtGrupAdi.Size = new System.Drawing.Size(341, 20);
             this.txtGrupAdi.TabIndex = 1;
             // 
             // labelControl2
@@ -273,7 +279,7 @@
             this.gridContUrunEkle.Location = new System.Drawing.Point(0, 0);
             this.gridContUrunEkle.MainView = this.gridUrunEkle;
             this.gridContUrunEkle.Name = "gridContUrunEkle";
-            this.gridContUrunEkle.Size = new System.Drawing.Size(417, 423);
+            this.gridContUrunEkle.Size = new System.Drawing.Size(515, 428);
             this.gridContUrunEkle.TabIndex = 13;
             this.gridContUrunEkle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridUrunEkle});
@@ -320,17 +326,18 @@
             this.groupControl3.Controls.Add(this.btnKapat);
             this.groupControl3.Controls.Add(this.btnUrunSil);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl3.Location = new System.Drawing.Point(0, 423);
+            this.groupControl3.Location = new System.Drawing.Point(0, 428);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(417, 62);
+            this.groupControl3.Size = new System.Drawing.Size(515, 62);
             this.groupControl3.TabIndex = 12;
             // 
             // btnUrunEkle
             // 
-            this.btnUrunEkle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUrunEkle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnUrunEkle.ImageOptions.ImageIndex = 6;
             this.btnUrunEkle.ImageOptions.ImageList = this.ımageList1;
-            this.btnUrunEkle.Location = new System.Drawing.Point(12, 25);
+            this.btnUrunEkle.Location = new System.Drawing.Point(8, 26);
             this.btnUrunEkle.Name = "btnUrunEkle";
             this.btnUrunEkle.Size = new System.Drawing.Size(74, 34);
             this.btnUrunEkle.TabIndex = 1;
@@ -339,10 +346,11 @@
             // 
             // btnKapat
             // 
-            this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.ImageIndex = 5;
             this.btnKapat.ImageOptions.ImageList = this.ımageList1;
-            this.btnKapat.Location = new System.Drawing.Point(338, 25);
+            this.btnKapat.Location = new System.Drawing.Point(436, 25);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(74, 34);
             this.btnKapat.TabIndex = 1;
@@ -351,10 +359,11 @@
             // 
             // btnUrunSil
             // 
-            this.btnUrunSil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUrunSil.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnUrunSil.ImageOptions.ImageIndex = 8;
             this.btnUrunSil.ImageOptions.ImageList = this.ımageList1;
-            this.btnUrunSil.Location = new System.Drawing.Point(93, 25);
+            this.btnUrunSil.Location = new System.Drawing.Point(89, 26);
             this.btnUrunSil.Name = "btnUrunSil";
             this.btnUrunSil.Size = new System.Drawing.Size(74, 34);
             this.btnUrunSil.TabIndex = 0;
@@ -376,22 +385,35 @@
             this.lblBaslik.Location = new System.Drawing.Point(0, 0);
             this.lblBaslik.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(790, 32);
+            this.lblBaslik.Size = new System.Drawing.Size(942, 32);
             this.lblBaslik.TabIndex = 4;
             this.lblBaslik.Text = "Hızlı Satış İşlemleri";
+            // 
+            // btnDuzenle
+            // 
+            this.btnDuzenle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDuzenle.ImageOptions.ImageIndex = 8;
+            this.btnDuzenle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.btnDuzenle.Location = new System.Drawing.Point(87, 25);
+            this.btnDuzenle.Name = "btnDuzenle";
+            this.btnDuzenle.Size = new System.Drawing.Size(84, 34);
+            this.btnDuzenle.TabIndex = 1;
+            this.btnDuzenle.Text = "Düzenle";
+            this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
             // 
             // frmHizliSatis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 517);
+            this.ClientSize = new System.Drawing.Size(942, 522);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.lblBaslik);
+            this.IconOptions.ShowIcon = false;
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmHizliSatis";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hızlı Satış Tanımlaması";
             this.Load += new System.EventHandler(this.frmHizliSatis_Load);
@@ -443,5 +465,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colStokKodu;
         private DevExpress.XtraGrid.Columns.GridColumn colUrunAdi;
         private DevExpress.XtraGrid.Columns.GridColumn colGrupId;
+        private DevExpress.XtraEditors.SimpleButton btnDuzenle;
     }
 }
