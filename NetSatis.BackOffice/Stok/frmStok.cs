@@ -8,13 +8,19 @@ using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tools;
 using NetSatis.Reports.Stok;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using NetSatis.BackOffice.Annotations;
 
 namespace NetSatis.BackOffice.Stok
 {
-    public partial class frmStok : DevExpress.XtraEditors.XtraForm
+    public partial class frmStok : DevExpress.XtraEditors.XtraForm, INotifyPropertyChanged
     {
         NetSatisContext context = new NetSatisContext();
         StokDAL stokDal = new StokDAL();
@@ -28,17 +34,25 @@ namespace NetSatis.BackOffice.Stok
         }
         private void frmStok_Load(object sender, EventArgs e)
         {
-            Sorgula();
+
+            if (File.Exists(DosyaYolu)) gridControl1.MainView.RestoreLayoutFromXml(DosyaYolu);
+           
+
+            TumStoklar = new List<Entities.Tables.Stok>();
+
+            gridControl1.DataSource = TumStoklar;
+
+            btnSorgula.PerformClick();
+
+
             gridView1.BestFitColumns();
             gridControl1.ForceInitialize();
-            if (File.Exists(DosyaYolu)) gridControl1.MainView.RestoreLayoutFromXml(DosyaYolu);
+            txtAramaMetni.Focus();
         }
         public void GetAll()
         {
             //gridControl1.DataSource = stokDal.StokAdiylaStokGetir(context);
-            Sorgula();
-
-
+            btnSorgula.PerformClick();
         }
         private void btnKapat_Click(object sender, EventArgs e)
         {
@@ -61,7 +75,7 @@ namespace NetSatis.BackOffice.Stok
                     barkodDal.Delete(context, c => c.StokId == secilen);
                     barkodDal.Save(context); stokDal.Delete(context, c => c.Id == secilen);
                     stokDal.Save(context);
-                    Sorgula();
+                    btnSorgula.PerformClick();
                     //secilen = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
                     //stokDal.Delete(context, c => c.Id == secilen);
                     //stokDal.Save(context);
@@ -78,7 +92,7 @@ namespace NetSatis.BackOffice.Stok
             form.ShowDialog();
             if (form.saved)
             {
-                Sorgula();
+                btnSorgula.PerformClick();
             }
         }
         private void btnDuzenle_Click(object sender, EventArgs e)
@@ -92,7 +106,7 @@ namespace NetSatis.BackOffice.Stok
                     form.ShowDialog();
                     if (form.saved)
                     {
-                        Sorgula();
+                        btnSorgula.PerformClick();
                     }
                 }
                 else
@@ -118,7 +132,7 @@ namespace NetSatis.BackOffice.Stok
                     form.ShowDialog();
                     if (form.saved)
                     {
-                        Sorgula();
+                        btnSorgula.PerformClick();
                     }
                 }
                 else
@@ -133,7 +147,7 @@ namespace NetSatis.BackOffice.Stok
         }
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            Sorgula();
+            btnSorgula.PerformClick();
         }
         private void btnStokHareket_Click(object sender, EventArgs e)
         {
@@ -199,7 +213,7 @@ namespace NetSatis.BackOffice.Stok
                 form.ShowDialog();
                 if (form.saved)
                 {
-                    Sorgula();
+                    btnSorgula.PerformClick();
                 }
             }
             catch (Exception)
@@ -237,7 +251,7 @@ namespace NetSatis.BackOffice.Stok
                 btnKopyala.PerformClick();
             }
             if (e.KeyCode == Keys.F4)
-                Sorgula();
+                btnSorgula.PerformClick();
         }
         private void gridView1_RowCountChanged(object sender, EventArgs e)
         {
@@ -252,6 +266,14 @@ namespace NetSatis.BackOffice.Stok
             {
                 gridView1.ExportToXlsx(save.FileName + ".xlsx");
             }
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            tokenSource.Cancel();
+            tokenSource.Dispose();
+
+            base.OnFormClosing(e);
+
         }
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -311,32 +333,8 @@ namespace NetSatis.BackOffice.Stok
                 filtre = '%' + filtre;
             }
             return filtre;
-        }
-        //private void txtStokKodu_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    try
-        //    {
-        //        Sorgula();
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        throw;
-        //    }
-        //}
-        //private void txtBarkodu_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    try
-        //    {
-        //        Sorgula();
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        throw;
-        //    }
-        //}
-        void Sorgula()
+        } 
+        void Sorgula2()
         {
             var pred = PredicateBuilder.True<Entities.Tables.Stok>();
 
@@ -355,58 +353,41 @@ namespace NetSatis.BackOffice.Stok
             gridControl1.Select();
 
         }
-        //private void txtStokAdi_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyData == Keys.Enter)
-        //    {
-        //        try
-        //        {
-        //            Sorgula();
-        //        }
-        //        catch (Exception)
-        //        {
 
-        //            throw;
-        //        }
-        //    }
-        //}
-        //private void txtStokKodu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        //{
-        //    try
-        //    {
-        //        Sorgula();
-        //    }
-        //    catch (Exception)
-        //    {
+        private List<Entities.Tables.Stok> TumStoklar { get; set; }
+        private CancellationTokenSource tokenSource = new CancellationTokenSource();
+        async Task Sorgula(CancellationToken token)
+        {
 
-        //        throw;
-        //    }
+            if (token.IsCancellationRequested)
+                return;
+            TumStoklar.Clear();
+            var pred = PredicateBuilder.True<Entities.Tables.Stok>();
 
-        //}
-        //private void txtStokAdi_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        //{
-        //    try
-        //    {
-        //        Sorgula();
-        //    }
-        //    catch (Exception)
-        //    {
+            if (!string.IsNullOrEmpty(txtAramaMetni.Text))
+            {
+                foreach (string item in txtAramaMetni.Text.Split(' '))
+                {
+                    if (!string.IsNullOrEmpty(item))
+                        pred = pred.And(x => x.StokAdi.Contains(item) || x.Barkod.Any(s => s.Barkodu.Contains(item)) || x.Barkodu.Contains(item) || x.StokKodu.Contains(item));
+                }
+            }
 
-        //        throw;
-        //    }
-        //}
-        //private void txtBarkodu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        //{
-        //    try
-        //    {
-        //        Sorgula();
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        throw;
-        //    }
-        //}
+            var take = 5000;
+            var count = Math.Ceiling(
+                Convert.ToDecimal(stokDal.StokKayitSayisi(context, pred) / Convert.ToDecimal(take)));
+            if (token.IsCancellationRequested)
+                return;
+            for (int i = 0; i < count; i++)
+            {
+                if (token.IsCancellationRequested)
+                    break;
+                TumStoklar.AddRange(stokDal.StokAdiylaStokGetir(context, pred, take * i, take));
+                OnPropertyChanged(nameof(TumStoklar));
+                await Task.Delay(100);
+                gridView1.RefreshData();
+            }
+        }
         private void btnStokDuzenle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
@@ -442,9 +423,22 @@ namespace NetSatis.BackOffice.Stok
             txtAramaMetni.Focus();
         }
 
-        private void btnSorgula_Click(object sender, EventArgs e)
+        private async void btnSorgula_Click(object sender, EventArgs e)
         {
-            Sorgula();
+            tokenSource.Cancel();
+            tokenSource.Dispose();
+            tokenSource = new CancellationTokenSource();
+            await Sorgula(tokenSource.Token); 
+
+
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

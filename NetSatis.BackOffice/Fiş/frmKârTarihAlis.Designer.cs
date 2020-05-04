@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKârTarihAlis));
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -90,18 +91,20 @@
             // labelControl3
             // 
             this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl3.Location = new System.Drawing.Point(10, 69);
+            this.labelControl3.Location = new System.Drawing.Point(12, 85);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(76, 25);
+            this.labelControl3.Size = new System.Drawing.Size(89, 31);
             this.labelControl3.TabIndex = 24;
             this.labelControl3.Text = "Bitiş Tarihi :";
             // 
             // labelControl1
             // 
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(10, 38);
+            this.labelControl1.Location = new System.Drawing.Point(12, 47);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(88, 25);
+            this.labelControl1.Size = new System.Drawing.Size(103, 31);
             this.labelControl1.TabIndex = 25;
             this.labelControl1.Text = "Başlangıç Tarihi :";
             // 
@@ -109,18 +112,20 @@
             // 
             this.groupControl1.Controls.Add(this.btnKapat);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 360);
+            this.groupControl1.Location = new System.Drawing.Point(0, 381);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(363, 57);
+            this.groupControl1.Size = new System.Drawing.Size(418, 70);
             this.groupControl1.TabIndex = 27;
             // 
             // btnKapat
             // 
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.ImageIndex = 1;
-            this.btnKapat.Location = new System.Drawing.Point(273, 23);
+            this.btnKapat.Location = new System.Drawing.Point(313, 28);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(85, 31);
+            this.btnKapat.Size = new System.Drawing.Size(99, 38);
             this.btnKapat.TabIndex = 0;
             this.btnKapat.Text = "Kapat";
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
@@ -130,17 +135,20 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.Location = new System.Drawing.Point(117, 5);
+            this.labelControl2.Location = new System.Drawing.Point(136, 6);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(199, 22);
+            this.labelControl2.Size = new System.Drawing.Size(232, 27);
             this.labelControl2.TabIndex = 28;
             this.labelControl2.Text = "Tarih Aralığı Seçiniz";
             // 
             // btnGoster
             // 
-            this.btnGoster.Location = new System.Drawing.Point(117, 295);
+            this.btnGoster.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnGoster.ImageOptions.SvgImage")));
+            this.btnGoster.Location = new System.Drawing.Point(164, 313);
+            this.btnGoster.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGoster.Name = "btnGoster";
-            this.btnGoster.Size = new System.Drawing.Size(108, 40);
+            this.btnGoster.Size = new System.Drawing.Size(126, 49);
             this.btnGoster.TabIndex = 2;
             this.btnGoster.Text = "Göster";
             this.btnGoster.Click += new System.EventHandler(this.btnGoster_Click);
@@ -148,7 +156,8 @@
             // lookUretici
             // 
             this.lookUretici.EditValue = "Lütfen Seçim Yapınız...";
-            this.lookUretici.Location = new System.Drawing.Point(104, 212);
+            this.lookUretici.Location = new System.Drawing.Point(121, 261);
+            this.lookUretici.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lookUretici.Name = "lookUretici";
             this.lookUretici.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lookUretici.Properties.Appearance.Options.UseFont = true;
@@ -159,7 +168,7 @@
             this.lookUretici.Properties.NullText = "";
             this.lookUretici.Properties.PopupView = this.gridView3;
             this.lookUretici.Properties.ValueMember = "Id";
-            this.lookUretici.Size = new System.Drawing.Size(190, 23);
+            this.lookUretici.Size = new System.Drawing.Size(222, 28);
             this.lookUretici.TabIndex = 34;
             // 
             // gridView3
@@ -182,7 +191,8 @@
             // lookMarka
             // 
             this.lookMarka.EditValue = "Lütfen Seçim Yapınız...";
-            this.lookMarka.Location = new System.Drawing.Point(104, 183);
+            this.lookMarka.Location = new System.Drawing.Point(121, 225);
+            this.lookMarka.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lookMarka.Name = "lookMarka";
             this.lookMarka.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lookMarka.Properties.Appearance.Options.UseFont = true;
@@ -193,7 +203,7 @@
             this.lookMarka.Properties.NullText = "";
             this.lookMarka.Properties.PopupView = this.gridView2;
             this.lookMarka.Properties.ValueMember = "Id";
-            this.lookMarka.Size = new System.Drawing.Size(190, 23);
+            this.lookMarka.Size = new System.Drawing.Size(222, 28);
             this.lookMarka.TabIndex = 35;
             // 
             // gridView2
@@ -216,7 +226,8 @@
             // lookAltGrup
             // 
             this.lookAltGrup.EditValue = "Lütfen Seçim Yapınız...";
-            this.lookAltGrup.Location = new System.Drawing.Point(104, 154);
+            this.lookAltGrup.Location = new System.Drawing.Point(121, 190);
+            this.lookAltGrup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lookAltGrup.Name = "lookAltGrup";
             this.lookAltGrup.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lookAltGrup.Properties.Appearance.Options.UseFont = true;
@@ -227,7 +238,7 @@
             this.lookAltGrup.Properties.NullText = "";
             this.lookAltGrup.Properties.PopupView = this.gridView4;
             this.lookAltGrup.Properties.ValueMember = "Id";
-            this.lookAltGrup.Size = new System.Drawing.Size(190, 23);
+            this.lookAltGrup.Size = new System.Drawing.Size(222, 28);
             this.lookAltGrup.TabIndex = 36;
             // 
             // gridView4
@@ -259,7 +270,8 @@
             // lookAnaGrup
             // 
             this.lookAnaGrup.EditValue = "";
-            this.lookAnaGrup.Location = new System.Drawing.Point(104, 127);
+            this.lookAnaGrup.Location = new System.Drawing.Point(121, 156);
+            this.lookAnaGrup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lookAnaGrup.Name = "lookAnaGrup";
             this.lookAnaGrup.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lookAnaGrup.Properties.Appearance.Options.UseFont = true;
@@ -270,7 +282,7 @@
             this.lookAnaGrup.Properties.NullText = "";
             this.lookAnaGrup.Properties.PopupView = this.gridView1;
             this.lookAnaGrup.Properties.ValueMember = "Id";
-            this.lookAnaGrup.Size = new System.Drawing.Size(190, 23);
+            this.lookAnaGrup.Size = new System.Drawing.Size(222, 28);
             this.lookAnaGrup.TabIndex = 37;
             // 
             // gridView1
@@ -304,7 +316,8 @@
             // lokKategori
             // 
             this.lokKategori.EditValue = "";
-            this.lokKategori.Location = new System.Drawing.Point(104, 100);
+            this.lokKategori.Location = new System.Drawing.Point(121, 123);
+            this.lokKategori.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lokKategori.Name = "lokKategori";
             this.lokKategori.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lokKategori.Properties.Appearance.Options.UseFont = true;
@@ -316,7 +329,7 @@
             this.lokKategori.Properties.PopupView = this.gridLookUpEdit1View;
             this.lokKategori.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.lokKategori.Properties.ValueMember = "Id";
-            this.lokKategori.Size = new System.Drawing.Size(190, 23);
+            this.lokKategori.Size = new System.Drawing.Size(222, 28);
             this.lokKategori.TabIndex = 38;
             // 
             // gridLookUpEdit1View
@@ -350,59 +363,65 @@
             // labelControl6
             // 
             this.labelControl6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl6.Location = new System.Drawing.Point(10, 210);
+            this.labelControl6.Location = new System.Drawing.Point(12, 258);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(76, 25);
+            this.labelControl6.Size = new System.Drawing.Size(89, 31);
             this.labelControl6.TabIndex = 29;
             this.labelControl6.Text = "Üretici :";
             // 
             // labelControl7
             // 
             this.labelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl7.Location = new System.Drawing.Point(10, 154);
+            this.labelControl7.Location = new System.Drawing.Point(12, 190);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(76, 25);
+            this.labelControl7.Size = new System.Drawing.Size(89, 31);
             this.labelControl7.TabIndex = 30;
             this.labelControl7.Text = "Alt Grup :";
             // 
             // labelControl5
             // 
             this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl5.Location = new System.Drawing.Point(10, 183);
+            this.labelControl5.Location = new System.Drawing.Point(12, 225);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(76, 25);
+            this.labelControl5.Size = new System.Drawing.Size(89, 31);
             this.labelControl5.TabIndex = 31;
             this.labelControl5.Text = "Marka :";
             // 
             // labelControl4
             // 
             this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl4.Location = new System.Drawing.Point(10, 127);
+            this.labelControl4.Location = new System.Drawing.Point(12, 156);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(76, 25);
+            this.labelControl4.Size = new System.Drawing.Size(89, 31);
             this.labelControl4.TabIndex = 32;
             this.labelControl4.Text = "Ana Grup :";
             // 
             // labelControl8
             // 
             this.labelControl8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl8.Location = new System.Drawing.Point(10, 98);
+            this.labelControl8.Location = new System.Drawing.Point(12, 121);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(76, 25);
+            this.labelControl8.Size = new System.Drawing.Size(89, 31);
             this.labelControl8.TabIndex = 33;
             this.labelControl8.Text = "Kategori :";
             // 
             // dtpBitis
             // 
             this.dtpBitis.EditValue = new System.DateTime(2018, 11, 2, 22, 37, 28, 478);
-            this.dtpBitis.Location = new System.Drawing.Point(104, 76);
+            this.dtpBitis.Location = new System.Drawing.Point(121, 94);
+            this.dtpBitis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpBitis.Name = "dtpBitis";
             this.dtpBitis.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.dtpBitis.Properties.AutoHeight = false;
-            editorButtonImageOptions1.Image = global::NetSatis.BackOffice.Properties.Resources.today_16x163;
+            editorButtonImageOptions2.Image = global::NetSatis.BackOffice.Properties.Resources.today_16x163;
             this.dtpBitis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "Bugünün Tarihi", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "Bugünün Tarihi", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.dtpBitis.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtpBitis.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew;
@@ -412,20 +431,21 @@
             this.dtpBitis.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
             this.dtpBitis.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dtpBitis.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dtpBitis.Size = new System.Drawing.Size(190, 18);
+            this.dtpBitis.Size = new System.Drawing.Size(222, 22);
             this.dtpBitis.TabIndex = 40;
             this.dtpBitis.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.dtpBitis_ButtonClick);
             // 
             // dtpBaslangic
             // 
             this.dtpBaslangic.EditValue = new System.DateTime(2018, 11, 2, 22, 37, 17, 404);
-            this.dtpBaslangic.Location = new System.Drawing.Point(104, 44);
+            this.dtpBaslangic.Location = new System.Drawing.Point(121, 54);
+            this.dtpBaslangic.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpBaslangic.Name = "dtpBaslangic";
             this.dtpBaslangic.Properties.AutoHeight = false;
-            editorButtonImageOptions2.Image = global::NetSatis.BackOffice.Properties.Resources.today_16x162;
+            editorButtonImageOptions3.Image = global::NetSatis.BackOffice.Properties.Resources.today_16x162;
             this.dtpBaslangic.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "Bugünün Tarihi", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "Bugünün Tarihi", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.dtpBaslangic.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtpBaslangic.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew;
@@ -435,15 +455,15 @@
             this.dtpBaslangic.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
             this.dtpBaslangic.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dtpBaslangic.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dtpBaslangic.Size = new System.Drawing.Size(190, 19);
+            this.dtpBaslangic.Size = new System.Drawing.Size(222, 23);
             this.dtpBaslangic.TabIndex = 39;
             this.dtpBaslangic.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.dtpBaslangic_ButtonClick);
             // 
             // frmKârTarihAlis
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 417);
+            this.ClientSize = new System.Drawing.Size(418, 451);
             this.Controls.Add(this.dtpBitis);
             this.Controls.Add(this.dtpBaslangic);
             this.Controls.Add(this.lookUretici);
@@ -461,8 +481,11 @@
             this.Controls.Add(this.btnGoster);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl1);
+            this.IconOptions.ShowIcon = false;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmKârTarihAlis";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tarih Seçim Ekranı";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

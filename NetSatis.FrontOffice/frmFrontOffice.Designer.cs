@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFrontOffice));
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression1 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression2 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -238,6 +242,7 @@
             this.colDipIskontoPayi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMaliyetFiyati = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMaliyetTutar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMevcutStok = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryMustahsil = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.navOdeme = new DevExpress.XtraBars.Navigation.NavigationPage();
@@ -600,7 +605,7 @@
             // 
             this.calcRub.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcRub.Location = new System.Drawing.Point(230, 768);
+            this.calcRub.Location = new System.Drawing.Point(238, 768);
             this.calcRub.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calcRub.Name = "calcRub";
             this.calcRub.Properties.Appearance.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -619,7 +624,7 @@
             this.calcRub.Properties.Mask.EditMask = "N";
             this.calcRub.Properties.NullText = "0";
             this.calcRub.Properties.ReadOnly = true;
-            this.calcRub.Size = new System.Drawing.Size(205, 74);
+            this.calcRub.Size = new System.Drawing.Size(197, 74);
             this.calcRub.StyleController = this.layoutControl2;
             this.calcRub.TabIndex = 2;
             this.calcRub.Visible = false;
@@ -664,7 +669,7 @@
             this.calcEuro.Properties.Mask.EditMask = "N";
             this.calcEuro.Properties.NullText = "0";
             this.calcEuro.Properties.ReadOnly = true;
-            this.calcEuro.Size = new System.Drawing.Size(110, 74);
+            this.calcEuro.Size = new System.Drawing.Size(118, 74);
             this.calcEuro.StyleController = this.layoutControl2;
             this.calcEuro.TabIndex = 2;
             this.calcEuro.Visible = false;
@@ -723,7 +728,7 @@
             this.btnSatisBeklet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSatisBeklet.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnSatisBeklet.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSatisBeklet.ImageOptions.SvgImage")));
-            this.btnSatisBeklet.Location = new System.Drawing.Point(333, 492);
+            this.btnSatisBeklet.Location = new System.Drawing.Point(333, 480);
             this.btnSatisBeklet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSatisBeklet.Name = "btnSatisBeklet";
             this.btnSatisBeklet.Size = new System.Drawing.Size(102, 90);
@@ -740,7 +745,7 @@
             this.checkIade.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkIade.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.checkIade.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("checkIade.ImageOptions.SvgImage")));
-            this.checkIade.Location = new System.Drawing.Point(228, 492);
+            this.checkIade.Location = new System.Drawing.Point(228, 480);
             this.checkIade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkIade.Name = "checkIade";
             this.checkIade.Size = new System.Drawing.Size(101, 90);
@@ -757,7 +762,7 @@
             this.btnOdemeBol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOdemeBol.ImageOptions.Image")));
             this.btnOdemeBol.ImageOptions.ImageIndex = 5;
             this.btnOdemeBol.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnOdemeBol.Location = new System.Drawing.Point(122, 492);
+            this.btnOdemeBol.Location = new System.Drawing.Point(122, 480);
             this.btnOdemeBol.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOdemeBol.Name = "btnOdemeBol";
             this.btnOdemeBol.Size = new System.Drawing.Size(102, 90);
@@ -832,7 +837,7 @@
             this.btnSatisIptal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSatisIptal.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnSatisIptal.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSatisIptal.ImageOptions.SvgImage")));
-            this.btnSatisIptal.Location = new System.Drawing.Point(16, 492);
+            this.btnSatisIptal.Location = new System.Drawing.Point(16, 480);
             this.btnSatisIptal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSatisIptal.Name = "btnSatisIptal";
             this.btnSatisIptal.Size = new System.Drawing.Size(102, 90);
@@ -1443,7 +1448,7 @@
             this.layEURO.MaxSize = new System.Drawing.Size(0, 105);
             this.layEURO.MinSize = new System.Drawing.Size(113, 105);
             this.layEURO.Name = "layEURO";
-            this.layEURO.Size = new System.Drawing.Size(114, 105);
+            this.layEURO.Size = new System.Drawing.Size(122, 105);
             this.layEURO.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layEURO.Text = "EURO";
             this.layEURO.TextLocation = DevExpress.Utils.Locations.Top;
@@ -1457,11 +1462,11 @@
             this.layRUB.AppearanceItemCaption.Options.UseTextOptions = true;
             this.layRUB.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.layRUB.Control = this.calcRub;
-            this.layRUB.Location = new System.Drawing.Point(227, 738);
+            this.layRUB.Location = new System.Drawing.Point(235, 738);
             this.layRUB.MaxSize = new System.Drawing.Size(0, 105);
             this.layRUB.MinSize = new System.Drawing.Size(113, 105);
             this.layRUB.Name = "layRUB";
-            this.layRUB.Size = new System.Drawing.Size(209, 105);
+            this.layRUB.Size = new System.Drawing.Size(201, 105);
             this.layRUB.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layRUB.Text = "RUB";
             this.layRUB.TextLocation = DevExpress.Utils.Locations.Top;
@@ -1471,7 +1476,7 @@
             // layoutControlItem29
             // 
             this.layoutControlItem29.Control = this.btnSatisIptal;
-            this.layoutControlItem29.Location = new System.Drawing.Point(13, 489);
+            this.layoutControlItem29.Location = new System.Drawing.Point(13, 477);
             this.layoutControlItem29.MaxSize = new System.Drawing.Size(106, 94);
             this.layoutControlItem29.MinSize = new System.Drawing.Size(106, 94);
             this.layoutControlItem29.Name = "layoutControlItem29";
@@ -1483,7 +1488,7 @@
             // layoutControlItem30
             // 
             this.layoutControlItem30.Control = this.btnOdemeBol;
-            this.layoutControlItem30.Location = new System.Drawing.Point(119, 489);
+            this.layoutControlItem30.Location = new System.Drawing.Point(119, 477);
             this.layoutControlItem30.MaxSize = new System.Drawing.Size(106, 94);
             this.layoutControlItem30.MinSize = new System.Drawing.Size(106, 94);
             this.layoutControlItem30.Name = "layoutControlItem30";
@@ -1507,7 +1512,7 @@
             // layoutControlItem31
             // 
             this.layoutControlItem31.Control = this.checkIade;
-            this.layoutControlItem31.Location = new System.Drawing.Point(225, 489);
+            this.layoutControlItem31.Location = new System.Drawing.Point(225, 477);
             this.layoutControlItem31.MaxSize = new System.Drawing.Size(105, 94);
             this.layoutControlItem31.MinSize = new System.Drawing.Size(105, 94);
             this.layoutControlItem31.Name = "layoutControlItem31";
@@ -1519,7 +1524,7 @@
             // layoutControlItem32
             // 
             this.layoutControlItem32.Control = this.btnSatisBeklet;
-            this.layoutControlItem32.Location = new System.Drawing.Point(330, 489);
+            this.layoutControlItem32.Location = new System.Drawing.Point(330, 477);
             this.layoutControlItem32.MaxSize = new System.Drawing.Size(106, 94);
             this.layoutControlItem32.MinSize = new System.Drawing.Size(106, 94);
             this.layoutControlItem32.Name = "layoutControlItem32";
@@ -1562,7 +1567,7 @@
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(13, 477);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(13, 571);
             this.emptySpaceItem3.MaxSize = new System.Drawing.Size(423, 12);
             this.emptySpaceItem3.MinSize = new System.Drawing.Size(423, 12);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
@@ -2761,14 +2766,14 @@
             // 
             this.navigationFrame1.Controls.Add(this.navStokHareket);
             this.navigationFrame1.Controls.Add(this.navOdeme);
-            this.navigationFrame1.Location = new System.Drawing.Point(4, 118);
+            this.navigationFrame1.Location = new System.Drawing.Point(4, 134);
             this.navigationFrame1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navigationFrame1.Name = "navigationFrame1";
             this.navigationFrame1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navStokHareket,
             this.navOdeme});
             this.navigationFrame1.SelectedPage = this.navStokHareket;
-            this.navigationFrame1.Size = new System.Drawing.Size(810, 303);
+            this.navigationFrame1.Size = new System.Drawing.Size(810, 287);
             this.navigationFrame1.TabIndex = 0;
             this.navigationFrame1.Text = "navigationFrame1";
             // 
@@ -2777,7 +2782,7 @@
             this.navStokHareket.Controls.Add(this.gridContStokHareket);
             this.navStokHareket.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navStokHareket.Name = "navStokHareket";
-            this.navStokHareket.Size = new System.Drawing.Size(810, 303);
+            this.navStokHareket.Size = new System.Drawing.Size(810, 287);
             // 
             // gridContStokHareket
             // 
@@ -2795,7 +2800,7 @@
             this.repositoryMustahsil,
             this.repoMiktar,
             this.repoIskonto});
-            this.gridContStokHareket.Size = new System.Drawing.Size(810, 303);
+            this.gridContStokHareket.Size = new System.Drawing.Size(810, 287);
             this.gridContStokHareket.TabIndex = 3;
             this.gridContStokHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridStokHareket,
@@ -2830,9 +2835,26 @@
             this.colTarih,
             this.colDipIskontoPayi,
             this.colMaliyetFiyati,
-            this.colMaliyetTutar});
+            this.colMaliyetTutar,
+            this.colMevcutStok});
             this.gridStokHareket.CustomizationFormBounds = new System.Drawing.Rectangle(1106, 317, 303, 286);
             this.gridStokHareket.DetailHeight = 431;
+            gridFormatRule1.Column = this.colMevcutStok;
+            gridFormatRule1.ColumnApplyTo = this.colMevcutStok;
+            gridFormatRule1.Name = "Format0";
+            formatConditionRuleExpression1.Appearance.BackColor = System.Drawing.Color.Lime;
+            formatConditionRuleExpression1.Appearance.Options.UseBackColor = true;
+            formatConditionRuleExpression1.Expression = "[MevcutStok] > 0";
+            gridFormatRule1.Rule = formatConditionRuleExpression1;
+            gridFormatRule2.Column = this.colMevcutStok;
+            gridFormatRule2.ColumnApplyTo = this.colMevcutStok;
+            gridFormatRule2.Name = "Format1";
+            formatConditionRuleExpression2.Appearance.BackColor = System.Drawing.Color.Salmon;
+            formatConditionRuleExpression2.Appearance.Options.UseBackColor = true;
+            formatConditionRuleExpression2.Expression = "[MevcutStok] < 0";
+            gridFormatRule2.Rule = formatConditionRuleExpression2;
+            this.gridStokHareket.FormatRules.Add(gridFormatRule1);
+            this.gridStokHareket.FormatRules.Add(gridFormatRule2);
             this.gridStokHareket.GridControl = this.gridContStokHareket;
             this.gridStokHareket.Name = "gridStokHareket";
             this.gridStokHareket.OptionsView.ShowGroupPanel = false;
@@ -3235,6 +3257,19 @@
             this.colMaliyetTutar.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.colMaliyetTutar.Width = 87;
             // 
+            // colMevcutStok
+            // 
+            this.colMevcutStok.Caption = "Mevcut Stok";
+            this.colMevcutStok.DisplayFormat.FormatString = "n2";
+            this.colMevcutStok.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colMevcutStok.FieldName = "MevcutStok";
+            this.colMevcutStok.MinWidth = 25;
+            this.colMevcutStok.Name = "colMevcutStok";
+            this.colMevcutStok.OptionsColumn.AllowEdit = false;
+            this.colMevcutStok.Visible = true;
+            this.colMevcutStok.VisibleIndex = 10;
+            this.colMevcutStok.Width = 94;
+            // 
             // repositoryMustahsil
             // 
             this.repositoryMustahsil.AutoHeight = false;
@@ -3261,7 +3296,7 @@
             this.navOdeme.Controls.Add(this.grpToplamlar);
             this.navOdeme.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navOdeme.Name = "navOdeme";
-            this.navOdeme.Size = new System.Drawing.Size(810, 303);
+            this.navOdeme.Size = new System.Drawing.Size(810, 287);
             // 
             // gridContKasaHareket
             // 
@@ -3274,7 +3309,7 @@
             this.gridContKasaHareket.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repoKasa,
             this.repoOdemeSil});
-            this.gridContKasaHareket.Size = new System.Drawing.Size(810, 189);
+            this.gridContKasaHareket.Size = new System.Drawing.Size(810, 173);
             this.gridContKasaHareket.TabIndex = 4;
             this.gridContKasaHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridKasaHareket,
@@ -3403,7 +3438,7 @@
             this.grpToplamlar.Controls.Add(this.panelOdeme);
             this.grpToplamlar.Controls.Add(this.btnIslemBitir);
             this.grpToplamlar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grpToplamlar.Location = new System.Drawing.Point(0, 189);
+            this.grpToplamlar.Location = new System.Drawing.Point(0, 173);
             this.grpToplamlar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpToplamlar.Name = "grpToplamlar";
             this.grpToplamlar.Size = new System.Drawing.Size(810, 114);
@@ -3517,10 +3552,10 @@
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel1.Controls.Add(this.btnArttır);
             this.flowLayoutPanel1.Controls.Add(this.btnAzalt);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(818, 118);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(818, 134);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(69, 303);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(69, 287);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // btnArttır
@@ -3575,7 +3610,7 @@
             this.flowOdemeTurleri.Location = new System.Drawing.Point(4, 53);
             this.flowOdemeTurleri.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowOdemeTurleri.Name = "flowOdemeTurleri";
-            this.flowOdemeTurleri.Size = new System.Drawing.Size(883, 61);
+            this.flowOdemeTurleri.Size = new System.Drawing.Size(883, 77);
             this.flowOdemeTurleri.TabIndex = 5;
             // 
             // calcMiktar
@@ -3804,10 +3839,9 @@
             // 
             this.layoutControlItem8.Control = this.flowOdemeTurleri;
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 49);
-            this.layoutControlItem8.MaxSize = new System.Drawing.Size(0, 65);
-            this.layoutControlItem8.MinSize = new System.Drawing.Size(121, 65);
+            this.layoutControlItem8.MinSize = new System.Drawing.Size(104, 24);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(887, 65);
+            this.layoutControlItem8.Size = new System.Drawing.Size(887, 81);
             this.layoutControlItem8.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
@@ -3815,20 +3849,20 @@
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.navigationFrame1;
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 114);
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 130);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(814, 307);
+            this.layoutControlItem9.Size = new System.Drawing.Size(814, 291);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.flowLayoutPanel1;
-            this.layoutControlItem10.Location = new System.Drawing.Point(814, 114);
+            this.layoutControlItem10.Location = new System.Drawing.Point(814, 130);
             this.layoutControlItem10.MaxSize = new System.Drawing.Size(73, 0);
             this.layoutControlItem10.MinSize = new System.Drawing.Size(73, 30);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(73, 307);
+            this.layoutControlItem10.Size = new System.Drawing.Size(73, 291);
             this.layoutControlItem10.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
@@ -4457,6 +4491,7 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
         private DevExpress.XtraEditors.ComboBoxEdit cmbFiyat;
         private DevExpress.XtraLayout.LayoutControlItem layoutFiyat;
+        private DevExpress.XtraGrid.Columns.GridColumn colMevcutStok;
     }
 }
 

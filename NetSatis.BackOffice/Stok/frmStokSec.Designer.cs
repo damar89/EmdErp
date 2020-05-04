@@ -34,6 +34,7 @@
             DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression1 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
             DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression2 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
+            this.MevcutStok = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lblBaslik = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.lblKayitSayisi = new DevExpress.XtraEditors.LabelControl();
@@ -59,7 +60,6 @@
             this.colSatisFiyati1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSatisFiyati2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBarkod = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.MevcutStok = new DevExpress.XtraGrid.Columns.GridColumn();
             this.StokGiris = new DevExpress.XtraGrid.Columns.GridColumn();
             this.StokCikis = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAltGrup = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -116,6 +116,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // MevcutStok
+            // 
+            this.MevcutStok.Caption = "Stok Miktarı";
+            this.MevcutStok.DisplayFormat.FormatString = "n2";
+            this.MevcutStok.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.MevcutStok.FieldName = "MevcutStok";
+            this.MevcutStok.Name = "MevcutStok";
+            this.MevcutStok.OptionsColumn.AllowEdit = false;
+            this.MevcutStok.Visible = true;
+            this.MevcutStok.VisibleIndex = 10;
+            this.MevcutStok.Width = 104;
             // 
             // lblBaslik
             // 
@@ -278,7 +290,6 @@
             this.gridStoklar.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridStoklar_PopupMenuShowing);
             this.gridStoklar.ColumnFilterChanged += new System.EventHandler(this.gridStoklar_ColumnFilterChanged);
             this.gridStoklar.DoubleClick += new System.EventHandler(this.gridStoklar_DoubleClick);
-            this.gridStoklar.RowCountChanged += new System.EventHandler(this.gridStoklar_RowCountChanged);
             // 
             // colId
             // 
@@ -418,18 +429,6 @@
             this.colBarkod.Visible = true;
             this.colBarkod.VisibleIndex = 1;
             this.colBarkod.Width = 63;
-            // 
-            // MevcutStok
-            // 
-            this.MevcutStok.Caption = "Stok Miktarı";
-            this.MevcutStok.DisplayFormat.FormatString = "n2";
-            this.MevcutStok.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.MevcutStok.FieldName = "MevcutStok";
-            this.MevcutStok.Name = "MevcutStok";
-            this.MevcutStok.OptionsColumn.AllowEdit = false;
-            this.MevcutStok.Visible = true;
-            this.MevcutStok.VisibleIndex = 10;
-            this.MevcutStok.Width = 104;
             // 
             // StokGiris
             // 
@@ -585,13 +584,13 @@
             // 
             this.txtStokKodu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtStokKodu.Location = new System.Drawing.Point(8, 164);
+            this.txtStokKodu.Location = new System.Drawing.Point(8, 176);
             this.txtStokKodu.Name = "txtStokKodu";
             this.txtStokKodu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtStokKodu.Properties.Appearance.Options.UseFont = true;
             this.txtStokKodu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear)});
-            this.txtStokKodu.Size = new System.Drawing.Size(218, 20);
+            this.txtStokKodu.Size = new System.Drawing.Size(218, 22);
             this.txtStokKodu.StyleController = this.layoutControl1;
             this.txtStokKodu.TabIndex = 0;
             this.txtStokKodu.Visible = false;
@@ -617,7 +616,7 @@
             // btnTemizle
             // 
             this.btnTemizle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTemizle.ImageOptions.Image")));
-            this.btnTemizle.Location = new System.Drawing.Point(184, 29);
+            this.btnTemizle.Location = new System.Drawing.Point(184, 31);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(40, 36);
             this.btnTemizle.StyleController = this.layoutControl1;
@@ -630,7 +629,7 @@
             this.btnSorgula.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btnSorgula.Appearance.Options.UseFont = true;
             this.btnSorgula.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSorgula.ImageOptions.Image")));
-            this.btnSorgula.Location = new System.Drawing.Point(8, 29);
+            this.btnSorgula.Location = new System.Drawing.Point(8, 31);
             this.btnSorgula.Name = "btnSorgula";
             this.btnSorgula.Size = new System.Drawing.Size(172, 36);
             this.btnSorgula.StyleController = this.layoutControl1;
@@ -643,14 +642,14 @@
             // 
             this.txtStokAdi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtStokAdi.Location = new System.Drawing.Point(8, 125);
+            this.txtStokAdi.Location = new System.Drawing.Point(8, 133);
             this.txtStokAdi.MenuManager = this.barManager1;
             this.txtStokAdi.Name = "txtStokAdi";
             this.txtStokAdi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtStokAdi.Properties.Appearance.Options.UseFont = true;
             this.txtStokAdi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear)});
-            this.txtStokAdi.Size = new System.Drawing.Size(218, 20);
+            this.txtStokAdi.Size = new System.Drawing.Size(218, 22);
             this.txtStokAdi.StyleController = this.layoutControl1;
             this.txtStokAdi.TabIndex = 0;
             this.txtStokAdi.Visible = false;
@@ -658,14 +657,14 @@
             // 
             // txtAramaMetni
             // 
-            this.txtAramaMetni.Location = new System.Drawing.Point(8, 86);
+            this.txtAramaMetni.Location = new System.Drawing.Point(8, 90);
             this.txtAramaMetni.MenuManager = this.barManager1;
             this.txtAramaMetni.Name = "txtAramaMetni";
             this.txtAramaMetni.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAramaMetni.Properties.Appearance.Options.UseFont = true;
             this.txtAramaMetni.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear)});
-            this.txtAramaMetni.Size = new System.Drawing.Size(218, 20);
+            this.txtAramaMetni.Size = new System.Drawing.Size(218, 22);
             this.txtAramaMetni.StyleController = this.layoutControl1;
             this.txtAramaMetni.TabIndex = 8;
             this.txtAramaMetni.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtFilterClear);
@@ -712,13 +711,13 @@
             this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
             this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem3.Control = this.txtStokKodu;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 118);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 126);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 0, 0, 0);
-            this.layoutControlItem3.Size = new System.Drawing.Size(220, 39);
+            this.layoutControlItem3.Size = new System.Drawing.Size(220, 43);
             this.layoutControlItem3.Text = "Stok Kodu";
             this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(73, 16);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(83, 18);
             this.layoutControlItem3.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem2
@@ -726,13 +725,13 @@
             this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
             this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem2.Control = this.txtStokAdi;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 79);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 83);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 0, 0, 0);
-            this.layoutControlItem2.Size = new System.Drawing.Size(220, 39);
+            this.layoutControlItem2.Size = new System.Drawing.Size(220, 43);
             this.layoutControlItem2.Text = "Stok Adı";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(73, 16);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(83, 18);
             this.layoutControlItem2.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // emptySpaceItem1
@@ -740,10 +739,10 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 10F);
             this.emptySpaceItem1.AppearanceItemCaption.Options.UseFont = true;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 157);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 169);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 0, 0, 0);
-            this.emptySpaceItem1.Size = new System.Drawing.Size(220, 390);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(220, 376);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem5
@@ -772,10 +771,10 @@
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 40);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 0, 0, 0);
-            this.layoutControlItem7.Size = new System.Drawing.Size(220, 39);
+            this.layoutControlItem7.Size = new System.Drawing.Size(220, 43);
             this.layoutControlItem7.Text = "Arama Metni";
             this.layoutControlItem7.TextLocation = DevExpress.Utils.Locations.Top;
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(73, 16);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(83, 18);
             // 
             // layoutControlItem4
             // 

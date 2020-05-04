@@ -1004,6 +1004,8 @@ namespace NetSatis.BackOffice.Fiş
                 stokHareket.DepoId = depoid;
             }
 
+            stokHareket.MevcutStok = stokDAL.MevcutStok(context, entity.Id);
+
 
             //if (toggleToptanSatis.IsOn)
             //{
@@ -1589,7 +1591,7 @@ namespace NetSatis.BackOffice.Fiş
                     stokVeri.Tipi = cmbTipi.Text;
                     stokVeri.Hareket = ayarlar.StokHareketi;
                     stokVeri.FisTuru = ayarlar.FisTurleri;
-                    
+
                     toplamDipIskontoPayi += Convert.ToDecimal(stokVeri.DipIskontoPayi);
 
                     if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_AlisFiyat)))
@@ -1598,10 +1600,14 @@ namespace NetSatis.BackOffice.Fiş
                         {
                             stokVeri.Stok.AlisFiyati1 = stokVeri.BirimFiyati;
 
-                            stokVeri.Stok.AlisFiyati2 = stokVeri.BirimFiyati - stokVeri.IndirimTutar + stokVeri.IndirimTutar2 + stokVeri.IndirimTutar3;
+                            var ind1 = stokVeri.BirimFiyati - (stokVeri.BirimFiyati * stokVeri.IndirimOrani / 100);
+                            var ind2 = ind1 - (ind1 * stokVeri.IndirimOrani2 / 100);
+                            var ind3 = ind2 - (ind2 * stokVeri.IndirimOrani3 / 100);
 
-                            stokVeri.Stok.AlisFiyati3 = stokVeri.BirimFiyati - stokVeri.IndirimTutar + stokVeri.IndirimTutar2 + stokVeri.IndirimTutar3 + (stokVeri.BirimFiyati * stokVeri.Kdv / 100);
+                            stokVeri.Stok.AlisFiyati2 = ind3;
 
+                            stokVeri.Stok.AlisFiyati3 = ind3 + (ind3 * stokVeri.Kdv / 100);
+                            stokDAL.MevcutStok(context, 1);
                         }
                     }
 
@@ -2923,23 +2929,23 @@ namespace NetSatis.BackOffice.Fiş
 
         private void stokKartınıAçToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (gridStokHareket.RowCount != 0)
-                {
-                    string aramaMetni = gridStokHareket.GetFocusedRowCellValue(colStokAdi).GetString();
-                    frmStokSec form = new frmStokSec(ref this.context, aramaMetni);
-                    form.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("Seçili Stok Bulunamadı");
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            //try
+            //{
+            //    if (gridStokHareket.RowCount != 0)
+            //    {
+            //        string aramaMetni = gridStokHareket.GetFocusedRowCellValue(colStokAdi).GetString();
+            //        frmStokSec form = new frmStokSec(ref this.context, aramaMetni);
+            //        form.ShowDialog();
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Seçili Stok Bulunamadı");
+            //    }
+            //}
+            //catch (Exception)
+            //{
+            //    throw;
+            //}
         }
 
         private void seçiliStoğunHareketleriToolStripMenuItem_Click(object sender, EventArgs e)
@@ -3071,9 +3077,9 @@ namespace NetSatis.BackOffice.Fiş
             switch (e.KeyCode)
             {
                 case Keys.F6:
-                case Keys.F10:
-                    repoStokSec_ButtonClick(sender, new DevExpress.XtraEditors.Controls.ButtonPressedEventArgs(repobtnStokSec.Buttons[0]));
-                    break;
+                //case Keys.F10:
+                //    repoStokSec_ButtonClick(sender, new DevExpress.XtraEditors.Controls.ButtonPressedEventArgs(repobtnStokSec.Buttons[0]));
+                //    break;
                 case Keys.F7:
                     repoStokSec_ButtonClick(sender, new DevExpress.XtraEditors.Controls.ButtonPressedEventArgs(repobtnStokSec.Buttons[1]));
                     break;
@@ -3116,7 +3122,7 @@ namespace NetSatis.BackOffice.Fiş
                 row.Bagkur = s.Bagkur;
                 row.Barkod = s.Barkod;
                 row.BirimFiyati = s.BirimFiyati;
-                row.SatisFiyati = s.SatisFiyati;
+                row.SatisFiyati = s.SatisFiyati; 
                 row.Borsa = s.Borsa;
                 row.Depo = s.Depo;
                 row.DepoId = s.Depo != null ? s.DepoId : 0;
@@ -3128,6 +3134,7 @@ namespace NetSatis.BackOffice.Fiş
                 row.GuncellemeTarihi = s.GuncellemeTarihi;
                 row.Hareket = s.Hareket;
                 //row.Id = s.Id;
+                row.MevcutStok = s.MevcutStok;
                 row.IndirimOrani = s.IndirimOrani;
                 row.IndirimOrani2 = s.IndirimOrani2;
                 row.IndirimOrani3 = s.IndirimOrani3;
@@ -3199,7 +3206,7 @@ namespace NetSatis.BackOffice.Fiş
 
         private void toggleKDVDahil_EditValueChanged(object sender, EventArgs e)
         {
-         HepsiniHesapla();
+            HepsiniHesapla();
         }
 
         private void gridStokHareket_KeyDown(object sender, KeyEventArgs e)

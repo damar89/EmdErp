@@ -259,8 +259,8 @@ namespace NetSatis.FrontOffice
             {
                 Name = "AcikHesap",
                 Text = "&Açık Hesap",
-                Height = flowOdemeTurleri.Height - 10,
-                Width = 92,
+                Height = flowOdemeTurleri.Height - 1,
+                Width = 110,
                 BackColor = Color.DarkCyan,
                 ForeColor = Color.White,
                 FlatStyle = FlatStyle.Flat,
@@ -278,9 +278,12 @@ namespace NetSatis.FrontOffice
                     Name = item.OdemeTuruKodu,
                     Tag = item.Id,
                     Text = item.OdemeTuruAdi,
-                    Height = flowOdemeTurleri.Height - 10,
-                    Width = 92,
+                    Height = flowOdemeTurleri.Height - 1,
+                    Width = 115,
+                    
                     FlatStyle = FlatStyle.Flat,
+                    BackColor=Color.Red,
+                    ForeColor=Color.White,
                     Margin = new Padding(2),
                     Font = new Font(Font.FontFamily, Font.Size, FontStyle.Bold),
                     Cursor = Cursors.Hand,
@@ -860,6 +863,7 @@ namespace NetSatis.FrontOffice
                 depoid = 1;
             }
             stokHareket.DepoId = depoid;
+            stokHareket.MevcutStok = stokDAL.MevcutStok(context, entity.Id);
             //stokHareket.BirimFiyati = txtIslem.Text == "Alış Faturası" ? entity.AlisFiyati1 : entity.SatisFiyati1;
 
             if (cmbFiyat.SelectedIndex == 0 && txtIslem.Text == "SATIŞ")
@@ -1209,23 +1213,23 @@ namespace NetSatis.FrontOffice
             }
             if (e.KeyCode == Keys.F10)
             {
-                try
-                {
-                    if (gridStokHareket.RowCount != 0)
-                    {
-                        string aramaMetni = gridStokHareket.GetFocusedRowCellValue(colStokAdi).GetString();
-                        frmStokSec form = new frmStokSec(ref this.context, aramaMetni);
-                        form.ShowDialog();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Seçili Stok Bulunamadı");
-                    }
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                //try
+                //{
+                //    if (gridStokHareket.RowCount != 0)
+                //    {
+                //        string aramaMetni = gridStokHareket.GetFocusedRowCellValue(colStokAdi).GetString();
+                //        frmStokSec form = new frmStokSec(ref this.context, aramaMetni);
+                //        form.ShowDialog();
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("Seçili Stok Bulunamadı");
+                //    }
+                //}
+                //catch (Exception)
+                //{
+                //    throw;
+                //}
             }
             if (e.KeyCode == Keys.F12)
             {
@@ -1298,9 +1302,9 @@ namespace NetSatis.FrontOffice
         }
         private decimal MevcutStokAdedi(Entities.Tables.Stok entity)
         {
-            decimal MevcutStok = (context.StokHareketleri.Where(c => c.StokId == entity.Id && c.Hareket == "Stok Giriş")
+            decimal MevcutStok = (context.StokHareketleri.Where(c => c.StokId == entity.Id && c.Hareket == "Stok Giriş").AsNoTracking()
                                       .Sum(c => c.Miktar) ?? 0) -
-                                 (context.StokHareketleri.Where(c => c.StokId == entity.Id && c.Hareket == "Stok Çıkış")
+                                 (context.StokHareketleri.Where(c => c.StokId == entity.Id && c.Hareket == "Stok Çıkış").AsNoTracking()
                                       .Sum(c => c.Miktar) ?? 0);
             return MevcutStok;
         }
@@ -1341,7 +1345,7 @@ namespace NetSatis.FrontOffice
         {
             try
             {
-                frmStokSec form = new frmStokSec(ref this.context, txtBarkod.EditValue.ToString());
+                frmStokSec form = new frmStokSec(ref this.context, txtBarkod.EditValue.ToString(),false);
                 form.ShowDialog();
                 if (form.secildi)
                 {

@@ -21,7 +21,7 @@ namespace NetSatis.BackOffice
         static void Main()
         {
 
-
+            DevExpress.Data.CurrencyDataController.DisableThreadingProblemsDetection = true;
 
             bool prog;
             Mutex mtx = new Mutex(true, "NetSatis.BackOffice", out prog);
