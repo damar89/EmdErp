@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
+using FluentValidation.Results;
+
 namespace NetSatis.Entities.Data_Access
 {
     public class StokDAL : EntityRepositoryBase<NetSatisContext, Stok, StokValidator>
@@ -389,7 +391,7 @@ namespace NetSatis.Entities.Data_Access
             return resh2.ToList();
 
         }
-        #region Stok giriş, çıkış ve mevcut stok methodları
+        #region Stok giriş, çıkış ve mevcut stok miktar methodları
 
         public decimal? StokGiris(ICollection<StokHareket> hareketler = null)
         {
@@ -434,6 +436,19 @@ namespace NetSatis.Entities.Data_Access
             return res;
         }
 
+        #endregion
+
+
+        #region Kar zarar işlemleri
+
+        public decimal? StokKar(NetSatisContext context, int StokId)
+        {
+            var res = context.StokHareketleri
+                .Where(c => c.StokId == StokId && c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1")).AsNoTracking();
+            var sonuc = res.Count() / res.Sum(c => c.SatisFiyati);
+            return sonuc;
+        }
+        
         #endregion
     }
 }
