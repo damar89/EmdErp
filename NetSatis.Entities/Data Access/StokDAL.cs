@@ -191,7 +191,7 @@ namespace NetSatis.Entities.Data_Access
 
         public int StokKayitSayisi(NetSatisContext context, Expression<Func<Stok, bool>> pred = null)
         {
-            return pred == null ? context.Stoklar.Count() : context.Stoklar.Where(pred).Count();
+            return pred == null ? context.Stoklar.AsNoTracking().Count() : context.Stoklar.Where(pred).AsNoTracking().Count();
         }
 
         /// <summary>

@@ -362,6 +362,8 @@ namespace NetSatis.BackOffice.Stok
             if (token.IsCancellationRequested)
                 return;
             TumStoklar.Clear();
+                OnPropertyChanged(nameof(TumStoklar));
+                gridView1.RefreshData();
             var pred = PredicateBuilder.True<Entities.Tables.Stok>();
 
             if (!string.IsNullOrEmpty(txtAramaMetni.Text))
