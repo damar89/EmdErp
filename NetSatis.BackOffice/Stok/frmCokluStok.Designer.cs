@@ -40,6 +40,7 @@
             this.labelControl28 = new DevExpress.XtraEditors.LabelControl();
             this.cmbSatisFiyat2 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cmbDevirMiktar = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmbSatisFiyat4 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cmbSatisFiyat3 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cmbSatisFiyat1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.chkStokAdi = new DevExpress.XtraEditors.CheckEdit();
@@ -55,8 +56,10 @@
             this.cmbSheets = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemComboBox2 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.barBtnVeriEkle = new DevExpress.XtraBars.BarButtonItem();
-            this.barBtnVeriGuncelle = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnKapat = new DevExpress.XtraBars.BarButtonItem();
+            this.menuVerileriGuncelle = new DevExpress.XtraBars.BarSubItem();
+            this.cmsStokKodunaGore = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.cmsBarkodaGore = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -77,6 +80,7 @@
             this.chkUretici = new DevExpress.XtraEditors.CheckEdit();
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl33 = new DevExpress.XtraEditors.LabelControl();
             this.chkSezonYil = new DevExpress.XtraEditors.CheckEdit();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
             this.chkMarka = new DevExpress.XtraEditors.CheckEdit();
@@ -114,6 +118,7 @@
             this.chkSatisFiyat2 = new DevExpress.XtraEditors.CheckEdit();
             this.chkDevirMiktar = new DevExpress.XtraEditors.CheckEdit();
             this.cmbKategoriKodu = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.chkSatisFiyat4 = new DevExpress.XtraEditors.CheckEdit();
             this.cmbKategori = new DevExpress.XtraEditors.ComboBoxEdit();
             this.chkSatisFiyat3 = new DevExpress.XtraEditors.CheckEdit();
             this.cmbProje = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -149,9 +154,6 @@
             this.gcListe = new DevExpress.XtraGrid.GridControl();
             this.gridListe = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.progressKayit = new DevExpress.XtraEditors.ProgressBarControl();
-            this.chkSatisFiyat4 = new DevExpress.XtraEditors.CheckEdit();
-            this.labelControl33 = new DevExpress.XtraEditors.LabelControl();
-            this.cmbSatisFiyat4 = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             this.xtraScrollableControl1.SuspendLayout();
@@ -161,6 +163,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbWebSatis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSatisFiyat2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDevirMiktar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSatisFiyat4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSatisFiyat3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSatisFiyat1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkStokAdi.Properties)).BeginInit();
@@ -211,6 +214,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkSatisFiyat2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDevirMiktar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbKategoriKodu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkSatisFiyat4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbKategori.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkSatisFiyat3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbProje.Properties)).BeginInit();
@@ -227,21 +231,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.gcListe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridListe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.progressKayit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkSatisFiyat4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSatisFiyat4.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 29);
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 24);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.xtraScrollableControl1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.gcListe);
             this.splitContainerControl1.Panel2.Controls.Add(this.progressKayit);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1105, 895);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1105, 900);
             this.splitContainerControl1.SplitterPosition = 310;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -349,7 +351,7 @@
             this.xtraScrollableControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraScrollableControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraScrollableControl1.Name = "xtraScrollableControl1";
-            this.xtraScrollableControl1.Size = new System.Drawing.Size(310, 895);
+            this.xtraScrollableControl1.Size = new System.Drawing.Size(310, 900);
             this.xtraScrollableControl1.TabIndex = 3;
             // 
             // chkWebBayi
@@ -359,7 +361,7 @@
             this.chkWebBayi.Location = new System.Drawing.Point(289, 810);
             this.chkWebBayi.Name = "chkWebBayi";
             this.chkWebBayi.Properties.Caption = "";
-            this.chkWebBayi.Size = new System.Drawing.Size(20, 19);
+            this.chkWebBayi.Size = new System.Drawing.Size(20, 20);
             this.chkWebBayi.TabIndex = 53;
             // 
             // chkWebSatis
@@ -369,7 +371,7 @@
             this.chkWebSatis.Location = new System.Drawing.Point(289, 784);
             this.chkWebSatis.Name = "chkWebSatis";
             this.chkWebSatis.Properties.Caption = "";
-            this.chkWebSatis.Size = new System.Drawing.Size(20, 19);
+            this.chkWebSatis.Size = new System.Drawing.Size(20, 20);
             this.chkWebSatis.TabIndex = 53;
             // 
             // cmbWebBayi
@@ -438,6 +440,18 @@
             this.cmbDevirMiktar.Size = new System.Drawing.Size(167, 20);
             this.cmbDevirMiktar.TabIndex = 25;
             // 
+            // cmbSatisFiyat4
+            // 
+            this.cmbSatisFiyat4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbSatisFiyat4.Location = new System.Drawing.Point(106, 757);
+            this.cmbSatisFiyat4.Name = "cmbSatisFiyat4";
+            this.cmbSatisFiyat4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbSatisFiyat4.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cmbSatisFiyat4.Size = new System.Drawing.Size(167, 20);
+            this.cmbSatisFiyat4.TabIndex = 25;
+            // 
             // cmbSatisFiyat3
             // 
             this.cmbSatisFiyat3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -469,7 +483,7 @@
             this.chkStokAdi.Location = new System.Drawing.Point(289, 34);
             this.chkStokAdi.Name = "chkStokAdi";
             this.chkStokAdi.Properties.Caption = "";
-            this.chkStokAdi.Size = new System.Drawing.Size(20, 19);
+            this.chkStokAdi.Size = new System.Drawing.Size(20, 20);
             this.chkStokAdi.TabIndex = 26;
             this.chkStokAdi.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -480,7 +494,7 @@
             this.chkMaxStokMiktari.Location = new System.Drawing.Point(289, 190);
             this.chkMaxStokMiktari.Name = "chkMaxStokMiktari";
             this.chkMaxStokMiktari.Properties.Caption = "";
-            this.chkMaxStokMiktari.Size = new System.Drawing.Size(20, 19);
+            this.chkMaxStokMiktari.Size = new System.Drawing.Size(20, 20);
             this.chkMaxStokMiktari.TabIndex = 32;
             this.chkMaxStokMiktari.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -491,7 +505,7 @@
             this.chkGarantiSuresi.Location = new System.Drawing.Point(289, 138);
             this.chkGarantiSuresi.Name = "chkGarantiSuresi";
             this.chkGarantiSuresi.Properties.Caption = "";
-            this.chkGarantiSuresi.Size = new System.Drawing.Size(20, 19);
+            this.chkGarantiSuresi.Size = new System.Drawing.Size(20, 20);
             this.chkGarantiSuresi.TabIndex = 30;
             this.chkGarantiSuresi.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -532,13 +546,15 @@
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barBtnExcelAc,
             this.barBtnVeriEkle,
-            this.barBtnVeriGuncelle,
             this.barBtnKapat,
             this.barSubItem1,
             this.cmbProviders,
             this.cmbSheets,
-            this.barTxtKayit});
-            this.barManager1.MaxItemId = 15;
+            this.barTxtKayit,
+            this.menuVerileriGuncelle,
+            this.cmsStokKodunaGore,
+            this.cmsBarkodaGore});
+            this.barManager1.MaxItemId = 18;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1,
             this.repositoryItemTextEdit1,
@@ -554,11 +570,11 @@
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.cmbProviders),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barBtnExcelAc, true),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barBtnExcelAc, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(this.cmbSheets),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barBtnVeriEkle, true),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barBtnVeriGuncelle),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barBtnKapat, true)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barBtnVeriEkle, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.menuVerileriGuncelle, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barBtnKapat, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar1.Text = "Tools";
             // 
             // cmbProviders
@@ -581,6 +597,8 @@
             // 
             this.barBtnExcelAc.Caption = "Excel Dosyası Aç";
             this.barBtnExcelAc.Id = 0;
+            this.barBtnExcelAc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnExcelAc.ImageOptions.Image")));
+            this.barBtnExcelAc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnExcelAc.ImageOptions.LargeImage")));
             this.barBtnExcelAc.Name = "barBtnExcelAc";
             this.barBtnExcelAc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnExcelAc_ItemClick);
             // 
@@ -605,22 +623,48 @@
             // 
             this.barBtnVeriEkle.Caption = "Verileri Ekle";
             this.barBtnVeriEkle.Id = 1;
+            this.barBtnVeriEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnVeriEkle.ImageOptions.Image")));
+            this.barBtnVeriEkle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnVeriEkle.ImageOptions.LargeImage")));
             this.barBtnVeriEkle.Name = "barBtnVeriEkle";
             this.barBtnVeriEkle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnVeriEkle_ItemClick);
-            // 
-            // barBtnVeriGuncelle
-            // 
-            this.barBtnVeriGuncelle.Caption = "Verileri Güncelle";
-            this.barBtnVeriGuncelle.Id = 2;
-            this.barBtnVeriGuncelle.Name = "barBtnVeriGuncelle";
-            this.barBtnVeriGuncelle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnVeriGuncelle_ItemClick);
             // 
             // barBtnKapat
             // 
             this.barBtnKapat.Caption = "Kapat";
             this.barBtnKapat.Id = 3;
+            this.barBtnKapat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnKapat.ImageOptions.Image")));
+            this.barBtnKapat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnKapat.ImageOptions.LargeImage")));
             this.barBtnKapat.Name = "barBtnKapat";
             this.barBtnKapat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnKapat_ItemClick);
+            // 
+            // menuVerileriGuncelle
+            // 
+            this.menuVerileriGuncelle.Caption = "Verileri Güncelle";
+            this.menuVerileriGuncelle.Id = 15;
+            this.menuVerileriGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("menuVerileriGuncelle.ImageOptions.Image")));
+            this.menuVerileriGuncelle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("menuVerileriGuncelle.ImageOptions.LargeImage")));
+            this.menuVerileriGuncelle.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.cmsStokKodunaGore, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(this.cmsBarkodaGore)});
+            this.menuVerileriGuncelle.Name = "menuVerileriGuncelle";
+            // 
+            // cmsStokKodunaGore
+            // 
+            this.cmsStokKodunaGore.Caption = "Stok Koduna Göre";
+            this.cmsStokKodunaGore.Id = 16;
+            this.cmsStokKodunaGore.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmsStokKodunaGore.ImageOptions.Image")));
+            this.cmsStokKodunaGore.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("cmsStokKodunaGore.ImageOptions.LargeImage")));
+            this.cmsStokKodunaGore.Name = "cmsStokKodunaGore";
+            this.cmsStokKodunaGore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.cmsStokKodunaGore_ItemClick);
+            // 
+            // cmsBarkodaGore
+            // 
+            this.cmsBarkodaGore.Caption = "Barkod a Göre";
+            this.cmsBarkodaGore.Id = 17;
+            this.cmsBarkodaGore.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmsBarkodaGore.ImageOptions.Image")));
+            this.cmsBarkodaGore.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("cmsBarkodaGore.ImageOptions.LargeImage")));
+            this.cmsBarkodaGore.Name = "cmsBarkodaGore";
+            this.cmsBarkodaGore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.cmsBarkodaGore_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -628,7 +672,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1105, 29);
+            this.barDockControlTop.Size = new System.Drawing.Size(1105, 24);
             // 
             // barDockControlBottom
             // 
@@ -642,17 +686,17 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 29);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 895);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 900);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1105, 29);
+            this.barDockControlRight.Location = new System.Drawing.Point(1105, 24);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 895);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 900);
             // 
             // barSubItem1
             // 
@@ -687,7 +731,7 @@
             this.chkAlisFiyat3.Location = new System.Drawing.Point(289, 654);
             this.chkAlisFiyat3.Name = "chkAlisFiyat3";
             this.chkAlisFiyat3.Properties.Caption = "";
-            this.chkAlisFiyat3.Size = new System.Drawing.Size(20, 19);
+            this.chkAlisFiyat3.Size = new System.Drawing.Size(20, 20);
             this.chkAlisFiyat3.TabIndex = 47;
             this.chkAlisFiyat3.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -698,7 +742,7 @@
             this.chkAlisFiyat2.Location = new System.Drawing.Point(289, 628);
             this.chkAlisFiyat2.Name = "chkAlisFiyat2";
             this.chkAlisFiyat2.Properties.Caption = "";
-            this.chkAlisFiyat2.Size = new System.Drawing.Size(20, 19);
+            this.chkAlisFiyat2.Size = new System.Drawing.Size(20, 20);
             this.chkAlisFiyat2.TabIndex = 46;
             this.chkAlisFiyat2.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -709,7 +753,7 @@
             this.chkAlisFiyat1.Location = new System.Drawing.Point(289, 602);
             this.chkAlisFiyat1.Name = "chkAlisFiyat1";
             this.chkAlisFiyat1.Properties.Caption = "";
-            this.chkAlisFiyat1.Size = new System.Drawing.Size(20, 19);
+            this.chkAlisFiyat1.Size = new System.Drawing.Size(20, 20);
             this.chkAlisFiyat1.TabIndex = 45;
             this.chkAlisFiyat1.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -728,7 +772,7 @@
             this.chkMinStokMiktari.Location = new System.Drawing.Point(289, 164);
             this.chkMinStokMiktari.Name = "chkMinStokMiktari";
             this.chkMinStokMiktari.Properties.Caption = "";
-            this.chkMinStokMiktari.Size = new System.Drawing.Size(20, 19);
+            this.chkMinStokMiktari.Size = new System.Drawing.Size(20, 20);
             this.chkMinStokMiktari.TabIndex = 31;
             this.chkMinStokMiktari.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -739,7 +783,7 @@
             this.chkStokBirim.Location = new System.Drawing.Point(289, 112);
             this.chkStokBirim.Name = "chkStokBirim";
             this.chkStokBirim.Properties.Caption = "";
-            this.chkStokBirim.Size = new System.Drawing.Size(20, 19);
+            this.chkStokBirim.Size = new System.Drawing.Size(20, 20);
             this.chkStokBirim.TabIndex = 29;
             this.chkStokBirim.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -758,7 +802,7 @@
             this.chkOzelKod.Location = new System.Drawing.Point(289, 550);
             this.chkOzelKod.Name = "chkOzelKod";
             this.chkOzelKod.Properties.Caption = "";
-            this.chkOzelKod.Size = new System.Drawing.Size(20, 19);
+            this.chkOzelKod.Size = new System.Drawing.Size(20, 20);
             this.chkOzelKod.TabIndex = 43;
             this.chkOzelKod.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -769,7 +813,7 @@
             this.chkUretici.Location = new System.Drawing.Point(289, 420);
             this.chkUretici.Name = "chkUretici";
             this.chkUretici.Properties.Caption = "";
-            this.chkUretici.Size = new System.Drawing.Size(20, 19);
+            this.chkUretici.Size = new System.Drawing.Size(20, 20);
             this.chkUretici.TabIndex = 38;
             this.chkUretici.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -789,6 +833,14 @@
             this.labelControl27.TabIndex = 0;
             this.labelControl27.Text = "Devir Miktarı :";
             // 
+            // labelControl33
+            // 
+            this.labelControl33.Location = new System.Drawing.Point(29, 760);
+            this.labelControl33.Name = "labelControl33";
+            this.labelControl33.Size = new System.Drawing.Size(73, 13);
+            this.labelControl33.TabIndex = 0;
+            this.labelControl33.Text = "Satış Fiyat - 4 :";
+            // 
             // chkSezonYil
             // 
             this.chkSezonYil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -796,7 +848,7 @@
             this.chkSezonYil.Location = new System.Drawing.Point(289, 524);
             this.chkSezonYil.Name = "chkSezonYil";
             this.chkSezonYil.Properties.Caption = "";
-            this.chkSezonYil.Size = new System.Drawing.Size(20, 19);
+            this.chkSezonYil.Size = new System.Drawing.Size(20, 20);
             this.chkSezonYil.TabIndex = 42;
             this.chkSezonYil.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -815,7 +867,7 @@
             this.chkMarka.Location = new System.Drawing.Point(289, 394);
             this.chkMarka.Name = "chkMarka";
             this.chkMarka.Properties.Caption = "";
-            this.chkMarka.Size = new System.Drawing.Size(20, 19);
+            this.chkMarka.Size = new System.Drawing.Size(20, 20);
             this.chkMarka.TabIndex = 37;
             this.chkMarka.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -834,7 +886,7 @@
             this.chkBarkodTuru.Location = new System.Drawing.Point(289, 86);
             this.chkBarkodTuru.Name = "chkBarkodTuru";
             this.chkBarkodTuru.Properties.Caption = "";
-            this.chkBarkodTuru.Size = new System.Drawing.Size(20, 19);
+            this.chkBarkodTuru.Size = new System.Drawing.Size(20, 20);
             this.chkBarkodTuru.TabIndex = 28;
             this.chkBarkodTuru.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -845,7 +897,7 @@
             this.chkBarkod.Location = new System.Drawing.Point(289, 60);
             this.chkBarkod.Name = "chkBarkod";
             this.chkBarkod.Properties.Caption = "";
-            this.chkBarkod.Size = new System.Drawing.Size(20, 19);
+            this.chkBarkod.Size = new System.Drawing.Size(20, 20);
             this.chkBarkod.TabIndex = 27;
             this.chkBarkod.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -856,7 +908,7 @@
             this.chkAciklama.Location = new System.Drawing.Point(289, 216);
             this.chkAciklama.Name = "chkAciklama";
             this.chkAciklama.Properties.Caption = "";
-            this.chkAciklama.Size = new System.Drawing.Size(20, 19);
+            this.chkAciklama.Size = new System.Drawing.Size(20, 20);
             this.chkAciklama.TabIndex = 33;
             this.chkAciklama.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -867,7 +919,7 @@
             this.chkModel.Location = new System.Drawing.Point(289, 446);
             this.chkModel.Name = "chkModel";
             this.chkModel.Properties.Caption = "";
-            this.chkModel.Size = new System.Drawing.Size(20, 19);
+            this.chkModel.Size = new System.Drawing.Size(20, 20);
             this.chkModel.TabIndex = 39;
             this.chkModel.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -878,7 +930,7 @@
             this.chkKategoriKodu.Location = new System.Drawing.Point(289, 265);
             this.chkKategoriKodu.Name = "chkKategoriKodu";
             this.chkKategoriKodu.Properties.Caption = "";
-            this.chkKategoriKodu.Size = new System.Drawing.Size(20, 19);
+            this.chkKategoriKodu.Size = new System.Drawing.Size(20, 20);
             this.chkKategoriKodu.TabIndex = 34;
             this.chkKategoriKodu.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -889,7 +941,7 @@
             this.chkKategori.Location = new System.Drawing.Point(289, 242);
             this.chkKategori.Name = "chkKategori";
             this.chkKategori.Properties.Caption = "";
-            this.chkKategori.Size = new System.Drawing.Size(20, 19);
+            this.chkKategori.Size = new System.Drawing.Size(20, 20);
             this.chkKategori.TabIndex = 34;
             this.chkKategori.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -900,7 +952,7 @@
             this.chkPozisyon.Location = new System.Drawing.Point(289, 498);
             this.chkPozisyon.Name = "chkPozisyon";
             this.chkPozisyon.Properties.Caption = "";
-            this.chkPozisyon.Size = new System.Drawing.Size(20, 19);
+            this.chkPozisyon.Size = new System.Drawing.Size(20, 20);
             this.chkPozisyon.TabIndex = 41;
             this.chkPozisyon.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -911,7 +963,7 @@
             this.chkAltGrupKodu.Location = new System.Drawing.Point(289, 368);
             this.chkAltGrupKodu.Name = "chkAltGrupKodu";
             this.chkAltGrupKodu.Properties.Caption = "";
-            this.chkAltGrupKodu.Size = new System.Drawing.Size(20, 19);
+            this.chkAltGrupKodu.Size = new System.Drawing.Size(20, 20);
             this.chkAltGrupKodu.TabIndex = 36;
             this.chkAltGrupKodu.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -922,7 +974,7 @@
             this.chkAltGrup.Location = new System.Drawing.Point(289, 343);
             this.chkAltGrup.Name = "chkAltGrup";
             this.chkAltGrup.Properties.Caption = "";
-            this.chkAltGrup.Size = new System.Drawing.Size(20, 19);
+            this.chkAltGrup.Size = new System.Drawing.Size(20, 20);
             this.chkAltGrup.TabIndex = 36;
             this.chkAltGrup.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -933,7 +985,7 @@
             this.chkProje.Location = new System.Drawing.Point(289, 472);
             this.chkProje.Name = "chkProje";
             this.chkProje.Properties.Caption = "";
-            this.chkProje.Size = new System.Drawing.Size(20, 19);
+            this.chkProje.Size = new System.Drawing.Size(20, 20);
             this.chkProje.TabIndex = 40;
             this.chkProje.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -944,7 +996,7 @@
             this.chkAnaGrupKodu.Location = new System.Drawing.Point(289, 315);
             this.chkAnaGrupKodu.Name = "chkAnaGrupKodu";
             this.chkAnaGrupKodu.Properties.Caption = "";
-            this.chkAnaGrupKodu.Size = new System.Drawing.Size(20, 19);
+            this.chkAnaGrupKodu.Size = new System.Drawing.Size(20, 20);
             this.chkAnaGrupKodu.TabIndex = 35;
             this.chkAnaGrupKodu.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -955,7 +1007,7 @@
             this.chkAnaGrup.Location = new System.Drawing.Point(289, 289);
             this.chkAnaGrup.Name = "chkAnaGrup";
             this.chkAnaGrup.Properties.Caption = "";
-            this.chkAnaGrup.Size = new System.Drawing.Size(20, 19);
+            this.chkAnaGrup.Size = new System.Drawing.Size(20, 20);
             this.chkAnaGrup.TabIndex = 35;
             this.chkAnaGrup.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -1054,7 +1106,7 @@
             this.chkKDV.Location = new System.Drawing.Point(289, 576);
             this.chkKDV.Name = "chkKDV";
             this.chkKDV.Properties.Caption = "";
-            this.chkKDV.Size = new System.Drawing.Size(20, 19);
+            this.chkKDV.Size = new System.Drawing.Size(20, 20);
             this.chkKDV.TabIndex = 44;
             this.chkKDV.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -1161,7 +1213,7 @@
             this.chkSatisFiyat2.Location = new System.Drawing.Point(289, 706);
             this.chkSatisFiyat2.Name = "chkSatisFiyat2";
             this.chkSatisFiyat2.Properties.Caption = "";
-            this.chkSatisFiyat2.Size = new System.Drawing.Size(20, 19);
+            this.chkSatisFiyat2.Size = new System.Drawing.Size(20, 20);
             this.chkSatisFiyat2.TabIndex = 49;
             this.chkSatisFiyat2.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -1172,7 +1224,7 @@
             this.chkDevirMiktar.Location = new System.Drawing.Point(289, 836);
             this.chkDevirMiktar.Name = "chkDevirMiktar";
             this.chkDevirMiktar.Properties.Caption = "";
-            this.chkDevirMiktar.Size = new System.Drawing.Size(20, 19);
+            this.chkDevirMiktar.Size = new System.Drawing.Size(20, 20);
             this.chkDevirMiktar.TabIndex = 50;
             this.chkDevirMiktar.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -1187,6 +1239,17 @@
             this.cmbKategoriKodu.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbKategoriKodu.Size = new System.Drawing.Size(167, 20);
             this.cmbKategoriKodu.TabIndex = 9;
+            // 
+            // chkSatisFiyat4
+            // 
+            this.chkSatisFiyat4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkSatisFiyat4.EditValue = true;
+            this.chkSatisFiyat4.Location = new System.Drawing.Point(289, 758);
+            this.chkSatisFiyat4.Name = "chkSatisFiyat4";
+            this.chkSatisFiyat4.Properties.Caption = "";
+            this.chkSatisFiyat4.Size = new System.Drawing.Size(20, 20);
+            this.chkSatisFiyat4.TabIndex = 50;
+            this.chkSatisFiyat4.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
             // cmbKategori
             // 
@@ -1207,7 +1270,7 @@
             this.chkSatisFiyat3.Location = new System.Drawing.Point(289, 732);
             this.chkSatisFiyat3.Name = "chkSatisFiyat3";
             this.chkSatisFiyat3.Properties.Caption = "";
-            this.chkSatisFiyat3.Size = new System.Drawing.Size(20, 19);
+            this.chkSatisFiyat3.Size = new System.Drawing.Size(20, 20);
             this.chkSatisFiyat3.TabIndex = 50;
             this.chkSatisFiyat3.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -1230,7 +1293,7 @@
             this.chkSatisFiyat1.Location = new System.Drawing.Point(289, 680);
             this.chkSatisFiyat1.Name = "chkSatisFiyat1";
             this.chkSatisFiyat1.Properties.Caption = "";
-            this.chkSatisFiyat1.Size = new System.Drawing.Size(20, 19);
+            this.chkSatisFiyat1.Size = new System.Drawing.Size(20, 20);
             this.chkSatisFiyat1.TabIndex = 48;
             this.chkSatisFiyat1.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
             // 
@@ -1507,7 +1570,7 @@
             this.gcListe.Location = new System.Drawing.Point(0, 0);
             this.gcListe.MainView = this.gridListe;
             this.gcListe.Name = "gcListe";
-            this.gcListe.Size = new System.Drawing.Size(790, 871);
+            this.gcListe.Size = new System.Drawing.Size(785, 876);
             this.gcListe.TabIndex = 0;
             this.gcListe.UseEmbeddedNavigator = true;
             this.gcListe.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1524,45 +1587,14 @@
             // 
             this.progressKayit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.progressKayit.EditValue = "0";
-            this.progressKayit.Location = new System.Drawing.Point(0, 871);
+            this.progressKayit.Location = new System.Drawing.Point(0, 876);
             this.progressKayit.Name = "progressKayit";
             this.progressKayit.Properties.PercentView = false;
             this.progressKayit.Properties.ShowTitle = true;
             this.progressKayit.Properties.Step = 1;
             this.progressKayit.ShowProgressInTaskBar = true;
-            this.progressKayit.Size = new System.Drawing.Size(790, 24);
+            this.progressKayit.Size = new System.Drawing.Size(785, 24);
             this.progressKayit.TabIndex = 1;
-            // 
-            // chkSatisFiyat4
-            // 
-            this.chkSatisFiyat4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkSatisFiyat4.EditValue = true;
-            this.chkSatisFiyat4.Location = new System.Drawing.Point(289, 758);
-            this.chkSatisFiyat4.Name = "chkSatisFiyat4";
-            this.chkSatisFiyat4.Properties.Caption = "";
-            this.chkSatisFiyat4.Size = new System.Drawing.Size(20, 19);
-            this.chkSatisFiyat4.TabIndex = 50;
-            this.chkSatisFiyat4.CheckedChanged += new System.EventHandler(this.CheckBoxKontrol);
-            // 
-            // labelControl33
-            // 
-            this.labelControl33.Location = new System.Drawing.Point(29, 760);
-            this.labelControl33.Name = "labelControl33";
-            this.labelControl33.Size = new System.Drawing.Size(73, 13);
-            this.labelControl33.TabIndex = 0;
-            this.labelControl33.Text = "Satış Fiyat - 4 :";
-            // 
-            // cmbSatisFiyat4
-            // 
-            this.cmbSatisFiyat4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbSatisFiyat4.Location = new System.Drawing.Point(106, 757);
-            this.cmbSatisFiyat4.Name = "cmbSatisFiyat4";
-            this.cmbSatisFiyat4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbSatisFiyat4.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmbSatisFiyat4.Size = new System.Drawing.Size(167, 20);
-            this.cmbSatisFiyat4.TabIndex = 25;
             // 
             // frmCokluStok
             // 
@@ -1574,7 +1606,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("frmCokluStok.IconOptions.Icon")));
             this.Name = "frmCokluStok";
             this.Text = "Çoklu Stok Ekleme/Güncelleme Formu";
             this.Load += new System.EventHandler(this.frmCokluStok_Load);
@@ -1588,6 +1620,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbWebSatis.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSatisFiyat2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDevirMiktar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSatisFiyat4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSatisFiyat3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSatisFiyat1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkStokAdi.Properties)).EndInit();
@@ -1638,6 +1671,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkSatisFiyat2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDevirMiktar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbKategoriKodu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkSatisFiyat4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbKategori.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkSatisFiyat3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbProje.Properties)).EndInit();
@@ -1654,8 +1688,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gcListe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridListe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.progressKayit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkSatisFiyat4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSatisFiyat4.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1684,7 +1716,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem barBtnExcelAc;
         private DevExpress.XtraBars.BarButtonItem barBtnVeriEkle;
-        private DevExpress.XtraBars.BarButtonItem barBtnVeriGuncelle;
         private DevExpress.XtraBars.BarButtonItem barBtnKapat;
         private DevExpress.XtraBars.BarEditItem cmbProviders;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
@@ -1785,5 +1816,8 @@
         private DevExpress.XtraEditors.ComboBoxEdit cmbSatisFiyat4;
         private DevExpress.XtraEditors.LabelControl labelControl33;
         private DevExpress.XtraEditors.CheckEdit chkSatisFiyat4;
+        private DevExpress.XtraBars.BarSubItem menuVerileriGuncelle;
+        private DevExpress.XtraBars.BarLargeButtonItem cmsStokKodunaGore;
+        private DevExpress.XtraBars.BarLargeButtonItem cmsBarkodaGore;
     }
 }

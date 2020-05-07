@@ -6,6 +6,7 @@ using NetSatis.Entities.Context;
 using NetSatis.Entities.Tables;
 using NetSatis.Entities.Tools;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
 using System.Linq;
@@ -389,7 +390,7 @@ namespace NetSatis.BackOffice.Stok
                         DB.SaveChanges();
                         if (DevirMiktar != "" && DevirMiktar != "0")
                         {
-                            NetSatisContext context= new NetSatisContext();
+                            NetSatisContext context = new NetSatisContext();
                             StokHareket stokHar = new StokHareket();
                             stokHar.StokId = stok.Id;
                             stokHar.Hareket = "Stok Giriş";
@@ -488,8 +489,13 @@ namespace NetSatis.BackOffice.Stok
         /// Verilerin güncelleme işleminin yapıldığı metoddur. Ekleme metodu ile benzer şekilde çalışır.
         /// Sadece alanların aktif olup olmadıklarına göre güncelleme işlemi gerçekleştirir.
         /// </summary>
-        public void VeriGuncelle()
+        public void VeriGuncelle(VerileriGuncellemeYontemi yontem)
         {
+            if (gridListe.RowCount == 0)
+            {
+                MessageBox.Show("Lütfen seçtiğiniz dosyaya ait verileri çekin yada dosya içeriğini doldurunuz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             #region Değişkenler
             string StokKodu, StokAdi, Barkodu, BarkodTuru, Birim, KategoriDegisken, AnaGrupDegisken, AltGrupDegisken, Marka, Uretici,
         Modeli, Proje, Pozisyon, SezonYil, OzelKodu, GarantiSuresi, SatisKdv, KategoriKodu, AnaGrupKodu, AltGrupKodu,
@@ -534,39 +540,76 @@ namespace NetSatis.BackOffice.Stok
                 Aciklama = VeriAl(cmbAciklama, i);
                 #endregion
                 #region Güncelleme İşlemi
-                Entities.Tables.Stok stok = DB.Stoklar.FirstOrDefault(x => x.StokKodu == StokKodu);
-                if (stok != null)
+
+
+                var res = new List<Entities.Tables.Stok>();
+                if (yontem == VerileriGuncellemeYontemi.Stok)
                 {
-                    if (chkAciklama.Checked) stok.Aciklama = Aciklama;
-                    if (chkAlisFiyat1.Checked) stok.AlisFiyati1 = decimal.Parse(AlisFiyati1);
-                    if (chkAlisFiyat2.Checked) stok.AlisFiyati2 = decimal.Parse(AlisFiyati2);
-                    if (chkAlisFiyat3.Checked) stok.AlisFiyati3 = decimal.Parse(AlisFiyati3);
-                    if (chkAltGrup.Checked) stok.AltGrup = AltGrupKodu;
-                    if (chkAnaGrup.Checked) stok.AnaGrup = AnaGrupKodu;
-                    if (chkBarkod.Checked) stok.Barkodu = Barkodu;
-                    if (chkBarkodTuru.Checked) stok.BarkodTuru = BarkodTuru;
-                    if (chkStokBirim.Checked) stok.Birim = Birim;
-                    if (chkGarantiSuresi.Checked) stok.GarantiSuresi = GarantiSuresi;
-                    if (chkKategori.Checked) stok.Kategori = KategoriKodu;
-                    if (chkMarka.Checked) stok.Marka = Marka;
-                    if (chkMinStokMiktari.Checked) stok.MaxmumStokMiktari = decimal.Parse(MinmumStokMiktari);
-                    if (chkMaxStokMiktari.Checked) stok.MaxmumStokMiktari = decimal.Parse(MaxmumStokMiktari);
-                    if (chkModel.Checked) stok.Modeli = Modeli;
-                    if (chkOzelKod.Checked) stok.OzelKodu = OzelKodu;
-                    if (chkPozisyon.Checked) stok.Pozisyon = Pozisyon;
-                    if (chkProje.Checked) stok.Proje = Proje;
-                    if (chkSatisFiyat1.Checked) stok.SatisFiyati1 = decimal.Parse(SatisFiyati1);
-                    if (chkSatisFiyat2.Checked) stok.SatisFiyati2 = decimal.Parse(SatisFiyati2);
-                    if (chkSatisFiyat3.Checked) stok.SatisFiyati3 = decimal.Parse(SatisFiyati3);
-                    if (chkSatisFiyat4.Checked) stok.SatisFiyati4 = decimal.Parse(SatisFiyati4);
-                    if (chkWebSatis.Checked) stok.WebSatisFiyati = decimal.Parse(WebSatisFiyat);
-                    if (chkWebBayi.Checked) stok.WebBayiSatisFiyati = decimal.Parse(WebBayiFiyat);
-                    if (chkKDV.Checked) stok.SatisKdv = int.Parse(SatisKdv);
-                    if (chkSezonYil.Checked) stok.SezonYil = SezonYil;
-                    if (chkStokAdi.Checked) stok.StokAdi = StokAdi;
-                    if (chkUretici.Checked) stok.Uretici = Uretici;
+                    if (string.IsNullOrEmpty(StokKodu))
+                    {
+                        MessageBox.Show("Lütfen Stok Kodu Giriniz!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    res = DB.Stoklar.Where(x => x.StokKodu == StokKodu).ToList();
+
+                    if (res.Count == 0)
+                    {
+                        MessageBox.Show("Girilen Stok koduna ait ürün bulunamadı!", "", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        return;
+                    }
                 }
-                DB.SaveChanges();
+                else if (yontem == VerileriGuncellemeYontemi.Barkod)
+                {
+
+                    if (string.IsNullOrEmpty(Barkodu))
+                    {
+                        MessageBox.Show("Lütfen Stok Kodu Giriniz!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    res = DB.Stoklar.Include("Barkod").Where(x => x.Barkodu == Barkodu || x.Barkod.Any(s => s.Barkodu == Barkodu)).ToList();
+
+
+                    if (res.Count == 0)
+                    {
+                        MessageBox.Show("Girilen barkoda ait ürün bulunamadı!", "", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        return;
+                    }
+                }
+                if (res.Count > 0)
+                {
+                    foreach (var stok in res)
+                    {
+                        if (chkAciklama.Checked) stok.Aciklama = Aciklama;
+                        if (chkAlisFiyat1.Checked) stok.AlisFiyati1 = decimal.Parse(AlisFiyati1);
+                        if (chkAlisFiyat2.Checked) stok.AlisFiyati2 = decimal.Parse(AlisFiyati2);
+                        if (chkAlisFiyat3.Checked) stok.AlisFiyati3 = decimal.Parse(AlisFiyati3);
+                        if (chkAltGrup.Checked) stok.AltGrup = AltGrupKodu;
+                        if (chkAnaGrup.Checked) stok.AnaGrup = AnaGrupKodu;
+                        if (chkBarkod.Checked) stok.Barkodu = Barkodu;
+                        if (chkBarkodTuru.Checked) stok.BarkodTuru = BarkodTuru;
+                        if (chkStokBirim.Checked) stok.Birim = Birim;
+                        if (chkGarantiSuresi.Checked) stok.GarantiSuresi = GarantiSuresi;
+                        if (chkKategori.Checked) stok.Kategori = KategoriKodu;
+                        if (chkMarka.Checked) stok.Marka = Marka;
+                        if (chkMinStokMiktari.Checked) stok.MaxmumStokMiktari = decimal.Parse(MinmumStokMiktari);
+                        if (chkMaxStokMiktari.Checked) stok.MaxmumStokMiktari = decimal.Parse(MaxmumStokMiktari);
+                        if (chkModel.Checked) stok.Modeli = Modeli;
+                        if (chkOzelKod.Checked) stok.OzelKodu = OzelKodu;
+                        if (chkPozisyon.Checked) stok.Pozisyon = Pozisyon;
+                        if (chkProje.Checked) stok.Proje = Proje;
+                        if (chkSatisFiyat1.Checked) stok.SatisFiyati1 = decimal.Parse(SatisFiyati1);
+                        if (chkSatisFiyat2.Checked) stok.SatisFiyati2 = decimal.Parse(SatisFiyati2);
+                        if (chkSatisFiyat3.Checked) stok.SatisFiyati3 = decimal.Parse(SatisFiyati3);
+                        if (chkSatisFiyat4.Checked) stok.SatisFiyati4 = decimal.Parse(SatisFiyati4);
+                        if (chkWebSatis.Checked) stok.WebSatisFiyati = decimal.Parse(WebSatisFiyat);
+                        if (chkWebBayi.Checked) stok.WebBayiSatisFiyati = decimal.Parse(WebBayiFiyat);
+                        if (chkKDV.Checked) stok.SatisKdv = int.Parse(SatisKdv);
+                        if (chkSezonYil.Checked) stok.SezonYil = SezonYil;
+                        if (chkStokAdi.Checked) stok.StokAdi = StokAdi;
+                        if (chkUretici.Checked) stok.Uretici = Uretici;
+                    }
+                    DB.SaveChanges();
+                }
                 var kategori = DB.Kategoriler.FirstOrDefault(x => x.Kod == KategoriKodu);
                 var anagrup = DB.AnaGruplar.FirstOrDefault(x => x.Kod == AnaGrupKodu);
                 var altgrup = DB.AltGruplar.FirstOrDefault(x => x.Kod == AltGrupKodu);
@@ -686,25 +729,7 @@ namespace NetSatis.BackOffice.Stok
                 VeriEkle();
             });
         }
-        /// <summary>
-        /// Güncelleme işlemi için alanların kontrolü yapılır. Öncelikle bir stok kodunun seçilip seçilmediğine bakılır. 
-        /// SEçili olan stok koduna göre aktif olan alanlar güncellenir.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void barBtnVeriGuncelle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (cmbStokKodu.SelectedIndex == 0)
-            {
-                //Mesajlar.Hata(new Exception("Lütfen stok kodu alanı seçimini yapınız."));
-                return;
-            }
-            DialogResult DR = MessageBox.Show("Aktif edilen tüm alanlar güncellenecektir. Aktif alanlardan herhangi birini boş bırakmadığınızdan emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Hand);
-            if (DR == DialogResult.Yes)
-            {
-                VeriGuncelle();
-            }
-        }
+
         private void barBtnKapat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             this.Close();
@@ -750,5 +775,46 @@ namespace NetSatis.BackOffice.Stok
                 //Mesajlar.Hata(new Exception("Bir excel dosyası seçimi yapmadınız."));
             }
         }
+
+
+        /// <summary>
+        /// Güncelleme işlemi için alanların kontrolü yapılır. Öncelikle bir stok kodunun seçilip seçilmediğine bakılır. 
+        /// SEçili olan stok koduna göre aktif olan alanlar güncellenir.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param> 
+        private void cmsStokKodunaGore_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (cmbStokKodu.SelectedIndex == 0)
+            {
+                //Mesajlar.Hata(new Exception("Lütfen stok kodu alanı seçimini yapınız."));
+                return;
+            }
+            DialogResult DR = MessageBox.Show("Aktif edilen tüm alanlar güncellenecektir. Aktif alanlardan herhangi birini boş bırakmadığınızdan emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Hand);
+            if (DR == DialogResult.Yes)
+            {
+                VeriGuncelle(VerileriGuncellemeYontemi.Stok);
+            }
+        }
+
+        private void cmsBarkodaGore_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (cmbBarkod.SelectedIndex == 0)
+            {
+                //Mesajlar.Hata(new Exception("Lütfen stok kodu alanı seçimini yapınız."));
+                return;
+            }
+            DialogResult DR = MessageBox.Show("Aktif edilen tüm alanlar güncellenecektir. Aktif alanlardan herhangi birini boş bırakmadığınızdan emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Hand);
+            if (DR == DialogResult.Yes)
+            {
+                VeriGuncelle(VerileriGuncellemeYontemi.Barkod);
+            }
+        }
+    }
+
+    public enum VerileriGuncellemeYontemi
+    {
+        Stok,
+        Barkod
     }
 }
