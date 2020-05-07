@@ -150,9 +150,16 @@ namespace NetSatis.BackOffice.Fiş
         {
             SiparisdenFaturaOlustur();
         }
+
         void SiparisdenFaturaOlustur()
         {
-            string cariKodu = gridFisler.GetRowCellValue(gridFisler.GetSelectedRows()[0], "CariKodu").ToString();
+            if (gridFisler.RowCount == 0)
+            {
+                MessageBox.Show("Fiş kalemleri bulunamadı!, Lütfen tekrar Sipariş fişi oluşturunuz!","Hatalı Fiş",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+        }
+
+        string cariKodu = gridFisler.GetRowCellValue(gridFisler.GetSelectedRows()[0], "CariKodu").ToString();
             for (int i = 0; i < gridFisler.GetSelectedRows().Length; i++)
             {
                 if (cariKodu != gridFisler.GetRowCellValue(gridFisler.GetSelectedRows()[i], "CariKodu").ToString())
