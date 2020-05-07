@@ -155,11 +155,11 @@ namespace NetSatis.BackOffice.Fiş
         {
             if (gridFisler.RowCount == 0)
             {
-                MessageBox.Show("Fiş kalemleri bulunamadı!, Lütfen tekrar Sipariş fişi oluşturunuz!","Hatalı Fiş",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Fiş kalemleri bulunamadı!, Lütfen tekrar Sipariş fişi oluşturunuz!", "Hatalı Fiş", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-        }
+            }
 
-        string cariKodu = gridFisler.GetRowCellValue(gridFisler.GetSelectedRows()[0], "CariKodu").ToString();
+            string cariKodu = gridFisler.GetRowCellValue(gridFisler.GetSelectedRows()[0], "CariKodu").ToString();
             for (int i = 0; i < gridFisler.GetSelectedRows().Length; i++)
             {
                 if (cariKodu != gridFisler.GetRowCellValue(gridFisler.GetSelectedRows()[i], "CariKodu").ToString())
@@ -214,6 +214,13 @@ namespace NetSatis.BackOffice.Fiş
                 fisToplamTutar += Convert.ToDecimal(tempFis.ToplamTutar);
 
 
+
+                var hareketVarmi = context.StokHareketleri.Any(x => x.FisKodu == tempFis.FisKodu);
+                if (!hareketVarmi)
+                {
+                    MessageBox.Show("Seçili siparişe ait stok bulunamamıştır, Lütfen sipariş fişini tekrar oluşturunuz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 //BURASI---------------------------------------------------
 
 
@@ -370,7 +377,7 @@ namespace NetSatis.BackOffice.Fiş
             foreach (var stok in hareketler)
             {
                 decimal fyt = stok.KdvToplam.Value;
-                decimal fyt2 = stok.ToplamTutar.Value; 
+                decimal fyt2 = stok.ToplamTutar.Value;
                 NetSatis.EDonusum.Models.Donusum.Details d = null;
 
                 d = new EDonusum.Models.Donusum.Details
