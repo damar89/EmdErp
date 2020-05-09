@@ -28,10 +28,12 @@ namespace NetSatis.BackOffice.Stok
         {
             InitializeComponent();
             context = new NetSatisContext();
-            if (entity.Id != 0) {
+            if (entity.Id != 0)
+            {
                 guncelle = true;
             }
-            if (entity.StokKodu != null) {
+            if (entity.StokKodu != null)
+            {
                 guncelle = true;
             }
             Olustur(entity, kopyala);
@@ -40,17 +42,19 @@ namespace NetSatis.BackOffice.Stok
         {
             InitializeComponent();
             this.context = _context;
-            if (entity.Id != 0) {
+            if (entity.Id != 0)
+            {
                 guncelle = true;
             }
             Olustur(entity, kopyala);
-           
+
         }
         private void Olustur(Entities.Tables.Stok entity, bool kopyala = false)
         {
             kodOlustur = new CodeTool(this, CodeTool.Table.Stok);
             kodOlustur.BarButonOlustur();
-            if (kopyala) {
+            if (kopyala)
+            {
                 _entity = new Entities.Tables.Stok();
                 _entity.Id = -1;
                 _entity.StokKodu = "";
@@ -66,17 +70,20 @@ namespace NetSatis.BackOffice.Stok
                 _entity.Aciklama = entity.Aciklama;
                 _entity.Kategori = entity.Kategori;
                 var kategoriAdi = context.Kategoriler.SingleOrDefault(x => x.Kod == entity.Kategori);
-                if (kategoriAdi != null) {
+                if (kategoriAdi != null)
+                {
                     _entity.Kategori = entity.Kategori + " - " + kategoriAdi.KategoriAdi;
                 }
                 _entity.AnaGrup = entity.AnaGrup;
                 var anagrupAdi = context.AnaGruplar.SingleOrDefault(x => x.Kod == entity.AnaGrup);
-                if (anagrupAdi != null) {
+                if (anagrupAdi != null)
+                {
                     _entity.AnaGrup = entity.AnaGrup + " - " + anagrupAdi.AnaGrupAdi;
                 }
                 _entity.AltGrup = entity.AltGrup;
                 var altgrupAdi = context.AltGruplar.SingleOrDefault(x => x.Kod == entity.AltGrup);
-                if (altgrupAdi != null) {
+                if (altgrupAdi != null)
+                {
                     _entity.AltGrup = entity.AltGrup + " - " + altgrupAdi.AltGrupAdi;
                 }
                 _entity.Marka = entity.Marka;
@@ -102,24 +109,30 @@ namespace NetSatis.BackOffice.Stok
                 _entity.WebSatisFiyati = entity.WebSatisFiyati;
                 _entity.WebBayiSatisFiyati = entity.WebBayiSatisFiyati;
                 _entity.Resim = entity.Resim;
-            } else {
+            }
+            else
+            {
                 _entity = entity;
                 var kategoriAdi = context.Kategoriler.SingleOrDefault(x => x.Kod == entity.Kategori);
-                if (kategoriAdi != null) {
+                if (kategoriAdi != null)
+                {
                     _entity.Kategori = entity.Kategori + " - " + kategoriAdi.KategoriAdi;
                 }
                 var anagrupAdi = context.AnaGruplar.SingleOrDefault(x => x.Kod == entity.AnaGrup);
-                if (anagrupAdi != null) {
+                if (anagrupAdi != null)
+                {
                     _entity.AnaGrup = entity.AnaGrup + " - " + anagrupAdi.AnaGrupAdi;
                 }
                 var altgrupAdi = context.AltGruplar.SingleOrDefault(x => x.Kod == entity.AltGrup);
-                if (altgrupAdi != null) {
+                if (altgrupAdi != null)
+                {
                     _entity.AltGrup = entity.AltGrup + " - " + altgrupAdi.AltGrupAdi;
                 }
             }
             //btnYeni_Click(null, null);
             bindingSource();
-            if (_entity.Resim != null) {
+            if (_entity.Resim != null)
+            {
                 Image img = byteArrayToImage(_entity.Resim);
                 peResim.Image = img;
             }
@@ -132,34 +145,42 @@ namespace NetSatis.BackOffice.Stok
 
             var firstIndex = -1;
 
-            if (btnKategori.Text != "") {
+            if (btnKategori.Text != "")
+            {
                 firstIndex = btnKategori.Text.IndexOf(" - ");
                 if (firstIndex >= 0)
                     btnKategori.Text = btnKategori.Text.Substring(0, firstIndex);
             }
-            if (btnAnaGrup.Text != "") {
+            if (btnAnaGrup.Text != "")
+            {
                 firstIndex = btnAnaGrup.Text.IndexOf(" - ");
                 if (firstIndex >= 0)
                     btnAnaGrup.Text = btnAnaGrup.Text.Substring(0, firstIndex);
             }
-            if (btnAltGrup.Text != "") {
+            if (btnAltGrup.Text != "")
+            {
                 firstIndex = btnAltGrup.Text.IndexOf(" - ");
                 if (firstIndex >= 0)
                     btnAltGrup.Text = btnAltGrup.Text.Substring(0, firstIndex);
             }
-            if (peResim.Image != null) {
+            if (peResim.Image != null)
+            {
                 Image img = peResim.Image;
                 _entity.Resim = imageToByteArray(img);
             }
-            if (context.Barkodlar.Local.ToList().Count > 0) {
+            if (context.Barkodlar.Local.ToList().Count > 0)
+            {
                 if (string.IsNullOrEmpty(_entity.Barkodu) || string.IsNullOrWhiteSpace(_entity.Barkodu))
                     _entity.Barkodu = context.Barkodlar.Local.ToList()[0].Barkodu ?? "";
             }
-            foreach (var barkod in context.Barkodlar.Local.ToList()) {
+            foreach (var barkod in context.Barkodlar.Local.ToList())
+            {
                 barkod.StokId = _entity.Id;
             }
-            if (stokDal.AddOrUpdate(context, _entity)) {
-                if (calcDevirGirisi.EditValue != null && calcDevirGirisi.EditValue != "" && Convert.ToInt32(calcDevirGirisi.EditValue) != 0) {
+            if (stokDal.AddOrUpdate(context, _entity))
+            {
+                if (calcDevirGirisi.EditValue != null && calcDevirGirisi.EditValue != "" && Convert.ToInt32(calcDevirGirisi.EditValue) != 0)
+                {
                     Fis stokDevirFisi = new Fis();
                     var kod = context.Kodlar.Where(c => c.Tablo == "fis").First();
                     stokDevirFisi.FisKodu = CodeTool.fiskodolustur(kod.OnEki.ToString(), kod.SonDeger.ToString());
@@ -182,11 +203,14 @@ namespace NetSatis.BackOffice.Stok
                     stokHar.Tarih = DateTime.Now;
                     stokHar.FisTuru = "Stok Devir Fişi";
                     decimal kdvToplam = 0, araToplam = 0, toplamTutar = 0;
-                    if (stokHar.Kdv == 0) {
+                    if (stokHar.Kdv == 0)
+                    {
                         araToplam = Convert.ToDecimal(stokHar.Miktar) * Convert.ToDecimal(stokHar.BirimFiyati);
                         kdvToplam = araToplam * (stokHar.Kdv / 100);
                         toplamTutar = araToplam + kdvToplam;
-                    } else {
+                    }
+                    else
+                    {
                         araToplam = Convert.ToDecimal(stokHar.Miktar) * Convert.ToDecimal(stokHar.BirimFiyati);
                         kdvToplam = araToplam - araToplam / ((100 + stokHar.Kdv) / 100);
                         toplamTutar = araToplam;
@@ -197,7 +221,8 @@ namespace NetSatis.BackOffice.Stok
                     context.StokHareketleri.Add(stokHar);
                     context.SaveChanges();
                     Fis fis = context.Fisler.FirstOrDefault(x => x.Id == stokDevirFisi.Id);
-                    if (fis != null) {
+                    if (fis != null)
+                    {
                         stokDevirFisi.KdvToplam_ = kdvToplam;
                         stokDevirFisi.AraToplam_ = araToplam;
                         stokDevirFisi.ToplamTutar = toplamTutar;
@@ -208,13 +233,15 @@ namespace NetSatis.BackOffice.Stok
                 stokDal.Save(context);
                 calcDevirGirisi.Text = "";
                 lblMiktar.Text = "";
-                if (!kaydetYeni) {
+                if (!kaydetYeni)
+                {
                     this.Close();
                 }
             }
             stokDal.Save(context);
             MessageBox.Show("Stok başarılı bir şekilde kaydedilmiştir.");
-            if (!kaydetYeni) {
+            if (!kaydetYeni)
+            {
                 this.Close();
             }
         }
@@ -224,7 +251,8 @@ namespace NetSatis.BackOffice.Stok
         }
         private void frmStokIslem_Load(object sender, EventArgs e)
         {
-            if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi))) {
+            if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi)))
+            {
                 layBagkur.Visibility =
                     layBorsa.Visibility =
                     layZirai.Visibility =
@@ -238,11 +266,13 @@ namespace NetSatis.BackOffice.Stok
         }
         private void txtBirim_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            switch (e.Button.Index) {
+            switch (e.Button.Index)
+            {
                 case 0:
                     frmTanim form = new frmTanim(frmTanim.TanimTuru.Birim);
                     form.ShowDialog();
-                    if (form.secildi) {
+                    if (form.secildi)
+                    {
                         txtBirim.Text = form._entity.Tanimi;
                     }
                     break;
@@ -253,11 +283,13 @@ namespace NetSatis.BackOffice.Stok
         }
         private void btnKategori_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            switch (e.Button.Index) {
+            switch (e.Button.Index)
+            {
                 case 0:
                     frmKategoriler form = new frmKategoriler(frmKategoriler.KategoriTuru.Kategori);
                     form.ShowDialog();
-                    if (form.secildi) {
+                    if (form.secildi)
+                    {
                         btnKategori.Text = form._entity.Kod + " - " + form._entity.KategoriAdi;
                     }
                     break;
@@ -268,16 +300,19 @@ namespace NetSatis.BackOffice.Stok
         }
         private void btnAnaGrup_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            switch (e.Button.Index) {
+            switch (e.Button.Index)
+            {
                 case 0:
                     string kategori = "";
-                    if (btnKategori.Text != "") {
+                    if (btnKategori.Text != "")
+                    {
                         int firstIndex = btnKategori.Text.IndexOf(" - ");
                         kategori = btnKategori.Text.Substring(0, firstIndex);
                     }
                     frmAnaGruplar form = new frmAnaGruplar(kategori);
                     form.ShowDialog();
-                    if (form.secildi) {
+                    if (form.secildi)
+                    {
                         btnAnaGrup.Text = form._entity.Kod + " - " + form._entity.AnaGrupAdi;
                     }
                     break;
@@ -288,16 +323,19 @@ namespace NetSatis.BackOffice.Stok
         }
         private void btnAltGrup_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            switch (e.Button.Index) {
+            switch (e.Button.Index)
+            {
                 case 0:
                     string anagrup = "";
-                    if (btnAnaGrup.Text != "") {
+                    if (btnAnaGrup.Text != "")
+                    {
                         int firstIndex = btnAnaGrup.Text.IndexOf(" - ");
                         anagrup = btnAnaGrup.Text.Substring(0, firstIndex);
                     }
                     frmAltGruplar form = new frmAltGruplar(anagrup);
                     form.ShowDialog();
-                    if (form.secildi) {
+                    if (form.secildi)
+                    {
                         btnAltGrup.Text = form._entity.Kod + " - " + form._entity.AltGrupAdi;
                     }
                     break;
@@ -308,11 +346,13 @@ namespace NetSatis.BackOffice.Stok
         }
         private void btnMarka_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            switch (e.Button.Index) {
+            switch (e.Button.Index)
+            {
                 case 0:
                     frmTanim form = new frmTanim(frmTanim.TanimTuru.Marka);
                     form.ShowDialog();
-                    if (form.secildi) {
+                    if (form.secildi)
+                    {
                         btnMarka.Text = form._entity.Tanimi;
                     }
                     break;
@@ -323,11 +363,13 @@ namespace NetSatis.BackOffice.Stok
         }
         private void btnUretici_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            switch (e.Button.Index) {
+            switch (e.Button.Index)
+            {
                 case 0:
                     frmTanim form = new frmTanim(frmTanim.TanimTuru.Uretici);
                     form.ShowDialog();
-                    if (form.secildi) {
+                    if (form.secildi)
+                    {
                         btnUretici.Text = form._entity.Tanimi;
                     }
                     break;
@@ -338,11 +380,13 @@ namespace NetSatis.BackOffice.Stok
         }
         private void btnModel_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            switch (e.Button.Index) {
+            switch (e.Button.Index)
+            {
                 case 0:
                     frmTanim form = new frmTanim(frmTanim.TanimTuru.Model);
                     form.ShowDialog();
-                    if (form.secildi) {
+                    if (form.secildi)
+                    {
                         btnModel.Text = form._entity.Tanimi;
                     }
                     break;
@@ -353,11 +397,13 @@ namespace NetSatis.BackOffice.Stok
         }
         private void btnProje_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            switch (e.Button.Index) {
+            switch (e.Button.Index)
+            {
                 case 0:
                     frmTanim form = new frmTanim(frmTanim.TanimTuru.Proje);
                     form.ShowDialog();
-                    if (form.secildi) {
+                    if (form.secildi)
+                    {
                         btnProje.Text = form._entity.Tanimi;
                     }
                     break;
@@ -368,11 +414,13 @@ namespace NetSatis.BackOffice.Stok
         }
         private void btnPozisyon_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            switch (e.Button.Index) {
+            switch (e.Button.Index)
+            {
                 case 0:
                     frmTanim form = new frmTanim(frmTanim.TanimTuru.Pozisyon);
                     form.ShowDialog();
-                    if (form.secildi) {
+                    if (form.secildi)
+                    {
                         btnPozisyon.Text = form._entity.Tanimi;
                     }
                     break;
@@ -383,11 +431,13 @@ namespace NetSatis.BackOffice.Stok
         }
         private void btnSezonYil_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            switch (e.Button.Index) {
+            switch (e.Button.Index)
+            {
                 case 0:
                     frmTanim form = new frmTanim(frmTanim.TanimTuru.SezonYil);
                     form.ShowDialog();
-                    if (form.secildi) {
+                    if (form.secildi)
+                    {
                         btnSezonYil.Text = form._entity.Tanimi;
                     }
                     break;
@@ -398,11 +448,13 @@ namespace NetSatis.BackOffice.Stok
         }
         private void btnOzelKod_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            switch (e.Button.Index) {
+            switch (e.Button.Index)
+            {
                 case 0:
                     frmTanim form = new frmTanim(frmTanim.TanimTuru.OzelKod);
                     form.ShowDialog();
-                    if (form.secildi) {
+                    if (form.secildi)
+                    {
                         btnOzelKod.Text = form._entity.Tanimi;
                     }
                     break;
@@ -414,65 +466,81 @@ namespace NetSatis.BackOffice.Stok
         private void gridBarkod_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
         {
             var row = (Barkod)e.Row;
-            if (context.Barkodlar.Count(c => c.Barkodu == row.Barkodu) != 0 || context.Barkodlar.Local.Count(c => c.Barkodu == row.Barkodu) != 0) {
+            if (context.Barkodlar.Count(c => c.Barkodu == row.Barkodu) != 0 || context.Barkodlar.Local.Count(c => c.Barkodu == row.Barkodu) != 0)
+            {
                 MessageBox.Show("Eklediğiniz Barkod Daha Önce Eklenmiş.");
                 gridBarkod.CancelUpdateCurrentRow();
-            } else if (row.Barkodu.Contains(" ")) {
+            }
+            else if (row.Barkodu.Contains(" "))
+            {
                 MessageBox.Show("Barkod kullanımında özel karakterler kullanılamaz.");
                 gridBarkod.CancelUpdateCurrentRow();
             }
         }
         private void repoSil_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            if (MessageBox.Show("Seçili Olan Veriyi Silmek İstediğinize Emin Misiniz ?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+            if (MessageBox.Show("Seçili Olan Veriyi Silmek İstediğinize Emin Misiniz ?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
                 gridBarkod.DeleteSelectedRows();
             }
         }
         private void frmStokIslem_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Alt == true && e.KeyCode == Keys.K) {
+            if (e.Alt == true && e.KeyCode == Keys.K)
+            {
                 btnKaydet.PerformClick();
             }
-            if (e.Alt == true && e.KeyCode == Keys.L) {
+            if (e.Alt == true && e.KeyCode == Keys.L)
+            {
                 btnKaydetYeni.PerformClick();
             }
-            if (e.Alt == true && e.KeyCode == Keys.Y) {
+            if (e.Alt == true && e.KeyCode == Keys.Y)
+            {
                 btnYeni.PerformClick();
             }
             if (e.KeyCode == Keys.Escape && MessageBox.Show("Kaydedilmemiş veri olabilir. Çıkmak istediğinize emin misiniz ?", "Uyarı", MessageBoxButtons.YesNo) ==
-               DialogResult.Yes) {
+               DialogResult.Yes)
+            {
                 this.Close();
             }
         }
         private void txtKod_KeyDown(object sender, KeyEventArgs e)
         {
             saved = true;
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 Entities.Tables.Stok kodentity;
                 //Entities.Tables.Barkod barkodEntity = context.Barkodlar.FirstOrDefault();
                 kodentity = context.Stoklar.FirstOrDefault(c => c.Barkodu == txtKod.Text);
                 if (kodentity == null)
                     kodentity = context.Barkodlar.FirstOrDefault(c => c.Barkodu == txtKod.Text)?.Stok;
-                if (kodentity == null) {
+                if (kodentity == null)
+                {
                     kodentity = context.Stoklar.FirstOrDefault(c => c.StokKodu == txtKod.Text);
                 }
-                if (kodentity != null) {
+                if (kodentity != null)
+                {
                     btnYeni_Click(null, null);
                     _entity = kodentity;
                     bindingSource();
                     var kategoriAdi = context.Kategoriler.SingleOrDefault(x => x.Kod == _entity.Kategori);
-                    if (kategoriAdi != null) {
+                    if (kategoriAdi != null)
+                    {
                         btnKategori.Text = _entity.Kategori + " - " + kategoriAdi.KategoriAdi;
                     }
                     var anagrupAdi = context.AnaGruplar.SingleOrDefault(x => x.Kod == _entity.AnaGrup);
-                    if (anagrupAdi != null) {
+                    if (anagrupAdi != null)
+                    {
                         btnAnaGrup.Text = _entity.AnaGrup + " - " + anagrupAdi.AnaGrupAdi;
                     }
                     var altgrupAdi = context.AltGruplar.SingleOrDefault(x => x.Kod == _entity.AltGrup);
-                    if (altgrupAdi != null) {
+                    if (altgrupAdi != null)
+                    {
                         btnAltGrup.Text = _entity.AltGrup + " - " + altgrupAdi.AltGrupAdi;
                     }
-                } else {
+                }
+                else
+                {
                     MessageBox.Show("Barkod veya Stok Kodu Bulunamadı..");
                 }
             }
@@ -600,16 +668,19 @@ namespace NetSatis.BackOffice.Stok
             calcMaxStokMiktari.DataBindings[0].FormattingEnabled = true;
             calcMaxStokMiktari.DataBindings[0].FormatString = "N";
             gridContBarkod.DataSource = context.Barkodlar.Local.ToBindingList();
-            if (guncelle == true) {
+            if (guncelle == true)
+            {
                 _entity.GuncellemeTarihi = Convert.ToDateTime(DateTime.Now);
                 _entity.EditUser = frmAnaMenu.UserId;
-            } else {
+            }
+            else
+            {
                 _entity.KayitTarihi = Convert.ToDateTime(DateTime.Now);
                 _entity.SaveUser = frmAnaMenu.UserId;
             }
             var r = stokDal.StokAdetler(context, _entity.Id);
-            if(r.HasValue)
-            lblMiktar.Text = r.Value.ToString("n2");
+            if (r.HasValue)
+                lblMiktar.Text = r.Value.ToString("n2");
         }
         private void btnKaydetYeni_Click(object sender, EventArgs e)
         {
@@ -629,7 +700,8 @@ namespace NetSatis.BackOffice.Stok
             context = new NetSatisContext();
             Olustur(s, false);
             int rowCount = gridBarkod.RowCount;
-            for (int i = 0; i < rowCount; i++) {
+            for (int i = 0; i < rowCount; i++)
+            {
                 gridBarkod.DeleteRow(i);
             }
             //context.Barkodlar.Local.Clear();
@@ -641,7 +713,8 @@ namespace NetSatis.BackOffice.Stok
         }
         private void gridBarkod_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
         {
-            if (e.HitInfo.InRow) {
+            if (e.HitInfo.InRow)
+            {
                 var p2 = MousePosition;
                 popupMenu1.ShowPopup(p2);
             }
@@ -657,10 +730,13 @@ namespace NetSatis.BackOffice.Stok
         private void txtBirim_ButtonClick_1(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             string UserText = txtBirim.Text;
-            if (e.Button.Index == 1) {
+            if (e.Button.Index == 1)
+            {
                 if (txtBirim.Properties.Items.Contains(UserText) == false)
                     txtBirim.Properties.Items.Add(UserText);
-            } else if (e.Button.Index == 2) {
+            }
+            else if (e.Button.Index == 2)
+            {
                 txtBirim.Properties.Items.Remove(UserText);
                 txtBirim.EditValue = null;
             }
@@ -672,7 +748,8 @@ namespace NetSatis.BackOffice.Stok
         {
             frmStokSec form = new frmStokSec(ref this.context, txtStokAdi.EditValue.ToString(), false);
             form.ShowDialog();
-            if (form.secildi) {
+            if (form.secildi)
+            {
                 //Buradan
                 var enti = form.secilen.First();
                 //Buraya kadar
@@ -693,172 +770,201 @@ namespace NetSatis.BackOffice.Stok
         }
         private void txtStokAdi_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.F6) {
+            if (e.KeyCode == Keys.F6)
+            {
                 txtStokAdi.PerformClick(txtStokAdi.Properties.Buttons[0]);
             }
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = txtBirim;
             }
         }
         private void txtBirim_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = txtGaranti;
             }
         }
         private void txtGaranti_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = calcMinStokMiktari;
             }
         }
         private void calcMinStokMiktari_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = txtAciklama;
             }
         }
         private void txtAciklama_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = calcMaxStokMiktari;
             }
         }
         private void calcMaxStokMiktari_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = btnKategori;
             }
         }
         private void btnKategori_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = btnAnaGrup;
             }
         }
         private void btnAnaGrup_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = btnAltGrup;
             }
         }
         private void btnAltGrup_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = btnMarka;
             }
         }
         private void btnMarka_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = btnUretici;
             }
         }
         private void btnUretici_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = btnModel;
             }
         }
         private void btnModel_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = btnProje;
             }
         }
         private void btnProje_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = btnPozisyon;
             }
         }
         private void btnPozisyon_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = btnSezonYil;
             }
         }
         private void btnSezonYil_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = btnOzelKod;
             }
         }
         private void btnOzelKod_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = calcSatisKdv;
             }
         }
         private void calcSatisKdv_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = calcAlisFiyat1;
             }
         }
         private void calcAlisFiyat1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = calcAlisFiyat2;
             }
         }
         private void calcAlisFiyat2_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = calcAlisFiyat3;
             }
         }
         private void calcAlisFiyat3_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = calcSatisFiyat1;
             }
         }
         private void calcSatisFiyat1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = calcSatisFiyat2;
             }
         }
         private void calcSatisFiyat2_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = calcSatisFiyat3;
             }
         }
         private void calcSatisFiyat3_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = calcSatisFiyat4;
             }
         }
         private void btnYeni_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = btnKaydetYeni;
             }
         }
         private void btnKaydetYeni_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = btnKaydet;
             }
         }
         private void btnKaydet_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = btnKapat;
             }
         }
         private void btnKod_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = cmbBarkodTuru;
             }
         }
         private void cmbBarkodTuru_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = txtStokAdi;
             }
         }
@@ -875,13 +981,15 @@ namespace NetSatis.BackOffice.Stok
         }
         private void calcSatisFiyat4_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = calcWebSatisFiyat;
             }
         }
         private void calcWebSatisFiyat_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 this.ActiveControl = calcwebBayiSatisFiyat;
             }
         }
@@ -889,12 +997,14 @@ namespace NetSatis.BackOffice.Stok
         {
             int secilen = -1;
             StokHareketDAL dal = new StokHareketDAL();
-            using (Entities.Context.NetSatisContext db = new Entities.Context.NetSatisContext()) {
+            using (Entities.Context.NetSatisContext db = new Entities.Context.NetSatisContext())
+            {
                 var list = db.Stoklar.Where(x => x.StokKodu == txtKod.Text).FirstOrDefault();
                 secilen = list.Id;
             }
             var hareket = dal.GetAll(context, c => c.StokId == secilen);
-            if (hareket.Count > 0) {
+            if (hareket.Count > 0)
+            {
                 MessageBox.Show("Hareket görmüş bir stok silinemez.");
                 return;
             }
@@ -951,17 +1061,21 @@ namespace NetSatis.BackOffice.Stok
 
         private void txtStokAdi_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            if (e.Button.Tag.ToString() == "find") {
+            if (e.Button.Tag.ToString() == "find")
+            {
 
                 frmStokSec form = new frmStokSec(ref this.context, txtStokAdi.EditValue.ToString(), false);
                 form.ShowDialog();
-                if (form.secildi) {
+                if (form.secildi)
+                {
                     //Buradan
                     var enti = form.secilen.First();
                     //Buraya kadar
                     Olustur(enti, false);
                 }
-            } else if (e.Button.Tag.ToString() == "clear") {
+            }
+            else if (e.Button.Tag.ToString() == "clear")
+            {
                 txtStokAdi.Tag =
                     txtStokAdi.Text = null;
             }

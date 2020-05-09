@@ -131,6 +131,7 @@ namespace NetSatis.BackOffice.Stok
             {
                 foreach (var row in gridStoklar.GetSelectedRows())
                 {
+                
                     string stokKodu = gridStoklar.GetRowCellValue(row, colStokKodu).ToString();
                     secilen.Add(context.Stoklar.FirstOrDefault(c => c.StokKodu == stokKodu));
                 }
@@ -155,8 +156,10 @@ namespace NetSatis.BackOffice.Stok
             {
                 if (gridStoklar.RowCount != 0)
                 {
+                    //burdaki context ile düzenleme yapsa dahi context yenilenmediği için fisislem veya başka bir yere stok eklemek istediğinde eski context ile stok ekleme işlemi yapmaya çalışıyor haliyle eski düzenlenmemiş veriyi çekecektir.
+                    //ancak fisislem formu kapatılıp yeniden açılması gerekiyor. düzenle işlemini burdan yapması sağlı değil!
                     sec = Convert.ToInt32(gridStoklar.GetFocusedRowCellValue(colId));
-                    var r = context.Stoklar.Include("Barkod").FirstOrDefault(x => x.Id == sec);
+                    var r = context.Stoklar.Include("Barkod").AsNoTracking().FirstOrDefault(x => x.Id == sec);
                     frmStokIslem form = new frmStokIslem(ref context, r);
                     form.ShowDialog();
 
@@ -262,7 +265,7 @@ namespace NetSatis.BackOffice.Stok
             {
                 if (token.IsCancellationRequested)
                     break;
-                TumStoklar.AddRange(stokDal.StokAdiylaStokGetir(context, pred, take * i, take));
+                TumStoklar.AddRange(stokDal.StokAdiylaStokGetir(context, pred, take * i, take, noTracking: true));
                 OnPropertyChanged(nameof(TumStoklar));
                 await Task.Delay(100);
                 gridStoklar.RefreshData();

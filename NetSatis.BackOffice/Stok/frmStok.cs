@@ -333,26 +333,7 @@ namespace NetSatis.BackOffice.Stok
                 filtre = '%' + filtre;
             }
             return filtre;
-        } 
-        void Sorgula2()
-        {
-            var pred = PredicateBuilder.True<Entities.Tables.Stok>();
-
-            if (!string.IsNullOrEmpty(txtAramaMetni.Text))
-            {
-                foreach (string item in txtAramaMetni.Text.Split(' '))
-                {
-                    if (!string.IsNullOrEmpty(item))
-                        pred = pred.And(x => x.StokAdi.Contains(item) || x.Barkod.Any(s => s.Barkodu.Contains(item)) || x.Barkodu.Contains(item) || x.StokKodu.Contains(item));
-                }
-
-            }
-            gridControl1.DataSource = stokDal.StokAdiylaStokGetir(context, pred);
-
-            gridControl1.ForceInitialize();
-            gridControl1.Select();
-
-        }
+        }  
 
         private List<Entities.Tables.Stok> TumStoklar { get; set; }
         private CancellationTokenSource tokenSource = new CancellationTokenSource();
@@ -384,7 +365,7 @@ namespace NetSatis.BackOffice.Stok
             {
                 if (token.IsCancellationRequested)
                     break;
-                TumStoklar.AddRange(stokDal.StokAdiylaStokGetir(context, pred, take * i, take));
+                TumStoklar.AddRange(stokDal.StokAdiylaStokGetir(context, pred, take * i, take, noTracking: true));
                 OnPropertyChanged(nameof(TumStoklar));
                 await Task.Delay(100);
                 gridView1.RefreshData();

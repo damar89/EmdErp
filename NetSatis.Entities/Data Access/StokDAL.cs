@@ -204,11 +204,13 @@ namespace NetSatis.Entities.Data_Access
         /// <param name="take">kaç adet kayıt getirmesi gerektiği belirtilir.</param>
         /// <param name="skip">kaç adet kayıt atlamsı gerektiği belirtilir.</param>
         /// <returns></returns>
-        public List<Stok> StokAdiylaStokGetir(NetSatisContext context, Expression<Func<Stok, bool>> pred = null, int skip = 0, int take = 0, bool stokGirisVeCikisSifirdanBuyukOlanlar = false)
+        public List<Stok> StokAdiylaStokGetir(NetSatisContext context, Expression<Func<Stok, bool>> pred = null, int skip = 0, int take = 0, bool stokGirisVeCikisSifirdanBuyukOlanlar = false, bool noTracking = false)
         {
 
             //stok tablosunun ilk halini oluşturur
             IQueryable<Stok> tablo = context.Stoklar.Include(x => x.StokHareket).Include(x => x.Barkod);
+            if (noTracking)
+                tablo = tablo.AsNoTracking();
             if (pred != null)
             {
                 //pred ile where koşullarını set eder ve bağlı barkodları tabloya yükler
@@ -448,7 +450,7 @@ namespace NetSatis.Entities.Data_Access
             var sonuc = res.Count() / res.Sum(c => c.SatisFiyati);
             return sonuc;
         }
-        
+
         #endregion
     }
 }

@@ -3033,7 +3033,7 @@ namespace NetSatis.BackOffice.Fiş
                 case DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph:
 
                     string search = gridStokHareket.ActiveEditor.Text;
-                    frmStokSec form = new frmStokSec(ref this.context, search);
+                    frmStokSec form = new frmStokSec(ref this.context, search, false);
                     form.ShowDialog();
                     if (form.secildi)
                     {
@@ -3053,7 +3053,7 @@ namespace NetSatis.BackOffice.Fiş
         private async void repositoryItemButtonEdit6_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             string search = gridStokHareket.ActiveEditor.Text;
-            frmStokSec form = new frmStokSec(ref this.context, search);
+            frmStokSec form = new frmStokSec(ref this.context, search, false);
             form.ShowDialog();
             if (form.secildi)
             {
@@ -3122,7 +3122,7 @@ namespace NetSatis.BackOffice.Fiş
                 row.Bagkur = s.Bagkur;
                 row.Barkod = s.Barkod;
                 row.BirimFiyati = s.BirimFiyati;
-                row.SatisFiyati = s.SatisFiyati; 
+                row.SatisFiyati = s.SatisFiyati;
                 row.Borsa = s.Borsa;
                 row.Depo = s.Depo;
                 row.DepoId = s.Depo != null ? s.DepoId : 0;
