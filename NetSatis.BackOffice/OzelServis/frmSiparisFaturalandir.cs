@@ -208,7 +208,12 @@ namespace NetSatis.BackOffice.OzelServis
                 fisAraToplam += Convert.ToDecimal(tempFis.AraToplam_);
                 fisToplamTutar += Convert.ToDecimal(tempFis.ToplamTutar);
 
-
+                var hareketVarmi = context.StokHareketleri.Any(x => x.FisKodu == tempFis.FisKodu);
+                if (!hareketVarmi)
+                {
+                    MessageBox.Show("Seçili siparişe ait stok bulunamamıştır, Lütfen sipariş fişini tekrar oluşturunuz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 //BURASI---------------------------------------------------
 
 
