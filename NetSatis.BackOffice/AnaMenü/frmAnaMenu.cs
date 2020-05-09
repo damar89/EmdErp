@@ -1123,6 +1123,10 @@ namespace NetSatis.BackOffice
                     frmFisIslem frm8 = new frmFisIslem();
                     frm8.Show();
                     break;
+                case "Kasa Akışı":
+                    frmGunlukKasaRaporFilter frm9 = new frmGunlukKasaRaporFilter();
+                    frm9.Show();
+                    break;
                 default:
                     break;
             }
