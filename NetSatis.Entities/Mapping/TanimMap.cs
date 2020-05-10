@@ -10,8 +10,8 @@ namespace NetSatis.Entities.Mapping
         {
             this.HasKey(p => p.Id);
             this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(p => p.Turu).HasMaxLength(15);
-            this.Property(p => p.Tanimi).HasMaxLength(30);
+            this.Property(p => p.Turu).HasMaxLength(30);
+            this.Property(p => p.Tanimi).HasMaxLength(120);
             this.Property(p => p.Aciklama).HasMaxLength(200);
 
             this.ToTable("Tanimlar");

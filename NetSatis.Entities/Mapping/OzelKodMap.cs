@@ -14,7 +14,7 @@ namespace NetSatis.Entities.Tables
         {
             this.HasKey(p => p.Id);
             this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(p => p.OzelKodAdi).HasMaxLength(75);
+            this.Property(p => p.OzelKodAdi).HasMaxLength(120);
             this.Property(p => p.Kod).HasMaxLength(75);
 
             this.ToTable("OzelKod");

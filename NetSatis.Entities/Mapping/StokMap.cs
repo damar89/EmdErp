@@ -38,7 +38,7 @@ namespace NetSatis.Entities.Mapping
             this.Property(p => p.WebBayiSatisFiyati).HasPrecision(12, 2);
             this.Property(p => p.MaxmumStokMiktari).HasPrecision(12, 3);
             this.Property(p => p.MinmumStokMiktari).HasPrecision(12, 3);
-            this.Property(p => p.Aciklama).HasMaxLength(200);
+            this.Property(p => p.Aciklama).HasMaxLength(2000);
             this.ToTable("Stoklar");
             this.Property(p => p.Id).HasColumnName("Id");
             this.Property(p => p.Durumu).HasColumnName("Durumu");
