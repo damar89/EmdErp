@@ -5,6 +5,8 @@ using NetSatis.Entities.Validations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
+
 namespace NetSatis.Entities.Data_Access
 {
     public class KasaDAL : EntityRepositoryBase<NetSatisContext, Kasa, KasaValidator>
@@ -31,46 +33,119 @@ namespace NetSatis.Entities.Data_Access
                 }).ToList();
             return result;
         }
-        public object OdemeTuruToplamListele(NetSatisContext context, int kasaId)
+        public object OdemeTuruToplamKasaTariheGoreListele(NetSatisContext context, Expression<Func<KasaHareket, bool>> pred = null)
         {
-            var result = (from c in context.KasaHareketleri.Where(c => c.KasaId == kasaId)
-                          group c by new { c.OdemeTuru }
-                into grp
-                          select new
-                          {
-                              grp.Key.OdemeTuru.OdemeTuruAdi,
-                              KasaGiris = (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Hareket == "Kasa Giriş")
-                                               .Sum(c => c.Tutar) ?? 0),
-                              KasaCikis = (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Hareket == "Kasa Çıkış")
-                                               .Sum(c => c.Tutar) ?? 0),
-                              Bakiye =
-                                  (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Hareket == "Kasa Giriş")
-                                       .Sum(c => c.Tutar) ?? 0) -
-                                  (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Hareket == "Kasa Çıkış")
-                                       .Sum(c => c.Tutar) ?? 0)
-                          }).ToList();
-            return result;
+
+            IQueryable<KasaHareket> KasaHareketleri;
+            if (pred == null)
+                KasaHareketleri = context.KasaHareketleri.AsNoTracking();
+            else
+                KasaHareketleri = context.KasaHareketleri.AsNoTracking().Where(pred);
+
+            var res = (from k in KasaHareketleri
+                       group k by new { k.OdemeTuru, k.Tarih } into grp
+                       select new
+                       {
+                           grp.Key.OdemeTuru.OdemeTuruAdi,
+                           grp.Key.Tarih,
+                           KasaGiris = grp.Where(x => x.OdemeTuruId == grp.Key.OdemeTuru.Id && x.Hareket == "Kasa Giriş").Sum(s => s.Tutar) ?? 0,
+                           KasaCikis = grp.Where(x => x.OdemeTuruId == grp.Key.OdemeTuru.Id && x.Hareket == "Kasa Çıkış").Sum(s => s.Tutar) ?? 0,
+                           Bakiye = (grp.Where(x => x.OdemeTuruId == grp.Key.OdemeTuru.Id && x.Hareket == "Kasa Giriş").Sum(s => s.Tutar) ?? 0) - (grp.Where(x => x.OdemeTuruId == grp.Key.OdemeTuru.Id && x.Hareket == "Kasa Çıkış").Sum(s => s.Tutar) ?? 0)
+                       }).ToList();
+
+            return res;
+            #region eski kodlar
+            //old code
+            //var result = (from c in context.KasaHareketleri.Where(c => c.KasaId == kasaId)
+            //              group c by new { c.OdemeTuru }
+            //into grp
+            //              select new
+            //              {
+            //                  grp.Key.OdemeTuru.OdemeTuruAdi,
+            //                  KasaGiris = (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Hareket == "Kasa Giriş")
+            //                                   .Sum(c => c.Tutar) ?? 0),
+            //                  KasaCikis = (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Hareket == "Kasa Çıkış")
+            //                                   .Sum(c => c.Tutar) ?? 0),
+            //                  Bakiye =
+            //                      (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Hareket == "Kasa Giriş")
+            //                           .Sum(c => c.Tutar) ?? 0) -
+            //                      (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Hareket == "Kasa Çıkış")
+            //                           .Sum(c => c.Tutar) ?? 0)
+            //              }).ToList();
+            //return result; 
+            #endregion
         }
-        public object OdemeTuruToplamListeleTarih(NetSatisContext context, int kasaId, DateTime baslangic, DateTime bitis)
+        public object OdemeTuruToplamListele(NetSatisContext context, int kasaId, Expression<Func<KasaHareket, bool>> pred = null)
         {
-            var result = (from c in context.KasaHareketleri.Where(c => c.KasaId == kasaId)
-                          group c by new { c.OdemeTuru }
-                into grp
-                          select new
-                          {
-                              grp.Key.OdemeTuru.OdemeTuruAdi,
-                              KasaGiris = (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Hareket == "Kasa Giriş")
-                                               .Sum(c => c.Tutar) ?? 0),
-                              KasaCikis = (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Hareket == "Kasa Çıkış")
-                                               .Sum(c => c.Tutar) ?? 0),
-                              Bakiye =
-                                  (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Tarih >= baslangic && c.Tarih <= bitis && c.Hareket == "Kasa Giriş")
-                                       .Sum(c => c.Tutar) ?? 0) -
-                                  (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Tarih >= baslangic && c.Tarih <= bitis && c.Hareket == "Kasa Çıkış")
-                                       .Sum(c => c.Tutar) ?? 0)
-                          }).ToList();
-            return result;
+
+            IQueryable<KasaHareket> KasaHareketleri;
+            if (pred == null)
+                KasaHareketleri = context.KasaHareketleri.AsNoTracking();
+            else
+                KasaHareketleri = context.KasaHareketleri.AsNoTracking().Where(pred);
+
+            var res = (from k in KasaHareketleri.Where(x => x.KasaId == kasaId)
+                       group k by new { k.OdemeTuru } into grp
+                       select new
+                       {
+                           grp.Key.OdemeTuru.OdemeTuruAdi,
+                           KasaGiris = grp.Where(x => x.OdemeTuruId == grp.Key.OdemeTuru.Id && x.Hareket == "Kasa Giriş").Sum(s => s.Tutar) ?? 0,
+                           KasaCikis = grp.Where(x => x.OdemeTuruId == grp.Key.OdemeTuru.Id && x.Hareket == "Kasa Çıkış").Sum(s => s.Tutar) ?? 0,
+                           Bakiye = (grp.Where(x => x.OdemeTuruId == grp.Key.OdemeTuru.Id && x.Hareket == "Kasa Giriş").Sum(s => s.Tutar) ?? 0) - (grp.Where(x => x.OdemeTuruId == grp.Key.OdemeTuru.Id && x.Hareket == "Kasa Çıkış").Sum(s => s.Tutar) ?? 0)
+                       }).ToList();
+
+            return res;
+            #region eski kodlar
+            //old code
+            //var result = (from c in context.KasaHareketleri.Where(c => c.KasaId == kasaId)
+            //              group c by new { c.OdemeTuru }
+            //into grp
+            //              select new
+            //              {
+            //                  grp.Key.OdemeTuru.OdemeTuruAdi,
+            //                  KasaGiris = (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Hareket == "Kasa Giriş")
+            //                                   .Sum(c => c.Tutar) ?? 0),
+            //                  KasaCikis = (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Hareket == "Kasa Çıkış")
+            //                                   .Sum(c => c.Tutar) ?? 0),
+            //                  Bakiye =
+            //                      (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Hareket == "Kasa Giriş")
+            //                           .Sum(c => c.Tutar) ?? 0) -
+            //                      (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Hareket == "Kasa Çıkış")
+            //                           .Sum(c => c.Tutar) ?? 0)
+            //              }).ToList();
+            //return result; 
+            #endregion
         }
+        //public object OdemeTuruToplamListeleTarih(NetSatisContext context, int kasaId, DateTime baslangic, DateTime bitis)
+        //{
+        //    //burası test ediliyor
+        //    //var res2 = OdemeTuruToplamListele(context, kasaId);
+        //    var res = OdemeTuruToplamListele(context, kasaId, x => x.Tarih >= baslangic && x.Tarih <= bitis);
+        //    return res;
+
+        //    #region eski kodlar
+
+        //    //old code
+        //    //var result = (from c in context.KasaHareketleri.Where(c => c.KasaId == kasaId)
+        //    //              group c by new { c.OdemeTuru }
+        //    //    into grp
+        //    //              select new
+        //    //              {
+        //    //                  grp.Key.OdemeTuru.OdemeTuruAdi,
+        //    //                  KasaGiris = (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Hareket == "Kasa Giriş")
+        //    //                                   .Sum(c => c.Tutar) ?? 0),
+        //    //                  KasaCikis = (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Hareket == "Kasa Çıkış")
+        //    //                                   .Sum(c => c.Tutar) ?? 0),
+        //    //                  Bakiye =
+        //    //                      (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Tarih >= baslangic && c.Tarih <= bitis && c.Hareket == "Kasa Giriş")
+        //    //                           .Sum(c => c.Tutar) ?? 0) -
+        //    //                      (grp.Where(c => c.OdemeTuruId == grp.Key.OdemeTuru.Id && c.Tarih >= baslangic && c.Tarih <= bitis && c.Hareket == "Kasa Çıkış")
+        //    //                           .Sum(c => c.Tutar) ?? 0)
+        //    //              }).ToList(); 
+        //    //return result;
+
+        //    #endregion
+        //}
         public object GenelToplamListele(NetSatisContext context, int kasaId)
         {
             decimal KasaGiris = context.KasaHareketleri.Where(c => c.KasaId == kasaId && c.Hareket == "Kasa Giriş")

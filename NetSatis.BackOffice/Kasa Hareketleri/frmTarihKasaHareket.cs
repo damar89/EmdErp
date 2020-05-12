@@ -11,12 +11,14 @@ namespace NetSatis.BackOffice.Kasa_Hareketleri
         NetSatisContext context = new NetSatisContext();
         KasaHareketDAL kasaHareketDal = new KasaHareketDAL();
         KasaDAL kasaDal = new KasaDAL();
-        public frmTarihKasaHareket(int kasaId,DateTime baslangic, DateTime bitis)
+        
+        //menüden=>Günlük Kasa Raporu
+        public frmTarihKasaHareket(int kasaId, DateTime baslangic, DateTime bitis)
         {
             InitializeComponent();
 
-            gridContKasaHareket.DataSource = kasaDal.OdemeTuruToplamListeleTarih(context,kasaId,baslangic,bitis);
-           
+            gridContKasaHareket.DataSource = kasaDal.OdemeTuruToplamListele(context, kasaId, x => x.Tarih >= baslangic && x.Tarih <= bitis);
+
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
@@ -26,7 +28,7 @@ namespace NetSatis.BackOffice.Kasa_Hareketleri
 
         private void frmTarihKasaHareket_KeyDown(object sender, KeyEventArgs e)
         {
-              if (e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.Escape)
             {
 
                 this.Close();
@@ -35,7 +37,7 @@ namespace NetSatis.BackOffice.Kasa_Hareketleri
 
         private void gridKasaHareket_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
         {
-             if (e.HitInfo.InRow)
+            if (e.HitInfo.InRow)
             {
                 var p2 = MousePosition; popupMenu1.ShowPopup(p2);
             }
@@ -58,7 +60,7 @@ namespace NetSatis.BackOffice.Kasa_Hareketleri
 
         private void btnExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-             SaveFileDialog save = new SaveFileDialog();
+            SaveFileDialog save = new SaveFileDialog();
             if (save.ShowDialog() == DialogResult.OK)
             {
 
@@ -68,7 +70,7 @@ namespace NetSatis.BackOffice.Kasa_Hareketleri
 
         private void btnPdf_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-             SaveFileDialog save = new SaveFileDialog();
+            SaveFileDialog save = new SaveFileDialog();
             if (save.ShowDialog() == DialogResult.OK)
             {
 

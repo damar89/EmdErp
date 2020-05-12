@@ -285,13 +285,7 @@
   <ItemGroup>
     <None Include="Resources\CodeReflesh.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\Debug\NetSatis.Entities.dll" />
-    <Content Include="bin\Debug\NetSatis.Entities.pdb" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Release\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

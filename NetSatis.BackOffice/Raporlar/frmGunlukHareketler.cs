@@ -5,12 +5,19 @@ namespace NetSatis.BackOffice.Raporlar
 {
     public partial class frmGunlukHareketler : DevExpress.XtraEditors.XtraForm
     {
-        NetSatisContext context = new NetSatisContext();
+        NetSatisContext _context = new NetSatisContext();
         FisDAL fisDal = new FisDAL();
-        KasaHareketDAL kasaHareketDal = new KasaHareketDAL();
-        public frmGunlukHareketler()
+        KasaDAL kasaDal = new KasaDAL();
+        public frmGunlukHareketler(NetSatisContext context, System.DateTime dtBaslangic, System.DateTime dtBitis)
         {
+            context = _context;
+
             InitializeComponent();
+
+            gridContKasaHareket.DataSource =
+                kasaDal.OdemeTuruToplamKasaTariheGoreListele(context,
+                    x => x.Tarih >= dtBaslangic && x.Tarih <= dtBitis);
+
         }
     }
 }
