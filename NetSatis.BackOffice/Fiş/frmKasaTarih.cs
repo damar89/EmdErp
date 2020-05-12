@@ -22,11 +22,7 @@ namespace NetSatis.BackOffice.Raporlar
             dtpBaslangic.Properties.Mask.MaskType = MaskType.DateTimeAdvancingCaret;
             dtpBitis.Properties.Mask.MaskType = MaskType.DateTimeAdvancingCaret;
             gridControl1.DataSource = kasaDal.KasaListele(context);
-
-
-
-
-
+             
         }
         private void btnGoster_Click(object sender, EventArgs e)
         {

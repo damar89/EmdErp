@@ -204,7 +204,7 @@ namespace NetSatis.Entities.Data_Access
         /// <param name="take">kaç adet kayıt getirmesi gerektiği belirtilir.</param>
         /// <param name="skip">kaç adet kayıt atlamsı gerektiği belirtilir.</param>
         /// <returns></returns>
-        public List<Stok> StokAdiylaStokGetir(NetSatisContext context, Expression<Func<Stok, bool>> pred = null, int skip = 0, int take = 0, bool stokGirisVeCikisSifirdanBuyukOlanlar = false, bool noTracking = false)
+        public List<Stok> StokAdiylaStokGetir(NetSatisContext context, Expression<Func<Stok, bool>> pred = null, int skip = 0, int take = 0, bool stokGirisVeCikisSifirdanBuyukOlanlar = false, bool noTracking = true)
         {
 
             //stok tablosunun ilk halini oluşturur

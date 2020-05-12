@@ -30,7 +30,7 @@ namespace NetSatis.BackOffice.Raporlar
             //Bu Şekilde Çalışıyor
             //dtBitis = dtBitis.AddHours(23).AddMinutes(59).AddSeconds(59);
 
-            frmGunlukHareketler frm = new frmGunlukHareketler();
+            frmGunlukHareketler frm = new frmGunlukHareketler(context, dtBaslangic, dtBitis);
             frm.Show();
             this.Close();
         }
