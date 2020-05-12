@@ -502,6 +502,10 @@ namespace NetSatis.BackOffice.Stok
         AlisFiyati1, AlisFiyati2, AlisFiyati3, SatisFiyati1, SatisFiyati2, SatisFiyati3, SatisFiyati4, WebSatisFiyat, WebBayiFiyat,
         MinmumStokMiktari, MaxmumStokMiktari, Aciklama; int EditUser;
             #endregion
+            Invoke((MethodInvoker)delegate
+            {
+                progressKayit.Properties.Maximum = gridListe.RowCount;
+            });
             for (int i = 0; i < gridListe.RowCount; i++)
             {
                 #region Alan Bilgilerinin Çekilmesi
@@ -644,6 +648,10 @@ namespace NetSatis.BackOffice.Stok
                     DB.SaveChanges();
                 }
                 #endregion
+                Invoke((MethodInvoker)delegate
+                {
+                    progressKayit.PerformStep();
+                });
             }
             MessageBox.Show("Verilerin güncellenmesi hatasız bir şekilde tamamlanmıştır.");
         }

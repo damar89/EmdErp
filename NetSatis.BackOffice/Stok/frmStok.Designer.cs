@@ -124,6 +124,7 @@
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.colUretici = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -278,7 +279,8 @@
             this.colBarkod,
             this.colKategoriAdi,
             this.colAnaGrupAdi,
-            this.colAltGrupAdi});
+            this.colAltGrupAdi,
+            this.colUretici});
             this.gridView1.CustomizationFormBounds = new System.Drawing.Rectangle(906, 365, 210, 172);
             gridFormatRule1.Column = this.MevcutStok;
             gridFormatRule1.ColumnApplyTo = this.MevcutStok;
@@ -379,6 +381,8 @@
             this.colMarka.FieldName = "Marka";
             this.colMarka.Name = "colMarka";
             this.colMarka.OptionsColumn.AllowEdit = false;
+            this.colMarka.Visible = true;
+            this.colMarka.VisibleIndex = 11;
             this.colMarka.Width = 86;
             // 
             // colAlisKdv
@@ -1018,6 +1022,17 @@
             this.ımageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // colUretici
+            // 
+            this.colUretici.Caption = "Üretici";
+            this.colUretici.FieldName = "Uretici";
+            this.colUretici.MinWidth = 25;
+            this.colUretici.Name = "colUretici";
+            this.colUretici.OptionsColumn.AllowEdit = false;
+            this.colUretici.Visible = true;
+            this.colUretici.VisibleIndex = 12;
+            this.colUretici.Width = 94;
+            // 
             // frmStok
             // 
             this.Appearance.Options.UseFont = true;
@@ -1147,5 +1162,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
         private DevExpress.XtraEditors.SimpleButton btnTemizle;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraGrid.Columns.GridColumn colUretici;
     }
 }
