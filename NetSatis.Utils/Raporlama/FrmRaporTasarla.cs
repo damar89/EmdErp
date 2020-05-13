@@ -28,6 +28,7 @@ namespace NetSatis.Utils.Raporlama
         {
             InitializeComponent();
             dizaynTipi = _dizaynTipi;
+            
             snapControl1.DataSource = datasource;
             if (OnIzle) {
                 raporTasarimlari = raporDal.GetByFilter(context, x => x.Id == DesingID);// repo.Rapor.Getir(DesingID);
