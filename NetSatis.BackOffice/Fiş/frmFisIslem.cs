@@ -100,164 +100,172 @@ namespace NetSatis.BackOffice.Fiş
         public void Yukle(string fisKodu = null, string fisTuru = null, bool cariGetir = false,
             Entities.Tables.Cari entity = null, int userId = 0)
         {
-            frontOfficeUserId = userId;
-            if (fisKodu != null)
+            try
             {
-                duzenle = true;
-            }
-            kodOlustur = new CodeTool(this, CodeTool.Table.Fis);
-            kodOlustur.BarButonOlustur();
-            cmbTarih.Properties.Mask.MaskType = MaskType.DateTimeAdvancingCaret;
-            cmbVadeTarihi.Properties.Mask.MaskType = MaskType.DateTimeAdvancingCaret;
-            if (fisKodu != null)
-            {
-                _fisentity = context.Fisler.Where(c => c.FisKodu == fisKodu).SingleOrDefault();
-                context.KasaHareketleri.Where(c => c.FisKodu == fisKodu).Load();
-                context.PersonelHareketleri.Where(c => c.FisKodu == fisKodu).Load();
-                toggleCariDevir.IsOn =
-                    context.KasaHareketleri.Count(c => c.FisKodu == fisKodu && c.Hareket == "Kasa Giriş") == 0;
-            }
-            else
-            {
-                _fisentity = new Fis();
-            }
 
-            if (_fisentity.CariId != null)
-            {
-                lblCariAd.Text = _fisentity.Cari.CariAdi;
-                lblCariKod.Text = _fisentity.Cari.CariKodu;
-                txtFaturaUnvani.Text = _fisentity.Cari.FaturaUnvani;
-                entityBakiye = this.cariDal.cariBakiyesi(context, Convert.ToInt32(_fisentity.CariId));
-                lblAlacak.Text = entityBakiye.Alacak.ToString("C2");
-                lblBorc.Text = entityBakiye.Borc.ToString("C2");
-                lblBakiye.Text = entityBakiye.Bakiye.ToString("C2");
-            }
-            else
-            {
-                _fisentity.FisTuru = fisTuru;
-
-                _fisentity.Tarih = DateTime.Now;
-                _fisentity.VadeTarihi = DateTime.Now;
-                //_fisentity.FisKodu =
-                //    CodeTool.KodOlustur("FS", SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_FisKodu));
-            }
-            if (fisTuru == "Toptan Satış Faturası" || fisTuru == "Perakende Satış Faturası" ||
-                fisTuru == "Satış İade Faturası" || fisTuru == "Alış İade Faturası" || fisTuru == "Alış Faturası" ||
-                fisTuru == "Satış İrsaliyesi" || fisTuru == "Alış İrsaliyesi" || fisTuru == "Alınan Sipariş Fişi" ||
-                fisTuru == "Verilen Sipariş Fişi" || fisTuru == "Alınan Teklif Fişi" ||
-                fisTuru == "Verilen Teklif Fişi" || fisTuru == "Sayım Fazlası Fişi" || fisTuru == "Sayım Eksiği Fişi" ||
-                fisTuru == "Stok Devir Fişi" || fisTuru == null)
-            {
+                frontOfficeUserId = userId;
                 if (fisKodu != null)
                 {
-                    context.StokHareketleri.Where(c => c.FisKodu == fisKodu).Load();
+                    duzenle = true;
                 }
-                context.Depolar.Load();
-                context.Kasalar.Load();
-            }
-            else
-            {
-                context.Kasalar.Load();
-                context.Depolar.Load();
-            }
-            //cari getirme alanı
-            if (cariGetir)
-            {
-                entityBakiye = this.cariDal.cariBakiyesi(context, entity.Id);
-                _cariId = entity.Id;
-                _fisentity.CariId = entity.Id;
-                _fisentity.FaturaUnvani = entity.FaturaUnvani;
-                _fisentity.Adres = entity.Adres;
-                _fisentity.Il = entity.Il;
-                _fisentity.Ilce = entity.Ilce;
-                _fisentity.VergiDairesi = entity.VergiDairesi;
-                _fisentity.VergiNo = entity.VergiNo;
-                _fisentity.Semt = entity.Semt;
-                _fisentity.CepTelefonu = entity.CepTelefonu;
-                _fisentity.CariAdi = entity.CariAdi;
-                _fisentity.EMail = entity.EMail;
-                _fisentity.Telefon = entity.Telefon;
-                _fisentity.Aciklama = entity.Aciklama;
-                lblCariAd.Text = entity.CariAdi;
-                txtFaturaUnvani.Text = entity.FaturaUnvani;
-                lblCariKod.Text = entity.CariKodu;
-                lblAlacak.Text = entityBakiye.Alacak.ToString("C2");
-                lblBorc.Text = entityBakiye.Borc.ToString("C2");
-                lblBakiye.Text = entityBakiye.Bakiye.ToString("C2");
-            }
-            txtKod.DataBindings.Add("Text", _fisentity, "FisKodu", false,
-            DataSourceUpdateMode.OnPropertyChanged);
-            txtFisTuru.DataBindings.Add("Text", _fisentity, "FisTuru", false,
+                kodOlustur = new CodeTool(this, CodeTool.Table.Fis);
+                kodOlustur.BarButonOlustur();
+                cmbTarih.Properties.Mask.MaskType = MaskType.DateTimeAdvancingCaret;
+                cmbVadeTarihi.Properties.Mask.MaskType = MaskType.DateTimeAdvancingCaret;
+                if (fisKodu != null)
+                {
+                    _fisentity = context.Fisler.Where(c => c.FisKodu == fisKodu).SingleOrDefault();
+                    context.KasaHareketleri.Where(c => c.FisKodu == fisKodu).Load();
+                    context.PersonelHareketleri.Where(c => c.FisKodu == fisKodu).Load();
+                    toggleCariDevir.IsOn =
+                        context.KasaHareketleri.Count(c => c.FisKodu == fisKodu && c.Hareket == "Kasa Giriş") == 0;
+                }
+                else
+                {
+                    _fisentity = new Fis();
+                }
+
+                if (_fisentity.CariId != null)
+                {
+                    lblCariAd.Text = _fisentity.Cari.CariAdi;
+                    lblCariKod.Text = _fisentity.Cari.CariKodu;
+                    txtFaturaUnvani.Text = _fisentity.Cari.FaturaUnvani;
+                    entityBakiye = this.cariDal.cariBakiyesi(context, Convert.ToInt32(_fisentity.CariId));
+                    lblAlacak.Text = entityBakiye.Alacak.ToString("C2");
+                    lblBorc.Text = entityBakiye.Borc.ToString("C2");
+                    lblBakiye.Text = entityBakiye.Bakiye.ToString("C2");
+                }
+                else
+                {
+                    _fisentity.FisTuru = fisTuru;
+
+                    _fisentity.Tarih = DateTime.Now;
+                    _fisentity.VadeTarihi = DateTime.Now;
+                    //_fisentity.FisKodu =
+                    //    CodeTool.KodOlustur("FS", SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_FisKodu));
+                }
+                if (fisTuru == "Toptan Satış Faturası" || fisTuru == "Perakende Satış Faturası" ||
+                    fisTuru == "Satış İade Faturası" || fisTuru == "Alış İade Faturası" || fisTuru == "Alış Faturası" ||
+                    fisTuru == "Satış İrsaliyesi" || fisTuru == "Alış İrsaliyesi" || fisTuru == "Alınan Sipariş Fişi" ||
+                    fisTuru == "Verilen Sipariş Fişi" || fisTuru == "Alınan Teklif Fişi" ||
+                    fisTuru == "Verilen Teklif Fişi" || fisTuru == "Sayım Fazlası Fişi" || fisTuru == "Sayım Eksiği Fişi" ||
+                    fisTuru == "Stok Devir Fişi" || fisTuru == null)
+                {
+                    if (fisKodu != null)
+                    {
+                        context.StokHareketleri.Where(c => c.FisKodu == fisKodu).Load();
+                    }
+                    context.Depolar.Load();
+                    context.Kasalar.Load();
+                }
+                else
+                {
+                    context.Kasalar.Load();
+                    context.Depolar.Load();
+                }
+                //cari getirme alanı
+                if (cariGetir)
+                {
+                    entityBakiye = this.cariDal.cariBakiyesi(context, entity.Id);
+                    _cariId = entity.Id;
+                    _fisentity.CariId = entity.Id;
+                    _fisentity.FaturaUnvani = entity.FaturaUnvani;
+                    _fisentity.Adres = entity.Adres;
+                    _fisentity.Il = entity.Il;
+                    _fisentity.Ilce = entity.Ilce;
+                    _fisentity.VergiDairesi = entity.VergiDairesi;
+                    _fisentity.VergiNo = entity.VergiNo;
+                    _fisentity.Semt = entity.Semt;
+                    _fisentity.CepTelefonu = entity.CepTelefonu;
+                    _fisentity.CariAdi = entity.CariAdi;
+                    _fisentity.EMail = entity.EMail;
+                    _fisentity.Telefon = entity.Telefon;
+                    _fisentity.Aciklama = entity.Aciklama;
+                    lblCariAd.Text = entity.CariAdi;
+                    txtFaturaUnvani.Text = entity.FaturaUnvani;
+                    lblCariKod.Text = entity.CariKodu;
+                    lblAlacak.Text = entityBakiye.Alacak.ToString("C2");
+                    lblBorc.Text = entityBakiye.Borc.ToString("C2");
+                    lblBakiye.Text = entityBakiye.Bakiye.ToString("C2");
+                }
+                txtKod.DataBindings.Add("Text", _fisentity, "FisKodu", false,
                 DataSourceUpdateMode.OnPropertyChanged);
-            cmbTarih.DataBindings.Add("EditValue", _fisentity, "Tarih", true,
-                DataSourceUpdateMode.OnPropertyChanged, DateTime.Now);
-            cmbVadeTarihi.DataBindings.Add("EditValue", _fisentity, "VadeTarihi", true,
-                DataSourceUpdateMode.OnPropertyChanged, DateTime.Now);
-            txtBelgeNo.DataBindings.Add("Text", _fisentity, "BelgeNo", false,
+                txtFisTuru.DataBindings.Add("Text", _fisentity, "FisTuru", false,
+                    DataSourceUpdateMode.OnPropertyChanged);
+                cmbTarih.DataBindings.Add("EditValue", _fisentity, "Tarih", true,
+                    DataSourceUpdateMode.OnPropertyChanged, DateTime.Now);
+                cmbVadeTarihi.DataBindings.Add("EditValue", _fisentity, "VadeTarihi", true,
+                    DataSourceUpdateMode.OnPropertyChanged, DateTime.Now);
+                txtBelgeNo.DataBindings.Add("Text", _fisentity, "BelgeNo", false,
+                    DataSourceUpdateMode.OnPropertyChanged);
+                txtSeri.DataBindings.Add("Text", _fisentity, "Seri", false,
+                  DataSourceUpdateMode.OnPropertyChanged);
+                txtSira.DataBindings.Add("Text", _fisentity, "Sira", false,
+                                    DataSourceUpdateMode.OnPropertyChanged);
+                cmbTipi.DataBindings.Add("EditValue", _fisentity, "Tipi", false,
+                  DataSourceUpdateMode.OnPropertyChanged);
+
+                cmbProje.DataBindings.Add("EditValue", _fisentity, "Proje", false,
                 DataSourceUpdateMode.OnPropertyChanged);
-            txtSeri.DataBindings.Add("Text", _fisentity, "Seri", false,
+
+                cmbOzelKod.DataBindings.Add("EditValue", _fisentity, "OzelKod", false,
               DataSourceUpdateMode.OnPropertyChanged);
-            txtSira.DataBindings.Add("Text", _fisentity, "Sira", false,
-                                DataSourceUpdateMode.OnPropertyChanged);
-            cmbTipi.DataBindings.Add("EditValue", _fisentity, "Tipi", false,
-              DataSourceUpdateMode.OnPropertyChanged);
 
-            cmbProje.DataBindings.Add("EditValue", _fisentity, "Proje", false,
-            DataSourceUpdateMode.OnPropertyChanged);
+                txtAciklama.DataBindings.Add("Text", _fisentity, "Aciklama", false,
+                    DataSourceUpdateMode.OnPropertyChanged);
+                toggleKDVDahil.DataBindings.Add("EditValue", _fisentity, "KDVDahil", false,
+                    DataSourceUpdateMode.OnPropertyChanged);
+                if (!duzenle)
+                {
+                    var kod = context.Kodlar.Where(c => c.Tablo == "fis").First();
+                    _fisentity.FisKodu = CodeTool.fiskodolustur(kod.OnEki, kod.SonDeger.ToString());
+                }
+                calcIndirimOrani.EditValue = _fisentity.DipIskOran;
+                calcIndirimTutari.EditValue = _fisentity.DipIskTutari;
+                cmbAy.Month = DateTime.Now.Month;
+                for (int i = DateTime.Now.Year - 2; i <= DateTime.Now.Year + 2; i++)
+                {
+                    cmbYil.Properties.Items.Add(i);
+                }
+                cmbYil.Text = DateTime.Now.Year.ToString();
 
-            cmbOzelKod.DataBindings.Add("EditValue", _fisentity, "OzelKod", false,
-          DataSourceUpdateMode.OnPropertyChanged);
+                gridContStokHareket.DataSource = context.StokHareketleri.Local.ToBindingList();
+                gridContKasaHareket.DataSource = context.KasaHareketleri.Local.ToBindingList();
+                gridContPersonelHareket.DataSource = context.PersonelHareketleri.Local.ToBindingList();
+                FisAyar();
+                HepsiniHesapla().GetAwaiter();
 
-            txtAciklama.DataBindings.Add("Text", _fisentity, "Aciklama", false,
-                DataSourceUpdateMode.OnPropertyChanged);
-            toggleKDVDahil.DataBindings.Add("EditValue", _fisentity, "KDVDahil", false,
-                DataSourceUpdateMode.OnPropertyChanged);
-            if (!duzenle)
-            {
-                var kod = context.Kodlar.Where(c => c.Tablo == "fis").First();
-                _fisentity.FisKodu = CodeTool.fiskodolustur(kod.OnEki, kod.SonDeger.ToString());
+                if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi)))
+                {
+                    //lblmuhtahsil.Visible = true;
+                    toggleMuhtasilmi.Visible = true;
+                }
+                if (_fisentity.FisTuru == "Toptan Satış Faturası" || _fisentity.FisTuru == "Stok Devir Fişi" || _fisentity.FisTuru == "Sayım Fazlası Fişi" || _fisentity.FisTuru == "Sayım Eksiği Fişi" || _fisentity.FisTuru == "Alış Faturası")
+                {
+                    gridContStokHareket.ForceInitialize();
+                    if (File.Exists(DosyaYolu)) gridContStokHareket.MainView.RestoreLayoutFromXml(DosyaYolu);
+                }
+
+
+
+                OdenenTutarGuncelle();
+                ButonlariYukle();
+
+                cmbTipi.Properties.Items.AddRange(eislem.HareketTipiListele().Select(x => x.Aciklama).ToList());
+                var a = SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_VarsayilanHareketTipi);
+                if (a != null)
+                {
+                    cmbTipi.SelectedItem = a;
+                }
+
+                cmbProje.Properties.Items.AddRange(projeDal.GetAll(context).Select(x => x.ProjeAdi).ToList());
+                cmbOzelKod.Properties.Items.AddRange(ozelkodDal.GetAll(context).Select(x => x.OzelKodAdi).ToList());
+
             }
-            calcIndirimOrani.EditValue = _fisentity.DipIskOran;
-            calcIndirimTutari.EditValue = _fisentity.DipIskTutari;
-            cmbAy.Month = DateTime.Now.Month;
-            for (int i = DateTime.Now.Year - 2; i <= DateTime.Now.Year + 2; i++)
+            catch (Exception ex)
             {
-                cmbYil.Properties.Items.Add(i);
+
             }
-            cmbYil.Text = DateTime.Now.Year.ToString();
-
-            gridContStokHareket.DataSource = context.StokHareketleri.Local.ToBindingList();
-            gridContKasaHareket.DataSource = context.KasaHareketleri.Local.ToBindingList();
-            gridContPersonelHareket.DataSource = context.PersonelHareketleri.Local.ToBindingList();
-            FisAyar();
-            HepsiniHesapla().GetAwaiter();
-
-            if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi)))
-            {
-                //lblmuhtahsil.Visible = true;
-                toggleMuhtasilmi.Visible = true;
-            }
-            if (_fisentity.FisTuru == "Toptan Satış Faturası" || _fisentity.FisTuru == "Stok Devir Fişi" || _fisentity.FisTuru == "Sayım Fazlası Fişi" || _fisentity.FisTuru == "Sayım Eksiği Fişi" || _fisentity.FisTuru == "Alış Faturası")
-            {
-                gridContStokHareket.ForceInitialize();
-                if (File.Exists(DosyaYolu)) gridContStokHareket.MainView.RestoreLayoutFromXml(DosyaYolu);
-            }
-
-
-
-            OdenenTutarGuncelle();
-            ButonlariYukle();
-
-            cmbTipi.Properties.Items.AddRange(eislem.HareketTipiListele().Select(x => x.Aciklama).ToList());
-            var a = SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_VarsayilanHareketTipi);
-            if (a != null)
-            {
-                cmbTipi.SelectedItem = a;
-            }
-
-            cmbProje.Properties.Items.AddRange(projeDal.GetAll(context).Select(x => x.ProjeAdi).ToList());
-            cmbOzelKod.Properties.Items.AddRange(ozelkodDal.GetAll(context).Select(x => x.OzelKodAdi).ToList());
-
         }
 
         //personel ve ödeme türü eklemek için buton oluşturma

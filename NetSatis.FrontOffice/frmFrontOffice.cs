@@ -280,10 +280,10 @@ namespace NetSatis.FrontOffice
                     Text = item.OdemeTuruAdi,
                     Height = flowOdemeTurleri.Height - 1,
                     Width = 115,
-                    
+
                     FlatStyle = FlatStyle.Flat,
-                    BackColor=Color.Red,
-                    ForeColor=Color.White,
+                    BackColor = Color.Red,
+                    ForeColor = Color.White,
                     Margin = new Padding(2),
                     Font = new Font(Font.FontFamily, Font.Size, FontStyle.Bold),
                     Cursor = Cursors.Hand,
@@ -1345,7 +1345,7 @@ namespace NetSatis.FrontOffice
         {
             try
             {
-                frmStokSec form = new frmStokSec(ref this.context, txtBarkod.EditValue.ToString(),false);
+                frmStokSec form = new frmStokSec(ref this.context, txtBarkod.EditValue.ToString(), false);
                 form.ShowDialog();
                 if (form.secildi)
                 {
@@ -1873,6 +1873,51 @@ namespace NetSatis.FrontOffice
                 }
             }
         }
+
+        private void btnStokHareketleri_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            try
+            {
+                if (gridStokHareket.RowCount != 0)
+                {
+                    sec = Convert.ToInt32(gridStokHareket.GetFocusedRowCellValue(colStokId));
+                    frmStokHareket frmstokhareket = new frmStokHareket(sec);
+                    frmstokhareket.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Seçili Stok Bulunamadı");
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        private void btnDuzenle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+           
+                try
+                {
+                    if (gridStokHareket.RowCount != 0)
+                    {
+                        sec = Convert.ToInt32(gridStokHareket.GetFocusedRowCellValue(colStokId));
+                        frmStokIslem form = new frmStokIslem(stokDAL.GetByFilter(context, c => c.Id == sec));
+                        form.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Seçili Stok Bulunamadı");
+                    }
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            
+        }
+
     }
 }
 

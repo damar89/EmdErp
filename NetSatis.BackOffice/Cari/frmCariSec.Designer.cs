@@ -76,8 +76,9 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnEsktre = new DevExpress.XtraBars.BarButtonItem();
             this.btnHareketler = new DevExpress.XtraBars.BarButtonItem();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.brnCariDuzenle = new DevExpress.XtraBars.BarButtonItem();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -486,8 +487,9 @@
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnEsktre,
             this.btnHareketler,
-            this.brnCariDuzenle});
-            this.barManager1.MaxItemId = 3;
+            this.brnCariDuzenle,
+            this.barButtonItem1});
+            this.barManager1.MaxItemId = 4;
             // 
             // barDockControlTop
             // 
@@ -538,14 +540,6 @@
             this.btnHareketler.Name = "btnHareketler";
             this.btnHareketler.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHareketler_ItemClick);
             // 
-            // popupMenu1
-            // 
-            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketler),
-            new DevExpress.XtraBars.LinkPersistInfo(this.brnCariDuzenle)});
-            this.popupMenu1.Manager = this.barManager1;
-            this.popupMenu1.Name = "popupMenu1";
-            // 
             // brnCariDuzenle
             // 
             this.brnCariDuzenle.Caption = "Seçili Cariyi Düzenle";
@@ -554,6 +548,24 @@
             this.brnCariDuzenle.ImageOptions.LargeImage = global::NetSatis.BackOffice.Properties.Resources.editcontact_32x32;
             this.brnCariDuzenle.Name = "brnCariDuzenle";
             this.brnCariDuzenle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.brnCariDuzenle_ItemClick);
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketler),
+            new DevExpress.XtraBars.LinkPersistInfo(this.brnCariDuzenle),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1)});
+            this.popupMenu1.Manager = this.barManager1;
+            this.popupMenu1.Name = "popupMenu1";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Dizaynı Kaydet";
+            this.barButtonItem1.Id = 3;
+            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // frmCariSec
             // 
@@ -637,5 +649,6 @@
         private DevExpress.XtraBars.PopupMenu popupMenu1;
         private DevExpress.XtraBars.BarButtonItem btnHareketler;
         private DevExpress.XtraBars.BarButtonItem brnCariDuzenle;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }
 }
