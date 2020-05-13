@@ -53,7 +53,16 @@ namespace NetSatis.Entities.Data_Access
                            Bakiye = (grp.Where(x => x.OdemeTuruId == grp.Key.OdemeTuru.Id && x.Hareket == "Kasa Giriş").Sum(s => s.Tutar) ?? 0) - (grp.Where(x => x.OdemeTuruId == grp.Key.OdemeTuru.Id && x.Hareket == "Kasa Çıkış").Sum(s => s.Tutar) ?? 0)
                        }).ToList();
 
-            return res;
+            var r = (from x in res.GroupBy(s => s.Tarih)
+                     select new
+                     {
+                         Tarih = x.Key,
+                         KrediKarti = x.Where(s => s.OdemeTuruAdi == "Kredi Kartı").Sum(s => s.Bakiye),
+                         Nakit = x.Where(s => s.OdemeTuruAdi == "Nakit").Sum(s => s.Bakiye),
+                         KasaToplam = x.Where(s => s.OdemeTuruAdi == "Kredi Kartı").Sum(s => s.Bakiye) + x.Where(s => s.OdemeTuruAdi == "Nakit").Sum(s => s.Bakiye),
+                     });
+
+            return r.OrderByDescending(x=>x.Tarih); 
             #region eski kodlar
             //old code
             //var result = (from c in context.KasaHareketleri.Where(c => c.KasaId == kasaId)

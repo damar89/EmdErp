@@ -45,17 +45,10 @@
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.gridContKasaHareket = new DevExpress.XtraGrid.GridControl();
             this.gridKasaHareket = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFisKodu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colHareket = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colKasaCikis = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colKasaGiris = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colOdemeTuruKodu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colOdemeTuruAdi = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTarih = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTutar = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAciklama = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colVadeTarihi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -95,7 +88,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(722, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(613, 0);
             // 
             // barDockControlBottom
             // 
@@ -103,13 +96,13 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 436);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(722, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(613, 0);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(722, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(613, 0);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 436);
             // 
@@ -146,7 +139,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl1.Location = new System.Drawing.Point(0, 368);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(722, 68);
+            this.groupControl1.Size = new System.Drawing.Size(613, 68);
             this.groupControl1.TabIndex = 12;
             // 
             // btnKapat
@@ -154,7 +147,7 @@
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.ImageIndex = 0;
             this.btnKapat.ImageOptions.ImageList = this.ımageList1;
-            this.btnKapat.Location = new System.Drawing.Point(632, 26);
+            this.btnKapat.Location = new System.Drawing.Point(523, 26);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(85, 39);
             this.btnKapat.TabIndex = 5;
@@ -172,7 +165,7 @@
             this.gridContKasaHareket.Location = new System.Drawing.Point(0, 0);
             this.gridContKasaHareket.MainView = this.gridKasaHareket;
             this.gridContKasaHareket.Name = "gridContKasaHareket";
-            this.gridContKasaHareket.Size = new System.Drawing.Size(722, 368);
+            this.gridContKasaHareket.Size = new System.Drawing.Size(613, 368);
             this.gridContKasaHareket.TabIndex = 22;
             this.gridContKasaHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridKasaHareket});
@@ -180,138 +173,61 @@
             // gridKasaHareket
             // 
             this.gridKasaHareket.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colId,
-            this.colFisKodu,
-            this.colHareket,
-            this.colKasaCikis,
-            this.colKasaGiris,
-            this.colOdemeTuruKodu,
-            this.colOdemeTuruAdi,
-            this.colTarih,
-            this.colTutar,
-            this.colAciklama,
-            this.colVadeTarihi});
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4});
             this.gridKasaHareket.GridControl = this.gridContKasaHareket;
-            this.gridKasaHareket.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Tutar", this.colTutar, "(Tutar: SUM={0:C2})")});
             this.gridKasaHareket.Name = "gridKasaHareket";
+            this.gridKasaHareket.OptionsBehavior.Editable = false;
             this.gridKasaHareket.OptionsMenu.ShowGroupSummaryEditorItem = true;
             this.gridKasaHareket.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.VisibleAlways;
             this.gridKasaHareket.OptionsView.ShowAutoFilterRow = true;
             this.gridKasaHareket.OptionsView.ShowFooter = true;
-            this.gridKasaHareket.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colTarih, DevExpress.Data.ColumnSortOrder.Descending)});
             // 
-            // colId
+            // gridColumn1
             // 
-            this.colId.FieldName = "Id";
-            this.colId.Name = "colId";
-            this.colId.OptionsColumn.AllowEdit = false;
-            this.colId.OptionsColumn.ShowInCustomizationForm = false;
+            this.gridColumn1.Caption = "Tarih";
+            this.gridColumn1.FieldName = "Tarih";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
             // 
-            // colFisKodu
+            // gridColumn2
             // 
-            this.colFisKodu.Caption = "Fiş Kodu";
-            this.colFisKodu.FieldName = "FisKodu";
-            this.colFisKodu.Name = "colFisKodu";
-            this.colFisKodu.OptionsColumn.AllowEdit = false;
-            this.colFisKodu.OptionsColumn.ShowInCustomizationForm = false;
-            this.colFisKodu.Width = 224;
+            this.gridColumn2.Caption = "Kredi Kartı";
+            this.gridColumn2.DisplayFormat.FormatString = "c2";
+            this.gridColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn2.FieldName = "KrediKarti";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
             // 
-            // colHareket
+            // gridColumn3
             // 
-            this.colHareket.Caption = "Hareket";
-            this.colHareket.FieldName = "Hareket";
-            this.colHareket.Name = "colHareket";
-            this.colHareket.OptionsColumn.AllowEdit = false;
-            this.colHareket.OptionsColumn.ShowInCustomizationForm = false;
-            this.colHareket.Width = 102;
+            this.gridColumn3.Caption = "Nakit";
+            this.gridColumn3.DisplayFormat.FormatString = "c2";
+            this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn3.FieldName = "Nakit";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
             // 
-            // colKasaCikis
+            // gridColumn4
             // 
-            this.colKasaCikis.Caption = "Kasa Kodu";
-            this.colKasaCikis.FieldName = "KasaCikis";
-            this.colKasaCikis.Name = "colKasaCikis";
-            this.colKasaCikis.OptionsColumn.AllowEdit = false;
-            this.colKasaCikis.OptionsColumn.ShowInCustomizationForm = false;
-            // 
-            // colKasaGiris
-            // 
-            this.colKasaGiris.Caption = "Kasa Adı";
-            this.colKasaGiris.FieldName = "KasaGiris";
-            this.colKasaGiris.Name = "colKasaGiris";
-            this.colKasaGiris.OptionsColumn.AllowEdit = false;
-            this.colKasaGiris.OptionsColumn.ShowInCustomizationForm = false;
-            // 
-            // colOdemeTuruKodu
-            // 
-            this.colOdemeTuruKodu.Caption = "Ödeme Türü Kodu";
-            this.colOdemeTuruKodu.FieldName = "OdemeTuru.OdemeTuruKodu";
-            this.colOdemeTuruKodu.Name = "colOdemeTuruKodu";
-            this.colOdemeTuruKodu.OptionsColumn.AllowEdit = false;
-            this.colOdemeTuruKodu.OptionsColumn.ShowInCustomizationForm = false;
-            // 
-            // colOdemeTuruAdi
-            // 
-            this.colOdemeTuruAdi.Caption = "Ödeme Türü";
-            this.colOdemeTuruAdi.FieldName = "OdemeTuruAdi";
-            this.colOdemeTuruAdi.Name = "colOdemeTuruAdi";
-            this.colOdemeTuruAdi.OptionsColumn.AllowEdit = false;
-            this.colOdemeTuruAdi.OptionsColumn.ShowInCustomizationForm = false;
-            this.colOdemeTuruAdi.Visible = true;
-            this.colOdemeTuruAdi.VisibleIndex = 0;
-            this.colOdemeTuruAdi.Width = 173;
-            // 
-            // colTarih
-            // 
-            this.colTarih.Caption = "Tarih";
-            this.colTarih.DisplayFormat.FormatString = "d";
-            this.colTarih.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.colTarih.FieldName = "Tarih";
-            this.colTarih.Name = "colTarih";
-            this.colTarih.OptionsColumn.AllowEdit = false;
-            this.colTarih.OptionsColumn.ShowInCustomizationForm = false;
-            this.colTarih.Visible = true;
-            this.colTarih.VisibleIndex = 0;
-            this.colTarih.Width = 151;
-            // 
-            // colTutar
-            // 
-            this.colTutar.Caption = "Tutar";
-            this.colTutar.DisplayFormat.FormatString = "C2";
-            this.colTutar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colTutar.FieldName = "Bakiye";
-            this.colTutar.Name = "colTutar";
-            this.colTutar.OptionsColumn.AllowEdit = false;
-            this.colTutar.OptionsColumn.ShowInCustomizationForm = false;
-            this.colTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Bakiye", "Kasa Toplamı ={0:c2}")});
-            this.colTutar.Visible = true;
-            this.colTutar.VisibleIndex = 1;
-            this.colTutar.Width = 362;
-            // 
-            // colAciklama
-            // 
-            this.colAciklama.Caption = "Açıklama";
-            this.colAciklama.FieldName = "Aciklama";
-            this.colAciklama.Name = "colAciklama";
-            this.colAciklama.OptionsColumn.AllowEdit = false;
-            this.colAciklama.OptionsColumn.ShowInCustomizationForm = false;
-            this.colAciklama.Width = 122;
-            // 
-            // colVadeTarihi
-            // 
-            this.colVadeTarihi.Caption = "Vade Tarihi";
-            this.colVadeTarihi.DisplayFormat.FormatString = "d";
-            this.colVadeTarihi.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.colVadeTarihi.FieldName = "VadeTarihi";
-            this.colVadeTarihi.Name = "colVadeTarihi";
+            this.gridColumn4.Caption = "Kasa Toplam";
+            this.gridColumn4.DisplayFormat.FormatString = "c2";
+            this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn4.FieldName = "KasaToplam";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
             // 
             // frmGunlukHareketler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 436);
+            this.ClientSize = new System.Drawing.Size(613, 436);
             this.Controls.Add(this.gridContKasaHareket);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.barDockControlLeft);
@@ -348,16 +264,9 @@
         private DevExpress.XtraBars.PopupMenu popupMenu1;
         private DevExpress.XtraGrid.GridControl gridContKasaHareket;
         private DevExpress.XtraGrid.Views.Grid.GridView gridKasaHareket;
-        private DevExpress.XtraGrid.Columns.GridColumn colId;
-        private DevExpress.XtraGrid.Columns.GridColumn colFisKodu;
-        private DevExpress.XtraGrid.Columns.GridColumn colHareket;
-        private DevExpress.XtraGrid.Columns.GridColumn colKasaCikis;
-        private DevExpress.XtraGrid.Columns.GridColumn colKasaGiris;
-        private DevExpress.XtraGrid.Columns.GridColumn colOdemeTuruKodu;
-        private DevExpress.XtraGrid.Columns.GridColumn colOdemeTuruAdi;
-        private DevExpress.XtraGrid.Columns.GridColumn colTarih;
-        private DevExpress.XtraGrid.Columns.GridColumn colTutar;
-        private DevExpress.XtraGrid.Columns.GridColumn colAciklama;
-        private DevExpress.XtraGrid.Columns.GridColumn colVadeTarihi;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
     }
 }
