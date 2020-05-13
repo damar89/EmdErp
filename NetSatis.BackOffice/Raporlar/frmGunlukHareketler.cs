@@ -19,5 +19,10 @@ namespace NetSatis.BackOffice.Raporlar
                     x => x.Tarih >= dtBaslangic && x.Tarih <= dtBitis);
 
         }
+
+        private void btnKapat_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

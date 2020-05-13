@@ -279,7 +279,7 @@ namespace NetSatis.BackOffice.Cari
                     if (chkOzelKod2.Checked) TanimKontrol(OzelKod4, frmTanim.TanimTuru.CariOzelKod4);
                     #endregion
                     Entities.Tables.Cari cari = DB.Cariler.FirstOrDefault(x => x.CariKodu == CariKodu);
-      
+
                     #region Eğer Stok Databasede Kayıtlı Değil İse
                     {
                         cari = new Entities.Tables.Cari();
@@ -309,7 +309,7 @@ namespace NetSatis.BackOffice.Cari
                         cari.CariAdi = chkCariAdi.Checked ? CariAdi : "";
                         cari.CariKodu = CariKodu;
                         cari.Ilce = chkIlce.Checked ? Ilce : "";
-                       
+
                         cari.Durum = true;
                         DB.Cariler.Add(cari);
                         DB.SaveChanges();
@@ -333,8 +333,8 @@ namespace NetSatis.BackOffice.Cari
                             KasaHareket kasaHar = new KasaHareket();
                             kasaHar.FisKodu = cariDevirFisi.FisKodu;
                             kasaHar.FisTuru = "Cari Devir Fişi";
-                            kasaHar.Hareket = Convert.ToDecimal(DevirBakiye) > 0 ? "Kasa Çıkış": "Kasa Giriş";
-                             int kasaid = Convert.ToInt32(context.Kullanicilar.Where(x => x.Id == frmAnaMenu.UserId).FirstOrDefault().KasaId);
+                            kasaHar.Hareket = Convert.ToDecimal(DevirBakiye) > 0 ? "Kasa Çıkış" : "Kasa Giriş";
+                            int kasaid = Convert.ToInt32(context.Kullanicilar.Where(x => x.Id == frmAnaMenu.UserId).FirstOrDefault().KasaId);
                             kasaHar.KasaId = kasaid;
                             kasaHar.OdemeTuruId = 1;
                             kasaHar.CariId = cariDevirFisi.CariId;
@@ -371,7 +371,8 @@ namespace NetSatis.BackOffice.Cari
             string CariKodu, CariAdi, CariTuru, Sinif, Yetkili, FaturaUnvan, CepTelefon, Telefon, Fax, Mail,
       Web, Adres, Il, Ilce, Semt, Grup, AltGrup,
       OzelKod1, OzelKod2, OzelKod3, OzelKod4, VeriDairesi, VergiNo,
-      IskontoOran, RiskLimit, Aciklama;
+      IskontoOran, RiskLimit, Aciklama,
+      DevirBakiye;
             #endregion
             for (int i = 0; i < gridListe.RowCount; i++)
             {
@@ -402,6 +403,7 @@ namespace NetSatis.BackOffice.Cari
                 CepTelefon = VeriAl(cmbCepTelefon, i);
                 Telefon = VeriAl(cmbTelefon, i);
                 Fax = VeriAl(cmbFax, i);
+                DevirBakiye = VeriAl(cmbDevirGiris, i);
                 #endregion
                 #region Güncelleme İşlemi
                 Entities.Tables.Cari cari = DB.Cariler.FirstOrDefault(x => x.CariKodu == CariKodu);
@@ -435,6 +437,37 @@ namespace NetSatis.BackOffice.Cari
                 }
                 DB.SaveChanges();
                 #endregion
+                if (Convert.ToDecimal(DevirBakiye) != 0)
+                {
+                    NetSatisContext context = new NetSatisContext();
+                    Fis cariDevirFisi = new Fis();
+                    var kod = DB.Kodlar.Where(c => c.Tablo == "fis").First();
+                    cariDevirFisi.FisKodu = CodeTool.fiskodolustur(kod.OnEki.ToString(), kod.SonDeger.ToString());
+                    cariDevirFisi.FisTuru = "Cari Devir Fişi";
+                    cariDevirFisi.Tarih = DateTime.Now;
+                    cariDevirFisi.VadeTarihi = DateTime.Now;
+                    cariDevirFisi.CariId = cari.Id;
+                    cariDevirFisi.FaturaUnvani = cari.FaturaUnvani;
+                    cariDevirFisi.VergiDairesi = cari.VergiDairesi;
+                    cariDevirFisi.VergiNo = cari.VergiNo;
+                    DB.Fisler.Add(cariDevirFisi);
+                    DB.SaveChanges();
+                    CodeTool ct = new CodeTool();
+                    ct.KodArttirma("fis");
+                    KasaHareket kasaHar = new KasaHareket();
+                    kasaHar.FisKodu = cariDevirFisi.FisKodu;
+                    kasaHar.FisTuru = "Cari Devir Fişi";
+                    kasaHar.Hareket = Convert.ToDecimal(DevirBakiye) > 0 ? "Kasa Çıkış" : "Kasa Giriş";
+                    int kasaid = Convert.ToInt32(context.Kullanicilar.Where(x => x.Id == frmAnaMenu.UserId).FirstOrDefault().KasaId);
+                    kasaHar.KasaId = kasaid;
+                    kasaHar.OdemeTuruId = 1;
+                    kasaHar.CariId = cariDevirFisi.CariId;
+                    kasaHar.Tarih = DateTime.Now;
+                    kasaHar.VadeTarihi = DateTime.Now;
+                    kasaHar.Tutar = Convert.ToDecimal(DevirBakiye) > 0 ? Convert.ToDecimal(DevirBakiye) : Convert.ToDecimal(DevirBakiye) * -1;
+                    DB.KasaHareketleri.Add(kasaHar);
+                }
+                DB.SaveChanges();
             }
             MessageBox.Show("Verilerin güncellenmesi hatasız bir şekilde tamamlanmıştır.");
         }

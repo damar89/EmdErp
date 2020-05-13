@@ -190,9 +190,33 @@ namespace NetSatis.FrontOffice
                         c = Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(198)))), ((int)(((byte)(87)))));
                         break;
                     case 5:
-                        c = Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(198)))), ((int)(((byte)(87)))));
+                        c = Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(168)))), ((int)(((byte)(87)))));
                         break;
                     case 6:
+                        c = Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(19)))), ((int)(((byte)(87)))));
+                        break;
+                    case 7:
+                        c = Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(198)))), ((int)(((byte)(87)))));
+                        break;
+                    case 8:
+                        c = Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(111)))), ((int)(((byte)(87)))));
+                        break;
+                    case 9:
+                        c = Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(19)))), ((int)(((byte)(87)))));
+                        break;
+                    case 10:
+                        c = Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(87)))));
+                        break;
+                    case 11:
+                        c = Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(198)))), ((int)(((byte)(87)))));
+                        break;
+                    case 12:
+                        c = Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(111)))), ((int)(((byte)(87)))));
+                        break;
+                    case 13:
+                        c = Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(168)))), ((int)(((byte)(87)))));
+                        break;
+                    case 14:
                         c = Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(198)))), ((int)(((byte)(87)))));
                         break;
                     default:
