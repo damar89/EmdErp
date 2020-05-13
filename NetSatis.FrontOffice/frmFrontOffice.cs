@@ -280,10 +280,10 @@ namespace NetSatis.FrontOffice
                     Text = item.OdemeTuruAdi,
                     Height = flowOdemeTurleri.Height - 1,
                     Width = 115,
-                    
+
                     FlatStyle = FlatStyle.Flat,
-                    BackColor=Color.Red,
-                    ForeColor=Color.White,
+                    BackColor = Color.Red,
+                    ForeColor = Color.White,
                     Margin = new Padding(2),
                     Font = new Font(Font.FontFamily, Font.Size, FontStyle.Bold),
                     Cursor = Cursors.Hand,
@@ -1345,7 +1345,7 @@ namespace NetSatis.FrontOffice
         {
             try
             {
-                frmStokSec form = new frmStokSec(ref this.context, txtBarkod.EditValue.ToString(),false);
+                frmStokSec form = new frmStokSec(ref this.context, txtBarkod.EditValue.ToString(), false);
                 form.ShowDialog();
                 if (form.secildi)
                 {
@@ -1897,8 +1897,7 @@ namespace NetSatis.FrontOffice
 
         private void btnDuzenle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (e.KeyCode == Keys.F8)
-            {
+           
                 try
                 {
                     if (gridStokHareket.RowCount != 0)
@@ -1916,7 +1915,9 @@ namespace NetSatis.FrontOffice
                 {
                     throw;
                 }
-            }
+            
+        }
+
     }
 }
 
