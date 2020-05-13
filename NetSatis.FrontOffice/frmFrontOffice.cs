@@ -1873,6 +1873,50 @@ namespace NetSatis.FrontOffice
                 }
             }
         }
+
+        private void btnStokHareketleri_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            try
+            {
+                if (gridStokHareket.RowCount != 0)
+                {
+                    sec = Convert.ToInt32(gridStokHareket.GetFocusedRowCellValue(colStokId));
+                    frmStokHareket frmstokhareket = new frmStokHareket(sec);
+                    frmstokhareket.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Seçili Stok Bulunamadı");
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        private void btnDuzenle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (e.KeyCode == Keys.F8)
+            {
+                try
+                {
+                    if (gridStokHareket.RowCount != 0)
+                    {
+                        sec = Convert.ToInt32(gridStokHareket.GetFocusedRowCellValue(colStokId));
+                        frmStokIslem form = new frmStokIslem(stokDAL.GetByFilter(context, c => c.Id == sec));
+                        form.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Seçili Stok Bulunamadı");
+                    }
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
     }
 }
 

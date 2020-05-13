@@ -121,9 +121,7 @@ namespace NetSatis.BackOffice.Cari
 
         private void frmCariSec_FormClosing(object sender, FormClosingEventArgs e)
         {
-            gridView1.ClearColumnsFilter();
-            if (Directory.Exists($@"{Application.StartupPath}\Gorunum\"))
-                gridControl1.MainView.SaveLayoutToXml(DosyaYolu);
+          
         }
 
         private void brnCariDuzenle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -151,6 +149,13 @@ namespace NetSatis.BackOffice.Cari
 
                 MessageBox.Show("Seçili Cari Bulunamadı");
             }
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            gridView1.ClearColumnsFilter();
+            if (Directory.Exists($@"{Application.StartupPath}\Gorunum\"))
+                gridControl1.MainView.SaveLayoutToXml(DosyaYolu);
         }
     }
 }
