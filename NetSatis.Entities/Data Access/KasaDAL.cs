@@ -53,7 +53,7 @@ namespace NetSatis.Entities.Data_Access
                            Bakiye = (grp.Where(x => x.OdemeTuruId == grp.Key.OdemeTuru.Id && x.Hareket == "Kasa Giriş").Sum(s => s.Tutar) ?? 0) - (grp.Where(x => x.OdemeTuruId == grp.Key.OdemeTuru.Id && x.Hareket == "Kasa Çıkış").Sum(s => s.Tutar) ?? 0)
                        }).ToList();
 
-            var r = (from x in res.GroupBy(s => s.Tarih)
+            var r = (from x in res.GroupBy(s => s.Tarih.Value.Date)
                      select new
                      {
                          Tarih = x.Key,
