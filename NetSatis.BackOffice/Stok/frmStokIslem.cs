@@ -746,15 +746,7 @@ namespace NetSatis.BackOffice.Stok
         }
         private void btnStokGetir_Click(object sender, EventArgs e)
         {
-            frmStokSec form = new frmStokSec(ref this.context, txtStokAdi.EditValue.ToString(), false);
-            form.ShowDialog();
-            if (form.secildi)
-            {
-                //Buradan
-                var enti = form.secilen.First();
-                //Buraya kadar
-                Olustur(enti, false);
-            }
+
         }
         public byte[] imageToByteArray(System.Drawing.Image imageIn)
         {
