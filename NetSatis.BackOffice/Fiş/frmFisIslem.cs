@@ -7,6 +7,7 @@ using DevExpress.XtraReports.UI;
 using NetSatis.BackOffice.Cari;
 using NetSatis.BackOffice.Depo;
 using NetSatis.BackOffice.Extensions;
+using NetSatis.BackOffice.İndirim;
 using NetSatis.BackOffice.Kasa;
 using NetSatis.BackOffice.Personel;
 using NetSatis.BackOffice.Stok;
@@ -1604,19 +1605,42 @@ namespace NetSatis.BackOffice.Fiş
 
                     if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_AlisFiyat)))
                     {
-                        if (_fisentity.FisTuru == "Alış Faturası" || _fisentity.FisTuru == "Alış İrsaliyesi")
+                        if (toggleKDVDahil.IsOn)
                         {
-                            stokVeri.Stok.AlisFiyati1 = stokVeri.BirimFiyati;
+                            if (_fisentity.FisTuru == "Alış Faturası" || _fisentity.FisTuru == "Alış İrsaliyesi")
+                            {
+                      
 
-                            var ind1 = stokVeri.BirimFiyati - (stokVeri.BirimFiyati * stokVeri.IndirimOrani / 100);
-                            var ind2 = ind1 - (ind1 * stokVeri.IndirimOrani2 / 100);
-                            var ind3 = ind2 - (ind2 * stokVeri.IndirimOrani3 / 100);
+                                stokVeri.Stok.AlisFiyati1 = stokVeri.BirimFiyati / (1 + (stokVeri.Kdv * 100));
 
-                            stokVeri.Stok.AlisFiyati2 = ind3;
+                                var ind1 = stokVeri.BirimFiyati / (1 + (stokVeri.Kdv * 100))- (stokVeri.BirimFiyati / (1 + (stokVeri.Kdv * 100))*stokVeri.IndirimOrani/100);
 
-                            stokVeri.Stok.AlisFiyati3 = ind3 + (ind3 * stokVeri.Kdv / 100);
-                            stokDAL.MevcutStok(context, 1);
+                                var ind2 = ind1 - (ind1 * stokVeri.IndirimOrani2 / 100);
+                                var ind3 = ind2 - (ind2 * stokVeri.IndirimOrani3 / 100);
+
+                                stokVeri.Stok.AlisFiyati2 = ind3;
+
+                                stokVeri.Stok.AlisFiyati3 = ind3 + (ind3 * stokVeri.Kdv / 100);
+                                stokDAL.MevcutStok(context, 1);
+                            }
                         }
+                        else
+                        {
+                            if (_fisentity.FisTuru == "Alış Faturası" || _fisentity.FisTuru == "Alış İrsaliyesi")
+                            {
+                                stokVeri.Stok.AlisFiyati1 = stokVeri.BirimFiyati;
+
+                                var ind1 = stokVeri.BirimFiyati - (stokVeri.BirimFiyati * stokVeri.IndirimOrani / 100);
+                                var ind2 = ind1 - (ind1 * stokVeri.IndirimOrani2 / 100);
+                                var ind3 = ind2 - (ind2 * stokVeri.IndirimOrani3 / 100);
+
+                                stokVeri.Stok.AlisFiyati2 = ind3;
+
+                                stokVeri.Stok.AlisFiyati3 = ind3 + (ind3 * stokVeri.Kdv / 100);
+                                stokDAL.MevcutStok(context, 1);
+                            }
+                        }
+
                     }
 
                 }
@@ -3215,6 +3239,12 @@ namespace NetSatis.BackOffice.Fiş
         private void toggleKDVDahil_EditValueChanged(object sender, EventArgs e)
         {
             HepsiniHesapla();
+        }
+
+        private void btnIndirim_Click(object sender, EventArgs e)
+        {
+            frmTopluIskonto frm = new frmTopluIskonto();
+            frm.ShowDialog();
         }
 
         private void gridStokHareket_KeyDown(object sender, KeyEventArgs e)

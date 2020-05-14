@@ -77,6 +77,7 @@ namespace NetSatis.BackOffice.Ayarlar
                 calcToptanFisKodu.Value = Convert.ToDecimal(kodlar.SonDeger);
             }
 
+            
 
 
             cmbBilgiFisi.SelectedIndex =

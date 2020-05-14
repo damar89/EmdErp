@@ -9,6 +9,7 @@ namespace NetSatis.Entities.Tables
         public int HizliSatisSiradakiNo { get; set; }
         public string ToptanSatisOnEki { get; set; }
         public int ToptanSatisSiradakiNo { get; set; }
+        public int Barkod { get; set; }
 
     }
 }

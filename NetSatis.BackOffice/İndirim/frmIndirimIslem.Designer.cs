@@ -64,12 +64,12 @@
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.btnCikar = new DevExpress.XtraEditors.SimpleButton();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.btnTopluGiris = new DevExpress.XtraBars.BarButtonItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.btnTopluGiris = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.wizardControl1)).BeginInit();
             this.wizardControl1.SuspendLayout();
             this.wizardPage1.SuspendLayout();
@@ -99,7 +99,6 @@
             this.wizardControl1.Controls.Add(this.completionWizardPage1);
             this.wizardControl1.Controls.Add(this.wizardPage2);
             this.wizardControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wizardControl1.Location = new System.Drawing.Point(0, 0);
             this.wizardControl1.Name = "wizardControl1";
             this.wizardControl1.NextText = "&İleri >";
             this.wizardControl1.Pages.AddRange(new DevExpress.XtraWizard.BaseWizardPage[] {
@@ -119,7 +118,7 @@
             // welcomeWizardPage1
             // 
             this.welcomeWizardPage1.Name = "welcomeWizardPage1";
-            this.welcomeWizardPage1.Size = new System.Drawing.Size(959, 477);
+            this.welcomeWizardPage1.Size = new System.Drawing.Size(959, 478);
             this.welcomeWizardPage1.Text = "İndirim Sihirbazına Hoşgeldiniz";
             // 
             // wizardPage1
@@ -128,13 +127,13 @@
             this.wizardPage1.Controls.Add(this.btnTarihli);
             this.wizardPage1.Controls.Add(this.btnSuresiz);
             this.wizardPage1.Name = "wizardPage1";
-            this.wizardPage1.Size = new System.Drawing.Size(959, 477);
+            this.wizardPage1.Size = new System.Drawing.Size(959, 478);
             this.wizardPage1.Text = "İndirim Türünü Seçiniz";
             // 
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 205);
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 206);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.groupControl1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
@@ -206,16 +205,16 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(486, 272);
+            this.groupControl2.Size = new System.Drawing.Size(481, 272);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Açıklama";
             // 
             // txtAciklama
             // 
             this.txtAciklama.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtAciklama.Location = new System.Drawing.Point(2, 20);
+            this.txtAciklama.Location = new System.Drawing.Point(2, 23);
             this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(482, 250);
+            this.txtAciklama.Size = new System.Drawing.Size(477, 247);
             this.txtAciklama.TabIndex = 32;
             // 
             // btnTarihli
@@ -249,14 +248,14 @@
             // completionWizardPage1
             // 
             this.completionWizardPage1.Name = "completionWizardPage1";
-            this.completionWizardPage1.Size = new System.Drawing.Size(959, 477);
+            this.completionWizardPage1.Size = new System.Drawing.Size(959, 478);
             // 
             // wizardPage2
             // 
             this.wizardPage2.Controls.Add(this.gridContIndirimler);
             this.wizardPage2.Controls.Add(this.groupControl3);
             this.wizardPage2.Name = "wizardPage2";
-            this.wizardPage2.Size = new System.Drawing.Size(959, 477);
+            this.wizardPage2.Size = new System.Drawing.Size(959, 478);
             this.wizardPage2.Text = "Lütfen İndirim Yapılacak Ürünleri Seçiniz";
             // 
             // gridContIndirimler
@@ -265,7 +264,7 @@
             this.gridContIndirimler.Location = new System.Drawing.Point(0, 0);
             this.gridContIndirimler.MainView = this.gridIndirimler;
             this.gridContIndirimler.Name = "gridContIndirimler";
-            this.gridContIndirimler.Size = new System.Drawing.Size(959, 415);
+            this.gridContIndirimler.Size = new System.Drawing.Size(959, 416);
             this.gridContIndirimler.TabIndex = 15;
             this.gridContIndirimler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridIndirimler});
@@ -371,7 +370,7 @@
             this.groupControl3.Controls.Add(this.btnGuncelle);
             this.groupControl3.Controls.Add(this.btnCikar);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl3.Location = new System.Drawing.Point(0, 415);
+            this.groupControl3.Location = new System.Drawing.Point(0, 416);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(959, 62);
             this.groupControl3.TabIndex = 16;
@@ -439,6 +438,13 @@
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
+            // btnTopluGiris
+            // 
+            this.btnTopluGiris.Caption = "Toplu İskonto Girişi";
+            this.btnTopluGiris.Id = 0;
+            this.btnTopluGiris.Name = "btnTopluGiris";
+            this.btnTopluGiris.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTopluGiris_ItemClick);
+            // 
             // barManager1
             // 
             this.barManager1.DockControls.Add(this.barDockControlTop);
@@ -481,13 +487,6 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1019, 0);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 645);
-            // 
-            // btnTopluGiris
-            // 
-            this.btnTopluGiris.Caption = "Toplu İskonto Girişi";
-            this.btnTopluGiris.Id = 0;
-            this.btnTopluGiris.Name = "btnTopluGiris";
-            this.btnTopluGiris.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTopluGiris_ItemClick);
             // 
             // frmIndirimIslem
             // 

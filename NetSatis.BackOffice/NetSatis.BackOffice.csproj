@@ -557,6 +557,12 @@
     <Compile Include="Fiş\frmTarihliTahsilat.Designer.cs">
       <DependentUpon>frmTarihliTahsilat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fiş\frmTopluIskonto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiş\frmTopluIskonto.Designer.cs">
+      <DependentUpon>frmTopluIskonto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fiş\frmToptanSatis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1192,6 +1198,9 @@
     <EmbeddedResource Include="Fiş\frmTarihliTahsilat.resx">
       <DependentUpon>frmTarihliTahsilat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Fiş\frmTopluIskonto.resx">
+      <DependentUpon>frmTopluIskonto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fiş\frmToptanSatis.resx">
       <DependentUpon>frmToptanSatis.cs</DependentUpon>
     </EmbeddedResource>
@@ -1477,6 +1486,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="emd icon.ico" />
+    <None Include="Resources\iconfinder_36_3319608.png" />
     <None Include="Resources\add_16x161.png" />
     <None Include="Resources\insertblanklinepivottable_32x32.png" />
     <None Include="Resources\refreshallpivottable.svg" />

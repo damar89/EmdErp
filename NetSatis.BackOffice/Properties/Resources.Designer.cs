@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NetSatis.BackOffice.Properties
-{
-
-
+namespace NetSatis.BackOffice.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -716,6 +716,16 @@ namespace NetSatis.BackOffice.Properties
         internal static System.Drawing.Bitmap göster2 {
             get {
                 object obj = ResourceManager.GetObject("göster2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_36_3319608 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_36_3319608", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

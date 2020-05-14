@@ -1,6 +1,6 @@
-﻿namespace NetSatis.BackOffice.İndirim
+﻿namespace NetSatis.BackOffice.Fiş
 {
-    partial class frmTopluOran
+    partial class frmTopluIskonto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTopluOran));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTopluIskonto));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colOran = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDeger = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIskonto1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIskonto2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIskonto3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
@@ -48,7 +49,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(487, 256);
+            this.gridControl1.Size = new System.Drawing.Size(401, 229);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -56,76 +57,86 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colOran,
-            this.colDeger});
+            this.colIskonto1,
+            this.colIskonto2,
+            this.colIskonto3});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
-            // colOran
+            // colIskonto1
             // 
-            this.colOran.Caption = "İskonto Oranı";
-            this.colOran.FieldName = "IndirimOrani";
-            this.colOran.Name = "colOran";
-            this.colOran.OptionsColumn.AllowEdit = false;
-            this.colOran.Visible = true;
-            this.colOran.VisibleIndex = 0;
+            this.colIskonto1.Caption = "İskonto1";
+            this.colIskonto1.DisplayFormat.FormatString = "n2";
+            this.colIskonto1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colIskonto1.FieldName = "colIskonto1";
+            this.colIskonto1.Name = "colIskonto1";
+            this.colIskonto1.Visible = true;
+            this.colIskonto1.VisibleIndex = 0;
             // 
-            // colDeger
+            // colIskonto2
             // 
-            this.colDeger.Caption = "İndirim Oranı";
-            this.colDeger.DisplayFormat.FormatString = "N2";
-            this.colDeger.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colDeger.FieldName = "Degeri";
-            this.colDeger.Name = "colDeger";
-            this.colDeger.Visible = true;
-            this.colDeger.VisibleIndex = 1;
+            this.colIskonto2.Caption = "İskonto2";
+            this.colIskonto2.DisplayFormat.FormatString = "n2";
+            this.colIskonto2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colIskonto2.FieldName = "colIskonto1";
+            this.colIskonto2.Name = "colIskonto2";
+            this.colIskonto2.Visible = true;
+            this.colIskonto2.VisibleIndex = 1;
+            // 
+            // colIskonto3
+            // 
+            this.colIskonto3.Caption = "İskonto3";
+            this.colIskonto3.DisplayFormat.FormatString = "n2";
+            this.colIskonto3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colIskonto3.FieldName = "colIskonto1";
+            this.colIskonto3.Name = "colIskonto3";
+            this.colIskonto3.Visible = true;
+            this.colIskonto3.VisibleIndex = 2;
             // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.btnKaydet);
             this.groupControl1.Controls.Add(this.btnKapat);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 256);
+            this.groupControl1.Location = new System.Drawing.Point(0, 229);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(487, 62);
-            this.groupControl1.TabIndex = 7;
+            this.groupControl1.Size = new System.Drawing.Size(401, 62);
+            this.groupControl1.TabIndex = 8;
             // 
             // btnKaydet
             // 
             this.btnKaydet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKaydet.ImageOptions.ImageIndex = 1;
             this.btnKaydet.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnKaydet.ImageOptions.SvgImage")));
-            this.btnKaydet.Location = new System.Drawing.Point(306, 23);
+            this.btnKaydet.Location = new System.Drawing.Point(220, 23);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(85, 36);
             this.btnKaydet.TabIndex = 5;
             this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // btnKapat
             // 
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.ImageIndex = 0;
             this.btnKapat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnKapat.ImageOptions.SvgImage")));
-            this.btnKapat.Location = new System.Drawing.Point(397, 23);
+            this.btnKapat.Location = new System.Drawing.Point(311, 23);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(85, 36);
             this.btnKapat.TabIndex = 5;
             this.btnKapat.Text = "Kapat";
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
-            // frmTopluOran
+            // frmTopluIskonto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 318);
+            this.ClientSize = new System.Drawing.Size(401, 291);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl1);
-            this.IconOptions.ShowIcon = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmTopluOran";
-            this.Text = "İskonto Girişi";
+            this.Name = "frmTopluIskonto";
+            this.Text = "İskonto Giriş";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -138,10 +149,11 @@
 
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colOran;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
-        private DevExpress.XtraGrid.Columns.GridColumn colDeger;
+        private DevExpress.XtraGrid.Columns.GridColumn colIskonto1;
+        private DevExpress.XtraGrid.Columns.GridColumn colIskonto2;
+        private DevExpress.XtraGrid.Columns.GridColumn colIskonto3;
     }
 }
