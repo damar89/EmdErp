@@ -297,6 +297,8 @@ namespace NetSatis.FrontOffice
             flowOdemeTurleri.Controls.Add(AcikHesapButon);
             foreach (var item in context.OdemeTurleri.ToList())
             {
+                if (item.OdemeTuruKodu == "003")
+                    continue;
                 var buton = new Button
                 {
                     Name = item.OdemeTuruKodu,

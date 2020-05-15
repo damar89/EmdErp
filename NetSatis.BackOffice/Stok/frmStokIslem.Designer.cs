@@ -498,9 +498,9 @@ namespace NetSatis.BackOffice.Stok
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.gridContBarkod);
-            this.groupControl1.Location = new System.Drawing.Point(612, 227);
+            this.groupControl1.Location = new System.Drawing.Point(599, 227);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(173, 110);
+            this.groupControl1.Size = new System.Drawing.Size(186, 110);
             this.groupControl1.TabIndex = 31;
             this.groupControl1.Text = "Barkodlar";
             // 
@@ -512,7 +512,7 @@ namespace NetSatis.BackOffice.Stok
             this.gridContBarkod.Name = "gridContBarkod";
             this.gridContBarkod.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repoSil});
-            this.gridContBarkod.Size = new System.Drawing.Size(169, 85);
+            this.gridContBarkod.Size = new System.Drawing.Size(182, 85);
             this.gridContBarkod.TabIndex = 1;
             this.gridContBarkod.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridBarkod});
@@ -1520,15 +1520,15 @@ namespace NetSatis.BackOffice.Stok
             this.emptySpaceItem6.Location = new System.Drawing.Point(581, 0);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
             this.emptySpaceItem6.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.emptySpaceItem6.Size = new System.Drawing.Size(23, 114);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(10, 114);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem31
             // 
             this.layoutControlItem31.Control = this.groupControl1;
-            this.layoutControlItem31.Location = new System.Drawing.Point(604, 0);
+            this.layoutControlItem31.Location = new System.Drawing.Point(591, 0);
             this.layoutControlItem31.Name = "layoutControlItem31";
-            this.layoutControlItem31.Size = new System.Drawing.Size(177, 114);
+            this.layoutControlItem31.Size = new System.Drawing.Size(190, 114);
             this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem31.TextVisible = false;
             // 
@@ -1827,7 +1827,7 @@ namespace NetSatis.BackOffice.Stok
             // 
             this.tabNavigationPage2.Caption = "Barkodlar";
             this.tabNavigationPage2.Name = "tabNavigationPage2";
-            this.tabNavigationPage2.Size = new System.Drawing.Size(787, 540);
+            this.tabNavigationPage2.Size = new System.Drawing.Size(793, 565);
             // 
             // btnKapat
             // 
