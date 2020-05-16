@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NetSatis.FrontOffice.Properties
-{
-
-
+namespace NetSatis.FrontOffice.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -19,7 +19,7 @@ namespace NetSatis.FrontOffice.Properties
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -116,6 +116,36 @@ namespace NetSatis.FrontOffice.Properties
         internal static System.Drawing.Bitmap hide_32x32 {
             get {
                 object obj = ResourceManager.GetObject("hide_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_ic_settings_backup_restore_48px_3669248 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_ic_settings_backup_restore_48px_3669248", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_ic_settings_backup_restore_48px_3669248__1_ {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_ic_settings_backup_restore_48px_3669248 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Redo_105223 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Redo_105223", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

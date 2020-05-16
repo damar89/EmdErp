@@ -4,6 +4,7 @@ using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tools;
 using NetSatis.Reports.Fatura_ve_Fiş;
 using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Fiş
@@ -16,6 +17,7 @@ namespace NetSatis.BackOffice.Fiş
         StokHareketDAL stokHareketDal = new StokHareketDAL();
 
         int user = 0;
+        string DosyaYolu = $@"{Application.StartupPath}\Gorunum\frmSatisRapor.xml";
         public frmSatisRapor(DateTime baslangic, DateTime bitis, int userId = 0)
         {
             user = userId;
@@ -25,6 +27,8 @@ namespace NetSatis.BackOffice.Fiş
 
         private void frmSatisRapor_Load(object sender, EventArgs e)
         {
+            if (File.Exists(DosyaYolu)) gridContFisler.MainView.RestoreLayoutFromXml(DosyaYolu);
+
             Listele();
 
             if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi)))
@@ -230,6 +234,12 @@ namespace NetSatis.BackOffice.Fiş
             string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
             FaturaHazirla f = new FaturaHazirla();
             f.BilgiFisi(secilen);
+        }
+
+        private void btnGorunumKaydet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (Directory.Exists($@"{Application.StartupPath}\Gorunum"))
+                gridContFisler.MainView.SaveLayoutToXml(DosyaYolu);
         }
     }
 }

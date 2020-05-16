@@ -105,6 +105,7 @@
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.colOdemeTuru = new DevExpress.XtraGrid.Columns.GridColumn();
             this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.btnGorunumKaydet = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -152,7 +153,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnFtrSil),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem7),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnMustahsil),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnBilgiFisi)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnBilgiFisi),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnGorunumKaydet)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
@@ -281,8 +283,9 @@
             this.btnWord,
             this.btnPdf,
             this.barButtonItem11,
-            this.btnBilgiFisi});
-            this.barManager1.MaxItemId = 37;
+            this.btnBilgiFisi,
+            this.btnGorunumKaydet});
+            this.barManager1.MaxItemId = 38;
             // 
             // barDockControlTop
             // 
@@ -617,7 +620,7 @@
             this.gridContFisler.Name = "gridContFisler";
             this.gridContFisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpsChkKdvDahil});
-            this.gridContFisler.Size = new System.Drawing.Size(1023, 354);
+            this.gridContFisler.Size = new System.Drawing.Size(1023, 349);
             this.gridContFisler.TabIndex = 0;
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});
@@ -885,6 +888,15 @@
             this.popupMenu2.Manager = this.barManager1;
             this.popupMenu2.Name = "popupMenu2";
             // 
+            // btnGorunumKaydet
+            // 
+            this.btnGorunumKaydet.Caption = "Görünüm Kaydet";
+            this.btnGorunumKaydet.Id = 37;
+            this.btnGorunumKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.Image")));
+            this.btnGorunumKaydet.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.LargeImage")));
+            this.btnGorunumKaydet.Name = "btnGorunumKaydet";
+            this.btnGorunumKaydet.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGorunumKaydet_ItemClick);
+            // 
             // frmSatisRapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -993,5 +1005,6 @@
         private DevExpress.XtraBars.BarButtonItem btnPdf;
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
         private DevExpress.XtraGrid.Columns.GridColumn colOdemeTuru;
+        private DevExpress.XtraBars.BarButtonItem btnGorunumKaydet;
     }
 }

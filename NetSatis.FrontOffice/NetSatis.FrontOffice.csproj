@@ -176,6 +176,9 @@
     <Content Include="emd icon.ico" />
     <Content Include="pos icon.ico" />
     <Content Include="pos.ico" />
+    <None Include="Resources\iconfinder_ic_settings_backup_restore_48px_3669248 %281%29.png" />
+    <None Include="Resources\iconfinder_ic_settings_backup_restore_48px_3669248.png" />
+    <None Include="Resources\iconfinder_Redo_105223.png" />
     <None Include="Resources\bo_kpi_scorecard.svg" />
     <None Include="Resources\newtablestyle.svg" />
     <None Include="Resources\switchtimescalesto.svg" />
