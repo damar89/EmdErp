@@ -10,7 +10,7 @@ namespace NetSatis.Entities.Mapping
         {
             this.HasKey(p => p.Id);
             this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(p => p.KategoriAdi).HasMaxLength(75);
+            this.Property(p => p.KategoriAdi).HasMaxLength(750);
             this.Property(p => p.Kod).HasMaxLength(75);
 
             this.ToTable("Stok_Kategoriler");

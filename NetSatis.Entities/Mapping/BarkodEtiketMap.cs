@@ -23,8 +23,8 @@ namespace NetSatis.Entities.Mapping
             this.Property(p => p.SatisFiyati4).HasPrecision(12, 2);
             this.Property(p => p.Birim).HasMaxLength(50);
             this.Property(p => p.Kategori).HasMaxLength(60);
-            this.Property(p => p.AnaGrup).HasMaxLength(30);
-            this.Property(p => p.AltGrup).HasMaxLength(30);
+            this.Property(p => p.AnaGrup).HasMaxLength(60);
+            this.Property(p => p.AltGrup).HasMaxLength(60);
             this.Property(p => p.Marka).HasMaxLength(30);
             this.Property(p => p.Uretici).HasMaxLength(30);
             this.Property(p => p.Modeli).HasMaxLength(30);
@@ -32,7 +32,7 @@ namespace NetSatis.Entities.Mapping
             this.Property(p => p.Pozisyon).HasMaxLength(30);
             this.Property(p => p.SezonYil).HasMaxLength(30);
             this.Property(p => p.OzelKodu).HasMaxLength(30);
-            this.Property(p => p.Aciklama).HasMaxLength(200);
+            this.Property(p => p.Aciklama).HasMaxLength(2000);
             this.ToTable("BarkodEtiketleri");
             this.Property(p => p.Id).HasColumnName("Id");
             this.Property(p => p.StokKodu).HasColumnName("StokKodu");
