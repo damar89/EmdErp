@@ -133,5 +133,11 @@ namespace NetSatis.BackOffice.Fiş
                 this.Close();
             }
         }
+
+        private void frmOdemeEkrani_Shown(object sender, EventArgs e)
+        {
+            calcTutar.Focus();
+            
+        }
     }
 }

@@ -16,8 +16,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             NetSatisContext context = new NetSatisContext();
             ObjectDataSource cariBakiyeDataSource = new ObjectDataSource { DataSource = cariDal.GetCariler(context) };
             Fis fisBilgi = fisDal.GetByFilter(context, c => c.FisKodu == fisKodu);
-
-            decimal? bakiye = cariDal.cariBakiyesi(context, Convert.ToInt32(fisBilgi.CariId))?.Bakiye;
+            var bakiye = cariDal.cariBakiyesi(context, Convert.ToInt32(fisBilgi.CariId))?.Bakiye;
 
 
             //blCariAdı.DataBindings.Add("Text", cariEntity, "CariAdi");a
@@ -29,7 +28,8 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             colAlinan.DataBindings.Add("Text", fisBilgi, "ToplamTutar", "{0:C2}");
             colTarih.DataBindings.Add("Text", fisBilgi, "Tarih", "{0:dd.MM.yyyy}");
             //this.DataSource = cariBakiyeDataSource;
-            colBakiye.DataBindings.Add("Text", cariBakiyeDataSource, "Bakiye", "{0:C2}");
+            colBakiye.Text = bakiye.Value.ToString("c2");
+            //colBakiye.DataBindings.Add("Text", bakiye, "Bakiye", "{0:C2}");
 
 
         }
