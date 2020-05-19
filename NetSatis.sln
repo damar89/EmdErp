@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSatis.Utils", "NetSatis.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmdSoft.Test", "EmdSoft.Test\EmdSoft.Test.csproj", "{933EF885-8BBE-4B68-9532-991FAA562AAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmdSoft.CekSenet", "EmdSoft.CekSenet\EmdSoft.CekSenet.csproj", "{7C794826-CFAE-4C09-91EA-6DDB1DA1EDA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{933EF885-8BBE-4B68-9532-991FAA562AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{933EF885-8BBE-4B68-9532-991FAA562AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{933EF885-8BBE-4B68-9532-991FAA562AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C794826-CFAE-4C09-91EA-6DDB1DA1EDA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C794826-CFAE-4C09-91EA-6DDB1DA1EDA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C794826-CFAE-4C09-91EA-6DDB1DA1EDA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C794826-CFAE-4C09-91EA-6DDB1DA1EDA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
