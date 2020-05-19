@@ -34,5 +34,6 @@
         public decimal KalemIndirimTutari;
         public decimal KalemKDVTutari;
         public decimal KalemKDVliIndirimliToplam;
+        public decimal Bakiye { get; set; }
     }
 }

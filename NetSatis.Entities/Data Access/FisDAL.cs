@@ -153,6 +153,8 @@ namespace NetSatis.Entities.Data_Access
                         fisler.FisKodu,
                         fisler.FisTuru,
                         fisler.ToplamTutar,
+                        fisler.CariId,
+                    
                         fisler.Cari.CariAdi,
                         fisler.Cari.CariKodu,
                         fisler.Tarih,
@@ -732,7 +734,7 @@ namespace NetSatis.Entities.Data_Access
                        fisler.VadeTarihi,
                        fisler.Personel.PersonelKodu,
                        fisler.Personel.PersonelAdi,
-                      
+
                        fisler.Seri,
                        fisler.Sira,
                        fisler.Tipi,

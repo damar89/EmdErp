@@ -463,6 +463,8 @@
             // 
             this.btnCariEkstre.Caption = "Cari Esktre";
             this.btnCariEkstre.Id = 28;
+            this.btnCariEkstre.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCariEkstre.ImageOptions.Image")));
+            this.btnCariEkstre.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCariEkstre.ImageOptions.LargeImage")));
             this.btnCariEkstre.Name = "btnCariEkstre";
             this.btnCariEkstre.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCariEkstre_ItemClick);
             // 
@@ -652,9 +654,9 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.IconOptions.ShowIcon = false;
             this.KeyPreview = true;
             this.Name = "frmCariBakiye";
-            this.ShowIcon = false;
             this.Text = "Cari Bakiye Raporu";
             this.Load += new System.EventHandler(this.frmCariBakiye_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmCariBakiye_KeyDown);

@@ -13,9 +13,9 @@ namespace NetSatis.Entities.Mapping
             this.Property(p => p.StokKodu).HasMaxLength(75);
             this.Property(p => p.StokAdi).HasMaxLength(500);
             this.Property(p => p.Barkodu).HasMaxLength(20);
-            this.Property(p => p.IndirimTuru).HasMaxLength(20);
+            this.Property(p => p.IndirimTuru).HasMaxLength(200);
             this.Property(p => p.IndirimOrani).HasPrecision(5, 2);
-            this.Property(p => p.Aciklama).HasMaxLength(200);
+            this.Property(p => p.Aciklama).HasMaxLength(2000);
             this.ToTable("Indirimler");
             this.Property(p => p.Id).HasColumnName("Id");
             this.Property(p => p.Durumu).HasColumnName("Durumu");

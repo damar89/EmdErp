@@ -10,7 +10,7 @@ namespace NetSatis.Entities.Mapping
         {
             this.HasKey(p => p.Id);
             this.Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            this.Property(p => p.AltGrupAdi).HasMaxLength(75);
+            this.Property(p => p.AltGrupAdi).HasMaxLength(900);
             this.Property(p => p.Kod).HasMaxLength(75);
 
             this.ToTable("Stok_AltGruplar");

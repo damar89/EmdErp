@@ -1949,6 +1949,12 @@ namespace NetSatis.FrontOffice
             frmSatisRapor frm = new frmSatisRapor(DateTime.Today.AddHours(00).AddMinutes(00).AddSeconds(00), DateTime.Today.AddHours(23).AddMinutes(59).AddSeconds(59),RoleTool.KullaniciEntity.Id);
             frm.ShowDialog();
         }
+
+        private void btnMaliyet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmMaliyet frm = new frmMaliyet();
+            frm.ShowDialog();
+        }
     }
 }
 
