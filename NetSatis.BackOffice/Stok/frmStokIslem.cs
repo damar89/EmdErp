@@ -136,10 +136,7 @@ namespace NetSatis.BackOffice.Stok
                 Image img = byteArrayToImage(_entity.Resim);
                 peResim.Image = img;
             }
-        }
-        private void grupGenel_Paint(object sender, PaintEventArgs e)
-        {
-        }
+        } 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
 
@@ -740,14 +737,7 @@ namespace NetSatis.BackOffice.Stok
                 txtBirim.Properties.Items.Remove(UserText);
                 txtBirim.EditValue = null;
             }
-        }
-        private void btnResimSec_Click(object sender, EventArgs e)
-        {
-        }
-        private void btnStokGetir_Click(object sender, EventArgs e)
-        {
-
-        }
+        } 
         public byte[] imageToByteArray(System.Drawing.Image imageIn)
         {
             MemoryStream ms = new MemoryStream();

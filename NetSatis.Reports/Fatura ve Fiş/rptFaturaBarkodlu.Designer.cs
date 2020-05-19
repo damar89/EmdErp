@@ -86,7 +86,7 @@
             this.xrTable1.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrTable1.Dpi = 254F;
             this.xrTable1.Font = new System.Drawing.Font("Times New Roman", 7.5F);
-            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(15.93538F, 0F);
+            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
@@ -347,8 +347,8 @@
             this.Detail1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable1});
             this.Detail1.Dpi = 254F;
-            this.Detail1.HeightF = 35F;
-            this.Detail1.HierarchyPrintOptions.Indent = 20F;
+            this.Detail1.FillEmptySpace = true;
+            this.Detail1.HeightF = 48.97876F;
             this.Detail1.Name = "Detail1";
             // 
             // DetailReport1
@@ -360,24 +360,26 @@
             this.DetailReport1.Dpi = 254F;
             this.DetailReport1.Level = 1;
             this.DetailReport1.Name = "DetailReport1";
+            this.DetailReport1.PageBreak = DevExpress.XtraReports.UI.PageBreak.BeforeBand;
             // 
             // Detail2
             // 
             this.Detail2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable2});
             this.Detail2.Dpi = 254F;
-            this.Detail2.HeightF = 39.6875F;
-            this.Detail2.HierarchyPrintOptions.Indent = 20F;
+            this.Detail2.HeightF = 50.35464F;
             this.Detail2.Name = "Detail2";
+            this.Detail2.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            this.Detail2.StylePriority.UsePadding = false;
             // 
             // xrTable2
             // 
             this.xrTable2.Dpi = 254F;
-            this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(73.77085F, 0F);
+            this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(113.4584F, 2.645833F);
             this.xrTable2.Name = "xrTable2";
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow2});
-            this.xrTable2.SizeF = new System.Drawing.SizeF(591.6459F, 38.50007F);
+            this.xrTable2.SizeF = new System.Drawing.SizeF(591.6459F, 43.79174F);
             // 
             // xrTableRow2
             // 
@@ -548,8 +550,7 @@
             // 
             this.Detail.Dpi = 254F;
             this.Detail.Expanded = false;
-            this.Detail.HeightF = 44.64584F;
-            this.Detail.HierarchyPrintOptions.Indent = 20F;
+            this.Detail.HeightF = 44.64589F;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -582,7 +583,7 @@
     "ng.PrintEventArgs e) {\r\nPageFooter.PrintOn = PrintOnPages.NotWithReportFooter;\r\n" +
     "}\r\n";
             this.SnapGridSize = 25F;
-            this.Version = "19.1";
+            this.Version = "19.2";
             this.DesignerLoaded += new DevExpress.XtraReports.UserDesigner.DesignerLoadedEventHandler(this.rptFaturaBarkodlu_DesignerLoaded);
             this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.rptFaturaBarkodlu_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();

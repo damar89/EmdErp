@@ -524,7 +524,7 @@ namespace NetSatis.BackOffice.Fiş
                     ayarlar.KasaHareketi = "Kasa Giriş";
                     ayarlar.FisTurleri = "Alış İade Faturası";
                     lblSatir.Visible = true;
-                  
+
                     ozelKod.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
                     cmbOzelKod.Visible = false;
                     lblSatirSayisi.Visible = true;
@@ -1661,11 +1661,11 @@ namespace NetSatis.BackOffice.Fiş
                         {
                             if (_fisentity.FisTuru == "Alış Faturası" || _fisentity.FisTuru == "Alış İrsaliyesi")
                             {
-                      
+
 
                                 stokVeri.Stok.AlisFiyati1 = stokVeri.BirimFiyati / (1 + (stokVeri.Kdv * 100));
 
-                                var ind1 = stokVeri.BirimFiyati / (1 + (stokVeri.Kdv * 100))- (stokVeri.BirimFiyati / (1 + (stokVeri.Kdv * 100))*stokVeri.IndirimOrani/100);
+                                var ind1 = stokVeri.BirimFiyati / (1 + (stokVeri.Kdv * 100)) - (stokVeri.BirimFiyati / (1 + (stokVeri.Kdv * 100)) * stokVeri.IndirimOrani / 100);
 
                                 var ind2 = ind1 - (ind1 * stokVeri.IndirimOrani2 / 100);
                                 var ind3 = ind2 - (ind2 * stokVeri.IndirimOrani3 / 100);
@@ -3174,7 +3174,7 @@ namespace NetSatis.BackOffice.Fiş
                     if (string.IsNullOrEmpty(search))
                         return;
 
-                    var entityStok = context.Stoklar.Include("Barkod").FirstOrDefault(x => x.Barkodu.Equals(search) || x.Barkod.Any(s => s.Barkodu.Equals(search) || x.StokKodu.Equals(search)));
+                    var entityStok = context.Stoklar.Include("Barkod").FirstOrDefault(x => x.StokKodu.Equals(search) || x.Barkodu.Equals(search) || x.Barkod.Any(s => s.Barkodu.Equals(search)));
 
                     StokHareketeEkle(entityStok);
                     break;
@@ -3191,7 +3191,12 @@ namespace NetSatis.BackOffice.Fiş
         {
             if (seciliStok == null)
             {
-                MessageBox.Show("Barkod Bulunamadı..");
+                var dr = MessageBox.Show("Barkod veya Stok Kodu ait kayıt bulunamadı!, Stok Kartı Açmak ister misiniz?", "Bilgi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    var frmStok = new frmStokIslem(new Entities.Tables.Stok());
+                    frmStok.Show();
+                }
                 gridStokHareket.ActiveEditor.EditValue = gridStokHareket.ActiveEditor.OldEditValue;
                 gridStokHareket.FocusedColumn = gridStokHareket.Columns["Stok.StokKodu"];
                 return;
@@ -3285,20 +3290,47 @@ namespace NetSatis.BackOffice.Fiş
                 gridStokHareket.ActiveEditor.EditValue = gridStokHareket.ActiveEditor.OldEditValue;
         }
 
-        private void gridStokHareket_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        private async void toggleKDVDahil_EditValueChanged(object sender, EventArgs e)
         {
-
+            await HepsiniHesapla();
         }
 
-        private void toggleKDVDahil_EditValueChanged(object sender, EventArgs e)
+        private void btnTopluIskonto_Click(object sender, EventArgs e)
         {
-            HepsiniHesapla();
-        }
+            var dr = MessageBox.Show("Aynı hizadaki tüm satırların iskonto oranlarını değiştirir, Onaylıyor musunuz?", "İskonto Oranı Kopyala", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.No)
+                return;
 
-        private void btnIndirim_Click(object sender, EventArgs e)
-        {
-            frmTopluIskonto frm = new frmTopluIskonto();
-            frm.ShowDialog();
+            var column = gridStokHareket.FocusedColumn;
+            if (column.FieldName.StartsWith("IndirimOrani"))
+            {
+
+                var hucredekiDeger = gridStokHareket.GetFocusedRowCellValue(column.FieldName);
+
+                foreach (var item in context.StokHareketleri.Local)
+                {
+                    switch (column.FieldName)
+                    {
+                        case "IndirimOrani":
+                            item.IndirimOrani = Convert.ToDecimal(hucredekiDeger);
+                            break;
+                        case "IndirimOrani2":
+                            item.IndirimOrani2 = Convert.ToDecimal(hucredekiDeger);
+                            break;
+                        case "IndirimOrani3":
+                            item.IndirimOrani3 = Convert.ToDecimal(hucredekiDeger);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                gridStokHareket.RefreshData();
+            }
+            else
+            {
+                MessageBox.Show("Lütfen kopyalamak istediğiniz iskonto oranını seçiniz!", "İskonto Oranı Hücre Seç", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
 
         private void gridStokHareket_KeyDown(object sender, KeyEventArgs e)

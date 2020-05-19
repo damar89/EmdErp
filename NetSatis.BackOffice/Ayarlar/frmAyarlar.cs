@@ -229,11 +229,11 @@ namespace NetSatis.BackOffice.Ayarlar
 
             try
             {
-                string str = cmbFaturaDizayn.GetColumnValue("Path").ToString();
+                string str = cmbFaturaDizayn.GetColumnValue("Path")?.ToString();
                 if (!string.IsNullOrEmpty(str))
                 {
                     SettingsTool.AyarDegistir(SettingsTool.Ayarlar.FaturaDizayn_DosyaAdi, cmbFaturaDizayn.GetColumnValue("FileName").ToString());
-                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.FaturaDizayn_DosyaYolu, cmbFaturaDizayn.GetColumnValue("Path").ToString());
+                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.FaturaDizayn_DosyaYolu, cmbFaturaDizayn.GetColumnValue("Path")?.ToString());
                 }
             }
             catch (Exception)
@@ -242,11 +242,11 @@ namespace NetSatis.BackOffice.Ayarlar
 
             try
             {
-                string str2 = cmbSiparisDizayn.GetColumnValue("Path").ToString();
+                string str2 = cmbSiparisDizayn.GetColumnValue("Path")?.ToString();
                 if (!string.IsNullOrEmpty(str2))
                 {
                     SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SiparisDizayn_DosyaAdi1, cmbSiparisDizayn.GetColumnValue("FileName").ToString());
-                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SiparisDizayn_DosyaYolu1, cmbSiparisDizayn.GetColumnValue("Path").ToString());
+                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SiparisDizayn_DosyaYolu1, cmbSiparisDizayn.GetColumnValue("Path")?.ToString());
                 }
 
             }
@@ -256,11 +256,11 @@ namespace NetSatis.BackOffice.Ayarlar
             }
             try
             {
-                string str3 = cmbTeklifDizayn.GetColumnValue("Path").ToString();
+                string str3 = cmbTeklifDizayn.GetColumnValue("Path")?.ToString();
                 if (!string.IsNullOrEmpty(str3))
                 {
                     SettingsTool.AyarDegistir(SettingsTool.Ayarlar.TeklifDizayn_DosyaAdi2, cmbTeklifDizayn.GetColumnValue("FileName").ToString());
-                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.TeklifDizayn_DosyaYolu2, cmbTeklifDizayn.GetColumnValue("Path").ToString());
+                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.TeklifDizayn_DosyaYolu2, cmbTeklifDizayn.GetColumnValue("Path")?.ToString());
                 }
             }
             catch (Exception)
@@ -269,11 +269,11 @@ namespace NetSatis.BackOffice.Ayarlar
 
             try
             {
-                string str4 = cmbIrsaliyeDizayn.GetColumnValue("Path").ToString();
+                string str4 = cmbIrsaliyeDizayn.GetColumnValue("Path")?.ToString();
                 if (!string.IsNullOrEmpty(str4))
                 {
                     SettingsTool.AyarDegistir(SettingsTool.Ayarlar.IrsaliyeDizayn_DosyaAdi3, cmbIrsaliyeDizayn.GetColumnValue("FileName").ToString());
-                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.IrsaliyeDizayn_DosyaYolu3, cmbIrsaliyeDizayn.GetColumnValue("Path").ToString());
+                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.IrsaliyeDizayn_DosyaYolu3, cmbIrsaliyeDizayn.GetColumnValue("Path")?.ToString());
                 }
             }
             catch (Exception)
@@ -282,11 +282,11 @@ namespace NetSatis.BackOffice.Ayarlar
 
             try
             {
-                string str5 = cmbProFaturaDizayn.GetColumnValue("Path").ToString();
+                string str5 = cmbProFaturaDizayn.GetColumnValue("Path")?.ToString();
                 if (!string.IsNullOrEmpty(str5))
                 {
                     SettingsTool.AyarDegistir(SettingsTool.Ayarlar.ProFaturaDizayn_DosyaAdi4, cmbProFaturaDizayn.GetColumnValue("FileName").ToString());
-                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.ProFaturaDizayn_DosyaYolu4, cmbProFaturaDizayn.GetColumnValue("Path").ToString());
+                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.ProFaturaDizayn_DosyaYolu4, cmbProFaturaDizayn.GetColumnValue("Path")?.ToString());
                 }
             }
             catch (Exception)
@@ -295,11 +295,11 @@ namespace NetSatis.BackOffice.Ayarlar
             }
             //try
             //{
-            //    string str6 = lookMustahsil.GetColumnValue("Path").ToString();
+            //    string str6 = lookMustahsil.GetColumnValue("Path")?.ToString();
             //    if (!string.IsNullOrEmpty(str6))
             //    {
             //        SettingsTool.AyarDegistir(SettingsTool.Ayarlar.MustahsilDizayn_DosyaAdi5, lookMustahsil.GetColumnValue("FileName").ToString());
-            //        SettingsTool.AyarDegistir(SettingsTool.Ayarlar.MustahsilDizayn_DosyaYolu5, lookMustahsil.GetColumnValue("Path").ToString());
+            //        SettingsTool.AyarDegistir(SettingsTool.Ayarlar.MustahsilDizayn_DosyaYolu5, lookMustahsil.GetColumnValue("Path")?.ToString());
             //    }
             //}
             //catch (Exception)
@@ -308,11 +308,11 @@ namespace NetSatis.BackOffice.Ayarlar
             //}
             try
             {
-                string str7 = cmbBilgiFisDizayn.GetColumnValue("Path").ToString();
+                string str7 = cmbBilgiFisDizayn.GetColumnValue("Path")?.ToString();
                 if (!string.IsNullOrEmpty(str7))
                 {
                     SettingsTool.AyarDegistir(SettingsTool.Ayarlar.BilgiFisiDizayn_DosyaAdi6, cmbBilgiFisDizayn.GetColumnValue("FileName").ToString());
-                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.BilgiFisiDizayn_DosyaYolu6, cmbBilgiFisDizayn.GetColumnValue("Path").ToString());
+                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.BilgiFisiDizayn_DosyaYolu6, cmbBilgiFisDizayn.GetColumnValue("Path")?.ToString());
                 }
             }
             catch (Exception)
