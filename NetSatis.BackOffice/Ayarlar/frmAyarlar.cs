@@ -11,7 +11,6 @@ using System.Linq;
 using System.Printing;
 using System.Windows.Forms;
 
-
 namespace NetSatis.BackOffice.Ayarlar
 {
     public partial class frmAyarlar : DevExpress.XtraEditors.XtraForm
@@ -27,12 +26,14 @@ namespace NetSatis.BackOffice.Ayarlar
             InitializeComponent();
             cmbFaturaYazici.Properties.Items.AddRange(YaziciListesi());
             cmbFisYazici.Properties.Items.AddRange(YaziciListesi());
-            //gridlookDepo.Properties.DataSource = depoDal.GetAll(context);
-            //gridlookDepo.EditValue = SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_VarsayilanDepo);
 
-            comboBoxEdit1.SelectedIndex =
-                Convert.ToInt32(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_FaturaYazirmaAyari));
-            cmbVarsayilanKdv.SelectedIndex = Convert.ToInt32(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisStok_VarsayilanKdv));
+            try
+            {
+                comboBoxEdit1.SelectedIndex =
+                    Convert.ToInt32(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_FaturaYazirmaAyari));
+                cmbVarsayilanKdv.SelectedIndex = Convert.ToInt32(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisStok_VarsayilanKdv));
+            }
+            catch { }
             //gridLookKasa.Properties.DataSource = kasaDal.GetAll(context);
             try
             {
@@ -77,7 +78,7 @@ namespace NetSatis.BackOffice.Ayarlar
                 calcToptanFisKodu.Value = Convert.ToDecimal(kodlar.SonDeger);
             }
 
-            
+
 
 
             cmbBilgiFisi.SelectedIndex =
