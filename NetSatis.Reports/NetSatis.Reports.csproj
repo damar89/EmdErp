@@ -292,6 +292,7 @@
     <EmbeddedResource Include="Kasa\rptKasa.resx">
       <DependentUpon>rptKasa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Stok\rptStokDurumBakiye.resx">
       <DependentUpon>rptStokDurumBakiye.cs</DependentUpon>
     </EmbeddedResource>
@@ -346,6 +347,7 @@
     <None Include="DizaynFormlar\rptStokEnvanter.repx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="DizaynFormlar\rptTahsilat.repx" />
     <None Include="DizaynFormlar\rptTeklif.repx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

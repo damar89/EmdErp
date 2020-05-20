@@ -1907,10 +1907,12 @@ namespace NetSatis.BackOffice.Fiş
                 if (_fisentity.FisTuru == "Tahsilat Fişi" && MessageBox.Show("Tahsilat Fişi Yazdırmak İster isiniz ?", "Uyarı", MessageBoxButtons.YesNo) ==
                     DialogResult.Yes)
                 {
-                    ReportsPrintTool yazdir = new ReportsPrintTool();
-                    rptTahsilat tahsilat = new rptTahsilat(txtKod.Text);
-                    yazdir.RaporYazdir(tahsilat, ReportsPrintTool.Belge.Tahsilat);
-                    tahsilat.ShowPreview();
+                    FaturaHazirla f = new FaturaHazirla();
+                    f.TahsilatFisi(txtKod.Text);
+                    /* ReportsPrintTool yazdir = new ReportsPrintTool();
+                     rptTahsilat tahsilat = new rptTahsilat(txtKod.Text);
+                     yazdir.RaporYazdir(tahsilat, ReportsPrintTool.Belge.Tahsilat);
+                     tahsilat.ShowPreview();*/
                 }
                 else
                 {
@@ -2138,10 +2140,12 @@ namespace NetSatis.BackOffice.Fiş
         }
         private void btnTahsilatFisi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ReportsPrintTool yazdir = new ReportsPrintTool();
-            rptTahsilat tahsilat = new rptTahsilat(txtKod.Text);
-            yazdir.RaporYazdir(tahsilat, ReportsPrintTool.Belge.Tahsilat);
-            tahsilat.ShowPreview();
+            FaturaHazirla f = new FaturaHazirla();
+            f.IrsaliyeHazirlama(txtKod.Text);
+            /*  ReportsPrintTool yazdir = new ReportsPrintTool();
+              rptTahsilat tahsilat = new rptTahsilat(txtKod.Text);
+              yazdir.RaporYazdir(tahsilat, ReportsPrintTool.Belge.Tahsilat);
+              tahsilat.ShowPreview();*/
         }
         private void labelControl38_Click(object sender, EventArgs e)
         {

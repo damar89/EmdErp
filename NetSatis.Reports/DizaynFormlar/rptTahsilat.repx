@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="19.2.3.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="rptTahsilat" SnapGridSize="25" ReportUnit="TenthsOfAMillimeter" RollPaper="true" Margins="1, 3, 292, 25" PaperKind="Custom" PageWidth="800" PageHeight="1100" Version="19.2" ShowPrintMarginsWarning="false" DataMember="FaturaBilgiler" DataSource="#Ref-0" Dpi="254">
+  <Parameters>
+    <Item1 Ref="3" Description="FirmaAdi" Name="FirmaAdi" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="4" ControlType="DetailBand" Name="Detail" HeightF="42.33333" TextAlignment="TopLeft" Dpi="254" Padding="0,0,0,0,254">
+      <MultiColumn Ref="5" Mode="UseColumnWidth" />
+      <Controls>
+        <Item1 Ref="6" ControlType="XRTable" Name="xrTable1" AnchorVertical="Bottom" SizeF="675.8126,42.33333" LocationFloat="47.45832, 0" Dpi="254" Font="Tahoma, 7.5pt" Borders="All" BorderDashStyle="Solid">
+          <Rows>
+            <Item1 Ref="7" ControlType="XRTableRow" Name="xrTableRow1" Weight="1" Dpi="254">
+              <Cells>
+                <Item1 Ref="8" ControlType="XRTableCell" Name="colFisKodu" Weight="1.723595427021053" CanGrow="false" Text="colFisKodu" TextAlignment="MiddleLeft" Dpi="254">
+                  <StylePriority Ref="9" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="10" ControlType="XRTableCell" Name="colFisTuru" Weight="1.6872652985492169" CanGrow="false" Text="colFisTuru" TextAlignment="MiddleLeft" Dpi="254">
+                  <StylePriority Ref="11" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="12" ControlType="XRTableCell" Name="colTarih" Weight="1.6577798061809379" CanGrow="false" Text="01.01.1999" TextAlignment="MiddleCenter" Dpi="254">
+                  <StylePriority Ref="13" UseFont="false" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="14" ControlType="XRTableCell" Name="colAlinan" Weight="1.5088384140027795" CanGrow="false" Text="colAlinan" TextAlignment="MiddleRight" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold">
+                  <Summary Ref="15" FormatString="{0:c2}" />
+                  <StylePriority Ref="16" UseFont="false" UseTextAlignment="false" />
+                </Item4>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="17" UseFont="false" UseBorders="false" UseBorderDashStyle="false" />
+        </Item1>
+      </Controls>
+    </Item1>
+    <Item2 Ref="18" ControlType="TopMarginBand" Name="TopMargin" HeightF="291.9167" TextAlignment="TopLeft" Dpi="254" Padding="0,0,0,0,254">
+      <Controls>
+        <Item1 Ref="19" ControlType="XRLabel" Name="lblCariAdi" Text="lblCariAdi" TextAlignment="MiddleLeft" SizeF="436.4521,58.42" LocationFloat="334.5479, 156.1044" Dpi="254" Font="Tahoma, 8pt" Padding="5,5,0,0,254">
+          <StylePriority Ref="20" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="21" ControlType="XRLabel" Name="xrLabel3" Text="Ödeme Yapan Cari :" TextAlignment="MiddleLeft" SizeF="271.1494,58.42004" LocationFloat="50.25329, 156.1044" Dpi="254" Font="Tahoma, 8pt" Padding="5,5,0,0,254">
+          <StylePriority Ref="22" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="23" ControlType="XRLabel" Name="xrLabel1" Text="Tahsilat Makbuzu" TextAlignment="MiddleCenter" SizeF="470.9584,58.42" LocationFloat="190.9924, 83.20834" Dpi="254" Font="Tahoma, 9pt, style=Bold" Padding="5,5,0,0,254">
+          <StylePriority Ref="24" UseFont="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="25" ControlType="XRPageInfo" Name="xrPageInfo1" PageInfo="DateTime" TextFormatString="Rapor Tarihi : {0}" TextAlignment="MiddleLeft" SizeF="431.9176,58.42001" LocationFloat="50.25329, 233.4967" Dpi="254" Font="Tahoma, 7.5pt" Padding="5,5,0,0,254">
+          <StylePriority Ref="26" UseFont="false" UseTextAlignment="false" />
+        </Item4>
+      </Controls>
+    </Item2>
+    <Item3 Ref="27" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="25" TextAlignment="TopLeft" Dpi="254" Padding="0,0,0,0,254" />
+    <Item4 Ref="28" ControlType="PageHeaderBand" Name="PageHeader" HeightF="49.39581" Dpi="254">
+      <Controls>
+        <Item1 Ref="29" ControlType="XRTable" Name="xrTable2" TextAlignment="MiddleCenter" SizeF="675.8125,49.08332" LocationFloat="47.45834, 0" Dpi="254" Font="Tahoma, 7.5pt, style=Bold" Borders="All" BorderDashStyle="Double">
+          <Rows>
+            <Item1 Ref="30" ControlType="XRTableRow" Name="xrTableRow2" Weight="1" Dpi="254">
+              <Cells>
+                <Item1 Ref="31" ControlType="XRTableCell" Name="xrTableCell3" Weight="0.869689290283126" Text="Fiş Kodu" Dpi="254" />
+                <Item2 Ref="32" ControlType="XRTableCell" Name="xrTableCell4" Weight="0.87789412563299929" Text="Fiş Türü" Dpi="254" />
+                <Item3 Ref="33" ControlType="XRTableCell" Name="xrTableCell1" Weight="0.856960192235881" Text="İşem Tarihi" Dpi="254" />
+                <Item4 Ref="34" ControlType="XRTableCell" Name="xrTableCell6" Weight="0.7143109468763621" Text="Tutar" Dpi="254" />
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="35" UseFont="false" UseBorders="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item1>
+      </Controls>
+    </Item4>
+    <Item5 Ref="36" ControlType="ReportFooterBand" Name="ReportFooter" HeightF="70.22916" Dpi="254">
+      <Controls>
+        <Item1 Ref="37" ControlType="XRLabel" Name="xrLabel5" Text="Kalan Bakiye :" TextAlignment="MiddleRight" SizeF="316.4494,58.42" LocationFloat="165.7215, 0" Dpi="254" Font="Tahoma, 9.75pt, charSet=162" Padding="5,5,0,0,254">
+          <StylePriority Ref="38" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="39" ControlType="XRLabel" Name="colBakiye" TextFormatString="{0:c2}" Text="colBakiye" TextAlignment="MiddleRight" SizeF="222.2188,58.42" LocationFloat="501.0521, 0" Dpi="254" Font="Tahoma, 8pt, style=Bold" Padding="5,5,0,0,254">
+          <StylePriority Ref="40" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+      </Controls>
+    </Item5>
+  </Bands>
+  <DesignerOptions Ref="41" ShowPrintingWarnings="false" ShowExportWarnings="false" />
+  <ComponentStorage>
+    <Item1 Ref="0" />
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>

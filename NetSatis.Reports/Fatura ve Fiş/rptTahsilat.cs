@@ -10,10 +10,10 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
 {
     public partial class rptTahsilat : DevExpress.XtraReports.UI.XtraReport
     {
-        public rptTahsilat(string fisKodu)
+        public rptTahsilat()
         {
             InitializeComponent();
-            CariDAL cariDal = new CariDAL();
+           /* CariDAL cariDal = new CariDAL();
             KasaHareketDAL kasahareket = new KasaHareketDAL();
             FisDAL fisDal = new FisDAL();
             NetSatisContext context = new NetSatisContext();
@@ -31,7 +31,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             colTarih.DataBindings.Add("Text", fisBilgi, "Tarih", "{0:dd.MM.yyyy}");
             //this.DataSource = cariBakiyeDataSource;
             colBakiye.Text = bakiye.Value.ToString("c2");
-            //colBakiye.DataBindings.Add("Text", bakiye, "Bakiye", "{0:C2}");
+            //colBakiye.DataBindings.Add("Text", bakiye, "Bakiye", "{0:C2}");*/
 
 
         }

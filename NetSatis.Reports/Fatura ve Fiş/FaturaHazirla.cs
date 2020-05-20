@@ -23,7 +23,8 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             Fis fisBilgi = fisDal.GetByFilter(context, c => c.FisKodu == FisKodu);
             List<StokHareket> stokHareketleri = stokHareketDal.GetAll(context, c => c.FisKodu == FisKodu);
 
-            decimal? bakiye = cariDal.cariBakiyesi(context, Convert.ToInt32(fisBilgi.CariId))?.Bakiye;
+            //decimal? bakiye = cariDal.cariBakiyesi(context, Convert.ToInt32(fisBilgi.CariId))?.Bakiye;
+            var bakiye = cariDal.cariBakiyesi(context, Convert.ToInt32(fisBilgi.CariId))?.Bakiye;
 
             Dictionary<int, decimal> KDVLer = new Dictionary<int, decimal>();
 
@@ -152,37 +153,21 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             }
             #endregion
 
-
-
             DataSet DS = new DataSet("DataSEtler");
             DS.Tables.Add(DTBilgiler);
             DS.Tables.Add(DTKalemler);
             DS.Tables.Add(DTKDVler);
 
-
-            //DataTable DT = toDataTable4(liste);
-            //using (OpenFileDialog ofd = new OpenFileDialog())
-            //{
-            //  if (ofd.ShowDialog() == DialogResult.OK)
-            //{
             rptFaturaBarkodlu ftr = new rptFaturaBarkodlu();
             ftr.LoadLayout(SettingsTool.AyarOku(SettingsTool.Ayarlar.FaturaDizayn_DosyaYolu));
             ftr.DataSource = DS;
             ftr.DataMember = "FaturaBilgiler";
-            //ftr.DetailReport.DataSource = DT;
-            //ftr.DetailReport.DataMember = "Fatura1";
-            //ftr.DetailReport1.DataSource = DT1;//ftr.DetailReport1.DataMember = "KDVLER";
 
-            //ftr.BeginInit();                    
-            //ftr.DataSource = DS;
-            //ftr.DataMember = "Fatura1";                    
-            //ftr.EndInit();                 
             ftr.ShowPreview();
-            // }
-            // }
+
 
         }
-        public void BilgiFisi(string FisKodu)
+        public void TahsilatFisi(string FisKodu)
         {
             NetSatisContext context = new NetSatisContext();
             StokHareketDAL stokHareketDal = new StokHareketDAL();
@@ -192,12 +177,8 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             List<StokHareket> stokHareketleri = stokHareketDal.GetAll(context, c => c.FisKodu == FisKodu);
 
             var cariDal = new CariDAL();
-            decimal? bakiye = cariDal.cariBakiyesi(context, Convert.ToInt32(fisBilgi.CariId))?.Bakiye;
-
-
+            var bakiye = cariDal.cariBakiyesi(context, Convert.ToInt32(fisBilgi.CariId))?.Bakiye;
             Dictionary<int, decimal> KDVLer = new Dictionary<int, decimal>();
-
-
             #region FaturaBilgiler
             DataTable DTBilgiler = new DataTable();
             DTBilgiler.Columns.Add("CariAdiFaturaUnvan", typeof(string));
@@ -307,36 +288,147 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
                 DTKDVler.Rows.Add(dr);
             }
             #endregion
-
-
-
             DataSet DS = new DataSet("DataSEtler");
             DS.Tables.Add(DTBilgiler);
             DS.Tables.Add(DTKalemler);
             DS.Tables.Add(DTKDVler);
+            rptTahsilat ftr = new rptTahsilat();
+            ftr.LoadLayout(SettingsTool.AyarOku(SettingsTool.Ayarlar.TahsilatDizayn_DosyaYolu5));
+            ftr.DataSource = DS;
+            ftr.DataMember = "FaturaBilgiler";
+            ftr.Print();
 
+        }
+        public void BilgiFisi(string FisKodu)
+        {
+            NetSatisContext context = new NetSatisContext();
+            StokHareketDAL stokHareketDal = new StokHareketDAL();
+            FisDAL fisDal = new FisDAL();
 
-            //DataTable DT = toDataTable4(liste);
-            //using (OpenFileDialog ofd = new OpenFileDialog())
-            //{
-            //  if (ofd.ShowDialog() == DialogResult.OK)
-            //{
+            Fis fisBilgi = fisDal.GetByFilter(context, c => c.FisKodu == FisKodu);
+            List<StokHareket> stokHareketleri = stokHareketDal.GetAll(context, c => c.FisKodu == FisKodu);
+
+            var cariDal = new CariDAL();
+            var bakiye = cariDal.cariBakiyesi(context, Convert.ToInt32(fisBilgi.CariId))?.Bakiye;
+            Dictionary<int, decimal> KDVLer = new Dictionary<int, decimal>();
+            #region FaturaBilgiler
+            DataTable DTBilgiler = new DataTable();
+            DTBilgiler.Columns.Add("CariAdiFaturaUnvan", typeof(string));
+            DTBilgiler.Columns.Add("CariAdres", typeof(string));
+            DTBilgiler.Columns.Add("CariVergiDairesi", typeof(string));
+            DTBilgiler.Columns.Add("CariVergiNo", typeof(string));
+            DTBilgiler.Columns.Add("FaturaTarihi", typeof(global::System.DateTime));
+            DTBilgiler.Columns.Add("CariIkamet", typeof(string));
+            DTBilgiler.Columns.Add("FisAraToplam", typeof(decimal));
+            DTBilgiler.Columns.Add("FisKDVToplam", typeof(decimal));
+            DTBilgiler.Columns.Add("FisGenelToplam", typeof(decimal));
+            DTBilgiler.Columns.Add("FisGenelToplamYazi", typeof(string));
+            DTBilgiler.Columns.Add("FisAciklama", typeof(string));
+            DTBilgiler.Columns.Add("FisIskontoOrani", typeof(decimal));
+            DTBilgiler.Columns.Add("FisIskontoTutari", typeof(decimal));
+            DTBilgiler.Columns.Add("FisKodu", typeof(string));
+            DTBilgiler.Columns.Add("FisBelgeNo", typeof(string));
+            DTBilgiler.Columns.Add("FisTuru", typeof(string));
+            DTBilgiler.Columns.Add("FisCepTel", typeof(string));
+            DTBilgiler.Columns.Add("Bakiye", typeof(decimal));
+            DTBilgiler.TableName = "FaturaBilgiler";
+            DataRow row = DTBilgiler.NewRow();
+            row["CariAdiFaturaUnvan"] = fisBilgi.FaturaUnvani;
+            row["CariAdres"] = fisBilgi.Adres;
+            row["CariIkamet"] = fisBilgi.Il + " " + fisBilgi.Ilce + " " + fisBilgi.Semt;
+            row["CariVergiDairesi"] = fisBilgi.VergiDairesi;
+            row["CariVergiNo"] = fisBilgi.VergiNo;
+            row["FaturaTarihi"] = fisBilgi.Tarih;
+            row["FisAciklama"] = fisBilgi.Aciklama;
+            row["FisAraToplam"] = fisBilgi.AraToplam_;
+            row["FisBelgeNo"] = fisBilgi.BelgeNo;
+            row["FisCepTel"] = fisBilgi.CepTelefonu;
+            row["FisGenelToplam"] = fisBilgi.ToplamTutar;
+            row["FisGenelToplamYazi"] = yaziyaCevir((decimal)fisBilgi.ToplamTutar);
+            row["FisIskontoOrani"] = (decimal)fisBilgi.IskontoOrani1;
+            row["FisIskontoTutari"] = (decimal)fisBilgi.IskontoTutari1;
+            row["FisKDVToplam"] = (decimal)fisBilgi.KdvToplam_;
+            row["FisKodu"] = fisBilgi.FisKodu;
+            row["FisTuru"] = fisBilgi.FisTuru;
+            row["Bakiye"] = bakiye;
+
+            DTBilgiler.Rows.Add(row);
+            #endregion
+
+            #region Kalemler
+            DataTable DTKalemler = new DataTable();
+            DTKalemler.Columns.Add("KalemBarkod", typeof(string));
+            DTKalemler.Columns.Add("KalemStokKodu", typeof(string));
+            DTKalemler.Columns.Add("KalemStokAdi", typeof(string));
+            DTKalemler.Columns.Add("KalemMiktar", typeof(decimal));
+            DTKalemler.Columns.Add("KalemBirim", typeof(string));
+            DTKalemler.Columns.Add("KalemBirimFiyati", typeof(decimal));
+            DTKalemler.Columns.Add("KalemKDV", typeof(decimal));
+            DTKalemler.Columns.Add("KalemIskonto", typeof(decimal));
+            DTKalemler.Columns.Add("KalemToplam", typeof(decimal));
+            DTKalemler.Columns.Add("KalemIndirimTutari", typeof(decimal));
+            DTKalemler.Columns.Add("KalemKDVTutari", typeof(decimal));
+            DTKalemler.Columns.Add("KalemKDVliIndirimliToplam", typeof(string));
+            DTKalemler.TableName = "FaturaKalemler";
+            foreach (var item in stokHareketleri)
+            {
+                DataRow f = DTKalemler.NewRow();
+                f["KalemBarkod"] = item.Stok.Barkodu;
+                f["KalemBirim"] = item.Stok.Birim;
+                f["KalemBirimFiyati"] = (decimal)item.BirimFiyati;
+                f["KalemIskonto"] = (decimal)item.IndirimOrani;
+                f["KalemKDV"] = item.Kdv;
+                f["KalemMiktar"] = (decimal)item.Miktar;
+                f["KalemStokAdi"] = item.Stok.StokAdi;
+                f["KalemStokKodu"] = item.Stok.StokKodu;
+                f["KalemToplam"] = (decimal)item.ToplamTutar;
+                //if (fisBilgi.KDVDahil)
+                //{
+                //    f["KalemBirimFiyati"] = (decimal)item.KdvHaric_;
+
+                //}
+
+                f["KalemIndirimTutari"] = (decimal)item.IndirimTutar;
+                f["KalemKDVliIndirimliToplam"] = (decimal)item.KdvToplam;
+                f["KalemKDVTutari"] = (decimal)item.KdvToplam;
+
+                if (KDVLer.ContainsKey(item.Kdv))
+                {
+                    KDVLer[item.Kdv] += (decimal)item.KdvToplam;
+                }
+                else
+                {
+                    KDVLer.Add(item.Kdv, (decimal)item.KdvToplam);
+                }
+
+                DTKalemler.Rows.Add(f);
+            }
+            #endregion
+
+            #region KDVler
+            DataTable DTKDVler = new DataTable();
+            DTKDVler.Columns.Add("KDV", typeof(int));
+            DTKDVler.Columns.Add("Tutar", typeof(string));
+            DTKDVler.TableName = "FaturaKDVler";
+            foreach (var item in KDVLer)
+            {
+                DataRow dr = DTKDVler.NewRow();
+
+                dr["KDV"] = item.Key.ToString();
+                dr["Tutar"] = item.Value.ToString();
+
+                DTKDVler.Rows.Add(dr);
+            }
+            #endregion
+            DataSet DS = new DataSet("DataSEtler");
+            DS.Tables.Add(DTBilgiler);
+            DS.Tables.Add(DTKalemler);
+            DS.Tables.Add(DTKDVler);
             rptBilgi ftr = new rptBilgi();
             ftr.LoadLayout(SettingsTool.AyarOku(SettingsTool.Ayarlar.BilgiFisiDizayn_DosyaYolu6));
             ftr.DataSource = DS;
             ftr.DataMember = "FaturaBilgiler";
-            //ftr.PrinterName=SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_BilgiFisiYazici);
-            //ftr.DetailReport.DataSource = DT;
-            //ftr.DetailReport.DataMember = "Fatura1";
-            //ftr.DetailReport1.DataSource = DT1;//ftr.DetailReport1.DataMember = "KDVLER";
-
-            //ftr.BeginInit();                    
-            //ftr.DataSource = DS;
-            //ftr.DataMember = "Fatura1";                    
-            //ftr.EndInit();                 
             ftr.Print();
-            // }
-            // }
 
         }
         public void SiparisHazirlama(string FisKodu)
@@ -348,9 +440,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             Fis fisBilgi = fisDal.GetByFilter(context, c => c.FisKodu == FisKodu);
             List<StokHareket> stokHareketleri = stokHareketDal.GetAll(context, c => c.FisKodu == FisKodu);
 
-
             Dictionary<int, decimal> KDVLer = new Dictionary<int, decimal>();
-
 
             #region FaturaBilgiler
             DataTable DTBilgiler = new DataTable();

@@ -226,7 +226,18 @@ namespace NetSatis.BackOffice.Ayarlar
 
 
 
-
+            try
+            {
+                string str = lookTahsilat.GetColumnValue("Path")?.ToString();
+                if (!string.IsNullOrEmpty(str))
+                {
+                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.FaturaDizayn_DosyaAdi, lookTahsilat.GetColumnValue("FileName").ToString());
+                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.FaturaDizayn_DosyaYolu, lookTahsilat.GetColumnValue("Path")?.ToString());
+                }
+            }
+            catch (Exception)
+            {
+            }
 
             try
             {
@@ -294,19 +305,19 @@ namespace NetSatis.BackOffice.Ayarlar
             {
 
             }
-            //try
-            //{
-            //    string str6 = lookMustahsil.GetColumnValue("Path")?.ToString();
-            //    if (!string.IsNullOrEmpty(str6))
-            //    {
-            //        SettingsTool.AyarDegistir(SettingsTool.Ayarlar.MustahsilDizayn_DosyaAdi5, lookMustahsil.GetColumnValue("FileName").ToString());
-            //        SettingsTool.AyarDegistir(SettingsTool.Ayarlar.MustahsilDizayn_DosyaYolu5, lookMustahsil.GetColumnValue("Path")?.ToString());
-            //    }
-            //}
-            //catch (Exception)
-            //{
+            try
+            {
+                string str6 = lookTahsilat.GetColumnValue("Path")?.ToString();
+                if (!string.IsNullOrEmpty(str6))
+                {
+                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.TahsilatDizayn_DosyaAdi5, lookTahsilat.GetColumnValue("FileName").ToString());
+                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.TahsilatDizayn_DosyaYolu5, lookTahsilat.GetColumnValue("Path")?.ToString());
+                }
+            }
+            catch (Exception)
+            {
 
-            //}
+            }
             try
             {
                 string str7 = cmbBilgiFisDizayn.GetColumnValue("Path")?.ToString();
@@ -388,9 +399,9 @@ namespace NetSatis.BackOffice.Ayarlar
             cmbProFaturaDizayn.Properties.DataSource = data;
             cmbProFaturaDizayn.Properties.DisplayMember = "FileName";
             cmbProFaturaDizayn.Properties.ValueMember = "Path";
-            lookMustahsil.Properties.DataSource = data;
-            lookMustahsil.Properties.DisplayMember = "FileName";
-            lookMustahsil.Properties.ValueMember = "Path";
+            lookTahsilat.Properties.DataSource = data;
+            lookTahsilat.Properties.DisplayMember = "FileName";
+            lookTahsilat.Properties.ValueMember = "Path";
             cmbBilgiFisDizayn.Properties.DisplayMember = "FileName";
             cmbBilgiFisDizayn.Properties.ValueMember = "Path";
             cmbBilgiFisDizayn.Properties.DataSource = data;
@@ -398,11 +409,11 @@ namespace NetSatis.BackOffice.Ayarlar
 
         private void frmAyarlar_Load(object sender, EventArgs e)
         {
-            if (kopKoparatifmi.IsOn)
-            {
-                lookMustahsil.Visible = true;
-                labelControl30.Visible = true;
-            }
+            //if (kopKoparatifmi.IsOn)
+            //{
+            //    lookTahsilat.Visible = true;
+            //    labelControl30.Visible = true;
+            //}
         }
 
         private void btnDuzenle_Click(object sender, EventArgs e)

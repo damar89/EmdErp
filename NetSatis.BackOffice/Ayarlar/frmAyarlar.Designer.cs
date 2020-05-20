@@ -52,7 +52,7 @@
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.cmbBilgiFisDizayn = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.lookMustahsil = new DevExpress.XtraEditors.LookUpEdit();
+            this.lookTahsilat = new DevExpress.XtraEditors.LookUpEdit();
             this.cmbProFaturaDizayn = new DevExpress.XtraEditors.LookUpEdit();
             this.cmbTeklifDizayn = new DevExpress.XtraEditors.LookUpEdit();
             this.cmbIrsaliyeDizayn = new DevExpress.XtraEditors.LookUpEdit();
@@ -61,6 +61,7 @@
             this.cmbFaturaDizayn = new DevExpress.XtraEditors.LookUpEdit();
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbVarsayilanKdv = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cmbTipi = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtToptanOnEk = new DevExpress.XtraEditors.TextEdit();
             this.calcToptanFisKodu = new DevExpress.XtraEditors.CalcEdit();
@@ -104,6 +105,7 @@
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl40 = new DevExpress.XtraEditors.LabelControl();
             this.navigationPage3 = new DevExpress.XtraBars.Navigation.NavigationPage();
@@ -120,8 +122,6 @@
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.cmbVarsayilanKdv = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
@@ -131,7 +131,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.toggleMinMiktar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleStokEksi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbBilgiFisDizayn.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookMustahsil.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookTahsilat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbProFaturaDizayn.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTeklifDizayn.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbIrsaliyeDizayn.Properties)).BeginInit();
@@ -139,6 +139,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbSiparisDizayn.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbFaturaDizayn.Properties)).BeginInit();
             this.navigationPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbVarsayilanKdv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTipi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtToptanOnEk.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcToptanFisKodu.Properties)).BeginInit();
@@ -167,7 +168,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.calcRub.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcEuro.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcUsd.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbVarsayilanKdv.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBaslik
@@ -278,7 +278,7 @@
             this.navigationPage1.Controls.Add(this.labelControl17);
             this.navigationPage1.Controls.Add(this.cmbBilgiFisDizayn);
             this.navigationPage1.Controls.Add(this.labelControl1);
-            this.navigationPage1.Controls.Add(this.lookMustahsil);
+            this.navigationPage1.Controls.Add(this.lookTahsilat);
             this.navigationPage1.Controls.Add(this.cmbProFaturaDizayn);
             this.navigationPage1.Controls.Add(this.cmbTeklifDizayn);
             this.navigationPage1.Controls.Add(this.cmbIrsaliyeDizayn);
@@ -392,7 +392,7 @@
             this.labelControl30.Name = "labelControl30";
             this.labelControl30.Size = new System.Drawing.Size(210, 26);
             this.labelControl30.TabIndex = 4;
-            this.labelControl30.Text = "Müstahsil :";
+            this.labelControl30.Text = "Tahsilat Dizayn :";
             this.labelControl30.Visible = false;
             // 
             // labelControl21
@@ -495,21 +495,21 @@
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Program her açıldığında güncellemeleri kontrol et.";
             // 
-            // lookMustahsil
+            // lookTahsilat
             // 
-            this.lookMustahsil.Location = new System.Drawing.Point(216, 182);
-            this.lookMustahsil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lookMustahsil.Name = "lookMustahsil";
-            this.lookMustahsil.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lookTahsilat.Location = new System.Drawing.Point(216, 182);
+            this.lookTahsilat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lookTahsilat.Name = "lookTahsilat";
+            this.lookTahsilat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookMustahsil.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            this.lookTahsilat.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Path", "Path", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("FileName", "FileName")});
-            this.lookMustahsil.Properties.NullText = "";
-            this.lookMustahsil.Properties.PopupSizeable = false;
-            this.lookMustahsil.Size = new System.Drawing.Size(247, 22);
-            this.lookMustahsil.TabIndex = 5;
-            this.lookMustahsil.Visible = false;
+            this.lookTahsilat.Properties.NullText = "";
+            this.lookTahsilat.Properties.PopupSizeable = false;
+            this.lookTahsilat.Size = new System.Drawing.Size(247, 22);
+            this.lookTahsilat.TabIndex = 5;
+            this.lookTahsilat.Visible = false;
             // 
             // cmbProFaturaDizayn
             // 
@@ -660,6 +660,16 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(93, 24);
             this.comboBox1.TabIndex = 19;
+            // 
+            // cmbVarsayilanKdv
+            // 
+            this.cmbVarsayilanKdv.Location = new System.Drawing.Point(533, 142);
+            this.cmbVarsayilanKdv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbVarsayilanKdv.Name = "cmbVarsayilanKdv";
+            this.cmbVarsayilanKdv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbVarsayilanKdv.Size = new System.Drawing.Size(122, 22);
+            this.cmbVarsayilanKdv.TabIndex = 18;
             // 
             // cmbTipi
             // 
@@ -1213,6 +1223,21 @@
             this.labelControl3.TabIndex = 1;
             this.labelControl3.Text = "Fatura Yazdırma :";
             // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.BorderColor = System.Drawing.Color.Silver;
+            this.labelControl8.Appearance.Options.UseBorderColor = true;
+            this.labelControl8.Appearance.Options.UseTextOptions = true;
+            this.labelControl8.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl8.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl8.Location = new System.Drawing.Point(337, 142);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(190, 26);
+            this.labelControl8.TabIndex = 1;
+            this.labelControl8.Text = "Varsayılan Kdv:";
+            // 
             // labelControl23
             // 
             this.labelControl23.Appearance.BorderColor = System.Drawing.Color.Silver;
@@ -1409,31 +1434,6 @@
             this.labelControl25.TabIndex = 5;
             this.labelControl25.Text = "USD :";
             // 
-            // labelControl8
-            // 
-            this.labelControl8.Appearance.BorderColor = System.Drawing.Color.Silver;
-            this.labelControl8.Appearance.Options.UseBorderColor = true;
-            this.labelControl8.Appearance.Options.UseTextOptions = true;
-            this.labelControl8.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl8.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl8.Location = new System.Drawing.Point(337, 142);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(190, 26);
-            this.labelControl8.TabIndex = 1;
-            this.labelControl8.Text = "Varsayılan Kdv:";
-            // 
-            // cmbVarsayilanKdv
-            // 
-            this.cmbVarsayilanKdv.Location = new System.Drawing.Point(533, 142);
-            this.cmbVarsayilanKdv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmbVarsayilanKdv.Name = "cmbVarsayilanKdv";
-            this.cmbVarsayilanKdv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbVarsayilanKdv.Size = new System.Drawing.Size(122, 22);
-            this.cmbVarsayilanKdv.TabIndex = 18;
-            // 
             // frmAyarlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -1462,7 +1462,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.toggleMinMiktar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleStokEksi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbBilgiFisDizayn.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookMustahsil.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookTahsilat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbProFaturaDizayn.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTeklifDizayn.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbIrsaliyeDizayn.Properties)).EndInit();
@@ -1470,6 +1470,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbSiparisDizayn.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbFaturaDizayn.Properties)).EndInit();
             this.navigationPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmbVarsayilanKdv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTipi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtToptanOnEk.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcToptanFisKodu.Properties)).EndInit();
@@ -1498,7 +1499,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.calcRub.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcEuro.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcUsd.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbVarsayilanKdv.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1559,7 +1559,7 @@
         private DevExpress.XtraEditors.ToggleSwitch kopKoparatifmi;
         private DevExpress.XtraEditors.LabelControl labelControl29;
         private DevExpress.XtraEditors.LabelControl labelControl30;
-        private DevExpress.XtraEditors.LookUpEdit lookMustahsil;
+        private DevExpress.XtraEditors.LookUpEdit lookTahsilat;
         private DevExpress.XtraEditors.ToggleSwitch toggleDoviz;
         private DevExpress.XtraEditors.LabelControl labelControl31;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage6;

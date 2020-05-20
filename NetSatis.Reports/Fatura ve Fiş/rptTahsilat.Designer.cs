@@ -37,7 +37,6 @@
             this.colTarih = new DevExpress.XtraReports.UI.XRTableCell();
             this.colAlinan = new DevExpress.XtraReports.UI.XRTableCell();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
-            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblCariAdi = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
@@ -54,8 +53,10 @@
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.colBakiye = new DevExpress.XtraReports.UI.XRLabel();
             this.FirmaAdi = new DevExpress.XtraReports.Parameters.Parameter();
+            this.dataSEtler1 = new NetSatis.Reports.DataSEtler();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSEtler1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -146,7 +147,6 @@
             // TopMargin
             // 
             this.TopMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel2,
             this.lblCariAdi,
             this.xrLabel3,
             this.xrLabel1,
@@ -156,21 +156,6 @@
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel2
-            // 
-            this.xrLabel2.Dpi = 254F;
-            this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?FirmaAdi")});
-            this.xrLabel2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(120.7424F, 24.78834F);
-            this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(582.0834F, 58.42001F);
-            this.xrLabel2.StylePriority.UseFont = false;
-            this.xrLabel2.StylePriority.UseTextAlignment = false;
-            this.xrLabel2.Text = "FİRMA ADI";
-            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // lblCariAdi
             // 
@@ -340,6 +325,11 @@
             this.FirmaAdi.Description = "FirmaAdi";
             this.FirmaAdi.Name = "FirmaAdi";
             // 
+            // dataSEtler1
+            // 
+            this.dataSEtler1.DataSetName = "DataSEtler";
+            this.dataSEtler1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // rptTahsilat
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -348,6 +338,10 @@
             this.BottomMargin,
             this.PageHeader,
             this.ReportFooter});
+            this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
+            this.dataSEtler1});
+            this.DataMember = "FaturaKalemler";
+            this.DataSource = this.dataSEtler1;
             this.DesignerOptions.ShowExportWarnings = false;
             this.DesignerOptions.ShowPrintingWarnings = false;
             this.Dpi = 254F;
@@ -363,6 +357,7 @@
             this.Version = "19.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSEtler1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -392,7 +387,7 @@
         private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
         private DevExpress.XtraReports.UI.XRLabel colBakiye;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.Parameters.Parameter FirmaAdi;
+        private DataSEtler dataSEtler1;
     }
 }

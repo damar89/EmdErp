@@ -186,7 +186,7 @@ namespace NetSatis.BackOffice.Fiş
 
         private void btnMustahsil_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
+            /*string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
             rptKooperatif f = new rptKooperatif();
             f.LoadLayout(SettingsTool.AyarOku(SettingsTool.Ayarlar.MustahsilDizayn_DosyaYolu5));
             NetSatisContext context = new NetSatisContext();
@@ -195,7 +195,7 @@ namespace NetSatis.BackOffice.Fiş
             f.Fis_Bilgileri.DataSource = fisDal.KooperatifFisi(context, secilen);
             f.Fis_Kalemleri.DataSource = fisDal.KooperatifFisiKalemleri(context, secilen);
 
-            f.ShowPreview();
+            f.ShowPreview();*/
 
         }
 
