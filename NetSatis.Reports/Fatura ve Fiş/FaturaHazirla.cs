@@ -333,7 +333,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTBilgiler.Columns.Add("Bakiye", typeof(decimal));
             DTBilgiler.TableName = "FaturaBilgiler";
             DataRow row = DTBilgiler.NewRow();
-            row["CariAdiFaturaUnvan"] = fisBilgi.FaturaUnvani;
+            row["CariAdiFaturaUnvan"] = fisBilgi.CariAdi + " " + fisBilgi.FaturaUnvani;
             row["CariAdres"] = fisBilgi.Adres;
             row["CariIkamet"] = fisBilgi.Il + " " + fisBilgi.Ilce + " " + fisBilgi.Semt;
             row["CariVergiDairesi"] = fisBilgi.VergiDairesi;
@@ -463,7 +463,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTBilgiler.Columns.Add("FisCepTel", typeof(string));
             DTBilgiler.TableName = "FaturaBilgiler";
             DataRow row = DTBilgiler.NewRow();
-            row["CariAdiFaturaUnvan"] = fisBilgi.FaturaUnvani;
+            row["CariAdiFaturaUnvan"] = fisBilgi.CariAdi + " " + fisBilgi.FaturaUnvani;
             row["CariAdres"] = fisBilgi.Adres;
             row["CariIkamet"] = fisBilgi.Il + " " + fisBilgi.Ilce + " " + fisBilgi.Semt;
             row["CariVergiDairesi"] = fisBilgi.VergiDairesi;
@@ -622,7 +622,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTBilgiler.Columns.Add("FisCepTel", typeof(string));
             DTBilgiler.TableName = "FaturaBilgiler";
             DataRow row = DTBilgiler.NewRow();
-            row["CariAdiFaturaUnvan"] = fisBilgi.FaturaUnvani;
+            row["CariAdiFaturaUnvan"] = fisBilgi.CariAdi + " " + fisBilgi.FaturaUnvani;
             row["CariAdres"] = fisBilgi.Adres;
             row["CariIkamet"] = fisBilgi.Il + " " + fisBilgi.Ilce + " " + fisBilgi.Semt;
             row["CariVergiDairesi"] = fisBilgi.VergiDairesi;
@@ -781,7 +781,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTBilgiler.Columns.Add("FisCepTel", typeof(string));
             DTBilgiler.TableName = "FaturaBilgiler";
             DataRow row = DTBilgiler.NewRow();
-            row["CariAdiFaturaUnvan"] = fisBilgi.FaturaUnvani;
+            row["CariAdiFaturaUnvan"] = fisBilgi.CariAdi + " " + fisBilgi.FaturaUnvani;
             row["CariAdres"] = fisBilgi.Adres;
             row["CariIkamet"] = fisBilgi.Il + " " + fisBilgi.Ilce + " " + fisBilgi.Semt;
             row["CariVergiDairesi"] = fisBilgi.VergiDairesi;
@@ -927,7 +927,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTBilgiler.Columns.Add("FisCepTel", typeof(string));
             DTBilgiler.TableName = "FaturaBilgiler";
             DataRow row = DTBilgiler.NewRow();
-            row["CariAdiFaturaUnvan"] = fisBilgi.FaturaUnvani;
+            row["CariAdiFaturaUnvan"] = fisBilgi.CariAdi + " " + fisBilgi.FaturaUnvani;
             row["CariAdres"] = fisBilgi.Adres;
             row["CariIkamet"] = fisBilgi.Il + " " + fisBilgi.Ilce + " " + fisBilgi.Semt;
             row["CariVergiDairesi"] = fisBilgi.VergiDairesi;
@@ -1021,9 +1021,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             }
             #endregion
 
-
-
-            DataSet DS = new DataSet("DataSEtler");
+                                   DataSet DS = new DataSet("DataSEtler");
             DS.Tables.Add(DTBilgiler);
             DS.Tables.Add(DTKalemler);
             DS.Tables.Add(DTKDVler);

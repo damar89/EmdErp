@@ -40,7 +40,6 @@
             this.lblCariAdi = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
@@ -52,8 +51,9 @@
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.colBakiye = new DevExpress.XtraReports.UI.XRLabel();
-            this.FirmaAdi = new DevExpress.XtraReports.Parameters.Parameter();
             this.dataSEtler1 = new NetSatis.Reports.DataSEtler();
+            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSEtler1)).BeginInit();
@@ -103,6 +103,8 @@
             // 
             this.colFisKodu.CanGrow = false;
             this.colFisKodu.Dpi = 254F;
+            this.colFisKodu.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FisKodu]")});
             this.colFisKodu.Name = "colFisKodu";
             this.colFisKodu.StylePriority.UseTextAlignment = false;
             this.colFisKodu.Text = "colFisKodu";
@@ -113,6 +115,8 @@
             // 
             this.colFisTuru.CanGrow = false;
             this.colFisTuru.Dpi = 254F;
+            this.colFisTuru.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FisTuru]")});
             this.colFisTuru.Name = "colFisTuru";
             this.colFisTuru.StylePriority.UseTextAlignment = false;
             this.colFisTuru.Text = "colFisTuru";
@@ -123,6 +127,8 @@
             // 
             this.colTarih.CanGrow = false;
             this.colTarih.Dpi = 254F;
+            this.colTarih.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FaturaTarihi]")});
             this.colTarih.Name = "colTarih";
             this.colTarih.StylePriority.UseFont = false;
             this.colTarih.StylePriority.UseTextAlignment = false;
@@ -134,6 +140,8 @@
             // 
             this.colAlinan.CanGrow = false;
             this.colAlinan.Dpi = 254F;
+            this.colAlinan.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FisGenelToplam]")});
             this.colAlinan.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
             this.colAlinan.Name = "colAlinan";
             this.colAlinan.StylePriority.UseFont = false;
@@ -147,12 +155,13 @@
             // TopMargin
             // 
             this.TopMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel2,
+            this.xrLabel4,
             this.lblCariAdi,
             this.xrLabel3,
-            this.xrLabel1,
-            this.xrPageInfo1});
+            this.xrLabel1});
             this.TopMargin.Dpi = 254F;
-            this.TopMargin.HeightF = 291.9167F;
+            this.TopMargin.HeightF = 291.9168F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -160,6 +169,8 @@
             // lblCariAdi
             // 
             this.lblCariAdi.Dpi = 254F;
+            this.lblCariAdi.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CariAdiFaturaUnvan]")});
             this.lblCariAdi.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lblCariAdi.LocationFloat = new DevExpress.Utils.PointFloat(334.5479F, 156.1044F);
             this.lblCariAdi.Name = "lblCariAdi";
@@ -195,20 +206,6 @@
             this.xrLabel1.StylePriority.UseTextAlignment = false;
             this.xrLabel1.Text = "Tahsilat Makbuzu";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrPageInfo1
-            // 
-            this.xrPageInfo1.Dpi = 254F;
-            this.xrPageInfo1.Font = new System.Drawing.Font("Tahoma", 7.5F);
-            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(50.25329F, 233.4967F);
-            this.xrPageInfo1.Name = "xrPageInfo1";
-            this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrPageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
-            this.xrPageInfo1.SizeF = new System.Drawing.SizeF(431.9176F, 58.42001F);
-            this.xrPageInfo1.StylePriority.UseFont = false;
-            this.xrPageInfo1.StylePriority.UseTextAlignment = false;
-            this.xrPageInfo1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrPageInfo1.TextFormatString = "Rapor Tarihi : {0}";
             // 
             // BottomMargin
             // 
@@ -309,6 +306,8 @@
             // colBakiye
             // 
             this.colBakiye.Dpi = 254F;
+            this.colBakiye.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Bakiye]")});
             this.colBakiye.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.colBakiye.LocationFloat = new DevExpress.Utils.PointFloat(501.0521F, 0F);
             this.colBakiye.Name = "colBakiye";
@@ -320,15 +319,39 @@
             this.colBakiye.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.colBakiye.TextFormatString = "{0:c2}";
             // 
-            // FirmaAdi
-            // 
-            this.FirmaAdi.Description = "FirmaAdi";
-            this.FirmaAdi.Name = "FirmaAdi";
-            // 
             // dataSEtler1
             // 
             this.dataSEtler1.DataSetName = "DataSEtler";
             this.dataSEtler1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // xrLabel4
+            // 
+            this.xrLabel4.Dpi = 254F;
+            this.xrLabel4.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(50.25329F, 233.4968F);
+            this.xrLabel4.Name = "xrLabel4";
+            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(271.1494F, 58.42004F);
+            this.xrLabel4.StylePriority.UseFont = false;
+            this.xrLabel4.StylePriority.UseTextAlignment = false;
+            this.xrLabel4.Text = "Tarih :";
+            this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel2
+            // 
+            this.xrLabel2.Dpi = 254F;
+            this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FaturaTarihi]")});
+            this.xrLabel2.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(334.5478F, 233.4968F);
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(436.4522F, 58.42004F);
+            this.xrLabel2.StylePriority.UseFont = false;
+            this.xrLabel2.StylePriority.UseTextAlignment = false;
+            this.xrLabel2.Text = "Tarih :";
+            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrLabel2.TextFormatString = "{0:d.MM.yyyy HH:mm}";
             // 
             // rptTahsilat
             // 
@@ -340,7 +363,7 @@
             this.ReportFooter});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.dataSEtler1});
-            this.DataMember = "FaturaKalemler";
+            this.DataMember = "FaturaBilgiler";
             this.DataSource = this.dataSEtler1;
             this.DesignerOptions.ShowExportWarnings = false;
             this.DesignerOptions.ShowPrintingWarnings = false;
@@ -348,8 +371,6 @@
             this.Margins = new System.Drawing.Printing.Margins(1, 3, 292, 25);
             this.PageWidth = 800;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
-            this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
-            this.FirmaAdi});
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
             this.RollPaper = true;
             this.ShowPrintMarginsWarning = false;
@@ -370,7 +391,6 @@
         private DevExpress.XtraReports.UI.XRLabel lblCariAdi;
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
-        private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
         private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
         private DevExpress.XtraReports.UI.XRTable xrTable2;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow2;
@@ -387,7 +407,8 @@
         private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
         private DevExpress.XtraReports.UI.XRLabel colBakiye;
-        private DevExpress.XtraReports.Parameters.Parameter FirmaAdi;
         private DataSEtler dataSEtler1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel2;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel4;
     }
 }
