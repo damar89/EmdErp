@@ -78,6 +78,7 @@
             this.colKategoriAdi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAnaGrupAdi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAltGrupAdi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUretici = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.btnStokHareket = new DevExpress.XtraEditors.SimpleButton();
             this.txtBarkodu = new DevExpress.XtraEditors.ButtonEdit();
@@ -124,7 +125,8 @@
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.colUretici = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colOzelKodu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colProje = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -280,7 +282,9 @@
             this.colKategoriAdi,
             this.colAnaGrupAdi,
             this.colAltGrupAdi,
-            this.colUretici});
+            this.colUretici,
+            this.colOzelKodu,
+            this.colProje});
             this.gridView1.CustomizationFormBounds = new System.Drawing.Rectangle(906, 365, 210, 172);
             gridFormatRule1.Column = this.MevcutStok;
             gridFormatRule1.ColumnApplyTo = this.MevcutStok;
@@ -502,6 +506,17 @@
             this.colAltGrupAdi.Visible = true;
             this.colAltGrupAdi.VisibleIndex = 6;
             this.colAltGrupAdi.Width = 76;
+            // 
+            // colUretici
+            // 
+            this.colUretici.Caption = "Üretici";
+            this.colUretici.FieldName = "Uretici";
+            this.colUretici.MinWidth = 25;
+            this.colUretici.Name = "colUretici";
+            this.colUretici.OptionsColumn.AllowEdit = false;
+            this.colUretici.Visible = true;
+            this.colUretici.VisibleIndex = 12;
+            this.colUretici.Width = 94;
             // 
             // btnGuncelle
             // 
@@ -1022,16 +1037,27 @@
             this.ımageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // colUretici
+            // colOzelKodu
             // 
-            this.colUretici.Caption = "Üretici";
-            this.colUretici.FieldName = "Uretici";
-            this.colUretici.MinWidth = 25;
-            this.colUretici.Name = "colUretici";
-            this.colUretici.OptionsColumn.AllowEdit = false;
-            this.colUretici.Visible = true;
-            this.colUretici.VisibleIndex = 12;
-            this.colUretici.Width = 94;
+            this.colOzelKodu.Caption = "Özel Kod";
+            this.colOzelKodu.FieldName = "OzelKodu";
+            this.colOzelKodu.MinWidth = 25;
+            this.colOzelKodu.Name = "colOzelKodu";
+            this.colOzelKodu.OptionsColumn.AllowEdit = false;
+            this.colOzelKodu.Visible = true;
+            this.colOzelKodu.VisibleIndex = 13;
+            this.colOzelKodu.Width = 94;
+            // 
+            // colProje
+            // 
+            this.colProje.Caption = "Proje Adı";
+            this.colProje.FieldName = "Proje";
+            this.colProje.MinWidth = 25;
+            this.colProje.Name = "colProje";
+            this.colProje.OptionsColumn.AllowEdit = false;
+            this.colProje.Visible = true;
+            this.colProje.VisibleIndex = 14;
+            this.colProje.Width = 94;
             // 
             // frmStok
             // 
@@ -1163,5 +1189,7 @@
         private DevExpress.XtraEditors.SimpleButton btnTemizle;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraGrid.Columns.GridColumn colUretici;
+        private DevExpress.XtraGrid.Columns.GridColumn colOzelKodu;
+        private DevExpress.XtraGrid.Columns.GridColumn colProje;
     }
 }

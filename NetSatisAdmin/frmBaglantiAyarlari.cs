@@ -152,6 +152,22 @@ namespace NetSatisAdmin
                 using (var context = new NetSatisContext())
                 {
                     context.Database.CreateIfNotExists();
+                    if (!context.Cariler.Any(c => c.CariKodu == "VRS001"))
+                    {
+                        context.Cariler.Add(new Cari
+                        {
+                            CariAdi = "Peşin Satış",
+                            CariKodu = "VRS001",
+                            FaturaUnvani="Peşin Satış",
+
+                        });
+                        context.SaveChanges();
+
+                    }
+                }
+                using (var context = new NetSatisContext())
+                {
+                    context.Database.CreateIfNotExists();
                     if (!context.OdemeTurleri.Any(c => c.OdemeTuruKodu == "002"))
                     {
                         context.OdemeTurleri.Add(new OdemeTuru

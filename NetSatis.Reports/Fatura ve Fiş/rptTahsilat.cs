@@ -1,12 +1,4 @@
-﻿using DevExpress.DataAccess.ObjectBinding;
-using NetSatis.Entities.Context;
-using NetSatis.Entities.Data_Access;
-using NetSatis.Entities.Tables;
-using System;
-using System.IO;
-using System.Linq;
-
-namespace NetSatis.Reports.Fatura_ve_Fiş
+﻿namespace NetSatis.Reports.Fatura_ve_Fiş
 {
     public partial class rptTahsilat : DevExpress.XtraReports.UI.XtraReport
     {

@@ -86,5 +86,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetSatis.Entities\NetSatis.Entities.csproj">
+      <Project>{09d91e15-402a-45d0-9c04-e723f42131f7}</Project>
+      <Name>NetSatis.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

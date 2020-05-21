@@ -160,32 +160,59 @@ namespace NetSatis.BackOffice.Cari
         }
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
-            secilen = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
-            frmCariIslem form = new frmCariIslem(cariDal.GetByFilter(context, c => c.Id == secilen));
-            form.ShowDialog();
-            if (form.saved)
+            try
             {
-                GetAll();
+                secilen = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
+                frmCariIslem form = new frmCariIslem(cariDal.GetByFilter(context, c => c.Id == secilen));
+                form.ShowDialog();
+                if (form.saved)
+                {
+                    GetAll();
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
         private void btnCariKopyalaHizli_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            secilen = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
-            Entities.Tables.Cari cariEntity = new Entities.Tables.Cari();
-            cariEntity = cariDal.GetByFilter(context, c => c.Id == secilen);
-            frmCariIslem form = new frmCariIslem(cariEntity, true);
-            form.ShowDialog();
-            if (form.saved)
+            try
             {
-                GetAll();
+                secilen = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
+                Entities.Tables.Cari cariEntity = new Entities.Tables.Cari();
+                cariEntity = cariDal.GetByFilter(context, c => c.Id == secilen);
+                frmCariIslem form = new frmCariIslem(cariEntity, true);
+                form.ShowDialog();
+                if (form.saved)
+                {
+                    GetAll();
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
         private void btnCariHareketHizli_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            secilen = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
-            string secilenAd = gridView1.GetFocusedRowCellValue(colCariAdi).ToString();
-            frmCariHareket form = new frmCariHareket(Convert.ToInt32(secilen));
-            form.ShowDialog();
+            try
+            {
+                secilen = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
+                string secilenAd = gridView1.GetFocusedRowCellValue(colCariAdi).ToString();
+                frmCariHareket form = new frmCariHareket(Convert.ToInt32(secilen));
+                form.ShowDialog();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
         }
         private void FisIslem_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
