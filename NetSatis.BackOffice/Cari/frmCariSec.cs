@@ -72,23 +72,32 @@ namespace NetSatis.BackOffice.Cari
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
-            if (gridView1.FocusedRowHandle != GridControl.InvalidRowHandle)
-                if (gridView1.GetSelectedRows().Length != 0)
-                {
-                    foreach (var row in gridView1.GetSelectedRows())
+            try
+            {
+                if (gridView1.FocusedRowHandle != GridControl.InvalidRowHandle)
+                    if (gridView1.GetSelectedRows().Length != 0)
                     {
-                        string carikodu = gridView1.GetRowCellValue(row, colCariKodu).ToString();
-                        secilen.Add(context.Cariler.SingleOrDefault(c => c.CariKodu == carikodu));
+                        foreach (var row in gridView1.GetSelectedRows())
+                        {
+                            string carikodu = gridView1.GetRowCellValue(row, colCariKodu).ToString();
+                            secilen.Add(context.Cariler.SingleOrDefault(c => c.CariKodu == carikodu));
 
+                        }
+
+                        secildi = true;
+                        this.Close();
                     }
+                    else
+                    {
+                        MessageBox.Show("Cari Seçimi Yapılmadı");
+                    }
+            }
+            catch (Exception)
+            {
 
-                    secildi = true;
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Cari Seçimi Yapılmadı");
-                }
+                throw;
+            }
+         
         }
 
         private void gridView1_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
@@ -102,16 +111,25 @@ namespace NetSatis.BackOffice.Cari
 
         private void btnHareketler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (gridView1.RowCount != 0)
+            try
             {
-                sec = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId)); string secilenAd = gridView1.GetFocusedRowCellValue(colCariAdi).ToString();
-                frmCariHareket form = new frmCariHareket(Convert.ToInt32(sec));
-                form.ShowDialog();
+                if (gridView1.RowCount != 0)
+                {
+                    sec = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId)); string secilenAd = gridView1.GetFocusedRowCellValue(colCariAdi).ToString();
+                    frmCariHareket form = new frmCariHareket(Convert.ToInt32(sec));
+                    form.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Seçili Cari Bulunamadı");
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Seçili Cari Bulunamadı");
+
+                throw;
             }
+         
         }
 
         private void frmCariSec_Load(object sender, EventArgs e)

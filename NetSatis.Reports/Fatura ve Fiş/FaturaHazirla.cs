@@ -201,7 +201,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DTBilgiler.Columns.Add("Bakiye", typeof(decimal));
             DTBilgiler.TableName = "FaturaBilgiler";
             DataRow row = DTBilgiler.NewRow();
-            row["CariAdiFaturaUnvan"] = fisBilgi.FaturaUnvani;
+            row["CariAdiFaturaUnvan"] = fisBilgi.CariAdi + " " + fisBilgi.FaturaUnvani;
             row["CariAdres"] = fisBilgi.Adres;
             row["CariIkamet"] = fisBilgi.Il + " " + fisBilgi.Ilce + " " + fisBilgi.Semt;
             row["CariVergiDairesi"] = fisBilgi.VergiDairesi;

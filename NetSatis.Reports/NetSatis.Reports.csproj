@@ -349,7 +349,9 @@
     <None Include="DizaynFormlar\rptStokEnvanter.repx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="DizaynFormlar\rptTahsilat.repx" />
+    <None Include="DizaynFormlar\rptTahsilat.repx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="DizaynFormlar\rptTeklif.repx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

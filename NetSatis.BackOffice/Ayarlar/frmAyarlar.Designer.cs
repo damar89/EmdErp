@@ -393,7 +393,6 @@
             this.labelControl30.Size = new System.Drawing.Size(210, 26);
             this.labelControl30.TabIndex = 4;
             this.labelControl30.Text = "Tahsilat Dizayn :";
-            this.labelControl30.Visible = false;
             // 
             // labelControl21
             // 
@@ -509,7 +508,6 @@
             this.lookTahsilat.Properties.PopupSizeable = false;
             this.lookTahsilat.Size = new System.Drawing.Size(247, 22);
             this.lookTahsilat.TabIndex = 5;
-            this.lookTahsilat.Visible = false;
             // 
             // cmbProFaturaDizayn
             // 

@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using NetSatis.Entities.Context;
+using NetSatis.Entities.Tables;
 using NetSatis.Entities.Tools;
 using System;
 using System.Data.SqlClient;
@@ -50,7 +51,23 @@ namespace NetSatisAdmin
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
+            using (var context = new NetSatisContext())
+            {
+                context.Database.CreateIfNotExists();
+                if (!context.Cariler.Any(c => c.CariKodu == "VRS001"))
+                {
+                    context.Cariler.Add(new Cari
+                    {
+                        CariAdi = "Peşin Satış",
+                        CariKodu = "VRS001",
+                        FaturaUnvani = "Peşin Satış",
+                        CariTuru="Müşteri",
 
+                    });
+                    context.SaveChanges();
+
+                }
+            }
             if (context.Kullanicilar.Any(c => c.KullaniciAdi == txtKullanici.Text && c.Parola == txtParola.Text))
             {
                 girisBasarili = true;

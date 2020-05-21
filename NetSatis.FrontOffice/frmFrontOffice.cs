@@ -573,7 +573,7 @@ namespace NetSatis.FrontOffice
             _fisentity.IskontoOrani1 = calcIndirimOrani.Value;
             _fisentity.IskontoTutari1 = calcIndirimToplami.Value + toplamDipIskontoPayi; ;
             _fisentity.Tarih = Convert.ToDateTime(DateTime.Now);
-            _fisentity.AraToplam_ = txtAraToplam.Value;
+            _fisentity.AraToplam_ = txtAraToplam2.Value;
             _fisentity.KdvToplam_ = calcKdvToplam.Value;
             _fisentity.DipIskTutari = calcIndirimTutari.Value;
             _fisentity.DipIskNetTutari = toplamDipIskontoPayi;
@@ -846,7 +846,7 @@ namespace NetSatis.FrontOffice
             txtVergiDairesi.Text = SatisBilgisi.BekleyenFis.VergiDairesi;
             txtVergiNo.Text = SatisBilgisi.BekleyenFis.VergiNo;
             calcGenelToplam.Value = Convert.ToDecimal(SatisBilgisi.BekleyenFis.ToplamTutar);
-            txtAraToplam.Value = Convert.ToDecimal(SatisBilgisi.BekleyenFis.AraToplam_);
+            txtAraToplam2.Value = Convert.ToDecimal(SatisBilgisi.BekleyenFis.AraToplam_);
             calcDusur.Value = Convert.ToDecimal(SatisBilgisi.BekleyenFis.DipIskTutari);
             calcIndirimOrani.Value = Convert.ToDecimal(SatisBilgisi.BekleyenFis.IskontoOrani1);
             calcIndirimTutari.Value = Convert.ToDecimal(SatisBilgisi.BekleyenFis.IskontoTutari1);
@@ -950,7 +950,7 @@ namespace NetSatis.FrontOffice
             calcKdvToplam.Value = Convert.ToDecimal(colKdvToplam.SummaryItem.SummaryValue);
             calcGenelToplam.Value = Convert.ToDecimal(colToplamTutar.SummaryItem.SummaryValue) + (calcKdvToplam.Value) - calcIndirimTutari.Value;
             calcIndirimToplami.Value = Convert.ToDecimal(colIndirimTutar.SummaryItem.SummaryValue);
-            txtAraToplam.Value = calcGenelToplam.Value - (calcIndirimToplami.Value + calcKdvToplam.Value);
+            txtAraToplam2.Value = calcGenelToplam.Value - (calcIndirimToplami.Value + calcKdvToplam.Value);
             //calcMaliyet.EditValue = Convert.ToDecimal(colMaliyetTutar.SummaryItem.SummaryValue);
             txtParaUstu.Value = txtOdenenTutar.Value - calcGenelToplam.Value;
             calcOdenemesiGereken.Value = calcGenelToplam.Value - calcOdenenTutar.Value;
@@ -1560,8 +1560,8 @@ namespace NetSatis.FrontOffice
                 }
             }
             calcKdvToplam.EditValue = toplamKdvToplam;
-            txtAraToplam.EditValue = toplamAraToplam - toplamKdvToplam;
-            txtAraToplam.EditValue = toplamAraToplam;
+            txtAraToplam2.EditValue = toplamAraToplam - toplamKdvToplam;
+            txtAraToplam2.EditValue = toplamAraToplam;
             calcGenelToplam.EditValue = toplamGenelToplam;
             calcIndirimToplami.EditValue = toplamSatirIndirimTutari;
             calcOdenemesiGereken.EditValue = toplamGenelToplam - calcOdenenTutar.Value;
@@ -1742,7 +1742,7 @@ namespace NetSatis.FrontOffice
                 SaveUser = frmAnaMenu.UserId,
                 //SeriKodu = txtSeri.Text,
                 //SiraKodu = txtSira.Text,
-                Tutar = Convert.ToDecimal(txtAraToplam.EditValue),
+                Tutar = Convert.ToDecimal(txtAraToplam2.EditValue),
                 VadeTarihi = Convert.ToDateTime(DateTime.Now),
             };
 
