@@ -442,8 +442,17 @@ namespace NetSatis.FrontOffice
             }
             if (calcOdenemesiGereken.Value != 0 && String.IsNullOrEmpty(lblCariKod.Text) && tekParca == false)
             {
-                message += "- Ödenmesi Gereken Tutar Ödenmemiş Görünüyor. Ödenmeyen tutarı açık hesaba aktarabilmek için cari seçimi yapınız." + System.Environment.NewLine;
-                hata++;
+                var dr = MessageBox.Show("Ödenmesi Gereken Tutar Ödenmemiş Görünüyor. Ödenmeyen tutarı açık hesaba aktarabilmek için cari seçimi yapınız", "Cari Seç", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dr == DialogResult.No)
+                    return;
+                // btnCariAc.PerformClick();
+                btnCariAc_Click(null, null);
+
+                if (string.IsNullOrEmpty(lblCariName.Text))
+                    return;
+                //message += "- Ödenmesi Gereken Tutar Ödenmemiş Görünüyor. Ödenmeyen tutarı açık hesaba aktarabilmek için cari seçimi yapınız." + System.Environment.NewLine;
+                //hata++;
             }
             var ayar = context.Ayarlar.FirstOrDefault();
             if (ayar != null)

@@ -1,4 +1,8 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.Data.Helpers;
+using DevExpress.DataProcessing;
+using DevExpress.Utils.MVVM;
+using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 using NetSatis.BackOffice.Tanım;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
@@ -49,6 +53,9 @@ namespace NetSatis.BackOffice.Stok
             Olustur(entity, kopyala);
 
         }
+
+
+
         private void Olustur(Entities.Tables.Stok entity, bool kopyala = false)
         {
             kodOlustur = new CodeTool(this, CodeTool.Table.Stok);
@@ -136,9 +143,11 @@ namespace NetSatis.BackOffice.Stok
                 Image img = byteArrayToImage(_entity.Resim);
                 peResim.Image = img;
             }
-        } 
+        }
+
         private void btnKaydet_Click(object sender, EventArgs e)
         {
+
 
             var firstIndex = -1;
 
@@ -164,6 +173,11 @@ namespace NetSatis.BackOffice.Stok
             {
                 Image img = peResim.Image;
                 _entity.Resim = imageToByteArray(img);
+            }
+            if (string.IsNullOrEmpty(txtKod.Text))
+            { 
+                var kod = context.Kodlar.Where(c => c.Tablo == "Stok").First();
+                txtKod.Text = CodeTool.fiskodolustur(kod.OnEki.ToString(), kod.SonDeger.ToString());
             }
             if (context.Barkodlar.Local.ToList().Count > 0)
             {
@@ -242,6 +256,8 @@ namespace NetSatis.BackOffice.Stok
                 this.Close();
             }
         }
+
+
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -737,7 +753,7 @@ namespace NetSatis.BackOffice.Stok
                 txtBirim.Properties.Items.Remove(UserText);
                 txtBirim.EditValue = null;
             }
-        } 
+        }
         public byte[] imageToByteArray(System.Drawing.Image imageIn)
         {
             MemoryStream ms = new MemoryStream();

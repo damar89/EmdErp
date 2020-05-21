@@ -93,9 +93,10 @@ namespace NetSatis.Entities.Tools
             BarButonOlustur();
         }
 
-        private void Buton_Click(object sender, ItemClickEventArgs e)
+        public void Buton_Click(object sender, ItemClickEventArgs e)
         {
-            TextEdit text = (TextEdit)_form.Controls.Find("txtKod", true).SingleOrDefault();
+            
+            TextEdit text = (TextEdit)_form.Controls.Find("txtKod", true).SingleOrDefault(); 
             text.Text = e.Item.Caption;
         }
 
