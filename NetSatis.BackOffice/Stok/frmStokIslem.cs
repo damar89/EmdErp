@@ -3,6 +3,7 @@ using DevExpress.DataProcessing;
 using DevExpress.Utils.MVVM;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
 using NetSatis.BackOffice.Tanım;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
@@ -502,6 +503,10 @@ namespace NetSatis.BackOffice.Stok
             if (e.Alt == true && e.KeyCode == Keys.K)
             {
                 btnKaydet.PerformClick();
+            }
+            if (e.KeyCode == Keys.F3)
+            {
+                btnBarkodEkle.PerformClick();
             }
             if (e.Alt == true && e.KeyCode == Keys.L)
             {
@@ -1077,6 +1082,17 @@ namespace NetSatis.BackOffice.Stok
                 txtStokAdi.Tag =
                     txtStokAdi.Text = null;
             }
+        }
+
+        private void btnBarkodEkle_Click(object sender, EventArgs e)
+        {
+                tabPane1.SelectedPage = tabNavigationPage2;
+            gridContBarkod.Focus();
+            gridContBarkod.Select();
+            gridBarkod.Focus();
+            gridBarkod.FocusedRowHandle = GridControl.NewItemRowHandle;
+            gridBarkod.FocusedColumn = gridBarkod.Columns["Barkodu"]; 
+
         }
     }
 }
