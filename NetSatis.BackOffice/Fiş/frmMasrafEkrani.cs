@@ -2,6 +2,7 @@
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
+using NetSatis.Entities.Tools;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -20,7 +21,7 @@ namespace NetSatis.BackOffice.Fiş
         public frmMasrafEkrani(int odemeTuruId, Nullable<decimal> odenmesiGerekenTutar = null)
         {
             InitializeComponent();
-             int kasaid = Convert.ToInt32(context.Kullanicilar.Where(x => x.Id == frmAnaMenu.UserId).FirstOrDefault().KasaId);
+             int kasaid = Convert.ToInt32(context.Kullanicilar.Where(x => x.Id == RoleTool.KullaniciEntity.Id).FirstOrDefault().KasaId);
            
          
             _kasaBilgi = context.Kasalar.SingleOrDefault(c => c.Id == kasaid);

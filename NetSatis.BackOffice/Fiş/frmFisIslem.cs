@@ -1506,7 +1506,7 @@ namespace NetSatis.BackOffice.Fiş
                     hata++;
                 }
                 if (calcOdenemesiGereken.Value != 0 && ayarlar.OdemeEkrani == true &&
-                    string.IsNullOrEmpty(lblCariKod.Text) && txtFisTuru.Text != "Hakediş Fişi")
+                    string.IsNullOrEmpty(lblCariKod.Text) && txtFisTuru.Text != "Hakediş Fişi" && txtFisTuru.Text != "Masraf Fişi")
                 {
                     message +=
                         "- Ödenmesi Gereken Tutar Ödenmemiş Görünüyor.Açık hesap satış yapabilmek için lütfen cari seçiniz." +
@@ -1537,7 +1537,7 @@ namespace NetSatis.BackOffice.Fiş
                     return;
                 }
 
-                if (calcOdenemesiGereken.Value != 0 && ayarlar.OdemeEkrani == true)
+                if (calcOdenemesiGereken.Value != 0 && ayarlar.OdemeEkrani == true && txtFisTuru.Text != "Masraf Fişi")
                 {
                     if (MessageBox.Show(
                             $"Ödemenin # {calcOdenemesiGereken.Value.ToString("C2")} # tutarındaki kısmı açık hesap bakiyesi olarak kaydedilecektir. devam etmek istiyor musunuz?",
@@ -2040,7 +2040,7 @@ namespace NetSatis.BackOffice.Fiş
                 hata++;
             }
             if (calcOdenemesiGereken.Value != 0 && ayarlar.OdemeEkrani == true &&
-                string.IsNullOrEmpty(lblCariKod.Text) && txtFisTuru.Text != "Hakediş Fişi")
+                string.IsNullOrEmpty(lblCariKod.Text) && txtFisTuru.Text != "Hakediş Fişi" && txtFisTuru.Text != "Masraf Fişi")
             {
                 message +=
                     "- Ödenmesi Gereken Tutar Ödenmemiş Görünüyor.Açık hesap satış yapabilmek için lütfen cari seçiniz." +

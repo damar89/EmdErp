@@ -1955,7 +1955,7 @@ namespace NetSatis.FrontOffice
 
         private void btnGecmis_Click(object sender, EventArgs e)
         {
-            frmSatisRapor frm = new frmSatisRapor(DateTime.Today.AddHours(00).AddMinutes(00).AddSeconds(00), DateTime.Today.AddHours(23).AddMinutes(59).AddSeconds(59),RoleTool.KullaniciEntity.Id);
+            frmGunlukIslem frm = new frmGunlukIslem(DateTime.Today.AddHours(00).AddMinutes(00).AddSeconds(00), DateTime.Today.AddHours(23).AddMinutes(59).AddSeconds(59),RoleTool.KullaniciEntity.Id);
             frm.ShowDialog();
         }
 
