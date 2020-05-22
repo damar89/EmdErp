@@ -347,6 +347,26 @@ namespace NetSatis.FrontOffice
         }
         private void AcikHesap_Click(object sender, EventArgs e)
         {
+
+            if (gridStokHareket.RowCount == 0)
+            {
+                 MessageBox.Show(" Satış Ekranında eklenmiş bir ürün bulunamadı..", "Kayıt Yok", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(lblCariName.Text))
+            {
+                var dr = MessageBox.Show("Ödenmesi Gereken Tutar Ödenmemiş Görünüyor. Ödenmeyen tutarı açık hesaba aktarabilmek için cari seçimi yapınız", "Cari Seç", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dr == DialogResult.No)
+                    return;
+                // btnCariAc.PerformClick();
+                btnCariAc_Click(null, null);
+
+                if (string.IsNullOrEmpty(lblCariName.Text))
+                    return; 
+            }
+
             odemeTuruId = -1;
             DialogResult Soru;
             //radialYazdir.ShowPopup(MousePosition);
