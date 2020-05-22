@@ -708,6 +708,7 @@
             // 
             // toggleSatisFiyat
             // 
+            this.toggleSatisFiyat.EditValue = true;
             this.toggleSatisFiyat.Location = new System.Drawing.Point(595, 197);
             this.toggleSatisFiyat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.toggleSatisFiyat.MenuManager = this.barManager1;
