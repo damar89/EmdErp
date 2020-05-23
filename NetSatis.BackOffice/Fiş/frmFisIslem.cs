@@ -1571,9 +1571,9 @@ namespace NetSatis.BackOffice.Fiş
                 {
 
                 }
-              
-                        //----
-                        foreach (var stokVeri in context.StokHareketleri.Local.ToList())
+
+                //----
+                foreach (var stokVeri in context.StokHareketleri.Local.ToList())
                 {
                     if (!Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_StoguEtkilesin)))
                     {
@@ -1675,7 +1675,7 @@ namespace NetSatis.BackOffice.Fiş
 
                                 stokVeri.Stok.AlisFiyati3 = ind3 + (ind3 * stokVeri.Kdv / 100);
                                 stokDAL.MevcutStok(context, 1);
-                               
+
                             }
                         }
                         else
@@ -1692,7 +1692,7 @@ namespace NetSatis.BackOffice.Fiş
 
                                 stokVeri.Stok.AlisFiyati3 = ind3 + (ind3 * stokVeri.Kdv / 100);
                                 stokDAL.MevcutStok(context, 1);
-                               
+
                             }
                         }
                         if (toggleSatisFiyat.IsOn)
