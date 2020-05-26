@@ -1,4 +1,5 @@
-﻿using DevExpress.Utils;
+﻿using DevExpress.Data.Controls.ExpressionEditor;
+using DevExpress.Utils;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraTab;
@@ -1067,8 +1068,18 @@ namespace NetSatis.FrontOffice
             Toplamlar();
             HepsiniHesapla();
         }
+
+        private async void txtBarkod_Closed(object sender, DevExpress.XtraEditors.Controls.ClosedEventArgs e)
+        {
+            await Task.Delay(500);
+            txtBarkod.EditValue =
+            txtBarkod.Text = null;
+        }
+         
         private async void txtBarkod_KeyDown(object sender, KeyEventArgs e)
         {
+
+
             if (e.KeyCode == Keys.Enter && txtBarkod.Text != "")
             {
                 Barkod entity;
@@ -1115,9 +1126,10 @@ namespace NetSatis.FrontOffice
                     }
                 }
                 await Task.Delay(300);
-                txtBarkod.EditValue = null;
+                txtBarkod.EditValue =
                 txtBarkod.Text = null;
                 calcMiktar.Value = 1;
+
             }
             txtBarkod.Focus();
         }
@@ -2015,7 +2027,7 @@ namespace NetSatis.FrontOffice
             await Sorgula(tokenSource.Token);
             txtBarkod.EditValue = null;
             txtBarkod.Select();
-            
+
         }
 
         private CancellationTokenSource tokenSource = new CancellationTokenSource();
@@ -2051,6 +2063,7 @@ namespace NetSatis.FrontOffice
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
 
     }
 }
