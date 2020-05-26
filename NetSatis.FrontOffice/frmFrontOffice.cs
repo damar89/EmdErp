@@ -3,14 +3,12 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraTab;
 using NetSatis.BackOffice;
-using NetSatis.BackOffice.Annotations;
 using NetSatis.BackOffice.Cari;
 using NetSatis.BackOffice.Depo;
 using NetSatis.BackOffice.Extensions;
 using NetSatis.BackOffice.Fiş;
 using NetSatis.BackOffice.Raporlar;
 using NetSatis.BackOffice.Stok;
-using NetSatis.Entities;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
@@ -19,7 +17,6 @@ using NetSatis.Entities.Tools;
 using NetSatis.Reports.Fatura_ve_Fiş;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
@@ -27,14 +24,11 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NetSatis.FrontOffice
 {
-    public partial class frmFrontOffice : DevExpress.XtraEditors.XtraForm, INotifyPropertyChanged
+    public partial class frmFrontOffice : DevExpress.XtraEditors.XtraForm
     {
         NetSatisContext context = new NetSatisContext();
         FisDAL fisDal = new FisDAL();
@@ -353,26 +347,6 @@ namespace NetSatis.FrontOffice
         }
         private void AcikHesap_Click(object sender, EventArgs e)
         {
-
-            if (gridStokHareket.RowCount == 0)
-            {
-                MessageBox.Show(" Satış Ekranında eklenmiş bir ürün bulunamadı..", "Kayıt Yok", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (string.IsNullOrEmpty(lblCariName.Text))
-            {
-                var dr = MessageBox.Show("Ödenmesi Gereken Tutar Ödenmemiş Görünüyor. Ödenmeyen tutarı açık hesaba aktarabilmek için cari seçimi yapınız", "Cari Seç", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (dr == DialogResult.No)
-                    return;
-                // btnCariAc.PerformClick();
-                btnCariAc_Click(null, null);
-
-                if (string.IsNullOrEmpty(lblCariName.Text))
-                    return;
-            }
-
             odemeTuruId = -1;
             DialogResult Soru;
             //radialYazdir.ShowPopup(MousePosition);
@@ -1067,18 +1041,12 @@ namespace NetSatis.FrontOffice
             Toplamlar();
             HepsiniHesapla();
         }
-        private async void txtBarkod_KeyDown(object sender, KeyEventArgs e)
+        private void txtBarkod_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter && txtBarkod.Text != "")
             {
                 Barkod entity;
-                var barkodKod = string.Empty;
-                if (GridUpEditStokList.SelectedRowsCount == 0)
-                    return;
-                if (GridUpEditStokList.GetFocusedRowCellValue("Barkodu") != null)
-                    barkodKod = GridUpEditStokList.GetFocusedRowCellValue("Barkodu").ToString();
-
-                var entityStok = context.Stoklar.FirstOrDefault(x => x.Barkodu == barkodKod);
+                var entityStok = context.Stoklar.FirstOrDefault(x => x.Barkodu == txtBarkod.Text);
                 if (entityStok != null)
                 {
                     if (MinStokAltinda(entityStok)) return;
@@ -1095,7 +1063,7 @@ namespace NetSatis.FrontOffice
                 }
                 else
                 {
-                    entity = context.Barkodlar.Where(c => c.Barkodu == barkodKod).SingleOrDefault();
+                    entity = context.Barkodlar.Where(c => c.Barkodu == txtBarkod.Text).SingleOrDefault();
                     if (entity != null)
                     {
                         StokHareket s = StokSec(entity.Stok);
@@ -1114,9 +1082,7 @@ namespace NetSatis.FrontOffice
                         MessageBox.Show("Barkod Bulunamadı..");
                     }
                 }
-                await Task.Delay(300);
-                txtBarkod.EditValue = null;
-                txtBarkod.Text = null;
+                txtBarkod.Text = "";
                 calcMiktar.Value = 1;
             }
             txtBarkod.Focus();
@@ -1178,6 +1144,7 @@ namespace NetSatis.FrontOffice
 
                 serialPort1.Open();
 
+
             }
 
 
@@ -1190,13 +1157,9 @@ namespace NetSatis.FrontOffice
                 fisNo = ayar.HizliSatisSiradakiNo;
             }
             navigationPane1.Dock = DockStyle.Right;
-
-            StokListYukle();
             //txtKod.Text =
             //    CodeTool.fiskodolustur(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_PesFisOnEki), SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_PesFisKodu));
         }
-
-
         private void gridStokHareket_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
             //calcMaliyet.EditValue = Convert.ToDecimal(colMaliyetTutar.SummaryItem.SummaryValue);
@@ -1969,30 +1932,30 @@ namespace NetSatis.FrontOffice
 
         private void btnDuzenle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
-            try
-            {
-                if (gridStokHareket.RowCount != 0)
+           
+                try
                 {
-                    sec = Convert.ToInt32(gridStokHareket.GetFocusedRowCellValue(colStokId));
-                    frmStokIslem form = new frmStokIslem(stokDAL.GetByFilter(context, c => c.Id == sec));
-                    form.ShowDialog();
+                    if (gridStokHareket.RowCount != 0)
+                    {
+                        sec = Convert.ToInt32(gridStokHareket.GetFocusedRowCellValue(colStokId));
+                        frmStokIslem form = new frmStokIslem(stokDAL.GetByFilter(context, c => c.Id == sec));
+                        form.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Seçili Stok Bulunamadı");
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    MessageBox.Show("Seçili Stok Bulunamadı");
+                    throw;
                 }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-
+            
         }
 
         private void btnGecmis_Click(object sender, EventArgs e)
         {
-            frmSatisRapor frm = new frmSatisRapor(DateTime.Today.AddHours(00).AddMinutes(00).AddSeconds(00), DateTime.Today.AddHours(23).AddMinutes(59).AddSeconds(59), RoleTool.KullaniciEntity.Id);
+            frmGunlukIslem frm = new frmGunlukIslem(DateTime.Today.AddHours(00).AddMinutes(00).AddSeconds(00), DateTime.Today.AddHours(23).AddMinutes(59).AddSeconds(59),RoleTool.KullaniciEntity.Id);
             frm.ShowDialog();
         }
 
@@ -2001,57 +1964,6 @@ namespace NetSatis.FrontOffice
             frmMaliyet frm = new frmMaliyet();
             frm.ShowDialog();
         }
-
-        private List<Entities.Tables.Stok> TumStoklar { get; set; }
-        private async void StokListYukle()
-        {
-            TumStoklar = new List<Entities.Tables.Stok>();
-
-            txtBarkod.Properties.DataSource = TumStoklar;
-            await Task.Delay(1000);
-            tokenSource.Cancel();
-            tokenSource.Dispose();
-            tokenSource = new CancellationTokenSource();
-            await Sorgula(tokenSource.Token);
-            txtBarkod.EditValue = null;
-            txtBarkod.Select();
-            
-        }
-
-        private CancellationTokenSource tokenSource = new CancellationTokenSource();
-        async Task Sorgula(CancellationToken token)
-        {
-            if (token.IsCancellationRequested)
-                return;
-            TumStoklar.Clear();
-
-            OnPropertyChanged(nameof(TumStoklar));
-
-            var take = 5000;
-            var count = Math.Ceiling(
-                Convert.ToDecimal(stokDAL.StokKayitSayisi(context) / Convert.ToDecimal(take)));
-            if (token.IsCancellationRequested)
-                return;
-            for (int i = 0; i < count; i++)
-            {
-                if (token.IsCancellationRequested)
-                    break;
-                TumStoklar.AddRange(stokDAL.StokAdiylaStokGetir(context, skip: (take * i), take: take, noTracking: true));
-                OnPropertyChanged(nameof(TumStoklar));
-                await Task.Delay(100);
-                GridUpEditStokList.RefreshData();
-            }
-            GridUpEditStokList.RefreshData();
-
-        }
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
     }
 }
 

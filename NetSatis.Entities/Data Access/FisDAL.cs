@@ -637,6 +637,86 @@ namespace NetSatis.Entities.Data_Access
                    }).ToList();
             return tablo;
         }
+        public object GunlukListelemeler(NetSatisContext context, string fisTuru, string fisTuru2,string fisTuru3,string fisTuru4, string fisTuru5, string fisTuru6, DateTime baslangic, DateTime bitis)
+        {
+            var tablo = context.Fisler.Where(c => (c.FisTuru == fisTuru || c.FisTuru == fisTuru2 || c.FisTuru == fisTuru3 || c.FisTuru == fisTuru4 || c.FisTuru == fisTuru5 || c.FisTuru == fisTuru6) && (c.Tarih >= baslangic && c.Tarih <= bitis)).GroupJoin(
+                context.Fisler.Where(c => c.FisTuru == fisTuru || c.FisTuru == fisTuru2 || c.FisTuru == fisTuru3 || c.FisTuru == fisTuru4 || c.FisTuru == fisTuru5 || c.FisTuru == fisTuru6 && (c.Tarih >= baslangic && c.Tarih <= bitis)), c => c.CariId, c => c.CariId,
+                (fisler, cariler) =>
+                   new
+                   {
+                       fisler.Id,
+                       fisler.FisKodu,
+                       fisler.FisTuru,
+                       fisler.ToplamTutar,
+                       fisler.Cari.CariAdi,
+                       fisler.Cari.CariKodu,
+                       fisler.Tarih,
+                       fisler.VadeTarihi,
+                       fisler.Personel.PersonelKodu,
+                       fisler.Personel.PersonelAdi,
+                       fisler.Seri,
+                       fisler.Sira,
+                       fisler.Proje,
+                       fisler.OzelKod,
+                       fisler.Tipi,
+                       fisler.EfaturaDurumu,
+                       fisler.FaturaFisKodu,
+                       fisler.IrsaliyeFisKodu,
+                       fisler.TeklifFisKodu,
+                       fisler.SiparisFisKodu,
+                       fisler.Aciklama,
+                       fisler.BelgeNo,
+                       fisler.IskontoOrani1,
+                       fisler.IskontoTutari1,
+                       fisler.DipIskNetTutari,
+                       OdemeTuru = (context.KasaHareketleri.Where(c => c.FisKodu == fisler.FisKodu).FirstOrDefault() != null ?
+                         context.OdemeTurleri.Where(x => x.Id == context.KasaHareketleri.Where(c => c.FisKodu == fisler.FisKodu).FirstOrDefault().OdemeTuruId).FirstOrDefault().OdemeTuruAdi
+                                : "Acik Hesap"
+                       ),
+                       alacak =
+                       (context.Fisler.Where(c => c.CariId == fisler.Cari.Id && c.FisTuru == "Alış Faturası" || c.FisTuru == "Satış İade Faturası")
+                       .Sum(c => c.ToplamTutar) ?? 0) +
+                       (context.KasaHareketleri.Where(c => c.CariId == fisler.Cari.Id && c.Hareket == "Kasa Giriş")
+                       .Sum(c => c.Tutar) ?? 0),
+                       borc =
+                       (context.Fisler.Where(c => c.CariId == fisler.Cari.Id && c.FisTuru == "Perakende Satış Faturası" || c.FisTuru == "Toptan Satış Faturası" || c.FisTuru == "Alış İade Faturası")
+                       .Sum(c => c.ToplamTutar) ?? 0) +
+                       (context.KasaHareketleri.Where(c => c.CariId == fisler.Cari.Id && c.Hareket == "Kasa Çıkış")
+                       .Sum(c => c.Tutar) ?? 0)
+                   }).Select(k => new
+                   {
+                       k.Id,
+                       k.FisKodu,
+                       k.FisTuru,
+                       k.ToplamTutar,
+                       k.CariAdi,
+                       k.CariKodu,
+                       k.FaturaFisKodu,
+                       k.Tarih,
+                       k.OdemeTuru,
+                       k.VadeTarihi,
+                       k.PersonelKodu,
+                       k.PersonelAdi,
+                       k.Seri,
+                       k.Sira,
+                       k.Proje,
+                       k.OzelKod,
+                       k.Tipi,
+                       k.EfaturaDurumu,
+                       k.Aciklama,
+                       k.BelgeNo,
+                       k.IskontoOrani1,
+                       k.IskontoTutari1,
+                       k.IrsaliyeFisKodu,
+                       k.TeklifFisKodu,
+                       k.SiparisFisKodu,
+                       k.borc,
+                       k.alacak,
+                       k.DipIskNetTutari,
+                       bakiye = k.alacak - k.borc
+                   }).ToList();
+            return tablo;
+        }
         public object ListelemelerTarihPerakende(NetSatisContext context, string fisTuru, DateTime baslangic, DateTime bitis)
         {
             var tablo = context.Fisler.Where(c => (c.FisTuru == fisTuru) && (c.Tarih >= baslangic && c.Tarih <= bitis)).GroupJoin(
