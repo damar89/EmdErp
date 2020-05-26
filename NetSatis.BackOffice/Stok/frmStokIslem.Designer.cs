@@ -1902,6 +1902,7 @@ namespace NetSatis.BackOffice.Stok
             this.gridBarkod.OptionsScrollAnnotations.ShowFocusedRow = DevExpress.Utils.DefaultBoolean.True;
             this.gridBarkod.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
             this.gridBarkod.OptionsView.ShowGroupPanel = false;
+            this.gridBarkod.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridBarkod_PopupMenuShowing);
             // 
             // colBarkod
             // 
@@ -2132,7 +2133,7 @@ namespace NetSatis.BackOffice.Stok
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(930, 868);
+            this.MaximumSize = new System.Drawing.Size(936, 868);
             this.Name = "frmStokIslem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stok Kartı İşlemleri";
