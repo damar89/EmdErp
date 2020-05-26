@@ -279,8 +279,14 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txtIslem = new DevExpress.XtraEditors.TextEdit();
             this.btnStokBul = new System.Windows.Forms.Button();
-            this.txtBarkod = new DevExpress.XtraEditors.TextEdit();
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
+            this.txtBarkod = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.GridUpEditStokList = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -443,6 +449,7 @@
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtIslem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBarkod.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridUpEditStokList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -2801,7 +2808,7 @@
             // 
             this.navStokHareket.Controls.Add(this.gridContStokHareket);
             this.navStokHareket.Name = "navStokHareket";
-            this.navStokHareket.Size = new System.Drawing.Size(595, 168);
+            this.navStokHareket.Size = new System.Drawing.Size(694, 207);
             // 
             // gridContStokHareket
             // 
@@ -2817,7 +2824,7 @@
             this.repositoryMustahsil,
             this.repoMiktar,
             this.repoIskonto});
-            this.gridContStokHareket.Size = new System.Drawing.Size(595, 168);
+            this.gridContStokHareket.Size = new System.Drawing.Size(694, 207);
             this.gridContStokHareket.TabIndex = 3;
             this.gridContStokHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridStokHareket,
@@ -3266,7 +3273,7 @@
             this.navOdeme.Controls.Add(this.gridContKasaHareket);
             this.navOdeme.Controls.Add(this.grpToplamlar);
             this.navOdeme.Name = "navOdeme";
-            this.navOdeme.Size = new System.Drawing.Size(595, 168);
+            this.navOdeme.Size = new System.Drawing.Size(694, 207);
             // 
             // gridContKasaHareket
             // 
@@ -3277,7 +3284,7 @@
             this.gridContKasaHareket.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repoKasa,
             this.repoOdemeSil});
-            this.gridContKasaHareket.Size = new System.Drawing.Size(595, 75);
+            this.gridContKasaHareket.Size = new System.Drawing.Size(694, 114);
             this.gridContKasaHareket.TabIndex = 4;
             this.gridContKasaHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridKasaHareket,
@@ -3395,9 +3402,9 @@
             this.grpToplamlar.Controls.Add(this.panelOdeme);
             this.grpToplamlar.Controls.Add(this.btnIslemBitir);
             this.grpToplamlar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grpToplamlar.Location = new System.Drawing.Point(0, 75);
+            this.grpToplamlar.Location = new System.Drawing.Point(0, 114);
             this.grpToplamlar.Name = "grpToplamlar";
-            this.grpToplamlar.Size = new System.Drawing.Size(595, 93);
+            this.grpToplamlar.Size = new System.Drawing.Size(694, 93);
             this.grpToplamlar.TabIndex = 14;
             this.grpToplamlar.Text = " ";
             // 
@@ -3409,7 +3416,7 @@
             this.panelOdeme.Controls.Add(this.calcOdenenTutar);
             this.panelOdeme.Controls.Add(this.labelControl19);
             this.panelOdeme.Controls.Add(this.labelControl21);
-            this.panelOdeme.Location = new System.Drawing.Point(327, 26);
+            this.panelOdeme.Location = new System.Drawing.Point(426, 26);
             this.panelOdeme.Name = "panelOdeme";
             this.panelOdeme.Size = new System.Drawing.Size(267, 68);
             this.panelOdeme.TabIndex = 2;
@@ -3620,9 +3627,9 @@
             this.layoutControl1.Controls.Add(this.txtIslem);
             this.layoutControl1.Controls.Add(this.btnStokBul);
             this.layoutControl1.Controls.Add(this.calcMiktar);
-            this.layoutControl1.Controls.Add(this.txtBarkod);
             this.layoutControl1.Controls.Add(this.navigationPane1);
             this.layoutControl1.Controls.Add(this.labelControl20);
+            this.layoutControl1.Controls.Add(this.txtBarkod);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
@@ -3666,26 +3673,6 @@
             this.btnStokBul.UseVisualStyleBackColor = true;
             this.btnStokBul.Click += new System.EventHandler(this.btnStokBul_Click);
             // 
-            // txtBarkod
-            // 
-            this.txtBarkod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBarkod.EditValue = "";
-            this.txtBarkod.Location = new System.Drawing.Point(226, 4);
-            this.txtBarkod.Name = "txtBarkod";
-            this.txtBarkod.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtBarkod.Properties.Appearance.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBarkod.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtBarkod.Properties.Appearance.Options.UseBackColor = true;
-            this.txtBarkod.Properties.Appearance.Options.UseFont = true;
-            this.txtBarkod.Properties.Appearance.Options.UseForeColor = true;
-            this.txtBarkod.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.txtBarkod.Properties.NullValuePrompt = "Arama metni giriniz...";
-            this.txtBarkod.Size = new System.Drawing.Size(329, 36);
-            this.txtBarkod.StyleController = this.layoutControl1;
-            this.txtBarkod.TabIndex = 0;
-            this.txtBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyDown);
-            // 
             // labelControl20
             // 
             this.labelControl20.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3697,6 +3684,90 @@
             this.labelControl20.StyleController = this.layoutControl1;
             this.labelControl20.TabIndex = 2;
             this.labelControl20.Text = "X";
+            // 
+            // txtBarkod
+            // 
+            this.txtBarkod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBarkod.EditValue = "";
+            this.txtBarkod.Location = new System.Drawing.Point(226, 4);
+            this.txtBarkod.Name = "txtBarkod";
+            this.txtBarkod.Properties.AcceptEditorTextAsNewValue = DevExpress.Utils.DefaultBoolean.True;
+            this.txtBarkod.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtBarkod.Properties.Appearance.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBarkod.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtBarkod.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBarkod.Properties.Appearance.Options.UseFont = true;
+            this.txtBarkod.Properties.Appearance.Options.UseForeColor = true;
+            this.txtBarkod.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
+            this.txtBarkod.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.txtBarkod.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtBarkod.Properties.DisplayMember = "StokAdi";
+            this.txtBarkod.Properties.EditValueChangedDelay = 250;
+            this.txtBarkod.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
+            this.txtBarkod.Properties.NullText = "";
+            this.txtBarkod.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.txtBarkod.Properties.PopupView = this.GridUpEditStokList;
+            this.txtBarkod.Properties.SearchMode = DevExpress.XtraEditors.Repository.GridLookUpSearchMode.AutoSearch;
+            this.txtBarkod.Properties.ValueMember = "Barkodu";
+            this.txtBarkod.Properties.ViewType = DevExpress.XtraEditors.Repository.GridLookUpViewType.GridView;
+            this.txtBarkod.Size = new System.Drawing.Size(329, 36);
+            this.txtBarkod.StyleController = this.layoutControl1;
+            this.txtBarkod.TabIndex = 0;
+            this.txtBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyDown);
+            // 
+            // GridUpEditStokList
+            // 
+            this.GridUpEditStokList.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5});
+            this.GridUpEditStokList.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.GridUpEditStokList.Name = "GridUpEditStokList";
+            this.GridUpEditStokList.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.GridUpEditStokList.OptionsView.ColumnAutoWidth = false;
+            this.GridUpEditStokList.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Id";
+            this.gridColumn1.FieldName = "Id";
+            this.gridColumn1.Name = "gridColumn1";
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Barkodu";
+            this.gridColumn2.FieldName = "Barkodu";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 0;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Stok Adı";
+            this.gridColumn3.FieldName = "StokAdi";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 1;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Kategori";
+            this.gridColumn4.FieldName = "Kategori";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 2;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Birim";
+            this.gridColumn5.FieldName = "Birim";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 3;
             // 
             // Root
             // 
@@ -4170,6 +4241,7 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtIslem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBarkod.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridUpEditStokList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -4200,7 +4272,6 @@
         private DevExpress.XtraBars.Navigation.NavigationPage naviGenelBilgiler;
         private DevExpress.XtraBars.Navigation.NavigationPage navCari;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
-        private DevExpress.XtraEditors.TextEdit txtBarkod;
         private DevExpress.XtraEditors.LabelControl labelControl20;
         private DevExpress.XtraEditors.CalcEdit calcGenelToplam;
         private DevExpress.XtraEditors.SimpleButton btn5;
@@ -4451,6 +4522,13 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem57;
         private System.Windows.Forms.Button btnGecmis;
         private DevExpress.XtraBars.BarButtonItem btnMaliyet;
+        private DevExpress.XtraEditors.GridLookUpEdit txtBarkod;
+        private DevExpress.XtraGrid.Views.Grid.GridView GridUpEditStokList;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
     }
 }
 
