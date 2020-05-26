@@ -347,6 +347,12 @@
     <Compile Include="Fiş\frmGenelSatisRapor.Designer.cs">
       <DependentUpon>frmGenelSatisRapor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fiş\frmGunlukIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiş\frmGunlukIslem.Designer.cs">
+      <DependentUpon>frmGunlukIslem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fiş\frmHareketTipi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1092,6 +1098,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fiş\frmGenelSatisRapor.resx">
       <DependentUpon>frmGenelSatisRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fiş\frmGunlukIslem.resx">
+      <DependentUpon>frmGunlukIslem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fiş\frmHareketTipi.resx">
       <DependentUpon>frmHareketTipi.cs</DependentUpon>

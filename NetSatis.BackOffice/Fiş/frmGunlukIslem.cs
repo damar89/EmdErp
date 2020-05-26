@@ -1,41 +1,57 @@
-﻿using DevExpress.XtraPrinting;
-using DevExpress.XtraReports.UI;
+﻿using DevExpress.XtraReports.UI;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tools;
 using NetSatis.Reports.Fatura_ve_Fiş;
 using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Fiş
 {
-    public partial class frmMasrafListesi : Form
+    public partial class frmGunlukIslem : Form
     {
         NetSatisContext context = new NetSatisContext();
         FisDAL fisDal = new FisDAL();
         KasaHareketDAL kasaHareketDal = new KasaHareketDAL();
         StokHareketDAL stokHareketDal = new StokHareketDAL();
 
-
-        public frmMasrafListesi(DateTime baslangic, DateTime bitis)
+        int user = 0;
+        string DosyaYolu = $@"{Application.StartupPath}\Gorunum\frmGunlukIslem.xml";
+        public frmGunlukIslem(DateTime baslangic, DateTime bitis, int userId = 0)
         {
+            user = userId;
             InitializeComponent();
-            gridContFisler.DataSource = kasaHareketDal.MasrafHareket(context, "Masraf Fişi", baslangic, bitis);
+            gridContFisler.DataSource = fisDal.GunlukListelemeler(context, "Perakende Satış Faturası", "Toptan Satış Faturası", "Perakende Satış İrsaliyesi", "Ödeme Fişi", "Tahsilat Fişi", "Masraf Fişi", baslangic, bitis);
         }
 
-        private void frmMasraf_Load(object sender, EventArgs e)
+        private void frmGunlukIslem_Load(object sender, EventArgs e)
         {
+            if (File.Exists(DosyaYolu)) gridContFisler.MainView.RestoreLayoutFromXml(DosyaYolu);
 
+            Listele();
 
-
+            if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi)))
+            {
+                btnMustahsil.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+            }
+            else
+            {
+                btnMustahsil.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            }
         }
 
 
+        private void Listele()
+        {
+            context = new NetSatisContext();
 
+
+        }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-
+            Listele();
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
@@ -45,29 +61,38 @@ namespace NetSatis.BackOffice.Fiş
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            if (gridFisler.RowCount != 0)
+            try
             {
-                if (MessageBox.Show("Seçili Olan Veriyi Silmek İstediğinize Emin Misiniz ?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (gridFisler.RowCount != 0)
                 {
-                    string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
-                    fisDal.Delete(context, c => c.FisKodu == secilen);
-                    kasaHareketDal.Delete(context, c => c.FisKodu == secilen);
-                    stokHareketDal.Delete(context, c => c.FisKodu == secilen);
-                    fisDal.Save(context);
-
+                    if (MessageBox.Show("Seçili Olan Veriyi Silmek İstediğinize Emin Misiniz ?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
+                        fisDal.Delete(context, c => c.FisKodu == secilen);
+                        kasaHareketDal.Delete(context, c => c.FisKodu == secilen);
+                        stokHareketDal.Delete(context, c => c.FisKodu == secilen);
+                        fisDal.Save(context);
+                        Listele();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Seçili fiş bulunamadı.");
                 }
             }
-            else
+            catch (Exception)
             {
+
                 MessageBox.Show("Seçili fiş bulunamadı.");
             }
+
         }
 
 
 
         private void FisIslem_Click(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmFisIslem form = new frmFisIslem(null, e.Item.Caption);
+            frmFisIslem form = new frmFisIslem(null, e.Item.Caption, false, null, user);
             form.Show();
         }
 
@@ -79,7 +104,7 @@ namespace NetSatis.BackOffice.Fiş
                 {
                     string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
                     string fisturu = gridFisler.GetFocusedRowCellValue(colFisTuru).ToString();
-                    frmFisIslem form = new frmFisIslem(secilen, fisturu);
+                    frmFisIslem form = new frmFisIslem(secilen, fisturu, false, null, user);
                     form.Show();
                 }
                 else
@@ -89,6 +114,7 @@ namespace NetSatis.BackOffice.Fiş
             }
             catch (Exception)
             {
+
                 MessageBox.Show("Seçili fiş bulunamadı.");
             }
 
@@ -98,7 +124,7 @@ namespace NetSatis.BackOffice.Fiş
         {
             string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
             string fisturu = gridFisler.GetFocusedRowCellValue(colFisTuru).ToString();
-            frmFisIslem form = new frmFisIslem(secilen, fisturu);
+            frmFisIslem form = new frmFisIslem(secilen, fisturu, false, null, user);
             form.Show();
         }
 
@@ -123,7 +149,8 @@ namespace NetSatis.BackOffice.Fiş
             {
                 string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
                 string fisturu = gridFisler.GetFocusedRowCellValue(colFisTuru).ToString();
-                frmFisIslem form = new frmFisIslem(secilen, fisturu);
+
+                frmFisIslem form = new frmFisIslem(secilen, fisturu, false, null, user);
                 form.Show();
             }
             else
@@ -143,7 +170,7 @@ namespace NetSatis.BackOffice.Fiş
                     kasaHareketDal.Delete(context, c => c.FisKodu == secilen);
                     stokHareketDal.Delete(context, c => c.FisKodu == secilen);
                     fisDal.Save(context);
-
+                    Listele();
                 }
             }
             else
@@ -154,12 +181,12 @@ namespace NetSatis.BackOffice.Fiş
 
         private void btnFaturaGuncelle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            Listele();
         }
 
         private void btnMustahsil_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-           /* string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
+            /*string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
             rptKooperatif f = new rptKooperatif();
             f.LoadLayout(SettingsTool.AyarOku(SettingsTool.Ayarlar.MustahsilDizayn_DosyaYolu5));
             NetSatisContext context = new NetSatisContext();
@@ -172,20 +199,7 @@ namespace NetSatis.BackOffice.Fiş
 
         }
 
-        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            PrintableComponentLink link = new PrintableComponentLink(new PrintingSystem());
-            link.Component = gridContFisler;
-            link.Landscape = true;
-            link.Landscape = true;
-            link.Margins.Left = 3;
-            link.Margins.Right = 3;
-            link.Margins.Top = 6;
-            link.Margins.Bottom = 3;
-            link.ShowPreview();
-        }
-
-        private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnPdf_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             SaveFileDialog save = new SaveFileDialog();
             if (save.ShowDialog() == DialogResult.OK)
@@ -195,24 +209,37 @@ namespace NetSatis.BackOffice.Fiş
             }
         }
 
-        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             SaveFileDialog save = new SaveFileDialog();
             if (save.ShowDialog() == DialogResult.OK)
             {
 
-                gridFisler.ExportToXlsx(save.FileName + ".xlsx");
+                gridFisler.ExportToPdf(save.FileName + ".xlsx");
             }
         }
 
-        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnWord_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             SaveFileDialog save = new SaveFileDialog();
             if (save.ShowDialog() == DialogResult.OK)
             {
 
-                gridFisler.ExportToXlsx(save.FileName + ".docs");
+                gridFisler.ExportToPdf(save.FileName + ".docx");
             }
+        }
+
+        private void btnBilgiFisi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
+            FaturaHazirla f = new FaturaHazirla();
+            f.BilgiFisi(secilen);
+        }
+
+        private void btnGorunumKaydet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (Directory.Exists($@"{Application.StartupPath}\Gorunum"))
+                gridContFisler.MainView.SaveLayoutToXml(DosyaYolu);
         }
     }
 }

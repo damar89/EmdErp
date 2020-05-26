@@ -1,6 +1,6 @@
 ﻿namespace NetSatis.BackOffice.Fiş
 {
-    partial class frmMasrafListesi
+    partial class frmGunlukIslem
     {
         /// <summary>
         /// Required designer variable.
@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasrafListesi));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGunlukIslem));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.imgMenu = new System.Windows.Forms.ImageList(this.components);
-            this.btnSil = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDuzenle = new DevExpress.XtraEditors.SimpleButton();
+            this.dropDownButton1 = new DevExpress.XtraEditors.DropDownButton();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.btnFaturaYazdir = new DevExpress.XtraBars.BarButtonItem();
             this.btnFaturaduzenle = new DevExpress.XtraBars.BarButtonItem();
             this.btnFaturaGuncelle = new DevExpress.XtraBars.BarButtonItem();
             this.btnFtrSil = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem7 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnExcel = new DevExpress.XtraBars.BarButtonItem();
+            this.btnWord = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPdf = new DevExpress.XtraBars.BarButtonItem();
+            this.btnMustahsil = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBilgiFisi = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGorunumKaydet = new DevExpress.XtraBars.BarButtonItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -72,8 +72,13 @@
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem6 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
-            this.btnFaturaYazdir = new DevExpress.XtraBars.BarButtonItem();
-            this.btnMustahsil = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
+            this.imgMenu = new System.Windows.Forms.ImageList(this.components);
+            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
+            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSil = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDuzenle = new DevExpress.XtraEditors.SimpleButton();
             this.lblBaslik = new DevExpress.XtraEditors.LabelControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridContFisler = new DevExpress.XtraGrid.GridControl();
@@ -93,13 +98,14 @@
             this.colIskontoOrani2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIskontoOrani3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIskontoTutari1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colIskontoTutari2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDipIsk = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIskontoTutari3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colToplamTutar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAciklama = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKDVDahil = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.colOdemeTuru = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -109,88 +115,62 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridContFisler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridFisler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpsChkKdvDahil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.dropDownButton1);
             this.groupControl1.Controls.Add(this.btnKapat);
+            this.groupControl1.Controls.Add(this.btnGuncelle);
             this.groupControl1.Controls.Add(this.btnSil);
             this.groupControl1.Controls.Add(this.btnDuzenle);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 504);
+            this.groupControl1.Location = new System.Drawing.Point(0, 484);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1167, 70);
+            this.groupControl1.Size = new System.Drawing.Size(1364, 70);
             this.groupControl1.TabIndex = 7;
             // 
-            // btnKapat
+            // dropDownButton1
             // 
-            this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKapat.ImageOptions.ImageIndex = 0;
-            this.btnKapat.ImageOptions.ImageList = this.imgMenu;
-            this.btnKapat.Location = new System.Drawing.Point(1047, 28);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(113, 38);
-            this.btnKapat.TabIndex = 5;
-            this.btnKapat.Text = "Kapat";
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
-            // 
-            // imgMenu
-            // 
-            this.imgMenu.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgMenu.ImageStream")));
-            this.imgMenu.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgMenu.Images.SetKeyName(0, "içıkış.png");
-            this.imgMenu.Images.SetKeyName(1, "idüzenle.png");
-            this.imgMenu.Images.SetKeyName(2, "iekle.png");
-            this.imgMenu.Images.SetKeyName(3, "igüncelle.png");
-            this.imgMenu.Images.SetKeyName(4, "ikaydet.png");
-            this.imgMenu.Images.SetKeyName(5, "isil.png");
-            // 
-            // btnSil
-            // 
-            this.btnSil.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSil.ImageOptions.ImageIndex = 5;
-            this.btnSil.ImageOptions.ImageList = this.imgMenu;
-            this.btnSil.Location = new System.Drawing.Point(928, 28);
-            this.btnSil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(113, 38);
-            this.btnSil.TabIndex = 4;
-            this.btnSil.Text = "Sil";
-            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
-            // 
-            // btnDuzenle
-            // 
-            this.btnDuzenle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDuzenle.ImageOptions.ImageIndex = 1;
-            this.btnDuzenle.ImageOptions.ImageList = this.imgMenu;
-            this.btnDuzenle.Location = new System.Drawing.Point(807, 28);
-            this.btnDuzenle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnDuzenle.Name = "btnDuzenle";
-            this.btnDuzenle.Size = new System.Drawing.Size(113, 38);
-            this.btnDuzenle.TabIndex = 3;
-            this.btnDuzenle.Text = "Düzenle";
-            this.btnDuzenle.Visible = false;
-            this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
+            this.dropDownButton1.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
+            this.dropDownButton1.DropDownControl = this.popupMenu1;
+            this.dropDownButton1.ImageOptions.ImageIndex = 2;
+            this.dropDownButton1.ImageOptions.ImageList = this.imgMenu;
+            this.dropDownButton1.Location = new System.Drawing.Point(763, 28);
+            this.dropDownButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dropDownButton1.Name = "dropDownButton1";
+            this.dropDownButton1.Size = new System.Drawing.Size(113, 38);
+            this.dropDownButton1.TabIndex = 6;
+            this.dropDownButton1.Text = "Ekle";
+            this.dropDownButton1.Visible = false;
             // 
             // popupMenu1
             // 
             this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnFaturaYazdir),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnFaturaduzenle),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnFaturaGuncelle),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnFtrSil),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem7),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem7)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem7),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnMustahsil),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnBilgiFisi),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnGorunumKaydet)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
+            // btnFaturaYazdir
+            // 
+            this.btnFaturaYazdir.Caption = "Fatura Yazdır";
+            this.btnFaturaYazdir.Id = 25;
+            this.btnFaturaYazdir.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFaturaYazdir.ImageOptions.SvgImage")));
+            this.btnFaturaYazdir.Name = "btnFaturaYazdir";
+            this.btnFaturaYazdir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFaturaYazdir_ItemClick);
+            // 
             // btnFaturaduzenle
             // 
-            this.btnFaturaduzenle.Caption = "Düzenle";
+            this.btnFaturaduzenle.Caption = "İçerik Gör";
             this.btnFaturaduzenle.Id = 26;
             this.btnFaturaduzenle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFaturaduzenle.ImageOptions.SvgImage")));
             this.btnFaturaduzenle.Name = "btnFaturaduzenle";
@@ -210,47 +190,67 @@
             this.btnFtrSil.Id = 28;
             this.btnFtrSil.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFtrSil.ImageOptions.SvgImage")));
             this.btnFtrSil.Name = "btnFtrSil";
+            this.btnFtrSil.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.btnFtrSil.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFtrSil_ItemClick);
-            // 
-            // barButtonItem7
-            // 
-            this.barButtonItem7.Caption = "Yazdır";
-            this.barButtonItem7.Id = 30;
-            this.barButtonItem7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.Image")));
-            this.barButtonItem7.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
-            this.barButtonItem7.Name = "barButtonItem7";
-            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
             // 
             // barSubItem7
             // 
-            this.barSubItem7.Caption = "Aktar";
+            this.barSubItem7.Caption = "Dışa Aktar";
             this.barSubItem7.Id = 31;
+            this.barSubItem7.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.export_16x16;
             this.barSubItem7.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem8),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem9),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem10)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnExcel),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnWord),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnPdf)});
             this.barSubItem7.Name = "barSubItem7";
             // 
-            // barButtonItem8
+            // btnExcel
             // 
-            this.barButtonItem8.Caption = "Excel";
-            this.barButtonItem8.Id = 32;
-            this.barButtonItem8.Name = "barButtonItem8";
-            this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
+            this.btnExcel.Caption = "Excel";
+            this.btnExcel.Id = 32;
+            this.btnExcel.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.exporttoxlsx_16x16;
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExcel_ItemClick);
             // 
-            // barButtonItem9
+            // btnWord
             // 
-            this.barButtonItem9.Caption = "Pdf";
-            this.barButtonItem9.Id = 33;
-            this.barButtonItem9.Name = "barButtonItem9";
-            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
+            this.btnWord.Caption = "Word";
+            this.btnWord.Id = 33;
+            this.btnWord.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.exporttodoc_16x16;
+            this.btnWord.Name = "btnWord";
+            this.btnWord.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnWord_ItemClick);
             // 
-            // barButtonItem10
+            // btnPdf
             // 
-            this.barButtonItem10.Caption = "Word";
-            this.barButtonItem10.Id = 34;
-            this.barButtonItem10.Name = "barButtonItem10";
-            this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
+            this.btnPdf.Caption = "Pdf";
+            this.btnPdf.Id = 34;
+            this.btnPdf.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.exporttopdf_16x161;
+            this.btnPdf.Name = "btnPdf";
+            this.btnPdf.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPdf_ItemClick);
+            // 
+            // btnMustahsil
+            // 
+            this.btnMustahsil.Caption = "Müstahsil Makbuzu Yazdır";
+            this.btnMustahsil.Id = 29;
+            this.btnMustahsil.Name = "btnMustahsil";
+            this.btnMustahsil.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMustahsil_ItemClick);
+            // 
+            // btnBilgiFisi
+            // 
+            this.btnBilgiFisi.Caption = "Bilgi Fişi Yazdır";
+            this.btnBilgiFisi.Id = 36;
+            this.btnBilgiFisi.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
+            this.btnBilgiFisi.Name = "btnBilgiFisi";
+            this.btnBilgiFisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBilgiFisi_ItemClick);
+            // 
+            // btnGorunumKaydet
+            // 
+            this.btnGorunumKaydet.Caption = "Görünüm Kaydet";
+            this.btnGorunumKaydet.Id = 37;
+            this.btnGorunumKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGorunumKaydet.ImageOptions.Image")));
+            this.btnGorunumKaydet.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGorunumKaydet.ImageOptions.LargeImage")));
+            this.btnGorunumKaydet.Name = "btnGorunumKaydet";
+            this.btnGorunumKaydet.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGorunumKaydet_ItemClick);
             // 
             // barManager1
             // 
@@ -290,10 +290,13 @@
             this.btnMustahsil,
             this.barButtonItem7,
             this.barSubItem7,
-            this.barButtonItem8,
-            this.barButtonItem9,
-            this.barButtonItem10});
-            this.barManager1.MaxItemId = 35;
+            this.btnExcel,
+            this.btnWord,
+            this.btnPdf,
+            this.barButtonItem11,
+            this.btnBilgiFisi,
+            this.btnGorunumKaydet});
+            this.barManager1.MaxItemId = 38;
             // 
             // barDockControlTop
             // 
@@ -302,16 +305,16 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1167, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1364, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 574);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 554);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1167, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1364, 0);
             // 
             // barDockControlLeft
             // 
@@ -320,16 +323,16 @@
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 574);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 554);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1167, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(1364, 0);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 574);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 554);
             // 
             // barAlisFaturasi
             // 
@@ -519,18 +522,80 @@
             this.barButtonItem6.Id = 24;
             this.barButtonItem6.Name = "barButtonItem6";
             // 
-            // btnFaturaYazdir
+            // barButtonItem7
             // 
-            this.btnFaturaYazdir.Caption = "Fatura Yazdır";
-            this.btnFaturaYazdir.Id = 25;
-            this.btnFaturaYazdir.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFaturaYazdir.ImageOptions.SvgImage")));
-            this.btnFaturaYazdir.Name = "btnFaturaYazdir";
+            this.barButtonItem7.Caption = "barButtonItem7";
+            this.barButtonItem7.Id = 30;
+            this.barButtonItem7.Name = "barButtonItem7";
             // 
-            // btnMustahsil
+            // barButtonItem11
             // 
-            this.btnMustahsil.Caption = "Müstahsil Makbuzu Yazdır";
-            this.btnMustahsil.Id = 29;
-            this.btnMustahsil.Name = "btnMustahsil";
+            this.barButtonItem11.Caption = "Bilgi Fişi Yazdır";
+            this.barButtonItem11.Id = 35;
+            this.barButtonItem11.Name = "barButtonItem11";
+            // 
+            // imgMenu
+            // 
+            this.imgMenu.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgMenu.ImageStream")));
+            this.imgMenu.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgMenu.Images.SetKeyName(0, "içıkış.png");
+            this.imgMenu.Images.SetKeyName(1, "idüzenle.png");
+            this.imgMenu.Images.SetKeyName(2, "iekle.png");
+            this.imgMenu.Images.SetKeyName(3, "igüncelle.png");
+            this.imgMenu.Images.SetKeyName(4, "ikaydet.png");
+            this.imgMenu.Images.SetKeyName(5, "isil.png");
+            // 
+            // btnKapat
+            // 
+            this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKapat.ImageOptions.ImageIndex = 0;
+            this.btnKapat.ImageOptions.ImageList = this.imgMenu;
+            this.btnKapat.Location = new System.Drawing.Point(1244, 28);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(113, 38);
+            this.btnKapat.TabIndex = 5;
+            this.btnKapat.Text = "Kapat";
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.ImageOptions.ImageIndex = 3;
+            this.btnGuncelle.ImageOptions.ImageList = this.imgMenu;
+            this.btnGuncelle.Location = new System.Drawing.Point(1127, 28);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(113, 38);
+            this.btnGuncelle.TabIndex = 5;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.Visible = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
+            // btnSil
+            // 
+            this.btnSil.ImageOptions.ImageIndex = 5;
+            this.btnSil.ImageOptions.ImageList = this.imgMenu;
+            this.btnSil.Location = new System.Drawing.Point(1005, 28);
+            this.btnSil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(113, 38);
+            this.btnSil.TabIndex = 4;
+            this.btnSil.Text = "Sil";
+            this.btnSil.Visible = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
+            // btnDuzenle
+            // 
+            this.btnDuzenle.ImageOptions.ImageIndex = 1;
+            this.btnDuzenle.ImageOptions.ImageList = this.imgMenu;
+            this.btnDuzenle.Location = new System.Drawing.Point(884, 28);
+            this.btnDuzenle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDuzenle.Name = "btnDuzenle";
+            this.btnDuzenle.Size = new System.Drawing.Size(113, 38);
+            this.btnDuzenle.TabIndex = 3;
+            this.btnDuzenle.Text = "Düzenle";
+            this.btnDuzenle.Visible = false;
+            this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
             // 
             // lblBaslik
             // 
@@ -548,9 +613,9 @@
             this.lblBaslik.Location = new System.Drawing.Point(0, 0);
             this.lblBaslik.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(1167, 39);
+            this.lblBaslik.Size = new System.Drawing.Size(1364, 39);
             this.lblBaslik.TabIndex = 6;
-            this.lblBaslik.Text = "Masraf Raporu";
+            this.lblBaslik.Text = "Günlük İşlemler";
             // 
             // splitContainerControl1
             // 
@@ -562,7 +627,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.gridContFisler);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1167, 504);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1364, 484);
             this.splitContainerControl1.SplitterPosition = 42;
             this.splitContainerControl1.TabIndex = 8;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -577,13 +642,15 @@
             this.gridContFisler.Name = "gridContFisler";
             this.gridContFisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpsChkKdvDahil});
-            this.gridContFisler.Size = new System.Drawing.Size(1167, 450);
+            this.gridContFisler.Size = new System.Drawing.Size(1364, 430);
             this.gridContFisler.TabIndex = 0;
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});
             // 
             // gridFisler
             // 
+            this.gridFisler.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gridFisler.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridFisler.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.colFisKodu,
@@ -600,23 +667,19 @@
             this.colIskontoOrani2,
             this.colIskontoOrani3,
             this.colIskontoTutari1,
-            this.colIskontoTutari2,
+            this.colDipIsk,
             this.colIskontoTutari3,
             this.colToplamTutar,
             this.colAciklama,
-            this.colKDVDahil});
-            this.gridFisler.CustomizationFormBounds = new System.Drawing.Rectangle(664, 320, 355, 295);
+            this.colKDVDahil,
+            this.colOdemeTuru});
             this.gridFisler.DetailHeight = 431;
             this.gridFisler.GridControl = this.gridContFisler;
             this.gridFisler.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Tutar", this.colToplamTutar, "Tutar = {0:C2}")});
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ToplamTutar", this.colToplamTutar, "(Tutar={0:C2})")});
             this.gridFisler.Name = "gridFisler";
-            this.gridFisler.OptionsSelection.MultiSelect = true;
-            this.gridFisler.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.VisibleAlways;
             this.gridFisler.OptionsView.ShowAutoFilterRow = true;
             this.gridFisler.OptionsView.ShowFooter = true;
-            this.gridFisler.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colTarih, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.gridFisler.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridFisler_PopupMenuShowing);
             this.gridFisler.DoubleClick += new System.EventHandler(this.gridFisler_DoubleClick);
             // 
@@ -631,12 +694,6 @@
             // 
             // colFisKodu
             // 
-            this.colFisKodu.AppearanceHeader.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.colFisKodu.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.colFisKodu.AppearanceHeader.Options.UseBackColor = true;
-            this.colFisKodu.AppearanceHeader.Options.UseFont = true;
-            this.colFisKodu.AppearanceHeader.Options.UseTextOptions = true;
-            this.colFisKodu.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colFisKodu.Caption = "Fiş Kodu";
             this.colFisKodu.FieldName = "FisKodu";
             this.colFisKodu.MinWidth = 27;
@@ -645,16 +702,10 @@
             this.colFisKodu.OptionsColumn.ShowInCustomizationForm = false;
             this.colFisKodu.Visible = true;
             this.colFisKodu.VisibleIndex = 0;
-            this.colFisKodu.Width = 140;
+            this.colFisKodu.Width = 96;
             // 
             // colFisTuru
             // 
-            this.colFisTuru.AppearanceHeader.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.colFisTuru.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.colFisTuru.AppearanceHeader.Options.UseBackColor = true;
-            this.colFisTuru.AppearanceHeader.Options.UseFont = true;
-            this.colFisTuru.AppearanceHeader.Options.UseTextOptions = true;
-            this.colFisTuru.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colFisTuru.Caption = "Fiş Türü";
             this.colFisTuru.FieldName = "FisTuru";
             this.colFisTuru.MinWidth = 27;
@@ -663,7 +714,7 @@
             this.colFisTuru.OptionsColumn.ShowInCustomizationForm = false;
             this.colFisTuru.Visible = true;
             this.colFisTuru.VisibleIndex = 1;
-            this.colFisTuru.Width = 185;
+            this.colFisTuru.Width = 111;
             // 
             // colCariKodu
             // 
@@ -683,6 +734,8 @@
             this.colCariAdi.Name = "colCariAdi";
             this.colCariAdi.OptionsColumn.AllowEdit = false;
             this.colCariAdi.OptionsColumn.ShowInCustomizationForm = false;
+            this.colCariAdi.Visible = true;
+            this.colCariAdi.VisibleIndex = 3;
             this.colCariAdi.Width = 156;
             // 
             // colBelgeNo
@@ -693,16 +746,12 @@
             this.colBelgeNo.Name = "colBelgeNo";
             this.colBelgeNo.OptionsColumn.AllowEdit = false;
             this.colBelgeNo.OptionsColumn.ShowInCustomizationForm = false;
-            this.colBelgeNo.Width = 103;
+            this.colBelgeNo.Width = 105;
             // 
             // colTarih
             // 
-            this.colTarih.AppearanceHeader.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.colTarih.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.colTarih.AppearanceHeader.Options.UseBackColor = true;
-            this.colTarih.AppearanceHeader.Options.UseFont = true;
-            this.colTarih.AppearanceHeader.Options.UseTextOptions = true;
-            this.colTarih.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colTarih.AppearanceCell.Options.UseTextOptions = true;
+            this.colTarih.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTarih.Caption = "Tarih";
             this.colTarih.DisplayFormat.FormatString = "d";
             this.colTarih.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
@@ -712,8 +761,8 @@
             this.colTarih.OptionsColumn.AllowEdit = false;
             this.colTarih.OptionsColumn.ShowInCustomizationForm = false;
             this.colTarih.Visible = true;
-            this.colTarih.VisibleIndex = 2;
-            this.colTarih.Width = 147;
+            this.colTarih.VisibleIndex = 4;
+            this.colTarih.Width = 105;
             // 
             // colVadeTarihi
             // 
@@ -728,12 +777,8 @@
             // 
             // colSaat
             // 
-            this.colSaat.AppearanceHeader.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.colSaat.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.colSaat.AppearanceHeader.Options.UseBackColor = true;
-            this.colSaat.AppearanceHeader.Options.UseFont = true;
-            this.colSaat.AppearanceHeader.Options.UseTextOptions = true;
-            this.colSaat.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSaat.AppearanceCell.Options.UseTextOptions = true;
+            this.colSaat.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colSaat.Caption = "Saat";
             this.colSaat.DisplayFormat.FormatString = "t";
             this.colSaat.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
@@ -742,8 +787,8 @@
             this.colSaat.Name = "colSaat";
             this.colSaat.OptionsColumn.AllowEdit = false;
             this.colSaat.Visible = true;
-            this.colSaat.VisibleIndex = 3;
-            this.colSaat.Width = 140;
+            this.colSaat.VisibleIndex = 5;
+            this.colSaat.Width = 93;
             // 
             // colPlasiyerKodu
             // 
@@ -795,7 +840,9 @@
             // 
             // colIskontoTutari1
             // 
-            this.colIskontoTutari1.Caption = "İskonto Tutar";
+            this.colIskontoTutari1.AppearanceCell.Options.UseTextOptions = true;
+            this.colIskontoTutari1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colIskontoTutari1.Caption = "İskonto Tutarı";
             this.colIskontoTutari1.DisplayFormat.FormatString = "C2";
             this.colIskontoTutari1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colIskontoTutari1.FieldName = "IskontoTutari1";
@@ -803,16 +850,25 @@
             this.colIskontoTutari1.Name = "colIskontoTutari1";
             this.colIskontoTutari1.OptionsColumn.AllowEdit = false;
             this.colIskontoTutari1.OptionsColumn.ShowInCustomizationForm = false;
+            this.colIskontoTutari1.Visible = true;
+            this.colIskontoTutari1.VisibleIndex = 7;
             this.colIskontoTutari1.Width = 113;
             // 
-            // colIskontoTutari2
+            // colDipIsk
             // 
-            this.colIskontoTutari2.FieldName = "IskontoTutari2";
-            this.colIskontoTutari2.MinWidth = 27;
-            this.colIskontoTutari2.Name = "colIskontoTutari2";
-            this.colIskontoTutari2.OptionsColumn.AllowEdit = false;
-            this.colIskontoTutari2.OptionsColumn.ShowInCustomizationForm = false;
-            this.colIskontoTutari2.Width = 100;
+            this.colDipIsk.AppearanceCell.Options.UseTextOptions = true;
+            this.colDipIsk.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDipIsk.Caption = "Dip İskonto";
+            this.colDipIsk.DisplayFormat.FormatString = "c2";
+            this.colDipIsk.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colDipIsk.FieldName = "DipIskNetTutari";
+            this.colDipIsk.MinWidth = 27;
+            this.colDipIsk.Name = "colDipIsk";
+            this.colDipIsk.OptionsColumn.AllowEdit = false;
+            this.colDipIsk.OptionsColumn.ShowInCustomizationForm = false;
+            this.colDipIsk.Visible = true;
+            this.colDipIsk.VisibleIndex = 8;
+            this.colDipIsk.Width = 100;
             // 
             // colIskontoTutari3
             // 
@@ -827,43 +883,31 @@
             // 
             this.colToplamTutar.AppearanceCell.Options.UseTextOptions = true;
             this.colToplamTutar.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colToplamTutar.AppearanceHeader.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.colToplamTutar.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.colToplamTutar.AppearanceHeader.Options.UseBackColor = true;
-            this.colToplamTutar.AppearanceHeader.Options.UseFont = true;
-            this.colToplamTutar.AppearanceHeader.Options.UseTextOptions = true;
-            this.colToplamTutar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colToplamTutar.Caption = "Toplam Tutar";
             this.colToplamTutar.DisplayFormat.FormatString = "C2";
             this.colToplamTutar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colToplamTutar.FieldName = "Tutar";
+            this.colToplamTutar.FieldName = "ToplamTutar";
             this.colToplamTutar.MinWidth = 27;
             this.colToplamTutar.Name = "colToplamTutar";
             this.colToplamTutar.OptionsColumn.AllowEdit = false;
             this.colToplamTutar.OptionsColumn.ShowInCustomizationForm = false;
             this.colToplamTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Tutar", "Masraf Toplamı : = {0:C2}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ToplamTutar", "Toplam Tutar : {0:C2}")});
             this.colToplamTutar.Visible = true;
-            this.colToplamTutar.VisibleIndex = 5;
-            this.colToplamTutar.Width = 235;
+            this.colToplamTutar.VisibleIndex = 9;
+            this.colToplamTutar.Width = 144;
             // 
             // colAciklama
             // 
-            this.colAciklama.AppearanceHeader.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.colAciklama.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.colAciklama.AppearanceHeader.Options.UseBackColor = true;
-            this.colAciklama.AppearanceHeader.Options.UseFont = true;
-            this.colAciklama.AppearanceHeader.Options.UseTextOptions = true;
-            this.colAciklama.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colAciklama.Caption = "Masraf Adı";
+            this.colAciklama.Caption = "Açıklama";
             this.colAciklama.FieldName = "Aciklama";
             this.colAciklama.MinWidth = 27;
             this.colAciklama.Name = "colAciklama";
             this.colAciklama.OptionsColumn.AllowEdit = false;
             this.colAciklama.OptionsColumn.ShowInCustomizationForm = false;
             this.colAciklama.Visible = true;
-            this.colAciklama.VisibleIndex = 4;
-            this.colAciklama.Width = 193;
+            this.colAciklama.VisibleIndex = 6;
+            this.colAciklama.Width = 128;
             // 
             // colKDVDahil
             // 
@@ -880,15 +924,28 @@
             this.rpsChkKdvDahil.AutoHeight = false;
             this.rpsChkKdvDahil.Name = "rpsChkKdvDahil";
             // 
-            // printDialog1
+            // colOdemeTuru
             // 
-            this.printDialog1.UseEXDialog = true;
+            this.colOdemeTuru.AppearanceCell.Options.UseTextOptions = true;
+            this.colOdemeTuru.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colOdemeTuru.Caption = "Ödeme Türü";
+            this.colOdemeTuru.FieldName = "OdemeTuru";
+            this.colOdemeTuru.MinWidth = 27;
+            this.colOdemeTuru.Name = "colOdemeTuru";
+            this.colOdemeTuru.Visible = true;
+            this.colOdemeTuru.VisibleIndex = 2;
+            this.colOdemeTuru.Width = 100;
             // 
-            // frmMasrafListesi
+            // popupMenu2
+            // 
+            this.popupMenu2.Manager = this.barManager1;
+            this.popupMenu2.Name = "popupMenu2";
+            // 
+            // frmGunlukIslem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 574);
+            this.ClientSize = new System.Drawing.Size(1364, 554);
             this.Controls.Add(this.lblBaslik);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.groupControl1);
@@ -897,10 +954,10 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "frmMasrafListesi";
+            this.Name = "frmGunlukIslem";
             this.ShowIcon = false;
-            this.Text = "Masraf Raporu";
-            this.Load += new System.EventHandler(this.frmMasraf_Load);
+            this.Text = "Günlük İşlemler";
+            this.Load += new System.EventHandler(this.frmGunlukIslem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
@@ -910,6 +967,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridContFisler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridFisler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpsChkKdvDahil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -920,6 +978,7 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
         private System.Windows.Forms.ImageList imgMenu;
+        private DevExpress.XtraEditors.SimpleButton btnGuncelle;
         private DevExpress.XtraEditors.SimpleButton btnSil;
         private DevExpress.XtraEditors.SimpleButton btnDuzenle;
         private DevExpress.XtraEditors.LabelControl lblBaslik;
@@ -940,10 +999,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn colIskontoOrani2;
         private DevExpress.XtraGrid.Columns.GridColumn colIskontoOrani3;
         private DevExpress.XtraGrid.Columns.GridColumn colIskontoTutari1;
-        private DevExpress.XtraGrid.Columns.GridColumn colIskontoTutari2;
+        private DevExpress.XtraGrid.Columns.GridColumn colDipIsk;
         private DevExpress.XtraGrid.Columns.GridColumn colIskontoTutari3;
         private DevExpress.XtraGrid.Columns.GridColumn colToplamTutar;
         private DevExpress.XtraGrid.Columns.GridColumn colAciklama;
+        private DevExpress.XtraEditors.DropDownButton dropDownButton1;
         private DevExpress.XtraBars.PopupMenu popupMenu1;
         private DevExpress.XtraBars.BarButtonItem barAlisFaturasi;
         private DevExpress.XtraBars.BarButtonItem barPerakendeSatisFaturasi;
@@ -981,11 +1041,15 @@
         private DevExpress.XtraBars.BarButtonItem btnFaturaGuncelle;
         private DevExpress.XtraBars.BarButtonItem btnFtrSil;
         private DevExpress.XtraBars.BarButtonItem btnMustahsil;
-        private System.Windows.Forms.PrintDialog printDialog1;
+        private DevExpress.XtraBars.PopupMenu popupMenu2;
+        private DevExpress.XtraBars.BarButtonItem btnBilgiFisi;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarSubItem barSubItem7;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
+        private DevExpress.XtraBars.BarButtonItem btnExcel;
+        private DevExpress.XtraBars.BarButtonItem btnWord;
+        private DevExpress.XtraBars.BarButtonItem btnPdf;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem11;
+        private DevExpress.XtraGrid.Columns.GridColumn colOdemeTuru;
+        private DevExpress.XtraBars.BarButtonItem btnGorunumKaydet;
     }
 }
