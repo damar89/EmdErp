@@ -1109,6 +1109,7 @@ namespace NetSatis.BackOffice.Stok
             this.txtStokAdi.TabIndex = 2;
             this.txtStokAdi.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtStokAdi_ButtonClick);
             this.txtStokAdi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtStokAdi_KeyDown);
+            this.txtStokAdi.Leave += new System.EventHandler(this.txtStokAdi_Leave);
             // 
             // calcDevirGirisi
             // 
