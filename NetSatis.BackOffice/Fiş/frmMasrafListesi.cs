@@ -122,7 +122,8 @@ namespace NetSatis.BackOffice.Fiş
             if (gridFisler.RowCount != 0)
             {
                 string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
-                frmFisIslem form = new frmFisIslem(secilen, null);
+                string fisturu = gridFisler.GetFocusedRowCellValue(colFisTuru).ToString();
+                frmFisIslem form = new frmFisIslem(secilen, fisturu);
                 form.Show();
             }
             else

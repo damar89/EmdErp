@@ -232,7 +232,7 @@ namespace NetSatis.BackOffice.Stok
             if (r == null)
                 return;
 
-            new FrmRaporTasarlaXtra(r, DizaynTipi.BarkodEtiket, false, true, Convert.ToInt32(e.Item.Tag));
+            new FrmRaporTasarlaXtra(r, DizaynTipi.BarkodEtiket,true,true, Convert.ToInt32(e.Item.Tag));
             
         } 
 
