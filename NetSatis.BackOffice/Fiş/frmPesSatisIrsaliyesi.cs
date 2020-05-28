@@ -2,8 +2,9 @@
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tables;
 using NetSatis.Entities.Tools;
+using NetSatis.Reports.Fatura_ve_Fiş;
 using System;
-using System.Data;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -100,7 +101,41 @@ namespace NetSatis.BackOffice.Fiş
         {
 
         }
+        private void FaturaOlustur(Entities.Tables.Fis fis, List<Entities.Tables.StokHareket> hareketler)   //BURADAN AŞAĞISI
+        {
+            string HarTipi = "SF";
+            string cmbTipi = "A";
 
+
+            NetSatis.EDonusum.Models.Donusum.Master m = null;
+            m = new EDonusum.Models.Donusum.Master
+            {
+                Aciklama = fis.Aciklama,
+                AlisVerisNo = fis.Id,
+                DokumanKodu = "",
+                EditDate = DateTime.Now,
+                EditUser = frmAnaMenu.UserId,
+                FisKodu = fis.FisKodu,
+                FisTuru = fis.FisTuru,
+                HareketTipi = 1,
+                HarTip = HarTipi,
+                IslemTarihi = fis.Tarih.Value,
+                Kdv = fis.KdvToplam_.Value,
+                MusteriKodu = fis.CariId.Value,
+                Matrah = (fis.ToplamTutar - fis.KdvToplam_).Value,
+                NetTutar = fis.ToplamTutar.Value,
+                SaveDate = DateTime.Now,
+                SaveUser = frmAnaMenu.UserId,
+                SeriKodu = fis.Seri,
+                SiraKodu = fis.Sira,
+                Tutar = fis.AraToplam_.Value,
+                VadeTarihi = fis.VadeTarihi.Value,
+                DipIskonto = fis.DipIskNetTutari.Value,
+            };
+            DetailsDuzenle(eislem.MasterOlustur(m), HarTipi, fis, hareketler);
+
+
+        }
         private void gridFisler_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
         {
             if (e.HitInfo.InRow)
@@ -110,18 +145,26 @@ namespace NetSatis.BackOffice.Fiş
         }
         void irsaliyedenFaturaOlustur()
         {
+
+            if (gridFisler.RowCount == 0)
+            {
+                MessageBox.Show("Fiş kalemleri bulunamadı!, Lütfen tekrar Sipariş fişi oluşturunuz!", "Hatalı Fiş", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string cariKodu = gridFisler.GetRowCellValue(gridFisler.GetSelectedRows()[0], "CariKodu").ToString();
             for (int i = 0; i < gridFisler.GetSelectedRows().Length; i++)
             {
                 if (cariKodu != gridFisler.GetRowCellValue(gridFisler.GetSelectedRows()[i], "CariKodu").ToString())
                 {
-                    MessageBox.Show("Farklı cari hesaplara ait irsaliyeler birleştirilemez.");
+                    MessageBox.Show("Farklı cari hesaplara ait Siparişler birleştirilemez.");
                     return;
                 }
-                if ( gridFisler.GetRowCellValue(gridFisler.GetSelectedRows()[i], "FaturaFisKodu")  != null  && 
+
+                if (gridFisler.GetRowCellValue(gridFisler.GetSelectedRows()[i], "FaturaFisKodu") != null &&
                     gridFisler.GetRowCellValue(gridFisler.GetSelectedRows()[i], "FaturaFisKodu").ToString() != "")
                 {
-                    MessageBox.Show(gridFisler.GetRowCellValue(gridFisler.GetSelectedRows()[i], "FisKodu").ToString() + " fiş kodlu irsaliye daha önce faturalandırıldığı için tekrar faturalandıramazsınız.");
+                    MessageBox.Show(gridFisler.GetRowCellValue(gridFisler.GetSelectedRows()[i], "FisKodu").ToString() + " fiş kodlu Sipariş daha önce faturalandırıldığı için tekrar faturalandıramazsınız.");
                     return;
                 }
             }
@@ -131,6 +174,7 @@ namespace NetSatis.BackOffice.Fiş
             decimal fisKdvToplam = 0;
             decimal fisAraToplam = 0;
             decimal fisToplamTutar = 0;
+            IQueryable<Entities.Tables.StokHareket> hareketler = null;
             for (int i = 0; i < gridFisler.GetSelectedRows().Length; i++)
             {
                 var irsaliyeId = Convert.ToInt32(gridFisler.GetRowCellValue(gridFisler.GetSelectedRows()[i], "Id"));
@@ -141,6 +185,8 @@ namespace NetSatis.BackOffice.Fiş
                 fis.CepTelefonu = tempFis.CepTelefonu;
                 fis.FaturaUnvani = tempFis.FaturaUnvani;
                 fis.Il = tempFis.Il;
+                fis.Proje = tempFis.Proje;
+                fis.OzelKod = tempFis.OzelKod;
                 fis.Ilce = tempFis.Ilce;
                 fis.KDVDahil = tempFis.KDVDahil;
                 fis.PlasiyerId = tempFis.PlasiyerId;
@@ -160,54 +206,162 @@ namespace NetSatis.BackOffice.Fiş
                 fisAraToplam += Convert.ToDecimal(tempFis.AraToplam_);
                 fisToplamTutar += Convert.ToDecimal(tempFis.ToplamTutar);
 
+
+
+                var hareketVarmi = context.StokHareketleri.Any(x => x.FisKodu == tempFis.FisKodu);
+                if (!hareketVarmi)
+                {
+                    MessageBox.Show("Seçili siparişe ait stok bulunamamıştır, Lütfen sipariş fişini tekrar oluşturunuz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                //BURASI---------------------------------------------------
+
+
                 if (i == 0)
                 {
-                    fis.FisTuru = "Perakende Fatura";
+                    if (tempFis.FisTuru == "Perakende Satış İrsaliyesi")
+                    {
+                        fis.FisTuru = "Pos Fatura";
+                        fis.Tipi = "A";
 
-                    var firstIndexZero = tempFis.FisKodu.IndexOf('0');
-                    var onEk = tempFis.FisKodu.Substring(0, firstIndexZero);
+                    }
+                    else if (tempFis.FisTuru == "Perakende İade İrsaliyesi")
+                    {
+                        fis.FisTuru = "Alış Faturası";
+                        fis.Tipi = "A";
 
-                    var no = Convert.ToInt32(tempFis.FisKodu.Substring(firstIndexZero + 1, tempFis.FisKodu.Length - 1 - firstIndexZero));
-                    no++;
+                    }
 
+                    //var firstIndexZero = tempFis.FisKodu.IndexOf('0');
                     var kod = context.Kodlar.Where(c => c.Tablo == "fis").First();
+                    var onEk = kod.OnEki;
+
+                    //var no = Convert.ToInt32(tempFis.FisKodu.Substring(firstIndexZero + 1, tempFis.FisKodu.Length - 1 - firstIndexZero));
+                    kod.SonDeger++;
+
                     yeniFisKodu = CodeTool.fiskodolustur(onEk, kod.SonDeger.ToString());
                     fis.FisKodu = yeniFisKodu;
 
                     CodeTool ct = new CodeTool();
                     ct.KodArttirma("fis");
+
                 }
 
 
-                context.Fisler.Where(x => x.Id == irsaliyeId).FirstOrDefault().FaturaFisKodu = yeniFisKodu;
+                //buraya kadar --------------------------------------
 
 
 
-                var stokHareketleri = context.StokHareketleri.Where(x => x.FisKodu == referansIrsaliyeKodu);
-                if (stokHareketleri != null)
+                var tempirsaliye = context.Fisler.Where(x => x.Id == irsaliyeId).FirstOrDefault();
+                tempirsaliye.FaturaFisKodu = yeniFisKodu;
+                tempirsaliye.CariIrsaliye = "1";
+                tempirsaliye.StokIrsaliye = "1";
+
+                var tempirsaliyestokhar = context.StokHareketleri.Where(x => x.FisKodu == referansIrsaliyeKodu);
+                foreach (var item in tempirsaliyestokhar)
                 {
-                    foreach (var item in stokHareketleri)
+                    item.StokIrsaliye = "1";
+                }
+                context.SaveChanges();
+
+                hareketler = context.StokHareketleri.Where(x => x.FisKodu == referansIrsaliyeKodu);
+
+                if (hareketler != null)
+                {
+                    foreach (var item in hareketler)
                     {
+                        if (item.FisTuru == "Perakende Satış İrsaliyesi")
+                        {
+                            item.FisTuru = "Pos Fatura";
+                            item.Hareket = "Stok Çıkış";
 
-                        item.FisTuru = "Perakende Fatura";
-                        item.Hareket = "Stok Çıkış";
 
+                        }
+                        else if (item.FisTuru == "Perakende İade İrsaliyesi")
+                        {
+                            item.FisTuru = "Alış Faturası";
+                            item.Hareket = "Stok Giriş";
 
+                        }
                         item.FisKodu = yeniFisKodu;
                         context.StokHareketleri.Add(item);
 
 
                     }
                 }
+
+
             }
             fis.KdvToplam_ = fisKdvToplam;
             fis.AraToplam_ = fisAraToplam;
             fis.ToplamTutar = fisToplamTutar;
+            fis.StokIrsaliye = "1";
+            fis.CariIrsaliye = "1";
             context.Fisler.Add(fis);
             context.SaveChanges();
 
-            MessageBox.Show("Seçilen irsaliyeler başarıyla faturalandırılmıştır.");
+            FaturaOlustur(fis, hareketler.ToList());
+
+
+            MessageBox.Show("Seçilen Siparişler başarıyla faturalandırılmıştır.");
             Listele();
+        }
+        NetSatis.EDonusum.Controller.EDonusumIslemleri eislem = new EDonusum.Controller.EDonusumIslemleri();
+        private void DetailsDuzenle(int id, string HarTipi, Fis fis, List<Entities.Tables.StokHareket> hareketler)
+        {
+            EDonusum.VTContext c = new EDonusum.VTContext();
+
+            var detailsList = c.Detail.Where(x => x.MasterId == id).ToList();
+
+            for (int i = 0; i < detailsList.Count; i++)
+            {
+                bool found = false;
+                foreach (var item in hareketler)
+                {
+
+                    if (item.StokId == detailsList[i].StokId)
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found)
+                {
+                    eislem.DetailsSil(detailsList[i].Id);
+                }
+            }
+
+            //EFATURA YENİ DÜZENLEME
+            foreach (var stok in hareketler)
+            {
+                decimal fyt = stok.KdvToplam.Value;
+                decimal fyt2 = stok.ToplamTutar.Value;
+                NetSatis.EDonusum.Models.Donusum.Details d = null;
+
+                d = new EDonusum.Models.Donusum.Details
+                {
+                    HareketTipi = 1,
+                    //Magaza="",
+                    HarTip = HarTipi,
+                    Isk1 = stok.IndirimOrani.Value,
+                    Isk2 = stok.IndirimOrani2.Value,
+                    Isk3 = stok.IndirimOrani3.Value,
+                    IskontoTutar = fis.DipIskNetTutari.Value,
+                    Kdv = stok.KdvToplam.Value,
+                    KdvOrani = stok.Kdv,
+                    KdvDahilFiyat = stok.ToplamTutar.Value,
+                    MasterId = id,
+                    Matrah = fyt2 - fyt,
+                    Miktar = stok.Miktar.Value,
+                    MusteriKodu = fis.CariId.Value,
+                    TempId = Guid.NewGuid(),
+                    StokId = stok.StokId,
+                    Tutar = stok.BirimFiyati.Value
+                };
+
+                eislem.DetailsOlustur(d);
+            }
+
 
         }
 

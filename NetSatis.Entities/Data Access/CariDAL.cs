@@ -327,7 +327,7 @@ namespace NetSatis.Entities.Data_Access
                 Durum = (s.FisTuru == "Alış Faturası" || s.FisTuru == "Satış İade Faturası" || s.FisTuru == "Masraf Faturası" || s.FisTuru == "Tahsilat Fişi" || (s.FisTuru == "Cari Devir Fişi" && s.kasaHareket == "Kasa Giriş")) ?
                 s.ToplamTutar - s.Odenen > 0 ? "A" : s.ToplamTutar - s.Odenen < 0 ? "B" : "K" :
                 s.ToplamTutar - s.Odenen > 0 ? "B" : s.ToplamTutar - s.Odenen < 0 ? "A" : "K",
-                AktifTutar = context.Fisler.Where(c => c.CariId == cariId && c.Tarih <= s.Tarih).Select(j => new
+                AktifTutar = context.Fisler.Where(c =>c.FisTuru!="Pos Fatura"&& c.CariId == cariId && c.Tarih <= s.Tarih).Select(j => new
                 {
                     j.FisTuru,
                     kasaHareket = j.FisTuru == "Cari Devir Fişi" ?
@@ -460,7 +460,7 @@ namespace NetSatis.Entities.Data_Access
                 Durum = (s.FisTuru == "Alış Faturası" || s.FisTuru == "Satış İade Faturası" || s.FisTuru == "Masraf Faturası" || s.FisTuru == "Tahsilat Fişi" || (s.FisTuru == "Cari Devir Fişi" && s.kasaHareket == "Kasa Giriş")) ?
                 s.ToplamTutar - s.Odenen > 0 ? "A" : s.ToplamTutar - s.Odenen < 0 ? "B" : "K" :
                 s.ToplamTutar - s.Odenen > 0 ? "B" : s.ToplamTutar - s.Odenen < 0 ? "A" : "K",
-                AktifTutar = context.Fisler.Where(c => c.CariId == cariId && c.Tarih <= s.Tarih).Select(j => new
+                AktifTutar = context.Fisler.Where(c => c.FisTuru != "Pos Fatura" && c.CariId == cariId && c.Tarih <= s.Tarih).Select(j => new
                 {
                     j.FisTuru,
                     kasaHareket = j.FisTuru == "Cari Devir Fişi" ?
