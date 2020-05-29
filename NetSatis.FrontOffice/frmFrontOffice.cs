@@ -1069,29 +1069,22 @@ namespace NetSatis.FrontOffice
             Toplamlar();
             HepsiniHesapla();
         }
-
-        private async void txtBarkod_Closed(object sender, DevExpress.XtraEditors.Controls.ClosedEventArgs e)
-        {
-              
-            await Task.Delay(600);
-            txtBarkod.EditValue =
-            txtBarkod.Text = null;
-        }
-
+         
         private async void txtBarkod_KeyDown(object sender, KeyEventArgs e)
         {
-
-
+        
             if (e.KeyCode == Keys.Enter && txtBarkod.Text != "")
             {
                 Barkod entity;
-                var barkodKod = string.Empty;
-                if (GridUpEditStokList.SelectedRowsCount == 0)
-                    return;
-                if (GridUpEditStokList.GetFocusedRowCellValue("Barkodu") != null)
-                    barkodKod = GridUpEditStokList.GetFocusedRowCellValue("Barkodu").ToString();
 
-                var entityStok = context.Stoklar.FirstOrDefault(x => x.Barkodu == barkodKod);
+                //if (GridUpEditStokList.SelectedRowsCount == 0)
+                //    return;
+                //if (GridUpEditStokList.GetFocusedRowCellValue("Barkodu") != null)
+                //    barkodKod = GridUpEditStokList.GetFocusedRowCellValue("Barkodu").ToString();
+                var barkodKod = txtBarkod.Properties.GetKeyValueByDisplayValue(txtBarkod.Text);
+                if (barkodKod==null)
+                    return;
+                var entityStok = context.Stoklar.FirstOrDefault(x => x.Barkodu == barkodKod.ToString());
                 if (entityStok != null)
                 {
                     if (MinStokAltinda(entityStok)) return;
@@ -1108,7 +1101,7 @@ namespace NetSatis.FrontOffice
                 }
                 else
                 {
-                    entity = context.Barkodlar.Where(c => c.Barkodu == barkodKod).SingleOrDefault();
+                    entity = context.Barkodlar.Where(c => c.Barkodu == barkodKod.ToString()).SingleOrDefault();
                     if (entity != null)
                     {
                         StokHareket s = StokSec(entity.Stok);
@@ -2038,6 +2031,7 @@ namespace NetSatis.FrontOffice
         {
             try
             {
+                var newContext = new NetSatisContext();
                 
                 if (token.IsCancellationRequested)
                     return;
@@ -2046,19 +2040,18 @@ namespace NetSatis.FrontOffice
 
                 var take = 5000;
                 var count = Math.Ceiling(
-                    Convert.ToDecimal(stokDAL.StokKayitSayisi(context) / Convert.ToDecimal(take)));
+                    Convert.ToDecimal(stokDAL.StokKayitSayisi(newContext) / Convert.ToDecimal(take)));
                 if (token.IsCancellationRequested)
                     return;
                 for (int i = 0; i < count; i++)
                 {
                     if (token.IsCancellationRequested)
                         break;
-                    TumStoklar.AddRange(stokDAL.StokAdiylaStokGetir(context, skip: (take * i), take: take, noTracking: true));
+                    TumStoklar.AddRange(stokDAL.StokAdiylaStokGetir(newContext, skip: (take * i), take: take, noTracking: true));
                     OnPropertyChanged(nameof(TumStoklar));
                     await Task.Delay(100);
-                    GridUpEditStokList.RefreshData();
-
-                 
+                    //GridUpEditStokList.RefreshData();
+                     
                 }
 
             }
@@ -2068,7 +2061,7 @@ namespace NetSatis.FrontOffice
             }
             finally
             {
-                GridUpEditStokList.RefreshData();
+                //GridUpEditStokList.RefreshData();
             }
         }
         public event PropertyChangedEventHandler PropertyChanged;
@@ -2078,17 +2071,18 @@ namespace NetSatis.FrontOffice
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        private void txtBarkod_EditValueChanged(object sender, EventArgs e)
-        {
-            GridUpEditStokList.ApplyFindFilter(txtBarkod.Text);
-            GridUpEditStokList.RefreshData();
-        }
 
-        private void txtBarkod_TextChanged(object sender, EventArgs e)
+        private void txtBarkod_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)
         {
             if (txtBarkod.Text.Length == 0)
                 if (txtBarkod.IsPopupOpen)
                     txtBarkod.ClosePopup();
+
+        }
+
+        private async void btnStoklariYenile_Click(object sender, EventArgs e)
+        {
+            await Sorgula(tokenSource.Token);
         }
     }
 }
