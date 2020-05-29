@@ -1427,24 +1427,24 @@ namespace NetSatis.BackOffice.Fiş
                     MessageBox.Show("Lütfen hareket tipi seçiniz.");
                     return;
                 }
-
-                if (duzenle)
-                {
-                    if (_fisentity.Id > 0)
-                    {
-                        if (!String.IsNullOrEmpty(_fisentity.FaturaFisKodu))
-                        {
-                            MessageBox.Show("Faturalandırılmış irsaliyeler üzerinde değişiklik yapamazsınız.");
-                            return;
-                        }
-                        var temp = context.Fisler.Where(x => x.FaturaFisKodu == _fisentity.FisKodu).ToList();
-                        if (temp.Count != 0)
-                        {
-                            MessageBox.Show("İrsaliyeden faturalandırılmış fatura üzerinde değişiklik yapamazsınız.");
-                            return;
-                        }
-                    }
-                }
+                // düzenleme işleminde fatura bilgileri değiştirilsin stok hareketleri güncellenemesin
+                //if (duzenle)
+                //{
+                //    if (_fisentity.Id > 0)
+                //    {
+                //        if (!String.IsNullOrEmpty(_fisentity.FaturaFisKodu))
+                //        {
+                //            MessageBox.Show("Faturalandırılmış irsaliyeler üzerinde değişiklik yapamazsınız.");
+                //            return;
+                //        }
+                //        var temp = context.Fisler.Where(x => x.FaturaFisKodu == _fisentity.FisKodu).ToList();
+                //        if (temp.Count != 0)
+                //        {
+                //            MessageBox.Show("İrsaliyeden faturalandırılmış fatura üzerinde değişiklik yapamazsınız.");
+                //            return;
+                //        }
+                //    }
+                //}
 
                 if (_fisentity.FisTuru == "Cari Devir Fişi")
                 {
