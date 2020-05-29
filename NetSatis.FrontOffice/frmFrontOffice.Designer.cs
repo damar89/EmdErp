@@ -34,26 +34,26 @@
             DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression1 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
             DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression2 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions17 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject65 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject66 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject67 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject68 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions18 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject69 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject70 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject71 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject72 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions19 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject73 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject74 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject75 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject76 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions20 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject77 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject78 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject79 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject80 = new DevExpress.Utils.SerializableAppearanceObject();
             this.colMevcutStok = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
             this.navigationPane1 = new DevExpress.XtraBars.Navigation.NavigationPane();
@@ -2975,11 +2975,11 @@
             // repoFiyat
             // 
             this.repoFiyat.AutoHeight = false;
-            editorButtonImageOptions1.ImageIndex = 2;
-            editorButtonImageOptions1.ImageList = this.ımageList2;
-            editorButtonImageOptions1.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            editorButtonImageOptions17.ImageIndex = 2;
+            editorButtonImageOptions17.ImageList = this.ımageList2;
+            editorButtonImageOptions17.Location = DevExpress.XtraEditors.ImageLocation.Default;
             this.repoFiyat.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions17, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject65, serializableAppearanceObject66, serializableAppearanceObject67, serializableAppearanceObject68, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoFiyat.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.repoFiyat.Name = "repoFiyat";
             this.repoFiyat.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repoFiyat_ButtonClick);
@@ -3030,14 +3030,14 @@
             // repoDepo
             // 
             this.repoDepo.AutoHeight = false;
-            editorButtonImageOptions2.ImageIndex = 3;
-            editorButtonImageOptions2.ImageList = this.ımageList2;
-            editorButtonImageOptions2.Location = DevExpress.XtraEditors.ImageLocation.Default;
-            serializableAppearanceObject6.Options.UseImage = true;
-            serializableAppearanceObject7.Options.UseImage = true;
-            serializableAppearanceObject8.Options.UseImage = true;
+            editorButtonImageOptions18.ImageIndex = 3;
+            editorButtonImageOptions18.ImageList = this.ımageList2;
+            editorButtonImageOptions18.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            serializableAppearanceObject70.Options.UseImage = true;
+            serializableAppearanceObject71.Options.UseImage = true;
+            serializableAppearanceObject72.Options.UseImage = true;
             this.repoDepo.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions18, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject69, serializableAppearanceObject70, serializableAppearanceObject71, serializableAppearanceObject72, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoDepo.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.repoDepo.Name = "repoDepo";
             this.repoDepo.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repoDepo_ButtonClick_1);
@@ -3056,11 +3056,11 @@
             // repoSeri
             // 
             this.repoSeri.AutoHeight = false;
-            editorButtonImageOptions3.ImageIndex = 4;
-            editorButtonImageOptions3.ImageList = this.ımageList2;
-            editorButtonImageOptions3.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            editorButtonImageOptions19.ImageIndex = 4;
+            editorButtonImageOptions19.ImageList = this.ımageList2;
+            editorButtonImageOptions19.Location = DevExpress.XtraEditors.ImageLocation.Default;
             this.repoSeri.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Seri No", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Seri No", -1, true, true, false, editorButtonImageOptions19, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject73, serializableAppearanceObject74, serializableAppearanceObject75, serializableAppearanceObject76, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoSeri.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.repoSeri.Name = "repoSeri";
             this.repoSeri.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
@@ -3089,14 +3089,14 @@
             this.repoSil.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("repoSil.Appearance.Image")));
             this.repoSil.Appearance.Options.UseImage = true;
             this.repoSil.AutoHeight = false;
-            editorButtonImageOptions4.ImageIndex = 0;
-            editorButtonImageOptions4.ImageList = this.ımageList2;
-            serializableAppearanceObject13.Options.UseImage = true;
-            serializableAppearanceObject14.Options.UseImage = true;
-            serializableAppearanceObject15.Options.UseImage = true;
-            serializableAppearanceObject16.Options.UseImage = true;
+            editorButtonImageOptions20.ImageIndex = 0;
+            editorButtonImageOptions20.ImageList = this.ımageList2;
+            serializableAppearanceObject77.Options.UseImage = true;
+            serializableAppearanceObject78.Options.UseImage = true;
+            serializableAppearanceObject79.Options.UseImage = true;
+            serializableAppearanceObject80.Options.UseImage = true;
             this.repoSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions20, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject77, serializableAppearanceObject78, serializableAppearanceObject79, serializableAppearanceObject80, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.repoSil.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.repoSil.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("repoSil.ContextImageOptions.Image")));
@@ -3693,7 +3693,7 @@
             this.txtBarkod.EditValue = "";
             this.txtBarkod.Location = new System.Drawing.Point(226, 4);
             this.txtBarkod.Name = "txtBarkod";
-            this.txtBarkod.Properties.AcceptEditorTextAsNewValue = DevExpress.Utils.DefaultBoolean.True;
+            this.txtBarkod.Properties.AcceptEditorTextAsNewValue = DevExpress.Utils.DefaultBoolean.False;
             this.txtBarkod.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtBarkod.Properties.Appearance.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBarkod.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -3705,18 +3705,21 @@
             this.txtBarkod.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtBarkod.Properties.DisplayMember = "StokAdi";
-            this.txtBarkod.Properties.EditValueChangedDelay = 50;
-            this.txtBarkod.Properties.ImmediatePopup = true;
+            this.txtBarkod.Properties.EditValueChangedDelay = 300;
+            this.txtBarkod.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
             this.txtBarkod.Properties.NullText = "";
-            this.txtBarkod.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.txtBarkod.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.StartsWith;
             this.txtBarkod.Properties.PopupView = this.GridUpEditStokList;
-            this.txtBarkod.Properties.SearchMode = DevExpress.XtraEditors.Repository.GridLookUpSearchMode.AutoSuggest;
+            this.txtBarkod.Properties.SearchMode = DevExpress.XtraEditors.Repository.GridLookUpSearchMode.None;
+            this.txtBarkod.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.txtBarkod.Properties.ValueMember = "Barkodu";
             this.txtBarkod.Properties.ViewType = DevExpress.XtraEditors.Repository.GridLookUpViewType.GridView;
             this.txtBarkod.Size = new System.Drawing.Size(329, 36);
             this.txtBarkod.StyleController = this.layoutControl1;
             this.txtBarkod.TabIndex = 0;
-            this.txtBarkod.Closed += new DevExpress.XtraEditors.Controls.ClosedEventHandler(this.txtBarkod_Closed); 
+            this.txtBarkod.Closed += new DevExpress.XtraEditors.Controls.ClosedEventHandler(this.txtBarkod_Closed);
+            this.txtBarkod.EditValueChanged += new System.EventHandler(this.txtBarkod_EditValueChanged);
+            this.txtBarkod.TextChanged += new System.EventHandler(this.txtBarkod_TextChanged);
             this.txtBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyDown);
             // 
             // GridUpEditStokList

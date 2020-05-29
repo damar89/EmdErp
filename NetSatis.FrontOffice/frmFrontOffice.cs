@@ -1,5 +1,6 @@
 ﻿using DevExpress.Data.Controls.ExpressionEditor;
 using DevExpress.Utils;
+using DevExpress.Utils.MVVM;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraTab;
@@ -1071,11 +1072,12 @@ namespace NetSatis.FrontOffice
 
         private async void txtBarkod_Closed(object sender, DevExpress.XtraEditors.Controls.ClosedEventArgs e)
         {
-            await Task.Delay(500);
+              
+            await Task.Delay(600);
             txtBarkod.EditValue =
             txtBarkod.Text = null;
         }
-         
+
         private async void txtBarkod_KeyDown(object sender, KeyEventArgs e)
         {
 
@@ -2028,33 +2030,46 @@ namespace NetSatis.FrontOffice
             txtBarkod.EditValue = null;
             txtBarkod.Select();
 
+
         }
 
         private CancellationTokenSource tokenSource = new CancellationTokenSource();
         async Task Sorgula(CancellationToken token)
         {
-            if (token.IsCancellationRequested)
-                return;
-            TumStoklar.Clear();
-
-            OnPropertyChanged(nameof(TumStoklar));
-
-            var take = 5000;
-            var count = Math.Ceiling(
-                Convert.ToDecimal(stokDAL.StokKayitSayisi(context) / Convert.ToDecimal(take)));
-            if (token.IsCancellationRequested)
-                return;
-            for (int i = 0; i < count; i++)
+            try
             {
+                
                 if (token.IsCancellationRequested)
-                    break;
-                TumStoklar.AddRange(stokDAL.StokAdiylaStokGetir(context, skip: (take * i), take: take, noTracking: true));
+                    return;
+                TumStoklar.Clear();
                 OnPropertyChanged(nameof(TumStoklar));
-                await Task.Delay(100);
+
+                var take = 5000;
+                var count = Math.Ceiling(
+                    Convert.ToDecimal(stokDAL.StokKayitSayisi(context) / Convert.ToDecimal(take)));
+                if (token.IsCancellationRequested)
+                    return;
+                for (int i = 0; i < count; i++)
+                {
+                    if (token.IsCancellationRequested)
+                        break;
+                    TumStoklar.AddRange(stokDAL.StokAdiylaStokGetir(context, skip: (take * i), take: take, noTracking: true));
+                    OnPropertyChanged(nameof(TumStoklar));
+                    await Task.Delay(100);
+                    GridUpEditStokList.RefreshData();
+
+                 
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata Oluştu:\n" + ex.Message); ;
+            }
+            finally
+            {
                 GridUpEditStokList.RefreshData();
             }
-            GridUpEditStokList.RefreshData();
-
         }
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -2063,8 +2078,18 @@ namespace NetSatis.FrontOffice
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+        private void txtBarkod_EditValueChanged(object sender, EventArgs e)
+        {
+            GridUpEditStokList.ApplyFindFilter(txtBarkod.Text);
+            GridUpEditStokList.RefreshData();
+        }
 
-
+        private void txtBarkod_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBarkod.Text.Length == 0)
+                if (txtBarkod.IsPopupOpen)
+                    txtBarkod.ClosePopup();
+        }
     }
 }
 
