@@ -1427,24 +1427,24 @@ namespace NetSatis.BackOffice.Fiş
                     MessageBox.Show("Lütfen hareket tipi seçiniz.");
                     return;
                 }
-
-                if (duzenle)
-                {
-                    if (_fisentity.Id > 0)
-                    {
-                        if (!String.IsNullOrEmpty(_fisentity.FaturaFisKodu))
-                        {
-                            MessageBox.Show("Faturalandırılmış irsaliyeler üzerinde değişiklik yapamazsınız.");
-                            return;
-                        }
-                        var temp = context.Fisler.Where(x => x.FaturaFisKodu == _fisentity.FisKodu).ToList();
-                        if (temp.Count != 0)
-                        {
-                            MessageBox.Show("İrsaliyeden faturalandırılmış fatura üzerinde değişiklik yapamazsınız.");
-                            return;
-                        }
-                    }
-                }
+                // düzenleme işleminde fatura bilgileri değiştirilsin stok hareketleri güncellenemesin
+                //if (duzenle)
+                //{
+                //    if (_fisentity.Id > 0)
+                //    {
+                //        if (!String.IsNullOrEmpty(_fisentity.FaturaFisKodu))
+                //        {
+                //            MessageBox.Show("Faturalandırılmış irsaliyeler üzerinde değişiklik yapamazsınız.");
+                //            return;
+                //        }
+                //        var temp = context.Fisler.Where(x => x.FaturaFisKodu == _fisentity.FisKodu).ToList();
+                //        if (temp.Count != 0)
+                //        {
+                //            MessageBox.Show("İrsaliyeden faturalandırılmış fatura üzerinde değişiklik yapamazsınız.");
+                //            return;
+                //        }
+                //    }
+                //}
 
                 if (_fisentity.FisTuru == "Cari Devir Fişi")
                 {
@@ -1506,7 +1506,7 @@ namespace NetSatis.BackOffice.Fiş
                     hata++;
                 }
                 if (calcOdenemesiGereken.Value != 0 && ayarlar.OdemeEkrani == true &&
-                    string.IsNullOrEmpty(lblCariKod.Text) && txtFisTuru.Text != "Hakediş Fişi")
+                    string.IsNullOrEmpty(lblCariKod.Text) && txtFisTuru.Text != "Hakediş Fişi" && txtFisTuru.Text != "Masraf Fişi")
                 {
                     message +=
                         "- Ödenmesi Gereken Tutar Ödenmemiş Görünüyor.Açık hesap satış yapabilmek için lütfen cari seçiniz." +
@@ -1537,7 +1537,7 @@ namespace NetSatis.BackOffice.Fiş
                     return;
                 }
 
-                if (calcOdenemesiGereken.Value != 0 && ayarlar.OdemeEkrani == true)
+                if (calcOdenemesiGereken.Value != 0 && ayarlar.OdemeEkrani == true && txtFisTuru.Text != "Masraf Fişi")
                 {
                     if (MessageBox.Show(
                             $"Ödemenin # {calcOdenemesiGereken.Value.ToString("C2")} # tutarındaki kısmı açık hesap bakiyesi olarak kaydedilecektir. devam etmek istiyor musunuz?",
@@ -1571,9 +1571,9 @@ namespace NetSatis.BackOffice.Fiş
                 {
 
                 }
-              
-                        //----
-                        foreach (var stokVeri in context.StokHareketleri.Local.ToList())
+
+                //----
+                foreach (var stokVeri in context.StokHareketleri.Local.ToList())
                 {
                     if (!Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_StoguEtkilesin)))
                     {
@@ -1675,7 +1675,7 @@ namespace NetSatis.BackOffice.Fiş
 
                                 stokVeri.Stok.AlisFiyati3 = ind3 + (ind3 * stokVeri.Kdv / 100);
                                 stokDAL.MevcutStok(context, 1);
-                               
+
                             }
                         }
                         else
@@ -1692,7 +1692,7 @@ namespace NetSatis.BackOffice.Fiş
 
                                 stokVeri.Stok.AlisFiyati3 = ind3 + (ind3 * stokVeri.Kdv / 100);
                                 stokDAL.MevcutStok(context, 1);
-                               
+
                             }
                         }
                         if (toggleSatisFiyat.IsOn)
@@ -2040,7 +2040,7 @@ namespace NetSatis.BackOffice.Fiş
                 hata++;
             }
             if (calcOdenemesiGereken.Value != 0 && ayarlar.OdemeEkrani == true &&
-                string.IsNullOrEmpty(lblCariKod.Text) && txtFisTuru.Text != "Hakediş Fişi")
+                string.IsNullOrEmpty(lblCariKod.Text) && txtFisTuru.Text != "Hakediş Fişi" && txtFisTuru.Text != "Masraf Fişi")
             {
                 message +=
                     "- Ödenmesi Gereken Tutar Ödenmemiş Görünüyor.Açık hesap satış yapabilmek için lütfen cari seçiniz." +

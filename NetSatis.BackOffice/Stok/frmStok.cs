@@ -352,7 +352,7 @@ namespace NetSatis.BackOffice.Stok
                 foreach (string item in txtAramaMetni.Text.Split(' '))
                 {
                     if (!string.IsNullOrEmpty(item))
-                        pred = pred.And(x => x.StokAdi.Contains(item) || x.Barkod.Any(s => s.Barkodu.Contains(item)) || x.Barkodu.Contains(item) || x.StokKodu.Contains(item));
+                        pred = pred.And(x => x.StokAdi.Contains(item) || x.StokKodu.Contains(item) || x.Marka.Contains(item) || x.Uretici.Contains(item) || x.Barkod.Any(s => s.Barkodu.Contains(item)) || x.Barkodu.Contains(item) );
                 }
             }
 

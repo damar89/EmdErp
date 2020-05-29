@@ -72,7 +72,7 @@ namespace NetSatis.FrontOffice
                         XtraMessageBox.Show("Lisans Pasif Durumda");
                     }
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                     if (NetSatisAdmin.Properties.Settings.Default.Lisans != 1)
                     {
