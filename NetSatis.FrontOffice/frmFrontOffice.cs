@@ -2082,7 +2082,9 @@ namespace NetSatis.FrontOffice
 
         private async void btnStoklariYenile_Click(object sender, EventArgs e)
         {
+            btnStoklariYenile.Enabled = false;
             await Sorgula(tokenSource.Token);
+            btnStoklariYenile.Enabled = true;
         }
     }
 }
