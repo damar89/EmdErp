@@ -2380,6 +2380,35 @@ namespace NetSatis.BackOffice.Fiş
                     item.IndirimTutar = Math.Round(satirIndirimTutari.Value, 2);
                     item.ToplamTutar = Math.Round(satirNetTutar.Value, 2);
 
+
+                    //satis fiyati ve kar oran hesaplama
+                    if ((!item.SatisFiyati.HasValue || item.SatisFiyati.Value == 0) && (item.KarOrani.HasValue && item.KarOrani.Value != 0))
+                    {
+
+                        var karOrani = Convert.ToDecimal(item.KarOrani);
+                        var _miktar = Convert.ToDecimal(item.Miktar);
+                        var birimFiyati = Convert.ToDecimal(item.BirimFiyati);
+
+                        var res = (_miktar * birimFiyati) * (karOrani / 100);
+
+                        item.SatisFiyati = res;
+                    }
+                    else if ((!item.KarOrani.HasValue || item.KarOrani.Value == 0) && (item.SatisFiyati.HasValue && item.SatisFiyati.Value != 0))
+                    {
+
+                        var satisFiyati = Convert.ToDecimal(item.SatisFiyati);
+                        var birimFiyati = Convert.ToDecimal(item.BirimFiyati);
+                        if (birimFiyati == 0)
+                        {
+                            item.KarOrani = satisFiyati * 100;
+                        }
+                        else
+                        {
+                            var res = (satisFiyati * 100) / birimFiyati;
+                            item.KarOrani = res;
+                        }
+                    }
+
                 }
                 calcKdvToplam.EditValue = Math.Round(toplamKdvToplam.Value, 2);
                 calcAraToplam.EditValue = Math.Round((toplamAraToplam - toplamKdvToplam).Value, 2);
@@ -3355,11 +3384,7 @@ namespace NetSatis.BackOffice.Fiş
                 var miktar = Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("Miktar"));
                 var birimFiyati = Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("BirimFiyati"));
 
-
-
-                var res = (miktar * birimFiyati) + (miktar * birimFiyati) * (karOrani / 100);
-
-
+                var res = (miktar * birimFiyati) * (karOrani / 100);
 
                 gridStokHareket.SetFocusedRowCellValue("SatisFiyati", res);
 
@@ -3371,13 +3396,6 @@ namespace NetSatis.BackOffice.Fiş
                     return;
                 var satisFiyati = Convert.ToDecimal(e.Value);
                 var birimFiyati = Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("BirimFiyati"));
-
-
-                //var sh = gridStokHareket.GetRow(e.RowHandle) as StokHareket;
-                //if (sh == null)
-                //    return;
-                //if (!sh.SatisFiyati.HasValue)
-                //    return;
                 if (birimFiyati == 0)
                 {
                     gridStokHareket.SetFocusedRowCellValue("KarOrani", satisFiyati * 100);
@@ -3385,10 +3403,7 @@ namespace NetSatis.BackOffice.Fiş
                 else
                 {
                     var res = (satisFiyati * 100) / birimFiyati;
-                    gridStokHareket.SetFocusedRowCellValue("KarOrani", res - 100);
-
-                    //var res = (sh.SatisFiyati.Value * 100) / sh.BirimFiyati.Value;
-                    //sh.KarOrani = res - 100;
+                    gridStokHareket.SetFocusedRowCellValue("KarOrani", res);
                 }
             }
         }
