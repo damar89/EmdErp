@@ -54,20 +54,7 @@ namespace NetSatis.Entities.Tables
         public decimal? DipIskontoPayi { get; set; } = 0;
 
         [NotMapped]
-        public decimal? KarOrani
-        {
-            get
-            {
-                if (!SatisFiyati.HasValue)
-                    return 0;
-                if (!BirimFiyati.HasValue || BirimFiyati.Value == 0)
-
-                    return SatisFiyati.Value * 100;
-
-                var res = (SatisFiyati.Value * 100) / BirimFiyati.Value;
-                return res - 100;
-            }
-        }
+        public decimal? KarOrani{ get; set; }
         [NotMapped]
         public decimal? MevcutStok { get; set; }
         

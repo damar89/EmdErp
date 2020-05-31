@@ -3345,6 +3345,54 @@ namespace NetSatis.BackOffice.Fiş
             }
         }
 
+        private void gridStokHareket_CellValueChanging(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            if (e.Column.FieldName == "KarOrani")
+            {
+                if (e.Value == null || string.IsNullOrEmpty(e.Value.ToString()))
+                    return;
+                var karOrani = Convert.ToDecimal(e.Value);
+                var miktar = Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("Miktar"));
+                var birimFiyati = Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("BirimFiyati"));
+
+
+
+                var res = (miktar * birimFiyati) + (miktar * birimFiyati) * (karOrani / 100);
+
+
+
+                gridStokHareket.SetFocusedRowCellValue("SatisFiyati", res);
+
+
+            }
+            else if (e.Column.FieldName == "SatisFiyati")
+            {
+                if (e.Value == null || string.IsNullOrEmpty(e.Value.ToString()))
+                    return;
+                var satisFiyati = Convert.ToDecimal(e.Value);
+                var birimFiyati = Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("BirimFiyati"));
+
+
+                //var sh = gridStokHareket.GetRow(e.RowHandle) as StokHareket;
+                //if (sh == null)
+                //    return;
+                //if (!sh.SatisFiyati.HasValue)
+                //    return;
+                if (birimFiyati == 0)
+                {
+                    gridStokHareket.SetFocusedRowCellValue("KarOrani", satisFiyati * 100);
+                }
+                else
+                {
+                    var res = (satisFiyati * 100) / birimFiyati;
+                    gridStokHareket.SetFocusedRowCellValue("KarOrani", res - 100);
+
+                    //var res = (sh.SatisFiyati.Value * 100) / sh.BirimFiyati.Value;
+                    //sh.KarOrani = res - 100;
+                }
+            }
+        }
+
         private void gridStokHareket_KeyDown(object sender, KeyEventArgs e)
         {
 
