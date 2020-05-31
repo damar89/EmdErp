@@ -3235,7 +3235,10 @@ namespace NetSatis.BackOffice.Fiş
                 var dr = MessageBox.Show("Barkod veya Stok Kodu ait kayıt bulunamadı!, Stok Kartı Açmak ister misiniz?", "Bilgi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
                 {
-                    var frmStok = new frmStokIslem(new Entities.Tables.Stok());
+                    var barkodKodu = gridStokHareket.ActiveEditor?.Text;
+                    var newStok = new Entities.Tables.Stok();
+                    newStok.Barkodu = barkodKodu?.ToString();
+                    var frmStok = new frmStokIslem(newStok);
                     frmStok.Show();
                 }
                 gridStokHareket.ActiveEditor.EditValue = gridStokHareket.ActiveEditor.OldEditValue;

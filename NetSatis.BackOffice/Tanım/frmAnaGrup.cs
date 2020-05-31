@@ -17,16 +17,24 @@ namespace NetSatis.BackOffice.Tanım
         {
             InitializeComponent();
             _entity = entity;
-            if (entity.Id != 0)
+            if (entity != null)
             {
-                guncelle = true;
-            }
-            if (guncelle == true)
-            {
-                _entity.GuncellemeTarihi = Convert.ToDateTime(DateTime.Now);
+                if (entity.Id != 0)
+                {
+                    guncelle = true;
+                }
+                if (guncelle == true)
+                {
+                    _entity.GuncellemeTarihi = Convert.ToDateTime(DateTime.Now);
+                }
+                else
+                {
+                    _entity.KayitTarihi = Convert.ToDateTime(DateTime.Now);
+                }
             }
             else
             {
+                _entity = new Entities.Tables.AnaGrup();
                 _entity.KayitTarihi = Convert.ToDateTime(DateTime.Now);
             }
 
