@@ -3387,26 +3387,42 @@ namespace NetSatis.BackOffice.Fiş
                 var miktar = Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("Miktar"));
                 var birimFiyati = Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("BirimFiyati"));
 
-                var res = (miktar * birimFiyati) * (karOrani / 100);
+                var stokVeri = gridStokHareket.GetRow(e.RowHandle) as StokHareket;
+                if (stokVeri == null)
+                    return;
+                var ind1 = stokVeri.BirimFiyati - (stokVeri.BirimFiyati * stokVeri.IndirimOrani / 100);
 
-                gridStokHareket.SetFocusedRowCellValue("SatisFiyati", res);
+                var ind2 = ind1 - (ind1 * stokVeri.IndirimOrani2 / 100);
+                var ind3 = ind2 - (ind2 * stokVeri.IndirimOrani3 / 100);
+                var res = (ind3) + (ind3) * (karOrani / 100);
+                var kdvli = res + res * stokVeri.Kdv / 100;
+                gridStokHareket.SetFocusedRowCellValue("SatisFiyati", kdvli);
 
 
             }
             else if (e.Column.FieldName == "SatisFiyati")
             {
                 if (e.Value == null || string.IsNullOrEmpty(e.Value.ToString()))
+
+
+                    var stokVeri = gridStokHareket.GetRow(e.RowHandle) as StokHareket;
+                if (stokVeri == null)
                     return;
-                var satisFiyati = Convert.ToDecimal(e.Value);
-                var birimFiyati = Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("BirimFiyati"));
-                if (birimFiyati == 0)
+                var ind1 = stokVeri.BirimFiyati - (stokVeri.BirimFiyati * stokVeri.IndirimOrani / 100);
+
+                var ind2 = ind1 - (ind1 * stokVeri.IndirimOrani2 / 100);
+                var ind3 = ind2 - (ind2 * stokVeri.IndirimOrani3 / 100);
+                var res = (stokVeri.SatisFiyati * 100) / (ind3);
+                var oranli = res - stokVeri.Kdv / 100;
+
+                if (stokVeri.BirimFiyati == 0)
                 {
-                    gridStokHareket.SetFocusedRowCellValue("KarOrani", satisFiyati * 100);
+                    gridStokHareket.SetFocusedRowCellValue("KarOrani", oranli * 100);
                 }
                 else
                 {
-                    var res = (satisFiyati * 100) / birimFiyati;
-                    gridStokHareket.SetFocusedRowCellValue("KarOrani", res);
+
+                    gridStokHareket.SetFocusedRowCellValue("KarOrani", oranli);
                 }
             }
         }
