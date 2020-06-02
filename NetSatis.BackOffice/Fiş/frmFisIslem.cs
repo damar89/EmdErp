@@ -3404,26 +3404,28 @@ namespace NetSatis.BackOffice.Fiş
             {
                 if (e.Value == null || string.IsNullOrEmpty(e.Value.ToString()))
 
-
+                {
                     var stokVeri = gridStokHareket.GetRow(e.RowHandle) as StokHareket;
-                if (stokVeri == null)
-                    return;
-                var ind1 = stokVeri.BirimFiyati - (stokVeri.BirimFiyati * stokVeri.IndirimOrani / 100);
+                    if (stokVeri == null)
+                        return;
+                    var ind1 = stokVeri.BirimFiyati - (stokVeri.BirimFiyati * stokVeri.IndirimOrani / 100);
 
-                var ind2 = ind1 - (ind1 * stokVeri.IndirimOrani2 / 100);
-                var ind3 = ind2 - (ind2 * stokVeri.IndirimOrani3 / 100);
-                var res = (stokVeri.SatisFiyati * 100) / (ind3);
-                var oranli = res - stokVeri.Kdv / 100;
+                    var ind2 = ind1 - (ind1 * stokVeri.IndirimOrani2 / 100);
+                    var ind3 = ind2 - (ind2 * stokVeri.IndirimOrani3 / 100);
+                    var res = (stokVeri.SatisFiyati * 100) / (ind3);
+                    var oranli = res - stokVeri.Kdv / 100;
 
-                if (stokVeri.BirimFiyati == 0)
-                {
-                    gridStokHareket.SetFocusedRowCellValue("KarOrani", oranli * 100);
+                    if (stokVeri.BirimFiyati == 0)
+                    {
+                        gridStokHareket.SetFocusedRowCellValue("KarOrani", oranli * 100);
+                    }
+                    else
+                    {
+
+                        gridStokHareket.SetFocusedRowCellValue("KarOrani", oranli);
+                    }
                 }
-                else
-                {
-
-                    gridStokHareket.SetFocusedRowCellValue("KarOrani", oranli);
-                }
+                //Kâr Oranı (%) = ((Satış Fiyatı - Alış Fiyatı) / Alış Fiyatı) x 100
             }
         }
 
