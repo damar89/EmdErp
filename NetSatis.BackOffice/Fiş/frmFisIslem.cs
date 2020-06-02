@@ -2381,34 +2381,33 @@ namespace NetSatis.BackOffice.Fiş
                     item.ToplamTutar = Math.Round(satirNetTutar.Value, 2);
 
 
-                    //satis fiyati ve kar oran hesaplama
+                    #region satis fiyati ve kar oran hesaplama
+
                     if ((!item.SatisFiyati.HasValue || item.SatisFiyati.Value == 0) && (item.KarOrani.HasValue && item.KarOrani.Value != 0))
                     {
 
-                        var karOrani = Convert.ToDecimal(item.KarOrani);
-                        var _miktar = Convert.ToDecimal(item.Miktar);
-                        var birimFiyati = Convert.ToDecimal(item.BirimFiyati);
+                        var ind1 = item.BirimFiyati - (item.BirimFiyati * item.IndirimOrani / 100);
 
-                        var res = (_miktar * birimFiyati) * (karOrani / 100);
+                        var ind2 = ind1 - (ind1 * item.IndirimOrani2 / 100);
+                        var ind3 = ind2 - (ind2 * item.IndirimOrani3 / 100);
+                        var res = (ind3) + (ind3) * (item.KarOrani / 100);
+                        var kdvli = res + res * item.Kdv / 100;
+                        gridStokHareket.SetFocusedRowCellValue("SatisFiyati", kdvli);
 
-                        item.SatisFiyati = res;
+
                     }
                     else if ((!item.KarOrani.HasValue || item.KarOrani.Value == 0) && (item.SatisFiyati.HasValue && item.SatisFiyati.Value != 0))
                     {
 
-                        var satisFiyati = Convert.ToDecimal(item.SatisFiyati);
-                        var birimFiyati = Convert.ToDecimal(item.BirimFiyati);
-                        if (birimFiyati == 0)
+                        if (item.ToplamTutar.HasValue && item.ToplamTutar.Value != 0)
                         {
-                            item.KarOrani = satisFiyati * 100;
-                        }
-                        else
-                        {
-                            var res = (satisFiyati * 100) / birimFiyati;
-                            item.KarOrani = res;
+
+                            var oranli = item.SatisFiyati.Value * 100 / item.ToplamTutar.Value;
+                            gridStokHareket.SetFocusedRowCellValue("KarOrani", oranli - 100);
                         }
                     }
-
+                     
+                    #endregion
                 }
                 calcKdvToplam.EditValue = Math.Round(toplamKdvToplam.Value, 2);
                 calcAraToplam.EditValue = Math.Round((toplamAraToplam - toplamKdvToplam).Value, 2);
@@ -3379,54 +3378,83 @@ namespace NetSatis.BackOffice.Fiş
 
         private void gridStokHareket_CellValueChanging(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            if (e.Column.FieldName == "KarOrani")
+            try
             {
-                if (e.Value == null || string.IsNullOrEmpty(e.Value.ToString()))
-                    return;
-                var karOrani = Convert.ToDecimal(e.Value);
-                var miktar = Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("Miktar"));
-                var birimFiyati = Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("BirimFiyati"));
-
-                var stokVeri = gridStokHareket.GetRow(e.RowHandle) as StokHareket;
-                if (stokVeri == null)
-                    return;
-                var ind1 = stokVeri.BirimFiyati - (stokVeri.BirimFiyati * stokVeri.IndirimOrani / 100);
-
-                var ind2 = ind1 - (ind1 * stokVeri.IndirimOrani2 / 100);
-                var ind3 = ind2 - (ind2 * stokVeri.IndirimOrani3 / 100);
-                var res = (ind3) + (ind3) * (karOrani / 100);
-                var kdvli = res + res * stokVeri.Kdv / 100;
-                gridStokHareket.SetFocusedRowCellValue("SatisFiyati", kdvli);
-
-
-            }
-            else if (e.Column.FieldName == "SatisFiyati")
-            {
-                if (e.Value == null || string.IsNullOrEmpty(e.Value.ToString()))
-
+                if (e.Column.FieldName == "KarOrani")
                 {
+                    if (e.Value == null || string.IsNullOrEmpty(e.Value.ToString()))
+                        return;
+
+
+                    var deger = Convert.ToDecimal(0);
+                    var eval = e.Value.ToString();
+                    if (eval.Contains("₺"))
+                    {
+                        deger = eval.Replace("₺", "").GetDecimal();
+                    }
+                    else if (eval.Contains("TL"))
+                    {
+                        deger = eval.Replace("TL", "").GetDecimal();
+                    }
+                    else if (eval.Contains("$"))
+                    {
+                        deger = eval.Replace("$", "").GetDecimal();
+                    }
+                    else
+                    {
+                        deger = eval.GetDecimal();
+                    }
+
+                    var karOrani = deger;
+
                     var stokVeri = gridStokHareket.GetRow(e.RowHandle) as StokHareket;
                     if (stokVeri == null)
                         return;
+
                     var ind1 = stokVeri.BirimFiyati - (stokVeri.BirimFiyati * stokVeri.IndirimOrani / 100);
 
                     var ind2 = ind1 - (ind1 * stokVeri.IndirimOrani2 / 100);
                     var ind3 = ind2 - (ind2 * stokVeri.IndirimOrani3 / 100);
-                    var res = (stokVeri.SatisFiyati * 100) / (ind3);
-                    var oranli = res - stokVeri.Kdv / 100;
+                    var res = (ind3) + (ind3) * (karOrani / 100);
+                    var kdvli = res + res * stokVeri.Kdv / 100;
+                    gridStokHareket.SetFocusedRowCellValue("SatisFiyati", kdvli);
 
-                    if (stokVeri.BirimFiyati == 0)
-                    {
-                        gridStokHareket.SetFocusedRowCellValue("KarOrani", oranli * 100);
-                    }
-                    else
-                    {
 
-                        gridStokHareket.SetFocusedRowCellValue("KarOrani", oranli);
+                }
+                else if (e.Column.FieldName == "SatisFiyati")
+                {
+                    if (e.Value == null || string.IsNullOrEmpty(e.Value.ToString()))
+                        return;
+                    var stokVeri = gridStokHareket.GetRow(e.RowHandle) as StokHareket;
+                    if (stokVeri == null)
+                        return;
+
+                    if (stokVeri.ToplamTutar.HasValue && stokVeri.ToplamTutar.Value != 0)
+                    {
+                        var deger = Convert.ToDecimal(0);
+                        var eval = e.Value.ToString();
+                        if (eval.Contains("₺"))
+                        {
+                            deger = eval.Replace("₺", "").GetDecimal();
+                        }
+                        else if (eval.Contains("TL"))
+                        {
+                            deger = eval.Replace("TL", "").GetDecimal();
+                        }
+                        else if (eval.Contains("$"))
+                        {
+                            deger = eval.Replace("$", "").GetDecimal();
+                        }
+                        else
+                        {
+                            deger = eval.GetDecimal();
+                        }
+                        var oranli = deger * 100 / stokVeri.ToplamTutar.Value;
+                        gridStokHareket.SetFocusedRowCellValue("KarOrani", oranli - 100);
                     }
                 }
-                //Kâr Oranı (%) = ((Satış Fiyatı - Alış Fiyatı) / Alış Fiyatı) x 100
             }
+            catch { }
         }
 
         private void gridStokHareket_KeyDown(object sender, KeyEventArgs e)
