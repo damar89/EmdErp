@@ -557,10 +557,10 @@ namespace NetSatis.Entities.Data_Access
                   }).ToList();
             return tablo;
         }
-        public object ListelemelerTarih(NetSatisContext context, string fisTuru, string fisTuru2, DateTime baslangic, DateTime bitis)
+        public object ListelemelerTarih(NetSatisContext context, string fisTuru, string fisTuru2, string fisTuru3, string fisTuru4, string fisTuru5, string fisTuru6, DateTime baslangic, DateTime bitis)
         {
-            var tablo = context.Fisler.Where(c => (c.FisTuru == fisTuru || c.FisTuru == fisTuru2) && (c.Tarih >= baslangic && c.Tarih <= bitis)).GroupJoin(
-                context.Fisler.Where(c => c.FisTuru == fisTuru || c.FisTuru == fisTuru2 && (c.Tarih >= baslangic && c.Tarih <= bitis)), c => c.CariId, c => c.CariId,
+            var tablo = context.Fisler.Where(c => (c.FisTuru == fisTuru || c.FisTuru == fisTuru2 || c.FisTuru == fisTuru3 || c.FisTuru == fisTuru4 || c.FisTuru == fisTuru5 || c.FisTuru == fisTuru6) && (c.Tarih >= baslangic && c.Tarih <= bitis)).GroupJoin(
+                context.Fisler.Where(c => c.FisTuru == fisTuru || c.FisTuru == fisTuru2 || c.FisTuru == fisTuru3 || c.FisTuru == fisTuru4 || c.FisTuru == fisTuru5 || c.FisTuru == fisTuru6 && (c.Tarih >= baslangic && c.Tarih <= bitis)), c => c.CariId, c => c.CariId,
                 (fisler, cariler) =>
                    new
                    {
@@ -570,6 +570,7 @@ namespace NetSatis.Entities.Data_Access
                        fisler.ToplamTutar,
                        fisler.Cari.CariAdi,
                        fisler.Cari.CariKodu,
+                       fisler.Cari.FaturaUnvani,
                        fisler.Tarih,
                        fisler.VadeTarihi,
                        fisler.Personel.PersonelKodu,

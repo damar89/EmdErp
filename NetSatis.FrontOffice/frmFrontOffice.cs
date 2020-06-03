@@ -580,6 +580,8 @@ namespace NetSatis.FrontOffice
 
             _fisentity.FisKodu = txtKod.Text;
             _fisentity.BelgeNo = txtBelgeNo.Text;
+            _fisentity.Seri = txtSeri.Text;
+            _fisentity.Sira = txtSira.Text;
             _fisentity.Aciklama = txtAciklama.Text;
             _fisentity.FaturaUnvani = txtFaturaUnvani.Text;
             _fisentity.CepTelefonu = txtCepTel.Text;
@@ -700,6 +702,8 @@ namespace NetSatis.FrontOffice
             txtCepTel.Text = null;
             txtMail.Text = null;
             txtHareketTipi.Text = null;
+            txtSira.Text = null;
+            txtSeri.Text = null;
             txtIl.Text = null;
             txtIlce.Text = null;
             txtAdres.Text = null;
@@ -869,6 +873,7 @@ namespace NetSatis.FrontOffice
             txtVergiNo.Text = SatisBilgisi.BekleyenFis.VergiNo;
             calcGenelToplam.Value = Convert.ToDecimal(SatisBilgisi.BekleyenFis.ToplamTutar);
             txtAraToplam2.Value = Convert.ToDecimal(SatisBilgisi.BekleyenFis.AraToplam_);
+            txtAraToplam.Value = Convert.ToDecimal(SatisBilgisi.BekleyenFis.AraToplam_);
             calcDusur.Value = Convert.ToDecimal(SatisBilgisi.BekleyenFis.DipIskTutari);
             calcIndirimOrani.Value = Convert.ToDecimal(SatisBilgisi.BekleyenFis.IskontoOrani1);
             calcIndirimTutari.Value = Convert.ToDecimal(SatisBilgisi.BekleyenFis.IskontoTutari1);
@@ -973,6 +978,10 @@ namespace NetSatis.FrontOffice
             calcGenelToplam.Value = Convert.ToDecimal(colToplamTutar.SummaryItem.SummaryValue) + (calcKdvToplam.Value) - calcIndirimTutari.Value;
             calcIndirimToplami.Value = Convert.ToDecimal(colIndirimTutar.SummaryItem.SummaryValue);
             txtAraToplam2.Value = calcGenelToplam.Value - (calcIndirimToplami.Value + calcKdvToplam.Value);
+
+            txtAraToplam.Value = calcGenelToplam.Value - (calcIndirimToplami.Value + calcKdvToplam.Value);
+
+
             //calcMaliyet.EditValue = Convert.ToDecimal(colMaliyetTutar.SummaryItem.SummaryValue);
             txtParaUstu.Value = txtOdenenTutar.Value - calcGenelToplam.Value;
             calcOdenemesiGereken.Value = calcGenelToplam.Value - calcOdenenTutar.Value;
@@ -1021,6 +1030,8 @@ namespace NetSatis.FrontOffice
             txtVergiDairesi.Text = null;
             txtVergiNo.Text = null;
             txtCepTel.Text = null;
+            txtSira.Text = null;
+            txtSeri.Text = null;
             txtIl.Text = null;
             txtIlce.Text = null;
             txtAciklama.Text = null;
@@ -1445,6 +1456,8 @@ namespace NetSatis.FrontOffice
             txtVergiDairesi.Text = null;
             txtVergiNo.Text = null;
             txtCepTel.Text = null;
+            txtSira.Text = null;
+            txtSeri.Text = null;
             txtMail.Text = null;
             txtIl.Text = null;
             txtIlce.Text = null;
@@ -1584,6 +1597,8 @@ namespace NetSatis.FrontOffice
             calcKdvToplam.EditValue = toplamKdvToplam;
             txtAraToplam2.EditValue = toplamAraToplam - toplamKdvToplam;
             txtAraToplam2.EditValue = toplamAraToplam;
+            txtAraToplam.EditValue = toplamAraToplam - toplamKdvToplam;
+            txtAraToplam.EditValue = toplamAraToplam;
             calcGenelToplam.EditValue = toplamGenelToplam;
             calcIndirimToplami.EditValue = toplamSatirIndirimTutari;
             calcOdenemesiGereken.EditValue = toplamGenelToplam - calcOdenenTutar.Value;
