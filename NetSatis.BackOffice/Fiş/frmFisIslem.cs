@@ -1763,6 +1763,7 @@ namespace NetSatis.BackOffice.Fiş
                 _fisentity.Aciklama = txtAciklama.Text;
                 _fisentity.EfaturaDurumu = false;
                 _fisentity.Sira = txtSira.Text;
+              
                 _fisentity.Seri = txtSeri.Text;
                 _fisentity.Tipi = cmbTipi.Text;
                 _fisentity.Proje = cmbProje.SelectedText;
