@@ -32,6 +32,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DataTable DTBilgiler = new DataTable();
             DTBilgiler.Columns.Add("CariAdiFaturaUnvan", typeof(string));
             DTBilgiler.Columns.Add("CariAdres", typeof(string));
+            DTBilgiler.Columns.Add("CariAciklama", typeof(string));
             DTBilgiler.Columns.Add("CariVergiDairesi", typeof(string));
             DTBilgiler.Columns.Add("CariVergiNo", typeof(string));
             DTBilgiler.Columns.Add("FaturaTarihi", typeof(global::System.DateTime));
@@ -56,6 +57,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             DataRow row = DTBilgiler.NewRow();
             row["CariAdiFaturaUnvan"] = fisBilgi.CariAdi + " " + fisBilgi.FaturaUnvani;
             row["CariAdres"] = fisBilgi.Adres;
+            row["CariAciklama"] = fisBilgi.Cari.Aciklama;
             row["CariIkamet"] = fisBilgi.Il + " " + fisBilgi.Ilce + " " + fisBilgi.Semt;
             row["CariVergiDairesi"] = fisBilgi.VergiDairesi;
             row["CariVergiNo"] = fisBilgi.VergiNo;
