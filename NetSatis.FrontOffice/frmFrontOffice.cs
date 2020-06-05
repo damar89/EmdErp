@@ -584,6 +584,7 @@ namespace NetSatis.FrontOffice
             _fisentity.Sira = txtSira.Text;
             _fisentity.Aciklama = txtAciklama.Text;
             _fisentity.FaturaUnvani = txtFaturaUnvani.Text;
+            _fisentity.CariAdi = lblCariAd.Text;
             _fisentity.CepTelefonu = txtCepTel.Text;
             _fisentity.Il = txtIl.Text;
             _fisentity.Ilce = txtIlce.Text;

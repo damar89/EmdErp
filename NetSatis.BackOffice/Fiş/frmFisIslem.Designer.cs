@@ -363,6 +363,7 @@
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.popupMenu3 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.colUretici = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
@@ -530,7 +531,7 @@
             this.colKarOrani.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Average, "KarOrani", "AVG=% {0:n2}")});
             this.colKarOrani.Visible = true;
-            this.colKarOrani.VisibleIndex = 12;
+            this.colKarOrani.VisibleIndex = 13;
             this.colKarOrani.Width = 58;
             // 
             // colMevcutStok
@@ -547,7 +548,7 @@
             this.colMevcutStok.Name = "colMevcutStok";
             this.colMevcutStok.OptionsColumn.AllowEdit = false;
             this.colMevcutStok.Visible = true;
-            this.colMevcutStok.VisibleIndex = 17;
+            this.colMevcutStok.VisibleIndex = 18;
             this.colMevcutStok.Width = 81;
             // 
             // ımageList2
@@ -2127,14 +2128,14 @@
             this.seçiliStoğunHareketleriToolStripMenuItem,
             this.btnTopluIskonto});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(254, 212);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(236, 212);
             this.contextMenuStrip1.Text = "Excel Fatura İşle";
             // 
             // excelFaturaİşleToolStripMenuItem
             // 
             this.excelFaturaİşleToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.exporttoxlsx_16x163;
             this.excelFaturaİşleToolStripMenuItem.Name = "excelFaturaİşleToolStripMenuItem";
-            this.excelFaturaİşleToolStripMenuItem.Size = new System.Drawing.Size(253, 26);
+            this.excelFaturaİşleToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.excelFaturaİşleToolStripMenuItem.Text = "Excelden Fatura İşle";
             this.excelFaturaİşleToolStripMenuItem.Click += new System.EventHandler(this.excelFaturaİşleToolStripMenuItem_Click);
             // 
@@ -2142,7 +2143,7 @@
             // 
             this.görünümüKaydetToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.saveas_16x16;
             this.görünümüKaydetToolStripMenuItem.Name = "görünümüKaydetToolStripMenuItem";
-            this.görünümüKaydetToolStripMenuItem.Size = new System.Drawing.Size(253, 26);
+            this.görünümüKaydetToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.görünümüKaydetToolStripMenuItem.Text = "Görünümü Kaydet";
             this.görünümüKaydetToolStripMenuItem.Click += new System.EventHandler(this.görünümüKaydetToolStripMenuItem_Click);
             // 
@@ -2150,7 +2151,7 @@
             // 
             this.seçiliStoğuDüzenleToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.edittask_16x16;
             this.seçiliStoğuDüzenleToolStripMenuItem.Name = "seçiliStoğuDüzenleToolStripMenuItem";
-            this.seçiliStoğuDüzenleToolStripMenuItem.Size = new System.Drawing.Size(253, 26);
+            this.seçiliStoğuDüzenleToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.seçiliStoğuDüzenleToolStripMenuItem.Text = "Seçili Stoğu Düzenle (F8)";
             this.seçiliStoğuDüzenleToolStripMenuItem.Click += new System.EventHandler(this.seçiliStoğuDüzenleToolStripMenuItem_Click);
             // 
@@ -2165,14 +2166,14 @@
             this.bilgiFişiYazdırToolStripMenuItem});
             this.yazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printdialog_16x16;
             this.yazdırToolStripMenuItem.Name = "yazdırToolStripMenuItem";
-            this.yazdırToolStripMenuItem.Size = new System.Drawing.Size(253, 26);
+            this.yazdırToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.yazdırToolStripMenuItem.Text = "Yazdır";
             // 
             // faturaYazdırToolStripMenuItem
             // 
             this.faturaYazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
             this.faturaYazdırToolStripMenuItem.Name = "faturaYazdırToolStripMenuItem";
-            this.faturaYazdırToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.faturaYazdırToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.faturaYazdırToolStripMenuItem.Text = "Fatura Yazdır";
             this.faturaYazdırToolStripMenuItem.Click += new System.EventHandler(this.faturaYazdırToolStripMenuItem_Click);
             // 
@@ -2180,7 +2181,7 @@
             // 
             this.proformaFaturaYazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
             this.proformaFaturaYazdırToolStripMenuItem.Name = "proformaFaturaYazdırToolStripMenuItem";
-            this.proformaFaturaYazdırToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.proformaFaturaYazdırToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.proformaFaturaYazdırToolStripMenuItem.Text = "Proforma Fatura Yazdır";
             this.proformaFaturaYazdırToolStripMenuItem.Click += new System.EventHandler(this.proformaFaturaYazdırToolStripMenuItem_Click);
             // 
@@ -2188,7 +2189,7 @@
             // 
             this.siparişYazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
             this.siparişYazdırToolStripMenuItem.Name = "siparişYazdırToolStripMenuItem";
-            this.siparişYazdırToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.siparişYazdırToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.siparişYazdırToolStripMenuItem.Text = "Sipariş Yazdır";
             this.siparişYazdırToolStripMenuItem.Click += new System.EventHandler(this.siparişYazdırToolStripMenuItem_Click);
             // 
@@ -2196,7 +2197,7 @@
             // 
             this.teklifYazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
             this.teklifYazdırToolStripMenuItem.Name = "teklifYazdırToolStripMenuItem";
-            this.teklifYazdırToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.teklifYazdırToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.teklifYazdırToolStripMenuItem.Text = "Teklif Yazdır";
             this.teklifYazdırToolStripMenuItem.Click += new System.EventHandler(this.teklifYazdırToolStripMenuItem_Click);
             // 
@@ -2204,7 +2205,7 @@
             // 
             this.irsaliyeYazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
             this.irsaliyeYazdırToolStripMenuItem.Name = "irsaliyeYazdırToolStripMenuItem";
-            this.irsaliyeYazdırToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.irsaliyeYazdırToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.irsaliyeYazdırToolStripMenuItem.Text = "İrsaliye Yazdır";
             this.irsaliyeYazdırToolStripMenuItem.Click += new System.EventHandler(this.irsaliyeYazdırToolStripMenuItem_Click);
             // 
@@ -2212,7 +2213,7 @@
             // 
             this.bilgiFişiYazdırToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
             this.bilgiFişiYazdırToolStripMenuItem.Name = "bilgiFişiYazdırToolStripMenuItem";
-            this.bilgiFişiYazdırToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.bilgiFişiYazdırToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.bilgiFişiYazdırToolStripMenuItem.Text = "Bilgi Fişi Yazdır";
             this.bilgiFişiYazdırToolStripMenuItem.Click += new System.EventHandler(this.bilgiFişiYazdırToolStripMenuItem_Click);
             // 
@@ -2220,7 +2221,7 @@
             // 
             this.exceleAktarToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.exporttoxls_16x16;
             this.exceleAktarToolStripMenuItem.Name = "exceleAktarToolStripMenuItem";
-            this.exceleAktarToolStripMenuItem.Size = new System.Drawing.Size(253, 26);
+            this.exceleAktarToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.exceleAktarToolStripMenuItem.Text = "Excele Aktar";
             this.exceleAktarToolStripMenuItem.Click += new System.EventHandler(this.exceleAktarToolStripMenuItem_Click);
             // 
@@ -2228,7 +2229,7 @@
             // 
             this.stokKartınıAçToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.newopportunities_16x16;
             this.stokKartınıAçToolStripMenuItem.Name = "stokKartınıAçToolStripMenuItem";
-            this.stokKartınıAçToolStripMenuItem.Size = new System.Drawing.Size(253, 26);
+            this.stokKartınıAçToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.stokKartınıAçToolStripMenuItem.Text = "Stok Seçim Ekranı (F10)";
             this.stokKartınıAçToolStripMenuItem.Click += new System.EventHandler(this.stokKartınıAçToolStripMenuItem_Click);
             // 
@@ -2236,7 +2237,7 @@
             // 
             this.seçiliStoğunHareketleriToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.newsales_16x16;
             this.seçiliStoğunHareketleriToolStripMenuItem.Name = "seçiliStoğunHareketleriToolStripMenuItem";
-            this.seçiliStoğunHareketleriToolStripMenuItem.Size = new System.Drawing.Size(253, 26);
+            this.seçiliStoğunHareketleriToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.seçiliStoğunHareketleriToolStripMenuItem.Text = "Seçili Stoğun Hareketleri (F12)";
             this.seçiliStoğunHareketleriToolStripMenuItem.Click += new System.EventHandler(this.seçiliStoğunHareketleriToolStripMenuItem_Click);
             // 
@@ -2244,7 +2245,7 @@
             // 
             this.btnTopluIskonto.Image = global::NetSatis.BackOffice.Properties.Resources.iconfinder_36_3319608;
             this.btnTopluIskonto.Name = "btnTopluIskonto";
-            this.btnTopluIskonto.Size = new System.Drawing.Size(253, 26);
+            this.btnTopluIskonto.Size = new System.Drawing.Size(235, 26);
             this.btnTopluIskonto.Text = "Toplu İskonto";
             this.btnTopluIskonto.Click += new System.EventHandler(this.btnTopluIskonto_Click);
             // 
@@ -2289,7 +2290,8 @@
             this.gridColumn1,
             this.colSatisFiyat,
             this.colKarOrani,
-            this.colMevcutStok});
+            this.colMevcutStok,
+            this.colUretici});
             this.gridStokHareket.CustomizationFormBounds = new System.Drawing.Rectangle(1104, 317, 260, 232);
             gridFormatRule1.Column = this.colKarOrani;
             gridFormatRule1.ColumnApplyTo = this.colKarOrani;
@@ -2387,7 +2389,7 @@
             this.colStokAdi.Name = "colStokAdi";
             this.colStokAdi.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Contains;
             this.colStokAdi.Visible = true;
-            this.colStokAdi.VisibleIndex = 3;
+            this.colStokAdi.VisibleIndex = 4;
             this.colStokAdi.Width = 178;
             // 
             // repobtnStokSec
@@ -2418,7 +2420,7 @@
             this.colBirimi.Name = "colBirimi";
             this.colBirimi.OptionsColumn.AllowEdit = false;
             this.colBirimi.Visible = true;
-            this.colBirimi.VisibleIndex = 4;
+            this.colBirimi.VisibleIndex = 5;
             this.colBirimi.Width = 43;
             // 
             // colMiktar
@@ -2438,7 +2440,7 @@
             this.colMiktar.FieldName = "Miktar";
             this.colMiktar.Name = "colMiktar";
             this.colMiktar.Visible = true;
-            this.colMiktar.VisibleIndex = 5;
+            this.colMiktar.VisibleIndex = 6;
             this.colMiktar.Width = 48;
             // 
             // repoMiktar
@@ -2468,7 +2470,7 @@
             this.colKdv.FieldName = "Kdv";
             this.colKdv.Name = "colKdv";
             this.colKdv.Visible = true;
-            this.colKdv.VisibleIndex = 6;
+            this.colKdv.VisibleIndex = 7;
             this.colKdv.Width = 34;
             // 
             // repoKdv
@@ -2499,7 +2501,7 @@
             this.colBirimFiyati.Name = "colBirimFiyati";
             this.colBirimFiyati.OptionsFilter.AllowFilter = false;
             this.colBirimFiyati.Visible = true;
-            this.colBirimFiyati.VisibleIndex = 7;
+            this.colBirimFiyati.VisibleIndex = 8;
             this.colBirimFiyati.Width = 71;
             // 
             // repoFiyat
@@ -2534,7 +2536,7 @@
             this.colIndirimOrani.FieldName = "IndirimOrani";
             this.colIndirimOrani.Name = "colIndirimOrani";
             this.colIndirimOrani.Visible = true;
-            this.colIndirimOrani.VisibleIndex = 8;
+            this.colIndirimOrani.VisibleIndex = 9;
             this.colIndirimOrani.Width = 37;
             // 
             // repoIskonto
@@ -2562,7 +2564,7 @@
             this.colIndirimOrani3.FieldName = "IndirimOrani3";
             this.colIndirimOrani3.Name = "colIndirimOrani3";
             this.colIndirimOrani3.Visible = true;
-            this.colIndirimOrani3.VisibleIndex = 10;
+            this.colIndirimOrani3.VisibleIndex = 11;
             this.colIndirimOrani3.Width = 37;
             // 
             // colIndirimOrani2
@@ -2580,7 +2582,7 @@
             this.colIndirimOrani2.FieldName = "IndirimOrani2";
             this.colIndirimOrani2.Name = "colIndirimOrani2";
             this.colIndirimOrani2.Visible = true;
-            this.colIndirimOrani2.VisibleIndex = 9;
+            this.colIndirimOrani2.VisibleIndex = 10;
             this.colIndirimOrani2.Width = 43;
             // 
             // colDepoKodu
@@ -2716,7 +2718,7 @@
             this.colIndirimTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colIndirimTutar", "SUM={0:C2}")});
             this.colIndirimTutar.Visible = true;
-            this.colIndirimTutar.VisibleIndex = 14;
+            this.colIndirimTutar.VisibleIndex = 15;
             this.colIndirimTutar.Width = 83;
             // 
             // colToplamTutar
@@ -2739,7 +2741,7 @@
             this.colToplamTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colToplamTutar", "SUM={0:C2}")});
             this.colToplamTutar.Visible = true;
-            this.colToplamTutar.VisibleIndex = 16;
+            this.colToplamTutar.VisibleIndex = 17;
             this.colToplamTutar.Width = 111;
             // 
             // rpsTutar
@@ -2803,7 +2805,7 @@
             this.colAraToplam.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "colAraToplam", "SUM={0:C2}")});
             this.colAraToplam.Visible = true;
-            this.colAraToplam.VisibleIndex = 15;
+            this.colAraToplam.VisibleIndex = 16;
             this.colAraToplam.Width = 91;
             // 
             // colKsizTutar
@@ -2942,7 +2944,7 @@
             this.colDipIskontoPayi.Name = "colDipIskontoPayi";
             this.colDipIskontoPayi.OptionsColumn.AllowEdit = false;
             this.colDipIskontoPayi.Visible = true;
-            this.colDipIskontoPayi.VisibleIndex = 13;
+            this.colDipIskontoPayi.VisibleIndex = 14;
             this.colDipIskontoPayi.Width = 69;
             // 
             // gridColumn1
@@ -2979,7 +2981,7 @@
             this.colSatisFiyat.FieldName = "SatisFiyati";
             this.colSatisFiyat.Name = "colSatisFiyat";
             this.colSatisFiyat.Visible = true;
-            this.colSatisFiyat.VisibleIndex = 11;
+            this.colSatisFiyat.VisibleIndex = 12;
             this.colSatisFiyat.Width = 63;
             // 
             // repositoryItemButtonEdit6
@@ -3818,6 +3820,18 @@
             this.popupMenu3.Manager = this.barManager1;
             this.popupMenu3.Name = "popupMenu3";
             // 
+            // colUretici
+            // 
+            this.colUretici.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colUretici.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colUretici.AppearanceHeader.Options.UseFont = true;
+            this.colUretici.AppearanceHeader.Options.UseForeColor = true;
+            this.colUretici.Caption = "Üretici";
+            this.colUretici.FieldName = "Stok.Uretici";
+            this.colUretici.Name = "colUretici";
+            this.colUretici.Visible = true;
+            this.colUretici.VisibleIndex = 3;
+            // 
             // frmFisIslem
             // 
             this.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
@@ -4252,5 +4266,6 @@
         private DevExpress.XtraEditors.ToggleSwitch toggleSatisFiyat;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private System.Windows.Forms.ToolStripMenuItem btnTopluIskonto;
+        private DevExpress.XtraGrid.Columns.GridColumn colUretici;
     }
 }
