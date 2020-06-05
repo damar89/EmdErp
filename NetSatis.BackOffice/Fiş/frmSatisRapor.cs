@@ -22,7 +22,7 @@ namespace NetSatis.BackOffice.Fiş
         {
             user = userId;
             InitializeComponent();
-            gridContFisler.DataSource = fisDal.ListelemelerTarih(context, "Perakende Satış Faturası", "Toptan Satış Faturası","Perakende Satış İrsaliyesi","Tahsilat Fişi","Ödeme Fişi","Masraf Fişi", baslangic, bitis);
+            gridContFisler.DataSource = fisDal.ListelemelerTarih(context, "Perakende Satış Faturası", "Toptan Satış Faturası","Perakende Satış İrsaliyesi","Tahsilat Fişi","Ödeme Fişi","Masraf Fişi","Satış İade Faturası", baslangic, bitis);
         }
 
         private void frmSatisRapor_Load(object sender, EventArgs e)

@@ -77,8 +77,8 @@
             this.btnEsktre = new DevExpress.XtraBars.BarButtonItem();
             this.btnHareketler = new DevExpress.XtraBars.BarButtonItem();
             this.brnCariDuzenle = new DevExpress.XtraBars.BarButtonItem();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -93,9 +93,10 @@
             this.groupControl1.Controls.Add(this.btnSec);
             this.groupControl1.Controls.Add(this.btnKapat);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 438);
+            this.groupControl1.Location = new System.Drawing.Point(0, 539);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1037, 57);
+            this.groupControl1.Size = new System.Drawing.Size(1383, 70);
             this.groupControl1.TabIndex = 7;
             // 
             // lblUyari
@@ -111,9 +112,10 @@
             this.lblUyari.Appearance.Options.UseTextOptions = true;
             this.lblUyari.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblUyari.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblUyari.Location = new System.Drawing.Point(12, 25);
+            this.lblUyari.Location = new System.Drawing.Point(16, 31);
+            this.lblUyari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblUyari.Name = "lblUyari";
-            this.lblUyari.Size = new System.Drawing.Size(476, 27);
+            this.lblUyari.Size = new System.Drawing.Size(635, 33);
             this.lblUyari.TabIndex = 6;
             this.lblUyari.Text = "Çoklu Seçim Yapabilmek İçin CTRL Tuşuna Basılı Tutarak Seçim Yapınız..";
             this.lblUyari.UseMnemonic = false;
@@ -133,9 +135,10 @@
             this.btnSec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSec.ImageOptions.ImageIndex = 0;
             this.btnSec.ImageOptions.ImageList = this.ımageList1;
-            this.btnSec.Location = new System.Drawing.Point(856, 23);
+            this.btnSec.Location = new System.Drawing.Point(1141, 28);
+            this.btnSec.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSec.Name = "btnSec";
-            this.btnSec.Size = new System.Drawing.Size(85, 31);
+            this.btnSec.Size = new System.Drawing.Size(113, 38);
             this.btnSec.TabIndex = 5;
             this.btnSec.Text = "Seç";
             this.btnSec.Click += new System.EventHandler(this.btnSec_Click);
@@ -145,9 +148,10 @@
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.ImageIndex = 3;
             this.btnKapat.ImageOptions.ImageList = this.ımageList1;
-            this.btnKapat.Location = new System.Drawing.Point(947, 23);
+            this.btnKapat.Location = new System.Drawing.Point(1263, 28);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(85, 31);
+            this.btnKapat.Size = new System.Drawing.Size(113, 38);
             this.btnKapat.TabIndex = 5;
             this.btnKapat.Text = "Kapat";
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
@@ -155,10 +159,12 @@
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1037, 438);
+            this.gridControl1.Size = new System.Drawing.Size(1383, 539);
             this.gridControl1.TabIndex = 8;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -198,7 +204,8 @@
             this.colAlacak,
             this.colBorc,
             this.colBakiye});
-            this.gridView1.CustomizationFormBounds = new System.Drawing.Rectangle(876, 462, 216, 180);
+            this.gridView1.CustomizationFormBounds = new System.Drawing.Rectangle(876, 462, 288, 222);
+            this.gridView1.DetailHeight = 431;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
@@ -208,201 +215,243 @@
             // colId
             // 
             this.colId.FieldName = "Id";
+            this.colId.MinWidth = 27;
             this.colId.Name = "colId";
             this.colId.OptionsColumn.AllowEdit = false;
             this.colId.OptionsColumn.ShowInCustomizationForm = false;
+            this.colId.Width = 100;
             // 
             // colDurum
             // 
             this.colDurum.Caption = "Durum";
             this.colDurum.FieldName = "Durum";
+            this.colDurum.MinWidth = 27;
             this.colDurum.Name = "colDurum";
             this.colDurum.OptionsColumn.AllowEdit = false;
             this.colDurum.Visible = true;
             this.colDurum.VisibleIndex = 0;
-            this.colDurum.Width = 64;
+            this.colDurum.Width = 85;
             // 
             // colCariTuru
             // 
             this.colCariTuru.Caption = "Cari Türü";
             this.colCariTuru.FieldName = "CariTuru";
+            this.colCariTuru.MinWidth = 27;
             this.colCariTuru.Name = "colCariTuru";
             this.colCariTuru.OptionsColumn.AllowEdit = false;
             this.colCariTuru.Visible = true;
             this.colCariTuru.VisibleIndex = 1;
-            this.colCariTuru.Width = 78;
+            this.colCariTuru.Width = 104;
             // 
             // colCariKodu
             // 
             this.colCariKodu.Caption = "Cari Kodu";
             this.colCariKodu.FieldName = "CariKodu";
+            this.colCariKodu.MinWidth = 27;
             this.colCariKodu.Name = "colCariKodu";
             this.colCariKodu.OptionsColumn.AllowEdit = false;
             this.colCariKodu.Visible = true;
             this.colCariKodu.VisibleIndex = 2;
-            this.colCariKodu.Width = 93;
+            this.colCariKodu.Width = 124;
             // 
             // colCariAdi
             // 
             this.colCariAdi.Caption = "Cari Adı";
             this.colCariAdi.FieldName = "CariAdi";
+            this.colCariAdi.MinWidth = 27;
             this.colCariAdi.Name = "colCariAdi";
             this.colCariAdi.OptionsColumn.AllowEdit = false;
             this.colCariAdi.Visible = true;
             this.colCariAdi.VisibleIndex = 3;
-            this.colCariAdi.Width = 178;
+            this.colCariAdi.Width = 237;
             // 
             // colYetkiliKisi
             // 
             this.colYetkiliKisi.Caption = "Yetkili Kişi";
             this.colYetkiliKisi.FieldName = "YetkiliKisi";
+            this.colYetkiliKisi.MinWidth = 27;
             this.colYetkiliKisi.Name = "colYetkiliKisi";
             this.colYetkiliKisi.OptionsColumn.AllowEdit = false;
+            this.colYetkiliKisi.Width = 100;
             // 
             // colFaturaUnvani
             // 
             this.colFaturaUnvani.Caption = "Fatura Ünvanı";
             this.colFaturaUnvani.FieldName = "FaturaUnvani";
+            this.colFaturaUnvani.MinWidth = 27;
             this.colFaturaUnvani.Name = "colFaturaUnvani";
             this.colFaturaUnvani.OptionsColumn.AllowEdit = false;
             this.colFaturaUnvani.Visible = true;
             this.colFaturaUnvani.VisibleIndex = 4;
-            this.colFaturaUnvani.Width = 135;
+            this.colFaturaUnvani.Width = 180;
             // 
             // colCepTelefonu
             // 
             this.colCepTelefonu.Caption = "Cep Telefonu";
             this.colCepTelefonu.FieldName = "CepTelefonu";
+            this.colCepTelefonu.MinWidth = 27;
             this.colCepTelefonu.Name = "colCepTelefonu";
             this.colCepTelefonu.OptionsColumn.AllowEdit = false;
             this.colCepTelefonu.Visible = true;
             this.colCepTelefonu.VisibleIndex = 5;
-            this.colCepTelefonu.Width = 62;
+            this.colCepTelefonu.Width = 83;
             // 
             // colTelefon
             // 
             this.colTelefon.Caption = "Telefon";
             this.colTelefon.FieldName = "Telefon";
+            this.colTelefon.MinWidth = 27;
             this.colTelefon.Name = "colTelefon";
             this.colTelefon.OptionsColumn.AllowEdit = false;
+            this.colTelefon.Width = 100;
             // 
             // colFax
             // 
             this.colFax.Caption = "Fax";
             this.colFax.FieldName = "Fax";
+            this.colFax.MinWidth = 27;
             this.colFax.Name = "colFax";
             this.colFax.OptionsColumn.AllowEdit = false;
+            this.colFax.Width = 100;
             // 
             // colEMail
             // 
             this.colEMail.Caption = "E-Mail";
             this.colEMail.FieldName = "EMail";
+            this.colEMail.MinWidth = 27;
             this.colEMail.Name = "colEMail";
             this.colEMail.OptionsColumn.AllowEdit = false;
+            this.colEMail.Width = 100;
             // 
             // colWeb
             // 
             this.colWeb.Caption = "Web";
             this.colWeb.FieldName = "Web";
+            this.colWeb.MinWidth = 27;
             this.colWeb.Name = "colWeb";
             this.colWeb.OptionsColumn.AllowEdit = false;
+            this.colWeb.Width = 100;
             // 
             // colAdres
             // 
             this.colAdres.Caption = "Adres";
             this.colAdres.FieldName = "Adres";
+            this.colAdres.MinWidth = 27;
             this.colAdres.Name = "colAdres";
             this.colAdres.OptionsColumn.AllowEdit = false;
+            this.colAdres.Width = 100;
             // 
             // colIl
             // 
             this.colIl.Caption = "İl";
             this.colIl.FieldName = "Il";
+            this.colIl.MinWidth = 27;
             this.colIl.Name = "colIl";
             this.colIl.OptionsColumn.AllowEdit = false;
             this.colIl.Visible = true;
             this.colIl.VisibleIndex = 6;
-            this.colIl.Width = 66;
+            this.colIl.Width = 88;
             // 
             // colIlce
             // 
             this.colIlce.Caption = "İlçe";
             this.colIlce.FieldName = "Ilce";
+            this.colIlce.MinWidth = 27;
             this.colIlce.Name = "colIlce";
             this.colIlce.OptionsColumn.AllowEdit = false;
             this.colIlce.Visible = true;
             this.colIlce.VisibleIndex = 7;
-            this.colIlce.Width = 61;
+            this.colIlce.Width = 81;
             // 
             // colSemt
             // 
             this.colSemt.Caption = "Semt";
             this.colSemt.FieldName = "Semt";
+            this.colSemt.MinWidth = 27;
             this.colSemt.Name = "colSemt";
             this.colSemt.OptionsColumn.AllowEdit = false;
+            this.colSemt.Width = 100;
             // 
             // colCariGrubu
             // 
             this.colCariGrubu.Caption = "Cari Grubu";
             this.colCariGrubu.FieldName = "CariGrubu";
+            this.colCariGrubu.MinWidth = 27;
             this.colCariGrubu.Name = "colCariGrubu";
             this.colCariGrubu.OptionsColumn.AllowEdit = false;
+            this.colCariGrubu.Width = 100;
             // 
             // colCariAltGrubu
             // 
             this.colCariAltGrubu.Caption = "Cari Alt Grubu";
             this.colCariAltGrubu.FieldName = "CariAltGrubu";
+            this.colCariAltGrubu.MinWidth = 27;
             this.colCariAltGrubu.Name = "colCariAltGrubu";
             this.colCariAltGrubu.OptionsColumn.AllowEdit = false;
+            this.colCariAltGrubu.Width = 100;
             // 
             // colOzelKod1
             // 
             this.colOzelKod1.Caption = "Özel Kod1";
             this.colOzelKod1.FieldName = "OzelKod1";
+            this.colOzelKod1.MinWidth = 27;
             this.colOzelKod1.Name = "colOzelKod1";
             this.colOzelKod1.OptionsColumn.AllowEdit = false;
+            this.colOzelKod1.Width = 100;
             // 
             // colOzelKod2
             // 
             this.colOzelKod2.Caption = "Özel Kod2";
             this.colOzelKod2.FieldName = "OzelKod2";
+            this.colOzelKod2.MinWidth = 27;
             this.colOzelKod2.Name = "colOzelKod2";
             this.colOzelKod2.OptionsColumn.AllowEdit = false;
+            this.colOzelKod2.Width = 100;
             // 
             // colOzelKod3
             // 
             this.colOzelKod3.Caption = "Özel Kod3";
             this.colOzelKod3.FieldName = "OzelKod3";
+            this.colOzelKod3.MinWidth = 27;
             this.colOzelKod3.Name = "colOzelKod3";
             this.colOzelKod3.OptionsColumn.AllowEdit = false;
+            this.colOzelKod3.Width = 100;
             // 
             // colOzelKod4
             // 
             this.colOzelKod4.Caption = "Özel Kod4";
             this.colOzelKod4.FieldName = "OzelKod4";
+            this.colOzelKod4.MinWidth = 27;
             this.colOzelKod4.Name = "colOzelKod4";
             this.colOzelKod4.OptionsColumn.AllowEdit = false;
+            this.colOzelKod4.Width = 100;
             // 
             // colVergiDairesi
             // 
             this.colVergiDairesi.Caption = "Vergi Dairesi";
             this.colVergiDairesi.FieldName = "VergiDairesi";
+            this.colVergiDairesi.MinWidth = 27;
             this.colVergiDairesi.Name = "colVergiDairesi";
             this.colVergiDairesi.OptionsColumn.AllowEdit = false;
+            this.colVergiDairesi.Width = 100;
             // 
             // colVergiNo
             // 
             this.colVergiNo.Caption = "Vergi No";
             this.colVergiNo.FieldName = "VergiNo";
+            this.colVergiNo.MinWidth = 27;
             this.colVergiNo.Name = "colVergiNo";
             this.colVergiNo.OptionsColumn.AllowEdit = false;
+            this.colVergiNo.Width = 100;
             // 
             // colIskontoOrani
             // 
             this.colIskontoOrani.Caption = "İskonto Oranı";
             this.colIskontoOrani.FieldName = "IskontoOrani";
+            this.colIskontoOrani.MinWidth = 27;
             this.colIskontoOrani.Name = "colIskontoOrani";
             this.colIskontoOrani.OptionsColumn.AllowEdit = false;
+            this.colIskontoOrani.Width = 100;
             // 
             // colRiskLimiti
             // 
@@ -410,11 +459,12 @@
             this.colRiskLimiti.DisplayFormat.FormatString = "C2";
             this.colRiskLimiti.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colRiskLimiti.FieldName = "RiskLimiti";
+            this.colRiskLimiti.MinWidth = 27;
             this.colRiskLimiti.Name = "colRiskLimiti";
             this.colRiskLimiti.OptionsColumn.AllowEdit = false;
             this.colRiskLimiti.Visible = true;
             this.colRiskLimiti.VisibleIndex = 8;
-            this.colRiskLimiti.Width = 61;
+            this.colRiskLimiti.Width = 81;
             // 
             // colAlisOzelFiyati
             // 
@@ -422,8 +472,10 @@
             this.colAlisOzelFiyati.DisplayFormat.FormatString = "C2";
             this.colAlisOzelFiyati.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colAlisOzelFiyati.FieldName = "AlisOzelFiyati";
+            this.colAlisOzelFiyati.MinWidth = 27;
             this.colAlisOzelFiyati.Name = "colAlisOzelFiyati";
             this.colAlisOzelFiyati.OptionsColumn.AllowEdit = false;
+            this.colAlisOzelFiyati.Width = 100;
             // 
             // colSatisOzelFiyati
             // 
@@ -431,15 +483,19 @@
             this.colSatisOzelFiyati.DisplayFormat.FormatString = "C2";
             this.colSatisOzelFiyati.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSatisOzelFiyati.FieldName = "SatisOzelFiyati";
+            this.colSatisOzelFiyati.MinWidth = 27;
             this.colSatisOzelFiyati.Name = "colSatisOzelFiyati";
             this.colSatisOzelFiyati.OptionsColumn.AllowEdit = false;
+            this.colSatisOzelFiyati.Width = 100;
             // 
             // colAciklama
             // 
             this.colAciklama.Caption = "Açıklama";
             this.colAciklama.FieldName = "Aciklama";
+            this.colAciklama.MinWidth = 27;
             this.colAciklama.Name = "colAciklama";
             this.colAciklama.OptionsColumn.AllowEdit = false;
+            this.colAciklama.Width = 100;
             // 
             // colAlacak
             // 
@@ -447,11 +503,12 @@
             this.colAlacak.DisplayFormat.FormatString = "C2";
             this.colAlacak.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colAlacak.FieldName = "Alacak";
+            this.colAlacak.MinWidth = 27;
             this.colAlacak.Name = "colAlacak";
             this.colAlacak.OptionsColumn.AllowEdit = false;
             this.colAlacak.Visible = true;
             this.colAlacak.VisibleIndex = 9;
-            this.colAlacak.Width = 66;
+            this.colAlacak.Width = 88;
             // 
             // colBorc
             // 
@@ -459,11 +516,12 @@
             this.colBorc.DisplayFormat.FormatString = "C2";
             this.colBorc.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colBorc.FieldName = "Borc";
+            this.colBorc.MinWidth = 27;
             this.colBorc.Name = "colBorc";
             this.colBorc.OptionsColumn.AllowEdit = false;
             this.colBorc.Visible = true;
             this.colBorc.VisibleIndex = 10;
-            this.colBorc.Width = 72;
+            this.colBorc.Width = 96;
             // 
             // colBakiye
             // 
@@ -471,11 +529,12 @@
             this.colBakiye.DisplayFormat.FormatString = "C2";
             this.colBakiye.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colBakiye.FieldName = "Bakiye";
+            this.colBakiye.MinWidth = 27;
             this.colBakiye.Name = "colBakiye";
             this.colBakiye.OptionsColumn.AllowEdit = false;
             this.colBakiye.Visible = true;
             this.colBakiye.VisibleIndex = 11;
-            this.colBakiye.Width = 83;
+            this.colBakiye.Width = 111;
             // 
             // barManager1
             // 
@@ -497,15 +556,17 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1037, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1383, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 495);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 609);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1037, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1383, 0);
             // 
             // barDockControlLeft
             // 
@@ -513,15 +574,17 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 495);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 609);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1037, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(1383, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 495);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 609);
             // 
             // btnEsktre
             // 
@@ -549,15 +612,6 @@
             this.brnCariDuzenle.Name = "brnCariDuzenle";
             this.brnCariDuzenle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.brnCariDuzenle_ItemClick);
             // 
-            // popupMenu1
-            // 
-            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketler),
-            new DevExpress.XtraBars.LinkPersistInfo(this.brnCariDuzenle),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1)});
-            this.popupMenu1.Manager = this.barManager1;
-            this.popupMenu1.Name = "popupMenu1";
-            // 
             // barButtonItem1
             // 
             this.barButtonItem1.Caption = "Dizaynı Kaydet";
@@ -567,11 +621,20 @@
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
+            // popupMenu1
+            // 
+            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketler),
+            new DevExpress.XtraBars.LinkPersistInfo(this.brnCariDuzenle),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1)});
+            this.popupMenu1.Manager = this.barManager1;
+            this.popupMenu1.Name = "popupMenu1";
+            // 
             // frmCariSec
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1037, 495);
+            this.ClientSize = new System.Drawing.Size(1383, 609);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.barDockControlLeft);
@@ -580,13 +643,13 @@
             this.Controls.Add(this.barDockControlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCariSec";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cari Seç";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCariSec_FormClosing);
             this.Load += new System.EventHandler(this.frmCariSec_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmCariSec_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

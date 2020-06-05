@@ -137,11 +137,6 @@ namespace NetSatis.BackOffice.Cari
             if (File.Exists(DosyaYolu)) gridControl1.MainView.RestoreLayoutFromXml(DosyaYolu);
         }
 
-        private void frmCariSec_FormClosing(object sender, FormClosingEventArgs e)
-        {
-          
-        }
-
         private void brnCariDuzenle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             try
