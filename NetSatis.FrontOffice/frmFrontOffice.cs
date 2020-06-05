@@ -957,7 +957,7 @@ namespace NetSatis.FrontOffice
                     stokHareket.Miktar = Convert.ToDecimal(textBox1.Text.Replace(".", ","));
                 }
                 else
-                {
+                { 
                     stokHareket.Miktar = calcMiktar.Value;
                 }
             }
@@ -2001,6 +2001,11 @@ namespace NetSatis.FrontOffice
         {
             frmMaliyet frm = new frmMaliyet();
             frm.ShowDialog();
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            context.Stoklar.Load();
         }
     }
 }
