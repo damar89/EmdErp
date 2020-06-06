@@ -385,7 +385,7 @@ namespace NetSatis.Entities.Data_Access
                              AnaGrupAdi = s.AnaGrupAdi,
                              SatisKdv = s.SatisKdv,
                              OzelKodu = s.OzelKodu,
-                             Proje=s.Proje,
+                             Proje = s.Proje,
                              SatisFiyati1 = s.SatisFiyati1,
                              SatisFiyati2 = s.SatisFiyati2,
                              StokGiris = StokGiris(s.SHareket),
@@ -455,6 +455,6 @@ namespace NetSatis.Entities.Data_Access
             return sonuc;
         }
 
-        #endregion
+        #endregion 
     }
 }

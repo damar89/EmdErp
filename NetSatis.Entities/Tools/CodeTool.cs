@@ -95,8 +95,8 @@ namespace NetSatis.Entities.Tools
 
         public void Buton_Click(object sender, ItemClickEventArgs e)
         {
-            
-            TextEdit text = (TextEdit)_form.Controls.Find("txtKod", true).SingleOrDefault(); 
+
+            TextEdit text = (TextEdit)_form.Controls.Find("txtKod", true).SingleOrDefault();
             text.Text = e.Item.Caption;
         }
 
@@ -125,7 +125,7 @@ namespace NetSatis.Entities.Tools
             x.SonDeger++;
             _context.SaveChanges();
         }
-    
+
         public static string fiskodolustur(string OnEki, string Kod)
         {
             int OnEkiUzunluk = OnEki.Length;
@@ -140,20 +140,38 @@ namespace NetSatis.Entities.Tools
 
             return OnEki + SifirDizisi + Kod;
         }
-        public static string Barkodulustur(string OnEki, string Kod)
+
+        static Context.NetSatisContext context = new NetSatisContext();
+        public static string Barkodulustur(string OnEki = "2222", string Kod = "90", string donguBarkodu = null)
         {
             int OnEkiUzunluk = OnEki.Length;
             int KodUzunluk = Kod.Length;
             int KalanKArakter = 13 - (OnEkiUzunluk + KodUzunluk);
             string SifirDizisi = null;
-            for (int i = 0; i < KalanKArakter; i++)
-            {
-                SifirDizisi += "0";
 
+            var result = string.Empty;
+            if (string.IsNullOrEmpty(donguBarkodu))
+            {
+                for (int i = 0; i < KalanKArakter; i++)
+                {
+                    SifirDizisi += "0";
+                }
+                result = OnEki + SifirDizisi + Kod;
+            }
+            else
+            {
+                var deger = Convert.ToDecimal(donguBarkodu);
+                deger++;
+                result = deger.ToString();
             }
 
-            return OnEki + SifirDizisi + Kod;
+            var r = context.Barkodlar.Any(x => x.Barkodu.Equals(result)) || context.Stoklar.Any(x => x.Barkodu.Equals(result));
+            if (r)
+                return Barkodulustur(donguBarkodu: result);
+
+            return result;
         }
+
         //public static string ToptanFisKodOlustur(string OnEki, string Kod)
         //{
         //    int OnEkiUzunluk = OnEki.Length;

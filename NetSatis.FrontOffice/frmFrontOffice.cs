@@ -354,17 +354,23 @@ namespace NetSatis.FrontOffice
                 return;
             }
 
-            if (string.IsNullOrEmpty(lblCariName.Text))
+            if (string.IsNullOrEmpty(lblCariKod.Text) || lblCariKod.Text == "VRS001")
             {
                 var dr = MessageBox.Show("Ödenmesi Gereken Tutar Ödenmemiş Görünüyor. Ödenmeyen tutarı açık hesaba aktarabilmek için cari seçimi yapınız", "Cari Seç", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (dr == DialogResult.No)
                     return;
-                // btnCariAc.PerformClick();
+
                 btnCariAc_Click(null, null);
 
-                if (string.IsNullOrEmpty(lblCariName.Text))
+                if (string.IsNullOrEmpty(lblCariKod.Text))
                     return;
+                if (lblCariKod.Text == "VRS001")
+                {
+                    MessageBox.Show("Açık hesap için VRS001 Carisini seçemezsiniz!", "Farklı bir Cari Seç", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    AcikHesap_Click(sender, e);
+                    return;
+                }
             }
 
 
@@ -383,7 +389,7 @@ namespace NetSatis.FrontOffice
                 {
                     FisiKaydet(ReportsPrintTool.Belge.BilgiFisi);
                 }
-                else if(Soru==DialogResult.Cancel)
+                else if (Soru == DialogResult.Cancel)
                 {
                     return;
                 }
@@ -429,7 +435,7 @@ namespace NetSatis.FrontOffice
                 }
                 else if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.BilgiFisi_BilgiFisiYazdirilsinmi)) && (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.BilgiFisi_BilgiFisiSorulsunmu))))
                 {
-                    Soru = MessageBox.Show("Bilgi Fişi Yazdırmak İster isiniz ?", "Uyarı", MessageBoxButtons.YesNoCancel,MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                    Soru = MessageBox.Show("Bilgi Fişi Yazdırmak İster isiniz ?", "Uyarı", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                     if (Soru == DialogResult.Yes)
                     {
                         FisiKaydet(ReportsPrintTool.Belge.BilgiFisi);
@@ -688,6 +694,9 @@ namespace NetSatis.FrontOffice
             txtIslem.BackColor = Color.Green;
             txtIslem.ForeColor = Color.White;
             odemeTuruId = 0;
+
+            VeresiyeCarisiniYerlestir();
+
         }
         private void OdenenTutarGuncelle()
         {
@@ -965,7 +974,7 @@ namespace NetSatis.FrontOffice
                     stokHareket.Miktar = Convert.ToDecimal(textBox1.Text.Replace(".", ","));
                 }
                 else
-                { 
+                {
                     stokHareket.Miktar = calcMiktar.Value;
                 }
             }
@@ -1199,9 +1208,21 @@ namespace NetSatis.FrontOffice
                 fisNo = ayar.HizliSatisSiradakiNo;
             }
             navigationPane1.Dock = DockStyle.Right;
+
+            VeresiyeCarisiniYerlestir();
+
+
             //txtKod.Text =
             //    CodeTool.fiskodolustur(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_PesFisOnEki), SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_PesFisKodu));
         }
+
+        private void VeresiyeCarisiniYerlestir()
+        {
+            //VRS001 Carisini Yükleme işlemi
+            var _c = context.Cariler.FirstOrDefault(x => x.CariKodu == "VRS001");
+            CariyiYerlestir(_c);
+        }
+
         private void gridStokHareket_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
             //calcMaliyet.EditValue = Convert.ToDecimal(colMaliyetTutar.SummaryItem.SummaryValue);
@@ -1344,29 +1365,37 @@ namespace NetSatis.FrontOffice
             form.ShowDialog();
             if (form.secildi)
             {
-                Entities.Tables.Cari entity = form.secilen.FirstOrDefault();
-                _entityBakiye = this.cariDal.cariBakiyesi(context, entity.Id);
-                _cariId = entity.Id;
-                _fisentity.CariId = entity.Id;
-                lblCariKod.Text = entity.CariKodu;
-                lblCariAd.Text = entity.CariAdi;
-                lblCariName.Text = entity.CariAdi;
-                txtFaturaUnvani.Text = entity.FaturaUnvani;
-                txtVergiDairesi.Text = entity.VergiDairesi;
-                txtVergiNo.Text = entity.VergiNo;
-                txtMail.Text = _fisentity.EMail;
-                txtCepTel.Text = entity.CepTelefonu;
-                txtIl.Text = entity.Il;
-                txtIlce.Text = entity.Ilce;
-                txtAdres.Text = entity.Adres;
-                txtSemt.Text = entity.Semt;
-                lblRiskLimiti.Text = _entityBakiye.RiskLimiti.ToString("C2");
-                lblAlacak.Text = _entityBakiye.Alacak.ToString("C2");
-                lblBorc.Text = _entityBakiye.Borc.ToString("C2");
-                lblBakiye.Text = _entityBakiye.Bakiye.ToString("C2");
+                CariyiYerlestir(form.secilen.FirstOrDefault());
             }
             txtBarkod.Focus();
         }
+
+        private void CariyiYerlestir(Cari entity)
+        {
+            if (entity == null)
+                return;
+
+            _entityBakiye = this.cariDal.cariBakiyesi(context, entity.Id);
+            _cariId = entity.Id;
+            _fisentity.CariId = entity.Id;
+            lblCariKod.Text = entity.CariKodu;
+            lblCariAd.Text = entity.CariAdi;
+            lblCariName.Text = entity.CariAdi;
+            txtFaturaUnvani.Text = entity.FaturaUnvani;
+            txtVergiDairesi.Text = entity.VergiDairesi;
+            txtVergiNo.Text = entity.VergiNo;
+            txtMail.Text = _fisentity.EMail;
+            txtCepTel.Text = entity.CepTelefonu;
+            txtIl.Text = entity.Il;
+            txtIlce.Text = entity.Ilce;
+            txtAdres.Text = entity.Adres;
+            txtSemt.Text = entity.Semt;
+            lblRiskLimiti.Text = _entityBakiye.RiskLimiti.ToString("C2");
+            lblAlacak.Text = _entityBakiye.Alacak.ToString("C2");
+            lblBorc.Text = _entityBakiye.Borc.ToString("C2");
+            lblBakiye.Text = _entityBakiye.Bakiye.ToString("C2");
+        }
+
         private void btnKasaRpr_Click(object sender, EventArgs e)
         {
             frmKasaTarih form = new frmKasaTarih();

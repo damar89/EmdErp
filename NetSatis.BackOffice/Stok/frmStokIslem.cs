@@ -756,7 +756,7 @@ namespace NetSatis.BackOffice.Stok
         }
         private void btnBarkodOlustur_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            gridBarkod.BarkodEkle(colBarkod);
+           
         }
         private void frmStokIslem_Shown(object sender, EventArgs e)
         {
@@ -1176,8 +1176,19 @@ namespace NetSatis.BackOffice.Stok
             ComboboxEditDataBindingTanimlar(btnOzelKod, frmTanim.TanimTuru.OzelKod);
 
         }
+
         #endregion
 
-
+        private void groupControl1_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
+        {
+            if(e.Button.Properties.Caption.Equals("Barkod Oluştur"))
+            {
+                //var _cBarkod = new Barkod();
+                //_cBarkod.Barkodu= 
+                    gridBarkod.BarkodEkle(colBarkod);
+                //context.Barkodlar.Local.Add(_cBarkod)
+                
+            }
+        }
     }
 }
