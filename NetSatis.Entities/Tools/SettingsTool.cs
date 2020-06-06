@@ -48,8 +48,8 @@ namespace NetSatis.Entities.Tools
             IrsaliyeDizayn_DosyaYolu3,
             ProFaturaDizayn_DosyaAdi4,
             ProFaturaDizayn_DosyaYolu4,
-          TahsilatDizayn_DosyaAdi5,
-         TahsilatDizayn_DosyaYolu5,
+            TahsilatDizayn_DosyaAdi5,
+            TahsilatDizayn_DosyaYolu5,
             BilgiFisiDizayn_DosyaAdi6,
             BilgiFisiDizayn_DosyaYolu6,
             SatisStok_EksiyeDusme,
@@ -66,7 +66,7 @@ namespace NetSatis.Entities.Tools
             DolarKur_Euro,
             DolarKur_Rub,
             Lisans_LisansKey
-           
+
 
 
 
@@ -121,7 +121,7 @@ namespace NetSatis.Entities.Tools
         public static void Save()
         {
             parser.WriteFile(dosyaAdi, data);
-        
+
         }
     }
 }

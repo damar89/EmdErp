@@ -13,9 +13,18 @@ namespace NetSatis.BackOffice.Cari
         private NetSatisContext context = new NetSatisContext();
         public bool saved = false;
         private CodeTool kodOlustur;
+        bool guncelle = false;
         public frmCariIslem(Entities.Tables.Cari entity, bool kopyala = false)
         {
             InitializeComponent();
+            if (entity.Id != 0)
+            {
+                guncelle = true;
+            }
+            if (entity.CariKodu != null)
+            {
+                guncelle = true;
+            }
             kodOlustur = new CodeTool(this, CodeTool.Table.Cari);
             kodOlustur.BarButonOlustur();
             if (kopyala)
@@ -145,7 +154,14 @@ namespace NetSatis.BackOffice.Cari
         {
             //txtCariKodu.Text = _entity.Id==0?
             //    CodeTool.KodOlustur("CK", SettingsTool.AyarOku(SettingsTool.Ayarlar.CariAyarlari_CariKodu)):_entity.CariKodu;
-            togDurum.EditValue = true;
+            if (guncelle == true)
+            {
+                togDurum.EditValue = _entity.Durum;
+            }
+            else
+            {
+                togDurum.EditValue = true;
+            }
         }
         private void txtCariGrubu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {

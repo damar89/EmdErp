@@ -182,7 +182,9 @@ namespace NetSatis.BackOffice.Ayarlar
                 SettingsTool.AyarDegistir(SettingsTool.Ayarlar.DolarKur_Rub, calcRub.Text.ToString());
 
                 SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisAyarlari_FaturaYazici, cmbFaturaYazici.Text);
+
                 SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisAyarlari_BilgiFisiYazici, cmbFisYazici.Text);
+
                 SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisAyarlari_TeraziPort, comboBox1.Text);
 
 
@@ -226,18 +228,18 @@ namespace NetSatis.BackOffice.Ayarlar
 
 
 
-            try
-            {
-                string str = lookTahsilat.GetColumnValue("Path")?.ToString();
-                if (!string.IsNullOrEmpty(str))
-                {
-                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.FaturaDizayn_DosyaAdi, lookTahsilat.GetColumnValue("FileName").ToString());
-                    SettingsTool.AyarDegistir(SettingsTool.Ayarlar.FaturaDizayn_DosyaYolu, lookTahsilat.GetColumnValue("Path")?.ToString());
-                }
-            }
-            catch (Exception)
-            {
-            }
+            //try
+            //{
+            //    string str = lookTahsilat.GetColumnValue("Path")?.ToString();
+            //    if (!string.IsNullOrEmpty(str))
+            //    {
+            //        SettingsTool.AyarDegistir(SettingsTool.Ayarlar.FaturaDizayn_DosyaAdi, lookTahsilat.GetColumnValue("FileName").ToString());
+            //        SettingsTool.AyarDegistir(SettingsTool.Ayarlar.FaturaDizayn_DosyaYolu, lookTahsilat.GetColumnValue("Path")?.ToString());
+            //    }
+            //}
+            //catch (Exception)
+            //{
+            //}
 
             try
             {

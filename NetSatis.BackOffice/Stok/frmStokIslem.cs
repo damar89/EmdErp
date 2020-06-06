@@ -279,9 +279,17 @@ namespace NetSatis.BackOffice.Stok
                     layZirai.Visibility =
                     layMera.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             }
+            if (guncelle==true)
+            {
+                togDurum.EditValue = _entity.Durumu;
+            }
+            else
+            {
+                togDurum.EditValue = true;
+            }
             //txtStokKodu.Text = _entity.Id == 0 ?
             //    CodeTool.KodOlustur("ST", SettingsTool.AyarOku(SettingsTool.Ayarlar.StokAyarlari_StokKodu)) : _entity.StokKodu;
-            togDurum.EditValue = true;
+         
             //togWeb.EditValue = false;
             txtKod.Focus();
         }

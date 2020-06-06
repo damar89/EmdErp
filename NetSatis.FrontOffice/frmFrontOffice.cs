@@ -378,12 +378,16 @@ namespace NetSatis.FrontOffice
             }
             else if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.BilgiFisi_BilgiFisiYazdirilsinmi)) && (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.BilgiFisi_BilgiFisiSorulsunmu))))
             {
-                Soru = MessageBox.Show("Bilgi Fişi Yazdırmak İster isiniz ?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                Soru = MessageBox.Show("Bilgi Fişi Yazdırmak İster isiniz ?", "Uyarı", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                 if (Soru == DialogResult.Yes)
                 {
                     FisiKaydet(ReportsPrintTool.Belge.BilgiFisi);
                 }
-                else
+                else if(Soru==DialogResult.Cancel)
+                {
+                    return;
+                }
+                else if (Soru == DialogResult.No)
                 {
                     FisiKaydet(ReportsPrintTool.Belge.Diger);
                 }
@@ -425,12 +429,16 @@ namespace NetSatis.FrontOffice
                 }
                 else if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.BilgiFisi_BilgiFisiYazdirilsinmi)) && (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.BilgiFisi_BilgiFisiSorulsunmu))))
                 {
-                    Soru = MessageBox.Show("Bilgi Fişi Yazdırmak İster isiniz ?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                    Soru = MessageBox.Show("Bilgi Fişi Yazdırmak İster isiniz ?", "Uyarı", MessageBoxButtons.YesNoCancel,MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                     if (Soru == DialogResult.Yes)
                     {
                         FisiKaydet(ReportsPrintTool.Belge.BilgiFisi);
                     }
-                    else
+                    else if (Soru == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+                    else if (Soru == DialogResult.No)
                     {
                         FisiKaydet(ReportsPrintTool.Belge.Diger);
                     }

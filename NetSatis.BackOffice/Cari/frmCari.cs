@@ -17,6 +17,7 @@ namespace NetSatis.BackOffice.Cari
         private CariDAL cariDal = new CariDAL();
         private Nullable<int> secilen = null;
         FisDAL fisDal = new FisDAL();
+     
         string DosyaYolu = $@"{Application.StartupPath}\Gorunum\CariListeSavedLayout.xml";
         public frmCari()
         {
