@@ -1130,6 +1130,8 @@ namespace NetSatis.Reports {
             
             private global::System.Data.DataColumn columnCariAciklama;
             
+            private global::System.Data.DataColumn columnCariAdi;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public FaturaBilgilerDataTable() {
@@ -1349,6 +1351,14 @@ namespace NetSatis.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CariAdiColumn {
+                get {
+                    return this.columnCariAdi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1407,7 +1417,8 @@ namespace NetSatis.Reports {
                         string FisIskontoTutari2, 
                         string FisIskontoTutari3, 
                         string Bakiye, 
-                        string CariAciklama) {
+                        string CariAciklama, 
+                        string CariAdi) {
                 FaturaBilgilerRow rowFaturaBilgilerRow = ((FaturaBilgilerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         CariAdiFaturaUnvan,
@@ -1432,7 +1443,8 @@ namespace NetSatis.Reports {
                         FisIskontoTutari2,
                         FisIskontoTutari3,
                         Bakiye,
-                        CariAciklama};
+                        CariAciklama,
+                        CariAdi};
                 rowFaturaBilgilerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFaturaBilgilerRow);
                 return rowFaturaBilgilerRow;
@@ -1478,6 +1490,7 @@ namespace NetSatis.Reports {
                 this.columnFisIskontoTutari3 = base.Columns["FisIskontoTutari3"];
                 this.columnBakiye = base.Columns["Bakiye"];
                 this.columnCariAciklama = base.Columns["CariAciklama"];
+                this.columnCariAdi = base.Columns["CariAdi"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1529,6 +1542,8 @@ namespace NetSatis.Reports {
                 base.Columns.Add(this.columnBakiye);
                 this.columnCariAciklama = new global::System.Data.DataColumn("CariAciklama", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCariAciklama);
+                this.columnCariAdi = new global::System.Data.DataColumn("CariAdi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCariAdi);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2574,6 +2589,22 @@ namespace NetSatis.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CariAdi {
+                get {
+                    try {
+                        return ((string)(this[this.tableFaturaBilgiler.CariAdiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CariAdi\' in table \'FaturaBilgiler\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFaturaBilgiler.CariAdiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsCariAdiFaturaUnvanNull() {
                 return this.IsNull(this.tableFaturaBilgiler.CariAdiFaturaUnvanColumn);
             }
@@ -2846,6 +2877,18 @@ namespace NetSatis.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetCariAciklamaNull() {
                 this[this.tableFaturaBilgiler.CariAciklamaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCariAdiNull() {
+                return this.IsNull(this.tableFaturaBilgiler.CariAdiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCariAdiNull() {
+                this[this.tableFaturaBilgiler.CariAdiColumn] = global::System.Convert.DBNull;
             }
         }
         

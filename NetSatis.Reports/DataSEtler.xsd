@@ -12,7 +12,7 @@
   <xs:element name="DataSEtler" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSEtler" msprop:Generator_UserDSName="DataSEtler">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FaturaKalemler" msdata:CaseSensitive="False" msprop:Generator_TableClassName="FaturaKalemlerDataTable" msprop:Generator_TableVarName="tableFaturaKalemler" msprop:Generator_TablePropName="FaturaKalemler" msprop:Generator_RowDeletingName="FaturaKalemlerRowDeleting" msprop:Generator_RowChangingName="FaturaKalemlerRowChanging" msprop:Generator_RowEvHandlerName="FaturaKalemlerRowChangeEventHandler" msprop:Generator_RowDeletedName="FaturaKalemlerRowDeleted" msprop:Generator_UserTableName="FaturaKalemler" msprop:Generator_RowChangedName="FaturaKalemlerRowChanged" msprop:Generator_RowEvArgName="FaturaKalemlerRowChangeEvent" msprop:Generator_RowClassName="FaturaKalemlerRow">
+        <xs:element name="FaturaKalemler" msdata:CaseSensitive="False" msprop:Generator_TableClassName="FaturaKalemlerDataTable" msprop:Generator_TableVarName="tableFaturaKalemler" msprop:Generator_RowChangedName="FaturaKalemlerRowChanged" msprop:Generator_TablePropName="FaturaKalemler" msprop:Generator_RowDeletingName="FaturaKalemlerRowDeleting" msprop:Generator_RowChangingName="FaturaKalemlerRowChanging" msprop:Generator_RowEvHandlerName="FaturaKalemlerRowChangeEventHandler" msprop:Generator_RowDeletedName="FaturaKalemlerRowDeleted" msprop:Generator_RowClassName="FaturaKalemlerRow" msprop:Generator_UserTableName="FaturaKalemler" msprop:Generator_RowEvArgName="FaturaKalemlerRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="KalemBarkod" msprop:Generator_ColumnVarNameInTable="columnKalemBarkod" msprop:Generator_ColumnPropNameInRow="KalemBarkod" msprop:Generator_ColumnPropNameInTable="KalemBarkodColumn" msprop:Generator_UserColumnName="KalemBarkod" type="xs:string" minOccurs="0" />
@@ -34,7 +34,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FaturaKDVler" msprop:Generator_TableClassName="FaturaKDVlerDataTable" msprop:Generator_TableVarName="tableFaturaKDVler" msprop:Generator_TablePropName="FaturaKDVler" msprop:Generator_RowDeletingName="FaturaKDVlerRowDeleting" msprop:Generator_RowChangingName="FaturaKDVlerRowChanging" msprop:Generator_RowEvHandlerName="FaturaKDVlerRowChangeEventHandler" msprop:Generator_RowDeletedName="FaturaKDVlerRowDeleted" msprop:Generator_UserTableName="FaturaKDVler" msprop:Generator_RowChangedName="FaturaKDVlerRowChanged" msprop:Generator_RowEvArgName="FaturaKDVlerRowChangeEvent" msprop:Generator_RowClassName="FaturaKDVlerRow">
+        <xs:element name="FaturaKDVler" msprop:Generator_TableClassName="FaturaKDVlerDataTable" msprop:Generator_TableVarName="tableFaturaKDVler" msprop:Generator_RowChangedName="FaturaKDVlerRowChanged" msprop:Generator_TablePropName="FaturaKDVler" msprop:Generator_RowDeletingName="FaturaKDVlerRowDeleting" msprop:Generator_RowChangingName="FaturaKDVlerRowChanging" msprop:Generator_RowEvHandlerName="FaturaKDVlerRowChangeEventHandler" msprop:Generator_RowDeletedName="FaturaKDVlerRowDeleted" msprop:Generator_RowClassName="FaturaKDVlerRow" msprop:Generator_UserTableName="FaturaKDVler" msprop:Generator_RowEvArgName="FaturaKDVlerRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="KDV" msprop:Generator_ColumnVarNameInTable="columnKDV" msprop:Generator_ColumnPropNameInRow="KDV" msprop:Generator_ColumnPropNameInTable="KDVColumn" msprop:Generator_UserColumnName="KDV" type="xs:int" minOccurs="0" />
@@ -42,7 +42,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FaturaBilgiler" msprop:Generator_TableClassName="FaturaBilgilerDataTable" msprop:Generator_TableVarName="tableFaturaBilgiler" msprop:Generator_RowChangedName="FaturaBilgilerRowChanged" msprop:Generator_TablePropName="FaturaBilgiler" msprop:Generator_RowDeletingName="FaturaBilgilerRowDeleting" msprop:Generator_RowChangingName="FaturaBilgilerRowChanging" msprop:Generator_RowEvHandlerName="FaturaBilgilerRowChangeEventHandler" msprop:Generator_RowDeletedName="FaturaBilgilerRowDeleted" msprop:Generator_RowClassName="FaturaBilgilerRow" msprop:Generator_UserTableName="FaturaBilgiler" msprop:Generator_RowEvArgName="FaturaBilgilerRowChangeEvent">
+        <xs:element name="FaturaBilgiler" msprop:Generator_TableClassName="FaturaBilgilerDataTable" msprop:Generator_TableVarName="tableFaturaBilgiler" msprop:Generator_TablePropName="FaturaBilgiler" msprop:Generator_RowDeletingName="FaturaBilgilerRowDeleting" msprop:Generator_RowChangingName="FaturaBilgilerRowChanging" msprop:Generator_RowEvHandlerName="FaturaBilgilerRowChangeEventHandler" msprop:Generator_RowDeletedName="FaturaBilgilerRowDeleted" msprop:Generator_UserTableName="FaturaBilgiler" msprop:Generator_RowChangedName="FaturaBilgilerRowChanged" msprop:Generator_RowEvArgName="FaturaBilgilerRowChangeEvent" msprop:Generator_RowClassName="FaturaBilgilerRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CariAdiFaturaUnvan" msprop:Generator_ColumnVarNameInTable="columnCariAdiFaturaUnvan" msprop:Generator_ColumnPropNameInRow="CariAdiFaturaUnvan" msprop:Generator_ColumnPropNameInTable="CariAdiFaturaUnvanColumn" msprop:Generator_UserColumnName="CariAdiFaturaUnvan" type="xs:string" minOccurs="0" />
@@ -68,6 +68,7 @@
               <xs:element name="FisIskontoTutari3" msprop:Generator_ColumnVarNameInTable="columnFisIskontoTutari3" msprop:Generator_ColumnPropNameInRow="FisIskontoTutari3" msprop:Generator_ColumnPropNameInTable="FisIskontoTutari3Column" msprop:Generator_UserColumnName="FisIskontoTutari3" type="xs:string" minOccurs="0" />
               <xs:element name="Bakiye" msprop:Generator_ColumnVarNameInTable="columnBakiye" msprop:Generator_ColumnPropNameInRow="Bakiye" msprop:Generator_ColumnPropNameInTable="BakiyeColumn" msprop:Generator_UserColumnName="Bakiye" type="xs:string" minOccurs="0" />
               <xs:element name="CariAciklama" msprop:Generator_ColumnVarNameInTable="columnCariAciklama" msprop:Generator_ColumnPropNameInRow="CariAciklama" msprop:Generator_ColumnPropNameInTable="CariAciklamaColumn" msprop:Generator_UserColumnName="CariAciklama" type="xs:string" minOccurs="0" />
+              <xs:element name="CariAdi" msprop:Generator_ColumnVarNameInTable="columnCariAdi" msprop:Generator_ColumnPropNameInRow="CariAdi" msprop:Generator_ColumnPropNameInTable="CariAdiColumn" msprop:Generator_UserColumnName="CariAdi" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
