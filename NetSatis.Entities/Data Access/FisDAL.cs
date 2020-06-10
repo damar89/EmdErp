@@ -650,6 +650,8 @@ namespace NetSatis.Entities.Data_Access
                        fisler.FisKodu,
                        fisler.FisTuru,
                        fisler.ToplamTutar,
+                       fisler.AraToplam_,
+                      
                        fisler.CariAdi,
                        fisler.Cari.CariKodu,
                        fisler.FaturaUnvani,
@@ -692,6 +694,7 @@ namespace NetSatis.Entities.Data_Access
                        k.FisKodu,
                        k.FisTuru,
                        k.ToplamTutar,
+                       k.AraToplam_,
                        k.CariAdi,
                        k.FaturaUnvani,
                        k.CariKodu,

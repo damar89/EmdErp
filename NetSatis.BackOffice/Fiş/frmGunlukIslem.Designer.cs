@@ -106,6 +106,8 @@
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.colOdemeTuru = new DevExpress.XtraGrid.Columns.GridColumn();
             this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.colSeri = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSira = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -627,7 +629,7 @@
             this.gridContFisler.Name = "gridContFisler";
             this.gridContFisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpsChkKdvDahil});
-            this.gridContFisler.Size = new System.Drawing.Size(1023, 349);
+            this.gridContFisler.Size = new System.Drawing.Size(1023, 353);
             this.gridContFisler.TabIndex = 0;
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});
@@ -657,7 +659,9 @@
             this.colToplamTutar,
             this.colAciklama,
             this.colKDVDahil,
-            this.colOdemeTuru});
+            this.colOdemeTuru,
+            this.colSeri,
+            this.colSira});
             this.gridFisler.GridControl = this.gridContFisler;
             this.gridFisler.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ToplamTutar", this.colToplamTutar, "(Tutar={0:C2})")});
@@ -713,7 +717,7 @@
             this.colCariAdi.OptionsColumn.AllowEdit = false;
             this.colCariAdi.OptionsColumn.ShowInCustomizationForm = false;
             this.colCariAdi.Visible = true;
-            this.colCariAdi.VisibleIndex = 3;
+            this.colCariAdi.VisibleIndex = 5;
             this.colCariAdi.Width = 117;
             // 
             // colBelgeNo
@@ -737,7 +741,7 @@
             this.colTarih.OptionsColumn.AllowEdit = false;
             this.colTarih.OptionsColumn.ShowInCustomizationForm = false;
             this.colTarih.Visible = true;
-            this.colTarih.VisibleIndex = 4;
+            this.colTarih.VisibleIndex = 6;
             this.colTarih.Width = 79;
             // 
             // colVadeTarihi
@@ -760,7 +764,7 @@
             this.colSaat.Name = "colSaat";
             this.colSaat.OptionsColumn.AllowEdit = false;
             this.colSaat.Visible = true;
-            this.colSaat.VisibleIndex = 5;
+            this.colSaat.VisibleIndex = 7;
             this.colSaat.Width = 70;
             // 
             // colPlasiyerKodu
@@ -815,7 +819,7 @@
             this.colIskontoTutari1.OptionsColumn.AllowEdit = false;
             this.colIskontoTutari1.OptionsColumn.ShowInCustomizationForm = false;
             this.colIskontoTutari1.Visible = true;
-            this.colIskontoTutari1.VisibleIndex = 7;
+            this.colIskontoTutari1.VisibleIndex = 9;
             this.colIskontoTutari1.Width = 85;
             // 
             // colDipIsk
@@ -830,7 +834,7 @@
             this.colDipIsk.OptionsColumn.AllowEdit = false;
             this.colDipIsk.OptionsColumn.ShowInCustomizationForm = false;
             this.colDipIsk.Visible = true;
-            this.colDipIsk.VisibleIndex = 8;
+            this.colDipIsk.VisibleIndex = 10;
             // 
             // colIskontoTutari3
             // 
@@ -853,7 +857,7 @@
             this.colToplamTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ToplamTutar", "Toplam Tutar : {0:C2}")});
             this.colToplamTutar.Visible = true;
-            this.colToplamTutar.VisibleIndex = 9;
+            this.colToplamTutar.VisibleIndex = 11;
             this.colToplamTutar.Width = 108;
             // 
             // colAciklama
@@ -864,7 +868,7 @@
             this.colAciklama.OptionsColumn.AllowEdit = false;
             this.colAciklama.OptionsColumn.ShowInCustomizationForm = false;
             this.colAciklama.Visible = true;
-            this.colAciklama.VisibleIndex = 6;
+            this.colAciklama.VisibleIndex = 8;
             this.colAciklama.Width = 96;
             // 
             // colKDVDahil
@@ -888,12 +892,28 @@
             this.colOdemeTuru.FieldName = "OdemeTuru";
             this.colOdemeTuru.Name = "colOdemeTuru";
             this.colOdemeTuru.Visible = true;
-            this.colOdemeTuru.VisibleIndex = 2;
+            this.colOdemeTuru.VisibleIndex = 4;
             // 
             // popupMenu2
             // 
             this.popupMenu2.Manager = this.barManager1;
             this.popupMenu2.Name = "popupMenu2";
+            // 
+            // colSeri
+            // 
+            this.colSeri.Caption = "Seri";
+            this.colSeri.FieldName = "Seri";
+            this.colSeri.Name = "colSeri";
+            this.colSeri.Visible = true;
+            this.colSeri.VisibleIndex = 2;
+            // 
+            // colSira
+            // 
+            this.colSira.Caption = "Sıra";
+            this.colSira.FieldName = "Sira";
+            this.colSira.Name = "colSira";
+            this.colSira.Visible = true;
+            this.colSira.VisibleIndex = 3;
             // 
             // frmGunlukIslem
             // 
@@ -1004,5 +1024,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
         private DevExpress.XtraGrid.Columns.GridColumn colOdemeTuru;
         private DevExpress.XtraBars.BarButtonItem btnGorunumKaydet;
+        private DevExpress.XtraGrid.Columns.GridColumn colSeri;
+        private DevExpress.XtraGrid.Columns.GridColumn colSira;
     }
 }

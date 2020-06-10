@@ -1782,7 +1782,7 @@ namespace NetSatis.BackOffice.Fiş
                 _fisentity.Aciklama = txtAciklama.Text;
                 _fisentity.EfaturaDurumu = false;
                 _fisentity.Sira = txtSira.Text;
-              
+
                 _fisentity.Seri = txtSeri.Text;
                 _fisentity.Tipi = cmbTipi.Text;
                 _fisentity.Proje = cmbProje.SelectedText;
@@ -1914,7 +1914,7 @@ namespace NetSatis.BackOffice.Fiş
                     MessageBox.Show("Sayım Eksiği Fişi başarılı bir şekilde kaydedildi.");
                 }
                 basariylaKaydedildi = true;
-                if (_fisentity.FisTuru == "Toptan Satış Faturası" && MessageBox.Show("Faturayı Yazdırmak İster isiniz ?", "Uyarı", MessageBoxButtons.YesNo) ==
+                if (_fisentity.FisTuru == "Toptan Satış Faturası" || _fisentity.FisTuru == "Alış İade Faturası" && MessageBox.Show("Faturayı Yazdırmak İster isiniz ?", "Uyarı", MessageBoxButtons.YesNo) ==
                     DialogResult.Yes)
                 {
                     FaturaHazirla f = new FaturaHazirla();
@@ -2292,6 +2292,7 @@ namespace NetSatis.BackOffice.Fiş
         }
         async Task HepsiniHesapla()
         {
+        
             try
             {
 
@@ -2426,7 +2427,7 @@ namespace NetSatis.BackOffice.Fiş
                             gridStokHareket.SetFocusedRowCellValue("KarOrani", oranli - 100);
                         }
                     }
-                     
+
                     #endregion
                 }
                 calcKdvToplam.EditValue = Math.Round(toplamKdvToplam.Value, 2);
@@ -2439,12 +2440,13 @@ namespace NetSatis.BackOffice.Fiş
          _fisentity.FisTuru == "Tahsilat Fişi" ||
          _fisentity.FisTuru == "Ödeme Fişi" ||
          _fisentity.FisTuru == "Cari Devir Fişi")
-                    calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
-                //if (_fisentity.FisTuru == "Tahsilat Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
-                //if (_fisentity.FisTuru == "Ödeme Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
-                //if (_fisentity.FisTuru == "Cari Devir Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
-                //if (_fisentity.FisTuru == "Hakediş Fişi") calcGenelToplam.Value = Convert.ToDecimal(colOdenecekTutar.SummaryItem.SummaryValue);
-                gridStokHareket.RefreshData();
+
+
+                    //if (_fisentity.FisTuru == "Tahsilat Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
+                    //if (_fisentity.FisTuru == "Ödeme Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
+                    //if (_fisentity.FisTuru == "Cari Devir Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
+                    //if (_fisentity.FisTuru == "Hakediş Fişi") calcGenelToplam.Value = Convert.ToDecimal(colOdenecekTutar.SummaryItem.SummaryValue);
+                    gridStokHareket.RefreshData();
                 gridContKasaHareket.Refresh();
 
             }

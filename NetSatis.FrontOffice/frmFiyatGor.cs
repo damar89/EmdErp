@@ -34,6 +34,8 @@ namespace NetSatis.FrontOffice
             context.Barkodlar.Where(c => c.StokId == _entity.Id).Load();
             txtKod.DataBindings.Add("Text", _entity, "StokKodu", false, DataSourceUpdateMode.OnPropertyChanged);
             txtStokAdi.DataBindings.Add("Text", _entity, "StokAdi", false, DataSourceUpdateMode.OnPropertyChanged);
+            lblUretici.DataBindings.Add("Text", _entity, "Uretici", false, DataSourceUpdateMode.OnPropertyChanged);
+            lblMarka.DataBindings.Add("Text", _entity, "Marka", false, DataSourceUpdateMode.OnPropertyChanged);
             calcSatisFiyat1.DataBindings.Add("Text", _entity, "SatisFiyati1", false,
                 DataSourceUpdateMode.OnPropertyChanged);
             calcSatisFiyat1.DataBindings[0].FormattingEnabled = true;

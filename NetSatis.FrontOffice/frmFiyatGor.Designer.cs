@@ -39,6 +39,10 @@
             this.txtStokAdi = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.lblMiktar = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.lblUretici = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.lblMarka = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtBarkod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcSatisFiyat1.Properties)).BeginInit();
             this.SuspendLayout();
@@ -72,7 +76,7 @@
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelControl1.Location = new System.Drawing.Point(0, 0);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(521, 32);
+            this.labelControl1.Size = new System.Drawing.Size(515, 32);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Aşağıdaki Kutucuğa BARKOD Okutunuz...";
             // 
@@ -84,6 +88,8 @@
             this.calcSatisFiyat1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.calcSatisFiyat1.Properties.Appearance.Options.UseBackColor = true;
             this.calcSatisFiyat1.Properties.Appearance.Options.UseFont = true;
+            this.calcSatisFiyat1.Properties.Appearance.Options.UseTextOptions = true;
+            this.calcSatisFiyat1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.calcSatisFiyat1.Properties.AutoHeight = false;
             this.calcSatisFiyat1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.calcSatisFiyat1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -149,9 +155,9 @@
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.Image = global::NetSatis.FrontOffice.Properties.Resources.close_32x32;
-            this.btnKapat.Location = new System.Drawing.Point(429, 263);
+            this.btnKapat.Location = new System.Drawing.Point(423, 312);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(92, 38);
+            this.btnKapat.Size = new System.Drawing.Size(92, 41);
             this.btnKapat.TabIndex = 10;
             this.btnKapat.Text = "Kapat";
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
@@ -209,7 +215,7 @@
             this.lblMiktar.Appearance.Options.UseBorderColor = true;
             this.lblMiktar.Appearance.Options.UseFont = true;
             this.lblMiktar.Appearance.Options.UseTextOptions = true;
-            this.lblMiktar.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblMiktar.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.lblMiktar.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblMiktar.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.lblMiktar.Location = new System.Drawing.Point(154, 209);
@@ -217,15 +223,81 @@
             this.lblMiktar.Size = new System.Drawing.Size(355, 20);
             this.lblMiktar.TabIndex = 9;
             // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.BorderColor = System.Drawing.Color.Silver;
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.Options.UseBorderColor = true;
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Appearance.Options.UseTextOptions = true;
+            this.labelControl5.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.labelControl5.Location = new System.Drawing.Point(9, 244);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(136, 20);
+            this.labelControl5.TabIndex = 9;
+            this.labelControl5.Text = "Üretici :";
+            // 
+            // lblUretici
+            // 
+            this.lblUretici.Appearance.BorderColor = System.Drawing.Color.Silver;
+            this.lblUretici.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUretici.Appearance.Options.UseBorderColor = true;
+            this.lblUretici.Appearance.Options.UseFont = true;
+            this.lblUretici.Appearance.Options.UseTextOptions = true;
+            this.lblUretici.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.lblUretici.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblUretici.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblUretici.Location = new System.Drawing.Point(154, 244);
+            this.lblUretici.Name = "lblUretici";
+            this.lblUretici.Size = new System.Drawing.Size(355, 20);
+            this.lblUretici.TabIndex = 9;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.BorderColor = System.Drawing.Color.Silver;
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl7.Appearance.Options.UseBorderColor = true;
+            this.labelControl7.Appearance.Options.UseFont = true;
+            this.labelControl7.Appearance.Options.UseTextOptions = true;
+            this.labelControl7.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.labelControl7.Location = new System.Drawing.Point(9, 270);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(136, 20);
+            this.labelControl7.TabIndex = 9;
+            this.labelControl7.Text = "Marka :";
+            // 
+            // lblMarka
+            // 
+            this.lblMarka.Appearance.BorderColor = System.Drawing.Color.Silver;
+            this.lblMarka.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMarka.Appearance.Options.UseBorderColor = true;
+            this.lblMarka.Appearance.Options.UseFont = true;
+            this.lblMarka.Appearance.Options.UseTextOptions = true;
+            this.lblMarka.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.lblMarka.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblMarka.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblMarka.Location = new System.Drawing.Point(154, 270);
+            this.lblMarka.Name = "lblMarka";
+            this.lblMarka.Size = new System.Drawing.Size(355, 20);
+            this.lblMarka.TabIndex = 9;
+            // 
             // frmFiyatGor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 303);
+            this.ClientSize = new System.Drawing.Size(515, 355);
             this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.labelControl26);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.txtStokAdi);
+            this.Controls.Add(this.lblMarka);
+            this.Controls.Add(this.labelControl7);
+            this.Controls.Add(this.lblUretici);
+            this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.lblMiktar);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.txtKod);
@@ -261,5 +333,9 @@
         private DevExpress.XtraEditors.LabelControl txtStokAdi;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl lblMiktar;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl lblUretici;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.LabelControl lblMarka;
     }
 }
