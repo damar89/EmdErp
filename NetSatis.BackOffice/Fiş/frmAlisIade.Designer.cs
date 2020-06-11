@@ -89,6 +89,7 @@
             this.colAciklama = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKDVDahil = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -184,7 +185,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem4),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem3),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem2),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem6)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem6),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem7)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
@@ -364,8 +366,9 @@
             this.barSubItem5,
             this.barButtonItem5,
             this.barSubItem6,
-            this.barButtonItem6});
-            this.barManager1.MaxItemId = 25;
+            this.barButtonItem6,
+            this.barButtonItem7});
+            this.barManager1.MaxItemId = 26;
             // 
             // barDockControlTop
             // 
@@ -704,6 +707,13 @@
             this.rpsChkKdvDahil.AutoHeight = false;
             this.rpsChkKdvDahil.Name = "rpsChkKdvDahil";
             // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Caption = "Fatura Yazdır";
+            this.barButtonItem7.Id = 25;
+            this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
+            // 
             // frmAlisIade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -796,5 +806,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colVadeTarihi;
         private DevExpress.XtraBars.BarSubItem barSubItem6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
     }
 }

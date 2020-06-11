@@ -215,7 +215,7 @@ namespace NetSatis.BackOffice.Fiş
             if (save.ShowDialog() == DialogResult.OK)
             {
 
-                gridFisler.ExportToPdf(save.FileName + ".xlsx");
+                gridFisler.ExportToXls(save.FileName + ".xlsx");
             }
         }
 
@@ -225,7 +225,7 @@ namespace NetSatis.BackOffice.Fiş
             if (save.ShowDialog() == DialogResult.OK)
             {
 
-                gridFisler.ExportToPdf(save.FileName + ".docx");
+                gridFisler.ExportToDocx(save.FileName + ".docx");
             }
         }
 
@@ -240,6 +240,13 @@ namespace NetSatis.BackOffice.Fiş
         {
             if (Directory.Exists($@"{Application.StartupPath}\Gorunum"))
                 gridContFisler.MainView.SaveLayoutToXml(DosyaYolu);
+        }
+
+        private void btnTahsilat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
+            FaturaHazirla f = new FaturaHazirla();
+            f.TahsilatFisi(secilen);
         }
     }
 }

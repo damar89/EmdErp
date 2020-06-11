@@ -1,5 +1,6 @@
 ﻿using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
+using NetSatis.Reports.Fatura_ve_Fiş;
 using System;
 using System.Windows.Forms;
 
@@ -101,6 +102,13 @@ namespace NetSatis.BackOffice.Fiş
 
                 btnKapat.PerformClick();
             }
+        }
+
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
+            FaturaHazirla f = new FaturaHazirla();
+            f.FaturaHazirlama(secilen);
         }
     }
 }
