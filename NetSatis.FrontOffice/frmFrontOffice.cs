@@ -607,7 +607,14 @@ namespace NetSatis.FrontOffice
             _fisentity.EMail = txtMail.Text;
             _fisentity.VergiDairesi = txtVergiDairesi.Text;
             _fisentity.VergiNo = txtVergiNo.Text;
-            _fisentity.KDVDahil = true;
+            if (togkdv.IsOn)
+            {
+                _fisentity.KDVDahil = true;
+            }
+            else
+            {
+                _fisentity.KDVDahil = false;
+            }
             _fisentity.ToplamTutar = calcGenelToplam.Value;
             _fisentity.IskontoOrani1 = calcIndirimOrani.Value;
             _fisentity.IskontoTutari1 = calcIndirimToplami.Value + toplamDipIskontoPayi; ;
@@ -1572,9 +1579,9 @@ namespace NetSatis.FrontOffice
         {
             gridStokHareket.UpdateTotalSummary();
             decimal toplamSatirIndirimTutari = 0;
-            decimal toplamAraToplam = 0;
-            decimal toplamKdvToplam = 0;
-            decimal toplamGenelToplam = 0;
+            decimal? toplamAraToplam = 0;
+            decimal? toplamKdvToplam = 0;
+            decimal? toplamGenelToplam = 0;
             decimal tumGridinSatirIndirimSonrasiToplami = 0;
             foreach (StokHareket item in context.StokHareketleri.Local)
             {
@@ -1583,37 +1590,89 @@ namespace NetSatis.FrontOffice
             }
             foreach (StokHareket item in context.StokHareketleri.Local)
             {
-                decimal miktar = Convert.ToDecimal(item.Miktar);
-                decimal birimfiyat = Convert.ToDecimal(item.BirimFiyati);
-                decimal kdv = Convert.ToDecimal(item.Kdv);
-                decimal indirimOrani = Convert.ToDecimal(item.IndirimOrani);
-                decimal aratoplam = miktar * birimfiyat;
+                decimal? miktar = Convert.ToDecimal(item.Miktar);
+                decimal? birimfiyat = Convert.ToDecimal(item.BirimFiyati);
+                decimal? kdv = Convert.ToDecimal(item.Kdv);
+                decimal? indirimOrani = Convert.ToDecimal(item.IndirimOrani);
+                decimal? aratoplam = miktar * birimfiyat;
                 toplamAraToplam += aratoplam;
-                decimal satirIndirimSonrasiToplam = aratoplam - aratoplam * indirimOrani / 100;
-                decimal satirIndirimTutari = aratoplam - satirIndirimSonrasiToplam;
-                toplamSatirIndirimTutari += satirIndirimTutari;
-                decimal tumIndirimlerSonrasiToplam = 0;
-                decimal dipIskontoPayi = 0;
-                decimal dipIskontoOrani = Convert.ToDecimal(calcIndirimOrani.EditValue);
-                decimal dipIskontoTutari = Convert.ToDecimal(calcDusur.EditValue);
-                decimal kdvToplam = 0;
-                decimal satirNetTutar = 0;
-                if (dipIskontoTutari != 0)
+                //decimal? satirIndirimSonrasiToplam = aratoplam - aratoplam * indirimOrani / 100;
+                //decimal satirIndirimTutari = aratoplam - satirIndirimSonrasiToplam;
+                //toplamSatirIndirimTutari += satirIndirimTutari;
+                decimal? satirIndirimSonrasiToplam = aratoplam - aratoplam * indirimOrani / 100;
+                decimal? satirIndirimTutari = aratoplam - satirIndirimSonrasiToplam;
+                decimal? tumIndirimlerSonrasiToplam = 0;
+                decimal? dipIskontoPayi = 0;
+                decimal? dipIskontoOrani = Convert.ToDecimal(calcIndirimOrani.EditValue);
+                decimal? dipIskontoTutari = Convert.ToDecimal(calcDusur.EditValue);
+                decimal? kdvToplam = 0;
+                decimal? satirNetTutar = 0;
+                //if (dipIskontoTutari != 0)
+                //{
+                //    dipIskontoPayi = dipIskontoTutari * satirIndirimSonrasiToplam / tumGridinSatirIndirimSonrasiToplami;
+                //    tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - dipIskontoPayi;
+                //}
+                //else if (dipIskontoOrani != 0)
+                //{
+                //    tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - satirIndirimSonrasiToplam * dipIskontoOrani / 100;
+                //    dipIskontoPayi = satirIndirimSonrasiToplam - tumIndirimlerSonrasiToplam;
+                //}
+                //else
+                //{
+                //    tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam;
+                //}
+                
+                //if (togkdv.IsOn)
+                //{ kdvToplam = tumIndirimlerSonrasiToplam - tumIndirimlerSonrasiToplam / (1 + kdv / 100); 
+
+                //satirNetTutar = tumIndirimlerSonrasiToplam;
+                //}
+                //else
+                //{ kdvToplam =  aratoplam * kdv / 100; 
+
+                //satirNetTutar = aratoplam+ kdvToplam;
+                //}
+
+                if (togkdv.IsOn)
                 {
-                    dipIskontoPayi = dipIskontoTutari * satirIndirimSonrasiToplam / tumGridinSatirIndirimSonrasiToplami;
-                    tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - dipIskontoPayi;
-                }
-                else if (dipIskontoOrani != 0)
-                {
-                    tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - satirIndirimSonrasiToplam * dipIskontoOrani / 100;
-                    dipIskontoPayi = satirIndirimSonrasiToplam - tumIndirimlerSonrasiToplam;
+                    if (dipIskontoOrani != 0)
+                    {
+                        tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - satirIndirimSonrasiToplam * dipIskontoOrani / 100;
+                        dipIskontoPayi = satirIndirimSonrasiToplam - tumIndirimlerSonrasiToplam;
+                    }
+                    else if (dipIskontoTutari != 0)
+                    {
+                        dipIskontoPayi = dipIskontoTutari * satirIndirimSonrasiToplam / tumGridinSatirIndirimSonrasiToplami;
+                        tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - dipIskontoPayi;
+                    }
+                    else
+                    {
+                        tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam;
+                    }
+                    //tumIndirimlerSonrasiToplam - tumIndirimlerSonrasiToplam / (1 + kdv / 100);
+
+                    kdvToplam = tumIndirimlerSonrasiToplam -tumIndirimlerSonrasiToplam /(1 + kdv / 100); //tumIndirimlerSonrasiToplam.Value * (kdv / 100).Value, 2);
+                    satirNetTutar = Math.Round(tumIndirimlerSonrasiToplam.Value, 2);
                 }
                 else
                 {
-                    tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam;
+                    if (dipIskontoOrani != 0)
+                    {
+                        tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - satirIndirimSonrasiToplam * dipIskontoOrani / 100;
+                        dipIskontoPayi = satirIndirimSonrasiToplam - tumIndirimlerSonrasiToplam;
+                    }
+                    else if (dipIskontoTutari != 0)
+                    {
+                        dipIskontoPayi = dipIskontoTutari * satirIndirimSonrasiToplam / tumGridinSatirIndirimSonrasiToplami;
+                        tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam - dipIskontoPayi;
+                    }
+                    else
+                    {
+                        tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam;
+                    }
+                    kdvToplam = Math.Round(tumIndirimlerSonrasiToplam.Value * (kdv / 100).Value, 2);
+                    satirNetTutar = Math.Round(tumIndirimlerSonrasiToplam.Value + kdvToplam.Value, 2);
                 }
-                kdvToplam = tumIndirimlerSonrasiToplam - tumIndirimlerSonrasiToplam / (1 + kdv / 100);
-                satirNetTutar = tumIndirimlerSonrasiToplam;
                 toplamKdvToplam += kdvToplam;
                 toplamGenelToplam += satirNetTutar;
                 int i = 0;
@@ -2043,6 +2102,11 @@ namespace NetSatis.FrontOffice
         private void simpleButton3_Click(object sender, EventArgs e)
         {
             context.Stoklar.Load();
+        }
+
+        private void togkdv_Toggled(object sender, EventArgs e)
+        {
+            HepsiniHesapla();
         }
     }
 }

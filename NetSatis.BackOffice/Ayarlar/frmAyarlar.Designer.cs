@@ -294,6 +294,7 @@
             this.toggleDoviz.Location = new System.Drawing.Point(220, 299);
             this.toggleDoviz.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.toggleDoviz.Name = "toggleDoviz";
+            this.toggleDoviz.Properties.GlyphVerticalAlignment = DevExpress.Utils.VertAlignment.Bottom;
             this.toggleDoviz.Properties.OffText = "Hayır";
             this.toggleDoviz.Properties.OnText = "Evet";
             this.toggleDoviz.Size = new System.Drawing.Size(241, 24);
