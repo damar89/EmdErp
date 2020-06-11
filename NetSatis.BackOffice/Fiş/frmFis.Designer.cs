@@ -61,6 +61,7 @@
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem5 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.imgMenu = new System.Windows.Forms.ImageList(this.components);
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
@@ -68,6 +69,8 @@
             this.btnDuzenle = new DevExpress.XtraEditors.SimpleButton();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridContFisler = new DevExpress.XtraGrid.GridControl();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.exceleAktarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridFisler = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFisKodu = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -92,9 +95,8 @@
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.colProje = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOzelKod = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.exceleAktarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colSeri = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSira = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -102,9 +104,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridContFisler)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridFisler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpsChkKdvDahil)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -397,6 +399,12 @@
             this.barButtonItem5.Name = "barButtonItem5";
             this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.FisIslem_Click);
             // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Caption = "barButtonItem7";
+            this.barButtonItem7.Id = 25;
+            this.barButtonItem7.Name = "barButtonItem7";
+            // 
             // imgMenu
             // 
             this.imgMenu.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgMenu.ImageStream")));
@@ -484,6 +492,21 @@
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exceleAktarToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(139, 26);
+            // 
+            // exceleAktarToolStripMenuItem
+            // 
+            this.exceleAktarToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.exporttoxlsx_16x16;
+            this.exceleAktarToolStripMenuItem.Name = "exceleAktarToolStripMenuItem";
+            this.exceleAktarToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.exceleAktarToolStripMenuItem.Text = "Excele Aktar";
+            this.exceleAktarToolStripMenuItem.Click += new System.EventHandler(this.exceleAktarToolStripMenuItem_Click);
+            // 
             // gridFisler
             // 
             this.gridFisler.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -508,7 +531,9 @@
             this.colAciklama,
             this.colKDVDahil,
             this.colProje,
-            this.colOzelKod});
+            this.colOzelKod,
+            this.colSeri,
+            this.colSira});
             this.gridFisler.GridControl = this.gridContFisler;
             this.gridFisler.Name = "gridFisler";
             this.gridFisler.OptionsView.ShowAutoFilterRow = true;
@@ -575,8 +600,6 @@
             this.colBelgeNo.Name = "colBelgeNo";
             this.colBelgeNo.OptionsColumn.AllowEdit = false;
             this.colBelgeNo.OptionsColumn.ShowInCustomizationForm = false;
-            this.colBelgeNo.Visible = true;
-            this.colBelgeNo.VisibleIndex = 4;
             this.colBelgeNo.Width = 79;
             // 
             // colTarih
@@ -589,7 +612,7 @@
             this.colTarih.OptionsColumn.AllowEdit = false;
             this.colTarih.OptionsColumn.ShowInCustomizationForm = false;
             this.colTarih.Visible = true;
-            this.colTarih.VisibleIndex = 5;
+            this.colTarih.VisibleIndex = 6;
             this.colTarih.Width = 79;
             // 
             // colVadeTarihi
@@ -601,7 +624,7 @@
             this.colVadeTarihi.Name = "colVadeTarihi";
             this.colVadeTarihi.OptionsColumn.AllowEdit = false;
             this.colVadeTarihi.Visible = true;
-            this.colVadeTarihi.VisibleIndex = 7;
+            this.colVadeTarihi.VisibleIndex = 8;
             // 
             // colSaat
             // 
@@ -612,7 +635,7 @@
             this.colSaat.Name = "colSaat";
             this.colSaat.OptionsColumn.AllowEdit = false;
             this.colSaat.Visible = true;
-            this.colSaat.VisibleIndex = 6;
+            this.colSaat.VisibleIndex = 7;
             this.colSaat.Width = 70;
             // 
             // colPlasiyerKodu
@@ -633,7 +656,7 @@
             this.colPlasiyerAdi.OptionsColumn.AllowEdit = false;
             this.colPlasiyerAdi.OptionsColumn.ShowInCustomizationForm = false;
             this.colPlasiyerAdi.Visible = true;
-            this.colPlasiyerAdi.VisibleIndex = 8;
+            this.colPlasiyerAdi.VisibleIndex = 9;
             this.colPlasiyerAdi.Width = 80;
             // 
             // colIskontoOrani1
@@ -644,7 +667,7 @@
             this.colIskontoOrani1.OptionsColumn.AllowEdit = false;
             this.colIskontoOrani1.OptionsColumn.ShowInCustomizationForm = false;
             this.colIskontoOrani1.Visible = true;
-            this.colIskontoOrani1.VisibleIndex = 10;
+            this.colIskontoOrani1.VisibleIndex = 11;
             this.colIskontoOrani1.Width = 53;
             // 
             // colIskontoOrani2
@@ -671,7 +694,7 @@
             this.colIskontoTutari1.OptionsColumn.AllowEdit = false;
             this.colIskontoTutari1.OptionsColumn.ShowInCustomizationForm = false;
             this.colIskontoTutari1.Visible = true;
-            this.colIskontoTutari1.VisibleIndex = 11;
+            this.colIskontoTutari1.VisibleIndex = 12;
             this.colIskontoTutari1.Width = 85;
             // 
             // colIskontoTutari2
@@ -698,7 +721,7 @@
             this.colToplamTutar.OptionsColumn.AllowEdit = false;
             this.colToplamTutar.OptionsColumn.ShowInCustomizationForm = false;
             this.colToplamTutar.Visible = true;
-            this.colToplamTutar.VisibleIndex = 12;
+            this.colToplamTutar.VisibleIndex = 13;
             this.colToplamTutar.Width = 108;
             // 
             // colAciklama
@@ -709,7 +732,7 @@
             this.colAciklama.OptionsColumn.AllowEdit = false;
             this.colAciklama.OptionsColumn.ShowInCustomizationForm = false;
             this.colAciklama.Visible = true;
-            this.colAciklama.VisibleIndex = 9;
+            this.colAciklama.VisibleIndex = 10;
             this.colAciklama.Width = 96;
             // 
             // colKDVDahil
@@ -732,7 +755,7 @@
             this.colProje.Name = "colProje";
             this.colProje.OptionsColumn.AllowEdit = false;
             this.colProje.Visible = true;
-            this.colProje.VisibleIndex = 13;
+            this.colProje.VisibleIndex = 14;
             // 
             // colOzelKod
             // 
@@ -741,28 +764,25 @@
             this.colOzelKod.Name = "colOzelKod";
             this.colOzelKod.OptionsColumn.AllowEdit = false;
             this.colOzelKod.Visible = true;
-            this.colOzelKod.VisibleIndex = 14;
+            this.colOzelKod.VisibleIndex = 15;
             // 
-            // barButtonItem7
+            // colSeri
             // 
-            this.barButtonItem7.Caption = "barButtonItem7";
-            this.barButtonItem7.Id = 25;
-            this.barButtonItem7.Name = "barButtonItem7";
+            this.colSeri.Caption = "Seri";
+            this.colSeri.FieldName = "Seri";
+            this.colSeri.Name = "colSeri";
+            this.colSeri.OptionsColumn.AllowEdit = false;
+            this.colSeri.Visible = true;
+            this.colSeri.VisibleIndex = 4;
             // 
-            // contextMenuStrip1
+            // colSira
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exceleAktarToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(139, 26);
-            // 
-            // exceleAktarToolStripMenuItem
-            // 
-            this.exceleAktarToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.exporttoxlsx_16x16;
-            this.exceleAktarToolStripMenuItem.Name = "exceleAktarToolStripMenuItem";
-            this.exceleAktarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exceleAktarToolStripMenuItem.Text = "Excele Aktar";
-            this.exceleAktarToolStripMenuItem.Click += new System.EventHandler(this.exceleAktarToolStripMenuItem_Click);
+            this.colSira.Caption = "Sıra";
+            this.colSira.FieldName = "Sira";
+            this.colSira.Name = "colSira";
+            this.colSira.OptionsColumn.AllowEdit = false;
+            this.colSira.Visible = true;
+            this.colSira.VisibleIndex = 5;
             // 
             // frmFis
             // 
@@ -788,9 +808,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridContFisler)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridFisler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpsChkKdvDahil)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -863,5 +883,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem exceleAktarToolStripMenuItem;
+        private DevExpress.XtraGrid.Columns.GridColumn colSeri;
+        private DevExpress.XtraGrid.Columns.GridColumn colSira;
     }
 }

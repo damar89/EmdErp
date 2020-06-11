@@ -78,6 +78,8 @@
             this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
             this.colAlacak = new DevExpress.XtraReports.UI.XRTableCell();
             this.colAlacakTutar = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.colSira = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
@@ -103,7 +105,7 @@
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
-            this.xrTable1.SizeF = new System.Drawing.SizeF(800F, 14.99999F);
+            this.xrTable1.SizeF = new System.Drawing.SizeF(803F, 14.99999F);
             this.xrTable1.StylePriority.UseBorderDashStyle = false;
             this.xrTable1.StylePriority.UseBorders = false;
             this.xrTable1.StylePriority.UseFont = false;
@@ -114,6 +116,7 @@
             this.colFisKodu,
             this.colFisTuru,
             this.colBelgeNo,
+            this.colSira,
             this.colTarih,
             this.colVadeTarihi,
             this.colToplamTutar,
@@ -136,7 +139,7 @@
             this.colFisTuru.StylePriority.UseTextAlignment = false;
             this.colFisTuru.Text = "colFisTuru";
             this.colFisTuru.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.colFisTuru.Weight = 1.3883181603550028D;
+            this.colFisTuru.Weight = 1.3807982847218772D;
             // 
             // colBelgeNo
             // 
@@ -144,7 +147,7 @@
             this.colBelgeNo.StylePriority.UseTextAlignment = false;
             this.colBelgeNo.Text = "colBelgeNo";
             this.colBelgeNo.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.colBelgeNo.Weight = 0.87086155604286586D;
+            this.colBelgeNo.Weight = 0.4885444763472957D;
             // 
             // colTarih
             // 
@@ -153,7 +156,7 @@
             this.colTarih.StylePriority.UseTextAlignment = false;
             this.colTarih.Text = "01.01.1999";
             this.colTarih.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.colTarih.Weight = 0.91723765559074355D;
+            this.colTarih.Weight = 1.0906537543975394D;
             // 
             // colVadeTarihi
             // 
@@ -223,7 +226,6 @@
             // 
             // BottomMargin
             // 
-            this.BottomMargin.HeightF = 100F;
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -247,7 +249,7 @@
             this.xrTable2.Name = "xrTable2";
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow2});
-            this.xrTable2.SizeF = new System.Drawing.SizeF(800F, 25F);
+            this.xrTable2.SizeF = new System.Drawing.SizeF(803F, 25F);
             this.xrTable2.StylePriority.UseBackColor = false;
             this.xrTable2.StylePriority.UseBorderDashStyle = false;
             this.xrTable2.StylePriority.UseBorders = false;
@@ -261,6 +263,7 @@
             this.xrTableCell3,
             this.xrTableCell4,
             this.xrTableCell2,
+            this.xrTableCell9,
             this.xrTableCell1,
             this.xrTableCell5,
             this.xrTableCell6,
@@ -284,14 +287,14 @@
             // xrTableCell2
             // 
             this.xrTableCell2.Name = "xrTableCell2";
-            this.xrTableCell2.Text = "Belge No";
-            this.xrTableCell2.Weight = 0.67967167088941949D;
+            this.xrTableCell2.Text = "Seri";
+            this.xrTableCell2.Weight = 0.3825802296958698D;
             // 
             // xrTableCell1
             // 
             this.xrTableCell1.Name = "xrTableCell1";
             this.xrTableCell1.Text = "İşem Tarihi";
-            this.xrTableCell1.Weight = 0.71586660606049624D;
+            this.xrTableCell1.Weight = 0.863822739773401D;
             // 
             // xrTableCell5
             // 
@@ -352,12 +355,10 @@
             this.xrLabel3,
             this.xrLabel4,
             this.lblBitis});
-            this.ReportHeader.HeightF = 100F;
             this.ReportHeader.Name = "ReportHeader";
             // 
             // xrPageInfo1
             // 
-            this.xrPageInfo1.Format = "Rapor Tarihi : {0}";
             this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(4.768372E-05F, 76.99998F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -365,6 +366,7 @@
             this.xrPageInfo1.SizeF = new System.Drawing.SizeF(322.1051F, 23F);
             this.xrPageInfo1.StylePriority.UseTextAlignment = false;
             this.xrPageInfo1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrPageInfo1.TextFormatString = "Rapor Tarihi : {0}";
             // 
             // lblBaslangic
             // 
@@ -548,6 +550,22 @@
             this.colAlacakTutar.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.colAlacakTutar.Weight = 1D;
             // 
+            // xrTableCell9
+            // 
+            this.xrTableCell9.Multiline = true;
+            this.xrTableCell9.Name = "xrTableCell9";
+            this.xrTableCell9.Text = "Sıra";
+            this.xrTableCell9.Weight = 0.53171553717651465D;
+            // 
+            // colSira
+            // 
+            this.colSira.Multiline = true;
+            this.colSira.Name = "colSira";
+            this.colSira.StylePriority.UseTextAlignment = false;
+            this.colSira.Text = "colSira";
+            this.colSira.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.colSira.Weight = 0.67898514840085178D;
+            // 
             // rptCariExtresi
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -561,7 +579,7 @@
             this.PageHeight = 1169;
             this.PageWidth = 827;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
-            this.Version = "17.1";
+            this.Version = "19.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).EndInit();
@@ -620,5 +638,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.UI.XRTableCell colVadeTarihi;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell5;
+        private DevExpress.XtraReports.UI.XRTableCell colSira;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
     }
 }

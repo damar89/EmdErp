@@ -323,7 +323,7 @@ namespace NetSatis.BackOffice.Fiş
                 _fisentity.PlasiyerId = Convert.ToInt32(buton.Name);
             }
         }
-        private void OdemeEkle_Click(object sender, EventArgs e)
+        private async void OdemeEkle_Click(object sender, EventArgs e)
         {
             var buton = (sender as SimpleButton);
             //if (txtFisTuru.Text == "Masraf Fişi")
@@ -410,6 +410,7 @@ namespace NetSatis.BackOffice.Fiş
                     }
                 }
             }
+            await HepsiniHesapla();
         }
         private void FisAyar()
         {
@@ -2433,20 +2434,24 @@ namespace NetSatis.BackOffice.Fiş
                 calcKdvToplam.EditValue = Math.Round(toplamKdvToplam.Value, 2);
                 calcAraToplam.EditValue = Math.Round((toplamAraToplam - toplamKdvToplam).Value, 2);
                 calcAraToplam.EditValue = Math.Round(toplamAraToplam.Value, 2);
-                calcGenelToplam.EditValue = Math.Round(toplamGenelToplam.Value, 2);
                 calcIndirimToplami.EditValue = Math.Round(toplamSatirIndirimTutari.Value, 2);
                 calcOdenemesiGereken.EditValue = Math.Round((toplamGenelToplam - calcOdenenTutar.Value).Value, 2);
                 if (_fisentity.FisTuru == "Masraf Fişi" ||
          _fisentity.FisTuru == "Tahsilat Fişi" ||
          _fisentity.FisTuru == "Ödeme Fişi" ||
          _fisentity.FisTuru == "Cari Devir Fişi")
+                {
+                    calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
+                }
+                else
+                    calcGenelToplam.EditValue = Math.Round(toplamGenelToplam.Value, 2);
 
 
-                    //if (_fisentity.FisTuru == "Tahsilat Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
-                    //if (_fisentity.FisTuru == "Ödeme Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
-                    //if (_fisentity.FisTuru == "Cari Devir Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
-                    //if (_fisentity.FisTuru == "Hakediş Fişi") calcGenelToplam.Value = Convert.ToDecimal(colOdenecekTutar.SummaryItem.SummaryValue);
-                    gridStokHareket.RefreshData();
+                //if (_fisentity.FisTuru == "Tahsilat Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
+                //if (_fisentity.FisTuru == "Ödeme Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
+                //if (_fisentity.FisTuru == "Cari Devir Fişi") calcGenelToplam.Value = Convert.ToDecimal(colTutar.SummaryItem.SummaryValue);
+                //if (_fisentity.FisTuru == "Hakediş Fişi") calcGenelToplam.Value = Convert.ToDecimal(colOdenecekTutar.SummaryItem.SummaryValue);
+                gridStokHareket.RefreshData();
                 gridContKasaHareket.Refresh();
 
             }

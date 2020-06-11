@@ -41,7 +41,12 @@ namespace NetSatis.FrontOffice
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
             Form ilkForm = new frmLisansGirisi();
 
-
+#if DEBUG
+            if (new frmKullaniciGiris().ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new frmFrontOffice());
+            }
+#endif
             //Properties.Settings.Default.Lisans = "";
             Properties.Settings.Default.Save();
             var d = SettingsTool.AyarOku(SettingsTool.Ayarlar.Lisans_LisansKey);
