@@ -1166,5 +1166,11 @@ namespace NetSatis.BackOffice
             if (dr == DialogResult.No)
                 e.Cancel = true;
         }
+
+        private void btnPosFatura_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmPosFatura frm = new frmPosFatura();
+            frm.Show();
+        }
     }
 }

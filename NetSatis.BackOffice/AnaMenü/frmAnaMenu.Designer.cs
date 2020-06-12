@@ -214,6 +214,7 @@
             this.barButtonItem53 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem54 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem55 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPosFatura = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
@@ -334,9 +335,10 @@
             this.barButtonItem52,
             this.barButtonItem56,
             this.barButtonItem57,
-            this.barButtonItem58});
+            this.barButtonItem58,
+            this.btnPosFatura});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 122;
+            this.ribbonControl1.MaxItemId = 123;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -832,7 +834,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem17),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem32),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem33),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem34)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem34),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnPosFatura)});
             this.barSubItem3.Name = "barSubItem3";
             // 
             // barButtonItem16
@@ -1949,6 +1952,13 @@
             this.barButtonItem55.Id = 118;
             this.barButtonItem55.Name = "barButtonItem55";
             // 
+            // btnPosFatura
+            // 
+            this.btnPosFatura.Caption = "Pos Fatura";
+            this.btnPosFatura.Id = 122;
+            this.btnPosFatura.Name = "btnPosFatura";
+            this.btnPosFatura.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPosFatura_ItemClick);
+            // 
             // frmAnaMenu
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
@@ -2134,6 +2144,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem58;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.Utils.DragDrop.DragDropEvents dragDropEvents1;
+        private DevExpress.XtraBars.BarButtonItem btnPosFatura;
     }
 }
 

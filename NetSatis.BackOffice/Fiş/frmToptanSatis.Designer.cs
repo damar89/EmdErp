@@ -39,6 +39,8 @@
             this.btnFtrSil = new DevExpress.XtraBars.BarButtonItem();
             this.btnMustahsil = new DevExpress.XtraBars.BarButtonItem();
             this.efaturaGitti = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBilgiFisi = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -101,8 +103,8 @@
             this.colProje = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOzelKod = new DevExpress.XtraGrid.Columns.GridColumn();
             this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.btnBilgiFisi = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.colSeri = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSira = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -201,6 +203,22 @@
             this.efaturaGitti.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.task_16x16;
             this.efaturaGitti.ImageOptions.LargeImage = global::NetSatis.BackOffice.Properties.Resources.task_32x32;
             this.efaturaGitti.Name = "efaturaGitti";
+            // 
+            // btnBilgiFisi
+            // 
+            this.btnBilgiFisi.Caption = "Bilgi Fişi Yazdır";
+            this.btnBilgiFisi.Id = 31;
+            this.btnBilgiFisi.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
+            this.btnBilgiFisi.Name = "btnBilgiFisi";
+            this.btnBilgiFisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBilgiFisi_ItemClick);
+            // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Caption = "Proforma Fatura Yazdır";
+            this.barButtonItem7.Id = 32;
+            this.barButtonItem7.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x164;
+            this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
             // 
             // barManager1
             // 
@@ -568,7 +586,7 @@
             this.gridContFisler.Name = "gridContFisler";
             this.gridContFisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpsChkKdvDahil});
-            this.gridContFisler.Size = new System.Drawing.Size(1117, 373);
+            this.gridContFisler.Size = new System.Drawing.Size(1117, 377);
             this.gridContFisler.TabIndex = 0;
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});
@@ -598,7 +616,9 @@
             this.colKDVDahil,
             this.colEfaturaDurumu,
             this.colProje,
-            this.colOzelKod});
+            this.colOzelKod,
+            this.colSeri,
+            this.colSira});
             this.gridFisler.GridControl = this.gridContFisler;
             this.gridFisler.Name = "gridFisler";
             this.gridFisler.OptionsView.ShowAutoFilterRow = true;
@@ -622,7 +642,7 @@
             this.colFisKodu.OptionsColumn.ShowInCustomizationForm = false;
             this.colFisKodu.Visible = true;
             this.colFisKodu.VisibleIndex = 0;
-            this.colFisKodu.Width = 68;
+            this.colFisKodu.Width = 56;
             // 
             // colFisTuru
             // 
@@ -633,7 +653,7 @@
             this.colFisTuru.OptionsColumn.ShowInCustomizationForm = false;
             this.colFisTuru.Visible = true;
             this.colFisTuru.VisibleIndex = 1;
-            this.colFisTuru.Width = 78;
+            this.colFisTuru.Width = 85;
             // 
             // colCariKodu
             // 
@@ -643,8 +663,8 @@
             this.colCariKodu.OptionsColumn.AllowEdit = false;
             this.colCariKodu.OptionsColumn.ShowInCustomizationForm = false;
             this.colCariKodu.Visible = true;
-            this.colCariKodu.VisibleIndex = 2;
-            this.colCariKodu.Width = 78;
+            this.colCariKodu.VisibleIndex = 4;
+            this.colCariKodu.Width = 63;
             // 
             // colCariAdi
             // 
@@ -654,8 +674,8 @@
             this.colCariAdi.OptionsColumn.AllowEdit = false;
             this.colCariAdi.OptionsColumn.ShowInCustomizationForm = false;
             this.colCariAdi.Visible = true;
-            this.colCariAdi.VisibleIndex = 3;
-            this.colCariAdi.Width = 111;
+            this.colCariAdi.VisibleIndex = 5;
+            this.colCariAdi.Width = 91;
             // 
             // colBelgeNo
             // 
@@ -665,7 +685,8 @@
             this.colBelgeNo.OptionsColumn.AllowEdit = false;
             this.colBelgeNo.OptionsColumn.ShowInCustomizationForm = false;
             this.colBelgeNo.Visible = true;
-            this.colBelgeNo.VisibleIndex = 4;
+            this.colBelgeNo.VisibleIndex = 6;
+            this.colBelgeNo.Width = 60;
             // 
             // colTarih
             // 
@@ -677,7 +698,8 @@
             this.colTarih.OptionsColumn.AllowEdit = false;
             this.colTarih.OptionsColumn.ShowInCustomizationForm = false;
             this.colTarih.Visible = true;
-            this.colTarih.VisibleIndex = 5;
+            this.colTarih.VisibleIndex = 7;
+            this.colTarih.Width = 60;
             // 
             // colVadeTarihi
             // 
@@ -688,8 +710,8 @@
             this.colVadeTarihi.Name = "colVadeTarihi";
             this.colVadeTarihi.OptionsColumn.AllowEdit = false;
             this.colVadeTarihi.Visible = true;
-            this.colVadeTarihi.VisibleIndex = 7;
-            this.colVadeTarihi.Width = 71;
+            this.colVadeTarihi.VisibleIndex = 9;
+            this.colVadeTarihi.Width = 57;
             // 
             // colSaat
             // 
@@ -700,8 +722,8 @@
             this.colSaat.Name = "colSaat";
             this.colSaat.OptionsColumn.AllowEdit = false;
             this.colSaat.Visible = true;
-            this.colSaat.VisibleIndex = 6;
-            this.colSaat.Width = 66;
+            this.colSaat.VisibleIndex = 8;
+            this.colSaat.Width = 53;
             // 
             // colPlasiyerKodu
             // 
@@ -719,8 +741,8 @@
             this.colPlasiyerAdi.OptionsColumn.AllowEdit = false;
             this.colPlasiyerAdi.OptionsColumn.ShowInCustomizationForm = false;
             this.colPlasiyerAdi.Visible = true;
-            this.colPlasiyerAdi.VisibleIndex = 8;
-            this.colPlasiyerAdi.Width = 76;
+            this.colPlasiyerAdi.VisibleIndex = 10;
+            this.colPlasiyerAdi.Width = 61;
             // 
             // colIskontoOrani1
             // 
@@ -730,8 +752,8 @@
             this.colIskontoOrani1.OptionsColumn.AllowEdit = false;
             this.colIskontoOrani1.OptionsColumn.ShowInCustomizationForm = false;
             this.colIskontoOrani1.Visible = true;
-            this.colIskontoOrani1.VisibleIndex = 10;
-            this.colIskontoOrani1.Width = 50;
+            this.colIskontoOrani1.VisibleIndex = 12;
+            this.colIskontoOrani1.Width = 40;
             // 
             // colIskontoOrani2
             // 
@@ -757,8 +779,8 @@
             this.colIskontoTutari1.OptionsColumn.AllowEdit = false;
             this.colIskontoTutari1.OptionsColumn.ShowInCustomizationForm = false;
             this.colIskontoTutari1.Visible = true;
-            this.colIskontoTutari1.VisibleIndex = 11;
-            this.colIskontoTutari1.Width = 80;
+            this.colIskontoTutari1.VisibleIndex = 13;
+            this.colIskontoTutari1.Width = 65;
             // 
             // colIskontoTutari2
             // 
@@ -784,8 +806,8 @@
             this.colToplamTutar.OptionsColumn.AllowEdit = false;
             this.colToplamTutar.OptionsColumn.ShowInCustomizationForm = false;
             this.colToplamTutar.Visible = true;
-            this.colToplamTutar.VisibleIndex = 12;
-            this.colToplamTutar.Width = 84;
+            this.colToplamTutar.VisibleIndex = 14;
+            this.colToplamTutar.Width = 68;
             // 
             // colAciklama
             // 
@@ -795,8 +817,8 @@
             this.colAciklama.OptionsColumn.AllowEdit = false;
             this.colAciklama.OptionsColumn.ShowInCustomizationForm = false;
             this.colAciklama.Visible = true;
-            this.colAciklama.VisibleIndex = 9;
-            this.colAciklama.Width = 91;
+            this.colAciklama.VisibleIndex = 11;
+            this.colAciklama.Width = 74;
             // 
             // colKDVDahil
             // 
@@ -826,7 +848,8 @@
             this.colProje.Name = "colProje";
             this.colProje.OptionsColumn.AllowEdit = false;
             this.colProje.Visible = true;
-            this.colProje.VisibleIndex = 13;
+            this.colProje.VisibleIndex = 15;
+            this.colProje.Width = 60;
             // 
             // colOzelKod
             // 
@@ -835,28 +858,33 @@
             this.colOzelKod.Name = "colOzelKod";
             this.colOzelKod.OptionsColumn.AllowEdit = false;
             this.colOzelKod.Visible = true;
-            this.colOzelKod.VisibleIndex = 14;
+            this.colOzelKod.VisibleIndex = 16;
+            this.colOzelKod.Width = 79;
             // 
             // popupMenu2
             // 
             this.popupMenu2.Manager = this.barManager1;
             this.popupMenu2.Name = "popupMenu2";
             // 
-            // btnBilgiFisi
+            // colSeri
             // 
-            this.btnBilgiFisi.Caption = "Bilgi Fişi Yazdır";
-            this.btnBilgiFisi.Id = 31;
-            this.btnBilgiFisi.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x161;
-            this.btnBilgiFisi.Name = "btnBilgiFisi";
-            this.btnBilgiFisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBilgiFisi_ItemClick);
+            this.colSeri.Caption = "Seri";
+            this.colSeri.FieldName = "Seri";
+            this.colSeri.Name = "colSeri";
+            this.colSeri.OptionsColumn.AllowEdit = false;
+            this.colSeri.Visible = true;
+            this.colSeri.VisibleIndex = 2;
+            this.colSeri.Width = 60;
             // 
-            // barButtonItem7
+            // colSira
             // 
-            this.barButtonItem7.Caption = "Proforma Fatura Yazdır";
-            this.barButtonItem7.Id = 32;
-            this.barButtonItem7.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.printpreview_16x164;
-            this.barButtonItem7.Name = "barButtonItem7";
-            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
+            this.colSira.Caption = "Sıra";
+            this.colSira.FieldName = "Sira";
+            this.colSira.Name = "colSira";
+            this.colSira.OptionsColumn.AllowEdit = false;
+            this.colSira.Visible = true;
+            this.colSira.VisibleIndex = 3;
+            this.colSira.Width = 60;
             // 
             // frmToptanSatis
             // 
@@ -964,5 +992,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colOzelKod;
         private DevExpress.XtraBars.BarButtonItem btnBilgiFisi;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraGrid.Columns.GridColumn colSeri;
+        private DevExpress.XtraGrid.Columns.GridColumn colSira;
     }
 }
