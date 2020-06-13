@@ -495,7 +495,7 @@ namespace NetSatis.BackOffice.Fiş
                 case "Pos Fatura":
                     ayarlar.StokHareketi = "Stok Çıkış";
                     ayarlar.KasaHareketi = "Kasa Giriş";
-                    ayarlar.FisTurleri = "Perakende Satış Faturası";
+                    ayarlar.FisTurleri = "Pos Fatura";
                     siparişYazdırToolStripMenuItem.Visible = false;
                     bilgiFişiYazdırToolStripMenuItem.Visible = false;
                     teklifYazdırToolStripMenuItem.Visible = false;
@@ -507,7 +507,7 @@ namespace NetSatis.BackOffice.Fiş
                     lblSatirSayisi.Visible = true;
                     ayarlar.SatisEkrani = true;
                     ayarlar.OdemeEkrani = true;
-                    lblBaslik.Text = "Perakende Satış Faturası";
+                    lblBaslik.Text = "Pos Fatura";
                     lblBaslik.Appearance.ImageIndex = 1;
                     navPersonelIslem.Dispose();
                     break;
