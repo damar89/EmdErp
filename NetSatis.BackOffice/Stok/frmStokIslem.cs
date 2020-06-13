@@ -609,7 +609,7 @@ namespace NetSatis.BackOffice.Stok
             calcMera.DataBindings.Clear();
             calcSatisKdv.DataBindings.Clear();
             calcDevirGirisi.DataBindings.Clear();
-
+            peResim.DataBindings.Clear();
             calcAlisFiyat1.DataBindings.Clear();
             calcAlisFiyat2.DataBindings.Clear();
             calcAlisFiyat3.DataBindings.Clear();
