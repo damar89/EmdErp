@@ -311,6 +311,12 @@
     <Compile Include="Fiş\frmFaturaGonder.Designer.cs">
       <DependentUpon>frmFaturaGonder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fiş\frmFaturaYazdir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiş\frmFaturaYazdir.Designer.cs">
+      <DependentUpon>frmFaturaYazdir.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fiş\frmFis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1086,6 +1092,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fiş\frmFaturaGonder.resx">
       <DependentUpon>frmFaturaGonder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fiş\frmFaturaYazdir.resx">
+      <DependentUpon>frmFaturaYazdir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fiş\frmFis.resx">
       <DependentUpon>frmFis.cs</DependentUpon>

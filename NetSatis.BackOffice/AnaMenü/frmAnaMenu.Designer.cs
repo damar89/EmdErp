@@ -112,6 +112,7 @@
             this.barButtonItem32 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem33 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem34 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPosFatura = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem5 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem39 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem40 = new DevExpress.XtraBars.BarButtonItem();
@@ -214,7 +215,7 @@
             this.barButtonItem53 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem54 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem55 = new DevExpress.XtraBars.BarButtonItem();
-            this.btnPosFatura = new DevExpress.XtraBars.BarButtonItem();
+            this.btnFaturaYazdir = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
@@ -336,9 +337,11 @@
             this.barButtonItem56,
             this.barButtonItem57,
             this.barButtonItem58,
-            this.btnPosFatura});
+            this.btnPosFatura,
+            this.btnFaturaYazdir});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 123;
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonControl1.MaxItemId = 124;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -351,7 +354,7 @@
             this.ribbonControl1.ShowCategoryInCaption = false;
             this.ribbonControl1.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl1.Size = new System.Drawing.Size(1008, 128);
+            this.ribbonControl1.Size = new System.Drawing.Size(1176, 159);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
@@ -835,7 +838,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem32),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem33),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem34),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnPosFatura)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnPosFatura),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnFaturaYazdir)});
             this.barSubItem3.Name = "barSubItem3";
             // 
             // barButtonItem16
@@ -872,6 +876,13 @@
             this.barButtonItem34.Id = 73;
             this.barButtonItem34.Name = "barButtonItem34";
             this.barButtonItem34.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem34_ItemClick);
+            // 
+            // btnPosFatura
+            // 
+            this.btnPosFatura.Caption = "Pos Fatura";
+            this.btnPosFatura.Id = 122;
+            this.btnPosFatura.Name = "btnPosFatura";
+            this.btnPosFatura.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPosFatura_ItemClick);
             // 
             // barSubItem5
             // 
@@ -1450,10 +1461,11 @@
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.barKullaniciAdi);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 740);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 912);
+            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1008, 32);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1176, 38);
             // 
             // xtraTabbedMdiManager1
             // 
@@ -1533,7 +1545,9 @@
             this.treeList1.CustomizationFormBounds = new System.Drawing.Rectangle(797, 413, 266, 240);
             this.treeList1.Dock = System.Windows.Forms.DockStyle.Left;
             this.treeList1.HtmlImages = this.ımageList1;
-            this.treeList1.Location = new System.Drawing.Point(0, 128);
+            this.treeList1.Location = new System.Drawing.Point(0, 159);
+            this.treeList1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.treeList1.MinWidth = 23;
             this.treeList1.Name = "treeList1";
             this.treeList1.BeginUnboundLoad();
             this.treeList1.AppendNode(new object[] {
@@ -1730,8 +1744,9 @@
             this.treeList1.OptionsView.ShowTreeLines = DevExpress.Utils.DefaultBoolean.True;
             this.treeList1.OptionsView.ShowVertLines = true;
             this.treeList1.SelectImageList = this.ımageList2;
-            this.treeList1.Size = new System.Drawing.Size(305, 612);
+            this.treeList1.Size = new System.Drawing.Size(356, 753);
             this.treeList1.TabIndex = 15;
+            this.treeList1.TreeLevelWidth = 21;
             this.treeList1.ViewStyle = DevExpress.XtraTreeList.TreeListViewStyle.TreeView;
             this.treeList1.Click += new System.EventHandler(this.treeList1_Click);
             this.treeList1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.treeList1_MouseClick);
@@ -1745,12 +1760,13 @@
             this.treeListColumn1.AppearanceHeader.Options.UseFont = true;
             this.treeListColumn1.Caption = "Menü Listesi";
             this.treeListColumn1.FieldName = "treeListColumn1";
+            this.treeListColumn1.MinWidth = 23;
             this.treeListColumn1.Name = "treeListColumn1";
             this.treeListColumn1.OptionsColumn.AllowEdit = false;
             this.treeListColumn1.OptionsFilter.AutoFilterCondition = DevExpress.XtraTreeList.Columns.AutoFilterCondition.Contains;
             this.treeListColumn1.Visible = true;
             this.treeListColumn1.VisibleIndex = 0;
-            this.treeListColumn1.Width = 92;
+            this.treeListColumn1.Width = 107;
             // 
             // ımageList2
             // 
@@ -1952,25 +1968,26 @@
             this.barButtonItem55.Id = 118;
             this.barButtonItem55.Name = "barButtonItem55";
             // 
-            // btnPosFatura
+            // btnFaturaYazdir
             // 
-            this.btnPosFatura.Caption = "Pos Fatura";
-            this.btnPosFatura.Id = 122;
-            this.btnPosFatura.Name = "btnPosFatura";
-            this.btnPosFatura.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPosFatura_ItemClick);
+            this.btnFaturaYazdir.Caption = "Fatura Yazdır";
+            this.btnFaturaYazdir.Id = 123;
+            this.btnFaturaYazdir.Name = "btnFaturaYazdir";
+            this.btnFaturaYazdir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFaturaYazdir_ItemClick);
             // 
             // frmAnaMenu
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 772);
+            this.ClientSize = new System.Drawing.Size(1176, 950);
             this.Controls.Add(this.treeList1);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("frmAnaMenu.IconOptions.Icon")));
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAnaMenu";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -2145,6 +2162,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.Utils.DragDrop.DragDropEvents dragDropEvents1;
         private DevExpress.XtraBars.BarButtonItem btnPosFatura;
+        private DevExpress.XtraBars.BarButtonItem btnFaturaYazdir;
     }
 }
 

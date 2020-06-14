@@ -1,6 +1,6 @@
 ﻿namespace NetSatis.BackOffice.Fiş
 {
-    partial class frmGunlukIslem
+    partial class frmFaturaYazdir
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGunlukIslem));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFaturaYazdir));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dropDownButton1 = new DevExpress.XtraEditors.DropDownButton();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
@@ -157,9 +157,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnFaturaGuncelle),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnFtrSil),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem7),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnMustahsil),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnBilgiFisi),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnTahsilat),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnGorunumKaydet)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
@@ -237,7 +235,6 @@
             this.btnMustahsil.Caption = "Müstahsil Makbuzu Yazdır";
             this.btnMustahsil.Id = 29;
             this.btnMustahsil.Name = "btnMustahsil";
-            this.btnMustahsil.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMustahsil_ItemClick);
             // 
             // btnBilgiFisi
             // 
@@ -252,7 +249,6 @@
             this.btnTahsilat.Caption = "Tahsilat Fişi Yazdır";
             this.btnTahsilat.Id = 38;
             this.btnTahsilat.Name = "btnTahsilat";
-            this.btnTahsilat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTahsilat_ItemClick);
             // 
             // btnGorunumKaydet
             // 
@@ -656,7 +652,7 @@
             this.gridContFisler.Name = "gridContFisler";
             this.gridContFisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpsChkKdvDahil});
-            this.gridContFisler.Size = new System.Drawing.Size(1364, 435);
+            this.gridContFisler.Size = new System.Drawing.Size(1364, 430);
             this.gridContFisler.TabIndex = 0;
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});
@@ -977,7 +973,7 @@
             this.popupMenu2.Manager = this.barManager1;
             this.popupMenu2.Name = "popupMenu2";
             // 
-            // frmGunlukIslem
+            // frmFaturaYazdir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -990,10 +986,10 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "frmGunlukIslem";
+            this.Name = "frmFaturaYazdir";
             this.ShowIcon = false;
             this.Text = "Günlük İşlemler";
-            this.Load += new System.EventHandler(this.frmGunlukIslem_Load);
+            this.Load += new System.EventHandler(this.frmFaturaYazdir_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();

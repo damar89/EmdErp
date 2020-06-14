@@ -5,6 +5,7 @@ using NetSatis.BackOffice.Ayarlar;
 using NetSatis.BackOffice.Cari;
 using NetSatis.BackOffice.Depo;
 using NetSatis.BackOffice.Döviz_Kurları;
+using NetSatis.BackOffice.Extensions;
 using NetSatis.BackOffice.Fiş;
 using NetSatis.BackOffice.Fiyat_Değiştir;
 using NetSatis.BackOffice.Hızlı_Satış;
@@ -1132,7 +1133,7 @@ namespace NetSatis.BackOffice
             }
 
         }
-        
+
         private void navBarItem30_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             frmBs frm = new frmBs();
@@ -1170,6 +1171,14 @@ namespace NetSatis.BackOffice
         private void btnPosFatura_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frmPosFatura frm = new frmPosFatura();
+            frm.Show();
+        }
+
+        private void btnFaturaYazdir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            //DateTime onGunOnce = DateTime.Today.AddDays(-10);
+            DateTime i = DateTime.Now.AddDays(-10);
+            frmFaturaYazdir frm = new frmFaturaYazdir(i, DateTime.Now, RoleTool.KullaniciEntity.Id);
             frm.Show();
         }
     }
