@@ -180,6 +180,8 @@ namespace NetSatis.BackOffice.Fiş
                 var irsaliyeId = Convert.ToInt32(gridFisler.GetRowCellValue(gridFisler.GetSelectedRows()[i], "Id"));
                 var tempFis = context.Fisler.Where(x => x.Id == irsaliyeId).FirstOrDefault();
                 fis.CariId = tempFis.CariId;
+                fis.CariAdi = tempFis.CariAdi;
+                fis.FaturaUnvani = tempFis.FaturaUnvani;
                 fis.Aciklama = tempFis.Aciklama;
                 fis.Adres = tempFis.Adres;
                 fis.CepTelefonu = tempFis.CepTelefonu;

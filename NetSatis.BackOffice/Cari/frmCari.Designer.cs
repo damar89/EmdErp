@@ -142,6 +142,7 @@
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnDuzenle = new DevExpress.XtraEditors.SimpleButton();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.colDurum = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -164,7 +165,7 @@
             this.colHesapDurum.FieldName = "HesapBakiye";
             this.colHesapDurum.Name = "colHesapDurum";
             this.colHesapDurum.Visible = true;
-            this.colHesapDurum.VisibleIndex = 8;
+            this.colHesapDurum.VisibleIndex = 9;
             // 
             // splitContainerControl1
             // 
@@ -200,6 +201,7 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colDurum,
             this.colId,
             this.colCariTuru,
             this.colCariSinif,
@@ -276,7 +278,7 @@
             this.colCariTuru.Name = "colCariTuru";
             this.colCariTuru.OptionsColumn.AllowEdit = false;
             this.colCariTuru.Visible = true;
-            this.colCariTuru.VisibleIndex = 0;
+            this.colCariTuru.VisibleIndex = 1;
             // 
             // colCariSinif
             // 
@@ -292,7 +294,7 @@
             this.colCariKodu.Name = "colCariKodu";
             this.colCariKodu.OptionsColumn.AllowEdit = false;
             this.colCariKodu.Visible = true;
-            this.colCariKodu.VisibleIndex = 1;
+            this.colCariKodu.VisibleIndex = 2;
             // 
             // colCariAdi
             // 
@@ -301,7 +303,7 @@
             this.colCariAdi.Name = "colCariAdi";
             this.colCariAdi.OptionsColumn.AllowEdit = false;
             this.colCariAdi.Visible = true;
-            this.colCariAdi.VisibleIndex = 2;
+            this.colCariAdi.VisibleIndex = 3;
             // 
             // colYetkiliKisi
             // 
@@ -317,7 +319,7 @@
             this.colFaturaUnvani.Name = "colFaturaUnvani";
             this.colFaturaUnvani.OptionsColumn.AllowEdit = false;
             this.colFaturaUnvani.Visible = true;
-            this.colFaturaUnvani.VisibleIndex = 3;
+            this.colFaturaUnvani.VisibleIndex = 4;
             // 
             // colCepTelefonu
             // 
@@ -326,7 +328,7 @@
             this.colCepTelefonu.Name = "colCepTelefonu";
             this.colCepTelefonu.OptionsColumn.AllowEdit = false;
             this.colCepTelefonu.Visible = true;
-            this.colCepTelefonu.VisibleIndex = 4;
+            this.colCepTelefonu.VisibleIndex = 5;
             // 
             // colTelefon
             // 
@@ -490,7 +492,7 @@
             this.colAlacak.Name = "colAlacak";
             this.colAlacak.OptionsColumn.AllowEdit = false;
             this.colAlacak.Visible = true;
-            this.colAlacak.VisibleIndex = 5;
+            this.colAlacak.VisibleIndex = 6;
             // 
             // colBorc
             // 
@@ -501,7 +503,7 @@
             this.colBorc.Name = "colBorc";
             this.colBorc.OptionsColumn.AllowEdit = false;
             this.colBorc.Visible = true;
-            this.colBorc.VisibleIndex = 6;
+            this.colBorc.VisibleIndex = 7;
             // 
             // colBakiye
             // 
@@ -512,7 +514,7 @@
             this.colBakiye.Name = "colBakiye";
             this.colBakiye.OptionsColumn.AllowEdit = false;
             this.colBakiye.Visible = true;
-            this.colBakiye.VisibleIndex = 7;
+            this.colBakiye.VisibleIndex = 8;
             // 
             // colCepTel2
             // 
@@ -991,6 +993,8 @@
             // 
             this.barButtonItem22.Caption = "Görünümü Kaydet";
             this.barButtonItem22.Id = 33;
+            this.barButtonItem22.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem22.ImageOptions.Image")));
+            this.barButtonItem22.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem22.ImageOptions.LargeImage")));
             this.barButtonItem22.Name = "barButtonItem22";
             this.barButtonItem22.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem22_ItemClick);
             // 
@@ -1156,6 +1160,15 @@
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
+            // colDurum
+            // 
+            this.colDurum.Caption = "Aktif";
+            this.colDurum.FieldName = "Durum";
+            this.colDurum.Name = "colDurum";
+            this.colDurum.OptionsColumn.AllowEdit = false;
+            this.colDurum.Visible = true;
+            this.colDurum.VisibleIndex = 0;
+            // 
             // frmCari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1294,5 +1307,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colCepTelefonu3;
         private DevExpress.XtraGrid.Columns.GridColumn colTelefon2;
         private DevExpress.XtraGrid.Columns.GridColumn colTelefon3;
+        private DevExpress.XtraGrid.Columns.GridColumn colDurum;
     }
 }

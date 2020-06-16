@@ -85,7 +85,7 @@ namespace NetSatis.BackOffice.Cari
                     form.ShowDialog();
                     if (form.saved)
                     {
-                        GetAll();
+                     
                     }
                 }
                 else
@@ -168,7 +168,7 @@ namespace NetSatis.BackOffice.Cari
                 form.ShowDialog();
                 if (form.saved)
                 {
-                    GetAll();
+                   
                 }
             }
             catch (Exception)
@@ -307,7 +307,7 @@ namespace NetSatis.BackOffice.Cari
         }
         private void barButtonItem22_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            gridView1.ClearColumnsFilter();
+       
             gridControl1.MainView.SaveLayoutToXml(DosyaYolu);
         }
         private void barButtonItem23_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

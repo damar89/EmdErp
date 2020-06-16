@@ -1695,6 +1695,7 @@ namespace NetSatis.BackOffice.Fiş
 
                     toplamDipIskontoPayi += Convert.ToDecimal(stokVeri.DipIskontoPayi);
 
+                   
                     if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_AlisFiyat)))
                     {
                         if (toggleKDVDahil.IsOn)

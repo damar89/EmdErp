@@ -1026,6 +1026,7 @@ namespace NetSatis.FrontOffice
                     _fisentity.FisKodu = null;
                     _fisentity.Aciklama = null;
                     btnTemizle_Click(sender, e);
+                    btnTemizle1_Click(sender, e);
                     context.StokHareketleri.Local.Clear();
                     calcGenelToplam.Text = null;
                     calcIndirimOrani.Text = null;
