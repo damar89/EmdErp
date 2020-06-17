@@ -1153,6 +1153,7 @@ namespace NetSatis.FrontOffice
         }
         private void txtOdenenTutar_EditValueChanged(object sender, EventArgs e)
         {
+
             CalcEdit edit = sender as CalcEdit;
             if (Convert.ToDecimal(edit.EditValue) != 0)
             {
@@ -1162,6 +1163,7 @@ namespace NetSatis.FrontOffice
             {
                 calcIndirimTutari.Properties.ReadOnly = false;
             }
+            txtParaUstu.Value = txtOdenenTutar.Value - calcGenelToplam.Value;
             HepsiniHesapla();
         }
         private void txtIslem_EditValueChanged(object sender, EventArgs e)
@@ -2106,6 +2108,16 @@ namespace NetSatis.FrontOffice
         }
 
         private void togkdv_Toggled(object sender, EventArgs e)
+        {
+            HepsiniHesapla();
+        }
+
+        private void txtParaUstu_ValueChanged(object sender, EventArgs e)
+        {
+            HepsiniHesapla();
+        }
+
+        private void txtOdenenTutar_ValueChanged(object sender, EventArgs e)
         {
             HepsiniHesapla();
         }
