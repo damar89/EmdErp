@@ -1624,7 +1624,7 @@ namespace NetSatis.FrontOffice
                 //{
                 //    tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam;
                 //}
-                
+
                 //if (togkdv.IsOn)
                 //{ kdvToplam = tumIndirimlerSonrasiToplam - tumIndirimlerSonrasiToplam / (1 + kdv / 100); 
 
@@ -1654,7 +1654,7 @@ namespace NetSatis.FrontOffice
                     }
                     //tumIndirimlerSonrasiToplam - tumIndirimlerSonrasiToplam / (1 + kdv / 100);
 
-                    kdvToplam = tumIndirimlerSonrasiToplam -tumIndirimlerSonrasiToplam /(1 + kdv / 100); //tumIndirimlerSonrasiToplam.Value * (kdv / 100).Value, 2);
+                    kdvToplam = tumIndirimlerSonrasiToplam - tumIndirimlerSonrasiToplam / (1 + kdv / 100); //tumIndirimlerSonrasiToplam.Value * (kdv / 100).Value, 2);
                     satirNetTutar = Math.Round(tumIndirimlerSonrasiToplam.Value, 2);
                 }
                 else
@@ -1694,6 +1694,11 @@ namespace NetSatis.FrontOffice
                     i++;
                 }
             }
+
+            if (toplamKdvToplam.HasValue)
+                toplamKdvToplam = Convert.ToDecimal(toplamKdvToplam.Value.ToString("n2"));
+            if (toplamAraToplam.HasValue)
+                toplamAraToplam = Convert.ToDecimal(toplamAraToplam.Value.ToString("n2"));
             calcKdvToplam.EditValue = toplamKdvToplam;
             txtAraToplam2.EditValue = toplamAraToplam - toplamKdvToplam;
             txtAraToplam2.EditValue = toplamAraToplam;
@@ -1866,7 +1871,7 @@ namespace NetSatis.FrontOffice
                 EditDate = DateTime.Now,
                 EditUser = frmAnaMenu.UserId,
                 FisKodu = txtKod.Text,
-                FisTuru = _fisentity.FisTuru = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 ? "Perakende Satış İrsaliyesi" : "Perakende Satış Faturası",
+                FisTuru = _fisentity.FisTuru = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 && string.IsNullOrEmpty(txtSeri.Text) ? "Perakende Satış İrsaliyesi" : "Perakende Satış Faturası",
                 HareketTipi = 2,
                 HarTip = HarTipi,
                 IslemTarihi = Convert.ToDateTime(DateTime.Now),

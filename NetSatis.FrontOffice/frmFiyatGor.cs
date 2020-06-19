@@ -30,7 +30,11 @@ namespace NetSatis.FrontOffice
         {
             txtKod.DataBindings.Clear();
             txtStokAdi.DataBindings.Clear();
+            lblUretici.DataBindings.Clear();
+            lblMarka.DataBindings.Clear();
             calcSatisFiyat1.DataBindings.Clear();
+
+
             context.Barkodlar.Where(c => c.StokId == _entity.Id).Load();
             txtKod.DataBindings.Add("Text", _entity, "StokKodu", false, DataSourceUpdateMode.OnPropertyChanged);
             txtStokAdi.DataBindings.Add("Text", _entity, "StokAdi", false, DataSourceUpdateMode.OnPropertyChanged);

@@ -81,11 +81,16 @@ namespace NetSatis.BackOffice.Stok
         {
             if (gridStoklar.GetSelectedRows().Length != 0)
             {
+                List<string> stokKodlari = new List<string>();
                 foreach (var row in gridStoklar.GetSelectedRows())
                 {
+                    if (gridStoklar.GetRowCellValue(row, colStokKodu) == null)
+                        continue;
                     string stokKodu = gridStoklar.GetRowCellValue(row, colStokKodu).ToString();
-                    secilen.Add(context.Stoklar.FirstOrDefault(c => c.StokKodu == stokKodu));
+                    stokKodlari.Add(stokKodu);
                 }
+                secilen.AddRange(context.Stoklar.Where(x => stokKodlari.Contains(x.StokKodu)));
+
                 secildi = true;
                 this.Close();
             }
@@ -131,7 +136,7 @@ namespace NetSatis.BackOffice.Stok
             {
                 foreach (var row in gridStoklar.GetSelectedRows())
                 {
-                
+
                     string stokKodu = gridStoklar.GetRowCellValue(row, colStokKodu).ToString();
                     secilen.Add(context.Stoklar.FirstOrDefault(c => c.StokKodu == stokKodu));
                 }
@@ -249,11 +254,11 @@ namespace NetSatis.BackOffice.Stok
                 pred = pred.And(x => x.StokAdi.Contains(txtStokAdi.Text));
             if (!string.IsNullOrEmpty(txtAramaMetni.Text))
             {
-                
+
                 foreach (string item in txtAramaMetni.Text.Split(' '))
                 {
                     if (!string.IsNullOrEmpty(item))
-                        pred = pred.And(x => x.StokAdi.Contains(item) || x.Barkodu.Contains(item)||x.Marka.Contains(item)||x.Uretici.Contains(item) || x.StokKodu.Contains(item)  || x.Barkod.Any(s => s.Barkodu.Contains(item)) );
+                        pred = pred.And(x => x.StokAdi.Contains(item) || x.Barkodu.Contains(item) || x.Marka.Contains(item) || x.Uretici.Contains(item) || x.StokKodu.Contains(item) || x.Barkod.Any(s => s.Barkodu.Contains(item)));
                 }
             }
 

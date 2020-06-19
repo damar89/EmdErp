@@ -3,6 +3,7 @@ using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using System;
 using System.Data.Entity;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Fiyat_Değiştir
@@ -22,17 +23,23 @@ namespace NetSatis.BackOffice.Fiyat_Değiştir
             gridControl1.DataSource = context.Stoklar.Local.ToBindingList();
         }
 
-        private void btnEkle_Click(object sender, EventArgs e)
+        private async void btnEkle_Click(object sender, EventArgs e)
         {
-            frmStokSec form = new frmStokSec(true);
-            form.ShowDialog();
-            if (form.secildi)
+            await Task.Factory.StartNew(() =>
             {
-                foreach (var itemStok in form.secilen)
+                frmStokSec form = new frmStokSec(true);
+                form.ShowDialog();
+                UseWaitCursor = true;
+                if (form.secildi)
                 {
-                    stokDal.AddOrUpdate(context, itemStok);
+                    foreach (var itemStok in form.secilen)
+                    {
+                        stokDal.AddOrUpdate(context, itemStok);
+                    }
                 }
-            }
+                UseWaitCursor = false;
+            });
+
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -91,9 +98,9 @@ namespace NetSatis.BackOffice.Fiyat_Değiştir
                                 //    ? kolonDeger + kolonDeger / 100 * itemDegistir.Degeri
                                 //    : kolonDeger - kolonDeger / 100 * itemDegistir.Degeri;
 
-                                    degisen = itemDegistir.DegisimYonu == "Arttır"
-                                    ? kolonDeger + kolonDeger / 100 * itemDegistir.Degeri
-                                    : kolonDeger - kolonDeger / 100 * itemDegistir.Degeri;
+                                degisen = itemDegistir.DegisimYonu == "Arttır"
+                                ? kolonDeger + kolonDeger / 100 * itemDegistir.Degeri
+                                : kolonDeger - kolonDeger / 100 * itemDegistir.Degeri;
 
                             }
                             else
@@ -102,9 +109,9 @@ namespace NetSatis.BackOffice.Fiyat_Değiştir
                                 //    ? kolonDeger + itemDegistir.Degeri
                                 //    : kolonDeger - itemDegistir.Degeri;
 
-                                       degisen = itemDegistir.DegisimYonu == "Arttır"
-                                    ? kolonDeger + itemDegistir.Degeri
-                                    : kolonDeger - itemDegistir.Degeri;
+                                degisen = itemDegistir.DegisimYonu == "Arttır"
+                             ? kolonDeger + itemDegistir.Degeri
+                             : kolonDeger - itemDegistir.Degeri;
                             }
                             gridView1.SetRowCellValue(i, itemDegistir.KolonAdi, degisen);
 

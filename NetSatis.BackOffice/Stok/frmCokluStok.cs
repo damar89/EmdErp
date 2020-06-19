@@ -552,14 +552,14 @@ namespace NetSatis.BackOffice.Stok
                     if (string.IsNullOrEmpty(StokKodu))
                     {
                         MessageBox.Show("Lütfen Stok Kodu Giriniz!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
+                        continue;
                     }
                     res = DB.Stoklar.Where(x => x.StokKodu == StokKodu).ToList();
 
                     if (res.Count == 0)
                     {
                         MessageBox.Show("Girilen Stok koduna ait ürün bulunamadı!", "", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        return;
+                        continue;
                     }
                 }
                 else if (yontem == VerileriGuncellemeYontemi.Barkod)
@@ -568,7 +568,7 @@ namespace NetSatis.BackOffice.Stok
                     if (string.IsNullOrEmpty(Barkodu))
                     {
                         MessageBox.Show("Lütfen Stok Kodu Giriniz!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
+                        continue;
                     }
                     res = DB.Stoklar.Include("Barkod").Where(x => x.Barkodu == Barkodu || x.Barkod.Any(s => s.Barkodu == Barkodu)).ToList();
 
@@ -576,7 +576,7 @@ namespace NetSatis.BackOffice.Stok
                     if (res.Count == 0)
                     {
                         MessageBox.Show("Girilen barkoda ait ürün bulunamadı!", "", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        return;
+                        continue;
                     }
                 }
                 if (res.Count > 0)

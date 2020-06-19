@@ -142,7 +142,7 @@ namespace NetSatis.BackOffice.Stok
                 }
             }
             //fiş işlemden gönderilen barkodu kaydet
-            if (!string.IsNullOrEmpty(entity.Barkodu))
+            if (!kopyala && !string.IsNullOrEmpty(entity.Barkodu) && string.IsNullOrEmpty(_entity.Barkodu))
                 _entity.Barkodu = entity.Barkodu;
             //btnYeni_Click(null, null);
             bindingSource();
@@ -279,7 +279,7 @@ namespace NetSatis.BackOffice.Stok
                     layZirai.Visibility =
                     layMera.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
             }
-            if (guncelle==true)
+            if (guncelle == true)
             {
                 togDurum.EditValue = _entity.Durumu;
             }
@@ -289,7 +289,7 @@ namespace NetSatis.BackOffice.Stok
             }
             //txtStokKodu.Text = _entity.Id == 0 ?
             //    CodeTool.KodOlustur("ST", SettingsTool.AyarOku(SettingsTool.Ayarlar.StokAyarlari_StokKodu)) : _entity.StokKodu;
-         
+
             //togWeb.EditValue = false;
             txtKod.Focus();
         }
@@ -756,7 +756,7 @@ namespace NetSatis.BackOffice.Stok
         }
         private void btnBarkodOlustur_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-           
+
         }
         private void frmStokIslem_Shown(object sender, EventArgs e)
         {
@@ -1181,13 +1181,13 @@ namespace NetSatis.BackOffice.Stok
 
         private void groupControl1_CustomButtonClick(object sender, DevExpress.XtraBars.Docking2010.BaseButtonEventArgs e)
         {
-            if(e.Button.Properties.Caption.Equals("Barkod Oluştur"))
+            if (e.Button.Properties.Caption.Equals("Barkod Oluştur"))
             {
                 //var _cBarkod = new Barkod();
                 //_cBarkod.Barkodu= 
-                    gridBarkod.BarkodEkle(colBarkod);
+                gridBarkod.BarkodEkle(colBarkod);
                 //context.Barkodlar.Local.Add(_cBarkod)
-                
+
             }
         }
 

@@ -1695,7 +1695,7 @@ namespace NetSatis.BackOffice.Fiş
 
                     toplamDipIskontoPayi += Convert.ToDecimal(stokVeri.DipIskontoPayi);
 
-                   
+
                     if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_AlisFiyat)))
                     {
                         if (toggleKDVDahil.IsOn)
@@ -1704,16 +1704,16 @@ namespace NetSatis.BackOffice.Fiş
                             {
 
 
-                                stokVeri.Stok.AlisFiyati1 = stokVeri.BirimFiyati / (1 + (stokVeri.Kdv * 100));
+                                stokVeri.Stok.AlisFiyati1 = stokVeri.BirimFiyati / (1 + Convert.ToDecimal(stokVeri.Kdv / Convert.ToDecimal(100)));
 
-                                var ind1 = stokVeri.BirimFiyati / (1 + (stokVeri.Kdv * 100)) - (stokVeri.BirimFiyati / (1 + (stokVeri.Kdv * 100)) * stokVeri.IndirimOrani / 100);
+                                var ind1 = stokVeri.BirimFiyati * (stokVeri.IndirimOrani / Convert.ToDecimal(100));
 
-                                var ind2 = ind1 - (ind1 * stokVeri.IndirimOrani2 / 100);
-                                var ind3 = ind2 - (ind2 * stokVeri.IndirimOrani3 / 100);
+                                var ind2 = ind1 - (ind1 * stokVeri.IndirimOrani2 / Convert.ToDecimal(100));
+                                var ind3 = ind2 - (ind2 * stokVeri.IndirimOrani3 / Convert.ToDecimal(100));
 
-                                stokVeri.Stok.AlisFiyati2 = ind3;
+                                stokVeri.Stok.AlisFiyati2 = stokVeri.BirimFiyati - ind3;
 
-                                stokVeri.Stok.AlisFiyati3 = ind3 + (ind3 * stokVeri.Kdv / 100);
+                                stokVeri.Stok.AlisFiyati3 = stokVeri.BirimFiyati + ind3 + (ind3 * stokVeri.Kdv / Convert.ToDecimal(100));
                                 stokDAL.MevcutStok(context, 1);
 
                             }
@@ -1739,7 +1739,8 @@ namespace NetSatis.BackOffice.Fiş
                         {
                             if (_fisentity.FisTuru == "Alış Faturası" || _fisentity.FisTuru == "Alış İrsaliyesi")
                             {
-                                stokVeri.Stok.SatisFiyati1 = stokVeri.SatisFiyati;
+                                if (stokVeri.SatisFiyati.HasValue && stokVeri.SatisFiyati.Value != 0)
+                                    stokVeri.Stok.SatisFiyati1 = stokVeri.SatisFiyati;
                             }
                         }
 
@@ -2313,7 +2314,7 @@ namespace NetSatis.BackOffice.Fiş
         }
         async Task HepsiniHesapla()
         {
-        
+
             try
             {
 

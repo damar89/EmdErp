@@ -96,6 +96,8 @@
             this.rpsChkKdvDahil = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.colIrsFiskodu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSeri = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSira = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -520,7 +522,7 @@
             this.gridContFisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpsChkKdvDahil,
             this.repoSecim});
-            this.gridContFisler.Size = new System.Drawing.Size(1023, 354);
+            this.gridContFisler.Size = new System.Drawing.Size(1023, 349);
             this.gridContFisler.TabIndex = 0;
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});
@@ -552,7 +554,9 @@
             this.colAciklama,
             this.colKDVDahil,
             this.colIrsFiskodu,
-            this.gridColumn1});
+            this.gridColumn1,
+            this.colSeri,
+            this.colSira});
             this.gridFisler.GridControl = this.gridContFisler;
             this.gridFisler.Name = "gridFisler";
             this.gridFisler.OptionsView.ShowAutoFilterRow = true;
@@ -609,7 +613,7 @@
             this.colCariKodu.OptionsColumn.AllowEdit = false;
             this.colCariKodu.OptionsColumn.ShowInCustomizationForm = false;
             this.colCariKodu.Visible = true;
-            this.colCariKodu.VisibleIndex = 2;
+            this.colCariKodu.VisibleIndex = 4;
             this.colCariKodu.Width = 83;
             // 
             // colCariAdi
@@ -620,7 +624,7 @@
             this.colCariAdi.OptionsColumn.AllowEdit = false;
             this.colCariAdi.OptionsColumn.ShowInCustomizationForm = false;
             this.colCariAdi.Visible = true;
-            this.colCariAdi.VisibleIndex = 3;
+            this.colCariAdi.VisibleIndex = 5;
             this.colCariAdi.Width = 117;
             // 
             // colBelgeNo
@@ -631,7 +635,7 @@
             this.colBelgeNo.OptionsColumn.AllowEdit = false;
             this.colBelgeNo.OptionsColumn.ShowInCustomizationForm = false;
             this.colBelgeNo.Visible = true;
-            this.colBelgeNo.VisibleIndex = 4;
+            this.colBelgeNo.VisibleIndex = 6;
             this.colBelgeNo.Width = 79;
             // 
             // colTarih
@@ -644,7 +648,7 @@
             this.colTarih.OptionsColumn.AllowEdit = false;
             this.colTarih.OptionsColumn.ShowInCustomizationForm = false;
             this.colTarih.Visible = true;
-            this.colTarih.VisibleIndex = 5;
+            this.colTarih.VisibleIndex = 7;
             this.colTarih.Width = 79;
             // 
             // colVadeTarihi
@@ -656,7 +660,7 @@
             this.colVadeTarihi.Name = "colVadeTarihi";
             this.colVadeTarihi.OptionsColumn.AllowEdit = false;
             this.colVadeTarihi.Visible = true;
-            this.colVadeTarihi.VisibleIndex = 7;
+            this.colVadeTarihi.VisibleIndex = 9;
             // 
             // colSaat
             // 
@@ -667,7 +671,7 @@
             this.colSaat.Name = "colSaat";
             this.colSaat.OptionsColumn.AllowEdit = false;
             this.colSaat.Visible = true;
-            this.colSaat.VisibleIndex = 6;
+            this.colSaat.VisibleIndex = 8;
             this.colSaat.Width = 70;
             // 
             // colPlasiyerKodu
@@ -686,7 +690,7 @@
             this.colPlasiyerAdi.OptionsColumn.AllowEdit = false;
             this.colPlasiyerAdi.OptionsColumn.ShowInCustomizationForm = false;
             this.colPlasiyerAdi.Visible = true;
-            this.colPlasiyerAdi.VisibleIndex = 8;
+            this.colPlasiyerAdi.VisibleIndex = 10;
             this.colPlasiyerAdi.Width = 80;
             // 
             // colIskontoOrani1
@@ -697,7 +701,7 @@
             this.colIskontoOrani1.OptionsColumn.AllowEdit = false;
             this.colIskontoOrani1.OptionsColumn.ShowInCustomizationForm = false;
             this.colIskontoOrani1.Visible = true;
-            this.colIskontoOrani1.VisibleIndex = 10;
+            this.colIskontoOrani1.VisibleIndex = 12;
             this.colIskontoOrani1.Width = 53;
             // 
             // colIskontoOrani2
@@ -724,7 +728,7 @@
             this.colIskontoTutari1.OptionsColumn.AllowEdit = false;
             this.colIskontoTutari1.OptionsColumn.ShowInCustomizationForm = false;
             this.colIskontoTutari1.Visible = true;
-            this.colIskontoTutari1.VisibleIndex = 11;
+            this.colIskontoTutari1.VisibleIndex = 13;
             this.colIskontoTutari1.Width = 85;
             // 
             // colIskontoTutari2
@@ -751,7 +755,7 @@
             this.colToplamTutar.OptionsColumn.AllowEdit = false;
             this.colToplamTutar.OptionsColumn.ShowInCustomizationForm = false;
             this.colToplamTutar.Visible = true;
-            this.colToplamTutar.VisibleIndex = 12;
+            this.colToplamTutar.VisibleIndex = 14;
             this.colToplamTutar.Width = 108;
             // 
             // colAciklama
@@ -762,7 +766,7 @@
             this.colAciklama.OptionsColumn.AllowEdit = false;
             this.colAciklama.OptionsColumn.ShowInCustomizationForm = false;
             this.colAciklama.Visible = true;
-            this.colAciklama.VisibleIndex = 9;
+            this.colAciklama.VisibleIndex = 11;
             this.colAciklama.Width = 96;
             // 
             // colKDVDahil
@@ -787,13 +791,29 @@
             this.colIrsFiskodu.Name = "colIrsFiskodu";
             this.colIrsFiskodu.OptionsColumn.AllowEdit = false;
             this.colIrsFiskodu.Visible = true;
-            this.colIrsFiskodu.VisibleIndex = 13;
+            this.colIrsFiskodu.VisibleIndex = 15;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Fatura Fis Kodu";
             this.gridColumn1.FieldName = "FaturaFisKodu";
             this.gridColumn1.Name = "gridColumn1";
+            // 
+            // colSeri
+            // 
+            this.colSeri.Caption = "Seri";
+            this.colSeri.FieldName = "Seri";
+            this.colSeri.Name = "colSeri";
+            this.colSeri.Visible = true;
+            this.colSeri.VisibleIndex = 2;
+            // 
+            // colSira
+            // 
+            this.colSira.Caption = "Sıra";
+            this.colSira.FieldName = "Sira";
+            this.colSira.Name = "colSira";
+            this.colSira.Visible = true;
+            this.colSira.VisibleIndex = 3;
             // 
             // frmPesSatisIrsaliyesi
             // 
@@ -894,5 +914,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repoSecim;
         private DevExpress.XtraGrid.Columns.GridColumn colIrsFiskodu;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn colSeri;
+        private DevExpress.XtraGrid.Columns.GridColumn colSira;
     }
 }
