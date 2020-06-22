@@ -22,7 +22,7 @@ namespace NetSatis.BackOffice.Fiş
         {
             user = userId;
             InitializeComponent();
-            gridContFisler.DataSource = fisDal.GunlukListelemeler(context, "Perakende Satış Faturası", "Toptan Satış Faturası", "Perakende Satış İrsaliyesi", "Ödeme Fişi", "Tahsilat Fişi", "Masraf Fişi", "Pos Fatura", baslangic, bitis);
+            gridContFisler.DataSource = fisDal.GunlukListelemeler(context, "Perakende Satış Faturası", "Toptan Satış Faturası", "Perakende Satış İrsaliyesi", "Ödeme Fişi", "Tahsilat Fişi", "Masraf Fişi", "Pos Fatura","Perakende İade Faturası","Satış İade Faturası", baslangic, bitis);
         }
 
         private void frmGunlukIslem_Load(object sender, EventArgs e)

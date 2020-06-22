@@ -639,10 +639,10 @@ namespace NetSatis.Entities.Data_Access
                    }).ToList();
             return tablo;
         }
-        public object GunlukListelemeler(NetSatisContext context, string fisTuru, string fisTuru2,string fisTuru3,string fisTuru4, string fisTuru5, string fisTuru6, string fisTuru7,DateTime baslangic, DateTime bitis)
+        public object GunlukListelemeler(NetSatisContext context, string fisTuru, string fisTuru2,string fisTuru3,string fisTuru4, string fisTuru5, string fisTuru6, string fisTuru7, string fisTuru8, string fisTuru9,DateTime baslangic, DateTime bitis)
         {
-            var tablo = context.Fisler.Where(c => (c.FisTuru == fisTuru || c.FisTuru == fisTuru2 || c.FisTuru == fisTuru3 || c.FisTuru == fisTuru4 || c.FisTuru == fisTuru5 || c.FisTuru == fisTuru6 || c.FisTuru == fisTuru7) && (c.Tarih >= baslangic && c.Tarih <= bitis)).GroupJoin(
-                context.Fisler.Where(c => c.FisTuru == fisTuru || c.FisTuru == fisTuru2 || c.FisTuru == fisTuru3 || c.FisTuru == fisTuru4 || c.FisTuru == fisTuru5 || c.FisTuru == fisTuru6 || c.FisTuru == fisTuru7 && (c.Tarih >= baslangic && c.Tarih <= bitis)), c => c.CariId, c => c.CariId,
+            var tablo = context.Fisler.Where(c => (c.FisTuru == fisTuru || c.FisTuru == fisTuru2 || c.FisTuru == fisTuru3 || c.FisTuru == fisTuru4 || c.FisTuru == fisTuru5 || c.FisTuru == fisTuru6 || c.FisTuru == fisTuru7 || c.FisTuru == fisTuru8 || c.FisTuru == fisTuru9) && (c.Tarih >= baslangic && c.Tarih <= bitis)).GroupJoin(
+                context.Fisler.Where(c => c.FisTuru == fisTuru || c.FisTuru == fisTuru2 || c.FisTuru == fisTuru3 || c.FisTuru == fisTuru4 || c.FisTuru == fisTuru5 || c.FisTuru == fisTuru6 || c.FisTuru == fisTuru7 || c.FisTuru == fisTuru8 || c.FisTuru == fisTuru9 && (c.Tarih >= baslangic && c.Tarih <= bitis)), c => c.CariId, c => c.CariId,
                 (fisler, cariler) =>
                    new
                    {
