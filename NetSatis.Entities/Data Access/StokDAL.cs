@@ -363,6 +363,7 @@ namespace NetSatis.Entities.Data_Access
                             s.OzelKodu,
                             s.Proje,
                             s.SatisKdv,
+                            s.AlisFiyati1,
                             s.SatisFiyati1,
                             s.SatisFiyati2,
                             SHareket = s.StokHareket
@@ -386,6 +387,7 @@ namespace NetSatis.Entities.Data_Access
                              SatisKdv = s.SatisKdv,
                              OzelKodu = s.OzelKodu,
                              Proje = s.Proje,
+                             AlisFiyati1=s.AlisFiyati1,
                              SatisFiyati1 = s.SatisFiyati1,
                              SatisFiyati2 = s.SatisFiyati2,
                              StokGiris = StokGiris(s.SHareket),
