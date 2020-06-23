@@ -530,11 +530,20 @@ namespace NetSatis.FrontOffice
             decimal toplamDipIskontoPayi = 0;
             if (txtIslem.Text == "İADE")
             {
-                _fisentity.FisTuru = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 ? "Perakende İade İrsaliyesi" : "Perakende İade Faturası";
+                if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 && string.IsNullOrEmpty(txtSeri.Text))
+                    _fisentity.FisTuru = "Perakende İade Faturası";
+                else 
+                    _fisentity.FisTuru = "Perakende İade İrsaliyesi";
             }
             else
             {
-                _fisentity.FisTuru = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 ? "Perakende Satış İrsaliyesi" : "Perakende Satış Faturası";
+                if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 && string.IsNullOrEmpty(txtSeri.Text))
+                    _fisentity.FisTuru = "Perakende Satış İrsaliyesi";
+                else 
+                    _fisentity.FisTuru = "Perakende Satış Faturası";
+               
+
+                //_fisentity.FisTuru = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 ? "Perakende Satış İrsaliyesi" : "Perakende Satış Faturası";
             }
             foreach (var stokVeri in context.StokHareketleri.Local.ToList())
             {
@@ -542,14 +551,15 @@ namespace NetSatis.FrontOffice
                 stokVeri.Tarih = Convert.ToDateTime(DateTime.Now);
                 stokVeri.FisKodu = txtKod.Text;
                 stokVeri.Hareket = txtIslem.Text == "İADE" ? "Stok Giriş" : "Stok Çıkış";
-                if (txtIslem.Text == "İADE")
-                {
-                    stokVeri.FisTuru = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 ? "Perakende İade İrsaliyesi" : "Perakende İade Faturası";
-                }
-                else
-                {
-                    stokVeri.FisTuru = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 ? "Perakende Satış İrsaliyesi" : "Perakende Satış Faturası";
-                }
+                stokVeri.FisTuru = _fisentity.FisTuru;
+                //if (txtIslem.Text == "İADE")
+                //{
+                //    stokVeri.FisTuru = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 ? "Perakende İade İrsaliyesi" : "Perakende İade Faturası";
+                //}
+                //else
+                //{
+                //    stokVeri.FisTuru = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 ? "Perakende Satış İrsaliyesi" : "Perakende Satış Faturası";
+                //}
                 for (int i = 0; i < gridStokHareket.RowCount; i++)
                 {
                     string stokkodu = gridStokHareket.GetRowCellValue(i, "Stok.StokKodu").ToString();
@@ -572,15 +582,16 @@ namespace NetSatis.FrontOffice
                 //    ? Convert.ToDateTime(DateTime.Now)
                 //    : Convert.ToDateTime(kasaVeri.Tarih);
                 kasaVeri.FisKodu = txtKod.Text;
+                kasaVeri.FisTuru = _fisentity.FisTuru;
                 kasaVeri.Hareket = txtIslem.Text == "İADE" ? "Kasa Çıkış" : "Kasa Giriş";
-                if (txtIslem.Text == "İADE")
-                {
-                    kasaVeri.FisTuru = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 ? "Perakende İade İrsaliyesi" : "Perakende İade Faturası";
-                }
-                else
-                {
-                    kasaVeri.FisTuru = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 ? "Perakende Satış İrsaliyesi" : "Perakende Satış Faturası";
-                }
+                //if (txtIslem.Text == "İADE")
+                //{
+                //    kasaVeri.FisTuru = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 ? "Perakende İade İrsaliyesi" : "Perakende İade Faturası";
+                //}
+                //else
+                //{
+                //    kasaVeri.FisTuru = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 ? "Perakende Satış İrsaliyesi" : "Perakende Satış Faturası";
+                //}
                 kasaVeri.CariId = _cariId;
             }
             if (txtHareketTipi.Text == "")
