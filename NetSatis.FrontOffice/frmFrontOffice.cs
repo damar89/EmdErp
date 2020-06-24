@@ -530,14 +530,14 @@ namespace NetSatis.FrontOffice
             decimal toplamDipIskontoPayi = 0;
             if (txtIslem.Text == "İADE")
             {
-                if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 && string.IsNullOrEmpty(txtSeri.Text))
+                if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 && lblCariKod.Text == "VRS001" && string.IsNullOrEmpty(txtSeri.Text))
                     _fisentity.FisTuru = "Perakende İade Faturası";
                 else 
                     _fisentity.FisTuru = "Perakende İade İrsaliyesi";
             }
             else
             {
-                if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 && string.IsNullOrEmpty(txtSeri.Text))
+                if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 && lblCariKod.Text != "VRS001" && string.IsNullOrEmpty(txtSeri.Text))
                     _fisentity.FisTuru = "Perakende Satış İrsaliyesi";
                 else 
                     _fisentity.FisTuru = "Perakende Satış Faturası";

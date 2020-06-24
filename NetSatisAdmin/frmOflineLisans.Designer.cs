@@ -96,10 +96,10 @@
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.textEdit2);
             this.Controls.Add(this.textEdit1);
+            this.IconOptions.ShowIcon = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmOflineLisans";
-            this.ShowIcon = false;
             this.Text = "Lisans";
             this.Load += new System.EventHandler(this.frmOflineLisans_Load);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
