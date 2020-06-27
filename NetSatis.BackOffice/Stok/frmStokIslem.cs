@@ -498,8 +498,9 @@ namespace NetSatis.BackOffice.Stok
         {
             var row = (Barkod)e.Row;
 
-            if (context.Barkodlar.Count(c => c.Barkodu == row.Barkodu) != 0 || context.Barkodlar.Local.Count(c => c.Barkodu == row.Barkodu) != 0)
+            if (context.Barkodlar.Count(c => c.Barkodu == row.Barkodu) != 0 || context.Barkodlar.Local.Count(c => c.Barkodu == row.Barkodu) != 0 || context.Stoklar.Any(x => x.Barkodu == row.Barkodu))
             {
+
                 MessageBox.Show("Eklediğiniz Barkod Daha Önce Eklenmiş.");
                 gridBarkod.CancelUpdateCurrentRow();
             }

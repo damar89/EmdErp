@@ -2444,9 +2444,15 @@ namespace NetSatis.BackOffice.Fiş
 
                         if (item.ToplamTutar.HasValue && item.ToplamTutar.Value != 0)
                         {
+                            var ind1 = item.BirimFiyati - (item.BirimFiyati * item.IndirimOrani / 100);
 
-                            var oranli = item.SatisFiyati.Value * 100 / item.ToplamTutar.Value;
-                            gridStokHareket.SetFocusedRowCellValue("KarOrani", oranli - 100);
+                            var ind2 = ind1 - (ind1 * item.IndirimOrani2 / 100);
+                            var ind3 = ind2 - (ind2 * item.IndirimOrani3 / 100);
+                            var res = (ind3) + (ind3) * (item.KarOrani / 100);
+                            var kdvli = res + res * item.Kdv / 100;
+                            var KarOraniHesapla = kdvli / item.SatisFiyati;
+                            //var oranli = item.SatisFiyati.Value * 100 / item.ToplamTutar.Value;
+                            gridStokHareket.SetFocusedRowCellValue("KarOrani", KarOraniHesapla*100);
                         }
                     }
 
