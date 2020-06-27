@@ -1751,7 +1751,7 @@ namespace NetSatis.BackOffice.Stok
             this.tabNavigationPage2.Name = "tabNavigationPage2";
             this.tabNavigationPage2.PageText = "Barkodlar";
             this.tabNavigationPage2.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
-            this.tabNavigationPage2.Size = new System.Drawing.Size(794, 565);
+            this.tabNavigationPage2.Size = new System.Drawing.Size(793, 555);
             // 
             // groupControl1
             // 
@@ -1763,7 +1763,7 @@ namespace NetSatis.BackOffice.Stok
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(794, 565);
+            this.groupControl1.Size = new System.Drawing.Size(793, 555);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Barkodlar";
             this.groupControl1.CustomButtonClick += new DevExpress.XtraBars.Docking2010.BaseButtonEventHandler(this.groupControl1_CustomButtonClick);
@@ -1777,7 +1777,7 @@ namespace NetSatis.BackOffice.Stok
             this.gridContBarkod.Name = "gridContBarkod";
             this.gridContBarkod.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repoSil});
-            this.gridContBarkod.Size = new System.Drawing.Size(790, 526);
+            this.gridContBarkod.Size = new System.Drawing.Size(789, 516);
             this.gridContBarkod.TabIndex = 2;
             this.gridContBarkod.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridBarkod});
@@ -1795,6 +1795,7 @@ namespace NetSatis.BackOffice.Stok
             this.gridBarkod.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
             this.gridBarkod.OptionsView.ShowGroupPanel = false;
             this.gridBarkod.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridBarkod_PopupMenuShowing);
+            this.gridBarkod.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gridBarkod_ValidateRow);
             // 
             // colBarkod
             // 
@@ -1821,8 +1822,10 @@ namespace NetSatis.BackOffice.Stok
             this.repoSil.AutoHeight = false;
             this.repoSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
+            this.repoSil.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("repoSil.ContextImageOptions.Image")));
             this.repoSil.Name = "repoSil";
             this.repoSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repoSil.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repoSil_ButtonClick);
             // 
             // btnKapat
             // 
