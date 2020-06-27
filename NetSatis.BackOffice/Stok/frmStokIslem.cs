@@ -497,18 +497,18 @@ namespace NetSatis.BackOffice.Stok
         private void gridBarkod_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
         {
             var row = (Barkod)e.Row;
-           
-                if (context.Barkodlar.Count(c => c.Barkodu == row.Barkodu) != 0 || context.Barkodlar.Local.Count(c => c.Barkodu == row.Barkodu) != 0)
-                {
-                    MessageBox.Show("Eklediğiniz Barkod Daha Önce Eklenmiş.");
-                    gridBarkod.CancelUpdateCurrentRow();
-                }
-                else if (row.Barkodu.Contains(" "))
-                {
-                    MessageBox.Show("Barkod kullanımında özel karakterler kullanılamaz.");
-                    gridBarkod.CancelUpdateCurrentRow();
-                }
-            
+
+            if (context.Barkodlar.Count(c => c.Barkodu == row.Barkodu) != 0 || context.Barkodlar.Local.Count(c => c.Barkodu == row.Barkodu) != 0)
+            {
+                MessageBox.Show("Eklediğiniz Barkod Daha Önce Eklenmiş.");
+                gridBarkod.CancelUpdateCurrentRow();
+            }
+            else if (row.Barkodu.Contains(" "))
+            {
+                MessageBox.Show("Barkod kullanımında özel karakterler kullanılamaz.");
+                gridBarkod.CancelUpdateCurrentRow();
+            }
+
         }
         private void repoSil_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
@@ -1197,24 +1197,22 @@ namespace NetSatis.BackOffice.Stok
         {
 
         }
-
-        private void gridBarkod_CellValueChanging(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
-        {
-            
-        }
-
         private void gridBarkod_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            var row = (Barkod)e.Row;
-            if (context.Barkodlar.Count(c => c.Barkodu == row.Barkodu) != 0 || context.Barkodlar.Local.Count(c => c.Barkodu == row.Barkodu) != 0)
+            if (e.Column.FieldName.Equals("Barkodu"))
             {
-                MessageBox.Show("Eklediğiniz Barkod Daha Önce Eklenmiş.");
-                gridBarkod.CancelUpdateCurrentRow();
-            }
-            else if (row.Barkodu.Contains(" "))
-            {
-                MessageBox.Show("Barkod kullanımında özel karakterler kullanılamaz.");
-                gridBarkod.CancelUpdateCurrentRow();
+
+                var row = (Barkod)gridBarkod.GetRow(e.RowHandle);
+                if (context.Barkodlar.Any(c => c.Barkodu == row.Barkodu) || context.Barkodlar.Local.Any(c => c.Barkodu == row.Barkodu))
+                {
+                    MessageBox.Show("Eklediğiniz Barkod Daha Önce Eklenmiş.");
+                    gridBarkod.CancelUpdateCurrentRow();
+                }
+                else if (row.Barkodu.Contains(" "))
+                {
+                    MessageBox.Show("Barkod kullanımında özel karakterler kullanılamaz.");
+                    gridBarkod.CancelUpdateCurrentRow();
+                }
             }
         }
     }
