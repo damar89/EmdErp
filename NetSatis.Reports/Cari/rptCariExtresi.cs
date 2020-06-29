@@ -21,10 +21,11 @@ namespace NetSatis.Reports.Cari
             lblCariKodu.DataBindings.Add("Text", cariEntity, "CariKodu");
             lblCariAdı.DataBindings.Add("Text", cariEntity, "CariAdi");
             
-            colFisKodu.DataBindings.Add("Text", this.DataSource, "FisKodu");
+            colSeri.DataBindings.Add("Text", this.DataSource, "FisKodu");
             colFisTuru.DataBindings.Add("Text", this.DataSource, "FisTuru");
-            colBelgeNo.DataBindings.Add("Text", this.DataSource, "Seri");
+            colBelgeNo.DataBindings.Add("Text", this.DataSource, "BelgeNo");
             colSira.DataBindings.Add("Text", this.DataSource, "Sira");
+            colBelgeNo.DataBindings.Add("Text", this.DataSource, "Seri");
             colTarih.DataBindings.Add("Text", this.DataSource, "Tarih", "{0:dd.MM.yyyy}");
             colVadeTarihi.DataBindings.Add("Text", this.DataSource, "VadeTarihi", "{0:dd.MM.yyyy}");
             colToplamTutar.DataBindings.Add("Text", this.DataSource, "ToplamTutar", "{0:C2}");
