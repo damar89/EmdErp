@@ -5,6 +5,7 @@ using NetSatis.BackOffice.Fiş;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Reports.Cari;
+using NetSatis.Reports.Fatura_ve_Fiş;
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -112,6 +113,27 @@ namespace NetSatis.BackOffice.Cari
             DateTime dtBitis = dtpBitis.DateTime;
             rptCariExtresiStokDetayli rpr = new rptCariExtresiStokDetayli(_cariId, dtBaslangic, dtBitis);
             rpr.ShowPreview();
+        }
+
+        private void btnBilgiFisi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string secilen = gridCariHareket.GetFocusedRowCellValue(colFisKodu).ToString();
+            FaturaHazirla f = new FaturaHazirla();
+            f.BilgiFisi(secilen);
+        }
+
+        private void btnFatura_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string secilen = gridCariHareket.GetFocusedRowCellValue(colFisKodu).ToString();
+            FaturaHazirla f = new FaturaHazirla();
+            f.BilgiFisi(secilen);
+        }
+
+        private void btnTahsilat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string secilen = gridCariHareket.GetFocusedRowCellValue(colFisKodu).ToString();
+            FaturaHazirla f = new FaturaHazirla();
+            f.TahsilatFisi(secilen);
         }
     }
 }

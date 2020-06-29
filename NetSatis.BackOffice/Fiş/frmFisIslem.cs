@@ -1936,7 +1936,7 @@ namespace NetSatis.BackOffice.Fiş
                     MessageBox.Show("Sayım Eksiği Fişi başarılı bir şekilde kaydedildi.");
                 }
                 basariylaKaydedildi = true;
-                if (_fisentity.FisTuru == "Toptan Satış Faturası" || _fisentity.FisTuru == "Alış İade Faturası" && MessageBox.Show("Faturayı Yazdırmak İster isiniz ?", "Uyarı", MessageBoxButtons.YesNo) ==
+                if (_fisentity.FisTuru == "Toptan Satış Faturası" || _fisentity.FisTuru == "Alış İade Faturası" || _fisentity.FisTuru == "Pos Fatura" || _fisentity.FisTuru == "Perakende Satış Faturası" && MessageBox.Show("Faturayı Yazdırmak İster isiniz ?", "Uyarı", MessageBoxButtons.YesNo) ==
                     DialogResult.Yes)
                 {
                     FaturaHazirla f = new FaturaHazirla();

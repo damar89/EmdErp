@@ -8,6 +8,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using FluentValidation.Results;
+using System.Security.Cryptography.X509Certificates;
+using NetSatis.Entities.Tools;
 
 namespace NetSatis.Entities.Data_Access
 {
@@ -208,7 +210,10 @@ namespace NetSatis.Entities.Data_Access
         {
 
             //stok tablosunun ilk halini oluşturur
-            IQueryable<Stok> tablo = context.Stoklar.Include(x => x.StokHareket).Include(x => x.Barkod);
+
+            bool aktifpasif = string.IsNullOrEmpty(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_StokGozukmesin)) ? false : Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_StokGozukmesin));
+
+            IQueryable<Stok> tablo = context.Stoklar.Where(x => x.Durumu == (aktifpasif ? true : x.Durumu)).Include(x => x.StokHareket).Include(x => x.Barkod);
             if (noTracking)
                 tablo = tablo.AsNoTracking();
             if (pred != null)
@@ -387,7 +392,7 @@ namespace NetSatis.Entities.Data_Access
                              SatisKdv = s.SatisKdv,
                              OzelKodu = s.OzelKodu,
                              Proje = s.Proje,
-                             AlisFiyati1=s.AlisFiyati1,
+                             AlisFiyati1 = s.AlisFiyati1,
                              SatisFiyati1 = s.SatisFiyati1,
                              SatisFiyati2 = s.SatisFiyati2,
                              StokGiris = StokGiris(s.SHareket),

@@ -10,6 +10,7 @@ namespace NetSatis.Entities.Context
     {
         public NetSatisContext() : base(SettingsTool.AyarOku(SettingsTool.Ayarlar.DatabaseAyarlar_BaglantiCumlesi) ?? "Bağlantı Yok")
         {
+            Database.CommandTimeout = 60;
             //this.Configuration.LazyLoadingEnabled = false;
             Database.SetInitializer<NetSatisContext>(new MigrateDatabaseToLatestVersion<NetSatisContext, Configuration>());
             //Configuration.LazyLoadingEnabled = false;

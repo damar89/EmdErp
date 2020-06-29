@@ -116,7 +116,8 @@ namespace NetSatis.BackOffice.Ayarlar
 
             toggleMinMiktar.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisStok_MinMiktar));
             toggleDoviz.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_doviz));
-
+            togCari.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_CariGozukmesin));
+            togStok.IsOn = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_StokGozukmesin));
             ComboboxListele();
             #region FaturaGörüntüleme
             string faturaAdres = SettingsTool.AyarOku(SettingsTool.Ayarlar.FaturaDizayn_DosyaYolu); //Fatura Dizayn dosyasının Adresini oku
@@ -125,7 +126,7 @@ namespace NetSatis.BackOffice.Ayarlar
                 List<FaturaDizaynTemp> itemler = (List<FaturaDizaynTemp>)cmbFaturaDizayn.Properties.DataSource;
                 try
                 {
-                    string str = itemler.FirstOrDefault(x => x.Path == faturaAdres).FileName;
+                    string str = itemler.FirstOrDefault(x => x.Path == faturaAdres)?.FileName;
 
                 }
                 catch (Exception)
@@ -219,6 +220,8 @@ namespace NetSatis.BackOffice.Ayarlar
                 //SettingsTool.AyarDegistir(SettingsTool.Ayarlar.Kooperatif_Mera, kopMera.IsOn.ToString());
                 //SettingsTool.AyarDegistir(SettingsTool.Ayarlar.Kooperatif_Zirai, kopZirai.IsOn.ToString());
                 SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisAyarlari_doviz, toggleDoviz.IsOn.ToString());
+                SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisAyarlari_StokGozukmesin, togStok.IsOn.ToString());
+                SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisAyarlari_CariGozukmesin, togCari.IsOn.ToString());
             }
             catch (Exception)
             {

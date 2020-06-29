@@ -42,6 +42,8 @@ namespace NetSatis.Entities.Data_Access
                            s.Miktar,
                            s.Kdv,
                            s.BirimFiyati,
+                           s.FisSeri,
+                           s.Sira,
                            s.DepoId,
                            s.SeriNo,
                            kat.KategoriAdi,
@@ -66,8 +68,8 @@ namespace NetSatis.Entities.Data_Access
                            s.ToplamTutar,
                            cari.CariKodu,
                            NetBirimFiyat = s.BirimFiyati - (s.IndirimTutar + s.DipIskontoPayi),
-              
-                           NetToplamTutar= (s.BirimFiyati - (s.IndirimTutar + s.DipIskontoPayi))*s.Miktar
+
+                           NetToplamTutar = (s.BirimFiyati - (s.IndirimTutar + s.DipIskontoPayi)) * s.Miktar
 
                        });
 

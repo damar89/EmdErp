@@ -1,4 +1,5 @@
-﻿using NetSatis.Entities.Context;
+﻿using NetSatis.BackOffice.Fiş;
+using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using System;
 using System.IO;
@@ -14,13 +15,13 @@ namespace NetSatis.BackOffice.Stok
         NetSatisContext context = new NetSatisContext();
         FisDAL fisDal = new FisDAL();
         private int _stokId;
-     
-      
+
+
         string DosyaYolu = $@"{Application.StartupPath}\Gorunum\StokHareket_SavedLayout.xml";
         public frmStokHareket(int stokId)
         {
             InitializeComponent();
-           
+
             _stokId = stokId;
             var stokBilgi = context.Stoklar.SingleOrDefault(c => c.Id == stokId);
             lblBaslik.Text = stokBilgi.StokKodu + " - " + stokBilgi.StokAdi + "  Hareketleri ";
@@ -90,34 +91,27 @@ namespace NetSatis.BackOffice.Stok
         {
             //if (_fisentity.FisTuru != "Stok Devir Fişi" || _fisentity.FisTuru != "Sayım Fazlası Fişi" || _fisentity.FisTuru != "Sayım Eksiği Fişi" )
             //{
-                
-            //        if (gridStokHareket.RowCount != 0)
-            //        {
-            //            string secilen = gridStokHareket.GetFocusedRowCellValue(colFisKodu).ToString();
-            //            frmFisIslem form = new frmFisIslem(secilen);
-            //            form.Show();
-            //        }
-            //        else
-            //        {
-            //            MessageBox.Show("Seçili fiş bulunamadı.");
-            //        }
-               
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Bu fişlerin düzenlenmesi bu ekrandan yapılamaz. Lütfen Fiş Listelerinden ilgili fişi Seçip düzenleme işlemlerinizi yapabilirsiniz.");
-            
-        }
+            string secilen = gridStokHareket.GetFocusedRowCellValue(colFisKodu).ToString();
+            string fisturu = gridStokHareket.GetFocusedRowCellValue(colFisTuru).ToString();
+            frmFisIslem form = new frmFisIslem(secilen, fisturu);
+            form.ShowDialog();
 
-        private void frmStokHareket_FormClosing(object sender, FormClosingEventArgs e)
-        {
-          
         }
+        //else
+        //{
+        //    MessageBox.Show("Bu fişlerin düzenlenmesi bu ekrandan yapılamaz. Lütfen Fiş Listelerinden ilgili fişi Seçip düzenleme işlemlerinizi yapabilirsiniz.");
 
-        private void btnDizayn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-  gridStokHareket.ClearColumnsFilter();
-            gridContStokHareket.MainView.SaveLayoutToXml(DosyaYolu);
-        }
+    
+
+    private void frmStokHareket_FormClosing(object sender, FormClosingEventArgs e)
+    {
+
     }
+
+    private void btnDizayn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+    {
+        gridStokHareket.ClearColumnsFilter();
+        gridContStokHareket.MainView.SaveLayoutToXml(DosyaYolu);
+    }
+}
 }
