@@ -14,11 +14,11 @@ namespace NetSatis.Entities.Data_Access
         {
             bool aktifpasif = string.IsNullOrEmpty(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_CariGozukmesin)) ? false : Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_CariGozukmesin));
 
-            var result = context.Cariler.Where(x=>x.Durum==(aktifpasif? true:x.Durum)).GroupJoin(context.Fisler, c => c.Id, c => c.CariId,
+            var result = context.Cariler.Where(x => x.Durum == (aktifpasif ? true : x.Durum)).GroupJoin(context.Fisler, c => c.Id, c => c.CariId,
                 (cariler, fisler) => new
                 {
-                        #region pt1
-                        cariler.Id,
+                    #region pt1
+                    cariler.Id,
                     cariler.Durum,
                     cariler.CariTuru,
                     cariler.CariKodu,
@@ -63,8 +63,8 @@ namespace NetSatis.Entities.Data_Access
                     || c.FisTuru == "Perakende Satış İrsaliyesi"
                     || (c.FisTuru == "Satış İrsaliyesi" && c.CariIrsaliye == "1")
                     ).Sum(c => c.ToplamTutar) ?? 0,
-                        #endregion
-                    }).GroupJoin(context.KasaHareketleri, c => c.Id, c => c.CariId, (cariler, kasahareket) => new
+                    #endregion
+                }).GroupJoin(context.KasaHareketleri, c => c.Id, c => c.CariId, (cariler, kasahareket) => new
                 {
                     cariler.Id,
                     cariler.Durum,
@@ -105,7 +105,7 @@ namespace NetSatis.Entities.Data_Access
                     Alacak = cariler.AlisToplam + (kasahareket.Where(c => c.Hareket == "Kasa Giriş").Sum(c => c.Tutar) ?? 0),
                     Borc = cariler.SatisToplam + (kasahareket.Where(c => c.Hareket == "Kasa Çıkış").Sum(c => c.Tutar) ?? 0),
                     Bakiye = (cariler.SatisToplam + (kasahareket.Where(c => c.Hareket == "Kasa Çıkış").Sum(c => c.Tutar) ?? 0)) -
-                        (cariler.AlisToplam + (kasahareket.Where(c => c.Hareket == "Kasa Giriş").Sum(c => c.Tutar) ?? 0)),
+                    (cariler.AlisToplam + (kasahareket.Where(c => c.Hareket == "Kasa Giriş").Sum(c => c.Tutar) ?? 0)),
                 }).Select(k => new
                 {
                     k.Id,
@@ -291,7 +291,7 @@ namespace NetSatis.Entities.Data_Access
         }
         public object CariFisAyrinti(NetSatisContext context, int cariId)
         {
-            var result = context.Fisler.Where(c => c.CariId == cariId).OrderBy(f => f.Tarih).Select(k => new
+            var result = context.Fisler.Where(c => c.CariId == cariId && c.FaturaFisKodu == null || c.FaturaFisKodu == "").OrderBy(f => f.Tarih).Select(k => new
             {
                 k.Tarih,
                 k.VadeTarihi,
@@ -308,7 +308,7 @@ namespace NetSatis.Entities.Data_Access
                 k.Aciklama,
                 k.ToplamTutar,
                 kasaHareket = k.FisTuru == "Cari Devir Fişi" ?
-                         context.KasaHareketleri.FirstOrDefault(x => x.FisKodu == k.FisKodu).Hareket : "-",
+                                 context.KasaHareketleri.FirstOrDefault(x => x.FisKodu == k.FisKodu).Hareket : "-",
                 Odenen = context.KasaHareketleri.Where(c => c.FisKodu == k.FisKodu).Sum(c => c.Tutar) ?? 0,
                 KalanOdeme = k.ToplamTutar - (context.KasaHareketleri.Where(c => c.FisKodu == k.FisKodu).Sum(c => c.Tutar) ?? 0)
             }).Select(s => new
