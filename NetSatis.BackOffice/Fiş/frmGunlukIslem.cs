@@ -16,6 +16,7 @@ namespace NetSatis.BackOffice.Fiş
         FisDAL fisDal = new FisDAL();
         KasaHareketDAL kasaHareketDal = new KasaHareketDAL();
         StokHareketDAL stokHareketDal = new StokHareketDAL();
+        OdemeTuruDAL odemeTuruDal = new OdemeTuruDAL();
 
         int user = 0;
         string DosyaYolu = $@"{Application.StartupPath}\Gorunum\frmGunlukIslem.xml";
@@ -274,6 +275,19 @@ namespace NetSatis.BackOffice.Fiş
             string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
             FaturaHazirla f = new FaturaHazirla();
             f.TahsilatFisi(secilen);
+        }
+
+        private void btnNakit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var fisKodu = gridFisler.GetFocusedRowCellValue("FisKodu") as string;
+            if (fisKodu == null)
+                return;
+            var fisKayit = kasaHareketDal.GetAll(context, x => x.FisKodu == fisKodu).FirstOrDefault();
+            fisKayit.OdemeTuru.Id = 1;
+            //fisKayit.OdemeTuru.OdemeTuruKodu = "001";
+            //fisKayit.OdemeTuru.OdemeTuruAdi = "Nakit";
+
+            kasaHareketDal.Save(context);  
         }
     }
 }

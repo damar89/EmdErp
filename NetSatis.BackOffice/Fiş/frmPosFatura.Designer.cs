@@ -74,7 +74,6 @@
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnDuzenle = new DevExpress.XtraEditors.SimpleButton();
-            this.lblBaslik = new DevExpress.XtraEditors.LabelControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridContFisler = new DevExpress.XtraGrid.GridControl();
             this.gridFisler = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -103,6 +102,8 @@
             this.colProje = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOzelKod = new DevExpress.XtraGrid.Columns.GridColumn();
             this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.colSeri = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSira = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -542,26 +543,6 @@
             this.btnDuzenle.Visible = false;
             this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
             // 
-            // lblBaslik
-            // 
-            this.lblBaslik.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBaslik.Appearance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblBaslik.Appearance.ImageList = this.imgMenu;
-            this.lblBaslik.Appearance.Options.UseFont = true;
-            this.lblBaslik.Appearance.Options.UseImageAlign = true;
-            this.lblBaslik.Appearance.Options.UseImageList = true;
-            this.lblBaslik.Appearance.Options.UseTextOptions = true;
-            this.lblBaslik.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblBaslik.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblBaslik.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.lblBaslik.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblBaslik.Location = new System.Drawing.Point(0, 0);
-            this.lblBaslik.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(1117, 32);
-            this.lblBaslik.TabIndex = 6;
-            this.lblBaslik.Text = "Toptan Satış Faturası Listeleri";
-            // 
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -572,7 +553,7 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.gridContFisler);
             this.splitContainerControl1.Panel2.Text = "Panel2";
             this.splitContainerControl1.Size = new System.Drawing.Size(1117, 417);
-            this.splitContainerControl1.SplitterPosition = 34;
+            this.splitContainerControl1.SplitterPosition = 0;
             this.splitContainerControl1.TabIndex = 8;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
@@ -584,7 +565,7 @@
             this.gridContFisler.Name = "gridContFisler";
             this.gridContFisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpsChkKdvDahil});
-            this.gridContFisler.Size = new System.Drawing.Size(1117, 377);
+            this.gridContFisler.Size = new System.Drawing.Size(1117, 407);
             this.gridContFisler.TabIndex = 0;
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});
@@ -614,7 +595,9 @@
             this.colKDVDahil,
             this.colEfaturaDurumu,
             this.colProje,
-            this.colOzelKod});
+            this.colOzelKod,
+            this.colSeri,
+            this.colSira});
             this.gridFisler.GridControl = this.gridContFisler;
             this.gridFisler.Name = "gridFisler";
             this.gridFisler.OptionsView.ShowAutoFilterRow = true;
@@ -659,7 +642,7 @@
             this.colCariKodu.OptionsColumn.AllowEdit = false;
             this.colCariKodu.OptionsColumn.ShowInCustomizationForm = false;
             this.colCariKodu.Visible = true;
-            this.colCariKodu.VisibleIndex = 2;
+            this.colCariKodu.VisibleIndex = 4;
             this.colCariKodu.Width = 78;
             // 
             // colCariAdi
@@ -670,7 +653,7 @@
             this.colCariAdi.OptionsColumn.AllowEdit = false;
             this.colCariAdi.OptionsColumn.ShowInCustomizationForm = false;
             this.colCariAdi.Visible = true;
-            this.colCariAdi.VisibleIndex = 3;
+            this.colCariAdi.VisibleIndex = 5;
             this.colCariAdi.Width = 111;
             // 
             // colBelgeNo
@@ -681,7 +664,7 @@
             this.colBelgeNo.OptionsColumn.AllowEdit = false;
             this.colBelgeNo.OptionsColumn.ShowInCustomizationForm = false;
             this.colBelgeNo.Visible = true;
-            this.colBelgeNo.VisibleIndex = 4;
+            this.colBelgeNo.VisibleIndex = 6;
             // 
             // colTarih
             // 
@@ -693,7 +676,7 @@
             this.colTarih.OptionsColumn.AllowEdit = false;
             this.colTarih.OptionsColumn.ShowInCustomizationForm = false;
             this.colTarih.Visible = true;
-            this.colTarih.VisibleIndex = 5;
+            this.colTarih.VisibleIndex = 7;
             // 
             // colVadeTarihi
             // 
@@ -704,7 +687,7 @@
             this.colVadeTarihi.Name = "colVadeTarihi";
             this.colVadeTarihi.OptionsColumn.AllowEdit = false;
             this.colVadeTarihi.Visible = true;
-            this.colVadeTarihi.VisibleIndex = 7;
+            this.colVadeTarihi.VisibleIndex = 9;
             this.colVadeTarihi.Width = 71;
             // 
             // colSaat
@@ -716,7 +699,7 @@
             this.colSaat.Name = "colSaat";
             this.colSaat.OptionsColumn.AllowEdit = false;
             this.colSaat.Visible = true;
-            this.colSaat.VisibleIndex = 6;
+            this.colSaat.VisibleIndex = 8;
             this.colSaat.Width = 66;
             // 
             // colPlasiyerKodu
@@ -735,7 +718,7 @@
             this.colPlasiyerAdi.OptionsColumn.AllowEdit = false;
             this.colPlasiyerAdi.OptionsColumn.ShowInCustomizationForm = false;
             this.colPlasiyerAdi.Visible = true;
-            this.colPlasiyerAdi.VisibleIndex = 8;
+            this.colPlasiyerAdi.VisibleIndex = 10;
             this.colPlasiyerAdi.Width = 76;
             // 
             // colIskontoOrani1
@@ -746,7 +729,7 @@
             this.colIskontoOrani1.OptionsColumn.AllowEdit = false;
             this.colIskontoOrani1.OptionsColumn.ShowInCustomizationForm = false;
             this.colIskontoOrani1.Visible = true;
-            this.colIskontoOrani1.VisibleIndex = 10;
+            this.colIskontoOrani1.VisibleIndex = 12;
             this.colIskontoOrani1.Width = 50;
             // 
             // colIskontoOrani2
@@ -773,7 +756,7 @@
             this.colIskontoTutari1.OptionsColumn.AllowEdit = false;
             this.colIskontoTutari1.OptionsColumn.ShowInCustomizationForm = false;
             this.colIskontoTutari1.Visible = true;
-            this.colIskontoTutari1.VisibleIndex = 11;
+            this.colIskontoTutari1.VisibleIndex = 13;
             this.colIskontoTutari1.Width = 80;
             // 
             // colIskontoTutari2
@@ -800,7 +783,7 @@
             this.colToplamTutar.OptionsColumn.AllowEdit = false;
             this.colToplamTutar.OptionsColumn.ShowInCustomizationForm = false;
             this.colToplamTutar.Visible = true;
-            this.colToplamTutar.VisibleIndex = 12;
+            this.colToplamTutar.VisibleIndex = 14;
             this.colToplamTutar.Width = 84;
             // 
             // colAciklama
@@ -811,7 +794,7 @@
             this.colAciklama.OptionsColumn.AllowEdit = false;
             this.colAciklama.OptionsColumn.ShowInCustomizationForm = false;
             this.colAciklama.Visible = true;
-            this.colAciklama.VisibleIndex = 9;
+            this.colAciklama.VisibleIndex = 11;
             this.colAciklama.Width = 91;
             // 
             // colKDVDahil
@@ -841,8 +824,6 @@
             this.colProje.FieldName = "Proje";
             this.colProje.Name = "colProje";
             this.colProje.OptionsColumn.AllowEdit = false;
-            this.colProje.Visible = true;
-            this.colProje.VisibleIndex = 13;
             // 
             // colOzelKod
             // 
@@ -850,20 +831,33 @@
             this.colOzelKod.FieldName = "OzelKod";
             this.colOzelKod.Name = "colOzelKod";
             this.colOzelKod.OptionsColumn.AllowEdit = false;
-            this.colOzelKod.Visible = true;
-            this.colOzelKod.VisibleIndex = 14;
             // 
             // popupMenu2
             // 
             this.popupMenu2.Manager = this.barManager1;
             this.popupMenu2.Name = "popupMenu2";
             // 
+            // colSeri
+            // 
+            this.colSeri.Caption = "Seri";
+            this.colSeri.FieldName = "Seri";
+            this.colSeri.Name = "colSeri";
+            this.colSeri.Visible = true;
+            this.colSeri.VisibleIndex = 2;
+            // 
+            // colSira
+            // 
+            this.colSira.Caption = "Sıra";
+            this.colSira.FieldName = "Sira";
+            this.colSira.Name = "colSira";
+            this.colSira.Visible = true;
+            this.colSira.VisibleIndex = 3;
+            // 
             // frmPosFatura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1117, 474);
-            this.Controls.Add(this.lblBaslik);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.barDockControlLeft);
@@ -872,7 +866,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frmPosFatura";
             this.ShowIcon = false;
-            this.Text = "Toptan Satış Faturası Listeleri";
+            this.Text = "Satış Faturası Listeleri";
             this.Load += new System.EventHandler(this.frmPosFatura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -897,7 +891,6 @@
         private DevExpress.XtraEditors.SimpleButton btnGuncelle;
         private DevExpress.XtraEditors.SimpleButton btnSil;
         private DevExpress.XtraEditors.SimpleButton btnDuzenle;
-        private DevExpress.XtraEditors.LabelControl lblBaslik;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private DevExpress.XtraGrid.GridControl gridContFisler;
         private DevExpress.XtraGrid.Views.Grid.GridView gridFisler;
@@ -964,5 +957,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colOzelKod;
         private DevExpress.XtraBars.BarButtonItem btnBilgiFisi;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraGrid.Columns.GridColumn colSeri;
+        private DevExpress.XtraGrid.Columns.GridColumn colSira;
     }
 }

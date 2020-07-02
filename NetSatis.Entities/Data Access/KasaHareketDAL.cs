@@ -23,6 +23,7 @@ namespace NetSatis.Entities.Data_Access
                         kasaHareketleri.Tarih,
                         kasaHareketleri.VadeTarihi,
                         kasaHareketleri.OdemeTuru,
+                        kasaHareketleri.OdemeTuruId,
                         kasaHareketleri.Tutar,
                         kasaHareketleri.Aciklama,
                     }).ToList();
