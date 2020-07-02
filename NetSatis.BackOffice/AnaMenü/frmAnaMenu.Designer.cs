@@ -113,6 +113,7 @@
             this.barButtonItem33 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem34 = new DevExpress.XtraBars.BarButtonItem();
             this.btnPosFatura = new DevExpress.XtraBars.BarButtonItem();
+            this.btnFaturaYazdir = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem5 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem39 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem40 = new DevExpress.XtraBars.BarButtonItem();
@@ -215,7 +216,6 @@
             this.barButtonItem53 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem54 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem55 = new DevExpress.XtraBars.BarButtonItem();
-            this.btnFaturaYazdir = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
@@ -883,6 +883,13 @@
             this.btnPosFatura.Id = 122;
             this.btnPosFatura.Name = "btnPosFatura";
             this.btnPosFatura.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPosFatura_ItemClick);
+            // 
+            // btnFaturaYazdir
+            // 
+            this.btnFaturaYazdir.Caption = "Fatura Yazdır";
+            this.btnFaturaYazdir.Id = 123;
+            this.btnFaturaYazdir.Name = "btnFaturaYazdir";
+            this.btnFaturaYazdir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFaturaYazdir_ItemClick);
             // 
             // barSubItem5
             // 
@@ -1967,13 +1974,6 @@
             this.barButtonItem55.Caption = "Firma Bilgileri";
             this.barButtonItem55.Id = 118;
             this.barButtonItem55.Name = "barButtonItem55";
-            // 
-            // btnFaturaYazdir
-            // 
-            this.btnFaturaYazdir.Caption = "Fatura Yazdır";
-            this.btnFaturaYazdir.Id = 123;
-            this.btnFaturaYazdir.Name = "btnFaturaYazdir";
-            this.btnFaturaYazdir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFaturaYazdir_ItemClick);
             // 
             // frmAnaMenu
             // 

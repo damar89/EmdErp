@@ -4,6 +4,7 @@ using NetSatis.Entities.Data_Access;
 using NetSatis.Reports.Fatura_ve_Fiş;
 using System;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Fiş
@@ -159,6 +160,24 @@ namespace NetSatis.BackOffice.Fiş
         {
             if (Directory.Exists($@"{Application.StartupPath}\Gorunum"))
                 gridContFisler.MainView.SaveLayoutToXml(DosyaYolu);
+        }
+
+        private void btnIrsaliye_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            var fisKodu = gridFisler.GetFocusedRowCellValue("FisKodu") as string;
+            if (fisKodu == null)
+                return;
+            var fisKayit = fisDal.GetAll(context, x => x.FisKodu == fisKodu).FirstOrDefault();
+            fisKayit.FisTuru = "Perakende Satış İrsaliyesi";
+            var hareketler = stokHareketDal.GetAll(context, x => x.FisKodu == fisKodu).ToList();
+            hareketler.ForEach(x =>
+            {
+                x.FisTuru = fisKayit.FisTuru;
+            });
+            fisDal.Save(context);
+            gridFisler.DeleteRow(gridFisler.FocusedRowHandle);
+
         }
     }
 }

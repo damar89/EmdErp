@@ -89,18 +89,20 @@
             // labelControl1
             // 
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(12, 12);
+            this.labelControl1.Location = new System.Drawing.Point(14, 15);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(88, 25);
+            this.labelControl1.Size = new System.Drawing.Size(103, 31);
             this.labelControl1.TabIndex = 21;
             this.labelControl1.Text = "Başlangıç Tarihi :";
             // 
             // labelControl3
             // 
             this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl3.Location = new System.Drawing.Point(12, 43);
+            this.labelControl3.Location = new System.Drawing.Point(14, 53);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(76, 25);
+            this.labelControl3.Size = new System.Drawing.Size(89, 31);
             this.labelControl3.TabIndex = 21;
             this.labelControl3.Text = "Bitiş Tarihi :";
             // 
@@ -108,18 +110,20 @@
             // 
             this.groupControl1.Controls.Add(this.btnKapat);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 262);
+            this.groupControl1.Location = new System.Drawing.Point(0, 321);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(339, 57);
+            this.groupControl1.Size = new System.Drawing.Size(381, 70);
             this.groupControl1.TabIndex = 7;
             // 
             // btnKapat
             // 
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.ImageIndex = 1;
-            this.btnKapat.Location = new System.Drawing.Point(249, 23);
+            this.btnKapat.Location = new System.Drawing.Point(276, 28);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(85, 31);
+            this.btnKapat.Size = new System.Drawing.Size(99, 38);
             this.btnKapat.TabIndex = 0;
             this.btnKapat.Text = "Kapat";
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
@@ -127,9 +131,10 @@
             // btnGoster
             // 
             this.btnGoster.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.Göster1;
-            this.btnGoster.Location = new System.Drawing.Point(142, 215);
+            this.btnGoster.Location = new System.Drawing.Point(166, 265);
+            this.btnGoster.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGoster.Name = "btnGoster";
-            this.btnGoster.Size = new System.Drawing.Size(89, 40);
+            this.btnGoster.Size = new System.Drawing.Size(104, 49);
             this.btnGoster.TabIndex = 6;
             this.btnGoster.Text = "Göster";
             this.btnGoster.Click += new System.EventHandler(this.btnGoster_Click);
@@ -137,7 +142,8 @@
             // lookUretici
             // 
             this.lookUretici.EditValue = "Lütfen Seçim Yapınız...";
-            this.lookUretici.Location = new System.Drawing.Point(106, 186);
+            this.lookUretici.Location = new System.Drawing.Point(124, 229);
+            this.lookUretici.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lookUretici.Name = "lookUretici";
             this.lookUretici.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lookUretici.Properties.Appearance.Options.UseFont = true;
@@ -148,7 +154,7 @@
             this.lookUretici.Properties.NullText = "";
             this.lookUretici.Properties.PopupView = this.gridView3;
             this.lookUretici.Properties.ValueMember = "Id";
-            this.lookUretici.Size = new System.Drawing.Size(190, 23);
+            this.lookUretici.Size = new System.Drawing.Size(222, 28);
             this.lookUretici.TabIndex = 28;
             // 
             // gridView3
@@ -171,7 +177,8 @@
             // lookMarka
             // 
             this.lookMarka.EditValue = "Lütfen Seçim Yapınız...";
-            this.lookMarka.Location = new System.Drawing.Point(106, 157);
+            this.lookMarka.Location = new System.Drawing.Point(124, 193);
+            this.lookMarka.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lookMarka.Name = "lookMarka";
             this.lookMarka.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lookMarka.Properties.Appearance.Options.UseFont = true;
@@ -182,7 +189,7 @@
             this.lookMarka.Properties.NullText = "";
             this.lookMarka.Properties.PopupView = this.gridView2;
             this.lookMarka.Properties.ValueMember = "Id";
-            this.lookMarka.Size = new System.Drawing.Size(190, 23);
+            this.lookMarka.Size = new System.Drawing.Size(222, 28);
             this.lookMarka.TabIndex = 29;
             // 
             // gridView2
@@ -205,7 +212,8 @@
             // lookAltGrup
             // 
             this.lookAltGrup.EditValue = "Lütfen Seçim Yapınız...";
-            this.lookAltGrup.Location = new System.Drawing.Point(106, 128);
+            this.lookAltGrup.Location = new System.Drawing.Point(124, 158);
+            this.lookAltGrup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lookAltGrup.Name = "lookAltGrup";
             this.lookAltGrup.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lookAltGrup.Properties.Appearance.Options.UseFont = true;
@@ -216,7 +224,7 @@
             this.lookAltGrup.Properties.NullText = "";
             this.lookAltGrup.Properties.PopupView = this.gridView4;
             this.lookAltGrup.Properties.ValueMember = "Id";
-            this.lookAltGrup.Size = new System.Drawing.Size(190, 23);
+            this.lookAltGrup.Size = new System.Drawing.Size(222, 28);
             this.lookAltGrup.TabIndex = 30;
             // 
             // gridView4
@@ -248,7 +256,8 @@
             // lookAnaGrup
             // 
             this.lookAnaGrup.EditValue = "";
-            this.lookAnaGrup.Location = new System.Drawing.Point(106, 101);
+            this.lookAnaGrup.Location = new System.Drawing.Point(124, 124);
+            this.lookAnaGrup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lookAnaGrup.Name = "lookAnaGrup";
             this.lookAnaGrup.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lookAnaGrup.Properties.Appearance.Options.UseFont = true;
@@ -259,7 +268,7 @@
             this.lookAnaGrup.Properties.NullText = "";
             this.lookAnaGrup.Properties.PopupView = this.gridView1;
             this.lookAnaGrup.Properties.ValueMember = "Id";
-            this.lookAnaGrup.Size = new System.Drawing.Size(190, 23);
+            this.lookAnaGrup.Size = new System.Drawing.Size(222, 28);
             this.lookAnaGrup.TabIndex = 31;
             // 
             // gridView1
@@ -293,7 +302,8 @@
             // lokKategori
             // 
             this.lokKategori.EditValue = "";
-            this.lokKategori.Location = new System.Drawing.Point(106, 74);
+            this.lokKategori.Location = new System.Drawing.Point(124, 91);
+            this.lokKategori.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lokKategori.Name = "lokKategori";
             this.lokKategori.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lokKategori.Properties.Appearance.Options.UseFont = true;
@@ -305,7 +315,7 @@
             this.lokKategori.Properties.PopupView = this.gridLookUpEdit1View;
             this.lokKategori.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.lokKategori.Properties.ValueMember = "Id";
-            this.lokKategori.Size = new System.Drawing.Size(190, 23);
+            this.lokKategori.Size = new System.Drawing.Size(222, 28);
             this.lokKategori.TabIndex = 32;
             // 
             // gridLookUpEdit1View
@@ -339,45 +349,50 @@
             // labelControl6
             // 
             this.labelControl6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl6.Location = new System.Drawing.Point(12, 184);
+            this.labelControl6.Location = new System.Drawing.Point(14, 226);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(76, 25);
+            this.labelControl6.Size = new System.Drawing.Size(89, 31);
             this.labelControl6.TabIndex = 23;
             this.labelControl6.Text = "Üretici :";
             // 
             // labelControl7
             // 
             this.labelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl7.Location = new System.Drawing.Point(12, 128);
+            this.labelControl7.Location = new System.Drawing.Point(14, 158);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(76, 25);
+            this.labelControl7.Size = new System.Drawing.Size(89, 31);
             this.labelControl7.TabIndex = 24;
             this.labelControl7.Text = "Alt Grup :";
             // 
             // labelControl5
             // 
             this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl5.Location = new System.Drawing.Point(12, 157);
+            this.labelControl5.Location = new System.Drawing.Point(14, 193);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(76, 25);
+            this.labelControl5.Size = new System.Drawing.Size(89, 31);
             this.labelControl5.TabIndex = 25;
             this.labelControl5.Text = "Marka :";
             // 
             // labelControl4
             // 
             this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl4.Location = new System.Drawing.Point(12, 101);
+            this.labelControl4.Location = new System.Drawing.Point(14, 124);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(76, 25);
+            this.labelControl4.Size = new System.Drawing.Size(89, 31);
             this.labelControl4.TabIndex = 26;
             this.labelControl4.Text = "Ana Grup :";
             // 
             // labelControl2
             // 
             this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.Location = new System.Drawing.Point(12, 72);
+            this.labelControl2.Location = new System.Drawing.Point(14, 89);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(76, 25);
+            this.labelControl2.Size = new System.Drawing.Size(89, 31);
             this.labelControl2.TabIndex = 27;
             this.labelControl2.Text = "Kategori :";
             // 
@@ -386,7 +401,8 @@
             this.dtpBitis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dtpBitis.EditValue = null;
-            this.dtpBitis.Location = new System.Drawing.Point(106, 46);
+            this.dtpBitis.Location = new System.Drawing.Point(124, 57);
+            this.dtpBitis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpBitis.Name = "dtpBitis";
             editorButtonImageOptions1.Image = global::NetSatis.BackOffice.Properties.Resources.today_16x161;
             this.dtpBitis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -406,7 +422,7 @@
             this.dtpBitis.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dtpBitis.Properties.MinValue = new System.DateTime(2018, 4, 27, 16, 34, 6, 0);
             this.dtpBitis.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dtpBitis.Size = new System.Drawing.Size(190, 22);
+            this.dtpBitis.Size = new System.Drawing.Size(222, 22);
             this.dtpBitis.TabIndex = 34;
             this.dtpBitis.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.dtpBitis_ButtonClick);
             // 
@@ -415,7 +431,8 @@
             this.dtpBaslangic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dtpBaslangic.EditValue = null;
-            this.dtpBaslangic.Location = new System.Drawing.Point(106, 15);
+            this.dtpBaslangic.Location = new System.Drawing.Point(124, 18);
+            this.dtpBaslangic.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpBaslangic.Name = "dtpBaslangic";
             editorButtonImageOptions2.Image = global::NetSatis.BackOffice.Properties.Resources.today_16x16;
             this.dtpBaslangic.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -438,15 +455,15 @@
             this.dtpBaslangic.Properties.MinValue = new System.DateTime(2018, 4, 27, 16, 34, 6, 0);
             this.dtpBaslangic.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
             this.dtpBaslangic.Properties.Click += new System.EventHandler(this.dtpBaslangic_Properties_Click);
-            this.dtpBaslangic.Size = new System.Drawing.Size(190, 22);
+            this.dtpBaslangic.Size = new System.Drawing.Size(222, 22);
             this.dtpBaslangic.TabIndex = 33;
             this.dtpBaslangic.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.dtpBaslangic_ButtonClick);
             // 
             // frmTarihliPesSatis
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 319);
+            this.ClientSize = new System.Drawing.Size(381, 391);
             this.Controls.Add(this.dtpBitis);
             this.Controls.Add(this.dtpBaslangic);
             this.Controls.Add(this.lookUretici);
@@ -463,10 +480,11 @@
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.btnGoster);
+            this.IconOptions.ShowIcon = false;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmTarihliPesSatis";
-            this.ShowIcon = false;
             this.Text = "Satış Raporu";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

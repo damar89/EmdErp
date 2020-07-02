@@ -371,5 +371,16 @@ namespace NetSatis.BackOffice.Fiş
         {
             irsaliyedenFaturaOlustur();
         }
+
+        private void btnIrsaliye_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var fisKodu = gridFisler.GetFocusedRowCellValue("FisKodu") as string;
+            if (fisKodu == null)
+                return;
+            var fisKayit = fisDal.GetAll(context, x => x.FisKodu == fisKodu).FirstOrDefault();
+            fisKayit.FisTuru = "Perakende Satış İrsaliyesi";
+            fisDal.Save(context);
+            gridFisler.SetFocusedRowCellValue("FisTuru", fisKayit.FisTuru);
+        }
     }
 }
