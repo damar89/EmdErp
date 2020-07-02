@@ -283,11 +283,24 @@ namespace NetSatis.BackOffice.Fiş
             if (fisKodu == null)
                 return;
             var fisKayit = kasaHareketDal.GetAll(context, x => x.FisKodu == fisKodu).FirstOrDefault();
-            fisKayit.OdemeTuru.Id = 1;
+            fisKayit.OdemeTuruId= 1;
             //fisKayit.OdemeTuru.OdemeTuruKodu = "001";
             //fisKayit.OdemeTuru.OdemeTuruAdi = "Nakit";
 
             kasaHareketDal.Save(context);  
+        }
+
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var fisKodu = gridFisler.GetFocusedRowCellValue("FisKodu") as string;
+            if (fisKodu == null)
+                return;
+            var fisKayit = kasaHareketDal.GetAll(context, x => x.FisKodu == fisKodu).FirstOrDefault();
+            fisKayit.OdemeTuruId = 2;
+            //fisKayit.OdemeTuru.OdemeTuruKodu = "001";
+            //fisKayit.OdemeTuru.OdemeTuruAdi = "Nakit";
+
+            kasaHareketDal.Save(context);
         }
     }
 }

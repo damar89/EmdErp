@@ -25,6 +25,7 @@ namespace NetSatis.Entities.Tools
             Irsaliye_CariEtkilesin,
             Irsaliye_StoguEtkilesin,
             SatisAyarlari_AlisFiyat,
+            SatisAyarlari_SatisFiyat,
             SatisAyarlari_ToptanFiyat,
             SatisAyarlari_StokGozukmesin,
             SatisAyarlari_CariGozukmesin,
