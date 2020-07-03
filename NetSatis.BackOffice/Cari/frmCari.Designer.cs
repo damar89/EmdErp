@@ -48,6 +48,7 @@
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colDurum = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCariTuru = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCariSinif = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -142,7 +143,7 @@
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnDuzenle = new DevExpress.XtraEditors.SimpleButton();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.colDurum = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnPasifCari = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -263,6 +264,15 @@
             this.gridView1.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridView1_PopupMenuShowing);
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             this.gridView1.RowCountChanged += new System.EventHandler(this.gridView1_RowCountChanged);
+            // 
+            // colDurum
+            // 
+            this.colDurum.Caption = "Aktif";
+            this.colDurum.FieldName = "Durum";
+            this.colDurum.Name = "colDurum";
+            this.colDurum.OptionsColumn.AllowEdit = false;
+            this.colDurum.Visible = true;
+            this.colDurum.VisibleIndex = 0;
             // 
             // colId
             // 
@@ -653,8 +663,9 @@
             this.barButtonItem20,
             this.barButtonItem21,
             this.barButtonItem22,
-            this.barButtonItem23});
-            this.barManager1.MaxItemId = 35;
+            this.barButtonItem23,
+            this.btnPasifCari});
+            this.barManager1.MaxItemId = 36;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemZoomTrackBar1});
             // 
@@ -988,6 +999,7 @@
             this.barButtonItem21.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.usergroup_16x16;
             this.barButtonItem21.ImageOptions.LargeImage = global::NetSatis.BackOffice.Properties.Resources.usergroup_32x32;
             this.barButtonItem21.Name = "barButtonItem21";
+            this.barButtonItem21.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem21_ItemClick);
             // 
             // barButtonItem22
             // 
@@ -1156,18 +1168,19 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem19),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem20),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem23),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem21)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem21),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnPasifCari)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
-            // colDurum
+            // btnPasifCari
             // 
-            this.colDurum.Caption = "Aktif";
-            this.colDurum.FieldName = "Durum";
-            this.colDurum.Name = "colDurum";
-            this.colDurum.OptionsColumn.AllowEdit = false;
-            this.colDurum.Visible = true;
-            this.colDurum.VisibleIndex = 0;
+            this.btnPasifCari.Caption = "Pasif Cariler";
+            this.btnPasifCari.Id = 35;
+            this.btnPasifCari.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPasifCari.ImageOptions.Image")));
+            this.btnPasifCari.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPasifCari.ImageOptions.LargeImage")));
+            this.btnPasifCari.Name = "btnPasifCari";
+            this.btnPasifCari.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPasifCari_ItemClick);
             // 
             // frmCari
             // 
@@ -1308,5 +1321,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTelefon2;
         private DevExpress.XtraGrid.Columns.GridColumn colTelefon3;
         private DevExpress.XtraGrid.Columns.GridColumn colDurum;
+        private DevExpress.XtraBars.BarButtonItem btnPasifCari;
     }
 }

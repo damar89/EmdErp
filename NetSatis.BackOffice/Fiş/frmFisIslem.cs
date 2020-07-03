@@ -146,7 +146,7 @@ namespace NetSatis.BackOffice.Fiş
                     //    CodeTool.KodOlustur("FS", SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_FisKodu));
                 }
                 if (fisTuru == "Toptan Satış Faturası" || fisTuru == "Perakende Satış Faturası" || fisTuru == "Perakende Satış İrsaliyesi" || fisTuru == "Pos Fatura" ||
-                    fisTuru == "Satış İade Faturası" || fisTuru == "Alış İade Faturası" || fisTuru == "Alış Faturası" ||
+                    fisTuru == "Satış İade Faturası" || fisTuru == "Alış İade Faturası" || fisTuru == "Alış İade İrsaliyesi" || fisTuru == "Alış Faturası" ||
                     fisTuru == "Satış İrsaliyesi" || fisTuru == "Alış İrsaliyesi" || fisTuru == "Alınan Sipariş Fişi" ||
                     fisTuru == "Verilen Sipariş Fişi" || fisTuru == "Alınan Teklif Fişi" ||
                     fisTuru == "Verilen Teklif Fişi" || fisTuru == "Sayım Fazlası Fişi" || fisTuru == "Sayım Eksiği Fişi" ||
@@ -510,7 +510,7 @@ namespace NetSatis.BackOffice.Fiş
                 case "Perakende Satış İrsaliyesi":
                     ayarlar.StokHareketi = "Stok Çıkış";
                     ayarlar.KasaHareketi = "Kasa Giriş";
-                    ayarlar.FisTurleri = "Perakende Satış Faturası";
+                    ayarlar.FisTurleri = "Perakende Satış İrsaliyesi";
                     siparişYazdırToolStripMenuItem.Visible = false;
                     bilgiFişiYazdırToolStripMenuItem.Visible = false;
                     teklifYazdırToolStripMenuItem.Visible = false;
@@ -521,7 +521,25 @@ namespace NetSatis.BackOffice.Fiş
                     lblSatirSayisi.Visible = true;
                     ayarlar.SatisEkrani = true;
                     ayarlar.OdemeEkrani = true;
-                    lblBaslik.Text = "Perakende Satış Faturası";
+                    lblBaslik.Text = "Perakende Satış İrsaliyesi";
+                    lblBaslik.Appearance.ImageIndex = 1;
+                    navPersonelIslem.Dispose();
+                    break;
+                case "Perakende İade İrsaliyesi":
+                    ayarlar.StokHareketi = "Stok Giriş";
+                    ayarlar.KasaHareketi = "Kasa Çıkış";
+                    ayarlar.FisTurleri = "Perakende İade İrsaliyesi";
+                    siparişYazdırToolStripMenuItem.Visible = false;
+                    bilgiFişiYazdırToolStripMenuItem.Visible = false;
+                    teklifYazdırToolStripMenuItem.Visible = false;
+                    irsaliyeYazdırToolStripMenuItem.Visible = false;
+                    btnYeniFtrDizany.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
+
+                    lblSatir.Visible = true;
+                    lblSatirSayisi.Visible = true;
+                    ayarlar.SatisEkrani = true;
+                    ayarlar.OdemeEkrani = true;
+                    lblBaslik.Text = "Perakende İade İrsaliyesi";
                     lblBaslik.Appearance.ImageIndex = 1;
                     navPersonelIslem.Dispose();
                     break;

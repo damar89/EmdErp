@@ -312,9 +312,10 @@ namespace NetSatis.BackOffice.Cari
         }
         private void barButtonItem23_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ColumnView view = gridView1;
-            view.ActiveFilter.Add(view.Columns["HesapBakiye"],
-              new ColumnFilterInfo("[HesapBakiye] Like '%'"));
+            gridView1.ActiveFilter.Clear();
+            //ColumnView view = gridView1;
+            //view.ActiveFilter.Add(view.Columns["HesapBakiye"],
+            //  new ColumnFilterInfo("[HesapBakiye] Like '%'"+"[Durum] like '%'"));
         }
         string filtreyeCevir(string filtre)
         {
@@ -350,6 +351,25 @@ namespace NetSatis.BackOffice.Cari
         private void txtCariKodu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             gridView1.ActiveFilterCriteria = new BinaryOperator(new OperandProperty("CariKodu"), new OperandValue(filtreyeCevir(txtCariKodu.Text)), BinaryOperatorType.Like);
+        }
+
+        private void barButtonItem21_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ColumnView view = gridView1;
+            view.ActiveFilter.Add(view.Columns["Durum"],
+              new ColumnFilterInfo("[Durum]=true"));
+        }
+
+        private void btnPasifCari_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ColumnView view = gridView1;
+
+            view.ActiveFilter.Clear();
+            view.ActiveFilter.Add(view.Columns["Durum"],
+              new ColumnFilterInfo("[Durum]=false"));
+            //ColumnView view = gridView1;
+            //view.ActiveFilter.Add(view.Columns["Durum"],
+            //  new ColumnFilterInfo("False"));
         }
     }
 }
