@@ -88,6 +88,9 @@
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.btnYazdir = new DevExpress.XtraBars.BarButtonItem();
             this.btnDetayliExtre = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBilgiFisi = new DevExpress.XtraBars.BarButtonItem();
+            this.btnFatura = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTahsilat = new DevExpress.XtraBars.BarButtonItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -95,9 +98,7 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.lblBaslik = new DevExpress.XtraEditors.LabelControl();
-            this.btnBilgiFisi = new DevExpress.XtraBars.BarButtonItem();
-            this.btnFatura = new DevExpress.XtraBars.BarButtonItem();
-            this.btnTahsilat = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSil = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
             this.splitContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -129,23 +130,25 @@
             this.colDurum.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colDurum.Caption = "Durum";
             this.colDurum.FieldName = "Durum";
+            this.colDurum.MinWidth = 27;
             this.colDurum.Name = "colDurum";
             this.colDurum.OptionsColumn.AllowEdit = false;
             this.colDurum.Visible = true;
             this.colDurum.VisibleIndex = 12;
-            this.colDurum.Width = 53;
+            this.colDurum.Width = 71;
             // 
             // splitContainerControl2
             // 
             this.splitContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainerControl2.Name = "splitContainerControl2";
             this.splitContainerControl2.Panel1.Controls.Add(this.groupControl2);
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.groupControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(1001, 266);
-            this.splitContainerControl2.SplitterPosition = 438;
+            this.splitContainerControl2.Size = new System.Drawing.Size(1335, 327);
+            this.splitContainerControl2.SplitterPosition = 584;
             this.splitContainerControl2.TabIndex = 0;
             this.splitContainerControl2.Text = "splitContainerControl2";
             // 
@@ -154,18 +157,21 @@
             this.groupControl2.Controls.Add(this.gridContFisToplam);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(438, 266);
+            this.groupControl2.Size = new System.Drawing.Size(584, 327);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Fiş Türlerine Göre Toplamlar";
             // 
             // gridContFisToplam
             // 
             this.gridContFisToplam.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridContFisToplam.Location = new System.Drawing.Point(2, 23);
+            this.gridContFisToplam.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridContFisToplam.Location = new System.Drawing.Point(2, 28);
             this.gridContFisToplam.MainView = this.gridFisToplam;
+            this.gridContFisToplam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridContFisToplam.Name = "gridContFisToplam";
-            this.gridContFisToplam.Size = new System.Drawing.Size(434, 191);
+            this.gridContFisToplam.Size = new System.Drawing.Size(580, 235);
             this.gridContFisToplam.TabIndex = 2;
             this.gridContFisToplam.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisToplam});
@@ -176,6 +182,7 @@
             this.colFisTuruBilgi,
             this.colFisTuruKayitSayisi,
             this.colFisTuruToplamTutar});
+            this.gridFisToplam.DetailHeight = 431;
             this.gridFisToplam.GridControl = this.gridContFisToplam;
             this.gridFisToplam.Name = "gridFisToplam";
             this.gridFisToplam.OptionsView.ShowGroupPanel = false;
@@ -184,21 +191,23 @@
             // 
             this.colFisTuruBilgi.Caption = "Bilgi";
             this.colFisTuruBilgi.FieldName = "Bilgi";
+            this.colFisTuruBilgi.MinWidth = 27;
             this.colFisTuruBilgi.Name = "colFisTuruBilgi";
             this.colFisTuruBilgi.OptionsColumn.AllowEdit = false;
             this.colFisTuruBilgi.Visible = true;
             this.colFisTuruBilgi.VisibleIndex = 0;
-            this.colFisTuruBilgi.Width = 173;
+            this.colFisTuruBilgi.Width = 231;
             // 
             // colFisTuruKayitSayisi
             // 
             this.colFisTuruKayitSayisi.Caption = "Kayıt Sayısı";
             this.colFisTuruKayitSayisi.FieldName = "KayitSayisi";
+            this.colFisTuruKayitSayisi.MinWidth = 27;
             this.colFisTuruKayitSayisi.Name = "colFisTuruKayitSayisi";
             this.colFisTuruKayitSayisi.OptionsColumn.AllowEdit = false;
             this.colFisTuruKayitSayisi.Visible = true;
             this.colFisTuruKayitSayisi.VisibleIndex = 1;
-            this.colFisTuruKayitSayisi.Width = 91;
+            this.colFisTuruKayitSayisi.Width = 121;
             // 
             // colFisTuruToplamTutar
             // 
@@ -206,29 +215,33 @@
             this.colFisTuruToplamTutar.DisplayFormat.FormatString = "C2";
             this.colFisTuruToplamTutar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colFisTuruToplamTutar.FieldName = "Tutar";
+            this.colFisTuruToplamTutar.MinWidth = 27;
             this.colFisTuruToplamTutar.Name = "colFisTuruToplamTutar";
             this.colFisTuruToplamTutar.OptionsColumn.AllowEdit = false;
             this.colFisTuruToplamTutar.Visible = true;
             this.colFisTuruToplamTutar.VisibleIndex = 2;
-            this.colFisTuruToplamTutar.Width = 129;
+            this.colFisTuruToplamTutar.Width = 172;
             // 
             // groupControl3
             // 
             this.groupControl3.Controls.Add(this.gridContBakiye);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(553, 266);
+            this.groupControl3.Size = new System.Drawing.Size(739, 327);
             this.groupControl3.TabIndex = 1;
             this.groupControl3.Text = "Cari Ekstre";
             // 
             // gridContBakiye
             // 
             this.gridContBakiye.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridContBakiye.Location = new System.Drawing.Point(2, 23);
+            this.gridContBakiye.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridContBakiye.Location = new System.Drawing.Point(2, 28);
             this.gridContBakiye.MainView = this.gridBakiye;
+            this.gridContBakiye.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridContBakiye.Name = "gridContBakiye";
-            this.gridContBakiye.Size = new System.Drawing.Size(549, 187);
+            this.gridContBakiye.Size = new System.Drawing.Size(735, 230);
             this.gridContBakiye.TabIndex = 2;
             this.gridContBakiye.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridBakiye});
@@ -238,6 +251,7 @@
             this.gridBakiye.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colGenelBilgi,
             this.colGenelToplam});
+            this.gridBakiye.DetailHeight = 431;
             this.gridBakiye.GridControl = this.gridContBakiye;
             this.gridBakiye.Name = "gridBakiye";
             this.gridBakiye.OptionsView.ShowGroupPanel = false;
@@ -246,11 +260,12 @@
             // 
             this.colGenelBilgi.Caption = "Bilgi";
             this.colGenelBilgi.FieldName = "Bilgi";
+            this.colGenelBilgi.MinWidth = 27;
             this.colGenelBilgi.Name = "colGenelBilgi";
             this.colGenelBilgi.OptionsColumn.AllowEdit = false;
             this.colGenelBilgi.Visible = true;
             this.colGenelBilgi.VisibleIndex = 0;
-            this.colGenelBilgi.Width = 282;
+            this.colGenelBilgi.Width = 376;
             // 
             // colGenelToplam
             // 
@@ -258,11 +273,12 @@
             this.colGenelToplam.DisplayFormat.FormatString = "C2";
             this.colGenelToplam.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colGenelToplam.FieldName = "Tutar";
+            this.colGenelToplam.MinWidth = 27;
             this.colGenelToplam.Name = "colGenelToplam";
             this.colGenelToplam.OptionsColumn.AllowEdit = false;
             this.colGenelToplam.Visible = true;
             this.colGenelToplam.VisibleIndex = 1;
-            this.colGenelToplam.Width = 135;
+            this.colGenelToplam.Width = 180;
             // 
             // groupControl1
             // 
@@ -276,9 +292,10 @@
             this.groupControl1.Controls.Add(this.btnAra);
             this.groupControl1.Controls.Add(this.btnGuncelle);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 482);
+            this.groupControl1.Location = new System.Drawing.Point(0, 593);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1001, 57);
+            this.groupControl1.Size = new System.Drawing.Size(1335, 70);
             this.groupControl1.TabIndex = 6;
             // 
             // simpleButton1
@@ -286,9 +303,10 @@
             this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.simpleButton1.ImageOptions.ImageIndex = 2;
-            this.simpleButton1.Location = new System.Drawing.Point(855, 21);
+            this.simpleButton1.Location = new System.Drawing.Point(1140, 26);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(37, 31);
+            this.simpleButton1.Size = new System.Drawing.Size(49, 38);
             this.simpleButton1.TabIndex = 13;
             this.simpleButton1.Text = "Cari Ekstre Dökümü";
             this.simpleButton1.Visible = false;
@@ -298,9 +316,10 @@
             // 
             this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelControl2.Location = new System.Drawing.Point(546, 35);
+            this.labelControl2.Location = new System.Drawing.Point(728, 43);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(26, 13);
+            this.labelControl2.Size = new System.Drawing.Size(32, 16);
             this.labelControl2.TabIndex = 12;
             this.labelControl2.Text = "Bitiş :";
             // 
@@ -308,9 +327,10 @@
             // 
             this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelControl1.Location = new System.Drawing.Point(321, 35);
+            this.labelControl1.Location = new System.Drawing.Point(428, 43);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(51, 13);
+            this.labelControl1.Size = new System.Drawing.Size(62, 16);
             this.labelControl1.TabIndex = 11;
             this.labelControl1.Text = "Başlangıç :";
             // 
@@ -319,7 +339,8 @@
             this.dtpBitis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dtpBitis.EditValue = null;
-            this.dtpBitis.Location = new System.Drawing.Point(581, 23);
+            this.dtpBitis.Location = new System.Drawing.Point(775, 28);
+            this.dtpBitis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpBitis.Name = "dtpBitis";
             this.dtpBitis.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.dtpBitis.Properties.AutoHeight = false;
@@ -331,7 +352,7 @@
             this.dtpBitis.Properties.DisplayFormat.FormatString = "dd.MM.yyyy";
             this.dtpBitis.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.dtpBitis.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dtpBitis.Size = new System.Drawing.Size(147, 29);
+            this.dtpBitis.Size = new System.Drawing.Size(196, 36);
             this.dtpBitis.TabIndex = 9;
             // 
             // dtpBaslangic
@@ -339,7 +360,8 @@
             this.dtpBaslangic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dtpBaslangic.EditValue = null;
-            this.dtpBaslangic.Location = new System.Drawing.Point(378, 23);
+            this.dtpBaslangic.Location = new System.Drawing.Point(504, 28);
+            this.dtpBaslangic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpBaslangic.Name = "dtpBaslangic";
             this.dtpBaslangic.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.dtpBaslangic.Properties.AutoHeight = false;
@@ -351,7 +373,7 @@
             this.dtpBaslangic.Properties.DisplayFormat.FormatString = "dd.MM.yyyy";
             this.dtpBaslangic.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.dtpBaslangic.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dtpBaslangic.Size = new System.Drawing.Size(150, 29);
+            this.dtpBaslangic.Size = new System.Drawing.Size(200, 36);
             this.dtpBaslangic.TabIndex = 10;
             // 
             // btnKapat
@@ -360,9 +382,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.ImageIndex = 0;
             this.btnKapat.ImageOptions.ImageList = this.ımageList1;
-            this.btnKapat.Location = new System.Drawing.Point(911, 23);
+            this.btnKapat.Location = new System.Drawing.Point(1215, 28);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(85, 31);
+            this.btnKapat.Size = new System.Drawing.Size(113, 38);
             this.btnKapat.TabIndex = 5;
             this.btnKapat.Text = "Kapat";
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
@@ -380,9 +403,10 @@
             this.btnCariEkstreDokumu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCariEkstreDokumu.ImageOptions.ImageIndex = 2;
-            this.btnCariEkstreDokumu.Location = new System.Drawing.Point(192, 23);
+            this.btnCariEkstreDokumu.Location = new System.Drawing.Point(256, 28);
+            this.btnCariEkstreDokumu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCariEkstreDokumu.Name = "btnCariEkstreDokumu";
-            this.btnCariEkstreDokumu.Size = new System.Drawing.Size(114, 31);
+            this.btnCariEkstreDokumu.Size = new System.Drawing.Size(152, 38);
             this.btnCariEkstreDokumu.TabIndex = 5;
             this.btnCariEkstreDokumu.Text = "Cari Ekstre Dökümü";
             this.btnCariEkstreDokumu.Click += new System.EventHandler(this.btnCariEkstreDokumu_Click);
@@ -393,9 +417,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAra.ImageOptions.ImageIndex = 2;
             this.btnAra.ImageOptions.ImageList = this.ımageList1;
-            this.btnAra.Location = new System.Drawing.Point(101, 24);
+            this.btnAra.Location = new System.Drawing.Point(135, 30);
+            this.btnAra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAra.Name = "btnAra";
-            this.btnAra.Size = new System.Drawing.Size(85, 31);
+            this.btnAra.Size = new System.Drawing.Size(113, 38);
             this.btnAra.TabIndex = 5;
             this.btnAra.Text = "Ara";
             this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
@@ -406,9 +431,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.btnGuncelle.ImageOptions.ImageIndex = 1;
             this.btnGuncelle.ImageOptions.ImageList = this.ımageList1;
-            this.btnGuncelle.Location = new System.Drawing.Point(9, 24);
+            this.btnGuncelle.Location = new System.Drawing.Point(12, 30);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(85, 31);
+            this.btnGuncelle.Size = new System.Drawing.Size(113, 38);
             this.btnGuncelle.TabIndex = 5;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
@@ -417,24 +443,27 @@
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.Horizontal = false;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 35);
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 43);
+            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.gridContCariHareket);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.splitContainerControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1001, 504);
-            this.splitContainerControl1.SplitterPosition = 228;
+            this.splitContainerControl1.Size = new System.Drawing.Size(1335, 620);
+            this.splitContainerControl1.SplitterPosition = 281;
             this.splitContainerControl1.TabIndex = 7;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
             // gridContCariHareket
             // 
             this.gridContCariHareket.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridContCariHareket.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridContCariHareket.Location = new System.Drawing.Point(0, 0);
             this.gridContCariHareket.MainView = this.gridCariHareket;
+            this.gridContCariHareket.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridContCariHareket.Name = "gridContCariHareket";
-            this.gridContCariHareket.Size = new System.Drawing.Size(1001, 228);
+            this.gridContCariHareket.Size = new System.Drawing.Size(1335, 281);
             this.gridContCariHareket.TabIndex = 1;
             this.gridContCariHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridCariHareket});
@@ -465,7 +494,8 @@
             this.colAktifTutar,
             this.colSeri,
             this.colSira});
-            this.gridCariHareket.CustomizationFormBounds = new System.Drawing.Rectangle(725, 209, 210, 172);
+            this.gridCariHareket.CustomizationFormBounds = new System.Drawing.Rectangle(725, 209, 280, 212);
+            this.gridCariHareket.DetailHeight = 431;
             gridFormatRule1.ApplyToRow = true;
             gridFormatRule1.Column = this.colDurum;
             gridFormatRule1.ColumnApplyTo = this.colDurum;
@@ -509,12 +539,13 @@
             this.colTarih.DisplayFormat.FormatString = "d";
             this.colTarih.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colTarih.FieldName = "Tarih";
+            this.colTarih.MinWidth = 27;
             this.colTarih.Name = "colTarih";
             this.colTarih.OptionsColumn.AllowEdit = false;
             this.colTarih.OptionsFilter.AllowFilter = false;
             this.colTarih.Visible = true;
             this.colTarih.VisibleIndex = 3;
-            this.colTarih.Width = 57;
+            this.colTarih.Width = 76;
             // 
             // colVadeTarihi
             // 
@@ -522,44 +553,49 @@
             this.colVadeTarihi.DisplayFormat.FormatString = "d";
             this.colVadeTarihi.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colVadeTarihi.FieldName = "VadeTarihi";
+            this.colVadeTarihi.MinWidth = 27;
             this.colVadeTarihi.Name = "colVadeTarihi";
             this.colVadeTarihi.OptionsColumn.AllowEdit = false;
             this.colVadeTarihi.Visible = true;
             this.colVadeTarihi.VisibleIndex = 4;
-            this.colVadeTarihi.Width = 56;
             // 
             // colId
             // 
             this.colId.FieldName = "Id";
+            this.colId.MinWidth = 27;
             this.colId.Name = "colId";
             this.colId.OptionsColumn.AllowEdit = false;
             this.colId.OptionsColumn.ShowInCustomizationForm = false;
+            this.colId.Width = 100;
             // 
             // colFisKodu
             // 
             this.colFisKodu.Caption = "Fiş Kodu";
             this.colFisKodu.FieldName = "FisKodu";
+            this.colFisKodu.MinWidth = 27;
             this.colFisKodu.Name = "colFisKodu";
             this.colFisKodu.OptionsColumn.AllowEdit = false;
-            this.colFisKodu.Width = 63;
+            this.colFisKodu.Width = 84;
             // 
             // colFisTuru
             // 
             this.colFisTuru.Caption = "Fiş Türü";
             this.colFisTuru.FieldName = "FisTuru";
+            this.colFisTuru.MinWidth = 27;
             this.colFisTuru.Name = "colFisTuru";
             this.colFisTuru.OptionsColumn.AllowEdit = false;
             this.colFisTuru.Visible = true;
             this.colFisTuru.VisibleIndex = 0;
-            this.colFisTuru.Width = 119;
+            this.colFisTuru.Width = 159;
             // 
             // colBelgeNo
             // 
             this.colBelgeNo.Caption = "Belge No";
             this.colBelgeNo.FieldName = "BelgeNo";
+            this.colBelgeNo.MinWidth = 27;
             this.colBelgeNo.Name = "colBelgeNo";
             this.colBelgeNo.OptionsColumn.AllowEdit = false;
-            this.colBelgeNo.Width = 44;
+            this.colBelgeNo.Width = 59;
             // 
             // colSaat
             // 
@@ -567,49 +603,59 @@
             this.colSaat.DisplayFormat.FormatString = "t";
             this.colSaat.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colSaat.FieldName = "Tarih";
+            this.colSaat.MinWidth = 27;
             this.colSaat.Name = "colSaat";
             this.colSaat.OptionsColumn.AllowEdit = false;
             this.colSaat.Visible = true;
             this.colSaat.VisibleIndex = 5;
-            this.colSaat.Width = 79;
+            this.colSaat.Width = 105;
             // 
             // colPlasiyerKodu
             // 
             this.colPlasiyerKodu.Caption = "Pasiyer Kodu";
             this.colPlasiyerKodu.FieldName = "PlasiyerKodu";
+            this.colPlasiyerKodu.MinWidth = 27;
             this.colPlasiyerKodu.Name = "colPlasiyerKodu";
             this.colPlasiyerKodu.OptionsColumn.AllowEdit = false;
+            this.colPlasiyerKodu.Width = 100;
             // 
             // colPlasiyerAdi
             // 
             this.colPlasiyerAdi.Caption = "Pasiyer Adı";
             this.colPlasiyerAdi.FieldName = "PlasiyerAdi";
+            this.colPlasiyerAdi.MinWidth = 27;
             this.colPlasiyerAdi.Name = "colPlasiyerAdi";
             this.colPlasiyerAdi.OptionsColumn.AllowEdit = false;
+            this.colPlasiyerAdi.Width = 100;
             // 
             // colIskontoOrani1
             // 
             this.colIskontoOrani1.Caption = "İskonto Oranı";
             this.colIskontoOrani1.FieldName = "IskontoOrani1";
+            this.colIskontoOrani1.MinWidth = 27;
             this.colIskontoOrani1.Name = "colIskontoOrani1";
             this.colIskontoOrani1.OptionsColumn.AllowEdit = false;
             this.colIskontoOrani1.Visible = true;
             this.colIskontoOrani1.VisibleIndex = 7;
-            this.colIskontoOrani1.Width = 54;
+            this.colIskontoOrani1.Width = 72;
             // 
             // colIskontoOrani2
             // 
             this.colIskontoOrani2.FieldName = "IskontoOrani2";
+            this.colIskontoOrani2.MinWidth = 27;
             this.colIskontoOrani2.Name = "colIskontoOrani2";
             this.colIskontoOrani2.OptionsColumn.AllowEdit = false;
             this.colIskontoOrani2.OptionsColumn.ShowInCustomizationForm = false;
+            this.colIskontoOrani2.Width = 100;
             // 
             // colIskontoOrani3
             // 
             this.colIskontoOrani3.FieldName = "IskontoOrani3";
+            this.colIskontoOrani3.MinWidth = 27;
             this.colIskontoOrani3.Name = "colIskontoOrani3";
             this.colIskontoOrani3.OptionsColumn.AllowEdit = false;
             this.colIskontoOrani3.OptionsColumn.ShowInCustomizationForm = false;
+            this.colIskontoOrani3.Width = 100;
             // 
             // colIskontoTutari1
             // 
@@ -617,25 +663,30 @@
             this.colIskontoTutari1.DisplayFormat.FormatString = "C2";
             this.colIskontoTutari1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colIskontoTutari1.FieldName = "IskontoTutari1";
+            this.colIskontoTutari1.MinWidth = 27;
             this.colIskontoTutari1.Name = "colIskontoTutari1";
             this.colIskontoTutari1.OptionsColumn.AllowEdit = false;
             this.colIskontoTutari1.Visible = true;
             this.colIskontoTutari1.VisibleIndex = 8;
-            this.colIskontoTutari1.Width = 54;
+            this.colIskontoTutari1.Width = 72;
             // 
             // colIskontoTutari2
             // 
             this.colIskontoTutari2.FieldName = "IskontoTutari2";
+            this.colIskontoTutari2.MinWidth = 27;
             this.colIskontoTutari2.Name = "colIskontoTutari2";
             this.colIskontoTutari2.OptionsColumn.AllowEdit = false;
             this.colIskontoTutari2.OptionsColumn.ShowInCustomizationForm = false;
+            this.colIskontoTutari2.Width = 100;
             // 
             // colIskontoTutari3
             // 
             this.colIskontoTutari3.FieldName = "IskontoTutari3";
+            this.colIskontoTutari3.MinWidth = 27;
             this.colIskontoTutari3.Name = "colIskontoTutari3";
             this.colIskontoTutari3.OptionsColumn.AllowEdit = false;
             this.colIskontoTutari3.OptionsColumn.ShowInCustomizationForm = false;
+            this.colIskontoTutari3.Width = 100;
             // 
             // colToplamTutar
             // 
@@ -643,21 +694,23 @@
             this.colToplamTutar.DisplayFormat.FormatString = "C2";
             this.colToplamTutar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colToplamTutar.FieldName = "ToplamTutar";
+            this.colToplamTutar.MinWidth = 27;
             this.colToplamTutar.Name = "colToplamTutar";
             this.colToplamTutar.OptionsColumn.AllowEdit = false;
             this.colToplamTutar.Visible = true;
             this.colToplamTutar.VisibleIndex = 9;
-            this.colToplamTutar.Width = 54;
+            this.colToplamTutar.Width = 72;
             // 
             // colAciklama
             // 
             this.colAciklama.Caption = "Açıklama";
             this.colAciklama.FieldName = "Aciklama";
+            this.colAciklama.MinWidth = 27;
             this.colAciklama.Name = "colAciklama";
             this.colAciklama.OptionsColumn.AllowEdit = false;
             this.colAciklama.Visible = true;
             this.colAciklama.VisibleIndex = 6;
-            this.colAciklama.Width = 53;
+            this.colAciklama.Width = 71;
             // 
             // colOdenen
             // 
@@ -665,11 +718,12 @@
             this.colOdenen.DisplayFormat.FormatString = "C2";
             this.colOdenen.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colOdenen.FieldName = "Odenen";
+            this.colOdenen.MinWidth = 27;
             this.colOdenen.Name = "colOdenen";
             this.colOdenen.OptionsColumn.AllowEdit = false;
             this.colOdenen.Visible = true;
             this.colOdenen.VisibleIndex = 10;
-            this.colOdenen.Width = 54;
+            this.colOdenen.Width = 72;
             // 
             // colKalanTutar
             // 
@@ -677,11 +731,12 @@
             this.colKalanTutar.DisplayFormat.FormatString = "C2";
             this.colKalanTutar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colKalanTutar.FieldName = "KalanOdeme";
+            this.colKalanTutar.MinWidth = 27;
             this.colKalanTutar.Name = "colKalanTutar";
             this.colKalanTutar.OptionsColumn.AllowEdit = false;
             this.colKalanTutar.Visible = true;
             this.colKalanTutar.VisibleIndex = 11;
-            this.colKalanTutar.Width = 60;
+            this.colKalanTutar.Width = 80;
             // 
             // colAktifTutar
             // 
@@ -689,29 +744,34 @@
             this.colAktifTutar.DisplayFormat.FormatString = "C2";
             this.colAktifTutar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colAktifTutar.FieldName = "AktifTutar";
+            this.colAktifTutar.MinWidth = 27;
             this.colAktifTutar.Name = "colAktifTutar";
             this.colAktifTutar.OptionsColumn.AllowEdit = false;
             this.colAktifTutar.Visible = true;
             this.colAktifTutar.VisibleIndex = 13;
-            this.colAktifTutar.Width = 62;
+            this.colAktifTutar.Width = 83;
             // 
             // colSeri
             // 
             this.colSeri.Caption = "Seri";
             this.colSeri.FieldName = "Seri";
+            this.colSeri.MinWidth = 27;
             this.colSeri.Name = "colSeri";
             this.colSeri.OptionsColumn.AllowEdit = false;
             this.colSeri.Visible = true;
             this.colSeri.VisibleIndex = 1;
+            this.colSeri.Width = 100;
             // 
             // colSira
             // 
             this.colSira.Caption = "Sıra";
             this.colSira.FieldName = "Sira";
+            this.colSira.MinWidth = 27;
             this.colSira.Name = "colSira";
             this.colSira.OptionsColumn.AllowEdit = false;
             this.colSira.Visible = true;
             this.colSira.VisibleIndex = 2;
+            this.colSira.Width = 100;
             // 
             // popupMenu1
             // 
@@ -720,7 +780,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnDetayliExtre),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnBilgiFisi),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnFatura),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnTahsilat)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnTahsilat),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnSil)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
@@ -728,6 +789,8 @@
             // 
             this.btnYazdir.Caption = "Yazdır";
             this.btnYazdir.Id = 0;
+            this.btnYazdir.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnYazdir.ImageOptions.Image")));
+            this.btnYazdir.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnYazdir.ImageOptions.LargeImage")));
             this.btnYazdir.Name = "btnYazdir";
             this.btnYazdir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnYazdir_ItemClick);
             // 
@@ -735,8 +798,37 @@
             // 
             this.btnDetayliExtre.Caption = "Cari Detaylı Ekstre";
             this.btnDetayliExtre.Id = 1;
+            this.btnDetayliExtre.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDetayliExtre.ImageOptions.Image")));
+            this.btnDetayliExtre.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDetayliExtre.ImageOptions.LargeImage")));
             this.btnDetayliExtre.Name = "btnDetayliExtre";
             this.btnDetayliExtre.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDetayliExtre_ItemClick);
+            // 
+            // btnBilgiFisi
+            // 
+            this.btnBilgiFisi.Caption = "Bilgi Fişi Yazdır";
+            this.btnBilgiFisi.Id = 2;
+            this.btnBilgiFisi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBilgiFisi.ImageOptions.Image")));
+            this.btnBilgiFisi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnBilgiFisi.ImageOptions.LargeImage")));
+            this.btnBilgiFisi.Name = "btnBilgiFisi";
+            this.btnBilgiFisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBilgiFisi_ItemClick);
+            // 
+            // btnFatura
+            // 
+            this.btnFatura.Caption = "Fatura Yazdır";
+            this.btnFatura.Id = 3;
+            this.btnFatura.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFatura.ImageOptions.Image")));
+            this.btnFatura.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnFatura.ImageOptions.LargeImage")));
+            this.btnFatura.Name = "btnFatura";
+            this.btnFatura.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFatura_ItemClick);
+            // 
+            // btnTahsilat
+            // 
+            this.btnTahsilat.Caption = "Tahsilat Fişi Yazdır";
+            this.btnTahsilat.Id = 4;
+            this.btnTahsilat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTahsilat.ImageOptions.Image")));
+            this.btnTahsilat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTahsilat.ImageOptions.LargeImage")));
+            this.btnTahsilat.Name = "btnTahsilat";
+            this.btnTahsilat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTahsilat_ItemClick);
             // 
             // barManager1
             // 
@@ -750,8 +842,9 @@
             this.btnDetayliExtre,
             this.btnBilgiFisi,
             this.btnFatura,
-            this.btnTahsilat});
-            this.barManager1.MaxItemId = 5;
+            this.btnTahsilat,
+            this.btnSil});
+            this.barManager1.MaxItemId = 6;
             // 
             // barDockControlTop
             // 
@@ -759,15 +852,17 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1001, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1335, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 539);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 663);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1001, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1335, 0);
             // 
             // barDockControlLeft
             // 
@@ -775,15 +870,17 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 539);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 663);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1001, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(1335, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 539);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 663);
             // 
             // lblBaslik
             // 
@@ -800,38 +897,26 @@
             this.lblBaslik.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.lblBaslik.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblBaslik.Location = new System.Drawing.Point(0, 0);
-            this.lblBaslik.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.lblBaslik.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(1001, 35);
+            this.lblBaslik.Size = new System.Drawing.Size(1335, 43);
             this.lblBaslik.TabIndex = 5;
             this.lblBaslik.Text = "Cari Hareketleri";
             // 
-            // btnBilgiFisi
+            // btnSil
             // 
-            this.btnBilgiFisi.Caption = "Bilgi Fişi Yazdır";
-            this.btnBilgiFisi.Id = 2;
-            this.btnBilgiFisi.Name = "btnBilgiFisi";
-            this.btnBilgiFisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBilgiFisi_ItemClick);
-            // 
-            // btnFatura
-            // 
-            this.btnFatura.Caption = "Fatura Yazdır";
-            this.btnFatura.Id = 3;
-            this.btnFatura.Name = "btnFatura";
-            this.btnFatura.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFatura_ItemClick);
-            // 
-            // btnTahsilat
-            // 
-            this.btnTahsilat.Caption = "Tahsilat Fişi Yazdır";
-            this.btnTahsilat.Id = 4;
-            this.btnTahsilat.Name = "btnTahsilat";
-            this.btnTahsilat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTahsilat_ItemClick);
+            this.btnSil.Caption = "Seçili Fişi Sil";
+            this.btnSil.Id = 5;
+            this.btnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.btnSil.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btnSil.Name = "btnSil";
+            this.btnSil.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSil_ItemClick);
             // 
             // frmCariHareket
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 539);
+            this.ClientSize = new System.Drawing.Size(1335, 663);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.lblBaslik);
@@ -840,6 +925,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmCariHareket";
             this.ShowIcon = false;
             this.Text = "Cari Hareket";
@@ -938,5 +1024,6 @@
         private DevExpress.XtraBars.BarButtonItem btnBilgiFisi;
         private DevExpress.XtraBars.BarButtonItem btnFatura;
         private DevExpress.XtraBars.BarButtonItem btnTahsilat;
+        private DevExpress.XtraBars.BarButtonItem btnSil;
     }
 }

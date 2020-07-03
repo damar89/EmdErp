@@ -1452,6 +1452,12 @@ namespace NetSatis.BackOffice.Fiş
                     MessageBox.Show("Lütfen hareket tipi seçiniz.");
                     return;
                 }
+                if (txtSira.Text == ""||txtSira.Text == null || txtFisTuru.Text == "Alış Faturası" || txtFisTuru.Text == "Alış İade Faturası" || txtFisTuru.Text == "Toptan Satış Faturası" || txtFisTuru.Text == "Satış İade Faturası" || txtFisTuru.Text == "Pos Fatura")
+                {
+                    MessageBox.Show("Fatura Seri/Sıra No Alanı Boş Geçilemez.");
+                    return;
+                  
+                }
                 // düzenleme işleminde fatura bilgileri değiştirilsin stok hareketleri güncellenemesin
                 //if (duzenle)
                 //{
@@ -1510,6 +1516,7 @@ namespace NetSatis.BackOffice.Fiş
                     message += "- Fiş Kodu Alanı Boş Geçilemez." + System.Environment.NewLine;
                     hata++;
                 }
+                
                 if (cmbTipi.Text == "")
                 {
                     message += "- Hareket Tipi Alanı Boş Geçilemez." + System.Environment.NewLine;

@@ -2,18 +2,24 @@
 using DevExpress.XtraPrinting;
 using DevExpress.XtraReports.UI;
 using NetSatis.BackOffice.Fiş;
+using NetSatis.EDonusum;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Reports.Cari;
 using NetSatis.Reports.Fatura_ve_Fiş;
 using System;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 namespace NetSatis.BackOffice.Cari
 {
     public partial class frmCariHareket : Form
     {
+
+        FisDAL fisDal = new FisDAL();
+        KasaHareketDAL kasaHareketDal = new KasaHareketDAL();
         CariDAL cariDal = new CariDAL();
+        StokHareketDAL stokHareketDal = new StokHareketDAL();
         NetSatisContext context = new NetSatisContext();
         private int _cariId;
         string DosyaYolu = $@"{Application.StartupPath}\Gorunum\CariHareketSavedLayout.xml";
@@ -134,6 +140,60 @@ namespace NetSatis.BackOffice.Cari
             string secilen = gridCariHareket.GetFocusedRowCellValue(colFisKodu).ToString();
             FaturaHazirla f = new FaturaHazirla();
             f.TahsilatFisi(secilen);
+        }
+
+        private void btnSil_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            try
+            {
+                if (gridCariHareket.RowCount != 0)
+                {
+                    if (MessageBox.Show("Seçili Olan Veriyi Silmek İstediğinize Emin Misiniz ?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        int id = Convert.ToInt32(gridCariHareket.GetFocusedRowCellValue(colId).ToString());
+                        string secilen = gridCariHareket.GetFocusedRowCellValue(colFisKodu).ToString();
+                        string fisTuru = gridCariHareket.GetFocusedRowCellValue(colFisTuru).ToString();
+                        string faturaFisKodu = context.Fisler.FirstOrDefault(x => x.FisKodu == secilen).FaturaFisKodu;
+                        if (!String.IsNullOrEmpty(faturaFisKodu) && (fisTuru == "Satış İrsaliyesi" || fisTuru == "Alış İrsaliyesi"))
+                        {
+                            MessageBox.Show("Faturalandırılmış irsaliyeleri silemezsiniz.");
+                            return;
+                        }
+                        else
+                        {
+                            bool carietkilesin = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_CariEtkilesin));
+                            bool stoketkilesin = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_StoguEtkilesin));
+                            var list = context.Fisler.Where(x => x.FaturaFisKodu == secilen).ToList();
+                            string[] ids = new string[list.Count];
+                            int i = 0;
+                            foreach (var item in list)
+                            {
+                                ids[i] = item.FisKodu;
+                                i++;
+                            }
+                            var stoklist = context.StokHareketleri.Where(x => ids.Contains(x.FisKodu)).ToList();
+                            list.ForEach(a => a.FaturaFisKodu = "");
+                            list.ForEach(a => a.CariIrsaliye = carietkilesin ? "1" : "0");
+                            list.ForEach(a => a.StokIrsaliye = stoketkilesin ? "1" : "0");
+                            stoklist.ForEach(a => a.StokIrsaliye = stoketkilesin ? "1" : "0");
+                            context.SaveChanges();
+                            fisDal.Delete(context, c => c.FisKodu == secilen);
+                            kasaHareketDal.Delete(context, c => c.FisKodu == secilen);
+                            stokHareketDal.Delete(context, c => c.FisKodu == secilen);
+
+                            fisDal.Save(context);
+                            NetSatis.EDonusum.Controller.EDonusumIslemleri eislem = new EDonusum.Controller.EDonusumIslemleri();
+                            eislem.MasterSil(id);
+                          
+                            MessageBox.Show("Fiş başarıyla silindi.");
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Seçili fiş bulunamadı.");
+            }
         }
     }
 }
