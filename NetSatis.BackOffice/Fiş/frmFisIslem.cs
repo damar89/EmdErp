@@ -147,7 +147,7 @@ namespace NetSatis.BackOffice.Fiş
                 }
                 if (fisTuru == "Toptan Satış Faturası" || fisTuru == "Perakende Satış Faturası" || fisTuru == "Perakende Satış İrsaliyesi" || fisTuru == "Pos Fatura" ||
                     fisTuru == "Satış İade Faturası" || fisTuru == "Alış İade Faturası" || fisTuru == "Alış İade İrsaliyesi" || fisTuru == "Alış Faturası" ||
-                    fisTuru == "Satış İrsaliyesi" || fisTuru == "Alış İrsaliyesi" || fisTuru == "Alınan Sipariş Fişi" ||
+                    fisTuru == "Satış İrsaliyesi" || fisTuru == "Alış İrsaliyesi" || fisTuru == "Alınan Sipariş Fişi" ||fisTuru== "Perakende İade İrsaliyesi"||
                     fisTuru == "Verilen Sipariş Fişi" || fisTuru == "Alınan Teklif Fişi" ||
                     fisTuru == "Verilen Teklif Fişi" || fisTuru == "Sayım Fazlası Fişi" || fisTuru == "Sayım Eksiği Fişi" ||
                     fisTuru == "Stok Devir Fişi" || fisTuru == null)
