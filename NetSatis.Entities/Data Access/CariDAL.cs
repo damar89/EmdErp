@@ -291,7 +291,7 @@ namespace NetSatis.Entities.Data_Access
         }
         public object CariFisAyrinti(NetSatisContext context, int cariId)
         {
-            var result = context.Fisler.Where(c => c.CariId == cariId && c.FaturaFisKodu == null || c.FaturaFisKodu == "").OrderBy(f => f.Tarih).Select(k => new
+            var result = context.Fisler.Where(c => c.CariId == cariId && (c.FaturaFisKodu == null || c.FaturaFisKodu == "")).OrderBy(f => f.Tarih).Select(k => new
             {
                 k.Tarih,
                 k.VadeTarihi,
@@ -306,6 +306,7 @@ namespace NetSatis.Entities.Data_Access
                 k.IskontoOrani1,
                 k.IskontoTutari1,
                 k.Aciklama,
+                k.CariId,
                 k.ToplamTutar,
                 kasaHareket = k.FisTuru == "Cari Devir Fişi" ?
                                  context.KasaHareketleri.FirstOrDefault(x => x.FisKodu == k.FisKodu).Hareket : "-",
@@ -316,6 +317,7 @@ namespace NetSatis.Entities.Data_Access
                 s.Tarih,
                 s.VadeTarihi,
                 s.Id,
+                s.CariId,
                 s.FisKodu,
                 s.Seri,
                 s.Sira,
