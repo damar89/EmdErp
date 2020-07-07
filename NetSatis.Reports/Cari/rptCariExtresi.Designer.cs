@@ -35,7 +35,9 @@
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.colSeri = new DevExpress.XtraReports.UI.XRTableCell();
+            this.colSira = new DevExpress.XtraReports.UI.XRTableCell();
             this.colFisTuru = new DevExpress.XtraReports.UI.XRTableCell();
+            this.colBelgeNo = new DevExpress.XtraReports.UI.XRTableCell();
             this.colTarih = new DevExpress.XtraReports.UI.XRTableCell();
             this.colVadeTarihi = new DevExpress.XtraReports.UI.XRTableCell();
             this.colToplamTutar = new DevExpress.XtraReports.UI.XRTableCell();
@@ -47,7 +49,10 @@
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell6 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -75,11 +80,6 @@
             this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
             this.colAlacak = new DevExpress.XtraReports.UI.XRTableCell();
             this.colAlacakTutar = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.colSira = new DevExpress.XtraReports.UI.XRTableCell();
-            this.colBelgeNo = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
@@ -133,13 +133,33 @@
             this.colSeri.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.colSeri.Weight = 0.77310205223247741D;
             // 
+            // colSira
+            // 
+            this.colSira.Multiline = true;
+            this.colSira.Name = "colSira";
+            this.colSira.StylePriority.UseTextAlignment = false;
+            this.colSira.Text = "colSira";
+            this.colSira.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.colSira.Weight = 0.77310183529827325D;
+            // 
             // colFisTuru
             // 
+            this.colFisTuru.Font = new System.Drawing.Font("Tahoma", 7F);
             this.colFisTuru.Name = "colFisTuru";
+            this.colFisTuru.StylePriority.UseFont = false;
             this.colFisTuru.StylePriority.UseTextAlignment = false;
             this.colFisTuru.Text = "colFisTuru";
             this.colFisTuru.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.colFisTuru.Weight = 2.360372043750762D;
+            // 
+            // colBelgeNo
+            // 
+            this.colBelgeNo.Multiline = true;
+            this.colBelgeNo.Name = "colBelgeNo";
+            this.colBelgeNo.StylePriority.UseTextAlignment = false;
+            this.colBelgeNo.Text = "colBelgeNo";
+            this.colBelgeNo.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.colBelgeNo.Weight = 1.6261290443793921D;
             // 
             // colTarih
             // 
@@ -264,11 +284,32 @@
             this.xrTableRow2.Name = "xrTableRow2";
             this.xrTableRow2.Weight = 1D;
             // 
+            // xrTableCell11
+            // 
+            this.xrTableCell11.Multiline = true;
+            this.xrTableCell11.Name = "xrTableCell11";
+            this.xrTableCell11.Text = "Seri";
+            this.xrTableCell11.Weight = 0.65435419512657511D;
+            // 
+            // xrTableCell10
+            // 
+            this.xrTableCell10.Multiline = true;
+            this.xrTableCell10.Name = "xrTableCell10";
+            this.xrTableCell10.Text = "Sıra";
+            this.xrTableCell10.Weight = 0.65435419512657511D;
+            // 
             // xrTableCell4
             // 
             this.xrTableCell4.Name = "xrTableCell4";
             this.xrTableCell4.Text = "Fiş Türü";
             this.xrTableCell4.Weight = 1.9978210974709425D;
+            // 
+            // xrTableCell2
+            // 
+            this.xrTableCell2.Multiline = true;
+            this.xrTableCell2.Name = "xrTableCell2";
+            this.xrTableCell2.Text = "Belge No";
+            this.xrTableCell2.Weight = 1.3763566225331514D;
             // 
             // xrTableCell1
             // 
@@ -529,45 +570,6 @@
             this.colAlacakTutar.Text = "colAlacakTutar";
             this.colAlacakTutar.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.colAlacakTutar.Weight = 1D;
-            // 
-            // xrTableCell10
-            // 
-            this.xrTableCell10.Multiline = true;
-            this.xrTableCell10.Name = "xrTableCell10";
-            this.xrTableCell10.Text = "Sıra";
-            this.xrTableCell10.Weight = 0.65435419512657511D;
-            // 
-            // xrTableCell11
-            // 
-            this.xrTableCell11.Multiline = true;
-            this.xrTableCell11.Name = "xrTableCell11";
-            this.xrTableCell11.Text = "Seri";
-            this.xrTableCell11.Weight = 0.65435419512657511D;
-            // 
-            // xrTableCell2
-            // 
-            this.xrTableCell2.Multiline = true;
-            this.xrTableCell2.Name = "xrTableCell2";
-            this.xrTableCell2.Text = "Belge No";
-            this.xrTableCell2.Weight = 1.3763566225331514D;
-            // 
-            // colSira
-            // 
-            this.colSira.Multiline = true;
-            this.colSira.Name = "colSira";
-            this.colSira.StylePriority.UseTextAlignment = false;
-            this.colSira.Text = "colSira";
-            this.colSira.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.colSira.Weight = 0.77310183529827325D;
-            // 
-            // colBelgeNo
-            // 
-            this.colBelgeNo.Multiline = true;
-            this.colBelgeNo.Name = "colBelgeNo";
-            this.colBelgeNo.StylePriority.UseTextAlignment = false;
-            this.colBelgeNo.Text = "colBelgeNo";
-            this.colBelgeNo.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.colBelgeNo.Weight = 1.6261290443793921D;
             // 
             // rptCariExtresi
             // 
