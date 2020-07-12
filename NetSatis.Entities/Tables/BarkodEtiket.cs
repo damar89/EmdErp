@@ -21,6 +21,7 @@ namespace NetSatis.Entities.Tables
         public string SezonYil { get; set; }
         public string OzelKodu { get; set; }
         public Nullable<decimal> Miktar { get; set; }
+        public Nullable<decimal> MevcutStok { get; set; }
         public Nullable<decimal> AlisFiyati1 { get; set; }
         public Nullable<decimal> AlisFiyati2 { get; set; }
         public Nullable<decimal> AlisFiyati3 { get; set; }

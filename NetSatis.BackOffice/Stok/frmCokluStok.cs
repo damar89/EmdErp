@@ -575,7 +575,7 @@ namespace NetSatis.BackOffice.Stok
 
                     if (res.Count == 0)
                     {
-                        MessageBox.Show("Girilen barkoda ait ürün bulunamadı!", "", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        //MessageBox.Show("Girilen barkoda ait ürün bulunamadı!", "", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         continue;
                     }
                 }

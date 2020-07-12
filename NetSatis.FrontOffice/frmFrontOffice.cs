@@ -84,7 +84,14 @@ namespace NetSatis.FrontOffice
             entity = context.Stoklar.SingleOrDefault(c => c.StokKodu == buton.Name);
             if (entity != null)
             {
-                stokHareketDal.AddOrUpdate(context, StokSec(entity));
+                StokHareket s = StokSec(entity);
+                if (context.StokHareketleri.Local.ToBindingList().FirstOrDefault(x => x.StokId == s.StokId) != null)
+                {
+                    s = context.StokHareketleri.Local.ToBindingList().FirstOrDefault(x => x.StokId == s.StokId);
+                    s.Miktar = s.Miktar + calcMiktar.Value;
+                    gridStokHareket.RefreshData();
+                } 
+                stokHareketDal.AddOrUpdate(context, s);
                 gridStokHareket.FocusedRowHandle = 0;
                 HepsiniHesapla();
             }
@@ -109,7 +116,7 @@ namespace NetSatis.FrontOffice
                     Name = "Nakit",
                     Tag = "1",
                 };
-                OdemeEkle_Click(buton, null);
+                OdemeEkle_Click(buton,null);
             }
             if (keyData == Keys.F3)
             {
@@ -712,6 +719,7 @@ namespace NetSatis.FrontOffice
             txtIslem.BackColor = Color.Green;
             txtIslem.ForeColor = Color.White;
             odemeTuruId = 0;
+            calcDusur.Value = 0;
 
             VeresiyeCarisiniYerlestir();
 
@@ -752,6 +760,7 @@ namespace NetSatis.FrontOffice
             lblAlacak.Text = "Görüntülenemiyor";
             lblBorc.Text = "Görüntülenemiyor";
             lblBakiye.Text = "Görüntülenemiyor";
+            calcDusur.Value = 0;
             btnTemizle.PerformClick();
             var cikarilacakKayit = context.ChangeTracker.Entries()
                 .Where(c => c.Entity is KasaHareket || c.Entity is StokHareket || c.Entity is Fis).ToList();
@@ -762,6 +771,7 @@ namespace NetSatis.FrontOffice
             Toplamlar();
             OdenenTutarGuncelle();
             txtBarkod.Focus();
+            VeresiyeCarisiniYerlestir();
         }
         private void PersonelYukle_Click(object sender, EventArgs e)
         {
@@ -851,6 +861,7 @@ namespace NetSatis.FrontOffice
                 fisNo = ayar.HizliSatisSiradakiNo;
             }
             txtBarkod.Focus();
+            VeresiyeCarisiniYerlestir();
         }
         private void BekleyenSatisYukle(int id)
         {
@@ -1079,7 +1090,8 @@ namespace NetSatis.FrontOffice
             lblBorc.Text = "Görüntülenemiyor";
             lblBakiye.Text = "Görüntülenemiyor";
             txtBarkod.Focus();
-            _cariId = null;
+            calcDusur.Value = 0;
+            VeresiyeCarisiniYerlestir();
         }
         private void checkIade_CheckedChanged(object sender, EventArgs e)
         {
@@ -1527,6 +1539,8 @@ namespace NetSatis.FrontOffice
             lblBorc.Text = "Görüntülenemiyor";
             lblBakiye.Text = "Görüntülenemiyor";
             txtBarkod.Focus();
+            calcDusur.Value = 0;
+            VeresiyeCarisiniYerlestir();
         }
         private void btnOdemeBol_CheckedChanged(object sender, EventArgs e)
         {
@@ -2136,6 +2150,11 @@ namespace NetSatis.FrontOffice
         private void txtOdenenTutar_ValueChanged(object sender, EventArgs e)
         {
             HepsiniHesapla();
+        }
+
+        private void calcGenelToplam_EditValueChanged(object sender, EventArgs e)
+        {
+            calcDusur.Value = txtAraToplam2.Value - calcGenelToplam.Value;
         }
     }
 }

@@ -14,6 +14,7 @@ namespace NetSatis.BackOffice.Stok
 {
     public partial class BarkodEtiketHazirla : DevExpress.XtraEditors.XtraForm
     {
+        StokDAL stokDal = new StokDAL();
         NetSatisContext context = new NetSatisContext();
         BarkodEtiketDAL barkodEtiket = new BarkodEtiketDAL();
         string DosyaYolu = $@"{Application.StartupPath}\Gorunum\StokEtiket_SavedLayout.xml";
@@ -35,12 +36,18 @@ namespace NetSatis.BackOffice.Stok
 
         private void btnUrunEkle_Click(object sender, EventArgs e)
         {
+           
             frmStokSec form = new frmStokSec(true);
             form.ShowDialog();
-            if (form.secildi) {
-                foreach (var itemStok in form.secilen) {
-                    if (context.BarkodEtiketOlustur.Count(c => c.Barkodu == itemStok.Barkodu) == 0) {
-                        barkodEtiket.AddOrUpdate(context, new BarkodEtiket {
+            if (form.secildi)
+            {
+                foreach (var itemStok in form.secilen)
+                {
+                    if (context.BarkodEtiketOlustur.Count(c => c.Barkodu == itemStok.Barkodu) == 0)
+                    {
+                        
+                        barkodEtiket.AddOrUpdate(context, new BarkodEtiket
+                        {
                             StokKodu = itemStok.StokKodu,
                             StokAdi = itemStok.StokAdi,
                             Aciklama = itemStok.Aciklama,
@@ -62,11 +69,16 @@ namespace NetSatis.BackOffice.Stok
                             OzelKodu = itemStok.OzelKodu,
                             Pozisyon = itemStok.Pozisyon,
                             Proje = itemStok.Proje,
-                            SezonYil = itemStok.SezonYil
+                            SezonYil = itemStok.SezonYil,
+
+                            MevcutStok = (context.StokHareketleri.Where(c => c.StokId == itemStok.Id && c.Hareket == "Stok Giriş")
+                                      .Sum(c => c.Miktar) ?? 0) -
+                                 (context.StokHareketleri.Where(c => c.StokId == itemStok.Id && c.Hareket == "Stok Çıkış")
+                                      .Sum(c => c.Miktar) ?? 0)
 
 
 
-                        });
+                    });
                         barkodEtiket.Save(context);
                     }
                 }
@@ -77,7 +89,8 @@ namespace NetSatis.BackOffice.Stok
         private void btnSatirSil_Click(object sender, EventArgs e)
         {
             gridView1.OptionsSelection.MultiSelect = true;
-            if (MessageBox.Show("Seçili olan ürünleri listeden çıkarmak istediğinize emin misiniz ? ", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+            if (MessageBox.Show("Seçili olan ürünleri listeden çıkarmak istediğinize emin misiniz ? ", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
                 gridView1.DeleteSelectedRows();
                 barkodEtiket.Save(context);
             }
@@ -120,16 +133,20 @@ namespace NetSatis.BackOffice.Stok
         }
         private void txtBarkod_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter)
+            {
                 //Barkod entity;
                 //entity = context.Barkodlar.Where(c => c.Barkodu == txtBarkod.Text).SingleOrDefault();
                 var entityStok = context.Stoklar.Include("Barkod").FirstOrDefault(x => x.Barkodu.Equals(txtBarkod.Text) || x.Barkod.Any(q => q.Barkodu.Equals(txtBarkod.Text)));
-                if (entityStok == null) {
+                if (entityStok == null)
+                {
                     MessageBox.Show("Aradığınız barkoda ait ürün bulunamadı!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                if (!context.BarkodEtiketOlustur.Any(c => c.Barkodu.Equals(entityStok.Barkodu))) {
-                    barkodEtiket.AddOrUpdate(context, new BarkodEtiket {
+                if (!context.BarkodEtiketOlustur.Any(c => c.Barkodu.Equals(entityStok.Barkodu)))
+                {
+                    barkodEtiket.AddOrUpdate(context, new BarkodEtiket
+                    {
                         StokKodu = entityStok.StokKodu,
                         StokAdi = entityStok.StokAdi,
                         Aciklama = entityStok.Aciklama,
@@ -158,7 +175,9 @@ namespace NetSatis.BackOffice.Stok
                     });
                     barkodEtiket.Save(context);
                     txtBarkod.Text = "";
-                } else {
+                }
+                else
+                {
                     MessageBox.Show("Bu barkod daha önce oluşturulmuş", "Barkod oluşturulmuş", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -215,26 +234,27 @@ namespace NetSatis.BackOffice.Stok
 
         private void gridView1_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
         {
-            if (e.HitInfo.InRow) {
+            if (e.HitInfo.InRow)
+            {
                 popupMenu1.ShowPopup(MousePosition);
             }
         }
 
         void YazdirSecenekleriEkle()
         {
-           new UtilsRaporlama().YazdirmaSecenekleriniEkle(popupMenu1, DizaynTipi.BarkodEtiket, Br_ItemClick); 
+            new UtilsRaporlama().YazdirmaSecenekleriniEkle(popupMenu1, DizaynTipi.BarkodEtiket, Br_ItemClick);
         }
-         
+
         private void Br_ItemClick(object sender, ItemClickEventArgs e)
         {
             //tüm grid
-            var r = ((IEnumerable<BarkodEtiket>)gridControl1.DataSource).ToList(); 
+            var r = ((IEnumerable<BarkodEtiket>)gridControl1.DataSource).ToList();
             if (r == null)
                 return;
 
-            new FrmRaporTasarlaXtra(r, DizaynTipi.BarkodEtiket,true,true, Convert.ToInt32(e.Item.Tag));
-            
-        } 
+            new FrmRaporTasarlaXtra(r, DizaynTipi.BarkodEtiket, true, true, Convert.ToInt32(e.Item.Tag));
+
+        }
 
         private void btnRaporlaTasarla_ItemClick(object sender, EventArgs e)
         {

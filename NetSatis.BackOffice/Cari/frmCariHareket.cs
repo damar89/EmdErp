@@ -132,7 +132,7 @@ namespace NetSatis.BackOffice.Cari
         {
             string secilen = gridCariHareket.GetFocusedRowCellValue(colFisKodu).ToString();
             FaturaHazirla f = new FaturaHazirla();
-            f.BilgiFisi(secilen);
+            f.FaturaHazirlama(secilen);
         }
 
         private void btnTahsilat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -295,7 +295,6 @@
     <EmbeddedResource Include="Kasa\rptKasa.resx">
       <DependentUpon>rptKasa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Stok\rptStokDurumBakiye.resx">
       <DependentUpon>rptStokDurumBakiye.cs</DependentUpon>
     </EmbeddedResource>

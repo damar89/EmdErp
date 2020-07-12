@@ -446,6 +446,7 @@ namespace NetSatis.Entities.Data_Access
         {
 
             var res = StokGiris(context, StokId) - StokCikis(context, StokId);
+         
             return res;
         }
 

@@ -3321,6 +3321,7 @@ namespace NetSatis.BackOffice.Fiş
                 row.Hareket = s.Hareket;
                 //row.Id = s.Id;
                 row.MevcutStok = s.MevcutStok;
+                row.DipIskontoPayi = s.DipIskontoPayi;
                 row.IndirimOrani = s.IndirimOrani;
                 row.IndirimOrani2 = s.IndirimOrani2;
                 row.IndirimOrani3 = s.IndirimOrani3;
