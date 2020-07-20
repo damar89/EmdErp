@@ -20,8 +20,8 @@ namespace NetSatis.Entities.Mapping
             this.Property(p => p.FisTuru).HasMaxLength(300);
             this.Property(p => p.StokIrsaliye).HasMaxLength(120);
             this.Property(p => p.Miktar).HasPrecision(12, 2);
-            this.Property(p => p.BirimFiyati).HasPrecision(12, 2);
-            this.Property(p => p.SatisFiyati).HasPrecision(12, 2);
+            this.Property(p => p.BirimFiyati).HasPrecision(12, 4);
+            this.Property(p => p.SatisFiyati).HasPrecision(12, 4);
             this.Property(p => p.IndirimOrani).HasPrecision(5, 2);
             this.Property(p => p.IndirimOrani2).HasPrecision(5, 2);
             this.Property(p => p.IndirimOrani3).HasPrecision(5, 2);
@@ -29,7 +29,7 @@ namespace NetSatis.Entities.Mapping
             this.Property(p => p.Aciklama).HasMaxLength(2000);
             this.Property(p => p.KdvHaric_).HasPrecision(12, 2);
             this.Property(p => p.KdvToplam).HasPrecision(12, 2);
-            this.Property(p => p.ToplamTutar).HasPrecision(12, 2);
+            this.Property(p => p.ToplamTutar).HasPrecision(12, 4);
             this.Property(p => p.MaliyetFiyati).HasPrecision(12, 2);
             this.Property(p => p.IndirimTutar).HasPrecision(12, 2);
 

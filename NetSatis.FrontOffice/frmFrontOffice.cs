@@ -2154,7 +2154,7 @@ namespace NetSatis.FrontOffice
 
         private void calcGenelToplam_EditValueChanged(object sender, EventArgs e)
         {
-            calcDusur.Value = txtAraToplam2.Value - calcGenelToplam.Value;
+            //calcDusur.Value = txtAraToplam2.Value - calcGenelToplam.Value;
         }
     }
 }

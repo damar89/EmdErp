@@ -967,6 +967,7 @@
             this.calcGenelToplam.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.calcGenelToplam.Properties.Mask.EditMask = "n2";
             this.calcGenelToplam.Properties.NullText = "0,00";
+            this.calcGenelToplam.Properties.ReadOnly = true;
             this.calcGenelToplam.Size = new System.Drawing.Size(434, 80);
             this.calcGenelToplam.StyleController = this.layoutControl2;
             this.calcGenelToplam.TabIndex = 2;

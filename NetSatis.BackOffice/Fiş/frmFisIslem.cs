@@ -2408,8 +2408,8 @@ namespace NetSatis.BackOffice.Fiş
                         {
                             tumIndirimlerSonrasiToplam = satirIndirimSonrasiToplam;
                         }
-                        kdvToplam = Math.Round(tumIndirimlerSonrasiToplam.Value * (kdv / 100).Value, 2);
-                        satirNetTutar = Math.Round(tumIndirimlerSonrasiToplam.Value + kdvToplam.Value, 2);
+                        kdvToplam = Math.Round(tumIndirimlerSonrasiToplam.Value * (kdv / 100).Value, 4);
+                        satirNetTutar = Math.Round(tumIndirimlerSonrasiToplam.Value + kdvToplam.Value, 4);
                     }
                     toplamKdvToplam += kdvToplam;
                     toplamGenelToplam += satirNetTutar;
@@ -2417,7 +2417,7 @@ namespace NetSatis.BackOffice.Fiş
 
                     item.DipIskontoPayi = Math.Round(dipIskontoPayi.Value, 2);
                     item.KdvToplam = Math.Round(kdvToplam.Value, 2);
-                    item.AraToplam = Math.Round(aratoplam.Value, 2);
+                    item.AraToplam = Math.Round(aratoplam.Value, 4);
                     item.IndirimTutar = Math.Round(satirIndirimTutari.Value, 2);
                     item.ToplamTutar = Math.Round(satirNetTutar.Value, 2);
 
@@ -2456,9 +2456,9 @@ namespace NetSatis.BackOffice.Fiş
 
                     #endregion
                 }
-                calcKdvToplam.EditValue = Math.Round(toplamKdvToplam.Value, 2);
-                calcAraToplam.EditValue = Math.Round((toplamAraToplam - toplamKdvToplam).Value, 2);
-                calcAraToplam.EditValue = Math.Round(toplamAraToplam.Value, 2);
+                calcKdvToplam.EditValue = Math.Round(toplamKdvToplam.Value, 4);
+                calcAraToplam.EditValue = Math.Round((toplamAraToplam - toplamKdvToplam).Value, 4);
+                calcAraToplam.EditValue = Math.Round(toplamAraToplam.Value, 4);
                 calcIndirimToplami.EditValue = Math.Round(toplamSatirIndirimTutari.Value, 2);
                 calcOdenemesiGereken.EditValue = Math.Round((toplamGenelToplam - calcOdenenTutar.Value).Value, 2);
                 if (_fisentity.FisTuru == "Masraf Fişi" ||
