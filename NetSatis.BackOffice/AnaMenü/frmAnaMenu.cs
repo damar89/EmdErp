@@ -292,7 +292,7 @@ namespace NetSatis.BackOffice
         private void btnStokAc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frmStokIslem form = new frmStokIslem(new Entities.Tables.Stok());
-            form.ShowDialog();
+            form.Show();
 
 
         }
