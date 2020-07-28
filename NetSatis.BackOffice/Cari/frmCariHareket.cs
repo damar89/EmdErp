@@ -110,8 +110,9 @@ namespace NetSatis.BackOffice.Cari
         {
             DateTime dtBaslangic = dtpBaslangic.DateTime;
             DateTime dtBitis = dtpBitis.DateTime;
-            //rptStokDetayli rpr = new rptStokDetayli(_cariId, dtBaslangic, dtBitis);
-            //rpr.ShowPreview();
+            dtBitis = dtBitis.AddHours(23).AddMinutes(59).AddSeconds(59);
+            rptCariExtresiStokDetayli rpr = new rptCariExtresiStokDetayli(_cariId, dtBaslangic, dtBitis);
+            rpr.ShowPreview();
         }
         private void btnDetayliExtre_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

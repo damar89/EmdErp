@@ -38,12 +38,12 @@ namespace NetSatis.Reports.Cari
             lblIlce.DataBindings.Add("Text", cariEntity, "Ilce");
 
 
-            colFisKodu.DataBindings.Add("Text", this.DataSource, "FisKodu");
-            colFisTuru.DataBindings.Add("Text", this.DataSource, "IslemTuru");
+            colDipIndirim.DataBindings.Add("Text", this.DataSource, "DipIndirim");
+            colIndirim.DataBindings.Add("Text", this.DataSource, "IndirimTutari");
             colBirim.DataBindings.Add("Text", this.DataSource, "Birim");
             colUrunAdi.DataBindings.Add("Text", this.DataSource, "UrunAdi");
             //colBelgeNo.DataBindings.Add("Text", this.DataSource, "BelgeNo");            
-            colTarih.DataBindings.Add("Text", this.DataSource, "IslemTarihi", "{0:dd.MM.yyyy}");
+            //colTarih.DataBindings.Add("Text", this.DataSource, "IslemTarihi", "{0:dd.MM.yyyy}");
             //colVadeTarihi.DataBindings.Add("Text", this.DataSource, "VadeTarihi", "{0:dd.MM.yyyy}");
             coltutar.DataBindings.Add("Text", this.DataSource, "SatirTutari", "{0:C2}");
           
