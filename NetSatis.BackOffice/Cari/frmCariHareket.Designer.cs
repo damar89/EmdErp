@@ -287,11 +287,11 @@
             this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.simpleButton1.ImageOptions.ImageIndex = 2;
-            this.simpleButton1.Location = new System.Drawing.Point(855, 21);
+            this.simpleButton1.Location = new System.Drawing.Point(751, 24);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(37, 31);
+            this.simpleButton1.Size = new System.Drawing.Size(141, 28);
             this.simpleButton1.TabIndex = 13;
-            this.simpleButton1.Text = "Cari Ekstre Dökümü";
+            this.simpleButton1.Text = "Cari Ekstre Detay";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // labelControl2
