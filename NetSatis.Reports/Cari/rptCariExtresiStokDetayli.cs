@@ -42,7 +42,7 @@ namespace NetSatis.Reports.Cari
             colIndirim.DataBindings.Add("Text", this.DataSource, "IndirimTutari");
             colBirim.DataBindings.Add("Text", this.DataSource, "Birim");
             colUrunAdi.DataBindings.Add("Text", this.DataSource, "UrunAdi");
-            //colBelgeNo.DataBindings.Add("Text", this.DataSource, "BelgeNo");            
+            colFisTuru.DataBindings.Add("Text", this.DataSource, "IslemTuru");
             //colTarih.DataBindings.Add("Text", this.DataSource, "IslemTarihi", "{0:dd.MM.yyyy}");
             //colVadeTarihi.DataBindings.Add("Text", this.DataSource, "VadeTarihi", "{0:dd.MM.yyyy}");
             coltutar.DataBindings.Add("Text", this.DataSource, "SatirTutari", "{0:C2}");
@@ -59,13 +59,28 @@ namespace NetSatis.Reports.Cari
             lblBaslangic.Text = baslangic.ToShortDateString();
             lblBitis.Text = bitis.ToShortDateString();
 
+            CalculatedField calcTutar = new CalculatedField();
+            this.CalculatedFields.Add(calcTutar);
+            calcTutar.Name = "TopTutar";
+            calcTutar.Expression = "[SatirTutari]";
+
+            XRSummary sumToplamTutar = new XRSummary();
+            sumToplamTutar.Func = SummaryFunc.Sum;
+            sumToplamTutar.Running = SummaryRunning.Group;
+            sumToplamTutar.FormatString = "{0:C2}";
+
+
             CalculatedField calcBorcAlacak = new CalculatedField();
             this.CalculatedFields.Add(calcBorcAlacak);
             calcBorcAlacak.Name = "SonDurum";
-            calcBorcAlacak.Expression = "Iif([colSonDurum] > 0, '(Alacaklı)', '(Borçlu)')"; 
+            calcBorcAlacak.Expression = "Iif([colSonDurum] > 0, '(Alacaklı)', '(Borçlu)')";
 
-       
-           
+            lblToplamTutar.DataBindings.Add("Text", null, "TopTutar");
+
+            lblToplamTutar.Summary = sumToplamTutar;
+
+
+
         }
 
         private void xrTable3_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
