@@ -11,7 +11,7 @@ namespace NetSatis.Entities.Extensions.FluentValidation
     {
         public UniqueValidator() : base("Girdiğiniz {PropertyName} kayıtlarda var.")
         {
-
+        
         }
 
         protected override bool IsValid(PropertyValidatorContext context)

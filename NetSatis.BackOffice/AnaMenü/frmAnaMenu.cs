@@ -5,7 +5,6 @@ using NetSatis.BackOffice.Ayarlar;
 using NetSatis.BackOffice.Cari;
 using NetSatis.BackOffice.Depo;
 using NetSatis.BackOffice.Döviz_Kurları;
-using NetSatis.BackOffice.Extensions;
 using NetSatis.BackOffice.Fiş;
 using NetSatis.BackOffice.Fiyat_Değiştir;
 using NetSatis.BackOffice.Hızlı_Satış;
