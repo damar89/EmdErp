@@ -36,9 +36,9 @@ namespace NetSatis.FrontOffice
             Application.SetCompatibleTextRenderingDefault(false);
             Thread.CurrentThread.CurrentCulture = new CultureInfo("tr-TR");
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("tr-TR"); Thread.CurrentThread.CurrentCulture = new CultureInfo("tr-TR"); Thread.CurrentThread.CurrentUICulture = new CultureInfo("tr-TR"); Thread.CurrentThread.CurrentCulture = new CultureInfo("tr-TR"); Thread.CurrentThread.CurrentUICulture = new CultureInfo("tr-TR");
-            BonusSkins.Register();
-            SkinManager.EnableFormSkins();
-            UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
+            //BonusSkins.Register();
+            //SkinManager.EnableFormSkins();
+            //UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
             Form ilkForm = new frmLisansGirisi();
 
 #if DEBUG

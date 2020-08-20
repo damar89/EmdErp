@@ -353,7 +353,7 @@
             this.ribbonControl1.ShowCategoryInCaption = false;
             this.ribbonControl1.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl1.Size = new System.Drawing.Size(1008, 128);
+            this.ribbonControl1.Size = new System.Drawing.Size(1008, 141);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
@@ -1467,10 +1467,10 @@
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.barKullaniciAdi);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 740);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 733);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1008, 32);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1008, 39);
             // 
             // xtraTabbedMdiManager1
             // 
@@ -1550,7 +1550,7 @@
             this.treeList1.CustomizationFormBounds = new System.Drawing.Rectangle(797, 413, 266, 240);
             this.treeList1.Dock = System.Windows.Forms.DockStyle.Left;
             this.treeList1.HtmlImages = this.ımageList1;
-            this.treeList1.Location = new System.Drawing.Point(0, 128);
+            this.treeList1.Location = new System.Drawing.Point(0, 141);
             this.treeList1.Name = "treeList1";
             this.treeList1.BeginUnboundLoad();
             this.treeList1.AppendNode(new object[] {
@@ -1747,7 +1747,7 @@
             this.treeList1.OptionsView.ShowTreeLines = DevExpress.Utils.DefaultBoolean.True;
             this.treeList1.OptionsView.ShowVertLines = true;
             this.treeList1.SelectImageList = this.ımageList2;
-            this.treeList1.Size = new System.Drawing.Size(305, 612);
+            this.treeList1.Size = new System.Drawing.Size(305, 592);
             this.treeList1.TabIndex = 15;
             this.treeList1.ViewStyle = DevExpress.XtraTreeList.TreeListViewStyle.TreeView;
             this.treeList1.Click += new System.EventHandler(this.treeList1_Click);
@@ -1988,7 +1988,6 @@
             this.Text = "Ana Menü";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAnaMenu_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();

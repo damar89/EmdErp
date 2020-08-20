@@ -1,4 +1,7 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.LookAndFeel;
+using DevExpress.Skins;
+using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Tables;
 using NetSatis.Entities.Tools;
@@ -9,6 +12,7 @@ using System.Linq;
 using System.Security.AccessControl;
 using System.Security.Principal;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace NetSatisAdmin
 {
@@ -133,7 +137,23 @@ namespace NetSatisAdmin
 
         private void frmKullaniciGiris_Load(object sender, EventArgs e)
         {
-            txtKullanici.Text = Properties.Settings.Default.KullaniciAdi;
+            if (System.Windows.Forms.SystemInformation.TerminalServerSession)
+            {
+                SkinManager.DisableFormSkins();
+                SkinManager.DisableMdiFormSkins();
+                Application.VisualStyleState = VisualStyleState.NoneEnabled;
+
+                UserLookAndFeel.Default.UseWindowsXPTheme = false;
+                UserLookAndFeel.Default.Style = LookAndFeelStyle.Flat;
+
+                WindowsFormsSettings.AnimationMode = AnimationMode.DisableAll;
+                WindowsFormsSettings.AllowHoverAnimation = DevExpress.Utils.DefaultBoolean.False;
+
+                BarAndDockingController.Default.PropertiesBar.MenuAnimationType = AnimationType.None;
+                BarAndDockingController.Default.PropertiesBar.SubmenuHasShadow = false;
+                BarAndDockingController.Default.PropertiesBar.AllowLinkLighting = false;
+            }
+                txtKullanici.Text = Properties.Settings.Default.KullaniciAdi;
             txtParola.Text = Properties.Settings.Default.Parola;
             checkAnimsa.Checked = true;
 

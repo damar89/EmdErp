@@ -1,4 +1,7 @@
-﻿using DevExpress.Utils;
+﻿using DevExpress.LookAndFeel;
+using DevExpress.Skins;
+using DevExpress.Utils;
+using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraTab;
@@ -25,6 +28,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace NetSatis.FrontOffice
 {
@@ -1215,7 +1219,24 @@ namespace NetSatis.FrontOffice
         }
         private void frmFrontOffice_Load(object sender, EventArgs e)
         {
-            Control.CheckForIllegalCrossThreadCalls = false;
+
+            if (System.Windows.Forms.SystemInformation.TerminalServerSession)
+            {
+                SkinManager.DisableFormSkins();
+                SkinManager.DisableMdiFormSkins();
+                Application.VisualStyleState = VisualStyleState.NoneEnabled;
+
+                UserLookAndFeel.Default.UseWindowsXPTheme = false;
+                UserLookAndFeel.Default.Style = LookAndFeelStyle.Flat;
+
+                WindowsFormsSettings.AnimationMode = AnimationMode.DisableAll;
+                WindowsFormsSettings.AllowHoverAnimation = DevExpress.Utils.DefaultBoolean.False;
+
+                BarAndDockingController.Default.PropertiesBar.MenuAnimationType = AnimationType.None;
+                BarAndDockingController.Default.PropertiesBar.SubmenuHasShadow = false;
+                BarAndDockingController.Default.PropertiesBar.AllowLinkLighting = false;
+                Control.CheckForIllegalCrossThreadCalls = false;
+            }
             gridContStokHareket.ForceInitialize();
             if (File.Exists(DosyaYolu)) gridContStokHareket.MainView.RestoreLayoutFromXml(DosyaYolu);
 

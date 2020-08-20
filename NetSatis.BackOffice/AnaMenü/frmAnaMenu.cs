@@ -1,4 +1,8 @@
-﻿using DevExpress.XtraTreeList;
+﻿using DevExpress.LookAndFeel;
+using DevExpress.Skins;
+using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
+using DevExpress.XtraTreeList;
 using NetSatis.BackOffice.Ajanda;
 using NetSatis.BackOffice.AnaMenü;
 using NetSatis.BackOffice.Ayarlar;
@@ -32,6 +36,7 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace NetSatis.BackOffice
 {
@@ -96,11 +101,6 @@ namespace NetSatis.BackOffice
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            frmAjanda form = new frmAjanda();
-            form.MdiParent = this;
-            form.Show();
-
-            RoleTool.RolleriYukle(ribbonControl1);
 
         }
 
