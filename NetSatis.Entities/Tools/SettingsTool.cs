@@ -68,7 +68,8 @@ namespace NetSatis.Entities.Tools
             DolarKur_Usd,
             DolarKur_Euro,
             DolarKur_Rub,
-            Lisans_LisansKey
+            Lisans_LisansKey,
+            Cekmece_CakmeceAc
 
 
 

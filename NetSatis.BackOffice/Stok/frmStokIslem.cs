@@ -189,8 +189,7 @@ namespace NetSatis.BackOffice.Stok
             }
             if (context.Barkodlar.Local.ToList().Count > 0)
             {
-                if (_entity.Barkod.Any(x => x.Barkodu == _entity.Barkodu))
-                    _entity.Barkod.Remove(_entity.Barkod.FirstOrDefault(x => x.Barkodu == _entity.Barkodu));
+              
                 if (string.IsNullOrEmpty(_entity.Barkodu) || string.IsNullOrWhiteSpace(_entity.Barkodu))
                     _entity.Barkodu = context.Barkodlar.Local.ToList()[0].Barkodu ?? "";
             }
@@ -707,10 +706,8 @@ namespace NetSatis.BackOffice.Stok
                 DataSourceUpdateMode.OnPropertyChanged);
             calcMaxStokMiktari.DataBindings[0].FormattingEnabled = true;
             calcMaxStokMiktari.DataBindings[0].FormatString = "N";
-            var brkList = context.Barkodlar.Local.ToBindingList();
-            if (!brkList.Any(x => x.Barkodu == _entity.Barkodu))
-                brkList.Add(new Barkod { Barkodu = _entity.Barkodu });
-            gridContBarkod.DataSource = brkList;
+
+            gridContBarkod.DataSource = context.Barkodlar.Local.ToBindingList();
             if (guncelle == true)
             {
                 _entity.GuncellemeTarihi = Convert.ToDateTime(DateTime.Now);

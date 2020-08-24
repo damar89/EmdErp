@@ -94,7 +94,7 @@ namespace NetSatis.FrontOffice
                     s = context.StokHareketleri.Local.ToBindingList().FirstOrDefault(x => x.StokId == s.StokId);
                     s.Miktar = s.Miktar + calcMiktar.Value;
                     gridStokHareket.RefreshData();
-                } 
+                }
                 stokHareketDal.AddOrUpdate(context, s);
                 gridStokHareket.FocusedRowHandle = 0;
                 HepsiniHesapla();
@@ -120,7 +120,7 @@ namespace NetSatis.FrontOffice
                     Name = "Nakit",
                     Tag = "1",
                 };
-                OdemeEkle_Click(buton,null);
+                OdemeEkle_Click(buton, null);
             }
             if (keyData == Keys.F3)
             {
@@ -392,6 +392,10 @@ namespace NetSatis.FrontOffice
             if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.BilgiFisi_BilgiFisiYazdirilsinmi)) && !(Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.BilgiFisi_BilgiFisiSorulsunmu))))
             {
                 FisiKaydet(ReportsPrintTool.Belge.BilgiFisi);
+                if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Cekmece_CakmeceAc)))
+                {
+                    System.Diagnostics.Process.Start(@"C:\Emd Yazılım\Emd Soft\kasaac.EXE");
+                }
             }
             else if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.BilgiFisi_BilgiFisiYazdirilsinmi)) && (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.BilgiFisi_BilgiFisiSorulsunmu))))
             {
@@ -399,6 +403,10 @@ namespace NetSatis.FrontOffice
                 if (Soru == DialogResult.Yes)
                 {
                     FisiKaydet(ReportsPrintTool.Belge.BilgiFisi);
+                    if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Cekmece_CakmeceAc)))
+                        {
+                        System.Diagnostics.Process.Start(@"C:\Emd Yazılım\Emd Soft\kasaac.EXE");
+                    }
                 }
                 else if (Soru == DialogResult.Cancel)
                 {
@@ -450,6 +458,10 @@ namespace NetSatis.FrontOffice
                     if (Soru == DialogResult.Yes)
                     {
                         FisiKaydet(ReportsPrintTool.Belge.BilgiFisi);
+                        if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Cekmece_CakmeceAc)))
+                        {
+                            System.Diagnostics.Process.Start(@"C:\Emd Yazılım\Emd Soft\kasaac.EXE");
+                        }
                     }
                     else if (Soru == DialogResult.Cancel)
                     {
@@ -543,16 +555,16 @@ namespace NetSatis.FrontOffice
             {
                 if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 && lblCariKod.Text == "VRS001" && string.IsNullOrEmpty(txtSeri.Text))
                     _fisentity.FisTuru = "Perakende İade Faturası";
-                else 
+                else
                     _fisentity.FisTuru = "Perakende İade İrsaliyesi";
             }
             else
             {
                 if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 && lblCariKod.Text != "VRS001" && string.IsNullOrEmpty(txtSeri.Text))
                     _fisentity.FisTuru = "Perakende Satış İrsaliyesi";
-                else 
+                else
                     _fisentity.FisTuru = "Perakende Satış Faturası";
-               
+
 
                 //_fisentity.FisTuru = Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Irsaliye_Olussunmu)) && _fisentity.CariId != null && _fisentity.CariId != 0 ? "Perakende Satış İrsaliyesi" : "Perakende Satış Faturası";
             }
@@ -1202,6 +1214,10 @@ namespace NetSatis.FrontOffice
             if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.BilgiFisi_BilgiFisiYazdirilsinmi)))
             {
                 FisiKaydet(ReportsPrintTool.Belge.BilgiFisi);
+                if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Cekmece_CakmeceAc)))
+                {
+                    System.Diagnostics.Process.Start(@"C:\Emd Yazılım\Emd Soft\kasaac.EXE");
+                }
             }
             else
             {
