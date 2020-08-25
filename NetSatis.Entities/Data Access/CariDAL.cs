@@ -291,7 +291,7 @@ namespace NetSatis.Entities.Data_Access
         }
         public object CariFisAyrinti(NetSatisContext context, int cariId)
         {
-            var result = context.Fisler.Where(c => c.CariId == cariId && (c.FaturaFisKodu == null || c.FaturaFisKodu == "")).OrderBy(f => f.Tarih).Select(k => new
+            var result = context.Fisler.Where(c => c.CariId == cariId && string.IsNullOrEmpty(c.FaturaFisKodu) &&  c.FisTuru != "Pos Fatura").OrderBy(f => f.Tarih).Select(k => new
             {
                 k.Tarih,
                 k.VadeTarihi,
@@ -303,6 +303,7 @@ namespace NetSatis.Entities.Data_Access
                 k.Personel.PersonelKodu,
                 k.Personel.PersonelAdi,
                 k.BelgeNo,
+                k.FaturaFisKodu,
                 k.IskontoOrani1,
                 k.IskontoTutari1,
                 k.Aciklama,
@@ -321,6 +322,7 @@ namespace NetSatis.Entities.Data_Access
                 s.FisKodu,
                 s.Seri,
                 s.Sira,
+                s.FaturaFisKodu,
                 s.FisTuru,
                 s.PersonelKodu,
                 s.PersonelAdi,
@@ -335,11 +337,11 @@ namespace NetSatis.Entities.Data_Access
                 Durum = (s.FisTuru == "Alış Faturası" || s.FisTuru == "Satış İade Faturası" || s.FisTuru == "Masraf Faturası" || s.FisTuru == "Tahsilat Fişi" || (s.FisTuru == "Cari Devir Fişi" && s.kasaHareket == "Kasa Giriş")) ?
                 s.ToplamTutar - s.Odenen > 0 ? "A" : s.ToplamTutar - s.Odenen < 0 ? "B" : "K" :
                 s.ToplamTutar - s.Odenen > 0 ? "B" : s.ToplamTutar - s.Odenen < 0 ? "A" : "K",
-                AktifTutar = context.Fisler.Where(c => c.FisTuru != "Pos Fatura" && c.CariId == cariId && c.Tarih <= s.Tarih).Select(j => new
+                AktifTutar = context.Fisler.Where(c => string.IsNullOrEmpty(c.FaturaFisKodu) && c.FisTuru != "Pos Fatura" && c.CariId == cariId && c.Tarih <= s.Tarih).Select(j => new
                 {
                     j.FisTuru,
                     kasaHareket = j.FisTuru == "Cari Devir Fişi" ?
-                        context.KasaHareketleri.FirstOrDefault(x => x.FisKodu == j.FisKodu).Hareket : "-",
+                       context.KasaHareketleri.FirstOrDefault(x => x.FisKodu == j.FisKodu).Hareket : "-",
                     j.ToplamTutar,
                     Odenen = context.KasaHareketleri.Where(c => c.FisKodu == j.FisKodu).Sum(c => c.Tutar) ?? 0,
                     KalanOdeme = j.ToplamTutar - (context.KasaHareketleri.Where(c => c.FisKodu == j.FisKodu).Sum(c => c.Tutar) ?? 0),
@@ -362,6 +364,7 @@ namespace NetSatis.Entities.Data_Access
                                     l.KalanOdeme
                 }).Sum(t => t.kDurum) ?? 0
             }).ToList();
+
             return result;
         }
 
@@ -384,7 +387,7 @@ namespace NetSatis.Entities.Data_Access
                             Miktar = x.Miktar,
                             Birim = x.Stok.Birim,
                             FisKodu = fis.FisKodu,
-                            SatirTutari = (x.BirimFiyati * x.Miktar)-(x.IndirimTutar+x.DipIskontoPayi),
+                            SatirTutari = (x.BirimFiyati * x.Miktar) - (x.IndirimTutar + x.DipIskontoPayi),
                             IndirimTutari = x.IndirimTutar,
                             DipIndirim = x.DipIskontoPayi,
                             BirimFiyat = x.BirimFiyati,

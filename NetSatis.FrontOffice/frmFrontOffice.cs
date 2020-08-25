@@ -1507,6 +1507,7 @@ namespace NetSatis.FrontOffice
             calcOdenemesiGereken.EditValue = toplamGenelToplam - calcOdenenTutar.Value;
             txtParaUstu.Value = txtOdenenTutar.Value - calcGenelToplam.Value;
             calcMaliyet.Value = Convert.ToDecimal(colMaliyetTutar.SummaryItem.SummaryValue);
+            lblKalemSayisi.Text = Convert.ToString(colMiktar.SummaryItem.SummaryValue);
         }
         private void repoFiyat_EditValueChanged(object sender, EventArgs e) {
             gridStokHareket.PostEditor();
@@ -1834,6 +1835,13 @@ namespace NetSatis.FrontOffice
 
         private void calcGenelToplam_EditValueChanged(object sender, EventArgs e) {
             //calcDusur.Value = txtAraToplam2.Value - calcGenelToplam.Value;
+        }
+
+        private void gridStokHareket_RowCountChanged(object sender, EventArgs e)
+        {
+            int kayitsayisi; // kayıt sayısını tutacak değişkenimiz
+            kayitsayisi = Convert.ToInt32(gridStokHareket.RowCount);
+            lblSatir.Text = $"Listelenen Kayıt Sayısı: { kayitsayisi.ToString() }";
         }
     }
 }

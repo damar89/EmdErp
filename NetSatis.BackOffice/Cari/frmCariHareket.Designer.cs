@@ -99,6 +99,7 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.lblBaslik = new DevExpress.XtraEditors.LabelControl();
+            this.colFaturaFisKodu = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
             this.splitContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -145,7 +146,7 @@
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.groupControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(1001, 265);
+            this.splitContainerControl2.Size = new System.Drawing.Size(1001, 266);
             this.splitContainerControl2.SplitterPosition = 438;
             this.splitContainerControl2.TabIndex = 0;
             this.splitContainerControl2.Text = "splitContainerControl2";
@@ -156,14 +157,14 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(438, 265);
+            this.groupControl2.Size = new System.Drawing.Size(438, 266);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Fiş Türlerine Göre Toplamlar";
             // 
             // gridContFisToplam
             // 
             this.gridContFisToplam.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridContFisToplam.Location = new System.Drawing.Point(2, 26);
+            this.gridContFisToplam.Location = new System.Drawing.Point(2, 23);
             this.gridContFisToplam.MainView = this.gridFisToplam;
             this.gridContFisToplam.Name = "gridContFisToplam";
             this.gridContFisToplam.Size = new System.Drawing.Size(434, 191);
@@ -219,17 +220,17 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(552, 265);
+            this.groupControl3.Size = new System.Drawing.Size(553, 266);
             this.groupControl3.TabIndex = 1;
             this.groupControl3.Text = "Cari Ekstre";
             // 
             // gridContBakiye
             // 
             this.gridContBakiye.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridContBakiye.Location = new System.Drawing.Point(2, 26);
+            this.gridContBakiye.Location = new System.Drawing.Point(2, 23);
             this.gridContBakiye.MainView = this.gridBakiye;
             this.gridContBakiye.Name = "gridContBakiye";
-            this.gridContBakiye.Size = new System.Drawing.Size(548, 187);
+            this.gridContBakiye.Size = new System.Drawing.Size(549, 187);
             this.gridContBakiye.TabIndex = 2;
             this.gridContBakiye.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridBakiye});
@@ -464,7 +465,8 @@
             this.colKalanTutar,
             this.colAktifTutar,
             this.colSeri,
-            this.colSira});
+            this.colSira,
+            this.colFaturaFisKodu});
             this.gridCariHareket.CustomizationFormBounds = new System.Drawing.Rectangle(725, 209, 210, 172);
             gridFormatRule1.ApplyToRow = true;
             gridFormatRule1.Column = this.colDurum;
@@ -850,6 +852,14 @@
             this.lblBaslik.TabIndex = 5;
             this.lblBaslik.Text = "Cari Hareketleri";
             // 
+            // colFaturaFisKodu
+            // 
+            this.colFaturaFisKodu.Caption = "FaturaKodu";
+            this.colFaturaFisKodu.FieldName = "FaturaFisKodu";
+            this.colFaturaFisKodu.Name = "colFaturaFisKodu";
+            this.colFaturaFisKodu.Visible = true;
+            this.colFaturaFisKodu.VisibleIndex = 14;
+            // 
             // frmCariHareket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -962,5 +972,6 @@
         private DevExpress.XtraBars.BarButtonItem btnFatura;
         private DevExpress.XtraBars.BarButtonItem btnTahsilat;
         private DevExpress.XtraBars.BarButtonItem btnSil;
+        private DevExpress.XtraGrid.Columns.GridColumn colFaturaFisKodu;
     }
 }
