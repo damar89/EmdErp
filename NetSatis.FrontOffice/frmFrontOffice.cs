@@ -76,6 +76,7 @@ namespace NetSatis.FrontOffice
             gridContStokHareket.DataSource = context.StokHareketleri.Local.ToBindingList();
             gridContKasaHareket.DataSource = context.KasaHareketleri.Local.ToBindingList();
             //context.StokHareketleri.Local.Reverse();
+
             ButonlariYukle();
             txtIslem.Text = "SATIŞ";//kodOlustur.KodArttirma();
         }
@@ -89,9 +90,10 @@ namespace NetSatis.FrontOffice
                     s = context.StokHareketleri.Local.ToBindingList().FirstOrDefault(x => x.StokId == s.StokId);
                     s.Miktar = s.Miktar + calcMiktar.Value;
                     gridStokHareket.RefreshData();
-                    gridStokHareket.FocusedRowHandle = gridStokHareket.GetRowHandle(context.StokHareketleri.Local.IndexOf(s));
+                    //gridStokHareket.FocusedRowHandle = gridStokHareket.GetRowHandle(context.StokHareketleri.Local.IndexOf(s));
                 }
-                stokHareketDal.AddOrUpdate(context, s); 
+                stokHareketDal.AddOrUpdate(context, s);
+                gridStokHareket.FocusedRowHandle = 0;
                 HepsiniHesapla();
             } else {
                 MessageBox.Show("Stok Bulunamadı..");
@@ -987,11 +989,12 @@ namespace NetSatis.FrontOffice
                     if (context.StokHareketleri.Local.ToBindingList().FirstOrDefault(x => x.StokId == s.StokId) != null) {
                         s = context.StokHareketleri.Local.ToBindingList().FirstOrDefault(x => x.StokId == s.StokId);
                         s.Miktar = s.Miktar + calcMiktar.Value;
-                        gridStokHareket.RefreshData();
-                    gridStokHareket.FocusedRowHandle = gridStokHareket.GetRowHandle(context.StokHareketleri.Local.IndexOf(s));
+                    //    gridStokHareket.RefreshData();
+                    //gridStokHareket.FocusedRowHandle = gridStokHareket.GetRowHandle(context.StokHareketleri.Local.IndexOf(s));
 
                     }
-                    stokHareketDal.AddOrUpdate(context, s); 
+                    stokHareketDal.AddOrUpdate(context, s);
+                    gridStokHareket.FocusedRowHandle = 0;
                     Toplamlar();
                     HepsiniHesapla();
                 } else {
@@ -1841,7 +1844,7 @@ namespace NetSatis.FrontOffice
         {
             int kayitsayisi; // kayıt sayısını tutacak değişkenimiz
             kayitsayisi = Convert.ToInt32(gridStokHareket.RowCount);
-            lblSatir.Text = $"Listelenen Kayıt Sayısı: { kayitsayisi.ToString() }";
+            lblSatir.Text = $"{kayitsayisi.ToString() }";
         }
     }
 }

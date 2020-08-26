@@ -312,7 +312,6 @@
             this.lblGenelToplam.StylePriority.UseTextAlignment = false;
             this.lblGenelToplam.Text = "lblGenelToplam";
             this.lblGenelToplam.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.lblGenelToplam.Visible = false;
             // 
             // GroupFooter1
             // 
@@ -348,7 +347,6 @@
             this.xrLabel2.StylePriority.UseBackColor = false;
             this.xrLabel2.StylePriority.UseFont = false;
             this.xrLabel2.Text = "Toplam Bakiye :";
-            this.xrLabel2.Visible = false;
             // 
             // rptCariBakiye
             // 
@@ -362,7 +360,7 @@
             this.PageHeight = 1169;
             this.PageWidth = 827;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
-            this.Version = "19.1";
+            this.Version = "19.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

@@ -309,7 +309,7 @@ namespace NetSatis.Entities.Data_Access
                         stokhareket.Stok.AnaGrup,
                         stokhareket.ToplamTutar,
                         NetBirim = (stokhareket.BirimFiyati - (stokhareket.IndirimTutar + stokhareket.DipIskontoPayi) ?? 0),
-                        AlisToplam = (stokhareket.Miktar * (stokhareket.Stok.AlisFiyati1 ?? 0)),
+                        AlisToplam = (stokhareket.Miktar * (stokhareket.Stok.AlisFiyati3 ?? stokhareket.Stok.AlisFiyati2?? stokhareket.Stok.AlisFiyati1??0)),
                         NetTutar = stokhareket.Miktar * (stokhareket.BirimFiyati - (stokhareket.BirimFiyati * stokhareket.IndirimOrani / 100) ?? 0),
                         //KarOran = (stokhareket.Miktar * (stokhareket.BirimFiyati - (stokhareket.BirimFiyati * stokhareket.IndirimOrani / 100) ?? 0) * 100 / (stokhareket.Miktar * stokhareket.Stok.AlisFiyati1 ?? 0)) - (100) ?? 0,
                     }).Select(k => new
@@ -390,7 +390,7 @@ namespace NetSatis.Entities.Data_Access
                         stokhareket.Stok.AnaGrup,
                         stokhareket.ToplamTutar,
                         NetBirim = (stokhareket.BirimFiyati - (stokhareket.IndirimTutar + stokhareket.DipIskontoPayi) ?? 0),
-                        AlisToplam = (stokhareket.Miktar * (stokhareket.Stok.AlisFiyati1 ?? 0)),
+                        AlisToplam = (stokhareket.Miktar * (stokhareket.Stok.AlisFiyati3 ?? stokhareket.Stok.AlisFiyati2?? stokhareket.Stok.AlisFiyati3?? 0)),
                         NetTutar = stokhareket.Miktar * (stokhareket.BirimFiyati - (stokhareket.BirimFiyati * stokhareket.IndirimOrani / 100) ?? 0),
                         //KarOran = (stokhareket.Miktar * (stokhareket.BirimFiyati - (stokhareket.BirimFiyati * stokhareket.IndirimOrani / 100) ?? 0) * 100 / (stokhareket.Miktar * stokhareket.Stok.AlisFiyati1 ?? 0)) - (100) ?? 0,
                     }).Select(k => new
@@ -468,7 +468,7 @@ namespace NetSatis.Entities.Data_Access
                         stokhareket.Stok.AnaGrup,
                         stokhareket.ToplamTutar,
                         NetBirim = stokhareket.BirimFiyati - (stokhareket.BirimFiyati * stokhareket.IndirimOrani / 100) ?? 0,
-                        AlisToplam = (stokhareket.Miktar * stokhareket.Stok.AlisFiyati1 ?? 0),
+                        AlisToplam = (stokhareket.Miktar * stokhareket.Stok.AlisFiyati3 ?? stokhareket.Stok.AlisFiyati2 ?? stokhareket.Stok.AlisFiyati3 ?? 0),
                         NetTutar = stokhareket.Miktar * (stokhareket.BirimFiyati - (stokhareket.BirimFiyati * stokhareket.IndirimOrani / 100) ?? 0),
                         //KarOran = (stokhareket.Miktar * (stokhareket.BirimFiyati - (stokhareket.BirimFiyati * stokhareket.IndirimOrani / 100) ?? 0) * 100 / (stokhareket.Miktar * stokhareket.Stok.AlisFiyati1 ?? 0)) - (100) ?? 0,
                     }).Select(k => new
