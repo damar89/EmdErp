@@ -19,14 +19,15 @@ namespace NetSatis.Reports.Stok
             colStokAdi.DataBindings.Add("Text", this.DataSource, "StokAdi");
             colBirim.DataBindings.Add("Text", this.DataSource, "Birim");
 
-            if (((NetSatis.Entities.Tables.Stok)stokDataSource.DataSource).AlisFiyati3 != null && ((NetSatis.Entities.Tables.Stok)stokDataSource.DataSource).AlisFiyati3 != 0)
-                colAlisFiyati.DataBindings.Add("Text", this.DataSource, "AlisFiyati3");
-            else if (((NetSatis.Entities.Tables.Stok)stokDataSource.DataSource).AlisFiyati2 != null && ((NetSatis.Entities.Tables.Stok)stokDataSource.DataSource).AlisFiyati2 != 0)
-                colAlisFiyati.DataBindings.Add("Text", this.DataSource, "AlisFiyati2");
-            else if (((NetSatis.Entities.Tables.Stok)stokDataSource.DataSource).AlisFiyati1 != null && ((NetSatis.Entities.Tables.Stok)stokDataSource.DataSource).AlisFiyati1 != 0)
-                colAlisFiyati.DataBindings.Add("Text", this.DataSource, "AlisFiyati1");
+            //colAlisFiyati.DataBindings.Add("Text", this.DataSource, "AlisFiyati3");
+            //var stk = (int?)this.colAlisFiyati.Value;
+            //if (!stk.HasValue && stk != 0)
+            //    colAlisFiyati.DataBindings.Add("Text", this.DataSource, "AlisFiyati2");
+            //stk = (int?)this.colAlisFiyati.Value;
+            //if (!stk.HasValue && stk != 0)
+            //    colAlisFiyati.DataBindings.Add("Text", this.DataSource, "AlisFiyati1");
 
-            //colAlisFiyati.DataBindings.Add("Text", this.DataSource, "AlisFiyati3"?? "AlisFiyati2"?? "AlisFiyati1");
+            colAlisFiyati.DataBindings.Add("Text", this.DataSource, "AlisFiyati1");
 
             colSatisFiyat.DataBindings.Add("Text", this.DataSource, "SatisFiyati1");
             colMevcutStok.DataBindings.Add("Text", this.DataSource, "MevcutStok");
