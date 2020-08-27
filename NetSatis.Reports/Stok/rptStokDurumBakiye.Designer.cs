@@ -80,7 +80,7 @@
             this.xrTable1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTable1.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTable1.Dpi = 254F;
-            this.xrTable1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.xrTable1.Font = new System.Drawing.Font("Tahoma", 8F);
             this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -89,6 +89,8 @@
             this.xrTable1.StylePriority.UseBorderDashStyle = false;
             this.xrTable1.StylePriority.UseBorders = false;
             this.xrTable1.StylePriority.UseFont = false;
+            this.xrTable1.StylePriority.UseTextAlignment = false;
+            this.xrTable1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrTableRow1
             // 
@@ -115,7 +117,7 @@
             this.colStokKodu.StylePriority.UseFont = false;
             this.colStokKodu.StylePriority.UseTextAlignment = false;
             this.colStokKodu.Text = "colStokKodu";
-            this.colStokKodu.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.colStokKodu.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.colStokKodu.Weight = 0.7881217396516762D;
             // 
             // colStokAdi
@@ -447,6 +449,7 @@
             this.DesignerOptions.ShowExportWarnings = false;
             this.DesignerOptions.ShowPrintingWarnings = false;
             this.Dpi = 254F;
+            this.Font = new System.Drawing.Font("Times New Roman", 8F);
             this.Landscape = true;
             this.Margins = new System.Drawing.Printing.Margins(32, 46, 157, 46);
             this.PageHeight = 2100;
@@ -454,7 +457,7 @@
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
             this.SnapGridSize = 25F;
-            this.Version = "18.2";
+            this.Version = "19.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
