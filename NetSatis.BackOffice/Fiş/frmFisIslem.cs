@@ -3510,6 +3510,12 @@ namespace NetSatis.BackOffice.Fiş
             catch { }
         }
 
+        private void txtSeri_TextChanged(object sender, EventArgs e)
+        {
+            txtSeri.Text = txtSeri.Text.ToUpper();
+            txtSeri.SelectionStart = txtSeri.Text.Length;
+        }
+
         private void gridStokHareket_KeyDown(object sender, KeyEventArgs e)
         {
 

@@ -464,5 +464,14 @@ namespace NetSatis.BackOffice.Cari
                 this.ActiveControl = btnKapat;
             }
         }
+
+        //private void txtCariAdi_TextChanged(object sender, EventArgs e)
+        //{
+        //    titleModu(txtCariAdi.Text);
+        //}
+        //public string titleModu(string text)
+        //{
+        //    return System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(text.ToLower());
+        //}
     }
 }
