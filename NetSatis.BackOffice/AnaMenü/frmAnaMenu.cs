@@ -101,7 +101,9 @@ namespace NetSatis.BackOffice
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            frmAjanda form = new frmAjanda();
+            form.MdiParent = this;
+            RoleTool.RolleriYukle(ribbonControl1);
         }
 
         private void barStokHareketleri_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -28,7 +28,7 @@ namespace NetSatis.BackOffice.Raporlar
                            //from kasa2 in context.KasaHareketleri.Where(s => s.Tarih >= baslangic && s.Tarih <= bitis).GroupBy(s => s.FisKodu).DefaultIfEmpty()
                        select new
                        {
-                           iadeToplam = fis.Where(x => x.FisTuru == "Satış İade Faturası" || x.FisTuru == "Perakende İade Faturası").Sum(s => s.ToplamTutar),
+                           iadeToplam = fis.Where(x => x.FisTuru == "Satış İade Faturası" || x.FisTuru == "Perakende İade Faturası" || x.FisTuru == "Perakende İade İrsaliyesi").Sum(s => s.ToplamTutar),
                            perakendeFisTutari = fis.Where(x => x.FisTuru == "Perakende Satış Faturası").Sum(s => s.ToplamTutar),
                            toptanSatisTutari = fis.Where(x => x.FisTuru == "Toptan Satış Faturası").Sum(s => s.ToplamTutar),
                            indirimToplam = fis.Where(x => x.FisTuru == "Perakende Satış Faturası" || x.FisTuru == "Toptan Satış Faturası").Sum(s => s.IskontoTutari1),

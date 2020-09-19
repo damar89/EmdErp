@@ -100,7 +100,7 @@ namespace NetSatis.FrontOffice
                 else
                 {
                     stokHareketDal.AddOrUpdate(context, s);
-                    gridStokHareket.FocusedRowHandle = 0;
+                    gridStokHareket.FocusedRowHandle = 3;
 
                 }
 
@@ -981,7 +981,7 @@ namespace NetSatis.FrontOffice
                     stokHareketDal.AddOrUpdate(context, s);
                     gridStokHareket.FocusedRowHandle = 0;
                 }
-              
+
                 Toplamlar();
                 HepsiniHesapla();
             }
@@ -1176,7 +1176,7 @@ namespace NetSatis.FrontOffice
                         stokHareketDal.AddOrUpdate(context, s);
                         gridStokHareket.FocusedRowHandle = 0;
                     }
-                
+
                     Toplamlar();
                     HepsiniHesapla();
                 }
@@ -2225,6 +2225,31 @@ namespace NetSatis.FrontOffice
             int kayitsayisi; // kayıt sayısını tutacak değişkenimiz
             kayitsayisi = Convert.ToInt32(gridStokHareket.RowCount);
             lblSatir.Text = $"{kayitsayisi.ToString() }";
+        }
+
+        private void gridStokHareket_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
+        {
+            //Rectangle r = e.Bounds;
+
+            //// Draw the cell value.  This draws the text with the highlight.  
+            //e.Appearance.DrawString(e.Cache, e.DisplayText, r);
+
+            //// this will draw the black border around the cell  
+            //using (Pen p = new Pen(Color.DarkOrange, 1))
+            //{
+            //    Rectangle rect = e.Bounds;
+            //    rect.Width -= 0;
+            //    rect.Height -= 0;
+            //    e.Graphics.DrawRectangle(p, rect);
+            //}
+
+            //// Set e.Handled to true to prevent default painting  
+            //e.Handled = true;
+            gridStokHareket.OptionsSelection.EnableAppearanceFocusedCell = true;
+            gridStokHareket.OptionsSelection.EnableAppearanceFocusedRow = true;
+            gridStokHareket.Appearance.FocusedRow.BackColor = Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(65)))));
+            gridStokHareket.Appearance.SelectedRow.BackColor = Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(65)))));
+            gridStokHareket.Appearance.SelectedRow.Options.UseBackColor = true;
         }
     }
 }

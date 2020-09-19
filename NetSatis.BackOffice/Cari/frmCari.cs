@@ -22,10 +22,14 @@ namespace NetSatis.BackOffice.Cari
         public frmCari()
         {
             InitializeComponent();
+          
         }
         private void frmCari_Load(object sender, EventArgs e)
         {
             GetAll();
+            lblBorc.Text = Convert.ToString(colAlacak.SummaryItem.SummaryValue);
+            lblAlacak.Text = Convert.ToString(colBorc.SummaryItem.SummaryValue);
+            lblBakiye.Text = Convert.ToString(colBakiye.SummaryItem.SummaryValue);
             gridControl1.ForceInitialize();
             if (File.Exists(DosyaYolu)) gridControl1.MainView.RestoreLayoutFromXml(DosyaYolu);
         }

@@ -45,6 +45,7 @@
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
+            this.xrLine2 = new DevExpress.XtraReports.UI.XRLine();
             this.xrTable3 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
             this.colAlacak = new DevExpress.XtraReports.UI.XRTableCell();
@@ -81,11 +82,8 @@
             this.lblIl = new DevExpress.XtraReports.UI.XRLabel();
             this.lblIlce = new DevExpress.XtraReports.UI.XRLabel();
             this.GroupFooter1 = new DevExpress.XtraReports.UI.GroupFooterBand();
-            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblToplamTutar = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLine2 = new DevExpress.XtraReports.UI.XRLine();
-            this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.colFisTuru = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
@@ -118,7 +116,7 @@
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
-            this.xrTable1.SizeF = new System.Drawing.SizeF(805.6653F, 14.99999F);
+            this.xrTable1.SizeF = new System.Drawing.SizeF(789.6653F, 14.99999F);
             this.xrTable1.StylePriority.UseBorderDashStyle = false;
             this.xrTable1.StylePriority.UseBorders = false;
             this.xrTable1.StylePriority.UseFont = false;
@@ -127,7 +125,6 @@
             // 
             this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.colUrunAdi,
-            this.colFisTuru,
             this.colMiktar,
             this.colBirim,
             this.colBirimFiyat,
@@ -251,6 +248,12 @@
             this.xrTable5});
             this.ReportFooter.HeightF = 114.0114F;
             this.ReportFooter.Name = "ReportFooter";
+            // 
+            // xrLine2
+            // 
+            this.xrLine2.LocationFloat = new DevExpress.Utils.PointFloat(0.3347362F, 0F);
+            this.xrLine2.Name = "xrLine2";
+            this.xrLine2.SizeF = new System.Drawing.SizeF(802.6654F, 7.92042F);
             // 
             // xrTable3
             // 
@@ -415,7 +418,7 @@
             this.xrTable2.Name = "xrTable2";
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow2});
-            this.xrTable2.SizeF = new System.Drawing.SizeF(805.6653F, 25F);
+            this.xrTable2.SizeF = new System.Drawing.SizeF(789.6653F, 25F);
             this.xrTable2.StylePriority.UseBackColor = false;
             this.xrTable2.StylePriority.UseBorderDashStyle = false;
             this.xrTable2.StylePriority.UseBorders = false;
@@ -427,7 +430,6 @@
             // 
             this.xrTableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell4,
-            this.xrTableCell5,
             this.colMik,
             this.xrTableCell3,
             this.xrTableCell10,
@@ -628,16 +630,6 @@
             this.GroupFooter1.HeightF = 16.74999F;
             this.GroupFooter1.Name = "GroupFooter1";
             // 
-            // xrLabel6
-            // 
-            this.xrLabel6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(578.8783F, 0F);
-            this.xrLabel6.Name = "xrLabel6";
-            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel6.SizeF = new System.Drawing.SizeF(111.1217F, 16.74999F);
-            this.xrLabel6.StylePriority.UseFont = false;
-            this.xrLabel6.Text = "Fiş Toplamı :";
-            // 
             // lblToplamTutar
             // 
             this.lblToplamTutar.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
@@ -653,28 +645,15 @@
             this.lblToplamTutar.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.lblToplamTutar.TextFormatString = "{0:c2}";
             // 
-            // xrLine2
+            // xrLabel6
             // 
-            this.xrLine2.LocationFloat = new DevExpress.Utils.PointFloat(0.3347362F, 0F);
-            this.xrLine2.Name = "xrLine2";
-            this.xrLine2.SizeF = new System.Drawing.SizeF(802.6654F, 7.92042F);
-            // 
-            // xrTableCell5
-            // 
-            this.xrTableCell5.Multiline = true;
-            this.xrTableCell5.Name = "xrTableCell5";
-            this.xrTableCell5.Text = "Fiş Türü";
-            this.xrTableCell5.Weight = 1.8263035088365562D;
-            // 
-            // colFisTuru
-            // 
-            this.colFisTuru.Multiline = true;
-            this.colFisTuru.Name = "colFisTuru";
-            this.colFisTuru.StylePriority.UseFont = false;
-            this.colFisTuru.StylePriority.UseTextAlignment = false;
-            this.colFisTuru.Text = "colFisTuru";
-            this.colFisTuru.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.colFisTuru.Weight = 2.2066461208248227D;
+            this.xrLabel6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(578.8783F, 0F);
+            this.xrLabel6.Name = "xrLabel6";
+            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel6.SizeF = new System.Drawing.SizeF(111.1217F, 16.74999F);
+            this.xrLabel6.StylePriority.UseFont = false;
+            this.xrLabel6.Text = "Fiş Toplamı :";
             // 
             // rptCariExtresiStokDetayli
             // 
@@ -755,8 +734,6 @@
         private DevExpress.XtraReports.UI.GroupFooterBand GroupFooter1;
         private DevExpress.XtraReports.UI.XRLabel lblToplamTutar;
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
-        private DevExpress.XtraReports.UI.XRTableCell colFisTuru;
         private DevExpress.XtraReports.UI.XRLine xrLine2;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell5;
     }
 }

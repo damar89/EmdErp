@@ -377,7 +377,7 @@ namespace NetSatis.Entities.Data_Access
 
             List<KooperatifEkstreModel> liste = new List<KooperatifEkstreModel>();
             foreach (var fis in fisler) {
-                if (fis.FisTuru.Contains("Fatura")) {
+                if (fis.FisTuru.Contains("Fatura")||fis.FisTuru.Contains("İrsaliye")) {
                     //stokhareket
                     var list = context.StokHareketleri.Where(x => x.FisKodu == fis.FisKodu).Select(x =>
                         new KooperatifEkstreModel {

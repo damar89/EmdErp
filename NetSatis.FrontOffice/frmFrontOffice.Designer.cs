@@ -30,30 +30,30 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFrontOffice));
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression3 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression4 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject21 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject23 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject24 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions7 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject25 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject26 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject27 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject28 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions8 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject29 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject30 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject31 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject32 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression1 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression2 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
             this.colMevcutStok = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
             this.navigationPane1 = new DevExpress.XtraBars.Navigation.NavigationPane();
@@ -486,8 +486,10 @@
             // 
             // colMevcutStok
             // 
+            this.colMevcutStok.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colMevcutStok.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colMevcutStok.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colMevcutStok.AppearanceCell.Options.UseBackColor = true;
             this.colMevcutStok.AppearanceCell.Options.UseFont = true;
             this.colMevcutStok.AppearanceCell.Options.UseForeColor = true;
             this.colMevcutStok.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1927,7 +1929,7 @@
             this.navCari.Controls.Add(this.layoutControl3);
             this.navCari.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navCari.ImageOptions.Image")));
             this.navCari.Name = "navCari";
-            this.navCari.Size = new System.Drawing.Size(341, 803);
+            this.navCari.Size = new System.Drawing.Size(341, 808);
             // 
             // layoutControl3
             // 
@@ -1959,7 +1961,7 @@
             this.layoutControl3.Name = "layoutControl3";
             this.layoutControl3.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1188, 452, 650, 400);
             this.layoutControl3.Root = this.layoutControlGroup2;
-            this.layoutControl3.Size = new System.Drawing.Size(341, 803);
+            this.layoutControl3.Size = new System.Drawing.Size(341, 808);
             this.layoutControl3.TabIndex = 128;
             this.layoutControl3.Text = "layoutControl3";
             // 
@@ -2336,7 +2338,7 @@
             this.layoutControlItem61});
             this.layoutControlGroup2.Name = "Root";
             this.layoutControlGroup2.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
-            this.layoutControlGroup2.Size = new System.Drawing.Size(341, 803);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(341, 808);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem1
@@ -2657,7 +2659,7 @@
             this.emptySpaceItem5.AllowHotTrack = false;
             this.emptySpaceItem5.Location = new System.Drawing.Point(0, 476);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(337, 323);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(337, 328);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem60
@@ -2923,14 +2925,12 @@
             // 
             // gridStokHareket
             // 
-            this.gridStokHareket.Appearance.ColumnFilterButton.BackColor = System.Drawing.Color.Yellow;
-            this.gridStokHareket.Appearance.ColumnFilterButton.Options.UseBackColor = true;
             this.gridStokHareket.Appearance.Empty.BackColor = System.Drawing.Color.White;
             this.gridStokHareket.Appearance.Empty.Options.UseBackColor = true;
-            this.gridStokHareket.Appearance.FocusedCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridStokHareket.Appearance.FocusedCell.BackColor = System.Drawing.Color.Orange;
             this.gridStokHareket.Appearance.FocusedCell.Options.UseBackColor = true;
-            this.gridStokHareket.Appearance.FocusedRow.BackColor = System.Drawing.Color.DarkOrange;
-            this.gridStokHareket.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.Yellow;
+            this.gridStokHareket.Appearance.FocusedRow.BackColor = System.Drawing.Color.DarkSalmon;
+            this.gridStokHareket.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.gridStokHareket.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridStokHareket.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridStokHareket.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
@@ -2940,6 +2940,12 @@
             this.gridStokHareket.Appearance.Preview.Options.UseBackColor = true;
             this.gridStokHareket.Appearance.Row.ForeColor = System.Drawing.Color.Black;
             this.gridStokHareket.Appearance.Row.Options.UseForeColor = true;
+            this.gridStokHareket.Appearance.SelectedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridStokHareket.Appearance.SelectedRow.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gridStokHareket.Appearance.SelectedRow.Options.UseBackColor = true;
+            this.gridStokHareket.Appearance.SelectedRow.Options.UseFont = true;
+            this.gridStokHareket.Appearance.TopNewRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.gridStokHareket.Appearance.TopNewRow.Options.UseBackColor = true;
             this.gridStokHareket.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.colStokKodu,
@@ -2970,27 +2976,32 @@
             this.colMevcutStok,
             this.colUretici});
             this.gridStokHareket.CustomizationFormBounds = new System.Drawing.Rectangle(1106, 317, 260, 232);
-            gridFormatRule3.Column = this.colMevcutStok;
-            gridFormatRule3.ColumnApplyTo = this.colMevcutStok;
-            gridFormatRule3.Name = "Format0";
-            formatConditionRuleExpression3.Appearance.BackColor = System.Drawing.Color.Lime;
-            formatConditionRuleExpression3.Appearance.Options.UseBackColor = true;
-            formatConditionRuleExpression3.Expression = "[MevcutStok] > 0";
-            gridFormatRule3.Rule = formatConditionRuleExpression3;
-            gridFormatRule4.Column = this.colMevcutStok;
-            gridFormatRule4.ColumnApplyTo = this.colMevcutStok;
-            gridFormatRule4.Name = "Format1";
-            formatConditionRuleExpression4.Appearance.BackColor = System.Drawing.Color.Salmon;
-            formatConditionRuleExpression4.Appearance.Options.UseBackColor = true;
-            formatConditionRuleExpression4.Expression = "[MevcutStok] < 0";
-            gridFormatRule4.Rule = formatConditionRuleExpression4;
-            this.gridStokHareket.FormatRules.Add(gridFormatRule3);
-            this.gridStokHareket.FormatRules.Add(gridFormatRule4);
+            this.gridStokHareket.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            gridFormatRule1.Column = this.colMevcutStok;
+            gridFormatRule1.ColumnApplyTo = this.colMevcutStok;
+            gridFormatRule1.Name = "Format0";
+            formatConditionRuleExpression1.Appearance.BackColor = System.Drawing.Color.Lime;
+            formatConditionRuleExpression1.Appearance.Options.UseBackColor = true;
+            formatConditionRuleExpression1.Expression = "[MevcutStok] > 0";
+            gridFormatRule1.Rule = formatConditionRuleExpression1;
+            gridFormatRule2.Column = this.colMevcutStok;
+            gridFormatRule2.ColumnApplyTo = this.colMevcutStok;
+            gridFormatRule2.Name = "Format1";
+            formatConditionRuleExpression2.Appearance.BackColor = System.Drawing.Color.Salmon;
+            formatConditionRuleExpression2.Appearance.Options.UseBackColor = true;
+            formatConditionRuleExpression2.Expression = "[MevcutStok] < 0";
+            gridFormatRule2.Rule = formatConditionRuleExpression2;
+            this.gridStokHareket.FormatRules.Add(gridFormatRule1);
+            this.gridStokHareket.FormatRules.Add(gridFormatRule2);
             this.gridStokHareket.GridControl = this.gridContStokHareket;
             this.gridStokHareket.Name = "gridStokHareket";
+            this.gridStokHareket.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridStokHareket.OptionsView.AllowGlyphSkinning = true;
             this.gridStokHareket.OptionsView.ShowGroupPanel = false;
+            this.gridStokHareket.PaintStyleName = "Skin";
             this.gridStokHareket.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colTarih, DevExpress.Data.ColumnSortOrder.Descending)});
+            this.gridStokHareket.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(this.gridStokHareket_CustomDrawCell);
             this.gridStokHareket.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridStokHareket_PopupMenuShowing);
             this.gridStokHareket.ShownEditor += new System.EventHandler(this.gridStokHareket_ShownEditor);
             this.gridStokHareket.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridStokHareket_KeyDown);
@@ -2999,8 +3010,10 @@
             // 
             // colId
             // 
+            this.colId.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colId.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colId.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colId.AppearanceCell.Options.UseBackColor = true;
             this.colId.AppearanceCell.Options.UseFont = true;
             this.colId.AppearanceCell.Options.UseForeColor = true;
             this.colId.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3014,8 +3027,10 @@
             // 
             // colStokKodu
             // 
+            this.colStokKodu.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colStokKodu.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colStokKodu.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colStokKodu.AppearanceCell.Options.UseBackColor = true;
             this.colStokKodu.AppearanceCell.Options.UseFont = true;
             this.colStokKodu.AppearanceCell.Options.UseForeColor = true;
             this.colStokKodu.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3031,8 +3046,10 @@
             // 
             // colStokAdi
             // 
+            this.colStokAdi.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colStokAdi.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colStokAdi.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colStokAdi.AppearanceCell.Options.UseBackColor = true;
             this.colStokAdi.AppearanceCell.Options.UseFont = true;
             this.colStokAdi.AppearanceCell.Options.UseForeColor = true;
             this.colStokAdi.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3050,8 +3067,10 @@
             // 
             // colBirimi
             // 
+            this.colBirimi.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colBirimi.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colBirimi.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colBirimi.AppearanceCell.Options.UseBackColor = true;
             this.colBirimi.AppearanceCell.Options.UseFont = true;
             this.colBirimi.AppearanceCell.Options.UseForeColor = true;
             this.colBirimi.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3069,8 +3088,10 @@
             // 
             // colMiktar
             // 
+            this.colMiktar.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colMiktar.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colMiktar.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colMiktar.AppearanceCell.Options.UseBackColor = true;
             this.colMiktar.AppearanceCell.Options.UseFont = true;
             this.colMiktar.AppearanceCell.Options.UseForeColor = true;
             this.colMiktar.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3099,8 +3120,10 @@
             // 
             // colKdv
             // 
+            this.colKdv.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colKdv.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colKdv.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colKdv.AppearanceCell.Options.UseBackColor = true;
             this.colKdv.AppearanceCell.Options.UseFont = true;
             this.colKdv.AppearanceCell.Options.UseForeColor = true;
             this.colKdv.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3118,8 +3141,10 @@
             // 
             // colBirimFiyati
             // 
+            this.colBirimFiyati.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colBirimFiyati.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colBirimFiyati.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colBirimFiyati.AppearanceCell.Options.UseBackColor = true;
             this.colBirimFiyati.AppearanceCell.Options.UseFont = true;
             this.colBirimFiyati.AppearanceCell.Options.UseForeColor = true;
             this.colBirimFiyati.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3141,11 +3166,11 @@
             // repoFiyat
             // 
             this.repoFiyat.AutoHeight = false;
-            editorButtonImageOptions5.ImageIndex = 2;
-            editorButtonImageOptions5.ImageList = this.ımageList2;
-            editorButtonImageOptions5.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            editorButtonImageOptions1.ImageIndex = 2;
+            editorButtonImageOptions1.ImageList = this.ımageList2;
+            editorButtonImageOptions1.Location = DevExpress.XtraEditors.ImageLocation.Default;
             this.repoFiyat.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoFiyat.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.repoFiyat.Name = "repoFiyat";
             this.repoFiyat.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repoFiyat_ButtonClick);
@@ -3153,8 +3178,10 @@
             // 
             // colIndirimOrani
             // 
+            this.colIndirimOrani.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colIndirimOrani.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colIndirimOrani.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colIndirimOrani.AppearanceCell.Options.UseBackColor = true;
             this.colIndirimOrani.AppearanceCell.Options.UseFont = true;
             this.colIndirimOrani.AppearanceCell.Options.UseForeColor = true;
             this.colIndirimOrani.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3178,8 +3205,10 @@
             // 
             // colIskonto2
             // 
+            this.colIskonto2.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colIskonto2.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colIskonto2.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colIskonto2.AppearanceCell.Options.UseBackColor = true;
             this.colIskonto2.AppearanceCell.Options.UseFont = true;
             this.colIskonto2.AppearanceCell.Options.UseForeColor = true;
             this.colIskonto2.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3193,8 +3222,10 @@
             // 
             // colDepoKodu
             // 
+            this.colDepoKodu.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colDepoKodu.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colDepoKodu.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colDepoKodu.AppearanceCell.Options.UseBackColor = true;
             this.colDepoKodu.AppearanceCell.Options.UseFont = true;
             this.colDepoKodu.AppearanceCell.Options.UseForeColor = true;
             this.colDepoKodu.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3209,8 +3240,10 @@
             // 
             // colDepoAdi
             // 
+            this.colDepoAdi.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colDepoAdi.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colDepoAdi.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colDepoAdi.AppearanceCell.Options.UseBackColor = true;
             this.colDepoAdi.AppearanceCell.Options.UseFont = true;
             this.colDepoAdi.AppearanceCell.Options.UseForeColor = true;
             this.colDepoAdi.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3228,22 +3261,24 @@
             // repoDepo
             // 
             this.repoDepo.AutoHeight = false;
-            editorButtonImageOptions6.ImageIndex = 3;
-            editorButtonImageOptions6.ImageList = this.ımageList2;
-            editorButtonImageOptions6.Location = DevExpress.XtraEditors.ImageLocation.Default;
-            serializableAppearanceObject22.Options.UseImage = true;
-            serializableAppearanceObject23.Options.UseImage = true;
-            serializableAppearanceObject24.Options.UseImage = true;
+            editorButtonImageOptions2.ImageIndex = 3;
+            editorButtonImageOptions2.ImageList = this.ımageList2;
+            editorButtonImageOptions2.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            serializableAppearanceObject6.Options.UseImage = true;
+            serializableAppearanceObject7.Options.UseImage = true;
+            serializableAppearanceObject8.Options.UseImage = true;
             this.repoDepo.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoDepo.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.repoDepo.Name = "repoDepo";
             this.repoDepo.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repoDepo_ButtonClick_1);
             // 
             // colSeriNo
             // 
+            this.colSeriNo.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colSeriNo.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colSeriNo.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colSeriNo.AppearanceCell.Options.UseBackColor = true;
             this.colSeriNo.AppearanceCell.Options.UseFont = true;
             this.colSeriNo.AppearanceCell.Options.UseForeColor = true;
             this.colSeriNo.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3262,19 +3297,21 @@
             // repoSeri
             // 
             this.repoSeri.AutoHeight = false;
-            editorButtonImageOptions7.ImageIndex = 4;
-            editorButtonImageOptions7.ImageList = this.ımageList2;
-            editorButtonImageOptions7.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            editorButtonImageOptions3.ImageIndex = 4;
+            editorButtonImageOptions3.ImageList = this.ımageList2;
+            editorButtonImageOptions3.Location = DevExpress.XtraEditors.ImageLocation.Default;
             this.repoSeri.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Seri No", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject25, serializableAppearanceObject26, serializableAppearanceObject27, serializableAppearanceObject28, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Seri No", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoSeri.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.repoSeri.Name = "repoSeri";
             this.repoSeri.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
             // colAciklama
             // 
+            this.colAciklama.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colAciklama.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAciklama.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colAciklama.AppearanceCell.Options.UseBackColor = true;
             this.colAciklama.AppearanceCell.Options.UseFont = true;
             this.colAciklama.AppearanceCell.Options.UseForeColor = true;
             this.colAciklama.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3289,8 +3326,10 @@
             // 
             // colSil
             // 
+            this.colSil.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colSil.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colSil.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colSil.AppearanceCell.Options.UseBackColor = true;
             this.colSil.AppearanceCell.Options.UseFont = true;
             this.colSil.AppearanceCell.Options.UseForeColor = true;
             this.colSil.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3311,14 +3350,14 @@
             this.repoSil.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("repoSil.Appearance.Image")));
             this.repoSil.Appearance.Options.UseImage = true;
             this.repoSil.AutoHeight = false;
-            editorButtonImageOptions8.ImageIndex = 0;
-            editorButtonImageOptions8.ImageList = this.ımageList2;
-            serializableAppearanceObject29.Options.UseImage = true;
-            serializableAppearanceObject30.Options.UseImage = true;
-            serializableAppearanceObject31.Options.UseImage = true;
-            serializableAppearanceObject32.Options.UseImage = true;
+            editorButtonImageOptions4.ImageIndex = 0;
+            editorButtonImageOptions4.ImageList = this.ımageList2;
+            serializableAppearanceObject13.Options.UseImage = true;
+            serializableAppearanceObject14.Options.UseImage = true;
+            serializableAppearanceObject15.Options.UseImage = true;
+            serializableAppearanceObject16.Options.UseImage = true;
             this.repoSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject29, serializableAppearanceObject30, serializableAppearanceObject31, serializableAppearanceObject32, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.repoSil.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.repoSil.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("repoSil.ContextImageOptions.Image")));
@@ -3328,8 +3367,10 @@
             // 
             // colIndirimTutar
             // 
+            this.colIndirimTutar.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colIndirimTutar.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colIndirimTutar.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colIndirimTutar.AppearanceCell.Options.UseBackColor = true;
             this.colIndirimTutar.AppearanceCell.Options.UseFont = true;
             this.colIndirimTutar.AppearanceCell.Options.UseForeColor = true;
             this.colIndirimTutar.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3350,8 +3391,10 @@
             // 
             // colToplamTutar
             // 
+            this.colToplamTutar.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colToplamTutar.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colToplamTutar.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colToplamTutar.AppearanceCell.Options.UseBackColor = true;
             this.colToplamTutar.AppearanceCell.Options.UseFont = true;
             this.colToplamTutar.AppearanceCell.Options.UseForeColor = true;
             this.colToplamTutar.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3372,8 +3415,10 @@
             // 
             // colKdvToplam
             // 
+            this.colKdvToplam.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colKdvToplam.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colKdvToplam.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colKdvToplam.AppearanceCell.Options.UseBackColor = true;
             this.colKdvToplam.AppearanceCell.Options.UseFont = true;
             this.colKdvToplam.AppearanceCell.Options.UseForeColor = true;
             this.colKdvToplam.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3392,8 +3437,10 @@
             // 
             // colBarkod
             // 
+            this.colBarkod.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colBarkod.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colBarkod.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colBarkod.AppearanceCell.Options.UseBackColor = true;
             this.colBarkod.AppearanceCell.Options.UseFont = true;
             this.colBarkod.AppearanceCell.Options.UseForeColor = true;
             this.colBarkod.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3408,8 +3455,10 @@
             // 
             // colStokId
             // 
+            this.colStokId.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colStokId.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colStokId.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colStokId.AppearanceCell.Options.UseBackColor = true;
             this.colStokId.AppearanceCell.Options.UseFont = true;
             this.colStokId.AppearanceCell.Options.UseForeColor = true;
             this.colStokId.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3424,8 +3473,10 @@
             // 
             // colDepoId
             // 
+            this.colDepoId.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colDepoId.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colDepoId.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colDepoId.AppearanceCell.Options.UseBackColor = true;
             this.colDepoId.AppearanceCell.Options.UseFont = true;
             this.colDepoId.AppearanceCell.Options.UseForeColor = true;
             this.colDepoId.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3440,8 +3491,10 @@
             // 
             // AraToplam
             // 
+            this.AraToplam.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.AraToplam.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.AraToplam.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.AraToplam.AppearanceCell.Options.UseBackColor = true;
             this.AraToplam.AppearanceCell.Options.UseFont = true;
             this.AraToplam.AppearanceCell.Options.UseForeColor = true;
             this.AraToplam.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3461,8 +3514,10 @@
             // 
             // colKsizTutar
             // 
+            this.colKsizTutar.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colKsizTutar.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colKsizTutar.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colKsizTutar.AppearanceCell.Options.UseBackColor = true;
             this.colKsizTutar.AppearanceCell.Options.UseFont = true;
             this.colKsizTutar.AppearanceCell.Options.UseForeColor = true;
             this.colKsizTutar.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3483,8 +3538,10 @@
             // 
             // colTarih
             // 
+            this.colTarih.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colTarih.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colTarih.AppearanceCell.ForeColor = System.Drawing.Color.White;
+            this.colTarih.AppearanceCell.Options.UseBackColor = true;
             this.colTarih.AppearanceCell.Options.UseFont = true;
             this.colTarih.AppearanceCell.Options.UseForeColor = true;
             this.colTarih.AppearanceCell.Options.UseTextOptions = true;
@@ -3510,8 +3567,10 @@
             // 
             // colDipIskontoPayi
             // 
+            this.colDipIskontoPayi.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colDipIskontoPayi.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colDipIskontoPayi.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colDipIskontoPayi.AppearanceCell.Options.UseBackColor = true;
             this.colDipIskontoPayi.AppearanceCell.Options.UseFont = true;
             this.colDipIskontoPayi.AppearanceCell.Options.UseForeColor = true;
             this.colDipIskontoPayi.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3531,8 +3590,10 @@
             // 
             // colMaliyetFiyati
             // 
+            this.colMaliyetFiyati.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colMaliyetFiyati.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colMaliyetFiyati.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colMaliyetFiyati.AppearanceCell.Options.UseBackColor = true;
             this.colMaliyetFiyati.AppearanceCell.Options.UseFont = true;
             this.colMaliyetFiyati.AppearanceCell.Options.UseForeColor = true;
             this.colMaliyetFiyati.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3548,8 +3609,10 @@
             // 
             // colMaliyetTutar
             // 
+            this.colMaliyetTutar.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colMaliyetTutar.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colMaliyetTutar.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colMaliyetTutar.AppearanceCell.Options.UseBackColor = true;
             this.colMaliyetTutar.AppearanceCell.Options.UseFont = true;
             this.colMaliyetTutar.AppearanceCell.Options.UseForeColor = true;
             this.colMaliyetTutar.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -3566,8 +3629,10 @@
             // 
             // colUretici
             // 
+            this.colUretici.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.colUretici.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colUretici.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colUretici.AppearanceCell.Options.UseBackColor = true;
             this.colUretici.AppearanceCell.Options.UseFont = true;
             this.colUretici.AppearanceCell.Options.UseForeColor = true;
             this.colUretici.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
