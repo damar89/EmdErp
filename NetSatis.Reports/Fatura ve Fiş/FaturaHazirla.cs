@@ -86,6 +86,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             #region Kalemler
             DataTable DTKalemler = new DataTable();
             DTKalemler.Columns.Add("KalemBarkod", typeof(string));
+            DTKalemler.Columns.Add("KalemSeri", typeof(string));
             DTKalemler.Columns.Add("KalemStokKodu", typeof(string));
             DTKalemler.Columns.Add("KalemStokAdi", typeof(string));
             DTKalemler.Columns.Add("KalemMiktar", typeof(decimal));
@@ -106,6 +107,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             {
                 DataRow f = DTKalemler.NewRow();
                 f["KalemBarkod"] = item.Stok.Barkodu;
+                f["KalemSeri"] = item.SeriNo;
                 f["KalemBirim"] = item.Stok.Birim;
                 f["KalemBirimFiyati"] = (decimal)item.BirimFiyati;
                 f["KalemIskonto"] = (decimal)item.IndirimOrani;
@@ -501,6 +503,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             #region Kalemler
             DataTable DTKalemler = new DataTable();
             DTKalemler.Columns.Add("KalemBarkod", typeof(string));
+            DTKalemler.Columns.Add("KalemSeri", typeof(string));
             DTKalemler.Columns.Add("KalemStokKodu", typeof(string));
             DTKalemler.Columns.Add("KalemStokAdi", typeof(string));
             DTKalemler.Columns.Add("KalemMiktar", typeof(decimal));
@@ -521,6 +524,7 @@ namespace NetSatis.Reports.Fatura_ve_Fiş
             {
                 DataRow f = DTKalemler.NewRow();
                 f["KalemBarkod"] = item.Stok.Barkodu;
+                f["KalemBarkod"] = item.SeriNo;
                 f["KalemBirim"] = item.Stok.Birim;
                 f["KalemBirimFiyati"] = (decimal)item.BirimFiyati;
                 f["KalemIskonto"] = (decimal)item.IndirimOrani;

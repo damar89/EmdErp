@@ -41,6 +41,7 @@ namespace NetSatis.Entities.Data_Access
                            s.StokId,
                            s.Miktar,
                            s.Kdv,
+                       
                            s.BirimFiyati,
                            s.FisSeri,
                            s.Sira,

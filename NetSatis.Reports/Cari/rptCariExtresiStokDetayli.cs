@@ -42,7 +42,7 @@ namespace NetSatis.Reports.Cari
             colIndirim.DataBindings.Add("Text", this.DataSource, "IndirimTutari");
             colBirim.DataBindings.Add("Text", this.DataSource, "Birim");
             colUrunAdi.DataBindings.Add("Text", this.DataSource, "UrunAdi");
-            colFisTuru.DataBindings.Add("Text", this.DataSource, "IslemTuru");
+            //colFisTuru.DataBindings.Add("Text", this.DataSource, "IslemTuru");
             //colTarih.DataBindings.Add("Text", this.DataSource, "IslemTarihi", "{0:dd.MM.yyyy}");
             //colVadeTarihi.DataBindings.Add("Text", this.DataSource, "VadeTarihi", "{0:dd.MM.yyyy}");
             coltutar.DataBindings.Add("Text", this.DataSource, "SatirTutari", "{0:C2}");
