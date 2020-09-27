@@ -11,6 +11,7 @@
         public string KalemBarkod;
         public string KalemStokKodu;
         public string KalemStokAdi;
+        public string KalemSeri;
         public decimal KalemMiktar;
         public string KalemBirim;
         public decimal KalemBirimFiyati;

@@ -381,6 +381,8 @@ namespace NetSatis.Reports {
             
             private global::System.Data.DataColumn columnKalemIndirimTutari3;
             
+            private global::System.Data.DataColumn columnKalemSeri;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public FaturaKalemlerDataTable() {
@@ -544,6 +546,14 @@ namespace NetSatis.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn KalemSeriColumn {
+                get {
+                    return this.columnKalemSeri;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -595,7 +605,8 @@ namespace NetSatis.Reports {
                         decimal KalemIskonto2, 
                         decimal KalemIskonto3, 
                         string KalemIndirimTutari2, 
-                        string KalemIndirimTutari3) {
+                        string KalemIndirimTutari3, 
+                        string KalemSeri) {
                 FaturaKalemlerRow rowFaturaKalemlerRow = ((FaturaKalemlerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         KalemBarkod,
@@ -613,7 +624,8 @@ namespace NetSatis.Reports {
                         KalemIskonto2,
                         KalemIskonto3,
                         KalemIndirimTutari2,
-                        KalemIndirimTutari3};
+                        KalemIndirimTutari3,
+                        KalemSeri};
                 rowFaturaKalemlerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFaturaKalemlerRow);
                 return rowFaturaKalemlerRow;
@@ -652,6 +664,7 @@ namespace NetSatis.Reports {
                 this.columnKalemIskonto3 = base.Columns["KalemIskonto3"];
                 this.columnKalemIndirimTutari2 = base.Columns["KalemIndirimTutari2"];
                 this.columnKalemIndirimTutari3 = base.Columns["KalemIndirimTutari3"];
+                this.columnKalemSeri = base.Columns["KalemSeri"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -689,6 +702,8 @@ namespace NetSatis.Reports {
                 base.Columns.Add(this.columnKalemIndirimTutari2);
                 this.columnKalemIndirimTutari3 = new global::System.Data.DataColumn("KalemIndirimTutari3", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKalemIndirimTutari3);
+                this.columnKalemSeri = new global::System.Data.DataColumn("KalemSeri", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKalemSeri);
                 this.CaseSensitive = false;
             }
             
@@ -1943,6 +1958,22 @@ namespace NetSatis.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string KalemSeri {
+                get {
+                    try {
+                        return ((string)(this[this.tableFaturaKalemler.KalemSeriColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KalemSeri\' in table \'FaturaKalemler\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFaturaKalemler.KalemSeriColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsKalemBarkodNull() {
                 return this.IsNull(this.tableFaturaKalemler.KalemBarkodColumn);
             }
@@ -2131,6 +2162,18 @@ namespace NetSatis.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetKalemIndirimTutari3Null() {
                 this[this.tableFaturaKalemler.KalemIndirimTutari3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsKalemSeriNull() {
+                return this.IsNull(this.tableFaturaKalemler.KalemSeriColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetKalemSeriNull() {
+                this[this.tableFaturaKalemler.KalemSeriColumn] = global::System.Convert.DBNull;
             }
         }
         
