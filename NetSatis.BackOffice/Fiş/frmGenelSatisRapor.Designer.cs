@@ -51,15 +51,8 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.imgMenu = new System.Windows.Forms.ImageList(this.components);
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.barSubItem7 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-            this.btnDuzenle = new DevExpress.XtraBars.BarButtonItem();
-            this.btnFaturayazdir = new DevExpress.XtraBars.BarButtonItem();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.calcToplam = new DevExpress.XtraEditors.CalcEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -88,6 +81,15 @@
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem6 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem7 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDuzenle = new DevExpress.XtraBars.BarButtonItem();
+            this.btnFaturayazdir = new DevExpress.XtraBars.BarButtonItem();
+            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
+            this.imgMenu = new System.Windows.Forms.ImageList(this.components);
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.lblBaslik = new DevExpress.XtraEditors.LabelControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridContStokHareket = new DevExpress.XtraGrid.GridControl();
@@ -125,13 +127,14 @@
             this.colAnaGrup = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAltGrup = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMarka = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colOdemeTuru = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.colOdemeTuru = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcToplam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridContStokHareket)).BeginInit();
@@ -145,82 +148,52 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.labelControl1);
+            this.groupControl1.Controls.Add(this.calcToplam);
             this.groupControl1.Controls.Add(this.btnKapat);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 467);
+            this.groupControl1.Location = new System.Drawing.Point(0, 462);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1243, 57);
+            this.groupControl1.Size = new System.Drawing.Size(1243, 62);
             this.groupControl1.TabIndex = 7;
             // 
-            // btnKapat
+            // labelControl1
             // 
-            this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKapat.ImageOptions.ImageIndex = 0;
-            this.btnKapat.ImageOptions.ImageList = this.imgMenu;
-            this.btnKapat.Location = new System.Drawing.Point(1153, 23);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(85, 31);
-            this.btnKapat.TabIndex = 5;
-            this.btnKapat.Text = "Kapat";
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
+            this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseTextOptions = true;
+            this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl1.Location = new System.Drawing.Point(936, 4);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(126, 17);
+            this.labelControl1.TabIndex = 7;
+            this.labelControl1.Text = "Toplam :";
             // 
-            // imgMenu
+            // calcToplam
             // 
-            this.imgMenu.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgMenu.ImageStream")));
-            this.imgMenu.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgMenu.Images.SetKeyName(0, "içıkış.png");
-            // 
-            // popupMenu1
-            // 
-            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem7),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem7),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnDuzenle),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnFaturayazdir)});
-            this.popupMenu1.Manager = this.barManager1;
-            this.popupMenu1.Name = "popupMenu1";
-            // 
-            // barSubItem7
-            // 
-            this.barSubItem7.Caption = "Dışa Aktar";
-            this.barSubItem7.Id = 26;
-            this.barSubItem7.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem8),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem9)});
-            this.barSubItem7.Name = "barSubItem7";
-            // 
-            // barButtonItem8
-            // 
-            this.barButtonItem8.Caption = "Excel";
-            this.barButtonItem8.Id = 27;
-            this.barButtonItem8.Name = "barButtonItem8";
-            this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
-            // 
-            // barButtonItem9
-            // 
-            this.barButtonItem9.Caption = "Pdf";
-            this.barButtonItem9.Id = 28;
-            this.barButtonItem9.Name = "barButtonItem9";
-            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
-            // 
-            // barButtonItem7
-            // 
-            this.barButtonItem7.Caption = "Yazdır";
-            this.barButtonItem7.Id = 25;
-            this.barButtonItem7.Name = "barButtonItem7";
-            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
-            // 
-            // btnDuzenle
-            // 
-            this.btnDuzenle.Id = 31;
-            this.btnDuzenle.Name = "btnDuzenle";
-            // 
-            // btnFaturayazdir
-            // 
-            this.btnFaturayazdir.Caption = "Fatura Yazdır";
-            this.btnFaturayazdir.Id = 30;
-            this.btnFaturayazdir.Name = "btnFaturayazdir";
-            this.btnFaturayazdir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFaturayazdir_ItemClick);
+            this.calcToplam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calcToplam.Location = new System.Drawing.Point(1068, 2);
+            this.calcToplam.MenuManager = this.barManager1;
+            this.calcToplam.Name = "calcToplam";
+            this.calcToplam.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.calcToplam.Properties.Appearance.Options.UseFont = true;
+            this.calcToplam.Properties.Appearance.Options.UseTextOptions = true;
+            this.calcToplam.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.calcToplam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.calcToplam.Properties.DisplayFormat.FormatString = "C2";
+            this.calcToplam.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcToplam.Properties.EditFormat.FormatString = "C2";
+            this.calcToplam.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcToplam.Properties.ReadOnly = true;
+            this.calcToplam.Properties.ShowCloseButton = true;
+            this.calcToplam.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.calcToplam.Size = new System.Drawing.Size(170, 20);
+            this.calcToplam.TabIndex = 6;
             // 
             // barManager1
             // 
@@ -481,6 +454,76 @@
             this.barButtonItem6.Id = 24;
             this.barButtonItem6.Name = "barButtonItem6";
             // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Caption = "Yazdır";
+            this.barButtonItem7.Id = 25;
+            this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
+            // 
+            // barSubItem7
+            // 
+            this.barSubItem7.Caption = "Dışa Aktar";
+            this.barSubItem7.Id = 26;
+            this.barSubItem7.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem8),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem9)});
+            this.barSubItem7.Name = "barSubItem7";
+            // 
+            // barButtonItem8
+            // 
+            this.barButtonItem8.Caption = "Excel";
+            this.barButtonItem8.Id = 27;
+            this.barButtonItem8.Name = "barButtonItem8";
+            this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
+            // 
+            // barButtonItem9
+            // 
+            this.barButtonItem9.Caption = "Pdf";
+            this.barButtonItem9.Id = 28;
+            this.barButtonItem9.Name = "barButtonItem9";
+            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
+            // 
+            // btnDuzenle
+            // 
+            this.btnDuzenle.Id = 31;
+            this.btnDuzenle.Name = "btnDuzenle";
+            // 
+            // btnFaturayazdir
+            // 
+            this.btnFaturayazdir.Caption = "Fatura Yazdır";
+            this.btnFaturayazdir.Id = 30;
+            this.btnFaturayazdir.Name = "btnFaturayazdir";
+            this.btnFaturayazdir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFaturayazdir_ItemClick);
+            // 
+            // btnKapat
+            // 
+            this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKapat.ImageOptions.ImageIndex = 0;
+            this.btnKapat.ImageOptions.ImageList = this.imgMenu;
+            this.btnKapat.Location = new System.Drawing.Point(1153, 28);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(85, 31);
+            this.btnKapat.TabIndex = 5;
+            this.btnKapat.Text = "Kapat";
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
+            // 
+            // imgMenu
+            // 
+            this.imgMenu.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgMenu.ImageStream")));
+            this.imgMenu.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgMenu.Images.SetKeyName(0, "içıkış.png");
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem7),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem7),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDuzenle),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnFaturayazdir)});
+            this.popupMenu1.Manager = this.barManager1;
+            this.popupMenu1.Name = "popupMenu1";
+            // 
             // lblBaslik
             // 
             this.lblBaslik.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -510,7 +553,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.gridContStokHareket);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1243, 467);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1243, 462);
             this.splitContainerControl1.SplitterPosition = 34;
             this.splitContainerControl1.TabIndex = 8;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -526,7 +569,7 @@
             this.repoFiyat,
             this.repoDepo,
             this.repoSeri});
-            this.gridContStokHareket.Size = new System.Drawing.Size(1243, 428);
+            this.gridContStokHareket.Size = new System.Drawing.Size(1243, 417);
             this.gridContStokHareket.TabIndex = 4;
             this.gridContStokHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridStokHareket,
@@ -580,7 +623,6 @@
             this.gridStokHareket.OptionsPrint.SplitDataCellAcrossPages = true;
             this.gridStokHareket.OptionsPrint.UsePrintStyles = false;
             this.gridStokHareket.OptionsView.ShowAutoFilterRow = true;
-            this.gridStokHareket.OptionsView.ShowFooter = true;
             this.gridStokHareket.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colTarih, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.gridStokHareket.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridStokHareket_PopupMenuShowing);
@@ -918,6 +960,14 @@
             this.colMarka.Visible = true;
             this.colMarka.VisibleIndex = 8;
             // 
+            // colOdemeTuru
+            // 
+            this.colOdemeTuru.Caption = "Ödeme Türü";
+            this.colOdemeTuru.FieldName = "OdemeTuru";
+            this.colOdemeTuru.Name = "colOdemeTuru";
+            this.colOdemeTuru.Visible = true;
+            this.colOdemeTuru.VisibleIndex = 2;
+            // 
             // gridView2
             // 
             this.gridView2.GridControl = this.gridContStokHareket;
@@ -926,14 +976,6 @@
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
-            // 
-            // colOdemeTuru
-            // 
-            this.colOdemeTuru.Caption = "Ödeme Türü";
-            this.colOdemeTuru.FieldName = "OdemeTuru";
-            this.colOdemeTuru.Name = "colOdemeTuru";
-            this.colOdemeTuru.Visible = true;
-            this.colOdemeTuru.VisibleIndex = 2;
             // 
             // frmGenelSatisRapor
             // 
@@ -953,8 +995,9 @@
             this.Load += new System.EventHandler(this.frmGenelSatisRapor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcToplam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridContStokHareket)).EndInit();
@@ -1049,5 +1092,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colAltGrup;
         private DevExpress.XtraGrid.Columns.GridColumn colMarka;
         private DevExpress.XtraGrid.Columns.GridColumn colOdemeTuru;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.CalcEdit calcToplam;
     }
 }

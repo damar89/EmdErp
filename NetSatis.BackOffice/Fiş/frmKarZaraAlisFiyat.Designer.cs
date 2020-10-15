@@ -68,11 +68,20 @@
             this.colAltGrup = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMarka = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.calcToplam = new DevExpress.XtraEditors.CalcEdit();
+            this.calcKarOran = new DevExpress.XtraEditors.CalcEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridContStokHareket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridStokHareket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.calcToplam.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcKarOran.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // printDialog1
@@ -196,7 +205,7 @@
             this.gridContStokHareket.Location = new System.Drawing.Point(0, 0);
             this.gridContStokHareket.MainView = this.gridStokHareket;
             this.gridContStokHareket.Name = "gridContStokHareket";
-            this.gridContStokHareket.Size = new System.Drawing.Size(1167, 556);
+            this.gridContStokHareket.Size = new System.Drawing.Size(1167, 508);
             this.gridContStokHareket.TabIndex = 6;
             this.gridContStokHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridStokHareket,
@@ -233,7 +242,6 @@
             this.gridStokHareket.OptionsPrint.PrintGroupFooter = false;
             this.gridStokHareket.OptionsPrint.RtfPageHeader = resources.GetString("gridStokHareket.OptionsPrint.RtfPageHeader");
             this.gridStokHareket.OptionsView.ShowAutoFilterRow = true;
-            this.gridStokHareket.OptionsView.ShowFooter = true;
             this.gridStokHareket.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridStokHareket_PopupMenuShowing);
             // 
             // colFisKodu
@@ -524,26 +532,123 @@
             this.gridView1.GridControl = this.gridContStokHareket;
             this.gridView1.Name = "gridView1";
             // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.labelControl2);
+            this.groupControl1.Controls.Add(this.labelControl1);
+            this.groupControl1.Controls.Add(this.calcKarOran);
+            this.groupControl1.Controls.Add(this.calcToplam);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupControl1.Location = new System.Drawing.Point(0, 508);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.ShowCaption = false;
+            this.groupControl1.Size = new System.Drawing.Size(1167, 48);
+            this.groupControl1.TabIndex = 11;
+            this.groupControl1.Text = "groupControl1";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseTextOptions = true;
+            this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl1.Location = new System.Drawing.Point(587, 8);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(112, 28);
+            this.labelControl1.TabIndex = 9;
+            this.labelControl1.Text = "Kâr Tutarı :";
+            // 
+            // calcToplam
+            // 
+            this.calcToplam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calcToplam.Location = new System.Drawing.Point(705, 8);
+            this.calcToplam.MenuManager = this.barManager1;
+            this.calcToplam.Name = "calcToplam";
+            this.calcToplam.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.calcToplam.Properties.Appearance.Options.UseFont = true;
+            this.calcToplam.Properties.Appearance.Options.UseTextOptions = true;
+            this.calcToplam.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.calcToplam.Properties.AutoHeight = false;
+            this.calcToplam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.calcToplam.Properties.DisplayFormat.FormatString = "C2";
+            this.calcToplam.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcToplam.Properties.EditFormat.FormatString = "C2";
+            this.calcToplam.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcToplam.Properties.ReadOnly = true;
+            this.calcToplam.Properties.ShowCloseButton = true;
+            this.calcToplam.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.calcToplam.Size = new System.Drawing.Size(170, 28);
+            this.calcToplam.TabIndex = 8;
+            // 
+            // calcKarOran
+            // 
+            this.calcKarOran.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calcKarOran.Location = new System.Drawing.Point(997, 8);
+            this.calcKarOran.Name = "calcKarOran";
+            this.calcKarOran.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.calcKarOran.Properties.Appearance.Options.UseFont = true;
+            this.calcKarOran.Properties.Appearance.Options.UseTextOptions = true;
+            this.calcKarOran.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.calcKarOran.Properties.AutoHeight = false;
+            this.calcKarOran.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.calcKarOran.Properties.DisplayFormat.FormatString = "n2";
+            this.calcKarOran.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcKarOran.Properties.EditFormat.FormatString = "n2";
+            this.calcKarOran.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcKarOran.Properties.ReadOnly = true;
+            this.calcKarOran.Properties.ShowCloseButton = true;
+            this.calcKarOran.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.calcKarOran.Size = new System.Drawing.Size(165, 28);
+            this.calcKarOran.TabIndex = 8;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Appearance.Options.UseTextOptions = true;
+            this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl2.Location = new System.Drawing.Point(879, 8);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(112, 28);
+            this.labelControl2.TabIndex = 9;
+            this.labelControl2.Text = "Kâr Tutarı :";
+            // 
             // frmKarZaraAlisFiyat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1167, 556);
             this.Controls.Add(this.gridContStokHareket);
+            this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.IconOptions.ShowIcon = false;
             this.Name = "frmKarZaraAlisFiyat";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kâr Zarar Durumu";
+            this.Load += new System.EventHandler(this.frmKarZaraAlisFiyat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridContStokHareket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridStokHareket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.calcToplam.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcKarOran.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -589,5 +694,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colAnaGrup;
         private DevExpress.XtraGrid.Columns.GridColumn colAltGrup;
         private DevExpress.XtraGrid.Columns.GridColumn colMarka;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.CalcEdit calcToplam;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.CalcEdit calcKarOran;
     }
 }

@@ -107,6 +107,8 @@
             this.colOdemeTuru = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCariUnvan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.calcToplam = new DevExpress.XtraEditors.CalcEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -117,10 +119,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridFisler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpsChkKdvDahil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcToplam.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.labelControl1);
+            this.groupControl1.Controls.Add(this.calcToplam);
             this.groupControl1.Controls.Add(this.dropDownButton1);
             this.groupControl1.Controls.Add(this.btnKapat);
             this.groupControl1.Controls.Add(this.btnGuncelle);
@@ -630,7 +635,7 @@
             this.gridContFisler.Name = "gridContFisler";
             this.gridContFisler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpsChkKdvDahil});
-            this.gridContFisler.Size = new System.Drawing.Size(1023, 349);
+            this.gridContFisler.Size = new System.Drawing.Size(1023, 348);
             this.gridContFisler.TabIndex = 0;
             this.gridContFisler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridFisler});
@@ -667,7 +672,6 @@
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ToplamTutar", this.colToplamTutar, "(Tutar={0:C2})")});
             this.gridFisler.Name = "gridFisler";
             this.gridFisler.OptionsView.ShowAutoFilterRow = true;
-            this.gridFisler.OptionsView.ShowFooter = true;
             this.gridFisler.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridFisler_PopupMenuShowing);
             this.gridFisler.DoubleClick += new System.EventHandler(this.gridFisler_DoubleClick);
             // 
@@ -909,6 +913,44 @@
             this.popupMenu2.Manager = this.barManager1;
             this.popupMenu2.Name = "popupMenu2";
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseTextOptions = true;
+            this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl1.Location = new System.Drawing.Point(714, 3);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(126, 17);
+            this.labelControl1.TabIndex = 9;
+            this.labelControl1.Text = "Toplam :";
+            // 
+            // calcToplam
+            // 
+            this.calcToplam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calcToplam.Location = new System.Drawing.Point(846, 1);
+            this.calcToplam.MenuManager = this.barManager1;
+            this.calcToplam.Name = "calcToplam";
+            this.calcToplam.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.calcToplam.Properties.Appearance.Options.UseFont = true;
+            this.calcToplam.Properties.Appearance.Options.UseTextOptions = true;
+            this.calcToplam.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.calcToplam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.calcToplam.Properties.DisplayFormat.FormatString = "C2";
+            this.calcToplam.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcToplam.Properties.EditFormat.FormatString = "C2";
+            this.calcToplam.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcToplam.Properties.ReadOnly = true;
+            this.calcToplam.Properties.ShowCloseButton = true;
+            this.calcToplam.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.calcToplam.Size = new System.Drawing.Size(170, 20);
+            this.calcToplam.TabIndex = 8;
+            // 
             // frmSatisRapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -935,6 +977,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridFisler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpsChkKdvDahil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcToplam.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1019,5 +1062,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colOdemeTuru;
         private DevExpress.XtraBars.BarButtonItem btnGorunumKaydet;
         private DevExpress.XtraGrid.Columns.GridColumn colCariUnvan;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.CalcEdit calcToplam;
     }
 }

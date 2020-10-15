@@ -20,7 +20,7 @@ namespace NetSatis.BackOffice.Fiş
             InitializeComponent();
 
             context = new NetSatisContext();
-            gridContStokHareket.DataSource = stokHareketDal.GenelIadeListele(context, "Perakende İade Faturası","Satış İade Faturası", baslangic, bitis);
+            gridContStokHareket.DataSource = stokHareketDal.GenelIadeListele(context, "Perakende İade Faturası","Perakende İade İrsaliyesi", baslangic, bitis);
 
 
         }

@@ -27,6 +27,7 @@ namespace NetSatis.BackOffice.Fiş
 
         private void frmSatisRapor_Load(object sender, EventArgs e)
         {
+            calcToplam.Text = Convert.ToString(colToplamTutar.SummaryItem.SummaryValue);
             if (File.Exists(DosyaYolu)) gridContFisler.MainView.RestoreLayoutFromXml(DosyaYolu);
 
             Listele();

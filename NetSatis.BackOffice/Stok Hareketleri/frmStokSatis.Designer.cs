@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStokSatis));
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStokSatis));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -89,6 +89,7 @@
             this.colCariKodu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCariAdi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDipIskTutar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colOdemeTuru = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
@@ -99,7 +100,8 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.colOdemeTuru = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.calcToplam = new DevExpress.XtraEditors.CalcEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -113,10 +115,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcToplam.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.labelControl1);
+            this.groupControl1.Controls.Add(this.calcToplam);
             this.groupControl1.Controls.Add(this.btnKapat);
             this.groupControl1.Controls.Add(this.btnDetayGor);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -260,7 +265,6 @@
             this.gridStokHareket.OptionsPrint.PrintHorzLines = false;
             this.gridStokHareket.OptionsPrint.RtfReportHeader = resources.GetString("gridStokHareket.OptionsPrint.RtfReportHeader");
             this.gridStokHareket.OptionsView.ShowAutoFilterRow = true;
-            this.gridStokHareket.OptionsView.ShowFooter = true;
             this.gridStokHareket.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridStokHareket_PopupMenuShowing);
             this.gridStokHareket.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.gridStokHareket_CustomColumnDisplayText);
             // 
@@ -646,6 +650,14 @@
             this.colDipIskTutar.VisibleIndex = 11;
             this.colDipIskTutar.Width = 67;
             // 
+            // colOdemeTuru
+            // 
+            this.colOdemeTuru.Caption = "Ödeme Türü";
+            this.colOdemeTuru.FieldName = "OdemeTuru";
+            this.colOdemeTuru.Name = "colOdemeTuru";
+            this.colOdemeTuru.Visible = true;
+            this.colOdemeTuru.VisibleIndex = 1;
+            // 
             // gridView2
             // 
             this.gridView2.GridControl = this.gridContStokHareket;
@@ -725,13 +737,43 @@
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 597);
             // 
-            // colOdemeTuru
+            // labelControl1
             // 
-            this.colOdemeTuru.Caption = "Ödeme Türü";
-            this.colOdemeTuru.FieldName = "OdemeTuru";
-            this.colOdemeTuru.Name = "colOdemeTuru";
-            this.colOdemeTuru.Visible = true;
-            this.colOdemeTuru.VisibleIndex = 1;
+            this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseTextOptions = true;
+            this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl1.Location = new System.Drawing.Point(789, 6);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(126, 17);
+            this.labelControl1.TabIndex = 9;
+            this.labelControl1.Text = "Toplam :";
+            // 
+            // calcToplam
+            // 
+            this.calcToplam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calcToplam.Location = new System.Drawing.Point(921, 4);
+            this.calcToplam.MenuManager = this.barManager1;
+            this.calcToplam.Name = "calcToplam";
+            this.calcToplam.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.calcToplam.Properties.Appearance.Options.UseFont = true;
+            this.calcToplam.Properties.Appearance.Options.UseTextOptions = true;
+            this.calcToplam.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.calcToplam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.calcToplam.Properties.DisplayFormat.FormatString = "C2";
+            this.calcToplam.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcToplam.Properties.EditFormat.FormatString = "C2";
+            this.calcToplam.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcToplam.Properties.ReadOnly = true;
+            this.calcToplam.Properties.ShowCloseButton = true;
+            this.calcToplam.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.calcToplam.Size = new System.Drawing.Size(170, 20);
+            this.calcToplam.TabIndex = 8;
             // 
             // frmStokSatis
             // 
@@ -765,6 +807,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcToplam.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -822,5 +865,7 @@
         private DevExpress.XtraBars.BarButtonItem btnFisYazici;
         private DevExpress.XtraGrid.Columns.GridColumn colDipIskTutar;
         private DevExpress.XtraGrid.Columns.GridColumn colOdemeTuru;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.CalcEdit calcToplam;
     }
 }

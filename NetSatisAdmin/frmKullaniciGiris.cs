@@ -155,7 +155,7 @@ namespace NetSatisAdmin
             }
                 txtKullanici.Text = Properties.Settings.Default.KullaniciAdi;
             txtParola.Text = Properties.Settings.Default.Parola;
-            checkAnimsa.Checked = true;
+            checkAnimsa.Checked = false;
 
 
 

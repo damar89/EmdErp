@@ -29,7 +29,7 @@ namespace NetSatis.Entities.Tools
             try
             {
                 NetSatisContext context = new NetSatisContext();
-                foreach (var item in context.KullaniciRolleri.Where(c => c.KullaniciAdi == KullaniciEntity.KullaniciAdi && c.FormAdi == "fmrAnaMenu" && c.Yetki == false).ToList())
+                foreach (var item in context.KullaniciRolleri.Where(c => c.KullaniciAdi == KullaniciEntity.KullaniciAdi && c.FormAdi == "fmrAnaMenu" ||c.FormAdi=="frmFrontOffice" && c.Yetki == false).ToList())
                 {
                     form.Items.SingleOrDefault(c => c.Name == item.KontrolAdi).Enabled = false;
 
@@ -41,6 +41,8 @@ namespace NetSatis.Entities.Tools
                 
             }
         }
+
+      
     }
 
 

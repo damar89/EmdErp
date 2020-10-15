@@ -48,6 +48,7 @@ namespace NetSatis.BackOffice
         public frmAnaMenu()
         {
             InitializeComponent();
+            RoleTool.RolleriYukle(this);
             string DosyaYolu = $@"{Application.StartupPath}\Gorunum";
             if (!Directory.Exists(DosyaYolu)) Directory.CreateDirectory(DosyaYolu);
 

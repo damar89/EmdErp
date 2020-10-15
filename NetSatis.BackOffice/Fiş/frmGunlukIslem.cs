@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraReports.UI;
+﻿using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tools;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace NetSatis.BackOffice.Fiş
 {
-    public partial class frmGunlukIslem : Form
+    public partial class frmGunlukIslem : XtraForm
     {
         NetSatisContext context = new NetSatisContext();
         FisDAL fisDal = new FisDAL();
@@ -24,7 +25,9 @@ namespace NetSatis.BackOffice.Fiş
         {
             user = userId;
             InitializeComponent();
+            RoleTool.RolleriYukle(this);
             gridContFisler.DataSource = fisDal.GunlukListelemeler(context, "Perakende Satış Faturası", "Toptan Satış Faturası", "Perakende Satış İrsaliyesi", "Ödeme Fişi", "Tahsilat Fişi", "Masraf Fişi", "Pos Fatura","Perakende İade Faturası","Satış İade Faturası", baslangic, bitis);
+           
         }
 
         private void frmGunlukIslem_Load(object sender, EventArgs e)
@@ -152,7 +155,7 @@ namespace NetSatis.BackOffice.Fiş
         {
             string secilen = gridFisler.GetFocusedRowCellValue(colFisKodu).ToString();
             string fisturu = gridFisler.GetFocusedRowCellValue(colFisTuru).ToString();
-            frmFisIslem form = new frmFisIslem(secilen, fisturu, false, null, user);
+            frmFisIslem form = new frmFisIslem(secilen, fisturu);
             form.Show();
         }
 

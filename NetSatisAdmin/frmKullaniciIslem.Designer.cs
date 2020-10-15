@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKullaniciIslem));
             this.lblBaslik = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.ımageList1 = new System.Windows.Forms.ImageList();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.grupGenel = new DevExpress.XtraEditors.GroupControl();
             this.gridLookKasa = new DevExpress.XtraEditors.GridLookUpEdit();
@@ -102,7 +101,7 @@
             this.lblBaslik.Location = new System.Drawing.Point(0, 0);
             this.lblBaslik.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(416, 35);
+            this.lblBaslik.Size = new System.Drawing.Size(384, 35);
             this.lblBaslik.TabIndex = 8;
             this.lblBaslik.Text = "Kullanı İşlemleri";
             // 
@@ -111,9 +110,9 @@
             this.groupControl1.Controls.Add(this.btnKapat);
             this.groupControl1.Controls.Add(this.btnKaydet);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 482);
+            this.groupControl1.Location = new System.Drawing.Point(0, 474);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(416, 57);
+            this.groupControl1.Size = new System.Drawing.Size(384, 57);
             this.groupControl1.TabIndex = 1;
             // 
             // btnKapat
@@ -121,7 +120,7 @@
             this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKapat.ImageOptions.ImageIndex = 1;
             this.btnKapat.ImageOptions.ImageList = this.ımageList1;
-            this.btnKapat.Location = new System.Drawing.Point(326, 23);
+            this.btnKapat.Location = new System.Drawing.Point(294, 23);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(85, 31);
             this.btnKapat.TabIndex = 1;
@@ -140,7 +139,7 @@
             this.btnKaydet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnKaydet.ImageOptions.ImageIndex = 0;
             this.btnKaydet.ImageOptions.ImageList = this.ımageList1;
-            this.btnKaydet.Location = new System.Drawing.Point(235, 23);
+            this.btnKaydet.Location = new System.Drawing.Point(203, 23);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(85, 31);
             this.btnKaydet.TabIndex = 0;
@@ -172,7 +171,7 @@
             this.grupGenel.Dock = System.Windows.Forms.DockStyle.Top;
             this.grupGenel.Location = new System.Drawing.Point(0, 35);
             this.grupGenel.Name = "grupGenel";
-            this.grupGenel.Size = new System.Drawing.Size(416, 273);
+            this.grupGenel.Size = new System.Drawing.Size(384, 273);
             this.grupGenel.TabIndex = 0;
             this.grupGenel.Text = "Genel Bilgiler";
             // 
@@ -289,7 +288,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSoyAdi.Location = new System.Drawing.Point(102, 67);
             this.txtSoyAdi.Name = "txtSoyAdi";
-            this.txtSoyAdi.Size = new System.Drawing.Size(309, 20);
+            this.txtSoyAdi.Size = new System.Drawing.Size(277, 20);
             this.txtSoyAdi.TabIndex = 2;
             // 
             // txtAdi
@@ -298,7 +297,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAdi.Location = new System.Drawing.Point(102, 47);
             this.txtAdi.Name = "txtAdi";
-            this.txtAdi.Size = new System.Drawing.Size(309, 20);
+            this.txtAdi.Size = new System.Drawing.Size(277, 20);
             this.txtAdi.TabIndex = 1;
             // 
             // txtParolaTekrari
@@ -308,7 +307,7 @@
             this.txtParolaTekrari.Location = new System.Drawing.Point(102, 143);
             this.txtParolaTekrari.Name = "txtParolaTekrari";
             this.txtParolaTekrari.Properties.PasswordChar = '*';
-            this.txtParolaTekrari.Size = new System.Drawing.Size(309, 20);
+            this.txtParolaTekrari.Size = new System.Drawing.Size(277, 20);
             this.txtParolaTekrari.TabIndex = 5;
             // 
             // txtCevap
@@ -318,7 +317,7 @@
             this.txtCevap.Location = new System.Drawing.Point(102, 193);
             this.txtCevap.Name = "txtCevap";
             this.txtCevap.Properties.PasswordChar = '*';
-            this.txtCevap.Size = new System.Drawing.Size(309, 20);
+            this.txtCevap.Size = new System.Drawing.Size(277, 20);
             this.txtCevap.TabIndex = 7;
             // 
             // txtParola
@@ -328,7 +327,7 @@
             this.txtParola.Location = new System.Drawing.Point(102, 117);
             this.txtParola.Name = "txtParola";
             this.txtParola.Properties.PasswordChar = '*';
-            this.txtParola.Size = new System.Drawing.Size(309, 20);
+            this.txtParola.Size = new System.Drawing.Size(277, 20);
             this.txtParola.TabIndex = 4;
             // 
             // txtHatirlatmaSorusu
@@ -337,7 +336,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtHatirlatmaSorusu.Location = new System.Drawing.Point(102, 167);
             this.txtHatirlatmaSorusu.Name = "txtHatirlatmaSorusu";
-            this.txtHatirlatmaSorusu.Size = new System.Drawing.Size(309, 20);
+            this.txtHatirlatmaSorusu.Size = new System.Drawing.Size(277, 20);
             this.txtHatirlatmaSorusu.TabIndex = 6;
             // 
             // txtGorevi
@@ -346,7 +345,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGorevi.Location = new System.Drawing.Point(102, 91);
             this.txtGorevi.Name = "txtGorevi";
-            this.txtGorevi.Size = new System.Drawing.Size(309, 20);
+            this.txtGorevi.Size = new System.Drawing.Size(277, 20);
             this.txtGorevi.TabIndex = 3;
             // 
             // txtKullaniciAdi
@@ -355,7 +354,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKullaniciAdi.Location = new System.Drawing.Point(102, 22);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(309, 20);
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(277, 20);
             this.txtKullaniciAdi.TabIndex = 0;
             // 
             // labelControl8
@@ -476,7 +475,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 308);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(416, 174);
+            this.groupControl2.Size = new System.Drawing.Size(384, 166);
             this.groupControl2.TabIndex = 13;
             this.groupControl2.Text = "Yetkiler";
             // 
@@ -488,7 +487,7 @@
             this.treeList1.Cursor = System.Windows.Forms.Cursors.Default;
             this.treeList1.CustomizationFormBounds = new System.Drawing.Rectangle(208, 496, 260, 232);
             this.treeList1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeList1.Location = new System.Drawing.Point(2, 21);
+            this.treeList1.Location = new System.Drawing.Point(2, 24);
             this.treeList1.Name = "treeList1";
             this.treeList1.BeginUnboundLoad();
             this.treeList1.AppendNode(new object[] {
@@ -533,6 +532,36 @@
             this.treeList1.AppendNode(new object[] {
             "Hareket Görüntüle",
             "btnCariHareket"}, 7, System.Windows.Forms.CheckState.Checked);
+            this.treeList1.AppendNode(new object[] {
+            "Stok Kartı",
+            "frmStokIslem"}, -1, System.Windows.Forms.CheckState.Checked);
+            this.treeList1.AppendNode(new object[] {
+            "Kaydet",
+            "btnKaydet"}, 14, System.Windows.Forms.CheckState.Checked);
+            this.treeList1.AppendNode(new object[] {
+            "Kaydet Yeni",
+            "btnKaydetYeni"}, 14, System.Windows.Forms.CheckState.Checked);
+            this.treeList1.AppendNode(new object[] {
+            "Sil",
+            "btnSil"}, 14, System.Windows.Forms.CheckState.Checked);
+            this.treeList1.AppendNode(new object[] {
+            "Devir Girişi",
+            "calcDevirGirisi"}, 14, System.Windows.Forms.CheckState.Checked);
+            this.treeList1.AppendNode(new object[] {
+            "Ana Menü",
+            "frmAnaMenu"}, -1, System.Windows.Forms.CheckState.Checked);
+            this.treeList1.AppendNode(new object[] {
+            "Stok Aç",
+            "btnStokAc"}, 19, System.Windows.Forms.CheckState.Checked);
+            this.treeList1.AppendNode(new object[] {
+            "Stok Listesi",
+            "btnStok"}, 19, System.Windows.Forms.CheckState.Checked);
+            this.treeList1.AppendNode(new object[] {
+            "Raporlar",
+            "frmGunlukIslem"}, -1, System.Windows.Forms.CheckState.Checked);
+            this.treeList1.AppendNode(new object[] {
+            "Sil",
+            "btnSil"}, 22, System.Windows.Forms.CheckState.Checked);
             this.treeList1.EndUnboundLoad();
             this.treeList1.OptionsBehavior.AllowRecursiveNodeChecking = true;
             this.treeList1.OptionsView.AutoWidth = false;
@@ -542,7 +571,7 @@
             this.treeList1.OptionsView.ShowHorzLines = false;
             this.treeList1.OptionsView.ShowIndicator = false;
             this.treeList1.OptionsView.ShowVertLines = false;
-            this.treeList1.Size = new System.Drawing.Size(412, 151);
+            this.treeList1.Size = new System.Drawing.Size(380, 140);
             this.treeList1.TabIndex = 0;
             // 
             // treeListColumn1
@@ -563,22 +592,24 @@
             this.treeListColumn2.Name = "treeListColumn2";
             this.treeListColumn2.OptionsColumn.AllowEdit = false;
             this.treeListColumn2.OptionsColumn.ShowInCustomizationForm = false;
+            this.treeListColumn2.Visible = true;
+            this.treeListColumn2.VisibleIndex = 1;
             // 
             // frmKullaniciIslem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 539);
+            this.ClientSize = new System.Drawing.Size(384, 531);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.grupGenel);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.lblBaslik);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.IconOptions.ShowIcon = false;
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmKullaniciIslem";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kullanıcı Ekle";
             this.Load += new System.EventHandler(this.frmKullaniciIslem_Load);

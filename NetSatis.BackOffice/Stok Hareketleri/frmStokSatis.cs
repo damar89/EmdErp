@@ -28,7 +28,7 @@ namespace NetSatis.BackOffice.Stok_Hareketleri
 
         private void frmStokSatis_Load(object sender, EventArgs e)
         {
-
+            calcToplam.Text = Convert.ToString(colToplamTutar.SummaryItem.SummaryValue);
             gridContStokHareket.ForceInitialize();
 
             if (File.Exists(DosyaYolu)) gridContStokHareket.MainView.RestoreLayoutFromXml(DosyaYolu);

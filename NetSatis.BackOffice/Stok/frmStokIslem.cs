@@ -32,6 +32,7 @@ namespace NetSatis.BackOffice.Stok
         bool guncelle = false;
         public frmStokIslem(Entities.Tables.Stok entity, bool kopyala = false) {
             InitializeComponent();
+             RoleTool.RolleriYukle(this);
             context = new NetSatisContext();
             if (entity.Id != 0) {
                 guncelle = true;

@@ -97,6 +97,7 @@
             this.colOzelKod = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSeri = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSira = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -494,16 +495,17 @@
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(18, 18);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exceleAktarToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(139, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(154, 28);
             // 
             // exceleAktarToolStripMenuItem
             // 
             this.exceleAktarToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.exporttoxlsx_16x16;
             this.exceleAktarToolStripMenuItem.Name = "exceleAktarToolStripMenuItem";
-            this.exceleAktarToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.exceleAktarToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
             this.exceleAktarToolStripMenuItem.Text = "Excele Aktar";
             this.exceleAktarToolStripMenuItem.Click += new System.EventHandler(this.exceleAktarToolStripMenuItem_Click);
             // 
@@ -533,7 +535,8 @@
             this.colProje,
             this.colOzelKod,
             this.colSeri,
-            this.colSira});
+            this.colSira,
+            this.gridColumn1});
             this.gridFisler.GridControl = this.gridContFisler;
             this.gridFisler.Name = "gridFisler";
             this.gridFisler.OptionsView.ShowAutoFilterRow = true;
@@ -784,6 +787,16 @@
             this.colSira.Visible = true;
             this.colSira.VisibleIndex = 5;
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "FaturaKodu";
+            this.gridColumn1.FieldName = "FaturaFisKodu";
+            this.gridColumn1.MinWidth = 23;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 16;
+            this.gridColumn1.Width = 86;
+            // 
             // frmFis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -885,5 +898,6 @@
         private System.Windows.Forms.ToolStripMenuItem exceleAktarToolStripMenuItem;
         private DevExpress.XtraGrid.Columns.GridColumn colSeri;
         private DevExpress.XtraGrid.Columns.GridColumn colSira;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

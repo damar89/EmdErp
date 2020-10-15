@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPesinSatislar));
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPesinSatislar));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -59,6 +59,8 @@
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.btnDizayn = new DevExpress.XtraBars.BarButtonItem();
+            this.btnFatura = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBilgiFisi = new DevExpress.XtraBars.BarButtonItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -124,8 +126,8 @@
             this.colAltGrup = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMarka = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.btnFatura = new DevExpress.XtraBars.BarButtonItem();
-            this.btnBilgiFisi = new DevExpress.XtraBars.BarButtonItem();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.calcToplam = new DevExpress.XtraEditors.CalcEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -139,10 +141,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.repoSeri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoSil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcToplam.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.labelControl1);
+            this.groupControl1.Controls.Add(this.calcToplam);
             this.groupControl1.Controls.Add(this.btnKapat);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl1.Location = new System.Drawing.Point(0, 397);
@@ -224,6 +229,22 @@
             this.btnDizayn.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.salesinvoice_16x16;
             this.btnDizayn.Name = "btnDizayn";
             this.btnDizayn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDizayn_ItemClick);
+            // 
+            // btnFatura
+            // 
+            this.btnFatura.Caption = "Fatura Yazdır";
+            this.btnFatura.Id = 31;
+            this.btnFatura.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.printdialog_16x16;
+            this.btnFatura.Name = "btnFatura";
+            this.btnFatura.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFatura_ItemClick);
+            // 
+            // btnBilgiFisi
+            // 
+            this.btnBilgiFisi.Caption = "Bilgi Fişi Yazdır";
+            this.btnBilgiFisi.Id = 32;
+            this.btnBilgiFisi.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.printdialog_16x16;
+            this.btnBilgiFisi.Name = "btnBilgiFisi";
+            this.btnBilgiFisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBilgiFisi_ItemClick_1);
             // 
             // barManager1
             // 
@@ -572,7 +593,6 @@
             this.gridStokHareket.OptionsPrint.SplitDataCellAcrossPages = true;
             this.gridStokHareket.OptionsPrint.UsePrintStyles = false;
             this.gridStokHareket.OptionsView.ShowAutoFilterRow = true;
-            this.gridStokHareket.OptionsView.ShowFooter = true;
             this.gridStokHareket.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colTarih, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
@@ -902,21 +922,43 @@
             this.gridView2.GridControl = this.gridContStokHareket;
             this.gridView2.Name = "gridView2";
             // 
-            // btnFatura
+            // labelControl1
             // 
-            this.btnFatura.Caption = "Fatura Yazdır";
-            this.btnFatura.Id = 31;
-            this.btnFatura.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.printdialog_16x16;
-            this.btnFatura.Name = "btnFatura";
-            this.btnFatura.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnFatura_ItemClick);
+            this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseTextOptions = true;
+            this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl1.Location = new System.Drawing.Point(761, 6);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(126, 17);
+            this.labelControl1.TabIndex = 9;
+            this.labelControl1.Text = "Toplam :";
             // 
-            // btnBilgiFisi
+            // calcToplam
             // 
-            this.btnBilgiFisi.Caption = "Bilgi Fişi Yazdır";
-            this.btnBilgiFisi.Id = 32;
-            this.btnBilgiFisi.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.printdialog_16x16;
-            this.btnBilgiFisi.Name = "btnBilgiFisi";
-            this.btnBilgiFisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBilgiFisi_ItemClick_1);
+            this.calcToplam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calcToplam.Location = new System.Drawing.Point(893, 4);
+            this.calcToplam.MenuManager = this.barManager1;
+            this.calcToplam.Name = "calcToplam";
+            this.calcToplam.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 7.854546F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.calcToplam.Properties.Appearance.Options.UseFont = true;
+            this.calcToplam.Properties.Appearance.Options.UseTextOptions = true;
+            this.calcToplam.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.calcToplam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.calcToplam.Properties.DisplayFormat.FormatString = "C2";
+            this.calcToplam.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcToplam.Properties.EditFormat.FormatString = "C2";
+            this.calcToplam.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcToplam.Properties.ReadOnly = true;
+            this.calcToplam.Properties.ShowCloseButton = true;
+            this.calcToplam.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.calcToplam.Size = new System.Drawing.Size(170, 20);
+            this.calcToplam.TabIndex = 8;
             // 
             // frmPesinSatislar
             // 
@@ -948,6 +990,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repoSeri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoSil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcToplam.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1031,5 +1074,7 @@
         private DevExpress.XtraBars.BarButtonItem btnDizayn;
         private DevExpress.XtraBars.BarButtonItem btnFatura;
         private DevExpress.XtraBars.BarButtonItem btnBilgiFisi;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.CalcEdit calcToplam;
     }
 }

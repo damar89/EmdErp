@@ -73,5 +73,12 @@ namespace NetSatis.BackOffice.Fiş
             link.Margins.Bottom = 3;
             link.ShowPreview();
         }
+
+        private void frmKarZaraAlisFiyat_Load(object sender, EventArgs e)
+        {
+            calcToplam.Text = Convert.ToString(colKarTutari.SummaryItem.SummaryValue);
+            //calcKarOran.Text = Convert.ToString(colKarOran.ShowUnboundExpressionMenu.);
+
+        }
     }
 }

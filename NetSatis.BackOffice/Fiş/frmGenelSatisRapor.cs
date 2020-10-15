@@ -27,7 +27,7 @@ namespace NetSatis.BackOffice.Fiş
 
         private void frmGenelSatisRapor_Load(object sender, EventArgs e)
         {
-
+            calcToplam.Text = Convert.ToString(colToplamTutar.SummaryItem.SummaryValue);
         }
 
         private void btnKapat_Click(object sender, EventArgs e)

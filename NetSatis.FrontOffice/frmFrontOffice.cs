@@ -60,7 +60,6 @@ namespace NetSatis.FrontOffice
             InitializeComponent();
             //frmKullaniciGiris girisform = new frmKullaniciGiris();
             //girisform.ShowDialog();
-
             context.Stoklar.Load();
             context.Depolar.Load();
             context.Kasalar.Load();
@@ -256,7 +255,7 @@ namespace NetSatis.FrontOffice
                         Text = hizliSatis.UrunAdi + Environment.NewLine + hizliSatis.Fiyati,
 
                         Appearance = { TextOptions = { WordWrap = WordWrap.Wrap },BackColor = c,
-                        FontSizeDelta = 3,FontStyleDelta = FontStyle.Bold
+                        FontSizeDelta = 2,FontStyleDelta = FontStyle.Regular
                             },
                         //Height = 70,
                         //Width = 70,
@@ -1072,7 +1071,7 @@ namespace NetSatis.FrontOffice
             FisiKaydet(ReportsPrintTool.Belge.BilgiFisi);
         }
         private void frmFrontOffice_Load(object sender, EventArgs e) {
-
+         
             if (System.Windows.Forms.SystemInformation.TerminalServerSession) {
                 SkinManager.DisableFormSkins();
                 SkinManager.DisableMdiFormSkins();
