@@ -32,7 +32,7 @@ namespace NetSatis.BackOffice.Stok
         bool guncelle = false;
         public frmStokIslem(Entities.Tables.Stok entity, bool kopyala = false) {
             InitializeComponent();
-             RoleTool.RolleriYukle(this);
+            RoleTool.RolleriYukle(this);
             context = new NetSatisContext();
             if (entity.Id != 0) {
                 guncelle = true;
@@ -231,8 +231,8 @@ namespace NetSatis.BackOffice.Stok
                 lblMiktar.Text = "";
                 if (!kaydetYeni) {
                     this.Close();
-                } 
-                MessageBox.Show("Stok başarılı bir şekilde kaydedilmiştir."); 
+                }
+                MessageBox.Show("Stok başarılı bir şekilde kaydedilmiştir.");
             }
 
         }
@@ -440,6 +440,14 @@ namespace NetSatis.BackOffice.Stok
         }
         private void repoSil_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e) {
             if (MessageBox.Show("Seçili Olan Veriyi Silmek İstediğinize Emin Misiniz ?", "Uyarı", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+                var row = gridBarkod.GetRow(gridBarkod.FocusedRowHandle) as Barkod;
+                if (row == null)
+                    return;
+                if (_entity.Barkodu == row.Barkodu) {
+                    _entity.Barkodu = null;
+                } else {
+                    _entity.Barkod.Remove(row);
+                }
                 gridBarkod.DeleteSelectedRows();
             }
         }
