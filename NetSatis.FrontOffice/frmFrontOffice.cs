@@ -1273,6 +1273,7 @@ namespace NetSatis.FrontOffice
         private void btnKasaRpr_Click(object sender, EventArgs e) {
             frmKasaTarih form = new frmKasaTarih();
             form.Show();
+            txtBarkod.Focus();
         }
         private void btnSatisRpr_Click(object sender, EventArgs e) {
             frmTarihliPesSatis form = new frmTarihliPesSatis();
@@ -1366,6 +1367,7 @@ namespace NetSatis.FrontOffice
             txtBarkod.Focus();
             calcDusur.Value = 0;
             VeresiyeCarisiniYerlestir();
+            txtBarkod.Focus();
         }
         private void btnOdemeBol_CheckedChanged(object sender, EventArgs e) {
             if (btnOdemeBol.Checked) {
@@ -1409,6 +1411,7 @@ namespace NetSatis.FrontOffice
         private void btnFiyatGor_Click(object sender, EventArgs e) {
             frmFiyatGor frm = new frmFiyatGor(new Entities.Tables.Stok());
             frm.ShowDialog();
+            txtBarkod.Focus();
         }
         private void calcIndirimToplami_EditValueChanged(object sender, EventArgs e) {
         }
@@ -1556,6 +1559,7 @@ namespace NetSatis.FrontOffice
                 calcIndirimOrani.Properties.ReadOnly = false;
             }
             HepsiniHesapla();
+            txtBarkod.Focus();
         }
         private void repoSil_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e) {
             try {
@@ -1735,11 +1739,13 @@ namespace NetSatis.FrontOffice
         private void btnArttır_Click(object sender, EventArgs e) {
             gridStokHareket.SetFocusedRowCellValue("Miktar", Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("Miktar")) + 1);
             HepsiniHesapla();
+            txtBarkod.Focus();
         }
 
         private void btnAzalt_Click(object sender, EventArgs e) {
             gridStokHareket.SetFocusedRowCellValue("Miktar", Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("Miktar")) - 1);
             HepsiniHesapla();
+            txtBarkod.Focus();
 
         }
 

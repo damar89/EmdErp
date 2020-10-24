@@ -395,8 +395,8 @@ namespace NetSatis.Entities.Data_Access
                              OzelKodu = s.OzelKodu,
                              Proje = s.Proje,
                              AlisFiyati1 = s.AlisFiyati1,
-                             AlisFiyati2=s.AlisFiyati2,
-                             AlisFiyati3=s.AlisFiyati3,
+                             AlisFiyati2 = s.AlisFiyati2,
+                             AlisFiyati3 = s.AlisFiyati3,
                              SatisFiyati1 = s.SatisFiyati1,
                              SatisFiyati2 = s.SatisFiyati2,
                              StokGiris = StokGiris(s.SHareket),
@@ -413,14 +413,14 @@ namespace NetSatis.Entities.Data_Access
         public decimal? StokGiris(ICollection<StokHareket> hareketler = null)
         {
             var res = hareketler
-                .Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1"))
+                .Where(c => c.Hareket == "Stok Giriş" && c.FisTuru != "Pos Fatura" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1"))
                 .Sum(c => c.Miktar);
             return res;
         }
         public decimal? StokCikis(ICollection<StokHareket> hareketler = null)
         {
             var res = hareketler
-                .Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Perakende Fatura") ||
+                .Where(c => (c.Hareket == "Stok Çıkış" && c.FisTuru != "Pos Fatura") ||
                             (c.FisTuru == "Satış İrsaliyesi" && c.StokIrsaliye == "1")).Sum(c => c.Miktar);
             return res;
         }
@@ -434,7 +434,7 @@ namespace NetSatis.Entities.Data_Access
 
             var hr = context.StokHareketleri.Where(x => x.StokId == StokId).AsNoTracking().ToList();
             var res = hr
-                .Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1"))
+                .Where(c => c.Hareket == "Stok Giriş" || (c.FisTuru == "Alış İrsaliyesi" && c.StokIrsaliye == "1" && c.FisTuru != "Pos Fatura"))
                 .Sum(c => c.Miktar);
             return res;
         }
@@ -450,7 +450,7 @@ namespace NetSatis.Entities.Data_Access
         {
 
             var res = StokGiris(context, StokId) - StokCikis(context, StokId);
-         
+
             return res;
         }
 
