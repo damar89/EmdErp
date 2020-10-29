@@ -11,6 +11,7 @@ using System.IO;
 using System.Linq;
 using System.Security.AccessControl;
 using System.Security.Principal;
+using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 
@@ -123,6 +124,8 @@ namespace NetSatisAdmin
         }
 
         private void frmKullaniciGiris_Load(object sender, EventArgs e) {
+
+            Thread.Sleep(5000);
             if (System.Windows.Forms.SystemInformation.TerminalServerSession) {
                 SkinManager.DisableFormSkins();
                 SkinManager.DisableMdiFormSkins();

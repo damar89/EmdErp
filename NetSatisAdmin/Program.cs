@@ -26,7 +26,7 @@ namespace NetSatisAdmin
             Application.SetCompatibleTextRenderingDefault(false);
             Thread.CurrentThread.CurrentCulture = new CultureInfo("tr-TR");
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("tr-TR"); Thread.CurrentThread.CurrentCulture = new CultureInfo("tr-TR"); Thread.CurrentThread.CurrentUICulture = new CultureInfo("tr-TR"); Thread.CurrentThread.CurrentCulture = new CultureInfo("tr-TR"); Thread.CurrentThread.CurrentUICulture = new CultureInfo("tr-TR");
-            if (System.Windows.Forms.SystemInformation.TerminalServerSession)
+         /*   if (System.Windows.Forms.SystemInformation.TerminalServerSession)
             {
                 SkinManager.DisableFormSkins();
                 SkinManager.DisableMdiFormSkins();
@@ -44,7 +44,7 @@ namespace NetSatisAdmin
                 //Properties.Settings.Default.Lisans=0;
                 //Properties.Settings.Default.Save();
                 Form ilkForm = new frmLisansGirisi();
-            }
+            }*/
 
             //Properties.Settings.Default.Lisans = "";
             Properties.Settings.Default.Save();

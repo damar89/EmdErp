@@ -600,6 +600,12 @@
     <Compile Include="Fiş\frmVerilenTeklif.Designer.cs">
       <DependentUpon>frmVerilenTeklif.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplashScreen.Designer.cs">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hızlı Satış\frmHizliSatis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1237,6 +1243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fiş\frmVerilenTeklif.resx">
       <DependentUpon>frmVerilenTeklif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplashScreen.resx">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hızlı Satış\frmHizliSatis.resx">
       <DependentUpon>frmHizliSatis.cs</DependentUpon>
