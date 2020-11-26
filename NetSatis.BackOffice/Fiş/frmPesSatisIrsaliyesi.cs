@@ -378,5 +378,14 @@ namespace NetSatis.BackOffice.Fiş
             FaturaHazirla f = new FaturaHazirla();
             f.BilgiFisi(secilen);
         }
+
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                gridFisler.ExportToXlsx(save.FileName + ".xlsx");
+            }
+        }
     }
 }

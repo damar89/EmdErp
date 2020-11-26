@@ -99,6 +99,7 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSeri = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSira = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
@@ -147,7 +148,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem2),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem6),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnFaturayaAktar),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnBilgiFisi)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnBilgiFisi),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem7)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             // 
@@ -352,8 +354,9 @@
             this.barSubItem6,
             this.barButtonItem6,
             this.btnFaturayaAktar,
-            this.btnBilgiFisi});
-            this.barManager1.MaxItemId = 27;
+            this.btnBilgiFisi,
+            this.barButtonItem7});
+            this.barManager1.MaxItemId = 28;
             // 
             // barDockControlTop
             // 
@@ -829,6 +832,13 @@
             this.colSira.Visible = true;
             this.colSira.VisibleIndex = 3;
             // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Caption = "Excel Aktar";
+            this.barButtonItem7.Id = 27;
+            this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
+            // 
             // frmPesSatisIrsaliyesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -931,5 +941,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSeri;
         private DevExpress.XtraGrid.Columns.GridColumn colSira;
         private DevExpress.XtraBars.BarButtonItem btnBilgiFisi;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
     }
 }

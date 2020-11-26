@@ -499,13 +499,13 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exceleAktarToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(154, 28);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(141, 28);
             // 
             // exceleAktarToolStripMenuItem
             // 
             this.exceleAktarToolStripMenuItem.Image = global::NetSatis.BackOffice.Properties.Resources.exporttoxlsx_16x16;
             this.exceleAktarToolStripMenuItem.Name = "exceleAktarToolStripMenuItem";
-            this.exceleAktarToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
+            this.exceleAktarToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
             this.exceleAktarToolStripMenuItem.Text = "Excele Aktar";
             this.exceleAktarToolStripMenuItem.Click += new System.EventHandler(this.exceleAktarToolStripMenuItem_Click);
             // 

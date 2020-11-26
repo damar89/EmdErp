@@ -77,5 +77,10 @@ namespace NetSatis.BackOffice.Kasa_Hareketleri
                 gridKasaHareket.ExportToXlsx(save.FileName + ".xlsx");
             }
         }
+
+        private void frmTarihKasaHareket_Load(object sender, EventArgs e)
+        {
+            calcTutar.Text = Convert.ToString(colTutar.SummaryItem.SummaryValue);
+        }
     }
 }
