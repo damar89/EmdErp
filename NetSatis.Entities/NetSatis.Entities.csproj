@@ -111,6 +111,7 @@
     <Compile Include="Data Access\HizliSatisDAL.cs" />
     <Compile Include="Data Access\HizliSatisGrupDAL.cs" />
     <Compile Include="Data Access\IndirimDal.cs" />
+    <Compile Include="Data Access\IskontoTanimlariDAL.cs" />
     <Compile Include="Data Access\KasaDAL.cs" />
     <Compile Include="Data Access\KasaHareketDAL.cs" />
     <Compile Include="Data Access\KategoriDAL.cs" />
@@ -137,6 +138,7 @@
     <Compile Include="Mapping\AyarMap.cs" />
     <Compile Include="Mapping\eKullaniciBilgileriMap.cs" />
     <Compile Include="Mapping\FirmaSabitMap.cs" />
+    <Compile Include="Mapping\IskontoTanimlariMap.cs" />
     <Compile Include="Mapping\KategoriMap.cs" />
     <Compile Include="Mapping\ProjeMap.cs" />
     <Compile Include="Mapping\RaporTasarimlariMap.cs" />
@@ -193,6 +195,7 @@
     <Compile Include="Tables\HizliSatisGrup.cs" />
     <Compile Include="Tables\Indirim.cs" />
     <Compile Include="Tables\Ayar.cs" />
+    <Compile Include="Tables\IskontoTanimlari.cs" />
     <Compile Include="Tables\Kategori.cs" />
     <Compile Include="Tables\Kod.cs" />
     <Compile Include="Tables\KooperatifEkstreModel.cs" />
@@ -237,6 +240,7 @@
     <Compile Include="Validations\BarkodEtiketValidator.cs" />
     <Compile Include="Validations\BarkodValidator.cs" />
     <Compile Include="Validations\CariValidator.cs" />
+    <Compile Include="Validations\IskontoTanimlariValidator.cs" />
     <Compile Include="Validations\OzelKdoValidator.cs" />
     <Compile Include="Validations\DepoValidator.cs" />
     <Compile Include="Validations\eKullaniciBilgileriValidator.cs" />

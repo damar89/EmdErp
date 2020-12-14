@@ -643,7 +643,7 @@ namespace NetSatis.Entities.Data_Access
 
             //perakende satış irsaliyesi için fatura fiş kodu boş mu kontrolü yapsın
             var psIrsaliyesi = context.Fisler
-                .Where(c => c.CariId == cariId && c.FisTuru == "Perakende Satış İrsaliyesi" && c.CariIrsaliye == "1" && string.IsNullOrEmpty(c.FaturaFisKodu))
+                .Where(c => c.CariId == cariId && c.FisTuru == "Perakende Satış İrsaliyesi" && string.IsNullOrEmpty(c.FaturaFisKodu))
                 .ToList();
             if (psIrsaliyesi.Count > 0)
             {
@@ -688,7 +688,7 @@ namespace NetSatis.Entities.Data_Access
 
             //perakende satış irsaliyesi için fatura fiş kodu boş mu kontrolü yapsın
             var psIrsaliyesi = fisler
-                .Where(c => c.FisTuru == "Perakende Satış İrsaliyesi" && c.CariIrsaliye == "1" && string.IsNullOrEmpty(c.FaturaFisKodu))
+                .Where(c => c.FisTuru == "Perakende Satış İrsaliyesi" && string.IsNullOrEmpty(c.FaturaFisKodu))
                 .ToList();
             if (psIrsaliyesi.Count > 0)
             {

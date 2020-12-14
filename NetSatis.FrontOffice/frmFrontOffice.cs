@@ -1289,14 +1289,22 @@ namespace NetSatis.FrontOffice
 
             //TERAZİ
 
-            if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_Terazi)))
+            try
             {
-                layTerazi.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-                serialPort1.PortName = (Convert.ToString(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_TeraziPort)));
+                if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_Terazi)))
+                {
+                    layTerazi.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+                    serialPort1.PortName = (Convert.ToString(SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_TeraziPort)));
 
-                serialPort1.Open();
+                    serialPort1.Open();
 
 
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Uyarı");
             }
 
 

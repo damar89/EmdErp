@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAnaMenu));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
@@ -189,20 +190,20 @@
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
-            this.managerS = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.managerS = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.navBarItem28 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem29 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem39 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem40 = new DevExpress.XtraNavBar.NavBarItem();
-            this.ımageList1 = new System.Windows.Forms.ImageList();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.treeList1 = new DevExpress.XtraTreeList.TreeList();
             this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.ımageList2 = new System.Windows.Forms.ImageList();
-            this.dragDropEvents1 = new DevExpress.Utils.DragDrop.DragDropEvents();
+            this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.dragDropEvents1 = new DevExpress.Utils.DragDrop.DragDropEvents(this.components);
             this.barStokHareketleri = new DevExpress.XtraBars.BarButtonItem();
             this.barFisveFaturalar = new DevExpress.XtraBars.BarButtonItem();
             this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
@@ -352,7 +353,7 @@
             this.ribbonControl1.ShowCategoryInCaption = false;
             this.ribbonControl1.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl1.Size = new System.Drawing.Size(1312, 141);
+            this.ribbonControl1.Size = new System.Drawing.Size(1312, 128);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
@@ -1466,10 +1467,10 @@
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.barKullaniciAdi);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 705);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 708);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1312, 35);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1312, 32);
             // 
             // xtraTabbedMdiManager1
             // 
@@ -1549,7 +1550,7 @@
             this.treeList1.CustomizationFormBounds = new System.Drawing.Rectangle(797, 413, 266, 240);
             this.treeList1.Dock = System.Windows.Forms.DockStyle.Left;
             this.treeList1.HtmlImages = this.ımageList1;
-            this.treeList1.Location = new System.Drawing.Point(0, 141);
+            this.treeList1.Location = new System.Drawing.Point(0, 128);
             this.treeList1.Name = "treeList1";
             this.treeList1.BeginUnboundLoad();
             this.treeList1.AppendNode(new object[] {
@@ -1746,7 +1747,7 @@
             this.treeList1.OptionsView.ShowTreeLines = DevExpress.Utils.DefaultBoolean.True;
             this.treeList1.OptionsView.ShowVertLines = true;
             this.treeList1.SelectImageList = this.ımageList2;
-            this.treeList1.Size = new System.Drawing.Size(305, 564);
+            this.treeList1.Size = new System.Drawing.Size(305, 580);
             this.treeList1.TabIndex = 15;
             this.treeList1.ViewStyle = DevExpress.XtraTreeList.TreeListViewStyle.TreeView;
             this.treeList1.Click += new System.EventHandler(this.treeList1_Click);

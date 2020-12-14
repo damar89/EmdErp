@@ -49,6 +49,7 @@ namespace NetSatis.Entities.Context
         public DbSet<eKullaniciBilgileri> EKullaniciBilgileri { get; set; }
         public DbSet<Api> Api { get; set; }
         public DbSet<RaporTasarimlari> RaporTasarimlari { get; set; }
+        public DbSet<IskontoTanimlari> IskontoTanimlari { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -83,7 +84,8 @@ namespace NetSatis.Entities.Context
             modelBuilder.Configurations.Add(new OzelKodMap());
             modelBuilder.Configurations.Add(new eKullaniciBilgileriMap());
             modelBuilder.Configurations.Add(new RaporTasarimlariMap());
-            
+            modelBuilder.Configurations.Add(new IskontoTanimlariMap());
+
 
         }
 
