@@ -209,6 +209,12 @@
     <Compile Include="Cari\frmEkstre.Designer.cs">
       <DependentUpon>frmEkstre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cari\XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cari\XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Depo\frmDepo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1048,6 +1054,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cari\frmEkstre.resx">
       <DependentUpon>frmEkstre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cari\XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Depo\frmDepo.resx">
       <DependentUpon>frmDepo.cs</DependentUpon>

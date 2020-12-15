@@ -242,12 +242,12 @@ namespace NetSatis.BackOffice.Stok
             this.Close();
         }
         private void frmStokIslem_Load(object sender, EventArgs e) {
-            if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi))) {
-                layBagkur.Visibility =
-                    layBorsa.Visibility =
-                    layZirai.Visibility =
-                    layMera.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-            }
+            //if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi))) {
+            //    layBagkur.Visibility =
+            //        layBorsa.Visibility =
+            //        layZirai.Visibility =
+            //        layMera.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
+            //}
             if (guncelle == true) {
                 togDurum.EditValue = _entity.Durumu;
             } else {
@@ -455,9 +455,7 @@ namespace NetSatis.BackOffice.Stok
             if (e.Alt == true && e.KeyCode == Keys.K) {
                 btnKaydet.PerformClick();
             }
-            if (e.KeyCode == Keys.F3) {
-                btnBarkodEkle.PerformClick();
-            }
+           
             if (e.Alt == true && e.KeyCode == Keys.L) {
                 btnKaydetYeni.PerformClick();
             }
@@ -523,10 +521,10 @@ namespace NetSatis.BackOffice.Stok
             btnOzelKod.DataBindings.Clear();
             txtGaranti.DataBindings.Clear();
             calcAlisKdv.DataBindings.Clear();
-            calcBorsa.DataBindings.Clear();
-            calcBagkur.DataBindings.Clear();
-            calcZirai.DataBindings.Clear();
-            calcMera.DataBindings.Clear();
+            //calcBorsa.DataBindings.Clear();
+            //calcBagkur.DataBindings.Clear();
+            //calcZirai.DataBindings.Clear();
+            //calcMera.DataBindings.Clear();
             calcSatisKdv.DataBindings.Clear();
             calcDevirGirisi.DataBindings.Clear();
             peResim.DataBindings.Clear();
@@ -565,18 +563,18 @@ namespace NetSatis.BackOffice.Stok
                 DataSourceUpdateMode.OnPropertyChanged);
             calcAlisKdv.DataBindings.Add("Text", _entity, "AlisKdv", true, DataSourceUpdateMode.OnPropertyChanged, 0);
             calcSatisKdv.DataBindings.Add("Text", _entity, "SatisKdv", false, DataSourceUpdateMode.OnPropertyChanged, 0);
-            calcBagkur.DataBindings.Add("Text", _entity, "Bagkur", true, DataSourceUpdateMode.OnPropertyChanged, 0);
-            calcBagkur.DataBindings[0].FormattingEnabled = true;
-            calcBagkur.DataBindings[0].FormatString = "N2";
-            calcBorsa.DataBindings.Add("Text", _entity, "Borsa", true, DataSourceUpdateMode.OnPropertyChanged, 0);
-            calcBorsa.DataBindings[0].FormattingEnabled = true;
-            calcBorsa.DataBindings[0].FormatString = "N2";
-            calcZirai.DataBindings.Add("Text", _entity, "Zirai", true, DataSourceUpdateMode.OnPropertyChanged, 0);
-            calcZirai.DataBindings[0].FormattingEnabled = true;
-            calcZirai.DataBindings[0].FormatString = "N2";
-            calcMera.DataBindings.Add("Text", _entity, "Mera", true, DataSourceUpdateMode.OnPropertyChanged, 0);
-            calcMera.DataBindings[0].FormattingEnabled = true;
-            calcMera.DataBindings[0].FormatString = "N2";
+            //calcBagkur.DataBindings.Add("Text", _entity, "Bagkur", true, DataSourceUpdateMode.OnPropertyChanged, 0);
+            //calcBagkur.DataBindings[0].FormattingEnabled = true;
+            //calcBagkur.DataBindings[0].FormatString = "N2";
+            //calcBorsa.DataBindings.Add("Text", _entity, "Borsa", true, DataSourceUpdateMode.OnPropertyChanged, 0);
+            //calcBorsa.DataBindings[0].FormattingEnabled = true;
+            //calcBorsa.DataBindings[0].FormatString = "N2";
+            //calcZirai.DataBindings.Add("Text", _entity, "Zirai", true, DataSourceUpdateMode.OnPropertyChanged, 0);
+            //calcZirai.DataBindings[0].FormattingEnabled = true;
+            //calcZirai.DataBindings[0].FormatString = "N2";
+            //calcMera.DataBindings.Add("Text", _entity, "Mera", true, DataSourceUpdateMode.OnPropertyChanged, 0);
+            //calcMera.DataBindings[0].FormattingEnabled = true;
+            //calcMera.DataBindings[0].FormatString = "N2";
             calcAlisFiyat1.DataBindings.Add("Text", _entity, "AlisFiyati1", false, DataSourceUpdateMode.OnPropertyChanged);
             calcAlisFiyat1.DataBindings[0].FormattingEnabled = true;
             calcAlisFiyat1.DataBindings[0].FormatString = "C2";
