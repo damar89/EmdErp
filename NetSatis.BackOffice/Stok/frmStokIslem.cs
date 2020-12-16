@@ -506,7 +506,7 @@ namespace NetSatis.BackOffice.Stok
             togWeb.DataBindings.Clear();
             txtKod.DataBindings.Clear();
             txtStokAdi.DataBindings.Clear();
-            cmbBarkodTuru.DataBindings.Clear();
+            //cmbBarkodTuru.DataBindings.Clear();
             txtBirim.DataBindings.Clear();
             btnKategori.DataBindings.Clear();
             //pictureBox1.DataBindings.Clear();
@@ -545,8 +545,8 @@ namespace NetSatis.BackOffice.Stok
             txtKod.DataBindings.Add("Text", _entity, "StokKodu", false, DataSourceUpdateMode.OnPropertyChanged);
             txtStokAdi.DataBindings.Add("Text", _entity, "StokAdi", false, DataSourceUpdateMode.OnPropertyChanged);
             txtAciklama.DataBindings.Add("Text", _entity, "Aciklama", false, DataSourceUpdateMode.OnPropertyChanged);
-            cmbBarkodTuru.DataBindings.Add("Text", _entity, "BarkodTuru", false,
-                DataSourceUpdateMode.OnPropertyChanged);
+            //cmbBarkodTuru.DataBindings.Add("Text", _entity, "BarkodTuru", false,
+                //DataSourceUpdateMode.OnPropertyChanged);
             //pictureBox1.DataBindings.Add("Image", _entity, "ResimUrl", false, DataSourceUpdateMode.OnPropertyChanged);
             txtBirim.DataBindings.Add("Text", _entity, "Birim", false, DataSourceUpdateMode.OnPropertyChanged);
             btnKategori.DataBindings.Add("Text", _entity, "Kategori", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -830,11 +830,11 @@ namespace NetSatis.BackOffice.Stok
                 this.ActiveControl = btnKapat;
             }
         }
-        private void btnKod_KeyDown(object sender, KeyEventArgs e) {
-            if (e.KeyCode == Keys.Enter) {
-                this.ActiveControl = cmbBarkodTuru;
-            }
-        }
+        //private void btnKod_KeyDown(object sender, KeyEventArgs e) {
+        //    if (e.KeyCode == Keys.Enter) {
+        //        this.ActiveControl = cmbBarkodTuru;
+        //    }
+        //}
         private void cmbBarkodTuru_KeyDown(object sender, KeyEventArgs e) {
             if (e.KeyCode == Keys.Enter) {
                 this.ActiveControl = txtStokAdi;
@@ -933,7 +933,7 @@ namespace NetSatis.BackOffice.Stok
         }
 
         private void btnBarkodEkle_Click(object sender, EventArgs e) {
-            tabPane1.SelectedPage = tabNavigationPage2;
+            //tabPane1.SelectedPage = tabNavigationPage2;
             gridContBarkod.Focus();
             gridContBarkod.Select();
             gridBarkod.Focus();

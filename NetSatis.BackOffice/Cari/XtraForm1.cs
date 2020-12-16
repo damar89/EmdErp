@@ -17,5 +17,10 @@ namespace NetSatis.BackOffice.Cari
         {
             InitializeComponent();
         }
+
+        private void XtraForm1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

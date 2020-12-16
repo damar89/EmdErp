@@ -465,6 +465,11 @@ namespace NetSatis.BackOffice.Cari
             }
         }
 
+        private void tabNavigationPage1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         //private void txtCariAdi_TextChanged(object sender, EventArgs e)
         //{
         //    titleModu(txtCariAdi.Text);
