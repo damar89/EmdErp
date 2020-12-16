@@ -85,6 +85,7 @@
             this.colAktifTutar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSeri = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSira = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFaturaFisKodu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.btnYazdir = new DevExpress.XtraBars.BarButtonItem();
             this.btnDetayliExtre = new DevExpress.XtraBars.BarButtonItem();
@@ -99,7 +100,6 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.lblBaslik = new DevExpress.XtraEditors.LabelControl();
-            this.colFaturaFisKodu = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
             this.splitContainerControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -134,7 +134,7 @@
             this.colDurum.Name = "colDurum";
             this.colDurum.OptionsColumn.AllowEdit = false;
             this.colDurum.Visible = true;
-            this.colDurum.VisibleIndex = 12;
+            this.colDurum.VisibleIndex = 10;
             this.colDurum.Width = 53;
             // 
             // splitContainerControl2
@@ -595,8 +595,6 @@
             this.colIskontoOrani1.FieldName = "IskontoOrani1";
             this.colIskontoOrani1.Name = "colIskontoOrani1";
             this.colIskontoOrani1.OptionsColumn.AllowEdit = false;
-            this.colIskontoOrani1.Visible = true;
-            this.colIskontoOrani1.VisibleIndex = 7;
             this.colIskontoOrani1.Width = 54;
             // 
             // colIskontoOrani2
@@ -621,8 +619,6 @@
             this.colIskontoTutari1.FieldName = "IskontoTutari1";
             this.colIskontoTutari1.Name = "colIskontoTutari1";
             this.colIskontoTutari1.OptionsColumn.AllowEdit = false;
-            this.colIskontoTutari1.Visible = true;
-            this.colIskontoTutari1.VisibleIndex = 8;
             this.colIskontoTutari1.Width = 54;
             // 
             // colIskontoTutari2
@@ -648,7 +644,7 @@
             this.colToplamTutar.Name = "colToplamTutar";
             this.colToplamTutar.OptionsColumn.AllowEdit = false;
             this.colToplamTutar.Visible = true;
-            this.colToplamTutar.VisibleIndex = 9;
+            this.colToplamTutar.VisibleIndex = 7;
             this.colToplamTutar.Width = 54;
             // 
             // colAciklama
@@ -670,7 +666,7 @@
             this.colOdenen.Name = "colOdenen";
             this.colOdenen.OptionsColumn.AllowEdit = false;
             this.colOdenen.Visible = true;
-            this.colOdenen.VisibleIndex = 10;
+            this.colOdenen.VisibleIndex = 8;
             this.colOdenen.Width = 54;
             // 
             // colKalanTutar
@@ -682,7 +678,7 @@
             this.colKalanTutar.Name = "colKalanTutar";
             this.colKalanTutar.OptionsColumn.AllowEdit = false;
             this.colKalanTutar.Visible = true;
-            this.colKalanTutar.VisibleIndex = 11;
+            this.colKalanTutar.VisibleIndex = 9;
             this.colKalanTutar.Width = 60;
             // 
             // colAktifTutar
@@ -694,7 +690,7 @@
             this.colAktifTutar.Name = "colAktifTutar";
             this.colAktifTutar.OptionsColumn.AllowEdit = false;
             this.colAktifTutar.Visible = true;
-            this.colAktifTutar.VisibleIndex = 13;
+            this.colAktifTutar.VisibleIndex = 11;
             this.colAktifTutar.Width = 60;
             // 
             // colSeri
@@ -716,6 +712,14 @@
             this.colSira.Visible = true;
             this.colSira.VisibleIndex = 2;
             this.colSira.Width = 76;
+            // 
+            // colFaturaFisKodu
+            // 
+            this.colFaturaFisKodu.Caption = "FaturaKodu";
+            this.colFaturaFisKodu.FieldName = "FaturaFisKodu";
+            this.colFaturaFisKodu.Name = "colFaturaFisKodu";
+            this.colFaturaFisKodu.Visible = true;
+            this.colFaturaFisKodu.VisibleIndex = 12;
             // 
             // popupMenu1
             // 
@@ -851,14 +855,6 @@
             this.lblBaslik.Size = new System.Drawing.Size(1001, 35);
             this.lblBaslik.TabIndex = 5;
             this.lblBaslik.Text = "Cari Hareketleri";
-            // 
-            // colFaturaFisKodu
-            // 
-            this.colFaturaFisKodu.Caption = "FaturaKodu";
-            this.colFaturaFisKodu.FieldName = "FaturaFisKodu";
-            this.colFaturaFisKodu.Name = "colFaturaFisKodu";
-            this.colFaturaFisKodu.Visible = true;
-            this.colFaturaFisKodu.VisibleIndex = 14;
             // 
             // frmCariHareket
             // 

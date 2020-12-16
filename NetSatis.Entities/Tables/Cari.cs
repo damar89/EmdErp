@@ -8,6 +8,7 @@ namespace NetSatis.Entities.Tables
     {
         public int Id { get; set; }
         public bool Durum { get; set; }
+        public bool Efatura { get; set; }
         public string CariTuru { get; set; }
         public string CariSinif { get; set; }
         public string CariKodu { get; set; }

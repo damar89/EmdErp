@@ -48,6 +48,7 @@ namespace NetSatis.Entities.Mapping
             this.ToTable("Cariler");
             this.Property(p => p.Id).HasColumnName("Id");
             this.Property(p => p.Durum).HasColumnName("Durum");
+            this.Property(p => p.Efatura).HasColumnName("Efatura");
             this.Property(p => p.CariTuru).HasColumnName("CariTuru");
             this.Property(p => p.CariSinif).HasColumnName("CariSinif");
             this.Property(p => p.CariKodu).HasColumnName("CariKodu");

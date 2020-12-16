@@ -91,12 +91,14 @@
     <Reference Include="System">
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core">
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Printing">
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq">
       <Private>True</Private>
@@ -116,6 +118,7 @@
     <Reference Include="System.Xml">
       <Private>True</Private>
     </Reference>
+    <Reference Include="UIAutomationClient" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -605,6 +608,12 @@
     </Compile>
     <Compile Include="Fiş\frmVerilenTeklif.Designer.cs">
       <DependentUpon>frmVerilenTeklif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fiş\XtraForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiş\XtraForm2.Designer.cs">
+      <DependentUpon>XtraForm2.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSplashScreen.cs">
       <SubType>Form</SubType>
@@ -1252,6 +1261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fiş\frmVerilenTeklif.resx">
       <DependentUpon>frmVerilenTeklif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fiş\XtraForm2.resx">
+      <DependentUpon>XtraForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
