@@ -212,12 +212,6 @@
     <Compile Include="Cari\frmEkstre.Designer.cs">
       <DependentUpon>frmEkstre.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cari\XtraForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cari\XtraForm1.Designer.cs">
-      <DependentUpon>XtraForm1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Depo\frmDepo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -608,12 +602,6 @@
     </Compile>
     <Compile Include="Fiş\frmVerilenTeklif.Designer.cs">
       <DependentUpon>frmVerilenTeklif.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Fiş\XtraForm2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Fiş\XtraForm2.Designer.cs">
-      <DependentUpon>XtraForm2.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSplashScreen.cs">
       <SubType>Form</SubType>
@@ -1064,9 +1052,6 @@
     <EmbeddedResource Include="Cari\frmEkstre.resx">
       <DependentUpon>frmEkstre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cari\XtraForm1.resx">
-      <DependentUpon>XtraForm1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Depo\frmDepo.resx">
       <DependentUpon>frmDepo.cs</DependentUpon>
     </EmbeddedResource>
@@ -1261,9 +1246,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fiş\frmVerilenTeklif.resx">
       <DependentUpon>frmVerilenTeklif.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Fiş\XtraForm2.resx">
-      <DependentUpon>XtraForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
