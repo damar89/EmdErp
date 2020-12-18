@@ -133,7 +133,7 @@ namespace NetSatis.BackOffice.Fiş
                     txtCariKodu.Text = _fisentity.Cari.CariKodu;
                     txtFaturaUnvani.Text = _fisentity.Cari.FaturaUnvani;
                     entityBakiye = this.cariDal.cariBakiyesi(context, Convert.ToInt32(_fisentity.CariId));
-               
+
                 }
                 else
                 {
@@ -260,7 +260,7 @@ namespace NetSatis.BackOffice.Fiş
 
                 cmbProje.Properties.Items.AddRange(projeDal.GetAll(context).Select(x => x.ProjeAdi).ToList());
                 cmbOzelKod.Properties.Items.AddRange(ozelkodDal.GetAll(context).Select(x => x.OzelKodAdi).ToList());
-                cmbPlasiyer.Properties.Items.AddRange(personeDAl.GetAll(context).Select(x => x.PersonelAdi).ToList();
+                cmbPlasiyer.Properties.Items.AddRange(personeDAl.GetAll(context).Select(x => x.PersonelAdi).ToList());
 
             }
             catch (Exception ex)
@@ -285,9 +285,9 @@ namespace NetSatis.BackOffice.Fiş
                 buton.Click += OdemeEkle_Click;
                 flowOdemeTurleri.Controls.Add(buton);
             }
-           
+
         }
-       
+
         private async void OdemeEkle_Click(object sender, EventArgs e)
         {
             var buton = (sender as SimpleButton);
@@ -390,14 +390,13 @@ namespace NetSatis.BackOffice.Fiş
                     bilgiFişiYazdırToolStripMenuItem.Visible = false;
                     teklifYazdırToolStripMenuItem.Visible = false;
                     irsaliyeYazdırToolStripMenuItem.Visible = false;
-                  
+
                     txtBelgeNo.Visible = false;
                     cmbOzelKod.Visible = false;
-                    lblSatir.Visible = true;
+                
                     lblSatirSayisi.Visible = true;
                     ayarlar.OdemeEkrani = true;
-                    lblBaslik.Appearance.ImageIndex = 0;
-                    lblBaslik.Text = "Alış Faturası";
+                 
                     navPersonelIslem.Dispose();
                     break;
                 case "Masraf Faturası":
@@ -410,10 +409,10 @@ namespace NetSatis.BackOffice.Fiş
                     bilgiFişiYazdırToolStripMenuItem.Visible = false;
                     teklifYazdırToolStripMenuItem.Visible = false;
                     irsaliyeYazdırToolStripMenuItem.Visible = false;
-                    lblSatir.Visible = true;
+                    
                     lblSatirSayisi.Visible = true;
                     ayarlar.OdemeEkrani = true;
-                
+
                     navPersonelIslem.Dispose();
                     break;
                 case "Hizmet Faturası":
@@ -426,11 +425,9 @@ namespace NetSatis.BackOffice.Fiş
                     teklifYazdırToolStripMenuItem.Visible = false;
                     irsaliyeYazdırToolStripMenuItem.Visible = false;
 
-
-                    lblSatir.Visible = true;
                     lblSatirSayisi.Visible = true;
                     ayarlar.OdemeEkrani = true;
-               
+
                     navPersonelIslem.Dispose();
                     break;
                 case "Perakende Satış Faturası":
@@ -443,11 +440,10 @@ namespace NetSatis.BackOffice.Fiş
                     irsaliyeYazdırToolStripMenuItem.Visible = false;
                     btnYeniFtrDizany.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
 
-                    lblSatir.Visible = true;
                     lblSatirSayisi.Visible = true;
                     ayarlar.SatisEkrani = true;
                     ayarlar.OdemeEkrani = true;
-                
+
                     navPersonelIslem.Dispose();
                     break;
                 case "Pos Fatura":
@@ -460,7 +456,6 @@ namespace NetSatis.BackOffice.Fiş
                     irsaliyeYazdırToolStripMenuItem.Visible = false;
                     btnYeniFtrDizany.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
 
-                    lblSatir.Visible = true;
                     lblSatirSayisi.Visible = true;
                     ayarlar.SatisEkrani = true;
                     ayarlar.OdemeEkrani = true;
@@ -525,16 +520,16 @@ namespace NetSatis.BackOffice.Fiş
                     irsaliyeYazdırToolStripMenuItem.Visible = false;
                     ayarlar.SatisEkrani = true;
                     ayarlar.OdemeEkrani = true;
-                   
+
                     navPersonelIslem.Dispose();
                     break;
                 case "Alış İade Faturası":
                     ayarlar.StokHareketi = "Stok Çıkış";
                     ayarlar.KasaHareketi = "Kasa Giriş";
                     ayarlar.FisTurleri = "Alış İade Faturası";
-                    lblSatir.Visible = true;
+               
 
-            
+
                     cmbOzelKod.Visible = false;
                     lblSatirSayisi.Visible = true;
                     siparişYazdırToolStripMenuItem.Visible = false;
@@ -545,14 +540,14 @@ namespace NetSatis.BackOffice.Fiş
                     btnYeniFtrDizany.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
                     ayarlar.SatisEkrani = true;
                     ayarlar.OdemeEkrani = true;
-                 
+
                     navPersonelIslem.Dispose();
                     break;
                 case "Satış İade Faturası":
                     ayarlar.StokHareketi = "Stok Giriş";
                     ayarlar.KasaHareketi = "Kasa Çıkış";
                     ayarlar.FisTurleri = "Satış İade Faturası";
-                    lblSatir.Visible = true;
+                 
                     lblSatirSayisi.Visible = true;
 
                     siparişYazdırToolStripMenuItem.Visible = false;
@@ -561,18 +556,18 @@ namespace NetSatis.BackOffice.Fiş
                     irsaliyeYazdırToolStripMenuItem.Visible = false;
                     ayarlar.SatisEkrani = true;
                     ayarlar.OdemeEkrani = true;
-                  
+
                     navPersonelIslem.Dispose();
                     break;
                 case "Satış İrsaliyesi":
                     ayarlar.SatisEkrani = true;
                     ayarlar.OdemeEkrani = false;
                     ayarlar.FisTurleri = "Satış İrsaliyesi";
-                    lblSatir.Visible = true;
+                 
                     lblSatirSayisi.Visible = true;
-         
+
                     txtBelgeNo.Visible = false;
-                   
+
                     cmbOzelKod.Visible = false;
                     calcIndirimOrani.ReadOnly = true;
                     calcIndirimTutari.ReadOnly = true;
@@ -583,19 +578,18 @@ namespace NetSatis.BackOffice.Fiş
                     bilgiFişiYazdırToolStripMenuItem.Visible = false;
                     teklifYazdırToolStripMenuItem.Visible = false;
                     btnAlisFaturalandir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-                    lblBaslik.Text = "Satış İrsaliyesi";
+
                     navPersonelIslem.Dispose();
                     break;
                 case "Alış İrsaliyesi":
-                    lblSatir.Visible = true;
+
                     lblSatirSayisi.Visible = true;
                     ayarlar.FisTurleri = "Alış İrsaliyesi";
                     calcIndirimOrani.ReadOnly = true;
                     calcIndirimTutari.ReadOnly = true;
                     btnFaturalandir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-            
+
                     txtBelgeNo.Visible = false;
-                    ozelKod.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
                     cmbOzelKod.Visible = false;
                     faturaYazdırToolStripMenuItem.Visible = false;
                     proformaFaturaYazdırToolStripMenuItem.Visible = false;
@@ -604,11 +598,9 @@ namespace NetSatis.BackOffice.Fiş
                     teklifYazdırToolStripMenuItem.Visible = false;
                     ayarlar.SatisEkrani = true;
                     ayarlar.OdemeEkrani = false;
-                    lblBaslik.Text = "Alış İrsaliyesi";
                     navPersonelIslem.Dispose();
                     break;
                 case "Alınan Sipariş Fişi":
-                    lblSatir.Visible = true;
                     lblSatirSayisi.Visible = true;
                     btnBarkodluFatura.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
                     ayarlar.FisTurleri = "Alınan Sipariş Fişi";
@@ -616,9 +608,7 @@ namespace NetSatis.BackOffice.Fiş
                     ayarlar.OdemeEkrani = false;
                     calcIndirimOrani.ReadOnly = true;
 
-                    calcIndirimTutari.ReadOnly = true;
-                    lblBaslik.Text = "Alınan Sipariş Fişi";
-                    faturaYazdırToolStripMenuItem.Visible = false;
+                    calcIndirimTutari.ReadOnly = true; faturaYazdırToolStripMenuItem.Visible = false;
                     proformaFaturaYazdırToolStripMenuItem.Visible = false;
                     bilgiFişiYazdırToolStripMenuItem.Visible = false;
                     teklifYazdırToolStripMenuItem.Visible = false;
@@ -626,7 +616,6 @@ namespace NetSatis.BackOffice.Fiş
                     navPersonelIslem.Dispose();
                     break;
                 case "Verilen Sipariş Fişi":
-                    lblSatir.Visible = true;
                     lblSatirSayisi.Visible = true;
                     ayarlar.FisTurleri = "Verilen Sipariş Fişi";
                     calcIndirimOrani.ReadOnly = true;
@@ -640,11 +629,11 @@ namespace NetSatis.BackOffice.Fiş
                     irsaliyeYazdırToolStripMenuItem.Visible = false;
                     btnAlisFaturalandir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
                     ayarlar.OdemeEkrani = false;
-                    lblBaslik.Text = "Verilen Sipariş Fişi";
+                  
                     navPersonelIslem.Dispose();
                     break;
                 case "Alınan Teklif Fişi":
-                    lblSatir.Visible = true;
+             
                     lblSatirSayisi.Visible = true;
                     calcIndirimOrani.ReadOnly = true;
                     calcIndirimTutari.ReadOnly = true;
@@ -658,11 +647,11 @@ namespace NetSatis.BackOffice.Fiş
                     siparişYazdırToolStripMenuItem.Visible = false;
                     bilgiFişiYazdırToolStripMenuItem.Visible = false;
                     irsaliyeYazdırToolStripMenuItem.Visible = false;
-                    lblBaslik.Text = "Alınan Teklif Fişi";
+                
                     navPersonelIslem.Dispose();
                     break;
                 case "Verilen Teklif Fişi":
-                    lblSatir.Visible = true;
+              
                     calcIndirimOrani.ReadOnly = true;
                     calcIndirimTutari.ReadOnly = true;
                     lblSatirSayisi.Visible = true;
@@ -677,11 +666,11 @@ namespace NetSatis.BackOffice.Fiş
                     bilgiFişiYazdırToolStripMenuItem.Visible = false;
                     irsaliyeYazdırToolStripMenuItem.Visible = false;
                     btnAlisFaturalandir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-                    lblBaslik.Text = "Verilen Teklif Fişi";
+
                     navPersonelIslem.Dispose();
                     break;
                 case "Sayım Eksiği Fişi":
-                    lblSatir.Visible = true;
+
                     lblSatirSayisi.Visible = true;
                     ayarlar.StokHareketi = "Stok Giriş";
                     ayarlar.FisTurleri = "Sayım Eksiği Fişi";
@@ -699,16 +688,14 @@ namespace NetSatis.BackOffice.Fiş
                     ayarlar.OdemeEkrani = false;
                     toggleKDVDahil.Visible = false;
                     ayarlar.SatisEkrani = true;
-                    navPlasiyerBilgi.Dispose();
-                    lblBaslik.Text = "Sayım Eksiği Fişi";
-                    lblBaslik.Appearance.ImageIndex = 5;
+
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
                     txtFaturaUnvani.Visible = false;
-                    lblCariAd.Visible = false;
-                    lblCariKod.Visible = false;
-                    btnCariSec.Visible = false;
+                    txtCariAdi.Visible = false;
+                    txtCariKodu.Visible = false;
+
 
 
                     break;
@@ -731,9 +718,9 @@ namespace NetSatis.BackOffice.Fiş
                     ayarlar.OdemeEkrani = false;
                     toggleKDVDahil.Visible = false;
                     ayarlar.SatisEkrani = true;
-                   
+
                     //
-                   
+
                     txtCariAdi.Visible = false;
                     txtCariKodu.Visible = false;
 
@@ -769,7 +756,7 @@ namespace NetSatis.BackOffice.Fiş
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
-                    //txtFaturaUnvani.Visible = false;
+                    txtFaturaUnvani.Visible = false;
                     txtCariAdi.Visible = false;
                     txtCariKodu.Visible = false;
 
@@ -791,7 +778,7 @@ namespace NetSatis.BackOffice.Fiş
                     irsaliyeYazdırToolStripMenuItem.Visible = false;
                     ayarlar.OdemeEkrani = false;
                     ayarlar.SatisEkrani = true;
-                
+
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
@@ -834,7 +821,7 @@ namespace NetSatis.BackOffice.Fiş
                     calcIndirimToplami.Visible = false;
                     calcIndirimTutari.Visible = false;
 
-             
+
                     break;
                 case "Ödeme Fişi":
                     ayarlar.KasaHareketi = "Kasa Çıkış";
@@ -848,7 +835,7 @@ namespace NetSatis.BackOffice.Fiş
                     navPersonelIslem.Dispose();
                     toggleKDVDahil.Visible = false;
                     navMasraf.SelectedPage = navOdemeEkrani;
-                 
+
 
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
@@ -860,8 +847,9 @@ namespace NetSatis.BackOffice.Fiş
                     ayarlar.OdemeEkrani = true;
                     ayarlar.SatisEkrani = false;
                     toggleCariDevir.Visible = true;
-
+                    lblDevirTipi.Visible = true;
                     toggleKDVDahil.Visible = false;
+                    lblKdvDahil.Visible = false;
                     faturaYazdırToolStripMenuItem.Visible = false;
                     proformaFaturaYazdırToolStripMenuItem.Visible = false;
                     siparişYazdırToolStripMenuItem.Visible = false;
@@ -872,7 +860,7 @@ namespace NetSatis.BackOffice.Fiş
                     navSatisEkrani.Dispose();
                     navPersonelIslem.Dispose();
                     navMasraf.SelectedPage = navOdemeEkrani;
-                    lblBaslik.Text = "Cari Devir Fişi";
+
 
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
@@ -893,9 +881,9 @@ namespace NetSatis.BackOffice.Fiş
                     teklifYazdırToolStripMenuItem.Visible = false;
                     irsaliyeYazdırToolStripMenuItem.Visible = false;
 
-                
+
                     navMasraf.SelectedPage = navPersonelIslem;
-           
+
 
                     calcIndirimOrani.Visible = false;
                     calcIndirimToplami.Visible = false;
@@ -1179,7 +1167,7 @@ namespace NetSatis.BackOffice.Fiş
                 txtCariKodu.Text = _entity.CariKodu;
                 txtCariAdi.Text = _entity.CariAdi;
                 txtFaturaUnvani.Text = _entity.FaturaUnvani;
-           
+
                 _fisentity.FaturaUnvani = txtFaturaUnvani.Text;
                 _fisentity.CepTelefonu = _entity.CepTelefonu;
                 _fisentity.CariAdi = _entity.CariAdi;
@@ -1201,10 +1189,10 @@ namespace NetSatis.BackOffice.Fiş
         {
             _cariId = null;
             _fisentity.CariId = null;
-            lblCariKod.Text = null;
-            lblCariAd.Text = null;
+            txtCariKodu.Text = null;
+            txtCariAdi.Text = null;
             txtFaturaUnvani.Text = null;
-         
+
         }
         private async void calcIndirimOrani_Validated(object sender, EventArgs e)
         {
@@ -1403,7 +1391,7 @@ namespace NetSatis.BackOffice.Fiş
                     hata++;
                 }
                 if (calcOdenemesiGereken.Value != 0 && ayarlar.OdemeEkrani == true &&
-                    string.IsNullOrEmpty(lblCariKod.Text) && txtFisTuru.Text != "Hakediş Fişi" && txtFisTuru.Text != "Masraf Fişi")
+                    string.IsNullOrEmpty(txtCariKodu.Text) && txtFisTuru.Text != "Hakediş Fişi" && txtFisTuru.Text != "Masraf Fişi")
                 {
                     message +=
                         "- Ödenmesi Gereken Tutar Ödenmemiş Görünüyor.Açık hesap satış yapabilmek için lütfen cari seçiniz." +
@@ -1940,7 +1928,7 @@ namespace NetSatis.BackOffice.Fiş
                 hata++;
             }
             if (calcOdenemesiGereken.Value != 0 && ayarlar.OdemeEkrani == true &&
-                string.IsNullOrEmpty(lblCariKod.Text) && txtFisTuru.Text != "Hakediş Fişi" && txtFisTuru.Text != "Masraf Fişi")
+                string.IsNullOrEmpty(txtCariKodu.Text) && txtFisTuru.Text != "Hakediş Fişi" && txtFisTuru.Text != "Masraf Fişi")
             {
                 message +=
                     "- Ödenmesi Gereken Tutar Ödenmemiş Görünüyor.Açık hesap satış yapabilmek için lütfen cari seçiniz." +
