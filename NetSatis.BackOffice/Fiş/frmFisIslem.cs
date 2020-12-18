@@ -2340,11 +2340,11 @@ namespace NetSatis.BackOffice.Fiş
         }
         private async void repoMiktar_EditValueChanged(object sender, EventArgs e)
         {
-            await HepsiniHesapla();
+
         }
         private async void repoIskonto_EditValueChanged(object sender, EventArgs e)
         {
-            await HepsiniHesapla();
+
         }
         private async void calcIndirimOrani_EditValueChanged(object sender, EventArgs e)
         {
