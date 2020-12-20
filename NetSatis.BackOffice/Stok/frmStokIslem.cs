@@ -140,7 +140,7 @@ namespace NetSatis.BackOffice.Stok
 
         private void btnKaydet_Click(object sender, EventArgs e) {
             MakeItProperCase();
-
+            kodOlustur.KodArttirma();
             var firstIndex = -1;
 
             if (btnKategori.Text != "") {
@@ -225,8 +225,9 @@ namespace NetSatis.BackOffice.Stok
                     }
                     context.SaveChanges();
                 }
-                kodOlustur.KodArttirma();
+               
                 stokDal.Save(context);
+               
                 calcDevirGirisi.Text = "";
                 lblMiktar.Text = "";
                 if (!kaydetYeni) {

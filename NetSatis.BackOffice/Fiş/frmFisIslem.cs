@@ -235,11 +235,11 @@ namespace NetSatis.BackOffice.Fiş
                 FisAyar();
                 HepsiniHesapla().GetAwaiter();
 
-                if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi)))
-                {
-                    //lblmuhtahsil.Visible = true;
-                    //toggleMuhtasilmi.Visible = true;
-                }
+                //if (Convert.ToBoolean(SettingsTool.AyarOku(SettingsTool.Ayarlar.Kooperatif_Kooperatifmi)))
+                //{
+                //    //lblmuhtahsil.Visible = true;
+                //    //toggleMuhtasilmi.Visible = true;
+                //}
                 if (_fisentity.FisTuru == "Toptan Satış Faturası" || _fisentity.FisTuru == "Stok Devir Fişi" || _fisentity.FisTuru == "Sayım Fazlası Fişi" || _fisentity.FisTuru == "Sayım Eksiği Fişi" || _fisentity.FisTuru == "Alış Faturası")
                 {
                     gridContStokHareket.ForceInitialize();
@@ -975,14 +975,6 @@ namespace NetSatis.BackOffice.Fiş
                 stokHareket.SatisFiyati = entity.SatisFiyati1;
 
 
-            //stokHareket.Mera = txtFisTuru.Text == "Toptan Satış Faturası" && entity.Mera != null ? entity.Mera : 0;
-            //stokHareket.Borsa = txtFisTuru.Text == "Toptan Satış Faturası" && entity.Borsa != null ? entity.Borsa : 0;
-            //stokHareket.Bagkur = txtFisTuru.Text == "Toptan Satış Faturası" && entity.Bagkur != null ? entity.Bagkur : 0;
-            //stokHareket.Zirai = txtFisTuru.Text == "Toptan Satış Faturası" && entity.Zirai != null ? entity.Zirai : 0;
-            //stokHareket.Mera = txtFisTuru.Text == "Alış Faturası" && entity.Mera != null ? entity.Mera : 0;
-            //stokHareket.Borsa = txtFisTuru.Text == "Alış Faturası" && entity.Borsa != null ? entity.Borsa : 0;
-            //stokHareket.Bagkur = txtFisTuru.Text == "Alış Faturası" && entity.Bagkur != null ? entity.Bagkur : 0;
-            //stokHareket.Zirai = txtFisTuru.Text == "Alış Faturası" && entity.Zirai != null ? entity.Zirai : 0;
 
             if (gridStokHareket.GetFocusedRowCellValue("Miktar") != null)
                 stokHareket.Miktar = Convert.ToDecimal(gridStokHareket.GetFocusedRowCellValue("Miktar"));// calcMiktar.Value;
@@ -990,7 +982,7 @@ namespace NetSatis.BackOffice.Fiş
                 stokHareket.Miktar = 1;
 
             stokHareket.Tarih = Convert.ToDateTime(cmbTarih.DateTime);
-            //stokHareket.Kdv = toggleMuhtasilmi.IsOn ? 0 : entity.SatisKdv;
+            stokHareket.Kdv =entity.SatisKdv;
             return stokHareket;
         }
 
@@ -1197,7 +1189,6 @@ namespace NetSatis.BackOffice.Fiş
         private async void calcIndirimOrani_Validated(object sender, EventArgs e)
         {
 
-            await HepsiniHesapla();
         }
         private void repoDepo_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
@@ -2340,11 +2331,11 @@ namespace NetSatis.BackOffice.Fiş
         }
         private async void repoMiktar_EditValueChanged(object sender, EventArgs e)
         {
-
+            await HepsiniHesapla();
         }
         private async void repoIskonto_EditValueChanged(object sender, EventArgs e)
         {
-
+            await HepsiniHesapla();
         }
         private async void calcIndirimOrani_EditValueChanged(object sender, EventArgs e)
         {
@@ -3362,6 +3353,90 @@ namespace NetSatis.BackOffice.Fiş
         {
             txtSeri.Text = txtSeri.Text.ToUpper();
             txtSeri.SelectionStart = txtSeri.Text.Length;
+        }
+
+        private void txtCariKodu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            frmCariSec form = new frmCariSec();
+            form.ShowDialog();
+            if (form.secildi)
+            {
+                _entity = form.secilen.FirstOrDefault();
+                entityBakiye = this.cariDal.cariBakiyesi(context, _entity.Id);
+                _cariId = _entity.Id;
+                _fisentity.CariId = _entity.Id;
+                txtCariKodu.Text = _entity.CariKodu;
+                txtCariAdi.Text = _entity.CariAdi;
+                txtFaturaUnvani.Text = _entity.FaturaUnvani;
+
+                _fisentity.FaturaUnvani = txtFaturaUnvani.Text;
+                _fisentity.CepTelefonu = _entity.CepTelefonu;
+                _fisentity.CariAdi = _entity.CariAdi;
+                _fisentity.EMail = _entity.EMail;
+                _fisentity.Telefon = _entity.Telefon;
+                _fisentity.Il = _entity.Il;
+                _fisentity.Ilce = _entity.Ilce;
+                _fisentity.Semt = _entity.Semt;
+                _fisentity.Adres = _entity.Adres;
+                _fisentity.VergiDairesi = _entity.VergiDairesi;
+                _fisentity.VergiNo = _entity.VergiNo;
+            }
+        }
+
+        private void txtCariAdi_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            frmCariSec form = new frmCariSec();
+            form.ShowDialog();
+            if (form.secildi)
+            {
+                _entity = form.secilen.FirstOrDefault();
+                entityBakiye = this.cariDal.cariBakiyesi(context, _entity.Id);
+                _cariId = _entity.Id;
+                _fisentity.CariId = _entity.Id;
+                txtCariKodu.Text = _entity.CariKodu;
+                txtCariAdi.Text = _entity.CariAdi;
+                txtFaturaUnvani.Text = _entity.FaturaUnvani;
+
+                _fisentity.FaturaUnvani = txtFaturaUnvani.Text;
+                _fisentity.CepTelefonu = _entity.CepTelefonu;
+                _fisentity.CariAdi = _entity.CariAdi;
+                _fisentity.EMail = _entity.EMail;
+                _fisentity.Telefon = _entity.Telefon;
+                _fisentity.Il = _entity.Il;
+                _fisentity.Ilce = _entity.Ilce;
+                _fisentity.Semt = _entity.Semt;
+                _fisentity.Adres = _entity.Adres;
+                _fisentity.VergiDairesi = _entity.VergiDairesi;
+                _fisentity.VergiNo = _entity.VergiNo;
+            }
+        }
+
+        private void txtFaturaUnvani_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            frmCariSec form = new frmCariSec();
+            form.ShowDialog();
+            if (form.secildi)
+            {
+                _entity = form.secilen.FirstOrDefault();
+                entityBakiye = this.cariDal.cariBakiyesi(context, _entity.Id);
+                _cariId = _entity.Id;
+                _fisentity.CariId = _entity.Id;
+                txtCariKodu.Text = _entity.CariKodu;
+                txtCariAdi.Text = _entity.CariAdi;
+                txtFaturaUnvani.Text = _entity.FaturaUnvani;
+
+                _fisentity.FaturaUnvani = txtFaturaUnvani.Text;
+                _fisentity.CepTelefonu = _entity.CepTelefonu;
+                _fisentity.CariAdi = _entity.CariAdi;
+                _fisentity.EMail = _entity.EMail;
+                _fisentity.Telefon = _entity.Telefon;
+                _fisentity.Il = _entity.Il;
+                _fisentity.Ilce = _entity.Ilce;
+                _fisentity.Semt = _entity.Semt;
+                _fisentity.Adres = _entity.Adres;
+                _fisentity.VergiDairesi = _entity.VergiDairesi;
+                _fisentity.VergiNo = _entity.VergiNo;
+            }
         }
 
         private void gridStokHareket_KeyDown(object sender, KeyEventArgs e)

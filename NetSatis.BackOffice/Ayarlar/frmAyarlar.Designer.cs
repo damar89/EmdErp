@@ -37,8 +37,10 @@
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.navigationPane1 = new DevExpress.XtraBars.Navigation.NavigationPane();
             this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.toggleCekmece = new DevExpress.XtraEditors.ToggleSwitch();
             this.toggleDoviz = new DevExpress.XtraEditors.ToggleSwitch();
             this.toggleMinMiktar = new DevExpress.XtraEditors.ToggleSwitch();
+            this.labelControl43 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
             this.togCari = new DevExpress.XtraEditors.ToggleSwitch();
             this.togStok = new DevExpress.XtraEditors.ToggleSwitch();
@@ -128,13 +130,12 @@
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.labelControl43 = new DevExpress.XtraEditors.LabelControl();
-            this.toggleCekmece = new DevExpress.XtraEditors.ToggleSwitch();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).BeginInit();
             this.navigationPane1.SuspendLayout();
             this.navigationPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleCekmece.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleDoviz.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleMinMiktar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.togCari.Properties)).BeginInit();
@@ -179,7 +180,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.calcRub.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcEuro.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcUsd.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleCekmece.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBaslik
@@ -300,7 +300,17 @@
             this.navigationPage1.Controls.Add(this.cmbSiparisDizayn);
             this.navigationPage1.Controls.Add(this.cmbFaturaDizayn);
             this.navigationPage1.Name = "navigationPage1";
-            this.navigationPage1.Size = new System.Drawing.Size(806, 500);
+            this.navigationPage1.Size = new System.Drawing.Size(812, 510);
+            // 
+            // toggleCekmece
+            // 
+            this.toggleCekmece.Location = new System.Drawing.Point(186, 327);
+            this.toggleCekmece.Name = "toggleCekmece";
+            this.toggleCekmece.Properties.GlyphVerticalAlignment = DevExpress.Utils.VertAlignment.Bottom;
+            this.toggleCekmece.Properties.OffText = "Hayır";
+            this.toggleCekmece.Properties.OnText = "Evet";
+            this.toggleCekmece.Size = new System.Drawing.Size(207, 18);
+            this.toggleCekmece.TabIndex = 9;
             // 
             // toggleDoviz
             // 
@@ -309,7 +319,7 @@
             this.toggleDoviz.Properties.GlyphVerticalAlignment = DevExpress.Utils.VertAlignment.Bottom;
             this.toggleDoviz.Properties.OffText = "Hayır";
             this.toggleDoviz.Properties.OnText = "Evet";
-            this.toggleDoviz.Size = new System.Drawing.Size(207, 21);
+            this.toggleDoviz.Size = new System.Drawing.Size(207, 18);
             this.toggleDoviz.TabIndex = 9;
             // 
             // toggleMinMiktar
@@ -318,8 +328,22 @@
             this.toggleMinMiktar.Name = "toggleMinMiktar";
             this.toggleMinMiktar.Properties.OffText = "Hayır";
             this.toggleMinMiktar.Properties.OnText = "Evet";
-            this.toggleMinMiktar.Size = new System.Drawing.Size(207, 21);
+            this.toggleMinMiktar.Size = new System.Drawing.Size(207, 18);
             this.toggleMinMiktar.TabIndex = 9;
+            // 
+            // labelControl43
+            // 
+            this.labelControl43.Appearance.BorderColor = System.Drawing.Color.Silver;
+            this.labelControl43.Appearance.Options.UseBorderColor = true;
+            this.labelControl43.Appearance.Options.UseTextOptions = true;
+            this.labelControl43.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl43.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl43.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl43.Location = new System.Drawing.Point(0, 327);
+            this.labelControl43.Name = "labelControl43";
+            this.labelControl43.Size = new System.Drawing.Size(180, 21);
+            this.labelControl43.TabIndex = 8;
+            this.labelControl43.Text = "Çekmece Aç :";
             // 
             // labelControl31
             // 
@@ -341,7 +365,7 @@
             this.togCari.Name = "togCari";
             this.togCari.Properties.OffText = "Hayır";
             this.togCari.Properties.OnText = "Evet";
-            this.togCari.Size = new System.Drawing.Size(207, 21);
+            this.togCari.Size = new System.Drawing.Size(207, 18);
             this.togCari.TabIndex = 9;
             // 
             // togStok
@@ -350,7 +374,7 @@
             this.togStok.Name = "togStok";
             this.togStok.Properties.OffText = "Hayır";
             this.togStok.Properties.OnText = "Evet";
-            this.togStok.Size = new System.Drawing.Size(207, 21);
+            this.togStok.Size = new System.Drawing.Size(207, 18);
             this.togStok.TabIndex = 9;
             // 
             // labelControl41
@@ -373,7 +397,7 @@
             this.toggleStokEksi.Name = "toggleStokEksi";
             this.toggleStokEksi.Properties.OffText = "Hayır";
             this.toggleStokEksi.Properties.OnText = "Evet";
-            this.toggleStokEksi.Size = new System.Drawing.Size(207, 21);
+            this.toggleStokEksi.Size = new System.Drawing.Size(207, 18);
             this.toggleStokEksi.TabIndex = 9;
             // 
             // labelControl9
@@ -601,7 +625,7 @@
             this.toggleGuncelle.Name = "toggleGuncelle";
             this.toggleGuncelle.Properties.OffText = "Hayır";
             this.toggleGuncelle.Properties.OnText = "Evet";
-            this.toggleGuncelle.Size = new System.Drawing.Size(95, 21);
+            this.toggleGuncelle.Size = new System.Drawing.Size(95, 18);
             this.toggleGuncelle.TabIndex = 0;
             // 
             // cmbSiparisDizayn
@@ -686,7 +710,7 @@
             this.navigationPage2.Controls.Add(this.labelControl23);
             this.navigationPage2.Controls.Add(this.labelControl40);
             this.navigationPage2.Name = "navigationPage2";
-            this.navigationPage2.Size = new System.Drawing.Size(806, 500);
+            this.navigationPage2.Size = new System.Drawing.Size(812, 510);
             this.navigationPage2.Paint += new System.Windows.Forms.PaintEventHandler(this.navigationPage2_Paint);
             // 
             // comboBox1
@@ -772,7 +796,7 @@
             this.togSatisFiyat.Name = "togSatisFiyat";
             this.togSatisFiyat.Properties.OffText = "Hayır";
             this.togSatisFiyat.Properties.OnText = "Evet";
-            this.togSatisFiyat.Size = new System.Drawing.Size(110, 21);
+            this.togSatisFiyat.Size = new System.Drawing.Size(110, 18);
             this.togSatisFiyat.TabIndex = 3;
             // 
             // toggleAlisFiyat
@@ -781,7 +805,7 @@
             this.toggleAlisFiyat.Name = "toggleAlisFiyat";
             this.toggleAlisFiyat.Properties.OffText = "Hayır";
             this.toggleAlisFiyat.Properties.OnText = "Evet";
-            this.toggleAlisFiyat.Size = new System.Drawing.Size(110, 21);
+            this.toggleAlisFiyat.Size = new System.Drawing.Size(110, 18);
             this.toggleAlisFiyat.TabIndex = 3;
             // 
             // togStoguEtkilesinmi
@@ -790,7 +814,7 @@
             this.togStoguEtkilesinmi.Name = "togStoguEtkilesinmi";
             this.togStoguEtkilesinmi.Properties.OffText = "Hayır";
             this.togStoguEtkilesinmi.Properties.OnText = "Evet";
-            this.togStoguEtkilesinmi.Size = new System.Drawing.Size(106, 21);
+            this.togStoguEtkilesinmi.Size = new System.Drawing.Size(106, 18);
             this.togStoguEtkilesinmi.TabIndex = 3;
             // 
             // togCariEtkilesinmi
@@ -799,7 +823,7 @@
             this.togCariEtkilesinmi.Name = "togCariEtkilesinmi";
             this.togCariEtkilesinmi.Properties.OffText = "Hayır";
             this.togCariEtkilesinmi.Properties.OnText = "Evet";
-            this.togCariEtkilesinmi.Size = new System.Drawing.Size(104, 21);
+            this.togCariEtkilesinmi.Size = new System.Drawing.Size(104, 18);
             this.togCariEtkilesinmi.TabIndex = 3;
             // 
             // toggIrsaliye
@@ -808,7 +832,7 @@
             this.toggIrsaliye.Name = "toggIrsaliye";
             this.toggIrsaliye.Properties.OffText = "Hayır";
             this.toggIrsaliye.Properties.OnText = "Evet";
-            this.toggIrsaliye.Size = new System.Drawing.Size(104, 21);
+            this.toggIrsaliye.Size = new System.Drawing.Size(104, 18);
             this.toggIrsaliye.TabIndex = 3;
             // 
             // toggleBilgiFisiSorulsunmu
@@ -817,7 +841,7 @@
             this.toggleBilgiFisiSorulsunmu.Name = "toggleBilgiFisiSorulsunmu";
             this.toggleBilgiFisiSorulsunmu.Properties.OffText = "Hayır";
             this.toggleBilgiFisiSorulsunmu.Properties.OnText = "Evet";
-            this.toggleBilgiFisiSorulsunmu.Size = new System.Drawing.Size(108, 21);
+            this.toggleBilgiFisiSorulsunmu.Size = new System.Drawing.Size(108, 18);
             this.toggleBilgiFisiSorulsunmu.TabIndex = 3;
             // 
             // toggTerazi
@@ -826,7 +850,7 @@
             this.toggTerazi.Name = "toggTerazi";
             this.toggTerazi.Properties.OffText = "Hayır";
             this.toggTerazi.Properties.OnText = "Evet";
-            this.toggTerazi.Size = new System.Drawing.Size(106, 21);
+            this.toggTerazi.Size = new System.Drawing.Size(106, 18);
             this.toggTerazi.TabIndex = 2;
             // 
             // toggleBilgiFisiYazdirilsinmi
@@ -835,7 +859,7 @@
             this.toggleBilgiFisiYazdirilsinmi.Name = "toggleBilgiFisiYazdirilsinmi";
             this.toggleBilgiFisiYazdirilsinmi.Properties.OffText = "Hayır";
             this.toggleBilgiFisiYazdirilsinmi.Properties.OnText = "Evet";
-            this.toggleBilgiFisiYazdirilsinmi.Size = new System.Drawing.Size(106, 21);
+            this.toggleBilgiFisiYazdirilsinmi.Size = new System.Drawing.Size(106, 18);
             this.toggleBilgiFisiYazdirilsinmi.TabIndex = 2;
             // 
             // textEdit4
@@ -1317,7 +1341,7 @@
             this.kopKoparatifmi.Name = "kopKoparatifmi";
             this.kopKoparatifmi.Properties.OffText = "Hayır";
             this.kopKoparatifmi.Properties.OnText = "Evet";
-            this.kopKoparatifmi.Size = new System.Drawing.Size(117, 21);
+            this.kopKoparatifmi.Size = new System.Drawing.Size(117, 18);
             this.kopKoparatifmi.TabIndex = 9;
             // 
             // labelControl29
@@ -1433,30 +1457,6 @@
             this.labelControl25.TabIndex = 5;
             this.labelControl25.Text = "USD :";
             // 
-            // labelControl43
-            // 
-            this.labelControl43.Appearance.BorderColor = System.Drawing.Color.Silver;
-            this.labelControl43.Appearance.Options.UseBorderColor = true;
-            this.labelControl43.Appearance.Options.UseTextOptions = true;
-            this.labelControl43.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl43.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl43.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl43.Location = new System.Drawing.Point(0, 327);
-            this.labelControl43.Name = "labelControl43";
-            this.labelControl43.Size = new System.Drawing.Size(180, 21);
-            this.labelControl43.TabIndex = 8;
-            this.labelControl43.Text = "Çekmece Aç :";
-            // 
-            // toggleCekmece
-            // 
-            this.toggleCekmece.Location = new System.Drawing.Point(186, 327);
-            this.toggleCekmece.Name = "toggleCekmece";
-            this.toggleCekmece.Properties.GlyphVerticalAlignment = DevExpress.Utils.VertAlignment.Bottom;
-            this.toggleCekmece.Properties.OffText = "Hayır";
-            this.toggleCekmece.Properties.OnText = "Evet";
-            this.toggleCekmece.Size = new System.Drawing.Size(207, 21);
-            this.toggleCekmece.TabIndex = 9;
-            // 
             // frmAyarlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1480,6 +1480,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.navigationPane1)).EndInit();
             this.navigationPane1.ResumeLayout(false);
             this.navigationPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.toggleCekmece.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleDoviz.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleMinMiktar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.togCari.Properties)).EndInit();
@@ -1524,7 +1525,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.calcRub.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcEuro.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcUsd.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleCekmece.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -38,66 +38,66 @@
             DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression3 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
             DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression4 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject21 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject23 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject24 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions7 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject25 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject26 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject27 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject28 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions8 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject29 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject30 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject31 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject32 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions9 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject33 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject34 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject35 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject36 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions10 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject37 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject38 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject39 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject40 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions11 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject41 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject42 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject43 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject44 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions12 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject45 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject46 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject47 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject48 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions63 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject249 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject250 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject251 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject252 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions64 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject253 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject254 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject255 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject256 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions65 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject257 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject258 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject259 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject260 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions66 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject261 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject262 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject263 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject264 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions67 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject265 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject266 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject267 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject268 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions68 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject269 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject270 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject271 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject272 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions69 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject273 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject274 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject275 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject276 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions70 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject277 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject278 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject279 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject280 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions71 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject281 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject282 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject283 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject284 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions72 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject285 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject286 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject287 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject288 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions73 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject289 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject290 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject291 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject292 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions53 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject209 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject210 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject211 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject212 = new DevExpress.Utils.SerializableAppearanceObject();
             this.colKarOrani = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMevcutStok = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ımageList2 = new System.Windows.Forms.ImageList(this.components);
@@ -155,6 +155,28 @@
             this.navigationPane1 = new DevExpress.XtraBars.Navigation.NavigationPane();
             this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
+            this.lblSatirSayisi = new DevExpress.XtraEditors.LabelControl();
+            this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
+            this.calcAraToplam = new DevExpress.XtraEditors.CalcEdit();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
+            this.calcGenelToplam = new DevExpress.XtraEditors.CalcEdit();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
+            this.calcKdvToplam = new DevExpress.XtraEditors.CalcEdit();
+            this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
+            this.calcAcikHesapBakiye = new DevExpress.XtraEditors.CalcEdit();
+            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
+            this.calcIndirimToplami = new DevExpress.XtraEditors.CalcEdit();
+            this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
+            this.calcIndirimTutari = new DevExpress.XtraEditors.CalcEdit();
+            this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
+            this.calcOdenemesiGereken = new DevExpress.XtraEditors.CalcEdit();
+            this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
+            this.calcIndirimOrani = new DevExpress.XtraEditors.CalcEdit();
+            this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
+            this.calcOdenenTutar = new DevExpress.XtraEditors.CalcEdit();
             this.navMasraf = new DevExpress.XtraBars.Navigation.NavigationPane();
             this.navSatisEkrani = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.gridContStokHareket = new DevExpress.XtraGrid.GridControl();
@@ -294,28 +316,6 @@
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.txtFisTuru = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.calcOdenenTutar = new DevExpress.XtraEditors.CalcEdit();
-            this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
-            this.calcIndirimOrani = new DevExpress.XtraEditors.CalcEdit();
-            this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
-            this.calcOdenemesiGereken = new DevExpress.XtraEditors.CalcEdit();
-            this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
-            this.calcIndirimTutari = new DevExpress.XtraEditors.CalcEdit();
-            this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
-            this.calcIndirimToplami = new DevExpress.XtraEditors.CalcEdit();
-            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
-            this.calcAcikHesapBakiye = new DevExpress.XtraEditors.CalcEdit();
-            this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
-            this.calcKdvToplam = new DevExpress.XtraEditors.CalcEdit();
-            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.calcGenelToplam = new DevExpress.XtraEditors.CalcEdit();
-            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
-            this.calcAraToplam = new DevExpress.XtraEditors.CalcEdit();
-            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
-            this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
-            this.lblSatirSayisi = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radialFiyat)).BeginInit();
@@ -327,6 +327,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
+            this.groupControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.calcAraToplam.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcGenelToplam.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcKdvToplam.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcAcikHesapBakiye.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcIndirimToplami.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcIndirimTutari.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcOdenemesiGereken.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcIndirimOrani.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcOdenenTutar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navMasraf)).BeginInit();
             this.navMasraf.SuspendLayout();
             this.navSatisEkrani.SuspendLayout();
@@ -390,19 +403,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtFisTuru.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcOdenenTutar.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcIndirimOrani.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcOdenemesiGereken.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcIndirimTutari.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcIndirimToplami.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcAcikHesapBakiye.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcKdvToplam.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcGenelToplam.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcAraToplam.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
-            this.groupControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
-            this.groupControl3.SuspendLayout();
             this.SuspendLayout();
             // 
             // colKarOrani
@@ -494,7 +494,7 @@
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 26);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Size = new System.Drawing.Size(1238, 0);
             // 
@@ -510,17 +510,17 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 26);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 629);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 655);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1238, 26);
+            this.barDockControlRight.Location = new System.Drawing.Point(1238, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 629);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 655);
             // 
             // barFiyat1
             // 
@@ -936,6 +936,441 @@
             this.tabNavigationPage1.Name = "tabNavigationPage1";
             this.tabNavigationPage1.Size = new System.Drawing.Size(1238, 563);
             // 
+            // groupControl3
+            // 
+            this.groupControl3.Controls.Add(this.labelControl26);
+            this.groupControl3.Controls.Add(this.lblSatirSayisi);
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupControl3.Location = new System.Drawing.Point(0, 428);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.ShowCaption = false;
+            this.groupControl3.Size = new System.Drawing.Size(1238, 22);
+            this.groupControl3.TabIndex = 128;
+            this.groupControl3.Text = "groupControl3";
+            // 
+            // labelControl26
+            // 
+            this.labelControl26.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl26.Appearance.Options.UseTextOptions = true;
+            this.labelControl26.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl26.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl26.Location = new System.Drawing.Point(1110, 3);
+            this.labelControl26.Name = "labelControl26";
+            this.labelControl26.Size = new System.Drawing.Size(61, 14);
+            this.labelControl26.TabIndex = 127;
+            this.labelControl26.Text = "Satır Sayısı :";
+            this.labelControl26.Visible = false;
+            // 
+            // lblSatirSayisi
+            // 
+            this.lblSatirSayisi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSatirSayisi.Appearance.Options.UseTextOptions = true;
+            this.lblSatirSayisi.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblSatirSayisi.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblSatirSayisi.Location = new System.Drawing.Point(1175, 3);
+            this.lblSatirSayisi.Name = "lblSatirSayisi";
+            this.lblSatirSayisi.Size = new System.Drawing.Size(49, 14);
+            this.lblSatirSayisi.TabIndex = 127;
+            this.lblSatirSayisi.Text = "Count";
+            this.lblSatirSayisi.Visible = false;
+            // 
+            // groupControl5
+            // 
+            this.groupControl5.Controls.Add(this.labelControl19);
+            this.groupControl5.Controls.Add(this.calcAraToplam);
+            this.groupControl5.Controls.Add(this.labelControl17);
+            this.groupControl5.Controls.Add(this.calcGenelToplam);
+            this.groupControl5.Controls.Add(this.labelControl18);
+            this.groupControl5.Controls.Add(this.calcKdvToplam);
+            this.groupControl5.Controls.Add(this.labelControl23);
+            this.groupControl5.Controls.Add(this.calcAcikHesapBakiye);
+            this.groupControl5.Controls.Add(this.labelControl20);
+            this.groupControl5.Controls.Add(this.calcIndirimToplami);
+            this.groupControl5.Controls.Add(this.labelControl24);
+            this.groupControl5.Controls.Add(this.calcIndirimTutari);
+            this.groupControl5.Controls.Add(this.labelControl25);
+            this.groupControl5.Controls.Add(this.calcOdenemesiGereken);
+            this.groupControl5.Controls.Add(this.labelControl21);
+            this.groupControl5.Controls.Add(this.calcIndirimOrani);
+            this.groupControl5.Controls.Add(this.labelControl22);
+            this.groupControl5.Controls.Add(this.calcOdenenTutar);
+            this.groupControl5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupControl5.Location = new System.Drawing.Point(0, 450);
+            this.groupControl5.Name = "groupControl5";
+            this.groupControl5.ShowCaption = false;
+            this.groupControl5.Size = new System.Drawing.Size(1238, 113);
+            this.groupControl5.TabIndex = 129;
+            this.groupControl5.Text = "groupControl5";
+            // 
+            // labelControl19
+            // 
+            this.labelControl19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl19.Appearance.Options.UseTextOptions = true;
+            this.labelControl19.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl19.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl19.Location = new System.Drawing.Point(733, 80);
+            this.labelControl19.Name = "labelControl19";
+            this.labelControl19.Size = new System.Drawing.Size(80, 21);
+            this.labelControl19.TabIndex = 145;
+            this.labelControl19.Text = "İndirim Tutarı :";
+            // 
+            // calcAraToplam
+            // 
+            this.calcAraToplam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calcAraToplam.Location = new System.Drawing.Point(1069, 23);
+            this.calcAraToplam.Name = "calcAraToplam";
+            this.calcAraToplam.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.calcAraToplam.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.calcAraToplam.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.calcAraToplam.Properties.Appearance.Options.UseBackColor = true;
+            this.calcAraToplam.Properties.Appearance.Options.UseFont = true;
+            this.calcAraToplam.Properties.Appearance.Options.UseForeColor = true;
+            this.calcAraToplam.Properties.Appearance.Options.UseTextOptions = true;
+            this.calcAraToplam.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.calcAraToplam.Properties.AutoHeight = false;
+            this.calcAraToplam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.calcAraToplam.Properties.DisplayFormat.FormatString = "C2";
+            this.calcAraToplam.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcAraToplam.Properties.EditFormat.FormatString = "C2";
+            this.calcAraToplam.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcAraToplam.Properties.Mask.EditMask = "C";
+            this.calcAraToplam.Properties.NullText = "0,00";
+            this.calcAraToplam.Properties.ReadOnly = true;
+            this.calcAraToplam.Size = new System.Drawing.Size(167, 31);
+            this.calcAraToplam.TabIndex = 156;
+            // 
+            // labelControl17
+            // 
+            this.labelControl17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl17.Appearance.Options.UseTextOptions = true;
+            this.labelControl17.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl17.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl17.Location = new System.Drawing.Point(733, 26);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(80, 25);
+            this.labelControl17.TabIndex = 153;
+            this.labelControl17.Text = "İndirim Toplam :";
+            // 
+            // calcGenelToplam
+            // 
+            this.calcGenelToplam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calcGenelToplam.Location = new System.Drawing.Point(1069, 76);
+            this.calcGenelToplam.Name = "calcGenelToplam";
+            this.calcGenelToplam.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.calcGenelToplam.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.calcGenelToplam.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.calcGenelToplam.Properties.Appearance.Options.UseBackColor = true;
+            this.calcGenelToplam.Properties.Appearance.Options.UseFont = true;
+            this.calcGenelToplam.Properties.Appearance.Options.UseForeColor = true;
+            this.calcGenelToplam.Properties.Appearance.Options.UseTextOptions = true;
+            this.calcGenelToplam.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.calcGenelToplam.Properties.AutoHeight = false;
+            this.calcGenelToplam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.calcGenelToplam.Properties.DisplayFormat.FormatString = "C2";
+            this.calcGenelToplam.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcGenelToplam.Properties.EditFormat.FormatString = "C2";
+            this.calcGenelToplam.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcGenelToplam.Properties.Mask.EditMask = "C";
+            this.calcGenelToplam.Properties.NullText = "0,00";
+            this.calcGenelToplam.Properties.ReadOnly = true;
+            this.calcGenelToplam.Size = new System.Drawing.Size(167, 32);
+            this.calcGenelToplam.TabIndex = 155;
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl18.Appearance.Options.UseTextOptions = true;
+            this.labelControl18.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl18.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl18.Location = new System.Drawing.Point(744, 52);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(69, 20);
+            this.labelControl18.TabIndex = 152;
+            this.labelControl18.Text = "İndirim Oranı :";
+            // 
+            // calcKdvToplam
+            // 
+            this.calcKdvToplam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calcKdvToplam.Location = new System.Drawing.Point(1069, 49);
+            this.calcKdvToplam.Name = "calcKdvToplam";
+            this.calcKdvToplam.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.calcKdvToplam.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.calcKdvToplam.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.calcKdvToplam.Properties.Appearance.Options.UseBackColor = true;
+            this.calcKdvToplam.Properties.Appearance.Options.UseFont = true;
+            this.calcKdvToplam.Properties.Appearance.Options.UseForeColor = true;
+            this.calcKdvToplam.Properties.Appearance.Options.UseTextOptions = true;
+            this.calcKdvToplam.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.calcKdvToplam.Properties.AutoHeight = false;
+            this.calcKdvToplam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.calcKdvToplam.Properties.DisplayFormat.FormatString = "C2";
+            this.calcKdvToplam.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcKdvToplam.Properties.EditFormat.FormatString = "C2";
+            this.calcKdvToplam.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcKdvToplam.Properties.Mask.EditMask = "C";
+            this.calcKdvToplam.Properties.NullText = "0,00";
+            this.calcKdvToplam.Properties.ReadOnly = true;
+            this.calcKdvToplam.Size = new System.Drawing.Size(167, 31);
+            this.calcKdvToplam.TabIndex = 157;
+            // 
+            // labelControl23
+            // 
+            this.labelControl23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl23.Appearance.Options.UseTextOptions = true;
+            this.labelControl23.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl23.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl23.Location = new System.Drawing.Point(983, 27);
+            this.labelControl23.Name = "labelControl23";
+            this.labelControl23.Size = new System.Drawing.Size(80, 25);
+            this.labelControl23.TabIndex = 150;
+            this.labelControl23.Text = "Ara Toplam :";
+            // 
+            // calcAcikHesapBakiye
+            // 
+            this.calcAcikHesapBakiye.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calcAcikHesapBakiye.Location = new System.Drawing.Point(563, 76);
+            this.calcAcikHesapBakiye.Name = "calcAcikHesapBakiye";
+            this.calcAcikHesapBakiye.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.calcAcikHesapBakiye.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.calcAcikHesapBakiye.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.calcAcikHesapBakiye.Properties.Appearance.Options.UseBackColor = true;
+            this.calcAcikHesapBakiye.Properties.Appearance.Options.UseFont = true;
+            this.calcAcikHesapBakiye.Properties.Appearance.Options.UseForeColor = true;
+            this.calcAcikHesapBakiye.Properties.Appearance.Options.UseTextOptions = true;
+            this.calcAcikHesapBakiye.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.calcAcikHesapBakiye.Properties.AutoHeight = false;
+            this.calcAcikHesapBakiye.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.calcAcikHesapBakiye.Properties.DisplayFormat.FormatString = "C2";
+            this.calcAcikHesapBakiye.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcAcikHesapBakiye.Properties.EditFormat.FormatString = "C2";
+            this.calcAcikHesapBakiye.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcAcikHesapBakiye.Properties.Mask.EditMask = "C";
+            this.calcAcikHesapBakiye.Properties.NullText = "0,00";
+            this.calcAcikHesapBakiye.Properties.ReadOnly = true;
+            this.calcAcikHesapBakiye.Size = new System.Drawing.Size(164, 32);
+            this.calcAcikHesapBakiye.TabIndex = 160;
+            // 
+            // labelControl20
+            // 
+            this.labelControl20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl20.Appearance.Options.UseTextOptions = true;
+            this.labelControl20.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl20.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl20.Location = new System.Drawing.Point(461, 29);
+            this.labelControl20.Name = "labelControl20";
+            this.labelControl20.Size = new System.Drawing.Size(96, 23);
+            this.labelControl20.TabIndex = 151;
+            this.labelControl20.Text = "Ödenen Tutar :";
+            // 
+            // calcIndirimToplami
+            // 
+            this.calcIndirimToplami.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calcIndirimToplami.Location = new System.Drawing.Point(819, 23);
+            this.calcIndirimToplami.Name = "calcIndirimToplami";
+            this.calcIndirimToplami.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.calcIndirimToplami.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.calcIndirimToplami.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.calcIndirimToplami.Properties.Appearance.Options.UseBackColor = true;
+            this.calcIndirimToplami.Properties.Appearance.Options.UseFont = true;
+            this.calcIndirimToplami.Properties.Appearance.Options.UseForeColor = true;
+            this.calcIndirimToplami.Properties.Appearance.Options.UseTextOptions = true;
+            this.calcIndirimToplami.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.calcIndirimToplami.Properties.AutoHeight = false;
+            this.calcIndirimToplami.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.calcIndirimToplami.Properties.DisplayFormat.FormatString = "C2";
+            this.calcIndirimToplami.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcIndirimToplami.Properties.EditFormat.FormatString = "C2";
+            this.calcIndirimToplami.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcIndirimToplami.Properties.Mask.EditMask = "C";
+            this.calcIndirimToplami.Properties.NullText = "0,00";
+            this.calcIndirimToplami.Properties.ReadOnly = true;
+            this.calcIndirimToplami.Size = new System.Drawing.Size(164, 31);
+            this.calcIndirimToplami.TabIndex = 158;
+            // 
+            // labelControl24
+            // 
+            this.labelControl24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl24.Appearance.Options.UseTextOptions = true;
+            this.labelControl24.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl24.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl24.Location = new System.Drawing.Point(994, 53);
+            this.labelControl24.Name = "labelControl24";
+            this.labelControl24.Size = new System.Drawing.Size(69, 20);
+            this.labelControl24.TabIndex = 148;
+            this.labelControl24.Text = "Kdv Toplam :";
+            // 
+            // calcIndirimTutari
+            // 
+            this.calcIndirimTutari.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calcIndirimTutari.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.calcIndirimTutari.Location = new System.Drawing.Point(819, 77);
+            this.calcIndirimTutari.Name = "calcIndirimTutari";
+            this.calcIndirimTutari.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.calcIndirimTutari.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.calcIndirimTutari.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.calcIndirimTutari.Properties.Appearance.Options.UseBackColor = true;
+            this.calcIndirimTutari.Properties.Appearance.Options.UseFont = true;
+            this.calcIndirimTutari.Properties.Appearance.Options.UseForeColor = true;
+            this.calcIndirimTutari.Properties.Appearance.Options.UseTextOptions = true;
+            this.calcIndirimTutari.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.calcIndirimTutari.Properties.AutoHeight = false;
+            this.calcIndirimTutari.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.calcIndirimTutari.Properties.DisplayFormat.FormatString = "N2";
+            this.calcIndirimTutari.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcIndirimTutari.Properties.EditFormat.FormatString = "N2";
+            this.calcIndirimTutari.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcIndirimTutari.Properties.Mask.EditMask = "n";
+            this.calcIndirimTutari.Properties.NullText = "0,00";
+            this.calcIndirimTutari.Size = new System.Drawing.Size(164, 32);
+            this.calcIndirimTutari.TabIndex = 159;
+            this.calcIndirimTutari.EditValueChanged += new System.EventHandler(this.calcIndirimTutari_EditValueChanged);
+            this.calcIndirimTutari.Enter += new System.EventHandler(this.calcIndirimTutari_Enter);
+            // 
+            // labelControl25
+            // 
+            this.labelControl25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl25.Appearance.Options.UseTextOptions = true;
+            this.labelControl25.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl25.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl25.Location = new System.Drawing.Point(983, 81);
+            this.labelControl25.Name = "labelControl25";
+            this.labelControl25.Size = new System.Drawing.Size(80, 21);
+            this.labelControl25.TabIndex = 147;
+            this.labelControl25.Text = "Genel Toplam :";
+            // 
+            // calcOdenemesiGereken
+            // 
+            this.calcOdenemesiGereken.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calcOdenemesiGereken.Location = new System.Drawing.Point(563, 50);
+            this.calcOdenemesiGereken.Name = "calcOdenemesiGereken";
+            this.calcOdenemesiGereken.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.calcOdenemesiGereken.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.calcOdenemesiGereken.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.calcOdenemesiGereken.Properties.Appearance.Options.UseBackColor = true;
+            this.calcOdenemesiGereken.Properties.Appearance.Options.UseFont = true;
+            this.calcOdenemesiGereken.Properties.Appearance.Options.UseForeColor = true;
+            this.calcOdenemesiGereken.Properties.Appearance.Options.UseTextOptions = true;
+            this.calcOdenemesiGereken.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.calcOdenemesiGereken.Properties.AutoHeight = false;
+            this.calcOdenemesiGereken.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.calcOdenemesiGereken.Properties.DisplayFormat.FormatString = "C2";
+            this.calcOdenemesiGereken.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcOdenemesiGereken.Properties.EditFormat.FormatString = "C2";
+            this.calcOdenemesiGereken.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcOdenemesiGereken.Properties.Mask.EditMask = "C";
+            this.calcOdenemesiGereken.Properties.NullText = "0,00";
+            this.calcOdenemesiGereken.Properties.ReadOnly = true;
+            this.calcOdenemesiGereken.Size = new System.Drawing.Size(164, 31);
+            this.calcOdenemesiGereken.TabIndex = 161;
+            // 
+            // labelControl21
+            // 
+            this.labelControl21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl21.Appearance.Options.UseTextOptions = true;
+            this.labelControl21.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl21.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl21.Location = new System.Drawing.Point(427, 54);
+            this.labelControl21.Name = "labelControl21";
+            this.labelControl21.Size = new System.Drawing.Size(130, 20);
+            this.labelControl21.TabIndex = 146;
+            this.labelControl21.Text = "Ödenmesi Gereken Tutar :";
+            // 
+            // calcIndirimOrani
+            // 
+            this.calcIndirimOrani.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calcIndirimOrani.Location = new System.Drawing.Point(819, 50);
+            this.calcIndirimOrani.Name = "calcIndirimOrani";
+            this.calcIndirimOrani.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.calcIndirimOrani.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.calcIndirimOrani.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.calcIndirimOrani.Properties.Appearance.Options.UseBackColor = true;
+            this.calcIndirimOrani.Properties.Appearance.Options.UseFont = true;
+            this.calcIndirimOrani.Properties.Appearance.Options.UseForeColor = true;
+            this.calcIndirimOrani.Properties.Appearance.Options.UseTextOptions = true;
+            this.calcIndirimOrani.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.calcIndirimOrani.Properties.AutoHeight = false;
+            this.calcIndirimOrani.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.calcIndirimOrani.Properties.DisplayFormat.FormatString = "N2";
+            this.calcIndirimOrani.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcIndirimOrani.Properties.EditFormat.FormatString = "N2";
+            this.calcIndirimOrani.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcIndirimOrani.Properties.Mask.EditMask = "C";
+            this.calcIndirimOrani.Properties.NullText = "0,00";
+            this.calcIndirimOrani.Size = new System.Drawing.Size(164, 31);
+            this.calcIndirimOrani.TabIndex = 154;
+            this.calcIndirimOrani.EditValueChanged += new System.EventHandler(this.calcIndirimOrani_EditValueChanged);
+            this.calcIndirimOrani.Enter += new System.EventHandler(this.calcIndirimOrani_Enter);
+            // 
+            // labelControl22
+            // 
+            this.labelControl22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl22.Appearance.Options.UseTextOptions = true;
+            this.labelControl22.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl22.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl22.Location = new System.Drawing.Point(427, 81);
+            this.labelControl22.Name = "labelControl22";
+            this.labelControl22.Size = new System.Drawing.Size(130, 21);
+            this.labelControl22.TabIndex = 149;
+            this.labelControl22.Text = "Açık Hesap Bakiyesi :";
+            // 
+            // calcOdenenTutar
+            // 
+            this.calcOdenenTutar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calcOdenenTutar.Location = new System.Drawing.Point(563, 24);
+            this.calcOdenenTutar.Name = "calcOdenenTutar";
+            this.calcOdenenTutar.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.calcOdenenTutar.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.calcOdenenTutar.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.calcOdenenTutar.Properties.Appearance.Options.UseBackColor = true;
+            this.calcOdenenTutar.Properties.Appearance.Options.UseFont = true;
+            this.calcOdenenTutar.Properties.Appearance.Options.UseForeColor = true;
+            this.calcOdenenTutar.Properties.Appearance.Options.UseTextOptions = true;
+            this.calcOdenenTutar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.calcOdenenTutar.Properties.AutoHeight = false;
+            this.calcOdenenTutar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.calcOdenenTutar.Properties.DisplayFormat.FormatString = "C2";
+            this.calcOdenenTutar.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcOdenenTutar.Properties.EditFormat.FormatString = "C2";
+            this.calcOdenenTutar.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcOdenenTutar.Properties.Mask.EditMask = "C";
+            this.calcOdenenTutar.Properties.NullText = "0,00";
+            this.calcOdenenTutar.Properties.ReadOnly = true;
+            this.calcOdenenTutar.Size = new System.Drawing.Size(164, 31);
+            this.calcOdenenTutar.TabIndex = 162;
+            // 
             // navMasraf
             // 
             this.navMasraf.Controls.Add(this.navSatisEkrani);
@@ -964,7 +1399,7 @@
             this.navSatisEkrani.Name = "navSatisEkrani";
             this.navSatisEkrani.Properties.ShowCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.navSatisEkrani.Properties.ShowExpandButton = DevExpress.Utils.DefaultBoolean.False;
-            this.navSatisEkrani.Size = new System.Drawing.Size(1194, 417);
+            this.navSatisEkrani.Size = new System.Drawing.Size(1194, 391);
             // 
             // gridContStokHareket
             // 
@@ -986,7 +1421,7 @@
             this.kdvDegisim,
             this.repobtnStokSec,
             this.rpsTutar});
-            this.gridContStokHareket.Size = new System.Drawing.Size(1194, 417);
+            this.gridContStokHareket.Size = new System.Drawing.Size(1194, 391);
             this.gridContStokHareket.TabIndex = 3;
             this.gridContStokHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridStokHareket});
@@ -1075,6 +1510,13 @@
             this.gridStokHareket.OptionsView.ShowGroupPanel = false;
             this.gridStokHareket.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colTarih, DevExpress.Data.ColumnSortOrder.Descending)});
+            this.gridStokHareket.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridStokHareket_PopupMenuShowing);
+            this.gridStokHareket.ShownEditor += new System.EventHandler(this.gridStokHareket_ShownEditor);
+            this.gridStokHareket.CellValueChanging += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridStokHareket_CellValueChanging);
+            this.gridStokHareket.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.gridStokHareket_InvalidRowException);
+            this.gridStokHareket.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gridStokHareket_ValidateRow);
+            this.gridStokHareket.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridStokHareket_KeyDown);
+            this.gridStokHareket.RowCountChanged += new System.EventHandler(this.gridStokHareket_RowCountChanged);
             // 
             // colId
             // 
@@ -1102,11 +1544,11 @@
             // repobtnBarkod
             // 
             this.repobtnBarkod.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
-            editorButtonImageOptions1.ImageIndex = 4;
-            editorButtonImageOptions1.ImageUri.Uri = "Apply";
+            editorButtonImageOptions63.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions63.Image")));
+            editorButtonImageOptions63.ImageIndex = 4;
+            editorButtonImageOptions63.ImageUri.Uri = "Apply";
             this.repobtnBarkod.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions63, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject249, serializableAppearanceObject250, serializableAppearanceObject251, serializableAppearanceObject252, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear)});
             this.repobtnBarkod.Name = "repobtnBarkod";
             this.repobtnBarkod.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repobtnBarkod_ButtonClick);
@@ -1130,11 +1572,11 @@
             // repobtnStokSec
             // 
             this.repobtnStokSec.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
-            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
+            editorButtonImageOptions64.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions64.Image")));
+            editorButtonImageOptions65.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions65.Image")));
             this.repobtnStokSec.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 20, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", 20, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 20, true, true, false, editorButtonImageOptions64, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject253, serializableAppearanceObject254, serializableAppearanceObject255, serializableAppearanceObject256, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Clear, "", 20, true, true, false, editorButtonImageOptions65, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject257, serializableAppearanceObject258, serializableAppearanceObject259, serializableAppearanceObject260, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repobtnStokSec.Name = "repobtnStokSec";
             this.repobtnStokSec.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repoStokSec_ButtonClick);
             this.repobtnStokSec.KeyDown += new System.Windows.Forms.KeyEventHandler(this.repoStokSec_KeyDown);
@@ -1242,10 +1684,10 @@
             // repoFiyat
             // 
             this.repoFiyat.AutoHeight = false;
-            editorButtonImageOptions4.ImageIndex = 2;
-            editorButtonImageOptions4.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            editorButtonImageOptions66.ImageIndex = 2;
+            editorButtonImageOptions66.Location = DevExpress.XtraEditors.ImageLocation.Default;
             this.repoFiyat.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions66, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject261, serializableAppearanceObject262, serializableAppearanceObject263, serializableAppearanceObject264, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoFiyat.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.repoFiyat.DisplayFormat.FormatString = "c4";
             this.repoFiyat.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -1253,6 +1695,7 @@
             this.repoFiyat.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.repoFiyat.Name = "repoFiyat";
             this.repoFiyat.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repoFiyat_ButtonClick);
+            this.repoFiyat.EditValueChanged += new System.EventHandler(this.repoFiyat_EditValueChanged);
             // 
             // colIndirimOrani
             // 
@@ -1339,13 +1782,13 @@
             // repoDepo
             // 
             this.repoDepo.AutoHeight = false;
-            editorButtonImageOptions5.ImageIndex = 3;
-            editorButtonImageOptions5.Location = DevExpress.XtraEditors.ImageLocation.Default;
-            serializableAppearanceObject18.Options.UseImage = true;
-            serializableAppearanceObject19.Options.UseImage = true;
-            serializableAppearanceObject20.Options.UseImage = true;
+            editorButtonImageOptions67.ImageIndex = 3;
+            editorButtonImageOptions67.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            serializableAppearanceObject266.Options.UseImage = true;
+            serializableAppearanceObject267.Options.UseImage = true;
+            serializableAppearanceObject268.Options.UseImage = true;
             this.repoDepo.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions67, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject265, serializableAppearanceObject266, serializableAppearanceObject267, serializableAppearanceObject268, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoDepo.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.repoDepo.Name = "repoDepo";
             this.repoDepo.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repoDepo_ButtonClick);
@@ -1363,10 +1806,10 @@
             // repoSeri
             // 
             this.repoSeri.AutoHeight = false;
-            editorButtonImageOptions6.ImageIndex = 4;
-            editorButtonImageOptions6.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            editorButtonImageOptions68.ImageIndex = 4;
+            editorButtonImageOptions68.Location = DevExpress.XtraEditors.ImageLocation.Default;
             this.repoSeri.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Seri No", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Seri No", -1, true, true, false, editorButtonImageOptions68, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject269, serializableAppearanceObject270, serializableAppearanceObject271, serializableAppearanceObject272, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoSeri.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.repoSeri.Name = "repoSeri";
             this.repoSeri.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
@@ -1400,13 +1843,13 @@
             this.repoSil.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("repoSil.Appearance.Image")));
             this.repoSil.Appearance.Options.UseImage = true;
             this.repoSil.AutoHeight = false;
-            editorButtonImageOptions7.ImageIndex = 0;
-            serializableAppearanceObject25.Options.UseImage = true;
-            serializableAppearanceObject26.Options.UseImage = true;
-            serializableAppearanceObject27.Options.UseImage = true;
-            serializableAppearanceObject28.Options.UseImage = true;
+            editorButtonImageOptions69.ImageIndex = 0;
+            serializableAppearanceObject273.Options.UseImage = true;
+            serializableAppearanceObject274.Options.UseImage = true;
+            serializableAppearanceObject275.Options.UseImage = true;
+            serializableAppearanceObject276.Options.UseImage = true;
             this.repoSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject25, serializableAppearanceObject26, serializableAppearanceObject27, serializableAppearanceObject28, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions69, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject273, serializableAppearanceObject274, serializableAppearanceObject275, serializableAppearanceObject276, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repoSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.repoSil.ContextImageOptions.AllowChangeAnimation = DevExpress.Utils.DefaultBoolean.True;
             this.repoSil.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("repoSil.ContextImageOptions.Image")));
@@ -1743,6 +2186,7 @@
             this.kdvDegisim.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.kdvDegisim.Name = "kdvDegisim";
+            this.kdvDegisim.EditValueChanged += new System.EventHandler(this.repoKdv_EditValueChanged);
             // 
             // navOdemeEkrani
             // 
@@ -1785,6 +2229,8 @@
             this.gridKasaHareket.GridControl = this.gridContKasaHareket;
             this.gridKasaHareket.Name = "gridKasaHareket";
             this.gridKasaHareket.OptionsView.ShowGroupPanel = false;
+            this.gridKasaHareket.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridKasaHareket_PopupMenuShowing);
+            this.gridKasaHareket.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridKasaHareket_CellValueChanged);
             // 
             // colKasaKodu
             // 
@@ -1907,7 +2353,7 @@
             this.navPersonelIslem.Controls.Add(this.panelControl2);
             this.navPersonelIslem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("navPersonelIslem.ImageOptions.Image")));
             this.navPersonelIslem.Name = "navPersonelIslem";
-            this.navPersonelIslem.Size = new System.Drawing.Size(1167, 382);
+            this.navPersonelIslem.Size = new System.Drawing.Size(1167, 356);
             // 
             // gridContPersonelHareket
             // 
@@ -1920,7 +2366,7 @@
             this.repositoryItemButtonEdit1,
             this.repositoryItemButtonEdit2,
             this.repositoryItemButtonEdit3});
-            this.gridContPersonelHareket.Size = new System.Drawing.Size(1167, 331);
+            this.gridContPersonelHareket.Size = new System.Drawing.Size(1167, 305);
             this.gridContPersonelHareket.TabIndex = 4;
             this.gridContPersonelHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridPrsonelHareket,
@@ -2073,25 +2519,25 @@
             // repositoryItemButtonEdit1
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
-            editorButtonImageOptions8.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            editorButtonImageOptions70.Location = DevExpress.XtraEditors.ImageLocation.Default;
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject29, serializableAppearanceObject30, serializableAppearanceObject31, serializableAppearanceObject32, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions70, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject277, serializableAppearanceObject278, serializableAppearanceObject279, serializableAppearanceObject280, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             // 
             // repositoryItemButtonEdit2
             // 
             this.repositoryItemButtonEdit2.AutoHeight = false;
-            editorButtonImageOptions9.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            editorButtonImageOptions71.Location = DevExpress.XtraEditors.ImageLocation.Default;
             this.repositoryItemButtonEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions9, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject33, serializableAppearanceObject34, serializableAppearanceObject35, serializableAppearanceObject36, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions71, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject281, serializableAppearanceObject282, serializableAppearanceObject283, serializableAppearanceObject284, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit2.Name = "repositoryItemButtonEdit2";
             // 
             // repositoryItemButtonEdit3
             // 
             this.repositoryItemButtonEdit3.AutoHeight = false;
-            editorButtonImageOptions10.Location = DevExpress.XtraEditors.ImageLocation.Default;
+            editorButtonImageOptions72.Location = DevExpress.XtraEditors.ImageLocation.Default;
             this.repositoryItemButtonEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Seri No", -1, true, true, false, editorButtonImageOptions10, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject37, serializableAppearanceObject38, serializableAppearanceObject39, serializableAppearanceObject40, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Seri No", -1, true, true, false, editorButtonImageOptions72, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject285, serializableAppearanceObject286, serializableAppearanceObject287, serializableAppearanceObject288, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit3.Name = "repositoryItemButtonEdit3";
             // 
             // gridView4
@@ -2264,6 +2710,7 @@
             this.toggleCariDevir.Size = new System.Drawing.Size(96, 20);
             this.toggleCariDevir.TabIndex = 101;
             this.toggleCariDevir.Visible = false;
+            this.toggleCariDevir.Toggled += new System.EventHandler(this.toggleCariDevir_Toggled);
             // 
             // cmbTarih
             // 
@@ -2274,7 +2721,7 @@
             this.cmbTarih.Name = "cmbTarih";
             this.cmbTarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions11, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject41, serializableAppearanceObject42, serializableAppearanceObject43, serializableAppearanceObject44, "Şu anın tarih ve saati", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions73, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject289, serializableAppearanceObject290, serializableAppearanceObject291, serializableAppearanceObject292, "Şu anın tarih ve saati", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.cmbTarih.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.True;
             this.cmbTarih.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -2302,7 +2749,7 @@
             this.cmbVadeTarihi.Name = "cmbVadeTarihi";
             this.cmbVadeTarihi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions12, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject45, serializableAppearanceObject46, serializableAppearanceObject47, serializableAppearanceObject48, "Şu anın tarih ve saati", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions53, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject209, serializableAppearanceObject210, serializableAppearanceObject211, serializableAppearanceObject212, "Şu anın tarih ve saati", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.cmbVadeTarihi.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.True;
             this.cmbVadeTarihi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -2339,6 +2786,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtFaturaUnvani.Size = new System.Drawing.Size(243, 20);
             this.txtFaturaUnvani.TabIndex = 97;
+            this.txtFaturaUnvani.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtFaturaUnvani_ButtonClick);
             // 
             // txtCariAdi
             // 
@@ -2350,6 +2798,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtCariAdi.Size = new System.Drawing.Size(243, 20);
             this.txtCariAdi.TabIndex = 97;
+            this.txtCariAdi.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtCariAdi_ButtonClick);
             // 
             // txtCariKodu
             // 
@@ -2362,6 +2811,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtCariKodu.Size = new System.Drawing.Size(243, 20);
             this.txtCariKodu.TabIndex = 97;
+            this.txtCariKodu.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtCariKodu_ButtonClick);
             // 
             // toggleKDVDahil
             // 
@@ -2374,6 +2824,8 @@
             this.toggleKDVDahil.Properties.OnText = "KDV Dahil";
             this.toggleKDVDahil.Size = new System.Drawing.Size(103, 18);
             this.toggleKDVDahil.TabIndex = 94;
+            this.toggleKDVDahil.Toggled += new System.EventHandler(this.toggleKDVDahil_Toggled);
+            this.toggleKDVDahil.EditValueChanged += new System.EventHandler(this.toggleKDVDahil_EditValueChanged);
             // 
             // txtSira
             // 
@@ -2679,6 +3131,7 @@
             this.btnKapat.Size = new System.Drawing.Size(117, 31);
             this.btnKapat.TabIndex = 118;
             this.btnKapat.Text = "Kapat";
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // btnSatisBitir
             // 
@@ -2691,6 +3144,7 @@
             this.btnSatisBitir.Size = new System.Drawing.Size(120, 31);
             this.btnSatisBitir.TabIndex = 119;
             this.btnSatisBitir.Text = "Kaydet";
+            this.btnSatisBitir.Click += new System.EventHandler(this.btnSatisBitir_Click);
             // 
             // groupControl4
             // 
@@ -2721,442 +3175,11 @@
             this.labelControl5.Appearance.Options.UseTextOptions = true;
             this.labelControl5.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl5.Location = new System.Drawing.Point(5, 3);
+            this.labelControl5.Location = new System.Drawing.Point(5, 7);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(64, 10);
             this.labelControl5.TabIndex = 96;
             this.labelControl5.Text = "İşlem Türü :";
-            // 
-            // calcOdenenTutar
-            // 
-            this.calcOdenenTutar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcOdenenTutar.Location = new System.Drawing.Point(563, 24);
-            this.calcOdenenTutar.Name = "calcOdenenTutar";
-            this.calcOdenenTutar.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.calcOdenenTutar.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.calcOdenenTutar.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.calcOdenenTutar.Properties.Appearance.Options.UseBackColor = true;
-            this.calcOdenenTutar.Properties.Appearance.Options.UseFont = true;
-            this.calcOdenenTutar.Properties.Appearance.Options.UseForeColor = true;
-            this.calcOdenenTutar.Properties.Appearance.Options.UseTextOptions = true;
-            this.calcOdenenTutar.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.calcOdenenTutar.Properties.AutoHeight = false;
-            this.calcOdenenTutar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcOdenenTutar.Properties.DisplayFormat.FormatString = "C2";
-            this.calcOdenenTutar.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.calcOdenenTutar.Properties.EditFormat.FormatString = "C2";
-            this.calcOdenenTutar.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.calcOdenenTutar.Properties.Mask.EditMask = "C";
-            this.calcOdenenTutar.Properties.NullText = "0,00";
-            this.calcOdenenTutar.Properties.ReadOnly = true;
-            this.calcOdenenTutar.Size = new System.Drawing.Size(164, 31);
-            this.calcOdenenTutar.TabIndex = 162;
-            // 
-            // labelControl22
-            // 
-            this.labelControl22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl22.Appearance.Options.UseTextOptions = true;
-            this.labelControl22.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl22.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl22.Location = new System.Drawing.Point(427, 81);
-            this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(130, 21);
-            this.labelControl22.TabIndex = 149;
-            this.labelControl22.Text = "Açık Hesap Bakiyesi :";
-            // 
-            // calcIndirimOrani
-            // 
-            this.calcIndirimOrani.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcIndirimOrani.Location = new System.Drawing.Point(819, 50);
-            this.calcIndirimOrani.Name = "calcIndirimOrani";
-            this.calcIndirimOrani.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.calcIndirimOrani.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.calcIndirimOrani.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.calcIndirimOrani.Properties.Appearance.Options.UseBackColor = true;
-            this.calcIndirimOrani.Properties.Appearance.Options.UseFont = true;
-            this.calcIndirimOrani.Properties.Appearance.Options.UseForeColor = true;
-            this.calcIndirimOrani.Properties.Appearance.Options.UseTextOptions = true;
-            this.calcIndirimOrani.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.calcIndirimOrani.Properties.AutoHeight = false;
-            this.calcIndirimOrani.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcIndirimOrani.Properties.DisplayFormat.FormatString = "N2";
-            this.calcIndirimOrani.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.calcIndirimOrani.Properties.EditFormat.FormatString = "N2";
-            this.calcIndirimOrani.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.calcIndirimOrani.Properties.Mask.EditMask = "C";
-            this.calcIndirimOrani.Properties.NullText = "0,00";
-            this.calcIndirimOrani.Size = new System.Drawing.Size(164, 31);
-            this.calcIndirimOrani.TabIndex = 154;
-            // 
-            // labelControl21
-            // 
-            this.labelControl21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl21.Appearance.Options.UseTextOptions = true;
-            this.labelControl21.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl21.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl21.Location = new System.Drawing.Point(427, 54);
-            this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(130, 20);
-            this.labelControl21.TabIndex = 146;
-            this.labelControl21.Text = "Ödenmesi Gereken Tutar :";
-            // 
-            // calcOdenemesiGereken
-            // 
-            this.calcOdenemesiGereken.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcOdenemesiGereken.Location = new System.Drawing.Point(563, 50);
-            this.calcOdenemesiGereken.Name = "calcOdenemesiGereken";
-            this.calcOdenemesiGereken.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.calcOdenemesiGereken.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.calcOdenemesiGereken.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.calcOdenemesiGereken.Properties.Appearance.Options.UseBackColor = true;
-            this.calcOdenemesiGereken.Properties.Appearance.Options.UseFont = true;
-            this.calcOdenemesiGereken.Properties.Appearance.Options.UseForeColor = true;
-            this.calcOdenemesiGereken.Properties.Appearance.Options.UseTextOptions = true;
-            this.calcOdenemesiGereken.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.calcOdenemesiGereken.Properties.AutoHeight = false;
-            this.calcOdenemesiGereken.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcOdenemesiGereken.Properties.DisplayFormat.FormatString = "C2";
-            this.calcOdenemesiGereken.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.calcOdenemesiGereken.Properties.EditFormat.FormatString = "C2";
-            this.calcOdenemesiGereken.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.calcOdenemesiGereken.Properties.Mask.EditMask = "C";
-            this.calcOdenemesiGereken.Properties.NullText = "0,00";
-            this.calcOdenemesiGereken.Properties.ReadOnly = true;
-            this.calcOdenemesiGereken.Size = new System.Drawing.Size(164, 31);
-            this.calcOdenemesiGereken.TabIndex = 161;
-            // 
-            // labelControl25
-            // 
-            this.labelControl25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl25.Appearance.Options.UseTextOptions = true;
-            this.labelControl25.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl25.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl25.Location = new System.Drawing.Point(983, 81);
-            this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(80, 21);
-            this.labelControl25.TabIndex = 147;
-            this.labelControl25.Text = "Genel Toplam :";
-            // 
-            // calcIndirimTutari
-            // 
-            this.calcIndirimTutari.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcIndirimTutari.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.calcIndirimTutari.Location = new System.Drawing.Point(819, 77);
-            this.calcIndirimTutari.Name = "calcIndirimTutari";
-            this.calcIndirimTutari.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.calcIndirimTutari.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.calcIndirimTutari.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.calcIndirimTutari.Properties.Appearance.Options.UseBackColor = true;
-            this.calcIndirimTutari.Properties.Appearance.Options.UseFont = true;
-            this.calcIndirimTutari.Properties.Appearance.Options.UseForeColor = true;
-            this.calcIndirimTutari.Properties.Appearance.Options.UseTextOptions = true;
-            this.calcIndirimTutari.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.calcIndirimTutari.Properties.AutoHeight = false;
-            this.calcIndirimTutari.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcIndirimTutari.Properties.DisplayFormat.FormatString = "N2";
-            this.calcIndirimTutari.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.calcIndirimTutari.Properties.EditFormat.FormatString = "N2";
-            this.calcIndirimTutari.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.calcIndirimTutari.Properties.Mask.EditMask = "n";
-            this.calcIndirimTutari.Properties.NullText = "0,00";
-            this.calcIndirimTutari.Size = new System.Drawing.Size(164, 32);
-            this.calcIndirimTutari.TabIndex = 159;
-            // 
-            // labelControl24
-            // 
-            this.labelControl24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl24.Appearance.Options.UseTextOptions = true;
-            this.labelControl24.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl24.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl24.Location = new System.Drawing.Point(994, 53);
-            this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(69, 20);
-            this.labelControl24.TabIndex = 148;
-            this.labelControl24.Text = "Kdv Toplam :";
-            // 
-            // calcIndirimToplami
-            // 
-            this.calcIndirimToplami.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcIndirimToplami.Location = new System.Drawing.Point(819, 23);
-            this.calcIndirimToplami.Name = "calcIndirimToplami";
-            this.calcIndirimToplami.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.calcIndirimToplami.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.calcIndirimToplami.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.calcIndirimToplami.Properties.Appearance.Options.UseBackColor = true;
-            this.calcIndirimToplami.Properties.Appearance.Options.UseFont = true;
-            this.calcIndirimToplami.Properties.Appearance.Options.UseForeColor = true;
-            this.calcIndirimToplami.Properties.Appearance.Options.UseTextOptions = true;
-            this.calcIndirimToplami.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.calcIndirimToplami.Properties.AutoHeight = false;
-            this.calcIndirimToplami.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcIndirimToplami.Properties.DisplayFormat.FormatString = "C2";
-            this.calcIndirimToplami.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.calcIndirimToplami.Properties.EditFormat.FormatString = "C2";
-            this.calcIndirimToplami.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.calcIndirimToplami.Properties.Mask.EditMask = "C";
-            this.calcIndirimToplami.Properties.NullText = "0,00";
-            this.calcIndirimToplami.Properties.ReadOnly = true;
-            this.calcIndirimToplami.Size = new System.Drawing.Size(164, 31);
-            this.calcIndirimToplami.TabIndex = 158;
-            // 
-            // labelControl20
-            // 
-            this.labelControl20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl20.Appearance.Options.UseTextOptions = true;
-            this.labelControl20.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl20.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl20.Location = new System.Drawing.Point(461, 29);
-            this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(96, 23);
-            this.labelControl20.TabIndex = 151;
-            this.labelControl20.Text = "Ödenen Tutar :";
-            // 
-            // calcAcikHesapBakiye
-            // 
-            this.calcAcikHesapBakiye.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcAcikHesapBakiye.Location = new System.Drawing.Point(563, 76);
-            this.calcAcikHesapBakiye.Name = "calcAcikHesapBakiye";
-            this.calcAcikHesapBakiye.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.calcAcikHesapBakiye.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.calcAcikHesapBakiye.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.calcAcikHesapBakiye.Properties.Appearance.Options.UseBackColor = true;
-            this.calcAcikHesapBakiye.Properties.Appearance.Options.UseFont = true;
-            this.calcAcikHesapBakiye.Properties.Appearance.Options.UseForeColor = true;
-            this.calcAcikHesapBakiye.Properties.Appearance.Options.UseTextOptions = true;
-            this.calcAcikHesapBakiye.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.calcAcikHesapBakiye.Properties.AutoHeight = false;
-            this.calcAcikHesapBakiye.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcAcikHesapBakiye.Properties.DisplayFormat.FormatString = "C2";
-            this.calcAcikHesapBakiye.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.calcAcikHesapBakiye.Properties.EditFormat.FormatString = "C2";
-            this.calcAcikHesapBakiye.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.calcAcikHesapBakiye.Properties.Mask.EditMask = "C";
-            this.calcAcikHesapBakiye.Properties.NullText = "0,00";
-            this.calcAcikHesapBakiye.Properties.ReadOnly = true;
-            this.calcAcikHesapBakiye.Size = new System.Drawing.Size(164, 32);
-            this.calcAcikHesapBakiye.TabIndex = 160;
-            // 
-            // labelControl23
-            // 
-            this.labelControl23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl23.Appearance.Options.UseTextOptions = true;
-            this.labelControl23.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl23.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl23.Location = new System.Drawing.Point(983, 27);
-            this.labelControl23.Name = "labelControl23";
-            this.labelControl23.Size = new System.Drawing.Size(80, 25);
-            this.labelControl23.TabIndex = 150;
-            this.labelControl23.Text = "Ara Toplam :";
-            // 
-            // calcKdvToplam
-            // 
-            this.calcKdvToplam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcKdvToplam.Location = new System.Drawing.Point(1069, 49);
-            this.calcKdvToplam.Name = "calcKdvToplam";
-            this.calcKdvToplam.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.calcKdvToplam.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.calcKdvToplam.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.calcKdvToplam.Properties.Appearance.Options.UseBackColor = true;
-            this.calcKdvToplam.Properties.Appearance.Options.UseFont = true;
-            this.calcKdvToplam.Properties.Appearance.Options.UseForeColor = true;
-            this.calcKdvToplam.Properties.Appearance.Options.UseTextOptions = true;
-            this.calcKdvToplam.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.calcKdvToplam.Properties.AutoHeight = false;
-            this.calcKdvToplam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcKdvToplam.Properties.DisplayFormat.FormatString = "C2";
-            this.calcKdvToplam.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.calcKdvToplam.Properties.EditFormat.FormatString = "C2";
-            this.calcKdvToplam.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.calcKdvToplam.Properties.Mask.EditMask = "C";
-            this.calcKdvToplam.Properties.NullText = "0,00";
-            this.calcKdvToplam.Properties.ReadOnly = true;
-            this.calcKdvToplam.Size = new System.Drawing.Size(167, 31);
-            this.calcKdvToplam.TabIndex = 157;
-            // 
-            // labelControl18
-            // 
-            this.labelControl18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl18.Appearance.Options.UseTextOptions = true;
-            this.labelControl18.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl18.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl18.Location = new System.Drawing.Point(744, 52);
-            this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(69, 20);
-            this.labelControl18.TabIndex = 152;
-            this.labelControl18.Text = "İndirim Oranı :";
-            // 
-            // calcGenelToplam
-            // 
-            this.calcGenelToplam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcGenelToplam.Location = new System.Drawing.Point(1069, 76);
-            this.calcGenelToplam.Name = "calcGenelToplam";
-            this.calcGenelToplam.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.calcGenelToplam.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.calcGenelToplam.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.calcGenelToplam.Properties.Appearance.Options.UseBackColor = true;
-            this.calcGenelToplam.Properties.Appearance.Options.UseFont = true;
-            this.calcGenelToplam.Properties.Appearance.Options.UseForeColor = true;
-            this.calcGenelToplam.Properties.Appearance.Options.UseTextOptions = true;
-            this.calcGenelToplam.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.calcGenelToplam.Properties.AutoHeight = false;
-            this.calcGenelToplam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcGenelToplam.Properties.DisplayFormat.FormatString = "C2";
-            this.calcGenelToplam.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.calcGenelToplam.Properties.EditFormat.FormatString = "C2";
-            this.calcGenelToplam.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.calcGenelToplam.Properties.Mask.EditMask = "C";
-            this.calcGenelToplam.Properties.NullText = "0,00";
-            this.calcGenelToplam.Properties.ReadOnly = true;
-            this.calcGenelToplam.Size = new System.Drawing.Size(167, 32);
-            this.calcGenelToplam.TabIndex = 155;
-            // 
-            // labelControl17
-            // 
-            this.labelControl17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl17.Appearance.Options.UseTextOptions = true;
-            this.labelControl17.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl17.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl17.Location = new System.Drawing.Point(733, 26);
-            this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(80, 25);
-            this.labelControl17.TabIndex = 153;
-            this.labelControl17.Text = "İndirim Toplam :";
-            // 
-            // calcAraToplam
-            // 
-            this.calcAraToplam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcAraToplam.Location = new System.Drawing.Point(1069, 23);
-            this.calcAraToplam.Name = "calcAraToplam";
-            this.calcAraToplam.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.calcAraToplam.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.calcAraToplam.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.calcAraToplam.Properties.Appearance.Options.UseBackColor = true;
-            this.calcAraToplam.Properties.Appearance.Options.UseFont = true;
-            this.calcAraToplam.Properties.Appearance.Options.UseForeColor = true;
-            this.calcAraToplam.Properties.Appearance.Options.UseTextOptions = true;
-            this.calcAraToplam.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.calcAraToplam.Properties.AutoHeight = false;
-            this.calcAraToplam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcAraToplam.Properties.DisplayFormat.FormatString = "C2";
-            this.calcAraToplam.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.calcAraToplam.Properties.EditFormat.FormatString = "C2";
-            this.calcAraToplam.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.calcAraToplam.Properties.Mask.EditMask = "C";
-            this.calcAraToplam.Properties.NullText = "0,00";
-            this.calcAraToplam.Properties.ReadOnly = true;
-            this.calcAraToplam.Size = new System.Drawing.Size(167, 31);
-            this.calcAraToplam.TabIndex = 156;
-            // 
-            // labelControl19
-            // 
-            this.labelControl19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl19.Appearance.Options.UseTextOptions = true;
-            this.labelControl19.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl19.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl19.Location = new System.Drawing.Point(733, 80);
-            this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(80, 21);
-            this.labelControl19.TabIndex = 145;
-            this.labelControl19.Text = "İndirim Tutarı :";
-            // 
-            // groupControl5
-            // 
-            this.groupControl5.Controls.Add(this.labelControl19);
-            this.groupControl5.Controls.Add(this.calcAraToplam);
-            this.groupControl5.Controls.Add(this.labelControl17);
-            this.groupControl5.Controls.Add(this.calcGenelToplam);
-            this.groupControl5.Controls.Add(this.labelControl18);
-            this.groupControl5.Controls.Add(this.calcKdvToplam);
-            this.groupControl5.Controls.Add(this.labelControl23);
-            this.groupControl5.Controls.Add(this.calcAcikHesapBakiye);
-            this.groupControl5.Controls.Add(this.labelControl20);
-            this.groupControl5.Controls.Add(this.calcIndirimToplami);
-            this.groupControl5.Controls.Add(this.labelControl24);
-            this.groupControl5.Controls.Add(this.calcIndirimTutari);
-            this.groupControl5.Controls.Add(this.labelControl25);
-            this.groupControl5.Controls.Add(this.calcOdenemesiGereken);
-            this.groupControl5.Controls.Add(this.labelControl21);
-            this.groupControl5.Controls.Add(this.calcIndirimOrani);
-            this.groupControl5.Controls.Add(this.labelControl22);
-            this.groupControl5.Controls.Add(this.calcOdenenTutar);
-            this.groupControl5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl5.Location = new System.Drawing.Point(0, 450);
-            this.groupControl5.Name = "groupControl5";
-            this.groupControl5.ShowCaption = false;
-            this.groupControl5.Size = new System.Drawing.Size(1238, 113);
-            this.groupControl5.TabIndex = 129;
-            this.groupControl5.Text = "groupControl5";
-            // 
-            // lblSatirSayisi
-            // 
-            this.lblSatirSayisi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSatirSayisi.Appearance.Options.UseTextOptions = true;
-            this.lblSatirSayisi.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblSatirSayisi.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblSatirSayisi.Location = new System.Drawing.Point(1175, 3);
-            this.lblSatirSayisi.Name = "lblSatirSayisi";
-            this.lblSatirSayisi.Size = new System.Drawing.Size(49, 14);
-            this.lblSatirSayisi.TabIndex = 127;
-            this.lblSatirSayisi.Text = "Count";
-            this.lblSatirSayisi.Visible = false;
-            // 
-            // labelControl26
-            // 
-            this.labelControl26.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl26.Appearance.Options.UseTextOptions = true;
-            this.labelControl26.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl26.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl26.Location = new System.Drawing.Point(1110, 3);
-            this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(61, 14);
-            this.labelControl26.TabIndex = 127;
-            this.labelControl26.Text = "Satır Sayısı :";
-            this.labelControl26.Visible = false;
-            // 
-            // groupControl3
-            // 
-            this.groupControl3.Controls.Add(this.labelControl26);
-            this.groupControl3.Controls.Add(this.lblSatirSayisi);
-            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl3.Location = new System.Drawing.Point(0, 428);
-            this.groupControl3.Name = "groupControl3";
-            this.groupControl3.ShowCaption = false;
-            this.groupControl3.Size = new System.Drawing.Size(1238, 22);
-            this.groupControl3.TabIndex = 128;
-            this.groupControl3.Text = "groupControl3";
             // 
             // frmFisIslem
             // 
@@ -3194,6 +3217,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).EndInit();
             this.tabPane1.ResumeLayout(false);
             this.tabNavigationPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
+            this.groupControl5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.calcAraToplam.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcGenelToplam.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcKdvToplam.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcAcikHesapBakiye.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcIndirimToplami.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcIndirimTutari.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcOdenemesiGereken.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcIndirimOrani.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcOdenenTutar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navMasraf)).EndInit();
             this.navMasraf.ResumeLayout(false);
             this.navSatisEkrani.ResumeLayout(false);
@@ -3257,19 +3293,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtFisTuru.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcOdenenTutar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcIndirimOrani.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcOdenemesiGereken.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcIndirimTutari.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcIndirimToplami.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcAcikHesapBakiye.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcKdvToplam.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcGenelToplam.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcAraToplam.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
-            this.groupControl5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
-            this.groupControl3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

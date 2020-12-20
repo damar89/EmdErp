@@ -735,9 +735,10 @@ namespace NetSatis.FrontOffice
                 cagrilanSatisId = -1;
             }
             FisTemizle();
-            string FisKoduBilgisi = SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_PesFisKodu);
-            SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisAyarlari_PesFisKodu, Convert.ToString(Convert.ToInt32(FisKoduBilgisi) + 1));
-            SettingsTool.Save();
+            //string FisKoduBilgisi = SettingsTool.AyarOku(SettingsTool.Ayarlar.SatisAyarlari_PesFisKodu);
+            int FisKoduBilgisi = fisNo;
+            //SettingsTool.AyarDegistir(SettingsTool.Ayarlar.SatisAyarlari_PesFisKodu, Convert.ToString(Convert.ToInt32(FisKoduBilgisi) + 1));
+            //SettingsTool.Save();
             context.Configuration.AutoDetectChangesEnabled = true;
             Ayar fisayar = context.Ayarlar.First();
             fisayar.HizliSatisSiradakiNo += 1;
@@ -1509,7 +1510,7 @@ namespace NetSatis.FrontOffice
         {
             frmKasaTarih form = new frmKasaTarih();
             form.Show();
-          
+
         }
         private void btnSatisRpr_Click(object sender, EventArgs e)
         {
@@ -1690,7 +1691,7 @@ namespace NetSatis.FrontOffice
             decimal tumGridinSatirIndirimSonrasiToplami = 0;
             foreach (StokHareket item in context.StokHareketleri.Local)
             {
-                decimal satirTutari = Math.Round((item.Miktar*item.BirimFiyati).Value,2);
+                decimal satirTutari = Math.Round((item.Miktar * item.BirimFiyati).Value, 2);
                 tumGridinSatirIndirimSonrasiToplami += satirTutari - satirTutari * Convert.ToDecimal(item.IndirimOrani) / 100;
             }
             foreach (StokHareket item in context.StokHareketleri.Local)
@@ -1805,10 +1806,10 @@ namespace NetSatis.FrontOffice
             txtAraToplam2.EditValue = toplamAraToplam - toplamKdvToplam;
             txtAraToplam2.EditValue = toplamAraToplam;
             txtAraToplam.EditValue = toplamAraToplam - toplamKdvToplam;
-            txtAraToplam.EditValue = Math.Round(toplamAraToplam.Value,4);
+            txtAraToplam.EditValue = Math.Round(toplamAraToplam.Value, 4);
             calcGenelToplam.EditValue = Math.Round(toplamGenelToplam.Value, 2);
             calcIndirimToplami.EditValue = Math.Round(toplamSatirIndirimTutari);
-            calcOdenemesiGereken.EditValue = Math.Round((toplamGenelToplam - calcOdenenTutar.Value).Value,2);
+            calcOdenemesiGereken.EditValue = Math.Round((toplamGenelToplam - calcOdenenTutar.Value).Value, 2);
             txtParaUstu.Value = txtOdenenTutar.Value - calcGenelToplam.Value;
             calcMaliyet.Value = Convert.ToDecimal(colMaliyetTutar.SummaryItem.SummaryValue);
             lblKalemSayisi.Text = Convert.ToString(colMiktar.SummaryItem.SummaryValue);
