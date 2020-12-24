@@ -257,7 +257,7 @@ namespace NetSatis.BackOffice.Stok
         {
             int kayitsayisi; // kayıt sayısını tutacak değişkenimiz
             kayitsayisi = Convert.ToInt32(gridView1.RowCount);
-            layGroupKayitSayisi.Text = $"Listelenen Kayıt Sayısı: { kayitsayisi.ToString() }";
+            layGroupStokSayisi.Value =Convert.ToDecimal(kayitsayisi);
         }
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -411,7 +411,7 @@ namespace NetSatis.BackOffice.Stok
             tokenSource.Cancel();
             tokenSource.Dispose();
             tokenSource = new CancellationTokenSource();
-            await Sorgula(tokenSource.Token); 
+            await Sorgula(tokenSource.Token);
 
 
         }
