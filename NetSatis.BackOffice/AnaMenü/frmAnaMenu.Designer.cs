@@ -177,6 +177,10 @@
             this.barSatisIrsaliyesi = new DevExpress.XtraBars.BarButtonItem();
             this.barAlinanTeklif = new DevExpress.XtraBars.BarButtonItem();
             this.barVerilenTeklif = new DevExpress.XtraBars.BarButtonItem();
+            this.barIrsaliyeListeleri = new DevExpress.XtraBars.BarButtonItem();
+            this.barSiparisListeleri = new DevExpress.XtraBars.BarButtonItem();
+            this.barTeklifListeleri = new DevExpress.XtraBars.BarButtonItem();
+            this.barFaturaListeleri = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -235,10 +239,6 @@
             this.ribbonPage14 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage16 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage17 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.barIrsaliyeListeleri = new DevExpress.XtraBars.BarButtonItem();
-            this.barSiparisListeleri = new DevExpress.XtraBars.BarButtonItem();
-            this.barTeklifListeleri = new DevExpress.XtraBars.BarButtonItem();
-            this.barFaturaListeleri = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
@@ -1416,6 +1416,34 @@
             this.barVerilenTeklif.Name = "barVerilenTeklif";
             this.barVerilenTeklif.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.FisIslem_Click);
             // 
+            // barIrsaliyeListeleri
+            // 
+            this.barIrsaliyeListeleri.Caption = "İrsaliye Listeleri";
+            this.barIrsaliyeListeleri.Id = 130;
+            this.barIrsaliyeListeleri.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barIrsaliyeListeleri.ImageOptions.SvgImage")));
+            this.barIrsaliyeListeleri.Name = "barIrsaliyeListeleri";
+            // 
+            // barSiparisListeleri
+            // 
+            this.barSiparisListeleri.Caption = "Sipariş Listeleri";
+            this.barSiparisListeleri.Id = 131;
+            this.barSiparisListeleri.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barSiparisListeleri.ImageOptions.SvgImage")));
+            this.barSiparisListeleri.Name = "barSiparisListeleri";
+            // 
+            // barTeklifListeleri
+            // 
+            this.barTeklifListeleri.Caption = "Teklif Listeleri";
+            this.barTeklifListeleri.Id = 132;
+            this.barTeklifListeleri.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barTeklifListeleri.ImageOptions.SvgImage")));
+            this.barTeklifListeleri.Name = "barTeklifListeleri";
+            // 
+            // barFaturaListeleri
+            // 
+            this.barFaturaListeleri.Caption = "Fatura Listeleri";
+            this.barFaturaListeleri.Id = 133;
+            this.barFaturaListeleri.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barFaturaListeleri.ImageOptions.SvgImage")));
+            this.barFaturaListeleri.Name = "barFaturaListeleri";
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -2144,34 +2172,6 @@
             // 
             this.ribbonPage17.Name = "ribbonPage17";
             this.ribbonPage17.Text = "ribbonPage17";
-            // 
-            // barIrsaliyeListeleri
-            // 
-            this.barIrsaliyeListeleri.Caption = "İrsaliye Listeleri";
-            this.barIrsaliyeListeleri.Id = 130;
-            this.barIrsaliyeListeleri.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barIrsaliyeListeleri.ImageOptions.SvgImage")));
-            this.barIrsaliyeListeleri.Name = "barIrsaliyeListeleri";
-            // 
-            // barSiparisListeleri
-            // 
-            this.barSiparisListeleri.Caption = "Sipariş Listeleri";
-            this.barSiparisListeleri.Id = 131;
-            this.barSiparisListeleri.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barSiparisListeleri.ImageOptions.SvgImage")));
-            this.barSiparisListeleri.Name = "barSiparisListeleri";
-            // 
-            // barTeklifListeleri
-            // 
-            this.barTeklifListeleri.Caption = "Teklif Listeleri";
-            this.barTeklifListeleri.Id = 132;
-            this.barTeklifListeleri.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barTeklifListeleri.ImageOptions.SvgImage")));
-            this.barTeklifListeleri.Name = "barTeklifListeleri";
-            // 
-            // barFaturaListeleri
-            // 
-            this.barFaturaListeleri.Caption = "Fatura Listeleri";
-            this.barFaturaListeleri.Id = 133;
-            this.barFaturaListeleri.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barFaturaListeleri.ImageOptions.SvgImage")));
-            this.barFaturaListeleri.Name = "barFaturaListeleri";
             // 
             // frmAnaMenu
             // 

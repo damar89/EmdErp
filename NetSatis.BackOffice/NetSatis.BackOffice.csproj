@@ -875,12 +875,6 @@
     <Compile Include="Stok\rptBarkodRaf.Designer.cs">
       <DependentUpon>rptBarkodRaf.cs</DependentUpon>
     </Compile>
-    <Compile Include="Stok\XtraForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Stok\XtraForm1.Designer.cs">
-      <DependentUpon>XtraForm1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tanım\FirmaSabitIslem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1390,9 +1384,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Stok\rptBarkodRaf.resx">
       <DependentUpon>rptBarkodRaf.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Stok\XtraForm1.resx">
-      <DependentUpon>XtraForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tanım\FirmaSabitIslem.resx">
       <DependentUpon>FirmaSabitIslem.cs</DependentUpon>
