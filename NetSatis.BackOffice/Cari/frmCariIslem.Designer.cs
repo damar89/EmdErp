@@ -96,6 +96,7 @@
             DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression2 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
             DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression3 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
+            this.colDurum = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
@@ -141,6 +142,7 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtCariAdi = new DevExpress.XtraEditors.ButtonEdit();
             this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.txtOzelkod4 = new DevExpress.XtraEditors.ButtonEdit();
             this.txtOzelkod3 = new DevExpress.XtraEditors.ButtonEdit();
@@ -149,6 +151,7 @@
             this.calcRisklimit = new DevExpress.XtraEditors.CalcEdit();
             this.calcIskonto = new DevExpress.XtraEditors.CalcEdit();
             this.cmbSinif = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.toggleSwitch1 = new DevExpress.XtraEditors.ToggleSwitch();
             this.togDurum = new DevExpress.XtraEditors.ToggleSwitch();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
@@ -157,28 +160,9 @@
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSil = new DevExpress.XtraEditors.SimpleButton();
-            this.btnYeni = new DevExpress.XtraEditors.SimpleButton();
-            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCariEkstreDokumu = new DevExpress.XtraEditors.SimpleButton();
-            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl29 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
-            this.dtpBitis = new DevExpress.XtraEditors.DateEdit();
-            this.dtpBaslangic = new DevExpress.XtraEditors.DateEdit();
             this.gridContCariHareket = new DevExpress.XtraGrid.GridControl();
             this.gridCariHareket = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTarih = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -198,16 +182,33 @@
             this.colIskontoTutari3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colToplamTutar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAciklama = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDurum = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOdenen = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKalanTutar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAktifTutar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSeri = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSira = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFaturaFisKodu = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
-            this.toggleSwitch1 = new DevExpress.XtraEditors.ToggleSwitch();
-            this.txtCariAdi = new DevExpress.XtraEditors.ButtonEdit();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl29 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
+            this.dtpBitis = new DevExpress.XtraEditors.DateEdit();
+            this.dtpBaslangic = new DevExpress.XtraEditors.DateEdit();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.btnCariEkstreDokumu = new DevExpress.XtraEditors.SimpleButton();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSil = new DevExpress.XtraEditors.SimpleButton();
+            this.btnYeni = new DevExpress.XtraEditors.SimpleButton();
+            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
+            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
+            this.checStokDetay = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
@@ -232,6 +233,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtYetkiliKisi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCariTuru.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCariAdi.Properties)).BeginInit();
             this.tabNavigationPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtOzelkod4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOzelkod3.Properties)).BeginInit();
@@ -240,25 +242,35 @@
             ((System.ComponentModel.ISupportInitialize)(this.calcRisklimit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcIskonto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSinif.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.togDurum.Properties)).BeginInit();
             this.tabNavigationPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-            this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
-            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridContCariHareket)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridCariHareket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpBitis.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpBitis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpBaslangic.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpBaslangic.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridContCariHareket)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridCariHareket)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCariAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checStokDetay.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // colDurum
+            // 
+            this.colDurum.AppearanceCell.Options.UseTextOptions = true;
+            this.colDurum.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDurum.Caption = "Durum";
+            this.colDurum.FieldName = "Durum";
+            this.colDurum.Name = "colDurum";
+            this.colDurum.OptionsColumn.AllowEdit = false;
+            this.colDurum.Width = 47;
             // 
             // ımageList1
             // 
@@ -280,7 +292,7 @@
             this.tabNavigationPage2,
             this.tabNavigationPage3});
             this.tabPane1.RegularSize = new System.Drawing.Size(686, 550);
-            this.tabPane1.SelectedPage = this.tabNavigationPage2;
+            this.tabPane1.SelectedPage = this.tabNavigationPage1;
             this.tabPane1.Size = new System.Drawing.Size(686, 550);
             this.tabPane1.TabIndex = 34;
             this.tabPane1.Text = "Bilgiler";
@@ -331,14 +343,14 @@
             this.tabNavigationPage1.Controls.Add(this.labelControl2);
             this.tabNavigationPage1.Controls.Add(this.txtCariAdi);
             this.tabNavigationPage1.Name = "tabNavigationPage1";
-            this.tabNavigationPage1.Size = new System.Drawing.Size(686, 521);
+            this.tabNavigationPage1.Size = new System.Drawing.Size(686, 525);
             this.tabNavigationPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.tabNavigationPage1_Paint);
             // 
             // txtWeb
             // 
-            this.txtWeb.Location = new System.Drawing.Point(536, 233);
+            this.txtWeb.Location = new System.Drawing.Point(519, 233);
             this.txtWeb.Name = "txtWeb";
-            this.txtWeb.Size = new System.Drawing.Size(122, 20);
+            this.txtWeb.Size = new System.Drawing.Size(134, 20);
             this.txtWeb.TabIndex = 60;
             // 
             // txtEmail
@@ -386,11 +398,11 @@
             // 
             // txtCepTel3
             // 
-            this.txtCepTel3.Location = new System.Drawing.Point(536, 210);
+            this.txtCepTel3.Location = new System.Drawing.Point(519, 210);
             this.txtCepTel3.Name = "txtCepTel3";
             this.txtCepTel3.Properties.Mask.EditMask = "(\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
             this.txtCepTel3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
-            this.txtCepTel3.Size = new System.Drawing.Size(117, 20);
+            this.txtCepTel3.Size = new System.Drawing.Size(134, 20);
             this.txtCepTel3.TabIndex = 56;
             // 
             // txtAltGrubu
@@ -403,7 +415,7 @@
             this.txtAltGrubu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.txtAltGrubu.Size = new System.Drawing.Size(275, 24);
+            this.txtAltGrubu.Size = new System.Drawing.Size(275, 22);
             this.txtAltGrubu.TabIndex = 53;
             // 
             // txtCariGrubu
@@ -416,7 +428,7 @@
             this.txtCariGrubu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.txtCariGrubu.Size = new System.Drawing.Size(201, 24);
+            this.txtCariGrubu.Size = new System.Drawing.Size(201, 22);
             this.txtCariGrubu.TabIndex = 52;
             // 
             // txtAdres
@@ -472,6 +484,7 @@
             this.txtFaturaUnvani.Properties.MaxLength = 250;
             this.txtFaturaUnvani.Size = new System.Drawing.Size(561, 20);
             this.txtFaturaUnvani.TabIndex = 43;
+            this.txtFaturaUnvani.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFaturaUnvani_KeyDown);
             // 
             // txtVergiDairesi
             // 
@@ -510,7 +523,7 @@
             "Tedarikçi",
             "Tedarikçi + Müşteri"});
             this.cmbCariTuru.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmbCariTuru.Size = new System.Drawing.Size(142, 20);
+            this.cmbCariTuru.Size = new System.Drawing.Size(148, 20);
             this.cmbCariTuru.TabIndex = 39;
             // 
             // txtKod
@@ -581,9 +594,9 @@
             this.labelControl24.Appearance.Options.UseTextOptions = true;
             this.labelControl24.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl24.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl24.Location = new System.Drawing.Point(436, 211);
+            this.labelControl24.Location = new System.Drawing.Point(435, 211);
             this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(94, 19);
+            this.labelControl24.Size = new System.Drawing.Size(78, 19);
             this.labelControl24.TabIndex = 34;
             this.labelControl24.Text = "Cep Telefon3 :";
             // 
@@ -614,7 +627,7 @@
             this.labelControl28.Appearance.Options.UseTextOptions = true;
             this.labelControl28.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl28.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl28.Location = new System.Drawing.Point(460, 234);
+            this.labelControl28.Location = new System.Drawing.Point(443, 234);
             this.labelControl28.Name = "labelControl28";
             this.labelControl28.Size = new System.Drawing.Size(70, 19);
             this.labelControl28.TabIndex = 34;
@@ -741,6 +754,18 @@
             this.labelControl2.TabIndex = 36;
             this.labelControl2.Text = "Cari Kodu :";
             // 
+            // txtCariAdi
+            // 
+            this.txtCariAdi.EditValue = "";
+            this.txtCariAdi.Location = new System.Drawing.Point(89, 30);
+            this.txtCariAdi.Name = "txtCariAdi";
+            this.txtCariAdi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtCariAdi.Properties.MaxLength = 500;
+            this.txtCariAdi.Size = new System.Drawing.Size(561, 20);
+            this.txtCariAdi.TabIndex = 42;
+            this.txtCariAdi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCariAdi_KeyDown);
+            // 
             // tabNavigationPage2
             // 
             this.tabNavigationPage2.Caption = "Detaylar";
@@ -763,7 +788,7 @@
             this.tabNavigationPage2.Controls.Add(this.labelControl31);
             this.tabNavigationPage2.Controls.Add(this.labelControl1);
             this.tabNavigationPage2.Name = "tabNavigationPage2";
-            this.tabNavigationPage2.Size = new System.Drawing.Size(686, 521);
+            this.tabNavigationPage2.Size = new System.Drawing.Size(686, 525);
             // 
             // txtOzelkod4
             // 
@@ -775,7 +800,7 @@
             this.txtOzelkod4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.txtOzelkod4.Size = new System.Drawing.Size(173, 24);
+            this.txtOzelkod4.Size = new System.Drawing.Size(173, 22);
             this.txtOzelkod4.TabIndex = 54;
             // 
             // txtOzelkod3
@@ -788,7 +813,7 @@
             this.txtOzelkod3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject25, serializableAppearanceObject26, serializableAppearanceObject27, serializableAppearanceObject28, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject29, serializableAppearanceObject30, serializableAppearanceObject31, serializableAppearanceObject32, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.txtOzelkod3.Size = new System.Drawing.Size(173, 24);
+            this.txtOzelkod3.Size = new System.Drawing.Size(173, 22);
             this.txtOzelkod3.TabIndex = 53;
             // 
             // txtOzelkod2
@@ -801,7 +826,7 @@
             this.txtOzelkod2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions9, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject33, serializableAppearanceObject34, serializableAppearanceObject35, serializableAppearanceObject36, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions10, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject37, serializableAppearanceObject38, serializableAppearanceObject39, serializableAppearanceObject40, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.txtOzelkod2.Size = new System.Drawing.Size(170, 24);
+            this.txtOzelkod2.Size = new System.Drawing.Size(170, 22);
             this.txtOzelkod2.TabIndex = 52;
             // 
             // txtOzelkod1
@@ -814,7 +839,7 @@
             this.txtOzelkod1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions11, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F6), serializableAppearanceObject41, serializableAppearanceObject42, serializableAppearanceObject43, serializableAppearanceObject44, "", null, null, DevExpress.Utils.ToolTipAnchor.Default),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions12, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject45, serializableAppearanceObject46, serializableAppearanceObject47, serializableAppearanceObject48, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.txtOzelkod1.Size = new System.Drawing.Size(170, 24);
+            this.txtOzelkod1.Size = new System.Drawing.Size(170, 22);
             this.txtOzelkod1.TabIndex = 51;
             // 
             // calcRisklimit
@@ -848,6 +873,16 @@
             this.cmbSinif.Size = new System.Drawing.Size(170, 20);
             this.cmbSinif.TabIndex = 40;
             // 
+            // toggleSwitch1
+            // 
+            this.toggleSwitch1.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.toggleSwitch1.Location = new System.Drawing.Point(70, 36);
+            this.toggleSwitch1.Name = "toggleSwitch1";
+            this.toggleSwitch1.Properties.OffText = "Hayır";
+            this.toggleSwitch1.Properties.OnText = "Evet";
+            this.toggleSwitch1.Size = new System.Drawing.Size(102, 24);
+            this.toggleSwitch1.TabIndex = 39;
+            // 
             // togDurum
             // 
             this.togDurum.EditValue = true;
@@ -856,7 +891,7 @@
             this.togDurum.Name = "togDurum";
             this.togDurum.Properties.OffText = "Pasif";
             this.togDurum.Properties.OnText = "Aktif";
-            this.togDurum.Size = new System.Drawing.Size(102, 18);
+            this.togDurum.Size = new System.Drawing.Size(102, 24);
             this.togDurum.TabIndex = 39;
             // 
             // labelControl21
@@ -936,6 +971,17 @@
             this.labelControl11.TabIndex = 38;
             this.labelControl11.Text = "Sınıf :";
             // 
+            // labelControl31
+            // 
+            this.labelControl31.Appearance.Options.UseTextOptions = true;
+            this.labelControl31.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl31.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl31.Location = new System.Drawing.Point(3, 36);
+            this.labelControl31.Name = "labelControl31";
+            this.labelControl31.Size = new System.Drawing.Size(61, 20);
+            this.labelControl31.TabIndex = 38;
+            this.labelControl31.Text = "Efatura mı? :";
+            // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Options.UseTextOptions = true;
@@ -955,266 +1001,7 @@
             this.tabNavigationPage3.Controls.Add(this.groupControl3);
             this.tabNavigationPage3.Controls.Add(this.groupControl2);
             this.tabNavigationPage3.Name = "tabNavigationPage3";
-            this.tabNavigationPage3.Size = new System.Drawing.Size(686, 521);
-            // 
-            // groupControl1
-            // 
-            this.groupControl1.Controls.Add(this.simpleButton1);
-            this.groupControl1.Controls.Add(this.btnSil);
-            this.groupControl1.Controls.Add(this.btnYeni);
-            this.groupControl1.Controls.Add(this.btnKaydet);
-            this.groupControl1.Controls.Add(this.btnKapat);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(0, 500);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(686, 50);
-            this.groupControl1.TabIndex = 35;
-            this.groupControl1.Text = "groupControl1";
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.ImageOptions.ImageIndex = 0;
-            this.simpleButton1.Location = new System.Drawing.Point(401, 9);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(93, 36);
-            this.simpleButton1.TabIndex = 51;
-            this.simpleButton1.Text = "Kaydet\r\nYeni";
-            // 
-            // btnSil
-            // 
-            this.btnSil.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSil.ImageOptions.Image")));
-            this.btnSil.ImageOptions.ImageIndex = 0;
-            this.btnSil.Location = new System.Drawing.Point(207, 9);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(93, 36);
-            this.btnSil.TabIndex = 51;
-            this.btnSil.Text = "Sil";
-            // 
-            // btnYeni
-            // 
-            this.btnYeni.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnYeni.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnYeni.ImageOptions.Image")));
-            this.btnYeni.ImageOptions.ImageIndex = 0;
-            this.btnYeni.Location = new System.Drawing.Point(305, 9);
-            this.btnYeni.Name = "btnYeni";
-            this.btnYeni.Size = new System.Drawing.Size(93, 36);
-            this.btnYeni.TabIndex = 51;
-            this.btnYeni.Text = "Yeni";
-            // 
-            // btnKaydet
-            // 
-            this.btnKaydet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
-            this.btnKaydet.ImageOptions.ImageIndex = 0;
-            this.btnKaydet.Location = new System.Drawing.Point(498, 9);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(93, 36);
-            this.btnKaydet.TabIndex = 51;
-            this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
-            // 
-            // btnKapat
-            // 
-            this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKapat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.ImageOptions.Image")));
-            this.btnKapat.ImageOptions.ImageIndex = 1;
-            this.btnKapat.Location = new System.Drawing.Point(594, 9);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(92, 36);
-            this.btnKapat.TabIndex = 52;
-            this.btnKapat.Text = " Kapat";
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
-            // 
-            // groupControl2
-            // 
-            this.groupControl2.Controls.Add(this.simpleButton2);
-            this.groupControl2.Controls.Add(this.simpleButton3);
-            this.groupControl2.Controls.Add(this.simpleButton4);
-            this.groupControl2.Controls.Add(this.simpleButton5);
-            this.groupControl2.Controls.Add(this.simpleButton6);
-            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl2.Location = new System.Drawing.Point(0, 471);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.ShowCaption = false;
-            this.groupControl2.Size = new System.Drawing.Size(686, 50);
-            this.groupControl2.TabIndex = 36;
-            this.groupControl2.Text = "groupControl2";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.ImageOptions.ImageIndex = 0;
-            this.simpleButton2.Location = new System.Drawing.Point(401, 9);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(93, 36);
-            this.simpleButton2.TabIndex = 51;
-            this.simpleButton2.Text = "Kaydet\r\nYeni";
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.ImageOptions.ImageIndex = 0;
-            this.simpleButton3.Location = new System.Drawing.Point(207, 9);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(93, 36);
-            this.simpleButton3.TabIndex = 51;
-            this.simpleButton3.Text = "Sil";
-            // 
-            // simpleButton4
-            // 
-            this.simpleButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.ImageOptions.ImageIndex = 0;
-            this.simpleButton4.Location = new System.Drawing.Point(305, 9);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(93, 36);
-            this.simpleButton4.TabIndex = 51;
-            this.simpleButton4.Text = "Yeni";
-            // 
-            // simpleButton5
-            // 
-            this.simpleButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.ImageOptions.ImageIndex = 0;
-            this.simpleButton5.Location = new System.Drawing.Point(498, 9);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(93, 36);
-            this.simpleButton5.TabIndex = 51;
-            this.simpleButton5.Text = "Kaydet";
-            // 
-            // simpleButton6
-            // 
-            this.simpleButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
-            this.simpleButton6.ImageOptions.ImageIndex = 1;
-            this.simpleButton6.Location = new System.Drawing.Point(594, 9);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(92, 36);
-            this.simpleButton6.TabIndex = 52;
-            this.simpleButton6.Text = " Kapat";
-            // 
-            // groupControl3
-            // 
-            this.groupControl3.Controls.Add(this.simpleButton7);
-            this.groupControl3.Controls.Add(this.btnCariEkstreDokumu);
-            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl3.Location = new System.Drawing.Point(0, 438);
-            this.groupControl3.Name = "groupControl3";
-            this.groupControl3.ShowCaption = false;
-            this.groupControl3.Size = new System.Drawing.Size(686, 33);
-            this.groupControl3.TabIndex = 37;
-            this.groupControl3.Text = "groupControl3";
-            // 
-            // simpleButton7
-            // 
-            this.simpleButton7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton7.ImageOptions.ImageIndex = 2;
-            this.simpleButton7.Location = new System.Drawing.Point(540, 1);
-            this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(141, 27);
-            this.simpleButton7.TabIndex = 15;
-            this.simpleButton7.Text = "Cari Ekstre Stok Detaylı";
-            // 
-            // btnCariEkstreDokumu
-            // 
-            this.btnCariEkstreDokumu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCariEkstreDokumu.ImageOptions.ImageIndex = 2;
-            this.btnCariEkstreDokumu.Location = new System.Drawing.Point(417, 1);
-            this.btnCariEkstreDokumu.Name = "btnCariEkstreDokumu";
-            this.btnCariEkstreDokumu.Size = new System.Drawing.Size(114, 30);
-            this.btnCariEkstreDokumu.TabIndex = 14;
-            this.btnCariEkstreDokumu.Text = "Cari Ekstre Dökümü";
-            // 
-            // groupControl4
-            // 
-            this.groupControl4.Controls.Add(this.labelControl29);
-            this.groupControl4.Controls.Add(this.labelControl30);
-            this.groupControl4.Controls.Add(this.dtpBitis);
-            this.groupControl4.Controls.Add(this.dtpBaslangic);
-            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl4.Location = new System.Drawing.Point(0, 0);
-            this.groupControl4.Name = "groupControl4";
-            this.groupControl4.ShowCaption = false;
-            this.groupControl4.Size = new System.Drawing.Size(686, 33);
-            this.groupControl4.TabIndex = 38;
-            this.groupControl4.Text = "groupControl4";
-            // 
-            // labelControl29
-            // 
-            this.labelControl29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelControl29.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl29.Appearance.Options.UseFont = true;
-            this.labelControl29.Location = new System.Drawing.Point(232, 7);
-            this.labelControl29.Name = "labelControl29";
-            this.labelControl29.Size = new System.Drawing.Size(32, 16);
-            this.labelControl29.TabIndex = 16;
-            this.labelControl29.Text = "Bitiş :";
-            // 
-            // labelControl30
-            // 
-            this.labelControl30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelControl30.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl30.Appearance.Options.UseFont = true;
-            this.labelControl30.Location = new System.Drawing.Point(5, 7);
-            this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(62, 16);
-            this.labelControl30.TabIndex = 15;
-            this.labelControl30.Text = "Başlangıç :";
-            // 
-            // dtpBitis
-            // 
-            this.dtpBitis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dtpBitis.EditValue = null;
-            this.dtpBitis.Location = new System.Drawing.Point(270, 2);
-            this.dtpBitis.Name = "dtpBitis";
-            this.dtpBitis.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.dtpBitis.Properties.AutoHeight = false;
-            this.dtpBitis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpBitis.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpBitis.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew;
-            this.dtpBitis.Properties.DisplayFormat.FormatString = "dd.MM.yyyy";
-            this.dtpBitis.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dtpBitis.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dtpBitis.Size = new System.Drawing.Size(147, 25);
-            this.dtpBitis.TabIndex = 13;
-            // 
-            // dtpBaslangic
-            // 
-            this.dtpBaslangic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dtpBaslangic.EditValue = null;
-            this.dtpBaslangic.Location = new System.Drawing.Point(76, 2);
-            this.dtpBaslangic.Name = "dtpBaslangic";
-            this.dtpBaslangic.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.dtpBaslangic.Properties.AutoHeight = false;
-            this.dtpBaslangic.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpBaslangic.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpBaslangic.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew;
-            this.dtpBaslangic.Properties.DisplayFormat.FormatString = "dd.MM.yyyy";
-            this.dtpBaslangic.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.dtpBaslangic.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dtpBaslangic.Size = new System.Drawing.Size(150, 25);
-            this.dtpBaslangic.TabIndex = 14;
+            this.tabNavigationPage3.Size = new System.Drawing.Size(686, 525);
             // 
             // gridContCariHareket
             // 
@@ -1222,7 +1009,7 @@
             this.gridContCariHareket.Location = new System.Drawing.Point(0, 33);
             this.gridContCariHareket.MainView = this.gridCariHareket;
             this.gridContCariHareket.Name = "gridContCariHareket";
-            this.gridContCariHareket.Size = new System.Drawing.Size(686, 405);
+            this.gridContCariHareket.Size = new System.Drawing.Size(686, 395);
             this.gridContCariHareket.TabIndex = 39;
             this.gridContCariHareket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridCariHareket});
@@ -1440,16 +1227,6 @@
             this.colAciklama.VisibleIndex = 5;
             this.colAciklama.Width = 47;
             // 
-            // colDurum
-            // 
-            this.colDurum.AppearanceCell.Options.UseTextOptions = true;
-            this.colDurum.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colDurum.Caption = "Durum";
-            this.colDurum.FieldName = "Durum";
-            this.colDurum.Name = "colDurum";
-            this.colDurum.OptionsColumn.AllowEdit = false;
-            this.colDurum.Width = 47;
-            // 
             // colOdenen
             // 
             this.colOdenen.Caption = "Ödenen Tutar";
@@ -1514,37 +1291,272 @@
             this.colFaturaFisKodu.FieldName = "FaturaFisKodu";
             this.colFaturaFisKodu.Name = "colFaturaFisKodu";
             // 
-            // labelControl31
+            // groupControl4
             // 
-            this.labelControl31.Appearance.Options.UseTextOptions = true;
-            this.labelControl31.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl31.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl31.Location = new System.Drawing.Point(3, 38);
-            this.labelControl31.Name = "labelControl31";
-            this.labelControl31.Size = new System.Drawing.Size(61, 20);
-            this.labelControl31.TabIndex = 38;
-            this.labelControl31.Text = "Efatura mı? :";
+            this.groupControl4.Controls.Add(this.simpleButton8);
+            this.groupControl4.Controls.Add(this.labelControl29);
+            this.groupControl4.Controls.Add(this.labelControl30);
+            this.groupControl4.Controls.Add(this.dtpBitis);
+            this.groupControl4.Controls.Add(this.dtpBaslangic);
+            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl4.Location = new System.Drawing.Point(0, 0);
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.ShowCaption = false;
+            this.groupControl4.Size = new System.Drawing.Size(686, 33);
+            this.groupControl4.TabIndex = 38;
+            this.groupControl4.Text = "groupControl4";
             // 
-            // toggleSwitch1
+            // labelControl29
             // 
-            this.toggleSwitch1.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.toggleSwitch1.Location = new System.Drawing.Point(70, 38);
-            this.toggleSwitch1.Name = "toggleSwitch1";
-            this.toggleSwitch1.Properties.OffText = "Hayır";
-            this.toggleSwitch1.Properties.OnText = "Evet";
-            this.toggleSwitch1.Size = new System.Drawing.Size(102, 18);
-            this.toggleSwitch1.TabIndex = 39;
+            this.labelControl29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl29.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl29.Appearance.Options.UseFont = true;
+            this.labelControl29.Location = new System.Drawing.Point(232, 7);
+            this.labelControl29.Name = "labelControl29";
+            this.labelControl29.Size = new System.Drawing.Size(32, 16);
+            this.labelControl29.TabIndex = 16;
+            this.labelControl29.Text = "Bitiş :";
             // 
-            // txtCariAdi
+            // labelControl30
             // 
-            this.txtCariAdi.EditValue = "";
-            this.txtCariAdi.Location = new System.Drawing.Point(89, 30);
-            this.txtCariAdi.Name = "txtCariAdi";
-            this.txtCariAdi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtCariAdi.Properties.MaxLength = 500;
-            this.txtCariAdi.Size = new System.Drawing.Size(561, 20);
-            this.txtCariAdi.TabIndex = 42;
+            this.labelControl30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl30.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl30.Appearance.Options.UseFont = true;
+            this.labelControl30.Location = new System.Drawing.Point(5, 7);
+            this.labelControl30.Name = "labelControl30";
+            this.labelControl30.Size = new System.Drawing.Size(62, 16);
+            this.labelControl30.TabIndex = 15;
+            this.labelControl30.Text = "Başlangıç :";
+            // 
+            // dtpBitis
+            // 
+            this.dtpBitis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dtpBitis.EditValue = null;
+            this.dtpBitis.Location = new System.Drawing.Point(270, 2);
+            this.dtpBitis.Name = "dtpBitis";
+            this.dtpBitis.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.dtpBitis.Properties.AutoHeight = false;
+            this.dtpBitis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpBitis.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpBitis.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew;
+            this.dtpBitis.Properties.DisplayFormat.FormatString = "dd.MM.yyyy";
+            this.dtpBitis.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtpBitis.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.dtpBitis.Size = new System.Drawing.Size(147, 25);
+            this.dtpBitis.TabIndex = 13;
+            // 
+            // dtpBaslangic
+            // 
+            this.dtpBaslangic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dtpBaslangic.EditValue = null;
+            this.dtpBaslangic.Location = new System.Drawing.Point(76, 2);
+            this.dtpBaslangic.Name = "dtpBaslangic";
+            this.dtpBaslangic.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.dtpBaslangic.Properties.AutoHeight = false;
+            this.dtpBaslangic.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpBaslangic.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpBaslangic.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew;
+            this.dtpBaslangic.Properties.DisplayFormat.FormatString = "dd.MM.yyyy";
+            this.dtpBaslangic.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtpBaslangic.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.dtpBaslangic.Size = new System.Drawing.Size(150, 25);
+            this.dtpBaslangic.TabIndex = 14;
+            // 
+            // groupControl3
+            // 
+            this.groupControl3.Controls.Add(this.checStokDetay);
+            this.groupControl3.Controls.Add(this.btnCariEkstreDokumu);
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupControl3.Location = new System.Drawing.Point(0, 428);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.ShowCaption = false;
+            this.groupControl3.Size = new System.Drawing.Size(686, 47);
+            this.groupControl3.TabIndex = 37;
+            this.groupControl3.Text = "groupControl3";
+            // 
+            // btnCariEkstreDokumu
+            // 
+            this.btnCariEkstreDokumu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCariEkstreDokumu.ImageOptions.ImageIndex = 2;
+            this.btnCariEkstreDokumu.Location = new System.Drawing.Point(567, 1);
+            this.btnCariEkstreDokumu.Name = "btnCariEkstreDokumu";
+            this.btnCariEkstreDokumu.Size = new System.Drawing.Size(114, 41);
+            this.btnCariEkstreDokumu.TabIndex = 14;
+            this.btnCariEkstreDokumu.Text = "Ekstre Yazdır";
+            this.btnCariEkstreDokumu.Click += new System.EventHandler(this.btnCariEkstreDokumu_Click);
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.Controls.Add(this.simpleButton2);
+            this.groupControl2.Controls.Add(this.simpleButton3);
+            this.groupControl2.Controls.Add(this.simpleButton4);
+            this.groupControl2.Controls.Add(this.simpleButton5);
+            this.groupControl2.Controls.Add(this.simpleButton6);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupControl2.Location = new System.Drawing.Point(0, 475);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.ShowCaption = false;
+            this.groupControl2.Size = new System.Drawing.Size(686, 50);
+            this.groupControl2.TabIndex = 36;
+            this.groupControl2.Text = "groupControl2";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.ImageOptions.ImageIndex = 0;
+            this.simpleButton2.Location = new System.Drawing.Point(401, 9);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(93, 36);
+            this.simpleButton2.TabIndex = 51;
+            this.simpleButton2.Text = "Kaydet\r\nYeni";
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.simpleButton3.ImageOptions.ImageIndex = 0;
+            this.simpleButton3.Location = new System.Drawing.Point(207, 9);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(93, 36);
+            this.simpleButton3.TabIndex = 51;
+            this.simpleButton3.Text = "Sil";
+            // 
+            // simpleButton4
+            // 
+            this.simpleButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.simpleButton4.ImageOptions.ImageIndex = 0;
+            this.simpleButton4.Location = new System.Drawing.Point(305, 9);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(93, 36);
+            this.simpleButton4.TabIndex = 51;
+            this.simpleButton4.Text = "Yeni";
+            // 
+            // simpleButton5
+            // 
+            this.simpleButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
+            this.simpleButton5.ImageOptions.ImageIndex = 0;
+            this.simpleButton5.Location = new System.Drawing.Point(498, 9);
+            this.simpleButton5.Name = "simpleButton5";
+            this.simpleButton5.Size = new System.Drawing.Size(93, 36);
+            this.simpleButton5.TabIndex = 51;
+            this.simpleButton5.Text = "Kaydet";
+            // 
+            // simpleButton6
+            // 
+            this.simpleButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
+            this.simpleButton6.ImageOptions.ImageIndex = 1;
+            this.simpleButton6.Location = new System.Drawing.Point(594, 9);
+            this.simpleButton6.Name = "simpleButton6";
+            this.simpleButton6.Size = new System.Drawing.Size(92, 36);
+            this.simpleButton6.TabIndex = 52;
+            this.simpleButton6.Text = " Kapat";
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.simpleButton1);
+            this.groupControl1.Controls.Add(this.btnSil);
+            this.groupControl1.Controls.Add(this.btnYeni);
+            this.groupControl1.Controls.Add(this.btnKaydet);
+            this.groupControl1.Controls.Add(this.btnKapat);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupControl1.Location = new System.Drawing.Point(0, 500);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.ShowCaption = false;
+            this.groupControl1.Size = new System.Drawing.Size(686, 50);
+            this.groupControl1.TabIndex = 35;
+            this.groupControl1.Text = "groupControl1";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.ImageOptions.ImageIndex = 0;
+            this.simpleButton1.Location = new System.Drawing.Point(401, 9);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(93, 36);
+            this.simpleButton1.TabIndex = 51;
+            this.simpleButton1.Text = "Kaydet\r\nYeni";
+            // 
+            // btnSil
+            // 
+            this.btnSil.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSil.ImageOptions.Image")));
+            this.btnSil.ImageOptions.ImageIndex = 0;
+            this.btnSil.Location = new System.Drawing.Point(207, 9);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(93, 36);
+            this.btnSil.TabIndex = 51;
+            this.btnSil.Text = "Sil";
+            // 
+            // btnYeni
+            // 
+            this.btnYeni.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnYeni.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnYeni.ImageOptions.Image")));
+            this.btnYeni.ImageOptions.ImageIndex = 0;
+            this.btnYeni.Location = new System.Drawing.Point(305, 9);
+            this.btnYeni.Name = "btnYeni";
+            this.btnYeni.Size = new System.Drawing.Size(93, 36);
+            this.btnYeni.TabIndex = 51;
+            this.btnYeni.Text = "Yeni";
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
+            this.btnKaydet.ImageOptions.ImageIndex = 0;
+            this.btnKaydet.Location = new System.Drawing.Point(498, 9);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(93, 36);
+            this.btnKaydet.TabIndex = 51;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+            // 
+            // btnKapat
+            // 
+            this.btnKapat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKapat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.ImageOptions.Image")));
+            this.btnKapat.ImageOptions.ImageIndex = 1;
+            this.btnKapat.Location = new System.Drawing.Point(594, 9);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(92, 36);
+            this.btnKapat.TabIndex = 52;
+            this.btnKapat.Text = " Kapat";
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
+            // 
+            // simpleButton8
+            // 
+            this.simpleButton8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton8.ImageOptions.Image")));
+            this.simpleButton8.Location = new System.Drawing.Point(427, 2);
+            this.simpleButton8.Name = "simpleButton8";
+            this.simpleButton8.Size = new System.Drawing.Size(104, 27);
+            this.simpleButton8.TabIndex = 17;
+            this.simpleButton8.Text = "Göster";
+            // 
+            // checStokDetay
+            // 
+            this.checStokDetay.Location = new System.Drawing.Point(452, 12);
+            this.checStokDetay.Name = "checStokDetay";
+            this.checStokDetay.Properties.Caption = "Stok Detaylı mı ?";
+            this.checStokDetay.Size = new System.Drawing.Size(109, 19);
+            this.checStokDetay.TabIndex = 15;
             // 
             // frmCariIslem
             // 
@@ -1587,6 +1599,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtYetkiliKisi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCariTuru.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCariAdi.Properties)).EndInit();
             this.tabNavigationPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtOzelkod4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOzelkod3.Properties)).EndInit();
@@ -1595,14 +1608,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.calcRisklimit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calcIskonto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSinif.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.togDurum.Properties)).EndInit();
             this.tabNavigationPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-            this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
-            this.groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridContCariHareket)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridCariHareket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
@@ -1610,10 +1620,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtpBitis.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpBaslangic.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpBaslangic.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridContCariHareket)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridCariHareket)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCariAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.checStokDetay.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1696,7 +1709,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private DevExpress.XtraEditors.SimpleButton simpleButton6;
         private DevExpress.XtraEditors.GroupControl groupControl4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton7;
         private DevExpress.XtraEditors.SimpleButton btnCariEkstreDokumu;
         private DevExpress.XtraEditors.LabelControl labelControl29;
         private DevExpress.XtraEditors.LabelControl labelControl30;
@@ -1731,5 +1743,7 @@
         private DevExpress.XtraEditors.ToggleSwitch toggleSwitch1;
         private DevExpress.XtraEditors.LabelControl labelControl31;
         private DevExpress.XtraEditors.ButtonEdit txtCariAdi;
+        private DevExpress.XtraEditors.SimpleButton simpleButton8;
+        private DevExpress.XtraEditors.CheckEdit checStokDetay;
     }
 }

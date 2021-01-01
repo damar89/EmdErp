@@ -1,7 +1,9 @@
-﻿using NetSatis.BackOffice.Tanım;
+﻿using DevExpress.XtraReports.UI;
+using NetSatis.BackOffice.Tanım;
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using NetSatis.Entities.Tools;
+using NetSatis.Reports.Cari;
 using System;
 using System.Windows.Forms;
 namespace NetSatis.BackOffice.Cari
@@ -12,6 +14,7 @@ namespace NetSatis.BackOffice.Cari
         private CariDAL cariDal = new CariDAL();
         private NetSatisContext context = new NetSatisContext();
         public bool saved = false;
+        private int _cariId;
         private CodeTool kodOlustur;
         bool guncelle = false;
         public frmCariIslem(Entities.Tables.Cari entity, bool kopyala = false)
@@ -468,6 +471,28 @@ namespace NetSatis.BackOffice.Cari
         private void tabNavigationPage1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnCariEkstreDokumu_Click(object sender, EventArgs e)
+        {
+            if (checStokDetay.Checked==true)
+            {
+                DateTime dtBaslangic = dtpBaslangic.DateTime;
+                DateTime dtBitis = dtpBitis.DateTime;
+                dtBitis = dtBitis.AddHours(23).AddMinutes(59).AddSeconds(59);
+                rptCariExtresiStokDetayli rpr = new rptCariExtresiStokDetayli(_cariId, dtBaslangic, dtBitis);
+                rpr.ShowPreview();
+            }
+            else
+            {
+                DateTime dtBaslangic = dtpBaslangic.DateTime;
+                DateTime dtBitis = dtpBitis.DateTime;
+                dtBitis = dtBitis.AddHours(23).AddMinutes(59).AddSeconds(59);
+                rptCariExtresi rpr = new rptCariExtresi(_cariId, dtBaslangic, dtBitis);
+                rpr.ShowPreview();
+            }
+
+          
         }
 
         //private void txtCariAdi_TextChanged(object sender, EventArgs e)

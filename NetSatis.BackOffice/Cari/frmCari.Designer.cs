@@ -975,7 +975,7 @@
             this.btnCariStok.ImageOptions.Image = global::NetSatis.BackOffice.Properties.Resources.newsales_16x161;
             this.btnCariStok.ImageOptions.LargeImage = global::NetSatis.BackOffice.Properties.Resources.newsales_32x321;
             this.btnCariStok.Name = "btnCariStok";
-            this.btnCariStok.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCariStok_ItemClick);
+          
             // 
             // barButtonItem18
             // 

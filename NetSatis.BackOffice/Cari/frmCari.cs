@@ -274,20 +274,20 @@ namespace NetSatis.BackOffice.Cari
             kayitsayisi = Convert.ToInt32(gridView1.RowCount);
             lblKayitSayisi.Text = kayitsayisi.ToString();
         }
-        private void btnCariStok_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (gridView1.RowCount != 0)
-            {
-                secilen = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
-                string secilenAd = gridView1.GetFocusedRowCellValue(colCariAdi).ToString();
-                frmCariHareketStok form = new frmCariHareketStok(Convert.ToInt32(secilen));
-                form.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Seçili Cari Bulunamadı");
-            }
-        }
+        //private void btnCariStok_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        //{
+        //    if (gridView1.RowCount != 0)
+        //    {
+        //        secilen = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colId));
+        //        string secilenAd = gridView1.GetFocusedRowCellValue(colCariAdi).ToString();
+        //        frmCariHareketStok form = new frmCariHareketStok(Convert.ToInt32(secilen));
+        //        form.ShowDialog();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Seçili Cari Bulunamadı");
+        //    }
+        //}
         private void barButtonItem18_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             SaveFileDialog save = new SaveFileDialog();

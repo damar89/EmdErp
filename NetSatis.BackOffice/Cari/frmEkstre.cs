@@ -2,6 +2,7 @@
 using NetSatis.Entities.Context;
 using NetSatis.Entities.Data_Access;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 namespace NetSatis.BackOffice.Cari
 {
@@ -10,6 +11,7 @@ namespace NetSatis.BackOffice.Cari
         NetSatisContext context = new NetSatisContext();
         CariDAL cariDal = new CariDAL();
         private Nullable<int> secilen = null;
+        Entities.Tables.Cari seciliCari;
         public frmEkstre()
         {
             InitializeComponent();
@@ -43,6 +45,18 @@ namespace NetSatis.BackOffice.Cari
                 throw;
             }
         }
+        void Yerlestir()
+        {
+
+            if (seciliCari == null)
+            {
+                txtCariAdi.Text =
+                txtKod.Text = null;
+                return;
+            }
+            txtCariAdi.Text = seciliCari.CariAdi;
+            txtKod.Text = seciliCari.CariKodu;
+        }
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -59,6 +73,40 @@ namespace NetSatis.BackOffice.Cari
             if (e.KeyCode == Keys.Enter)
             {
                 this.ActiveControl = dtpBitis;
+            }
+        }
+
+        private void txtKod_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            frmCariSec form = new frmCariSec();
+            form.ShowDialog();
+            if (form.secildi)
+            {
+                if (form.secilen.Count == 0)
+                    return;
+                seciliCari = form.secilen.FirstOrDefault();
+                Yerlestir();
+            }
+        }
+
+        private void txtCariAdi_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtCariAdi.Text))
+                return;
+
+            var res = context.Cariler.FirstOrDefault(x => x.CariAdi.StartsWith(txtCariAdi.Text) || x.CariKodu.StartsWith(txtCariAdi.Text));
+            if (res != null)
+            {
+                seciliCari = res;
+                Yerlestir();
+            }
+        }
+
+        private void txtCariAdi_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == System.Windows.Forms.Keys.Enter)
+            {
+                txtCariAdi.PerformClick(txtCariAdi.Properties.Buttons[0]);
             }
         }
     }

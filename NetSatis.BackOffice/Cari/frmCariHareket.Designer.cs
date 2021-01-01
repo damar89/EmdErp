@@ -146,7 +146,7 @@
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.groupControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(1001, 266);
+            this.splitContainerControl2.Size = new System.Drawing.Size(1001, 270);
             this.splitContainerControl2.SplitterPosition = 438;
             this.splitContainerControl2.TabIndex = 0;
             this.splitContainerControl2.Text = "splitContainerControl2";
@@ -157,14 +157,14 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(438, 266);
+            this.groupControl2.Size = new System.Drawing.Size(438, 270);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Fiş Türlerine Göre Toplamlar";
             // 
             // gridContFisToplam
             // 
             this.gridContFisToplam.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridContFisToplam.Location = new System.Drawing.Point(2, 23);
+            this.gridContFisToplam.Location = new System.Drawing.Point(2, 21);
             this.gridContFisToplam.MainView = this.gridFisToplam;
             this.gridContFisToplam.Name = "gridContFisToplam";
             this.gridContFisToplam.Size = new System.Drawing.Size(434, 191);
@@ -220,17 +220,17 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(553, 266);
+            this.groupControl3.Size = new System.Drawing.Size(557, 270);
             this.groupControl3.TabIndex = 1;
             this.groupControl3.Text = "Cari Ekstre";
             // 
             // gridContBakiye
             // 
             this.gridContBakiye.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridContBakiye.Location = new System.Drawing.Point(2, 23);
+            this.gridContBakiye.Location = new System.Drawing.Point(2, 21);
             this.gridContBakiye.MainView = this.gridBakiye;
             this.gridContBakiye.Name = "gridContBakiye";
-            this.gridContBakiye.Size = new System.Drawing.Size(549, 187);
+            this.gridContBakiye.Size = new System.Drawing.Size(553, 187);
             this.gridContBakiye.TabIndex = 2;
             this.gridContBakiye.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridBakiye});
