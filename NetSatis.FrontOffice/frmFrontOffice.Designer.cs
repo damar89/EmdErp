@@ -555,7 +555,7 @@
             this.naviGenelBilgiler.Controls.Add(this.calcMaliyet);
             this.naviGenelBilgiler.ImageOptions.SvgImage = global::NetSatis.FrontOffice.Properties.Resources.newtablestyle;
             this.naviGenelBilgiler.Name = "naviGenelBilgiler";
-            this.naviGenelBilgiler.Size = new System.Drawing.Size(343, 810);
+            this.naviGenelBilgiler.Size = new System.Drawing.Size(343, 807);
             // 
             // layoutControl2
             // 
@@ -595,7 +595,7 @@
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(51, 423, 650, 400);
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(343, 810);
+            this.layoutControl2.Size = new System.Drawing.Size(343, 807);
             this.layoutControl2.TabIndex = 140;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -635,7 +635,7 @@
             this.simpleButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.simpleButton2.ImageOptions.Image = global::NetSatis.FrontOffice.Properties.Resources.customer_32x32;
             this.simpleButton2.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton2.Location = new System.Drawing.Point(96, 551);
+            this.simpleButton2.Location = new System.Drawing.Point(96, 549);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(60, 63);
             this.simpleButton2.StyleController = this.layoutControl2;
@@ -651,7 +651,7 @@
             this.btnFiyatGor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFiyatGor.ImageOptions.Image = global::NetSatis.FrontOffice.Properties.Resources.show_32x324;
             this.btnFiyatGor.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnFiyatGor.Location = new System.Drawing.Point(247, 551);
+            this.btnFiyatGor.Location = new System.Drawing.Point(247, 549);
             this.btnFiyatGor.Name = "btnFiyatGor";
             this.btnFiyatGor.Size = new System.Drawing.Size(93, 63);
             this.btnFiyatGor.StyleController = this.layoutControl2;
@@ -668,7 +668,7 @@
             this.btnCariGiris.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCariGiris.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnCariGiris.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCariGiris.ImageOptions.SvgImage")));
-            this.btnCariGiris.Location = new System.Drawing.Point(160, 551);
+            this.btnCariGiris.Location = new System.Drawing.Point(160, 549);
             this.btnCariGiris.Name = "btnCariGiris";
             this.btnCariGiris.Size = new System.Drawing.Size(83, 63);
             this.btnCariGiris.StyleController = this.layoutControl2;
@@ -680,7 +680,7 @@
             // 
             this.calcRub.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcRub.Location = new System.Drawing.Point(218, 694);
+            this.calcRub.Location = new System.Drawing.Point(218, 692);
             this.calcRub.Name = "calcRub";
             this.calcRub.Properties.Appearance.BackColor = System.Drawing.Color.DarkSlateGray;
             this.calcRub.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -713,7 +713,7 @@
             this.lblCariName.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblCariName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblCariName.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lblCariName.Location = new System.Drawing.Point(3, 643);
+            this.lblCariName.Location = new System.Drawing.Point(3, 641);
             this.lblCariName.Name = "lblCariName";
             this.lblCariName.Size = new System.Drawing.Size(337, 25);
             this.lblCariName.StyleController = this.layoutControl2;
@@ -723,7 +723,7 @@
             // 
             this.calcEuro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcEuro.Location = new System.Drawing.Point(111, 694);
+            this.calcEuro.Location = new System.Drawing.Point(111, 692);
             this.calcEuro.Name = "calcEuro";
             this.calcEuro.Properties.Appearance.BackColor = System.Drawing.Color.DarkSlateGray;
             this.calcEuro.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -756,7 +756,7 @@
             this.labelControl40.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl40.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl40.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl40.Location = new System.Drawing.Point(3, 618);
+            this.labelControl40.Location = new System.Drawing.Point(3, 616);
             this.labelControl40.Name = "labelControl40";
             this.labelControl40.Size = new System.Drawing.Size(337, 21);
             this.labelControl40.StyleController = this.layoutControl2;
@@ -767,7 +767,7 @@
             // 
             this.calcDolar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.calcDolar.Location = new System.Drawing.Point(3, 694);
+            this.calcDolar.Location = new System.Drawing.Point(3, 692);
             this.calcDolar.Name = "calcDolar";
             this.calcDolar.Properties.Appearance.BackColor = System.Drawing.Color.DarkSlateGray;
             this.calcDolar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -800,7 +800,7 @@
             this.btnSatisBeklet.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSatisBeklet.ImageOptions.SvgImage")));
             this.btnSatisBeklet.Location = new System.Drawing.Point(255, 479);
             this.btnSatisBeklet.Name = "btnSatisBeklet";
-            this.btnSatisBeklet.Size = new System.Drawing.Size(85, 58);
+            this.btnSatisBeklet.Size = new System.Drawing.Size(85, 56);
             this.btnSatisBeklet.StyleController = this.layoutControl2;
             this.btnSatisBeklet.TabIndex = 49;
             this.btnSatisBeklet.Text = "Satış Beklet";
@@ -816,7 +816,7 @@
             this.checkIade.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("checkIade.ImageOptions.SvgImage")));
             this.checkIade.Location = new System.Drawing.Point(194, 479);
             this.checkIade.Name = "checkIade";
-            this.checkIade.Size = new System.Drawing.Size(57, 58);
+            this.checkIade.Size = new System.Drawing.Size(57, 56);
             this.checkIade.StyleController = this.layoutControl2;
             this.checkIade.TabIndex = 51;
             this.checkIade.Text = "İade";
@@ -832,7 +832,7 @@
             this.btnOdemeBol.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnOdemeBol.ImageOptions.SvgImage")));
             this.btnOdemeBol.Location = new System.Drawing.Point(93, 479);
             this.btnOdemeBol.Name = "btnOdemeBol";
-            this.btnOdemeBol.Size = new System.Drawing.Size(97, 58);
+            this.btnOdemeBol.Size = new System.Drawing.Size(97, 56);
             this.btnOdemeBol.StyleController = this.layoutControl2;
             this.btnOdemeBol.TabIndex = 52;
             this.btnOdemeBol.Text = "Ödeme Böl";
@@ -876,7 +876,7 @@
             this.btnTemizle1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTemizle1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnTemizle1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnTemizle1.ImageOptions.SvgImage")));
-            this.btnTemizle1.Location = new System.Drawing.Point(3, 551);
+            this.btnTemizle1.Location = new System.Drawing.Point(3, 549);
             this.btnTemizle1.Name = "btnTemizle1";
             this.btnTemizle1.Size = new System.Drawing.Size(89, 63);
             this.btnTemizle1.StyleController = this.layoutControl2;
@@ -903,7 +903,7 @@
             this.btnSatisIptal.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSatisIptal.ImageOptions.SvgImage")));
             this.btnSatisIptal.Location = new System.Drawing.Point(3, 479);
             this.btnSatisIptal.Name = "btnSatisIptal";
-            this.btnSatisIptal.Size = new System.Drawing.Size(86, 58);
+            this.btnSatisIptal.Size = new System.Drawing.Size(86, 56);
             this.btnSatisIptal.StyleController = this.layoutControl2;
             this.btnSatisIptal.TabIndex = 50;
             this.btnSatisIptal.Text = "Satış İptali";
@@ -1235,7 +1235,7 @@
             this.layoutControlItem57});
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(343, 810);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(343, 807);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layTerazi
@@ -1463,7 +1463,7 @@
             // layoutControlItem33
             // 
             this.layoutControlItem33.Control = this.btnCariGiris;
-            this.layoutControlItem33.Location = new System.Drawing.Point(157, 548);
+            this.layoutControlItem33.Location = new System.Drawing.Point(157, 546);
             this.layoutControlItem33.MaxSize = new System.Drawing.Size(0, 67);
             this.layoutControlItem33.MinSize = new System.Drawing.Size(85, 67);
             this.layoutControlItem33.Name = "layoutControlItem33";
@@ -1475,7 +1475,7 @@
             // layoutControlItem34
             // 
             this.layoutControlItem34.Control = this.btnFiyatGor;
-            this.layoutControlItem34.Location = new System.Drawing.Point(244, 548);
+            this.layoutControlItem34.Location = new System.Drawing.Point(244, 546);
             this.layoutControlItem34.MaxSize = new System.Drawing.Size(0, 67);
             this.layoutControlItem34.MinSize = new System.Drawing.Size(93, 67);
             this.layoutControlItem34.Name = "layoutControlItem34";
@@ -1487,7 +1487,7 @@
             // layoutControlItem35
             // 
             this.layoutControlItem35.Control = this.labelControl40;
-            this.layoutControlItem35.Location = new System.Drawing.Point(0, 615);
+            this.layoutControlItem35.Location = new System.Drawing.Point(0, 613);
             this.layoutControlItem35.MaxSize = new System.Drawing.Size(0, 25);
             this.layoutControlItem35.MinSize = new System.Drawing.Size(22, 25);
             this.layoutControlItem35.Name = "layoutControlItem35";
@@ -1499,7 +1499,7 @@
             // layoutControlItem36
             // 
             this.layoutControlItem36.Control = this.lblCariName;
-            this.layoutControlItem36.Location = new System.Drawing.Point(0, 640);
+            this.layoutControlItem36.Location = new System.Drawing.Point(0, 638);
             this.layoutControlItem36.MaxSize = new System.Drawing.Size(0, 29);
             this.layoutControlItem36.MinSize = new System.Drawing.Size(23, 29);
             this.layoutControlItem36.Name = "layoutControlItem36";
@@ -1515,7 +1515,7 @@
             this.layUSD.AppearanceItemCaption.Options.UseTextOptions = true;
             this.layUSD.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.layUSD.Control = this.calcDolar;
-            this.layUSD.Location = new System.Drawing.Point(0, 669);
+            this.layUSD.Location = new System.Drawing.Point(0, 667);
             this.layUSD.MaxSize = new System.Drawing.Size(0, 67);
             this.layUSD.MinSize = new System.Drawing.Size(97, 67);
             this.layUSD.Name = "layUSD";
@@ -1533,7 +1533,7 @@
             this.layEURO.AppearanceItemCaption.Options.UseTextOptions = true;
             this.layEURO.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.layEURO.Control = this.calcEuro;
-            this.layEURO.Location = new System.Drawing.Point(108, 669);
+            this.layEURO.Location = new System.Drawing.Point(108, 667);
             this.layEURO.MaxSize = new System.Drawing.Size(0, 67);
             this.layEURO.MinSize = new System.Drawing.Size(97, 67);
             this.layEURO.Name = "layEURO";
@@ -1551,7 +1551,7 @@
             this.layRUB.AppearanceItemCaption.Options.UseTextOptions = true;
             this.layRUB.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.layRUB.Control = this.calcRub;
-            this.layRUB.Location = new System.Drawing.Point(215, 669);
+            this.layRUB.Location = new System.Drawing.Point(215, 667);
             this.layRUB.MaxSize = new System.Drawing.Size(0, 67);
             this.layRUB.MinSize = new System.Drawing.Size(117, 67);
             this.layRUB.Name = "layRUB";
@@ -1567,7 +1567,7 @@
             this.layoutControlItem29.Control = this.btnSatisIptal;
             this.layoutControlItem29.Location = new System.Drawing.Point(0, 476);
             this.layoutControlItem29.Name = "layoutControlItem29";
-            this.layoutControlItem29.Size = new System.Drawing.Size(90, 62);
+            this.layoutControlItem29.Size = new System.Drawing.Size(90, 60);
             this.layoutControlItem29.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem29.TextVisible = false;
             // 
@@ -1576,14 +1576,14 @@
             this.layoutControlItem30.Control = this.btnOdemeBol;
             this.layoutControlItem30.Location = new System.Drawing.Point(90, 476);
             this.layoutControlItem30.Name = "layoutControlItem30";
-            this.layoutControlItem30.Size = new System.Drawing.Size(101, 62);
+            this.layoutControlItem30.Size = new System.Drawing.Size(101, 60);
             this.layoutControlItem30.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem30.TextVisible = false;
             // 
             // layoutControlItem28
             // 
             this.layoutControlItem28.Control = this.simpleButton2;
-            this.layoutControlItem28.Location = new System.Drawing.Point(93, 548);
+            this.layoutControlItem28.Location = new System.Drawing.Point(93, 546);
             this.layoutControlItem28.MaxSize = new System.Drawing.Size(0, 67);
             this.layoutControlItem28.MinSize = new System.Drawing.Size(63, 67);
             this.layoutControlItem28.Name = "layoutControlItem28";
@@ -1597,7 +1597,7 @@
             this.layoutControlItem31.Control = this.checkIade;
             this.layoutControlItem31.Location = new System.Drawing.Point(191, 476);
             this.layoutControlItem31.Name = "layoutControlItem31";
-            this.layoutControlItem31.Size = new System.Drawing.Size(61, 62);
+            this.layoutControlItem31.Size = new System.Drawing.Size(61, 60);
             this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem31.TextVisible = false;
             // 
@@ -1606,14 +1606,14 @@
             this.layoutControlItem32.Control = this.btnSatisBeklet;
             this.layoutControlItem32.Location = new System.Drawing.Point(252, 476);
             this.layoutControlItem32.Name = "layoutControlItem32";
-            this.layoutControlItem32.Size = new System.Drawing.Size(89, 62);
+            this.layoutControlItem32.Size = new System.Drawing.Size(89, 60);
             this.layoutControlItem32.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem32.TextVisible = false;
             // 
             // layoutControlItem27
             // 
             this.layoutControlItem27.Control = this.btnTemizle1;
-            this.layoutControlItem27.Location = new System.Drawing.Point(0, 548);
+            this.layoutControlItem27.Location = new System.Drawing.Point(0, 546);
             this.layoutControlItem27.MaxSize = new System.Drawing.Size(0, 67);
             this.layoutControlItem27.MinSize = new System.Drawing.Size(90, 67);
             this.layoutControlItem27.Name = "layoutControlItem27";
@@ -1625,15 +1625,15 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 736);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 734);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(341, 72);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(341, 71);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 538);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 536);
             this.emptySpaceItem3.MaxSize = new System.Drawing.Size(0, 10);
             this.emptySpaceItem3.MinSize = new System.Drawing.Size(10, 10);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
@@ -2846,7 +2846,7 @@
             this.checkIrsaliye.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.checkIrsaliye.Properties.Appearance.Options.UseForeColor = true;
             this.checkIrsaliye.Properties.Caption = "Cari Seçiliyse İrsaliye Oluşsun Mu ?";
-            this.checkIrsaliye.Size = new System.Drawing.Size(202, 19);
+            this.checkIrsaliye.Size = new System.Drawing.Size(202, 20);
             this.checkIrsaliye.TabIndex = 3;
             this.checkIrsaliye.Visible = false;
             // 
@@ -2873,10 +2873,10 @@
             this.xtraTabControl1.HeaderButtons = ((DevExpress.XtraTab.TabButtons)(((DevExpress.XtraTab.TabButtons.Prev | DevExpress.XtraTab.TabButtons.Next) 
             | DevExpress.XtraTab.TabButtons.Default)));
             this.xtraTabControl1.HeaderButtonsShowMode = DevExpress.XtraTab.TabButtonShowMode.Always;
-            this.xtraTabControl1.Location = new System.Drawing.Point(4, 365);
+            this.xtraTabControl1.Location = new System.Drawing.Point(4, 369);
             this.xtraTabControl1.MultiLine = DevExpress.Utils.DefaultBoolean.True;
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.Size = new System.Drawing.Size(993, 478);
+            this.xtraTabControl1.Size = new System.Drawing.Size(993, 474);
             this.xtraTabControl1.TabIndex = 0;
             // 
             // navigationFrame1
@@ -3996,7 +3996,7 @@
             this.togkdv.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
             this.togkdv.Properties.OffText = "KdvHariç";
             this.togkdv.Properties.OnText = "KdvDahil";
-            this.togkdv.Size = new System.Drawing.Size(95, 30);
+            this.togkdv.Size = new System.Drawing.Size(95, 18);
             this.togkdv.TabIndex = 2;
             this.togkdv.Toggled += new System.EventHandler(this.togkdv_Toggled);
             // 
@@ -4317,10 +4317,10 @@
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.xtraTabControl1;
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 361);
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 365);
             this.layoutControlItem11.MinSize = new System.Drawing.Size(104, 24);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(997, 482);
+            this.layoutControlItem11.Size = new System.Drawing.Size(997, 478);
             this.layoutControlItem11.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
@@ -4342,7 +4342,7 @@
             this.splitterItem1.AllowHotTrack = true;
             this.splitterItem1.Location = new System.Drawing.Point(0, 355);
             this.splitterItem1.Name = "splitterItem1";
-            this.splitterItem1.Size = new System.Drawing.Size(997, 6);
+            this.splitterItem1.Size = new System.Drawing.Size(997, 10);
             // 
             // layoutControlItem58
             // 
